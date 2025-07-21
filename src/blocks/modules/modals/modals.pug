@@ -1,0 +1,192 @@
+noindex
+    div
+        //- код модалок сюда
+
+        //- Выбор города
+        //-+modal({modalId:"cityModal", modalTitle:"Укажите ваш город", classes:"city-modal"})(data-js="cityModal")
+            +field({
+                placeholder: 'Поиск города',
+                inputAttr: {
+                    "data-js": "citySearchInput"
+                },
+                resetBtn: true,
+                isSearch: true
+            })
+            ul.city-modal__list
+                li.city-modal__item(data-js="cityModalItem" data-value="Москва") Москва
+                li.city-modal__item(data-js="cityModalItem" data-value="Пермь") Пермь
+                li.city-modal__item(data-js="cityModalItem" data-value="Санкт-Петербург") Санкт-Петербург
+                li.city-modal__item(data-js="cityModalItem" data-value="Уфа") Уфа
+                li.city-modal__item(data-js="cityModalItem" data-value="Самара") Самара
+                li.city-modal__item(data-js="cityModalItem" data-value="Екатеринбург") Екатеринбург
+                li.city-modal__item(data-js="cityModalItem" data-value="Челябинск") Челябинск
+                li.city-modal__item(data-js="cityModalItem" data-value="Краснодар") Краснодар
+                li.city-modal__item(data-js="cityModalItem" data-value="Нижний Новгород") Нижний Новгород
+
+        //- Быстрый просмотр товара
+        //-+modal({modalId:"quickViewModal", modalTitle:"Универсальная испытательная машина ТРМ-О 0,1 А0,5 Tochline", classes:"quick-view-modal"})
+            .quick-view
+                .quick-view__top 
+                    +btn({
+                        name: 'Сравнить',
+                        icon: 'compare_2',
+                        cMode: 'noborder',
+                        size: 'link'
+                    })
+                    +btn({
+                        name: 'Поделиться',
+                        icon: 'share',
+                        cMode: 'noborder',
+                        size: 'link'
+                    })
+                .quick-view__grid
+                    .quick-view__photo
+                        +product-tags({
+                            classes: 'quick-view__tags',
+                            tags: [
+                                {
+                                    img: 'img/catalog/check_icon.svg',
+                                    text: 'В наличии',
+                                    color: 'green'
+                                },
+                                {
+                                    img: '',
+                                    text: 'Новинка',
+                                    color: 'blue'
+                                },
+                                {
+                                    img: '',
+                                    text: 'Скидка',
+                                    color: 'red'
+                                },
+                                {
+                                    img: 'img/catalog/arrow_circle.svg',
+                                    text: 'Снято с производства',
+                                    note: 'Товар больше не производится. Смотрите аналоги в карточке товара',
+                                    color: 'grey'
+                                }
+                            ]
+                        })
+
+                        img(src="img/catalog/product_7.webp")
+                    .quick-view__info
+                        +product-articles({
+                            classes: 'quick-view__articles'
+                        })
+                        .quick-view__block
+                            .quick-view__subtitle Применение
+                            .quick-view__text Статические испытания образов из различных материалов на растяжение, сжатие, изгиб, сдвиг, срез, адгезию и прочее
+                        .quick-view__block
+                            .quick-view__subtitle Характеристики
+                            .chars-table
+                                .chars-table__row
+                                    .chars-table__title Конструктивное исполнение
+                                    .chars-table__value настольное
+                                .chars-table__row
+                                    .chars-table__title Напряжение питания
+                                    .chars-table__value  220В, 50Гц
+                                .chars-table__row
+                                    .chars-table__title Мин. нагрузка, Н
+                                    .chars-table__value 0,2
+                                .chars-table__row
+                                    .chars-table__title Макс. нагрузка, Н
+                                    .chars-table__value 100
+                                .chars-table__row
+                                    .chars-table__title Погрешность по нагрузке на данном диапазоне
+                                    .chars-table__value  ±0.5%
+
+                        .quick-view__block
+                            .quick-view__subtitle Документы
+                            .quick-view__list
+                                +download-btn({
+                                    classes: 'download-btn--small',
+                                    img: 'img/docs-type/pdf.svg',
+                                    name: 'Свидетельство об утверждении типа средств измерений ОС.С. 28.070.А №75160',
+                                    size: ''
+                                })
+                                +download-btn({
+                                    classes: 'download-btn--small',
+                                    img: 'img/docs-type/pdf.svg',
+                                    name: 'Методика поверки',
+                                    size: ''
+                                })
+                    .quick-view__controls
+                        .quick-view__order
+                            +product-price({
+                                classes: 'quick-view__prices',
+                                price: '550 000 ₽',
+                                oldPrice: '680 000 ₽',
+                                vMode: 'horizontal',
+                                size: '32'
+                            })
+                            +btn({
+                                name: 'Подробнее о товаре',
+                                size: 'full',
+                                cMode: 'red'
+                            })
+                            +btn({
+                                name: 'Запросить техническое описание',
+                                size: 'full',
+                                cMode: 'light-red'
+                            })(data-modal="#techDescModal")
+                            +btn({
+                                name: 'Задать вопрос',
+                                size: 'full',
+                                cMode: 'grey',
+                                icon: 'question'
+                            })(data-modal="#questionModal")
+                        +btn({
+                            classes: 'quick-view__more',
+                            name: 'Подробнее о товаре',
+                            size: 'full',
+                            cMode: 'transparent-red',
+                            icon: 'arrow_enter'
+                        })
+
+        //- Заказать звонок в шапке
+        //-+modal({modalId:"callbackModal", modalTitle:"", classes:"form-modal"})
+            +form({
+                classes: 'form--modal',
+                title: 'Заказать звонок',
+                text: '',
+                btnText: 'Отправить',
+                privacyText: 'Я согласен на обработку моих персональных данных согласно <a href="#" target="_blank">Политики конфиденциальности</a>',
+                successTitle: 'Ваша заявка отправлена',
+                successText: 'Менеджер свяжется с&nbsp;вами в&nbsp;ближайшее время',
+                successBtn: true
+            })
+                +field({
+                    title: 'Имя <sup>*</sup>',
+                    inputAttr: {
+                        'required': '',
+                        'data-type': 'letters'
+                    },
+                })
+                +field({
+                    title: 'Номер телефона <sup>*</sup>',
+                    inputAttr: {
+                        'required': '',
+                        'data-v-name': 'phone',
+                        'data-type': 'phoneNumber'
+                    },
+                })
+                +field({
+                    title: 'Электронная почта <sup>*</sup>',
+                    inputAttr: {
+                        'required': '',
+                        'data-v-name': 'email'
+                    },
+                })
+                +field({
+                    tag: 'textarea',
+                    title: 'Комментарий',
+                    textareaRows: '1'
+                })
+                +field-file({
+                    placeholder: 'Прикрепить файл',
+                    inputAttr: {
+                        'data-v-name': 'file',
+                        'data-size': '10485760',
+                        'accept': 'image/*, text/plain, .docx, .pdf'
+                    }
+                })

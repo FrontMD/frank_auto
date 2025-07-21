@@ -1,0 +1,10 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "404"
+
+block content
+	.page-layout.page-layout--white(data-js="pageLayout")
+		section.section.section--full.not-found
+			.section__container
