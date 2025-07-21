@@ -1,3 +1,143 @@
 .site-footer {
+    margin-top: auto;
+    color: $c-white;
+
+    &__section {
+        padding-bottom: 24px;
+    }
+
+    &__block {
+        background-color: $c-bg-dark;
+        border-radius: $br-footer;
+    }
+
+    &__row {
+        display: flex;
+        gap: 34px;
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+
+    &__top {
+        align-items: center;
+        padding-top: 25px;
+        padding-bottom: 18px;
+    }
+
+    &__logo {
+        flex: 0 0 180px;
+    }
+
+    &__rating {
+        flex: 0 0 218px;
+    }
+
+    &__nav {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+
+    &__middle {
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-top: 36px;
+        padding-bottom: 45px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    &__list {
+        flex: 0 1 auto;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+        opacity: 0.5;
+    }
+
+    &__links {
+        flex: 0 0 auto;
+
+        &--catalog {
+            columns: 5;
+            flex: 0 1 auto;
+            width: 640px;
+        }
+    }
+
+    &__link {
+        display: block;
+        margin-bottom: 14px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: $c-white;
+        transition: color $tr-time linear;
+
+        &:hover {
+            color: $c-accent-hover;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        max-width: 275px;
+    }
+
+    &__bottom {
+        padding-top: 40px;
+        padding-bottom: 42px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+}
+
+.footer-contact {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: $c-white;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+
+    &__icon {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $c-grey;
+        flex-shrink: 0;
+        border-radius: 14px;
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    a.footer-contact__title {
+        transition: color $tr-time linear;
+    }
+
+    a.footer-contact__title:hover {
+        color: $c-accent-hover;
+    }
+    
+    &__text {
+        opacity: 0.5;
+        margin-top: 2px;
+    }
     
 }

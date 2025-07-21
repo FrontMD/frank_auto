@@ -105,6 +105,7 @@ body {
 	-o-font-smoothing: antialiased;
 	-webkit-locale: auto;
 	white-space: normal;
+	background-color: $c-bg-main;
 	font-family: $ff-main;
 	font-size: 16px;
 	font-weight: 400;
@@ -146,81 +147,46 @@ html.hystmodal__opened {
 
 .page-layout {
 	position: relative;
-	background-color: $c-main-bg;
-	padding: 73px 0 20px;
+	padding: 136px 0 0;
 
 	@media print {
 		background-color: #fff;
 	}
 
 	@include max(laptop) {
-		padding: 62px 0 20px;
+		padding: 62px 0 0;
 	}
 
 	@include max(mobile) {
 		padding: 60px 0 0;
 	}
 
-	&--white {
-		background-color: $c-white;
-
-		@include max(mobile) {
-			padding: 60px 0 20px;
-		}
-	}
-
-	&--bottom {
-		padding-bottom: 0;
-
-		@include max(laptop) {
-			padding-bottom: 0;
-		}
-
-		@include max(mobile) {
-			padding-bottom: 0;
-		}
-	}
-
-	.section+.section {
-		margin-top: 16px;
-	}
-
-	.section--full+.section--full {
-		margin-top: 0;
-	}
-
-	.sidebar-layout+.section {
-		margin-top: 16px;
-	}
 }
 
 .section {
 
-	padding: 0 40px;
+	padding: 0 40px 50px;
 
 	@include max(large) {
-		padding: 0 20px;
+		padding: 0 20px 50px;
 	}
 
-	@include max(mobile) {
-		padding: 0;
-	}
-
-	@media print {
+	/*@media print {
 		padding: 0 10px;
-	}
+	}*/
 
 	&__container {
-		padding: 24px;
-		background-color: $c-white;
-		border-radius: 4px;
-
-		@include max(tablet) {
-			padding: 20px 15px;
-		}
+		max-width: 1400px;
+		margin: 0 auto;
 	}
 
-	&__header {
+	&__block {
+		background-color: $c-white;
+		border-radius: $br-section;
+		padding: 20px;
+	}
+
+	/*&__header {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -235,9 +201,9 @@ html.hystmodal__opened {
 		.btn {
 			flex: 0 0 auto;
 		}
-	}
+	}*/
 
-	&__columns {
+	/*&__columns {
 		display: grid;
 		grid-template-columns: repeat(2, minmax(0, calc((100% - 135px - 119px) / 2)));
 		gap: 135px;
@@ -256,9 +222,9 @@ html.hystmodal__opened {
 			grid-template-columns: repeat(1, minmax(0, 1fr));
 			gap: 1.4em;
 		}
-	}
+	}*/
 
-	&--transparent &__container {
+	/*&--transparent &__container {
 		background-color: transparent;
 		border-radius: 0;
 		padding: 24px 0 0;
@@ -270,9 +236,9 @@ html.hystmodal__opened {
 		@include max(mobile) {
 			padding: 20px 15px 0;
 		}
-	}
+	}*/
 
-	&--full {
+	/*&--full {
 		padding: 0;
 
 		@include max(large) {
@@ -291,24 +257,25 @@ html.hystmodal__opened {
 		@include max(mobile) {
 			padding: 20px 15px;
 		}
-	}
+	}*/
 
-	&__tag {
+	/*&__tag {
 		font-size: 16px;
 		line-height: 1.4em;
 		color: $c-text-light;
-	}
+	}*/
 
-	&__subtitle {
+	/*&__subtitle {
 		font-size: 14px;
 		line-height: 1.4em;
 		color: $c-text;
-	}
+	}*/
 }
 
 .title {
     color: $c-text;
-    letter-spacing: -0.03em;
+    letter-spacing: 0;
+	line-height: 100%;
 
     &--light {
         color: $c-white;
@@ -331,87 +298,15 @@ html.hystmodal__opened {
     &--50 {
         font-size: 50px;
         line-height: 1em;
-		font-weight: 400;
+		font-weight: 800;
 		font-family: $ff-second;
 
         @include max(laptop) {
-            font-size: 67px;
-        }
-
-        @include max(mobile) {
-            font-size: 53px;
-        }
-
-        @include max(xs) {
-            font-size: 40px;
-        }
-    }
-
-    &--67 {
-        font-size: 67px;
-        line-height: 1em;
-
-        @include max(laptop) {
-            font-size: 53px;
-        }
-
-        @include max(mobile) {
-            font-size: 40px;
-        }
-
-        @include max(xs) {
-            font-size: 32px;
-        }
-
-        @media print {
-            font-size: 38pt;
-        }
-    }
-
-    &--53 {
-        font-size: 53px;
-        line-height: 1em;
-
-        @include max(laptop) {
             font-size: 40px;
         }
 
         @include max(mobile) {
-            font-size: 32px;
-        }
-
-        @include max(xs) {
-            font-size: 28px;
-        }
-    }
-
-    &--43 {
-        font-size: 43px;
-        line-height: 1em;
-
-        @include max(laptop) {
-            font-size: 32px;
-        }
-
-        @include max(mobile) {
-            font-size: 28px;
-        }
-
-        @include max(xs) {
-            font-size: 26px;
-        }
-    }
-
-    &--32 {
-        font-size: 32px;
-        line-height: 1em;
-
-        @include max(laptop) {
-            font-size: 28px;
-        }
-
-        @include max(mobile) {
-            font-size: 26px;
+            font-size: 30px;
         }
 
         @include max(xs) {
@@ -419,7 +314,82 @@ html.hystmodal__opened {
         }
     }
 
-    &--26 {
+    &--40 {
+		font-family: $ff-second;
+        font-size: 40px;
+		font-weight: 500;
+        line-height: 1em;
+
+        @include max(laptop) {
+            font-size: 30px;
+        }
+
+        @include max(mobile) {
+            font-size: 24px;
+        }
+
+        @include max(xs) {
+            font-size: 20px;
+        }
+
+        @media print {
+            font-size: 38pt;
+        }
+    }
+
+    &--30 {
+		font-family: $ff-main;
+        font-size: 30px;
+		font-weight: 700;
+        line-height: 1.2em;
+		letter-spacing: -0.02em;
+
+        @include max(laptop) {
+            font-size: 24px;
+        }
+
+        @include max(mobile) {
+            font-size: 20px;
+        }
+
+        @include max(xs) {
+            font-size: 18px;
+        }
+    }
+
+    &--24 {
+		font-family: $ff-main;
+        font-size: 24px;
+		font-weight: 700;
+        line-height: 1.2em;
+		letter-spacing: -0.02em;
+
+        @include max(laptop) {
+            font-size: 20px;
+        }
+
+        @include max(mobile) {
+            font-size: 18px;
+        }
+
+        @include max(xs) {
+            font-size: 16px;
+        }
+    }
+
+    &--18 {
+        font-family: $ff-main;
+        font-size: 18px;
+		font-weight: 600;
+        line-height: 1em;
+		letter-spacing: 0;
+
+        @include max(mobile) {
+            font-size: 16px;
+        }
+    }
+
+    /*&--26 {
         font-size: 26px;
         line-height: 1em;
 
@@ -434,9 +404,9 @@ html.hystmodal__opened {
         @include max(xs) {
             font-size: 20px;
         }
-    }
+    }*/
 
-    &--center {
+    /*&--center {
         text-align: center;
         margin: 0 auto;
         max-width: 970px;
@@ -444,7 +414,7 @@ html.hystmodal__opened {
         @include max(laptop) {
             max-width: 730px;
         }
-    }
+    }*/
 
 }
 
@@ -961,7 +931,7 @@ html.hystmodal__opened {
 		}
 
 		th {
-			background-color: $c-main-bg;
+			background-color: $c-bg-main;
 			color: $c-text-breadcrumbs;
 		}
 
@@ -1143,7 +1113,7 @@ html.hystmodal__opened {
 		max-width: 680px;
 		padding: 12px;
 		border-radius: 4px;
-		background-color: $c-main-bg;
+		background-color: $c-bg-main;
 		margin-bottom: 1.4em;
 
 		ul li+li {
@@ -1173,7 +1143,7 @@ html.hystmodal__opened {
 			font-size: 16px;
 			line-height: 1.4em;
 			padding: 1px 4px 2px;
-			background-color: $c-main-bg;
+			background-color: $c-bg-main;
 			border-radius: 2px;
 			cursor: pointer;
 
