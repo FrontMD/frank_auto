@@ -6,5 +6,18 @@ block variables
 
 block content
 	.page-layout.page-layout--white(data-js="pageLayout")
-		section.section.section--full.not-found
+		+s-breadcrumbs
+
+		section.section.not-found
 			.section__container
+				.section-block.section-block--dark.not-found__block
+					.section-block__bg
+						img(src="img/404/bg.webp")
+					.section-block__content.not-found__content
+						.not-found__title 404
+						.not-found__subtitle Страница не найдена!
+						.not-found__text «Мы запустили новый сайт, сделав его удобным и информативным.<br>Возможно, запрашиваемая Вами страница была перенесена или удалена.<br>Вы можете позвонить нам и получить квалифицированную помощь наших специалистов»
+						+btn({
+							name: 'На главную страницу',
+							cMode: 'accent',
+						})

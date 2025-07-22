@@ -147,7 +147,7 @@ html.hystmodal__opened {
 
 .page-layout {
 	position: relative;
-	padding: 136px 0 0;
+	padding: 198px 0 0;
 
 	@media print {
 		background-color: #fff;
@@ -178,12 +178,6 @@ html.hystmodal__opened {
 	&__container {
 		max-width: 1400px;
 		margin: 0 auto;
-	}
-
-	&__block {
-		background-color: $c-white;
-		border-radius: $br-section;
-		padding: 20px;
 	}
 
 	/*&__header {
@@ -272,124 +266,155 @@ html.hystmodal__opened {
 	}*/
 }
 
+.section-block {
+	position: relative;
+	background-color: $c-white;
+	border-radius: $br-section;
+	padding: 20px;
+	overflow: hidden;
+
+	&--dark {
+		background-color: $c-bg-dark;
+		color: $c-white;
+	}
+
+	&__bg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__content {
+		position: relative;
+	}
+}
+
 .title {
-    color: $c-text;
-    letter-spacing: 0;
+	color: $c-text;
+	letter-spacing: 0;
 	line-height: 100%;
 
-    &--light {
-        color: $c-white;
-    }
+	&--light {
+		color: $c-white;
+	}
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: inherit;
-        line-height: inherit;
-        font-size: inherit;
-        letter-spacing: inherit;
-        font-weight: inherit;
-        text-wrap: inherit;
-    }
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		color: inherit;
+		line-height: inherit;
+		font-size: inherit;
+		letter-spacing: inherit;
+		font-weight: inherit;
+		text-wrap: inherit;
+	}
 
-    &--50 {
-        font-size: 50px;
-        line-height: 1em;
+	&--50 {
+		font-size: 50px;
+		line-height: 1em;
 		font-weight: 800;
 		font-family: $ff-second;
 
-        @include max(laptop) {
-            font-size: 40px;
-        }
+		@include max(laptop) {
+			font-size: 40px;
+		}
 
-        @include max(mobile) {
-            font-size: 30px;
-        }
+		@include max(mobile) {
+			font-size: 30px;
+		}
 
-        @include max(xs) {
-            font-size: 24px;
-        }
-    }
+		@include max(xs) {
+			font-size: 24px;
+		}
+	}
 
-    &--40 {
+	&--40 {
 		font-family: $ff-second;
-        font-size: 40px;
+		font-size: 40px;
 		font-weight: 500;
-        line-height: 1em;
+		line-height: 1em;
 
-        @include max(laptop) {
-            font-size: 30px;
-        }
+		@include max(laptop) {
+			font-size: 30px;
+		}
 
-        @include max(mobile) {
-            font-size: 24px;
-        }
+		@include max(mobile) {
+			font-size: 24px;
+		}
 
-        @include max(xs) {
-            font-size: 20px;
-        }
+		@include max(xs) {
+			font-size: 20px;
+		}
 
-        @media print {
-            font-size: 38pt;
-        }
-    }
+		@media print {
+			font-size: 38pt;
+		}
+	}
 
-    &--30 {
+	&--30 {
 		font-family: $ff-main;
-        font-size: 30px;
+		font-size: 30px;
 		font-weight: 700;
-        line-height: 1.2em;
+		line-height: 1.2em;
 		letter-spacing: -0.02em;
 
-        @include max(laptop) {
-            font-size: 24px;
-        }
+		@include max(laptop) {
+			font-size: 24px;
+		}
 
-        @include max(mobile) {
-            font-size: 20px;
-        }
+		@include max(mobile) {
+			font-size: 20px;
+		}
 
-        @include max(xs) {
-            font-size: 18px;
-        }
-    }
+		@include max(xs) {
+			font-size: 18px;
+		}
+	}
 
-    &--24 {
+	&--24 {
 		font-family: $ff-main;
-        font-size: 24px;
+		font-size: 24px;
 		font-weight: 700;
-        line-height: 1.2em;
+		line-height: 1.2em;
 		letter-spacing: -0.02em;
 
-        @include max(laptop) {
-            font-size: 20px;
-        }
+		@include max(laptop) {
+			font-size: 20px;
+		}
 
-        @include max(mobile) {
-            font-size: 18px;
-        }
+		@include max(mobile) {
+			font-size: 18px;
+		}
 
-        @include max(xs) {
-            font-size: 16px;
-        }
-    }
+		@include max(xs) {
+			font-size: 16px;
+		}
+	}
 
-    &--18 {
-        font-family: $ff-main;
-        font-size: 18px;
+	&--18 {
+		font-family: $ff-main;
+		font-size: 18px;
 		font-weight: 600;
-        line-height: 1em;
+		line-height: 1em;
 		letter-spacing: 0;
 
-        @include max(mobile) {
-            font-size: 16px;
-        }
-    }
+		@include max(mobile) {
+			font-size: 16px;
+		}
+	}
 
-    /*&--26 {
+	/*&--26 {
         font-size: 26px;
         line-height: 1em;
 
@@ -406,7 +431,7 @@ html.hystmodal__opened {
         }
     }*/
 
-    /*&--center {
+	/*&--center {
         text-align: center;
         margin: 0 auto;
         max-width: 970px;
@@ -1428,7 +1453,7 @@ html.hystmodal__opened {
 	}
 }*/
 
-/*.scrollbar {
+.scrollbar {
 	&::-webkit-scrollbar {
 		width: 6px;
 		height: 6px;
@@ -1450,7 +1475,7 @@ html.hystmodal__opened {
 			height: 3px;
 		}
 	}
-}*/
+}
 
 .my-fancybox {
 	.fancybox__viewport {

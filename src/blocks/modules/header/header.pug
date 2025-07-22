@@ -1,2 +1,18 @@
 header.site-header
-    .site-header__container
+    .section.site-header__section
+        .section__container
+            .site-header__top.site-header__row
+                .section-block.section-block__left
+                    .section-block__logo
+                    .section-block__slogan
+                .section-block
+                .section-block
+                .section-block
+                .section-block
+                +btn({
+                    name: 'Обратный звонок',
+                    cMode: 'accent',
+                    sMode: 'header'
+                })
+            .site-header__bottom.site-header__row
+                .section-block

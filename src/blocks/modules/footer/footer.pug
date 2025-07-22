@@ -4,10 +4,10 @@ footer.site-footer
             .site-footer__block
                 .site-footer__row.site-footer__top
                     .site-footer__logo
-                        img(src="img/logo/logo_footer.svg", alt="")
+                        img(src="img/logo/logo_footer.svg" alt="")
                     .site-footer__rating
                         <div style="width:218px;height:82px;overflow:hidden;position:relative;"><iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/49212829293?size=m"></iframe></div>
-                    nav.site-footer__nav
+                    .site-footer__nav
                         +btn({
                             name: 'Каталог',
                             sMode: 'footer',
@@ -111,9 +111,9 @@ footer.site-footer
                                         use(xlink:href=`img/sprites/sprite.svg#timer`)
                                 .footer-contact__desc
                                     .footer-contact__title Ежедневно <br>с 08:00 до 21:00
-                            
+
                         +socials({
-                            mode: 'footer'
+                            classes: 'site-footer__socials'
                         })
 
                 .site-footer__row.site-footer__bottom
@@ -122,6 +122,6 @@ footer.site-footer
                         a(href="javascript:void(0);").site-footer__doc Политика конфиденциальности
                         a(href="javascript:void(0);").site-footer__doc Пользовательское соглашение
                         .site-footer__disclaimer Обращаем Ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса Российской Федерации.
-                    .site-footer__developer
+                    a(href="https://itspace.group/").site-footer__developer
                         span Разработка сайта
-                        img(src="img/logo/its_logo.svg", alt="it space group")
+                        img(src="img/logo/its_logo.svg" alt="it space group")

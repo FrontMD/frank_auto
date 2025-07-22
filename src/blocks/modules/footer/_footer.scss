@@ -57,7 +57,7 @@
         font-weight: 600;
         font-size: 18px;
         line-height: 100%;
-        letter-spacing: 0%;
+        letter-spacing: 0;
         text-transform: uppercase;
         opacity: 0.5;
     }
@@ -78,7 +78,7 @@
         font-weight: 600;
         font-size: 16px;
         line-height: 100%;
-        letter-spacing: 0%;
+        letter-spacing: 0;
         color: $c-white;
         transition: color $tr-time linear;
 
@@ -94,10 +94,63 @@
         max-width: 275px;
     }
 
+    &__socials {
+        margin-top: 38px;
+    }
+
     &__bottom {
+        justify-content: space-between;
+        align-items: flex-start;
         padding-top: 40px;
         padding-bottom: 42px;
         border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    &__info {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+        flex: 0 1 840px;
+    }
+
+    &__copyright,
+    &__doc {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0;
+        color: $c-white;
+    }
+
+    &__doc {
+        opacity: 0.4;
+        transition: all $tr-time linear;
+
+        &:hover {
+            color: $c-accent-hover;
+        }
+    }
+
+    &__disclaimer {
+        opacity: 0.4;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        letter-spacing: 0;
+    }
+
+    &__developer {
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0;
+        opacity: 0.4;
     }
 }
 
@@ -109,7 +162,7 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 100%;
-    letter-spacing: 0%;
+    letter-spacing: 0;
 
     &__icon {
         width: 40px;
@@ -134,10 +187,10 @@
     a.footer-contact__title:hover {
         color: $c-accent-hover;
     }
-    
+
     &__text {
         opacity: 0.5;
         margin-top: 2px;
     }
-    
+
 }
