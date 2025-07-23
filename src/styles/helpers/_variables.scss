@@ -11,7 +11,9 @@ $ff-second: 'Rooftop', Arial, Helvetica, sans-serif;
 $media-list: (
     'xs': 500,
     'mobile': 767,
+    'tablet-small': 899,
     'tablet': 1023,
+    'laptop-small': 1279,
     'laptop': 1420,
     'large': 1800,
 );
@@ -23,17 +25,17 @@ $c-accent: var(--c-accent);
 $c-accent-hover: #2427e1;
 $c-accent-2: #FC00FF;
 $c-text: var(--c-text);
+$c-text-breadcrumbs: #878E9C;
+$c-text-light: #9299A7;
 $c-bg-main: #EDF0F6;
 $c-bg-dark: #0F0908;
 $c-grey: #202020;
-$c-text-breadcrumbs: #878E9C;
+$c-border: #E1E6EC;
 
 $c-accent-light: #DD595A;
 $c-accent-light2: #FCF2F2;
 $c-accent-light3: #FAE6E6;
 $c-text-dark: #222222;
-$c-text-light: #6F6F6F;
-$c-border: #E9E9E9;
 $c-bg: #c8c8c8;
 $c-bg-dark2: #1D1D1D;
 $c-error: #D91528;

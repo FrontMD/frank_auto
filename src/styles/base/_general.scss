@@ -154,21 +154,20 @@ html.hystmodal__opened {
 	}
 
 	@include max(laptop) {
-		padding: 62px 0 0;
+		padding: 198px 0 0;
 	}
 
-	@include max(mobile) {
-		padding: 60px 0 0;
+	@include max(tablet) {
+		padding: 116px 0 0;
 	}
 
 }
 
 .section {
+	padding: 0 27px 40px;
 
-	padding: 0 40px 50px;
-
-	@include max(large) {
-		padding: 0 20px 50px;
+	@include max(laptop) {
+		padding: 0 20px 40px;
 	}
 
 	/*@media print {
@@ -176,7 +175,7 @@ html.hystmodal__opened {
 	}*/
 
 	&__container {
-		max-width: 1400px;
+		width: 100%;
 		margin: 0 auto;
 	}
 

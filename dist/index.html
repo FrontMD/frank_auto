@@ -25,21 +25,110 @@
     <link rel="stylesheet" href="styles/main.min.css">
   </head>
   <body>
-    <header class="site-header">
-      <div class="section site-header__section">
-        <div class="section__container">
-          <div class="site-header__top site-header__row">
-            <div class="section-block section-block__left">
-              <div class="section-block__logo"></div>
-              <div class="section-block__slogan"></div>
+    <header class="site-header" data-js="siteHeader">
+      <div class="section site-header__section" data-js="siteHeaderSection">
+        <div class="section__container site-header__container">
+          <div class="site-header__top site-header__row" data-js="siteHeaderTop">
+            <div class="section-block site-header__block site-header__left"><a class="site-header__logo" href="javascript:void(0);"><img src="img/logo/logo_header.svg" alt=""><span>Почувствуй новое первым</span></a></div>
+            <div class="section-block site-header__block site-header__schedule">
+              <div class="header-schedule">
+                <div class="header-schedule__icon">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#timer"></use>
+                  </svg>
+                </div>
+                <div class="header-schedule__text">Время работы: <br>c 08:00 до 21:00</div>
+              </div>
             </div>
-            <div class="section-block"></div>
-            <div class="section-block"></div>
-            <div class="section-block"></div>
-            <div class="section-block"></div><a class="btn  btn--accent btn--header" href="javascript:void(0)"><span class="btn__text">Обратный звонок</span></a>
+            <div class="section-block site-header__block site-header__phones">
+              <div class="header-phones">
+                <div class="header-phones__item">Новорижское ш., 17й км, с3 <a href="tel:+74991165065">+7 (499) 116-50-65</a></div>
+                <div class="header-phones__item">Ярославское ш., д.42 <a href="tel:+74991165065">+7 (499) 116-50-65</a></div>
+              </div>
+            </div>
+            <div class="section-block site-header__block site-header__soc">
+              <div class="header-soc">
+                <div class="header-soc__title">Наши соц сети:</div>
+                <div class="header-soc__links"><a class="header-soc__link" href="javascript:void(0);">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#youtube"></use>
+                    </svg></a><a class="header-soc__link" href="javascript:void(0);">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#telegram"></use>
+                    </svg></a><a class="header-soc__link" href="javascript:void(0);">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#whatsapp"></use>
+                    </svg></a><a class="header-soc__link" href="javascript:void(0);">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#dzen"></use>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div class="section-block site-header__block site-header__compare"><a class="header-compare" href="javascript:void(0);"><span>12</span>
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#compare"></use>
+                </svg></a></div><a class="btn  btn--accent btn--header" href="javascript:void(0)">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#handset"></use>
+                  </svg><span class="btn__text">Обратный звонок</span></a>
           </div>
           <div class="site-header__bottom site-header__row">
-            <div class="section-block"></div>
+            <div class="section-block site-header__block site-header__menu">
+              <nav class="header-menu">
+                <div class="header-menu__item">
+                  <div class="header-menu__header"><a class="header-menu__link" href="javascript:void(0);">Автомобили</a>
+                    <div class="header-menu__icon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#arrow_angle_down"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="header-menu__submenu">
+                    <div class="header-menu__subtitle">Автомобили</div>
+                    <div class="header-menu__list"><a class="header-menu__link" href="javascript:void(0);">Пункт 1</a><a class="header-menu__link" href="javascript:void(0);">Пункт 2</a><a class="header-menu__link" href="javascript:void(0);">Пункт 3</a><a class="header-menu__link" href="javascript:void(0);">Пункт 4</a></div>
+                  </div>
+                </div>
+                <div class="header-menu__item">
+                  <div class="header-menu__header"><a class="header-menu__link" href="javascript:void(0);">Услуги</a>
+                    <div class="header-menu__icon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#arrow_angle_down"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="header-menu__submenu">
+                    <div class="header-menu__subtitle">Услуги</div>
+                    <div class="header-menu__list"><a class="header-menu__link" href="javascript:void(0);">Пункт 1</a><a class="header-menu__link" href="javascript:void(0);">Пункт 2</a><a class="header-menu__link" href="javascript:void(0);">Пункт 3</a><a class="header-menu__link" href="javascript:void(0);">Пункт 4</a></div>
+                  </div>
+                </div>
+                <div class="header-menu__item">
+                  <div class="header-menu__header"><a class="header-menu__link" href="javascript:void(0);">Сервис</a></div>
+                </div>
+                <div class="header-menu__item">
+                  <div class="header-menu__header"><a class="header-menu__link" href="javascript:void(0);">Акции</a></div>
+                </div>
+                <div class="header-menu__item">
+                  <div class="header-menu__header"><a class="header-menu__link" href="javascript:void(0);">О компании</a>
+                    <div class="header-menu__icon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#arrow_angle_down"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="header-menu__submenu">
+                    <div class="header-menu__subtitle">О компании</div>
+                    <div class="header-menu__list"><a class="header-menu__link" href="javascript:void(0);">Пункт 1</a><a class="header-menu__link" href="javascript:void(0);">Пункт 2</a><a class="header-menu__link" href="javascript:void(0);">Пункт 3</a><a class="header-menu__link" href="javascript:void(0);">Пункт 4</a></div>
+                  </div>
+                </div>
+                <div class="header-menu__item header-menu__item--desk">
+                  <div class="header-menu__header"><a class="header-menu__link" href="javascript:void(0);">Блог</a></div>
+                </div>
+                <div class="header-menu__item header-menu__item--desk">
+                  <div class="header-menu__header"><a class="header-menu__link" href="javascript:void(0);">Контакты</a></div>
+                </div>
+              </nav>
+              <div class="header-burger"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -152,9 +241,6 @@
         }
         
         @media (max-width: 1023px) {
-            .pages-list {
-                padding: 85px 0 50px;
-            }
         
             .pages-list__links {
                 grid-template-columns: 1fr;
