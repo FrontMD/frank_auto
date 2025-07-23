@@ -3,6 +3,7 @@ function headerController() {
 
     if(!header) return
 
+    // высота по скроллу
     let lastScroll = window.scrollY ? window.scrollY : 0
 
     if(lastScroll > 10) {
@@ -21,5 +22,12 @@ function headerController() {
         } else {
             header.classList.add('small')
         }
+    }
+
+    // открытие бургера
+    const burger = document.querySelector('[data-js="headerBurger"]')
+
+    if(burger) {
+        const burgerToggle = burger.querySelector('[data-js="headerBurgerToggle"]')
     }
 }

@@ -57,7 +57,7 @@
         }
 
         @include max(tablet) {
-            padding: 0 10px;
+            padding: 6px;
         }
     }
 
@@ -233,6 +233,11 @@
         line-height: 100%;
         letter-spacing: 0;
 
+        @include max(tablet) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
         a {
             color: $c-text;
             transition: color $tr-time linear;
@@ -244,7 +249,11 @@
     }
 
     &__item+&__item {
-        border-top: 1px solid $c-border
+        border-top: 1px solid $c-border;
+
+        @include max(tablet) {
+            border-top: none;
+        }
     }
 }
 
@@ -266,7 +275,7 @@
         height: 25px;
     }
 
-    span {
+    &__count {
         position: absolute;
         right: -20px;
         top: 0;
@@ -279,11 +288,37 @@
         color: $c-white;
         border-radius: 8px;
     }
+
+    &__text {
+        display: none;
+    }
+}
+
+.header-compare {
+    &--burger {
+        width: 100%;
+        gap: 6px;
+        justify-content: flex-start;
+    }
+
+    &--burger &__text {
+        display: block;
+    }
+
+    &--burger &__count {
+        position: relative;
+        right: 0;
+        top: 0;
+    }
+
+    &--burger svg {
+        display: none;
+    }
 }
 
 .header-menu {
     display: flex;
-    align-items: stretch;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
     padding: 0 40px;
@@ -305,16 +340,29 @@
                 display: none;
             }
         }
+
+        &--mob {
+            @include min(tablet-small) {
+                display: none;
+            }
+        }
     }
 
     &__header {
         display: flex;
         align-items: center;
         padding: 5px 10px;
+        background-color: transparent;
+        transition: all $tr-time linear;
+        border-radius: 5px;
 
         @include max(tablet) {
             padding: 0;
         }
+    }
+
+    &__item:hover &__header {
+        background-color: $c-bg-main;
     }
 
     &__link {
@@ -348,7 +396,7 @@
     &__submenu {
         position: absolute;
         left: 0;
-        top: calc(100% + 0px);
+        top: calc(100% + 20px);
         background-color: $c-white;
         padding: 30px 30px 38px;
         width: fit-content;
@@ -361,10 +409,10 @@
         &:after {
             content: "";
             position: absolute;
-            top: -7px;
+            top: -34px;
             left: 0;
             width: 100%;
-            height: 8px;
+            height: 35px;
             background-color: transparent;
         }
     }
@@ -372,7 +420,7 @@
     &__item:hover &__submenu {
         opacity: 1;
         visibility: visible;
-        top: calc(100% + 6px);
+        top: calc(100% + 33px);
     }
 
     &__subtitle {
@@ -390,6 +438,115 @@
         gap: 16px;
         margin-top: 30px;
     }
+}
 
+.header-menu {
+    &--burger {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    &--burger &__item {
+
+        &--mob {
+            @include min(tablet-small) {
+                display: none;
+            }
+        }
+    }
+
+    &--burger &__header {
+        width: 100%;
+    }
+
+    &--burger &__link {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0;
+        color: $c-text-breadcrumbs;
+    }
+
+}
+
+.header-burger {
+    display: none;
+    height: 100%;
+    position: relative;
+
+    @include max(tablet) {
+        display: block;
+    }
+
+    &__toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $c-bg-main;
+        border-radius: 18px;
+        padding: 14px;
+        height: 100%;
+
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &__open {
+        display: flex;
+    }
+
+    &__close {
+        display: none;
+    }
+
+    &.active &__open {
+        display: none;
+    }
+
+    &.active &__close {
+        display: flex;
+    }
+
+    &__content {
+        position: absolute;
+        right: 0;
+        top: calc(100% + 0px);
+        width: fit-content;
+        min-width: 360px;
+        background-color: $c-white;
+        border-radius: 24px;
+        padding: 15px 30px 15px;
+        opacity: 0;
+        visibility: hidden;
+        transition: all $tr-time linear;
+    }
+
+    &.active &__content {
+        top: calc(100% + 12px);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__block {
+        padding: 15px 0;
+    }
+
+    &__block--flex {
+        display: flex;
+        align-items: center;
+    }
+
+    &__block+&__block {
+        border-top: 1px solid $c-border;
+    }
 
 }
