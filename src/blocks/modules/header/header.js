@@ -29,5 +29,14 @@ function headerController() {
 
     if(burger) {
         const burgerToggle = burger.querySelector('[data-js="headerBurgerToggle"]')
+
+        burgerToggle.addEventListener('click', () => {
+            if(burger.classList.contains('active')) {
+                burger.classList.remove('active')
+            } else {
+                burger.classList.add('active')
+            }
+        })
+
     }
 }

@@ -239,6 +239,19 @@
             }
         }
 
+        @include max(mobile) {
+            padding: 10px;
+            font-size: 13px;
+
+            .btn__text {
+                display: block;
+            }
+
+            svg {
+                display: none;
+            }
+        }
+
     }
 
     /*&--big {

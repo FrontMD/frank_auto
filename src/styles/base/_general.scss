@@ -161,6 +161,10 @@ html.hystmodal__opened {
 		padding: 116px 0 0;
 	}
 
+	@include max(mobile) {
+		padding: 70px 0 0;
+	}
+
 }
 
 .section {
@@ -168,6 +172,10 @@ html.hystmodal__opened {
 
 	@include max(laptop) {
 		padding: 0 20px 40px;
+	}
+
+	@include max(mobile) {
+		padding: 0 0px 30px;
 	}
 
 	/*@media print {

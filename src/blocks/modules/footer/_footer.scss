@@ -4,11 +4,23 @@
 
     &__section {
         padding-bottom: 24px;
+
+        @include max(mobile) {
+            padding: 0;
+        }
     }
 
     &__block {
         background-color: $c-bg-dark;
         border-radius: $br-footer;
+
+        @include max(tablet) {
+            border-radius: 16px;
+        }
+
+        @include max(mobile) {
+            border-radius: 10px;
+        }
     }
 
     &__row {
@@ -16,12 +28,41 @@
         gap: 34px;
         padding-left: 36px;
         padding-right: 36px;
+
+        @include max(laptop-small) {
+            padding-left: 24px;
+            padding-right: 24px;
+            gap: 24px;
+        }
+
+        @include max(tablet) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        @include max(mobile) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
     }
 
     &__top {
         align-items: center;
         padding-top: 25px;
         padding-bottom: 18px;
+
+        @include max(laptop-small) {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        @include max(tablet) {
+            padding-bottom: 25px;
+        }
+
+        @include max(xs) {
+            justify-content: center;
+        }
     }
 
     &__logo {
@@ -38,6 +79,16 @@
         align-items: center;
         justify-content: flex-end;
         gap: 10px;
+
+        @include max(laptop-small) {
+            flex: 0 0 100%;
+            justify-content: flex-start;
+        }
+
+        @include max(mobile) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
 
     &__middle {
@@ -46,10 +97,25 @@
         padding-top: 36px;
         padding-bottom: 45px;
         border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+        @include max(tablet) {
+            padding-top: 25px;
+            padding-bottom: 25px;
+            flex-wrap: wrap;
+            gap: 50px;
+            justify-content: flex-start;
+        }
     }
 
     &__list {
         flex: 0 1 auto;
+
+        &--catalog {
+            @include max(tablet) {
+                width: 100%;
+                flex: 0 0 100%;
+            }
+        }
     }
 
     &__title {
@@ -65,10 +131,25 @@
     &__links {
         flex: 0 0 auto;
 
-        &--catalog {
-            columns: 5;
-            flex: 0 1 auto;
-            width: 640px;
+    }
+
+    &__list--catalog &__links {
+        columns: 5;
+        flex: 0 1 auto;
+        width: 640px;
+
+        @include max(laptop-small) {
+            width: 410px;
+            columns: 3;
+        }
+
+        @include max(tablet) {
+            width: 100%;
+            columns: 110px auto;
+        }
+
+        @include max(xs) {
+            columns: 100px auto;
         }
     }
 
@@ -96,6 +177,10 @@
 
     &__socials {
         margin-top: 38px;
+
+        @include max(tablet) {
+            margin-top: 30px;
+        }
     }
 
     &__bottom {
@@ -104,6 +189,13 @@
         padding-top: 40px;
         padding-bottom: 42px;
         border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+        @include max(tablet) {
+            flex-direction: column;
+            gap: 30px;
+            padding: 25px;
+            padding-bottom: 20px;
+        }
     }
 
     &__info {
@@ -113,6 +205,17 @@
         justify-content: space-between;
         gap: 28px;
         flex: 0 1 840px;
+
+        @include max(laptop-small) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        @include max(tablet) {
+            flex: 0 0 auto;
+            gap: 10px;
+        }
     }
 
     &__copyright,
@@ -139,6 +242,10 @@
         font-size: 14px;
         line-height: 120%;
         letter-spacing: 0;
+
+        @include max(tablet) {
+            margin-top: 17px;
+        }
     }
 
     &__developer {

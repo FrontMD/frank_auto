@@ -14,6 +14,11 @@
             padding-bottom: 0;
             padding-top: 20px;
         }
+
+        @include max(mobile) {
+            padding: 10px;
+            background-color: $c-white;
+        }
     }
 
     &__container {
@@ -22,6 +27,11 @@
             gap: 6px;
             align-items: stretch;
             min-height: 76px;
+        }
+
+        @include max(mobile) {
+            min-height: 36px;
+            gap: 10px;
         }
     }
 
@@ -72,6 +82,14 @@
             padding-left: 14px;
             padding-right: 14px;
         }
+
+        @include max(tablet-small) {
+            flex: 0 0 148px;
+        }
+
+        @include max(mobile) {
+            display: contents;
+        }
     }
 
     &__logo {
@@ -79,10 +97,17 @@
         display: flex;
         align-items: center;
 
+        @include max(mobile) {
+            margin-right: auto;
+        }
 
         svg {
             width: 125px;
             flex: 0 0 125px;
+
+            @include max(tablet-small) {
+                flex: 0 0 120px;
+            }
         }
 
         span {
@@ -91,6 +116,10 @@
             line-height: 100%;
             letter-spacing: -0.02em;
             color: $c-text;
+
+            @include max(tablet-small) {
+                display: none;
+            }
         }
     }
 
@@ -137,13 +166,20 @@
         @include max(tablet) {
             flex: 0 1 auto;
             order: -1;
+            gap: 16px;
+        }
+
+        @include max(mobile) {
+            display: contents;
         }
     }
 }
 
 .site-header {
     &.small &__section {
-        padding-top: 4px;
+        @include min(mobile) {
+            padding-top: 4px;
+        }
     }
 
     &.small &__top {
@@ -172,6 +208,10 @@
             display: none;
         }
 
+        @include max(tablet) {
+            display: flex;
+        }
+
         svg {
             width: 24px;
             height: 24px;
@@ -183,6 +223,10 @@
         font-size: 13px;
         line-height: 100%;
         letter-spacing: 0;
+
+        @include max(tablet) {
+            line-height: 160%;
+        }
     }
 }
 
@@ -191,6 +235,10 @@
     flex-direction: column;
     align-items: center;
     gap: 13px;
+
+    @include max(tablet) {
+        gap: 4px;
+    }
 
     &__title {
         font-weight: 600;
@@ -204,11 +252,14 @@
         align-items: center;
         justify-content: center;
         gap: 12px;
+
     }
 
     &__link {
+        display: flex;
         color: $c-text;
         transition: color $tr-time linear;
+        color: $c-text-breadcrumbs;
 
         &:hover {
             color: $c-accent-hover;
@@ -236,6 +287,7 @@
         @include max(tablet) {
             flex-direction: column;
             align-items: flex-start;
+            padding: 0;
         }
 
         a {
@@ -253,6 +305,7 @@
 
         @include max(tablet) {
             border-top: none;
+            margin-top: 15px;
         }
     }
 }
@@ -328,6 +381,10 @@
         gap: 16px;
     }
 
+    @include max(mobile) {
+        display: none;
+    }
+
     &__item {
         position: relative;
         display: flex;
@@ -355,6 +412,7 @@
         background-color: transparent;
         transition: all $tr-time linear;
         border-radius: 5px;
+        gap: 5px;
 
         @include max(tablet) {
             padding: 0;
@@ -444,6 +502,10 @@
     &--burger {
         flex-direction: column;
         align-items: stretch;
+
+        @include max(mobile) {
+            display: flex;
+        }
     }
 
     &--burger &__item {
@@ -478,6 +540,11 @@
         display: block;
     }
 
+    @include max(mobile) {
+        order: -1;
+        align-self: center;
+    }
+
     &__toggle {
         display: flex;
         align-items: center;
@@ -486,6 +553,12 @@
         border-radius: 18px;
         padding: 14px;
         height: 100%;
+
+        @include max(mobile) {
+            padding: 0;
+            color: $c-text;
+            background-color: transparent;
+        }
 
     }
 
@@ -528,12 +601,29 @@
         opacity: 0;
         visibility: hidden;
         transition: all $tr-time linear;
+
+        @include max(mobile) {
+            position: fixed;
+            right: auto;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 55px - 30px);
+            border-radius: 0 0 24px 24px;
+            border-top: 1px solid $c-border;
+            z-index: -1;
+        }
     }
 
     &.active &__content {
         top: calc(100% + 12px);
         opacity: 1;
         visibility: visible;
+
+        @include max(mobile) {
+            top: 56px;
+        }
+
     }
 
     &__block {
@@ -543,6 +633,7 @@
     &__block--flex {
         display: flex;
         align-items: center;
+        gap: 30px;
     }
 
     &__block+&__block {
