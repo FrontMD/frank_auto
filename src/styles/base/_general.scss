@@ -280,6 +280,11 @@ html.hystmodal__opened {
 	padding: 20px;
 	overflow: hidden;
 
+	@include max(mobile) {
+		border-radius: $br-section-mob;
+		padding: 20px 10px;
+	}
+
 	&--dark {
 		background-color: $c-bg-dark;
 		color: $c-white;
@@ -292,6 +297,7 @@ html.hystmodal__opened {
 		width: 100%;
 		height: 100%;
 
+		picture,
 		img {
 			width: 100%;
 			height: 100%;

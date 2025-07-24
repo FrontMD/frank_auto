@@ -140,32 +140,40 @@
                     </svg>
                   </div>
                 </div>
-                <div class="header-burger__content" data-js="headerBurgerContent">
+                <div class="header-burger__content scrollbar scrollbar--small" data-js="headerBurgerContent">
                   <div class="header-burger__block">
                     <div class="header-menu header-menu--burger">
-                      <div class="header-menu__item header-menu__item--mob">
+                      <div class="header-menu__item header-menu__item--mob" data-js="headerMenuItem">
                         <div class="header-menu__header"><a class="header-menu__link" href="javascript:void(0);">Автомобили</a>
-                          <div class="header-menu__icon">
+                          <div class="header-menu__icon header-menu__icon--open" data-js="headerMenuItemOpen">
                             <svg>
-                              <use xlink:href="img/sprites/sprite.svg#arrow_angle_down"></use>
+                              <use xlink:href="img/sprites/sprite.svg#burger_chevron"></use>
+                            </svg>
+                          </div>
+                          <div class="header-menu__icon header-menu__icon--close" data-js="headerMenuItemClose">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#burger_close"></use>
                             </svg>
                           </div>
                         </div>
-                        <div class="header-menu__submenu">
-                          <div class="header-menu__subtitle">Автомобили</div>
+                        <div class="header-menu__submenu" data-js="headerMenuItemSubmenu">
                           <div class="header-menu__list"><a class="header-menu__link" href="javascript:void(0);">Пункт 1</a><a class="header-menu__link" href="javascript:void(0);">Пункт 2</a><a class="header-menu__link" href="javascript:void(0);">Пункт 3</a><a class="header-menu__link" href="javascript:void(0);">Пункт 4</a></div>
                         </div>
                       </div>
-                      <div class="header-menu__item header-menu__item--mob">
+                      <div class="header-menu__item header-menu__item--mob" data-js="headerMenuItem">
                         <div class="header-menu__header"><a class="header-menu__link" href="javascript:void(0);">Услуги</a>
-                          <div class="header-menu__icon">
+                          <div class="header-menu__icon header-menu__icon--open" data-js="headerMenuItemOpen">
                             <svg>
-                              <use xlink:href="img/sprites/sprite.svg#arrow_angle_down"></use>
+                              <use xlink:href="img/sprites/sprite.svg#burger_chevron"></use>
+                            </svg>
+                          </div>
+                          <div class="header-menu__icon header-menu__icon--close" data-js="headerMenuItemClose">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#burger_close"></use>
                             </svg>
                           </div>
                         </div>
-                        <div class="header-menu__submenu">
-                          <div class="header-menu__subtitle">Услуги</div>
+                        <div class="header-menu__submenu" data-js="headerMenuItemSubmenu">
                           <div class="header-menu__list"><a class="header-menu__link" href="javascript:void(0);">Пункт 1</a><a class="header-menu__link" href="javascript:void(0);">Пункт 2</a><a class="header-menu__link" href="javascript:void(0);">Пункт 3</a><a class="header-menu__link" href="javascript:void(0);">Пункт 4</a></div>
                         </div>
                       </div>
@@ -175,16 +183,20 @@
                       <div class="header-menu__item header-menu__item--mob">
                         <div class="header-menu__header"><a class="header-menu__link" href="javascript:void(0);">Акции</a></div>
                       </div>
-                      <div class="header-menu__item header-menu__item--mob">
+                      <div class="header-menu__item header-menu__item--mob" data-js="headerMenuItem">
                         <div class="header-menu__header"><a class="header-menu__link" href="javascript:void(0);">О компании</a>
-                          <div class="header-menu__icon">
+                          <div class="header-menu__icon header-menu__icon--open" data-js="headerMenuItemOpen">
                             <svg>
-                              <use xlink:href="img/sprites/sprite.svg#arrow_angle_down"></use>
+                              <use xlink:href="img/sprites/sprite.svg#burger_chevron"></use>
+                            </svg>
+                          </div>
+                          <div class="header-menu__icon header-menu__icon--close" data-js="headerMenuItemClose">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#burger_close"></use>
                             </svg>
                           </div>
                         </div>
-                        <div class="header-menu__submenu">
-                          <div class="header-menu__subtitle">О компании</div>
+                        <div class="header-menu__submenu" data-js="headerMenuItemSubmenu">
                           <div class="header-menu__list"><a class="header-menu__link" href="javascript:void(0);">Пункт 1</a><a class="header-menu__link" href="javascript:void(0);">Пункт 2</a><a class="header-menu__link" href="javascript:void(0);">Пункт 3</a><a class="header-menu__link" href="javascript:void(0);">Пункт 4</a></div>
                         </div>
                       </div>
@@ -237,7 +249,7 @@
       </div>
     </header>
     <main class="site-main">
-      <div class="page-layout page-layout--white" data-js="pageLayout">
+      <div class="page-layout" data-js="pageLayout">
             <section class="section s-breadcrumbs">
               <div class="section__container">
                     <div class="breadcrumbs  breadcrumbs--dark">
@@ -256,7 +268,11 @@
         <section class="section not-found">
           <div class="section__container">
             <div class="section-block section-block--dark not-found__block">
-              <div class="section-block__bg"><img src="img/404/bg.webp"></div>
+              <div class="section-block__bg">
+                <picture>
+                  <source srcset="img/404/bg_mob.webp" media="(max-width: 767px)"><img src="img/404/bg.webp">
+                </picture>
+              </div>
               <div class="section-block__content not-found__content">
                 <div class="not-found__title">404</div>
                 <div class="not-found__subtitle">Страница не найдена!</div>

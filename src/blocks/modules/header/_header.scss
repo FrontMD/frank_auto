@@ -502,6 +502,7 @@
     &--burger {
         flex-direction: column;
         align-items: stretch;
+        gap: 20px;
 
         @include max(mobile) {
             display: flex;
@@ -509,6 +510,8 @@
     }
 
     &--burger &__item {
+        flex-direction: column;
+        align-items: flex-start;
 
         &--mob {
             @include min(tablet-small) {
@@ -519,6 +522,11 @@
 
     &--burger &__header {
         width: 100%;
+        justify-content: space-between;
+    }
+
+    &--burger &__item:hover &__header {
+        background-color: transparent;
     }
 
     &--burger &__link {
@@ -527,6 +535,60 @@
         line-height: 100%;
         letter-spacing: 0;
         color: $c-text-breadcrumbs;
+    }
+
+    &--burger &__icon--open {
+        display: block;
+        width: 19px;
+        height: 19px;
+    }
+
+    &--burger &__icon--close {
+        display: none;
+        width: 20px;
+        height: 20px;
+    }
+
+    &--burger &__item.active &__icon--open {
+        display: none;
+    }
+
+    &--burger &__item.active &__icon--close {
+        display: block;
+    }
+
+    &--burger &__submenu {
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+        top: 0;
+        padding: 20px 0 0 20px;
+        min-width: auto;
+        max-height: 0;
+        padding-top: 0;
+        margin-top: 0;
+        overflow: hidden;
+        border-radius: 0;
+
+        &::after {
+            content: none;
+        }
+    }
+
+    &--burger &__item.active &__submenu {
+        margin-top: 20px;
+    }
+
+    &--burger &__subtitle {
+        display: none;
+    }
+
+    &--burger &__item:hover &__submenu {
+        top: 0;
+    }
+
+    &--burger &__list {
+        margin-top: 0;
     }
 
 }
@@ -608,10 +670,12 @@
             top: 40px;
             left: 0;
             width: 100%;
+            padding: 28px 30px 15px;
             height: calc(100% - 55px - 30px);
             border-radius: 0 0 24px 24px;
             border-top: 1px solid $c-border;
             z-index: -1;
+            overflow-y: auto;
         }
     }
 

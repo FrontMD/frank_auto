@@ -16,6 +16,7 @@ $media-list: (
     'laptop-small': 1279,
     'laptop': 1420,
     'large': 1800,
+    'full': 2000,
 );
 
 // Цвета
@@ -44,6 +45,7 @@ $c-grey-hover: #FFF0F0;
 
 // Радиусы
 $br-section: 24px;
+$br-section-mob: 10px;
 $br-header-small: 20px;
 $br-header-big: 24px;
 $br-footer: 40px;

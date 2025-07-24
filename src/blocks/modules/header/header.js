@@ -31,12 +31,43 @@ function headerController() {
         const burgerToggle = burger.querySelector('[data-js="headerBurgerToggle"]')
 
         burgerToggle.addEventListener('click', () => {
+            const ww = window.innerWidth
             if(burger.classList.contains('active')) {
                 burger.classList.remove('active')
+                unlockBody()
             } else {
                 burger.classList.add('active')
+                if(ww < 768) {
+                    lockBody()
+                }
             }
         })
 
+        // подменю в бургере 
+        const menuItems = burger.querySelectorAll('[data-js="headerMenuItem"]')
+
+        if(menuItems.length > 0) {
+            menuItems.forEach(item => {
+                const submenu = item.querySelector('[data-js="headerMenuItemSubmenu"]')
+                const minHeight = 0
+
+                if(submenu) {
+                    const maxHeight = submenu.scrollHeight
+
+                    const openBtn = item.querySelector('[data-js="headerMenuItemOpen"]')
+                    const closeBtn = item.querySelector('[data-js="headerMenuItemClose"]')
+
+                    openBtn.addEventListener('click', () => {
+                        submenu.style.maxHeight = maxHeight + 'px'
+                        item.classList.add('active')
+                    })
+
+                    closeBtn.addEventListener('click', () => {
+                        submenu.style.maxHeight = minHeight + 'px'
+                        item.classList.remove('active')
+                    })
+                }
+            })
+        }
     }
 }

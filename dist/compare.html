@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Главная</title>
+    <title>Сравнение автомобилей</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -249,7 +249,338 @@
       </div>
     </header>
     <main class="site-main">
-      <div class="page-layout" data-js="pageLayout"></div>
+      <div class="page-layout" data-js="pageLayout">
+            <section class="section s-breadcrumbs">
+              <div class="section__container">
+                    <div class="breadcrumbs  breadcrumbs--dark">
+                      <ul class="breadcrumbs__list scrollbar scrollbar--small">
+                        <li class="breadcrumbs__item"><a href="javascript:void(0);">Главная</a><span class="breadcrumbs__separator">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#arrow_angle_right"></use>
+                            </svg></span>
+                        </li>
+                        <li class="breadcrumbs__item breadcrumbs__item--current"><span>Сравнение автомобилей</span>
+                        </li>
+                      </ul>
+                    </div>
+              </div>
+            </section>
+      </div>
+      <section class="section compare">
+        <div class="section__container">
+          <div class="section__header compare__header">
+            <div class="title">Сравнение автомобилей</div>
+            <div class="compare__actions"><a class="btn  btn--noborder btn--content" href="javascript:void(0)" data-js="printBtn">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#print"></use>
+                    </svg><span class="btn__text">Распечатать</span></a><a class="btn  btn--noborder btn--content" href="javascript:void(0)">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg><span class="btn__text">Скачать .xls</span></a><a class="btn  btn--noborder btn--content" href="/compare/?download=pdf" data-js="pdf">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#download"></use>
+                    </svg><span class="btn__text">Скачать .pdf</span></a><a class="btn  btn--noborder btn--content" href="javascript:void(0)">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#close"></use>
+                    </svg><span class="btn__text">Очистить все</span></a>
+            </div>
+          </div>
+          <div class="section-block">
+            <div class="compare__body tabs-block">
+              <div class="tabs-block__tabs scrollbar scrollbar--small">
+                <div class="tabs-block__list">
+                  <div class="tabs-block__tab active">Разрывные машины <span>(5)</span></div>
+                  <div class="tabs-block__tab">Твердомеры <span>(2)</span></div>
+                </div>
+              </div>
+              <div class="compare-block" data-js="compareBlock">
+                <div class="compare-block__header">
+                  <div class="compare__actions compare-block__actions"><a class="btn  btn--noborder btn--content" href="javascript:void(0)">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#close"></use>
+                          </svg><span class="btn__text">Очистить категорию</span></a>
+                  </div>
+                  <div class="slider-controls">
+                    <button class="slider-control slider-control--prev" type="button" data-js="sliderPrev">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#arrow_classic"></use>
+                      </svg>
+                    </button>
+                    <button class="slider-control slider-control--next" type="button" data-js="sliderNext">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#arrow_classic"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <div class="compare-block__prodwrap">
+                  <div class="compare-block__prods" data-js="compareSlider">
+                    <div class="compare-block__scrollbar" data-js="sliderScrollbar"></div>
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide compare-block__prod compare-prod">
+                        <div class="compare-prod__photo"><img src="img/catalog/compare_1.webp" alt=""></div>
+                        <div class="compare-prod__controls">
+                          <div class="compare-prod__control" href="javascript:void(0)">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#remove"></use>
+                            </svg>
+                          </div>
+                          <div class="compare-prod__control" href="javascript:void(0)">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#compare_2"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="compare-prod__title">ИР 5113-100 универсальная разрывная машина</div>
+                      </div>
+                      <div class="swiper-slide compare-block__prod compare-prod">
+                        <div class="compare-prod__photo"><img src="img/catalog/compare_1.webp" alt=""></div>
+                        <div class="compare-prod__controls">
+                          <div class="compare-prod__control" href="javascript:void(0)">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#remove"></use>
+                            </svg>
+                          </div>
+                          <div class="compare-prod__control" href="javascript:void(0)">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#compare_2"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="compare-prod__title">Разрывная машина ИР 5143-200</div>
+                      </div>
+                      <div class="swiper-slide compare-block__prod compare-prod">
+                        <div class="compare-prod__photo"><img src="img/catalog/compare_1.webp" alt=""></div>
+                        <div class="compare-prod__controls">
+                          <div class="compare-prod__control" href="javascript:void(0)">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#remove"></use>
+                            </svg>
+                          </div>
+                          <div class="compare-prod__control" href="javascript:void(0)">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#compare_2"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="compare-prod__title">FU DLC 200 кН испытательная машина</div>
+                      </div>
+                      <div class="swiper-slide compare-block__prod compare-prod">
+                        <div class="compare-prod__photo"><img src="img/catalog/compare_1.webp" alt=""></div>
+                        <div class="compare-prod__controls">
+                          <div class="compare-prod__control" href="javascript:void(0)">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#remove"></use>
+                            </svg>
+                          </div>
+                          <div class="compare-prod__control" href="javascript:void(0)">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#compare_2"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="compare-prod__title">Испытательная машина для пневморессор (пневмобаллоннов) DVT LZ</div>
+                      </div>
+                      <div class="swiper-slide compare-block__prod compare-prod">
+                        <div class="compare-prod__photo"><img src="img/catalog/compare_1.webp" alt=""></div>
+                        <div class="compare-prod__controls">
+                          <div class="compare-prod__control" href="javascript:void(0)">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#remove"></use>
+                            </svg>
+                          </div>
+                          <div class="compare-prod__control" href="javascript:void(0)">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#compare_2"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="compare-prod__title">ИР 5061-0,05</div>
+                      </div>
+                      <div class="swiper-slide compare-block__prod compare-prod">
+                        <div class="compare-prod__photo"><img src="img/catalog/compare_1.webp" alt=""></div>
+                        <div class="compare-prod__controls">
+                          <div class="compare-prod__control" href="javascript:void(0)">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#remove"></use>
+                            </svg>
+                          </div>
+                          <div class="compare-prod__control" href="javascript:void(0)">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#compare_2"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="compare-prod__title">ИХ 5111</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="compare-block__paramwrap">
+                  <div class="compare-block__params">
+                    <div class="compare-block__row">
+                      <div class="compare-block__cell compare-block__cell--title">Наибольшая предельная нагрузка, кН</div>
+                      <div class="compare-block__list" data-js="compareSlider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide compare-block__cell">100</div>
+                          <div class="swiper-slide compare-block__cell">100</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                          <div class="swiper-slide compare-block__cell">100</div>
+                          <div class="swiper-slide compare-block__cell">0.05</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="compare-block__row">
+                      <div class="compare-block__cell compare-block__cell--title">Пределы допускаемой погрешности измерения нагрузки, % (в диапазоне нагрузок, кН)</div>
+                      <div class="compare-block__list" data-js="compareSlider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide compare-block__cell">П±1 (от 4 до 100)</div>
+                          <div class="swiper-slide compare-block__cell">П±1 (от 4 до 100)</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                          <div class="swiper-slide compare-block__cell">100</div>
+                          <div class="swiper-slide compare-block__cell">0,05</div>
+                          <div class="swiper-slide compare-block__cell"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="compare-block__row">
+                      <div class="compare-block__cell compare-block__cell--title">Скорость перемещения активного захвата, мм/мин</div>
+                      <div class="compare-block__list" data-js="compareSlider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide compare-block__cell">от 0,1 до 500</div>
+                          <div class="swiper-slide compare-block__cell">от 0,1 до 500</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                          <div class="swiper-slide compare-block__cell">±1 (от 4 до 100)</div>
+                          <div class="swiper-slide compare-block__cell">±1</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="compare-block__row">
+                      <div class="compare-block__cell compare-block__cell--title">Номинальная цена единицы наименьшего разряда: при индикации нагрузки, Н</div>
+                      <div class="compare-block__list" data-js="compareSlider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide compare-block__cell">10</div>
+                          <div class="swiper-slide compare-block__cell">10</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                          <div class="swiper-slide compare-block__cell">от 0,1 до 500</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="compare-block__row">
+                      <div class="compare-block__cell compare-block__cell--title">При измерении перемещения активного захвата, мм</div>
+                      <div class="compare-block__list" data-js="compareSlider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide compare-block__cell">0,01</div>
+                          <div class="swiper-slide compare-block__cell">0,01</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="compare-block__row">
+                      <div class="compare-block__cell compare-block__cell--title">Ход подвижной траверсы без захватов, мм</div>
+                      <div class="compare-block__list" data-js="compareSlider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide compare-block__cell">700</div>
+                          <div class="swiper-slide compare-block__cell">700</div>
+                          <div class="swiper-slide compare-block__cell">не менее 1200</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="compare-block__row">
+                      <div class="compare-block__cell compare-block__cell--title">Ширина рабочего пространства, мм</div>
+                      <div class="compare-block__list" data-js="compareSlider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide compare-block__cell">400</div>
+                          <div class="swiper-slide compare-block__cell">400</div>
+                          <div class="swiper-slide compare-block__cell">не менее 520</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="compare-block__row">
+                      <div class="compare-block__cell compare-block__cell--title">Максимальная мощность, кВт (питание)</div>
+                      <div class="compare-block__list" data-js="compareSlider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide compare-block__cell">1,5 (3N, 380В, 50 Гц)</div>
+                          <div class="swiper-slide compare-block__cell">1,5 (3N, 380В, 50 Гц)</div>
+                          <div class="swiper-slide compare-block__cell">220 В, 50 Гц</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="compare-block__row">
+                      <div class="compare-block__cell compare-block__cell--title">Габаритные размеры установки испытательной (ширина х длина х высота), мм</div>
+                      <div class="compare-block__list" data-js="compareSlider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide compare-block__cell">900x790x1800</div>
+                          <div class="swiper-slide compare-block__cell">900x790x1800</div>
+                          <div class="swiper-slide compare-block__cell">2050х1070х660</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="compare-block__row">
+                      <div class="compare-block__cell compare-block__cell--title">Габаритные размеры стойки приборной (ширина х длина х высота), мм</div>
+                      <div class="compare-block__list" data-js="compareSlider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide compare-block__cell">1305x585x790</div>
+                          <div class="swiper-slide compare-block__cell">1305x585x790</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="compare-block__row">
+                      <div class="compare-block__cell compare-block__cell--title">Масса установки испытательной, кг</div>
+                      <div class="compare-block__list" data-js="compareSlider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide compare-block__cell">750</div>
+                          <div class="swiper-slide compare-block__cell">750</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="compare-block__row">
+                      <div class="compare-block__cell compare-block__cell--title">Масса стойки приборной, кг</div>
+                      <div class="compare-block__list" data-js="compareSlider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide compare-block__cell">100</div>
+                          <div class="swiper-slide compare-block__cell">100</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                          <div class="swiper-slide compare-block__cell">—</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="site-footer">
       <div class="section site-footer__section">

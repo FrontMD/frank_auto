@@ -116,31 +116,35 @@ header.site-header(data-js="siteHeader")
                                 svg
                                     use(xlink:href=`img/sprites/sprite.svg#close`)
 
-                        .header-burger__content(data-js="headerBurgerContent")
+                        .header-burger__content.scrollbar.scrollbar--small(data-js="headerBurgerContent")
                             .header-burger__block
                                 .header-menu.header-menu--burger
-                                    .header-menu__item.header-menu__item--mob
+                                    .header-menu__item.header-menu__item--mob(data-js="headerMenuItem")
                                         .header-menu__header
                                             a(href="javascript:void(0);").header-menu__link Автомобили
-                                            .header-menu__icon
+                                            .header-menu__icon.header-menu__icon--open(data-js="headerMenuItemOpen")
                                                 svg
-                                                    use(xlink:href=`img/sprites/sprite.svg#arrow_angle_down`)
-                                        .header-menu__submenu
-                                            .header-menu__subtitle Автомобили
+                                                    use(xlink:href=`img/sprites/sprite.svg#burger_chevron`)
+                                            .header-menu__icon.header-menu__icon--close(data-js="headerMenuItemClose")
+                                                svg
+                                                    use(xlink:href=`img/sprites/sprite.svg#burger_close`)
+                                        .header-menu__submenu(data-js="headerMenuItemSubmenu")
                                             .header-menu__list
                                                 a(href="javascript:void(0);").header-menu__link Пункт 1
                                                 a(href="javascript:void(0);").header-menu__link Пункт 2
                                                 a(href="javascript:void(0);").header-menu__link Пункт 3
                                                 a(href="javascript:void(0);").header-menu__link Пункт 4
 
-                                    .header-menu__item.header-menu__item--mob
+                                    .header-menu__item.header-menu__item--mob(data-js="headerMenuItem")
                                         .header-menu__header
                                             a(href="javascript:void(0);").header-menu__link Услуги
-                                            .header-menu__icon
+                                            .header-menu__icon.header-menu__icon--open(data-js="headerMenuItemOpen")
                                                 svg
-                                                    use(xlink:href=`img/sprites/sprite.svg#arrow_angle_down`)
-                                        .header-menu__submenu
-                                            .header-menu__subtitle Услуги
+                                                    use(xlink:href=`img/sprites/sprite.svg#burger_chevron`)
+                                            .header-menu__icon.header-menu__icon--close(data-js="headerMenuItemClose")
+                                                svg
+                                                    use(xlink:href=`img/sprites/sprite.svg#burger_close`)
+                                        .header-menu__submenu(data-js="headerMenuItemSubmenu")
                                             .header-menu__list
                                                 a(href="javascript:void(0);").header-menu__link Пункт 1
                                                 a(href="javascript:void(0);").header-menu__link Пункт 2
@@ -155,14 +159,16 @@ header.site-header(data-js="siteHeader")
                                         .header-menu__header
                                             a(href="javascript:void(0);").header-menu__link Акции
 
-                                    .header-menu__item.header-menu__item--mob
+                                    .header-menu__item.header-menu__item--mob(data-js="headerMenuItem")
                                         .header-menu__header
                                             a(href="javascript:void(0);").header-menu__link О компании
-                                            .header-menu__icon
+                                            .header-menu__icon.header-menu__icon--open(data-js="headerMenuItemOpen")
                                                 svg
-                                                    use(xlink:href=`img/sprites/sprite.svg#arrow_angle_down`)
-                                        .header-menu__submenu
-                                            .header-menu__subtitle О компании
+                                                    use(xlink:href=`img/sprites/sprite.svg#burger_chevron`)
+                                            .header-menu__icon.header-menu__icon--close(data-js="headerMenuItemClose")
+                                                svg
+                                                    use(xlink:href=`img/sprites/sprite.svg#burger_close`)
+                                        .header-menu__submenu(data-js="headerMenuItemSubmenu")
                                             .header-menu__list
                                                 a(href="javascript:void(0);").header-menu__link Пункт 1
                                                 a(href="javascript:void(0);").header-menu__link Пункт 2

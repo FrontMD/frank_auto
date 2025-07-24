@@ -5,14 +5,16 @@ block variables
 	- const title = "404"
 
 block content
-	.page-layout.page-layout--white(data-js="pageLayout")
+	.page-layout(data-js="pageLayout")
 		+s-breadcrumbs
 
 		section.section.not-found
 			.section__container
 				.section-block.section-block--dark.not-found__block
 					.section-block__bg
-						img(src="img/404/bg.webp")
+						picture
+							source(srcset="img/404/bg_mob.webp" media="(max-width: 767px)")
+							img(src="img/404/bg.webp")
 					.section-block__content.not-found__content
 						.not-found__title 404
 						.not-found__subtitle Страница не найдена!
