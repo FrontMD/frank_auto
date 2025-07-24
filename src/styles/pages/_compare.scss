@@ -1,11 +1,5 @@
 .compare {
 
-    @media print {
-        .section__container {
-            padding: 0;
-        }
-    }
-
     &__actions {
         display: flex;
         align-items: center;
@@ -22,9 +16,6 @@
             flex-wrap: wrap;
         }
 
-        @media print {
-            display: none;
-        }
     }
 
     &__header {
@@ -35,42 +26,9 @@
         }
     }
 
-    &__body {
-        margin-top: 24px;
-
-        @include max(tablet) {
-            margin-top: 16px;
-        }
-
-        @media print {
-            margin: 18pt 0 0;
-            width: 100%;
-
-            .tabs-block__tabs {
-                display: none;
-            }
-        }
-    }
-
-
 }
 
 .compare-block {
-
-    &__header {
-        padding: 12px 12px 12px 24px;
-        display: flex;
-        justify-content: space-between;
-        gap: 16px;
-
-        @include max(mobile) {
-            padding: 12px 15px;
-        }
-
-        @media print {
-            display: none;
-        }
-    }
 
     &__actions {
         width: fit-content;
@@ -83,20 +41,10 @@
     }
 
     &__prodwrap {
-        margin-left: 328px;
         padding-right: 12px;
 
-        @include max(laptop) {
-            margin-left: 282px;
-        }
-
         @include max(tablet) {
-            margin-left: 0;
             padding-left: 12px;
-        }
-
-        @media print {
-            margin-left: 0;
         }
 
     }
@@ -142,7 +90,7 @@
 
     &__row {
         display: flex;
-        align-items: stretch;
+        flex-direction: column;
         gap: 16px;
         border-top: 1px solid $c-border;
 
@@ -153,9 +101,6 @@
                 background-color: $c-white;
             }
 
-            @media print {
-                background-color: $c-white;
-            }
         }
 
         @include max(laptop) {
@@ -167,32 +112,21 @@
             gap: 0;
         }
 
-        @media print {
-            flex-direction: column;
-            gap: 0;
-        }
     }
 
     &__list {
-        flex: 0 0 calc(100% - 328px);
-        max-width: calc(100% - 328px);
+        flex: 0 0 100%;
+        max-width: 100%;
         overflow: hidden;
         margin-right: -12px;
         padding-right: 12px;
 
         @include max(laptop) {
-            flex: 0 0 calc(100% - 282px);
-            max-width: calc(100% - 282px);
-        }
-
-        @include max(tablet) {
-            flex-basis: auto;
+            flex: 0 0 100%;
             max-width: 100%;
         }
 
-        @media print {
-            margin-right: 0;
-            padding-right: 0;
+        @include max(tablet) {
             flex-basis: auto;
             max-width: 100%;
         }
@@ -200,8 +134,8 @@
 
     &__prod,
     &__cell {
-        flex: 0 0 215px;
-        width: 215px;
+        flex: 0 0 300px;
+        width: 300px;
 
         @include max(laptop) {
             flex-basis: 180px;
@@ -213,10 +147,6 @@
             width: 120px;
         }
 
-        @media print {
-            flex-basis: 129pt;
-            width: 129pt;
-        }
     }
 
     &__cell {
@@ -238,23 +168,11 @@
             font-size: 12px;
         }
 
-        @media print {
-            font-size: 10pt;
-        }
-
         &--title {
-            flex-basis: 312px;
+            flex-basis: auto;
             font-size: 14px;
             color: $c-text-breadcrumbs;
             padding-left: 16px;
-
-            @media print {
-                flex-basis: auto;
-                width: 100%;
-                padding-left: 0;
-                background-color: $c-bg-main;
-                font-size: 9pt;
-            }
 
             @include max(laptop) {
                 flex-basis: 270px;
@@ -280,65 +198,49 @@
     position: relative;
 
     &__photo {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
-        aspect-ratio: 1 / 0.99;
-        border: 1px solid $c-border;
-        border-radius: 4px;
+        height: 178px;
+        border-radius: 19px;
+        overflow: hidden;
 
         img {
-            max-width: 83.256%;
-            max-height: 83.256%;
-            object-fit: contain;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
 
-    &__controls {
+    &__favorite {
         position: absolute;
-        top: 7px;
-        right: 9px;
-        padding: 4px 8px;
-        border-radius: 2px;
-        //background-color: $c-input-bg;
-
-        @include max(laptop) {
-            padding: 2px 4px;
-        }
-
-        @media print {
-            display: none;
-        }
-    }
-
-    &__control {
+        top: 5px;
+        right: 5px;
+        width: 34px;
+        height: 34px;
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 30px;
-        height: 32px;
-        color: $c-text-light;
-        cursor: pointer;
-        transition: color $tr-time linear;
-
-        @include max(laptop) {
-            width: 24px;
-            height: 24px;
-        }
-
-        &:hover {
-            color: $c-accent-hover;
-        }
+        border-radius: 15px;
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(40px);
 
         svg {
-            width: 16px;
-            height: 16px;
+            width: 15px;
+            height: 15px;
         }
-    }
 
-    &__control+&__control {
-        border-top: 1px solid $c-border;
+        svg path {
+            fill: transparent;
+            color: $c-white;
+        }
+
+        &.active svg path {
+            fill: $c-favorite;
+            color: $c-favorite;
+        }
     }
 
     &__title {
@@ -351,10 +253,6 @@
             font-size: 16px;
         }
 
-        @media print {
-            font-size: 10.5pt;
-            margin-top: 6pt;
-        }
 
         @include max(mobile) {
             font-size: 13px;

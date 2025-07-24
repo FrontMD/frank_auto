@@ -1,0 +1,24 @@
+-
+    const defaultProdControlsProps = {
+        classes: '',
+        compare: false,
+        favorite: false,
+    }
+
+mixin prod-controls(props= defaultProdControlsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultProdControlsProps.classes,
+            compare: props.compare ? props.compare : defaultProdControlsProps.compare,
+            favorite: props.favorite ? props.favorite : defaultProdControlsProps.favorite,
+        }
+
+    .prod-controls(class= checkProps.classes)&attributes(attributes)
+        - if(checkProps.compare === true)
+            .prod-controls__item
+                svg
+                    use(xlink:href=`img/sprites/sprite.svg#compare`)
+        - if(checkProps.favorite === true)
+            .prod-controls__item
+                svg
+                    use(xlink:href=`img/sprites/sprite.svg#favorite`)

@@ -43,7 +43,7 @@ function getScrollbarWidth() {
 
 // инициализация слайдера сравнения
 function compareSliderInit() {
-    const compareBlocks = document.querySelectorAll('[data-js="compareBlock"]')
+    const compareBlocks = document.querySelectorAll('[data-js="compareSection"]')
 
     if(compareBlocks.length < 1) return
 
@@ -58,7 +58,7 @@ function compareSliderInit() {
             if(sliderScrollbar) {
                 let sliderEx = new Swiper(slider, {
                     slidesPerView: 'auto',
-                    spaceBetween: 8,
+                    spaceBetween: 36,
                     allowTouchMove: false,
                     navigation: {
                         nextEl: sliderNext,
@@ -73,34 +73,15 @@ function compareSliderInit() {
                             spaceBetween: 12
                         },
                         1421: {
-                            spaceBetween: 16
+                            spaceBetween: 36
                         }
                     },
-                    on: {
-                        init: function (swiper) {
-                            const pdfBtn = document.querySelector("[data-js='pdf']")
-                            let pdfBtnHref = pdfBtn.getAttribute('href')
-                            const compareBlock = swiper.el.closest('.compare-block__prodwrap')
-                            const leftMargin = parseInt(window.getComputedStyle(compareBlock).marginLeft)
-                            const slidesGap = parseInt(window.getComputedStyle(swiper.slides[0]).marginRight)
-                            let width = swiper.slides.reduce((acc, currentValue) => {
-                                return acc + currentValue.offsetWidth + slidesGap
-                            }, leftMargin)
-                            width = width  * (72 / 96)
-                            const height = swiper.el.closest('[data-js="compareBlock"]').offsetHeight * (72 / 96)
-
-                            pdfBtnHref = pdfBtnHref + '&width=' + Math.ceil(width) + '&height=' + Math.ceil(height)
-
-                            pdfBtn.setAttribute('href', pdfBtnHref)
-
-                        },
-                    }
  
                 })
             } else {
                 let sliderEx = new Swiper(slider, {
                     slidesPerView: 'auto',
-                    spaceBetween: 8,
+                    spaceBetween: 36,
                     allowTouchMove: false,
                     navigation: {
                         nextEl: sliderNext,
@@ -111,7 +92,7 @@ function compareSliderInit() {
                             spaceBetween: 12
                         },
                         1421: {
-                            spaceBetween: 16
+                            spaceBetween: 36
                         }
                     }
                 })

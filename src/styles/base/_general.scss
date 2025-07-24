@@ -187,22 +187,9 @@ html.hystmodal__opened {
 		margin: 0 auto;
 	}
 
-	/*&__header {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: 32px;
-
-		@include max(xs) {
-			flex-direction: column;
-			align-items: flex-start;
-			gap: 16px;
-		}
-
-		.btn {
-			flex: 0 0 auto;
-		}
-	}*/
+	&__header {
+		margin-bottom: 20px;
+	}
 
 	/*&__columns {
 		display: grid;
@@ -1369,100 +1356,6 @@ html.hystmodal__opened {
 	&__card.news-card--horizontal .news-card__media {
 		flex-basis: 100px;
 		height: 100px;
-	}
-}*/
-
-/*.slider-controls {
-	display: flex;
-	align-items: stretch;
-	gap: 8px;
-}
-
-.slider-control {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 46px;
-	height: 46px;
-	background-color: $c-white;
-	border: 1px solid $c-bg;
-	border-radius: 2px;
-	color: $c-text-dark;
-	transition: all $tr-time linear;
-	cursor: pointer;
-
-	&.swiper-button-disabled {
-		color: $c-bg;
-		border-color: $c-border;
-		pointer-events: none;
-	}
-
-	svg {
-		width: 8.54px;
-		height: 9.61px;
-	}
-
-	&--prev {
-		svg {
-			transform: rotate(-180deg);
-		}
-	}
-
-	&:hover {
-		border-color: $c-accent-hover;
-		color: $c-accent-hover;
-	}
-
-	&--scroll {
-		opacity: 0;
-		visibility: hidden;
-		position: absolute;
-		z-index: 3;
-		transition: all $tr-time linear;
-
-		@include max(tablet) {
-			width: 32px;
-			height: 32px;
-		}
-
-		&.active {
-			opacity: 1;
-			visibility: visible;
-		}
-	}
-
-	&--scroll.slider-control--prev {
-		left: 32px;
-
-		@include max(tablet) {
-			left: 20px;
-		}
-
-		@include max(mobile) {
-			left: 15px;
-		}
-	}
-
-	&--scroll.slider-control--next {
-		right: 32px;
-
-		@include max(tablet) {
-			right: 20px;
-		}
-
-		@include max(mobile) {
-			right: 15px;
-		}
-	}
-
-	&--scroll svg {
-		width: 24px;
-		height: 24px;
-
-		@include max(tablet) {
-			width: 16px;
-			height: 16px;
-		}
 	}
 }*/
 

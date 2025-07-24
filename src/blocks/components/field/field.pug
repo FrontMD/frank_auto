@@ -1,0 +1,181 @@
+-
+    const defaultFieldProps = {
+        classes: '',
+        tag: 'input',
+        type: 'text',
+        textareaRows: '8',
+        title: '',
+        placeholder: '',
+        inputAttr: {},
+        resetBtn: false,
+        isSearch: false,
+        hasPrompt: false,
+        selectOptions: [
+            "вариант 1",
+            "вариант 2"
+        ],
+    }
+
+mixin field(props = defaultFieldProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultFieldProps.classes,
+            tag: props.tag ? props.tag : defaultFieldProps.tag,
+            type: props.type ? props.type : defaultFieldProps.type,
+            textareaRows: props.textareaRows ? props.textareaRows : defaultFieldProps.textareaRows,
+            title: props.title ? props.title : defaultFieldProps.title,
+            placeholder: props.placeholder ? props.placeholder : defaultFieldProps.placeholder,
+            inputAttr: props.inputAttr ? props.inputAttr : defaultFieldProps.inputAttr,
+            resetBtn: props.resetBtn ? props.resetBtn : defaultFieldProps.resetBtn,
+            isSearch: props.isSearch ? props.isSearch : defaultFieldProps.isSearch,
+            hasPrompt: props.hasPrompt ? props.hasPrompt : defaultFieldProps.hasPrompt,
+            selectOptions: props.selectOptions ? props.selectOptions : defaultFieldProps.selectOptions,
+        }
+
+    .field(class= `${checkProps.classes} ${checkProps.isSearch ? "field--search" : ""} ${checkProps.resetBtn ? "field--reset" : ""} ${checkProps.type === 'radio' ? 'field--radio' : ''} ${checkProps.type === 'checkbox' ? 'field--checkbox' : ''}` data-js='formField')&attributes(attributes)
+        - if(checkProps.isSearch)
+            button.field__search(type='submit')
+                svg 
+                    use(xlink:href=`img/sprites/sprite.svg#search`)
+        label
+            - if(checkProps.title)
+                span.field__title
+                    != checkProps.title
+            - if(checkProps.tag === 'input')
+                input.field__input(type=checkProps.type placeholder=checkProps.placeholder)&attributes(checkProps.inputAttr)
+                - if(checkProps.type === 'radio')
+                    span.fake-radio
+                - else if(checkProps.type === 'checkbox')
+                    span.fake-checkbox
+                - else
+                span.field__error(data-js='fieldError')
+            - if(checkProps.tag === 'textarea')
+                textarea.field__textarea(rows=checkProps.textareaRows placeholder=checkProps.placeholder)&attributes(checkProps.inputAttr)
+                span.field__error(data-js='fieldError')
+        - if(checkProps.tag === 'select')
+            select.field__select(placeholder=checkProps.placeholder data-js='formSelect')&attributes(checkProps.inputAttr)
+                - let optionCount = 0
+                - while (optionCount < checkProps.selectOptions.length)
+                    - if(checkProps.selectOptions[optionCount].length > 0)
+                        option(value=checkProps.selectOptions[optionCount])!= checkProps.selectOptions[optionCount]
+                    - else
+                        option!= checkProps.selectOptions[optionCount]
+                    - optionCount++
+            span.field__error(data-js='fieldError')
+
+        - if(checkProps.resetBtn)
+            span.field__reset(data-js='fieldResetBtn')
+                svg 
+                    use(xlink:href=`img/sprites/sprite.svg#close`)
+
+        - if(checkProps.hasPrompt == true)
+            .field__prompt.field-prompt(data-js='fieldPrompt')
+                .field-prompt__items.scrollbar.scrollbar--small
+                    .field-prompt__item
+                        a.field-prompt__link(href="javascript:void(0)")
+                        .field-prompt__icon
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#search`)
+                        .field-prompt__content
+                            .field-prompt__title Универсальная <span>испыт</span>ательная машина ТРМ-О 0,1 А1 Tochline
+                            .field-prompt__breadcrumbs Каталог / Испытательные машины
+                        .field-prompt__icon
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
+                    .field-prompt__item
+                        a.field-prompt__link(href="javascript:void(0)")
+                        .field-prompt__icon
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#search`)
+                        .field-prompt__content
+                            .field-prompt__title Универсальная <span>испыт</span>ательная машина ТРМ-О 0,1 А1 Tochline
+                            .field-prompt__breadcrumbs Каталог / Испытательные машины
+                        .field-prompt__icon
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
+                    .field-prompt__item
+                        a.field-prompt__link(href="javascript:void(0)")
+                        .field-prompt__icon
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#search`)
+                        .field-prompt__content
+                            .field-prompt__title Универсальная <span>испыт</span>ательная машина ТРМ-О 0,1 А1 Tochline
+                            .field-prompt__breadcrumbs Каталог / Испытательные машины
+                        .field-prompt__icon
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
+                    .field-prompt__item
+                        a.field-prompt__link(href="javascript:void(0)")
+                        .field-prompt__icon
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#search`)
+                        .field-prompt__content
+                            .field-prompt__title Универсальная <span>испыт</span>ательная машина ТРМ-О 0,1 А1 Tochline
+                            .field-prompt__breadcrumbs Каталог / Испытательные машины
+                        .field-prompt__icon
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
+                    .field-prompt__item
+                        a.field-prompt__link(href="javascript:void(0)")
+                        .field-prompt__icon
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#search`)
+                        .field-prompt__content
+                            .field-prompt__title Универсальная <span>испыт</span>ательная машина ТРМ-О 0,1 А1 Tochline
+                            .field-prompt__breadcrumbs Каталог / Испытательные машины
+                        .field-prompt__icon
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
+                    .field-prompt__item
+                        a.field-prompt__link(href="javascript:void(0)")
+                        .field-prompt__icon
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#search`)
+                        .field-prompt__content
+                            .field-prompt__title Универсальная <span>испыт</span>ательная машина ТРМ-О 0,1 А1 Tochline
+                            .field-prompt__breadcrumbs Каталог / Испытательные машины
+                        .field-prompt__icon
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
+                    .field-prompt__item
+                        a.field-prompt__link(href="javascript:void(0)")
+                        .field-prompt__icon
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#search`)
+                        .field-prompt__content
+                            .field-prompt__title Универсальная <span>испыт</span>ательная машина ТРМ-О 0,1 А1 Tochline
+                            .field-prompt__breadcrumbs Новости / Установка новой испытательной машины на производство
+                        .field-prompt__icon
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
+                    .field-prompt__item
+                        a.field-prompt__link(href="javascript:void(0)")
+                        .field-prompt__icon
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#search`)
+                        .field-prompt__content
+                            .field-prompt__title Универсальная <span>испыт</span>ательная машина ТРМ-О 0,1 А1 Tochline
+                            .field-prompt__breadcrumbs Новости / Установка новой испытательной машины на производство
+                        .field-prompt__icon
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
+                    .field-prompt__item
+                        a.field-prompt__link(href="javascript:void(0)")
+                        .field-prompt__icon
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#search`)
+                        .field-prompt__content
+                            .field-prompt__title Универсальная <span>испыт</span>ательная машина ТРМ-О 0,1 А1 Tochline
+                            .field-prompt__breadcrumbs Новости / Установка новой испытательной машины на производство
+                        .field-prompt__icon
+                            svg 
+                                use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
+
+                +btn({
+                    classes: 'field-prompt__all',
+                    cMode: 'grey',
+                    name: 'Все результаты <span class="btn__note">(124)</span>',
+                })
+
+
+

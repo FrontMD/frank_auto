@@ -1,0 +1,22 @@
+-
+    const defaultPriceProps = {
+        classes: '',
+        current: '5 500 000 ₽',
+        old: '6 200 000 ₽',
+        credit: 'от 115 000 ₽/мес <span>в кредит</span>'
+    }
+
+mixin price(props= defaultPriceProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultPriceProps.classes,
+            current: props.current ? props.current : defaultPriceProps.current,
+            old: props.old ? props.old : defaultPriceProps.old,
+            credit: props.credit ? props.credit : defaultPriceProps.credit,
+        }
+
+    .price(class= checkProps.classes)&attributes(attributes)
+        .price__top
+            .price__current!= checkProps.current
+            .price__old!= checkProps.old
+        .price__credit!= checkProps.credit
