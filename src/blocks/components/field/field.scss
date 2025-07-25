@@ -24,22 +24,16 @@
     }
 
     &__title {
-        position: relative;
-        width: fit-content;
-        color: $c-text;
-        font-size: 16px;
-        line-height: 1.4em;
-
-        @include max(tablet) {
-            font-size: 14px;
-        }
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1em;
     }
 
     &__input,
     &__textarea {
         width: 100%;
         padding: 15px 20px;
-        font-family: $ff-main;
+        font-family: $ff-inter;
         font-size: 16px;
         font-weight: 400;
         line-height: 1.4em;
@@ -171,35 +165,34 @@
     &--checkbox .fake-checkbox {
         display: block;
         position: relative;
-        width: 38px;
-        height: 20px;
-        background-color: $c-border;
+        width: 40px;
+        height: 26px;
+        background-color: $c-input-grey;
         flex-shrink: 0;
         flex-grow: 0;
         transition: all $tr-time linear;
-        border-radius: 9px;
+        border-radius: 13px;
 
         &::after {
             content: '';
             position: absolute;
-            width: 16px;
-            height: 16px;
+            width: 22px;
+            height: 22px;
             left: 2px;
             top: 50%;
             transform: translateY(-50%);
             background-color: $c-white;
             border-radius: 100%;
             transition: all $tr-time linear;
-            box-shadow: 0px 2px 2px 0px rgba(68, 83, 113, 0.2), 0px 0px 1px 0px rgba(68, 83, 113, 0.1);
         }
     }
 
     &--checkbox input:checked+.fake-checkbox {
-        background-color: $c-text;
+        background-color: $c-accent;
     }
 
     &--checkbox input:checked+.fake-checkbox::after {
-        left: 20px;
+        left: 16px;
     }
 }
 

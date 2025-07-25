@@ -144,9 +144,8 @@
         }
     }
 
-    /*/&--noborder {
+    &--noborder {
         border: none;
-        color: $c-text;
         transition: color $tr-time linear;
 
         svg {
@@ -162,20 +161,28 @@
                 color: $c-accent-hover;
             }
         }
-    }*/
+    }
 
-    /*&--link {
+    &--link {
         width: fit-content;
         padding: 0;
-        font-size: 14px;
-        gap: 6px;
+        color: $c-text;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 1em;
+        gap: 10px;
 
         .btn__text {
             white-space: nowrap;
         }
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
     }
 
-    &--108 {
+    /*&--108 {
         width: fit-content;
         padding: 2px 8px;
         min-height: 20px;

@@ -1,1 +1,36 @@
-.price {}
+.price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px 10px;
+    color: $c-text;
+    line-height: 1em;
+    letter-spacing: -0.02em;
+
+    &__current {
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    &__old {
+        font-weight: 500;
+        font-size: 16px;
+        text-decoration: line-through;
+        opacity: 0.3;
+    }
+
+    &__credit {
+        flex-basis: 100%;
+        font-weight: 400;
+        font-size: 14px;
+
+        span {
+            opacity: 0.3;
+        }
+    }
+}
+
+.price--content {
+    justify-content: flex-start;
+}

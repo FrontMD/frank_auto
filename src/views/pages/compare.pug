@@ -19,227 +19,234 @@ block content
 			],
 		})
 
-	section.section.compare(data-js="compareSection")
-		.section__container
-			.section__header.compare__header
-				.title.title--40 Сравнение
+		section.section.compare(data-js="compareSection")
+			.section__container
+				.section__header.section__content.compare__header
+					.title.title--40 Сравнение
 
-				.tabs-block
-					.tabs-block__tabs.scrollbar.scrollbar--small
-						.tabs-block__list
-							.tabs-block__tab.active Разрывные машины 
-								span (5)
-							.tabs-block__tab Твердомеры 
-								span (2)
+					.compare__tabs
+						.tabs-block.tabs-block--content
+							.tabs-block__tabs.scrollbar.scrollbar--small
+								.tabs-block__list
+									a(href="javascript:void(0);").tabs-block__tab.active Новые (4)
+									a(href="javascript:void(0);").tabs-block__tab С пробегом (5)
 
-				+field({
-					tag: 'input',
-					type: 'checkbox',
-					title: 'Только отличия'
-				})
+					+field({
+						tag: 'input',
+						type: 'checkbox',
+						title: 'Только различия'
+					})
 
-				+slider-controls
+					+slider-controls({
+						classes: 'compare__controls'
+					})
 
-			.section-block
-				.compare-block
-					.compare-block__prodwrap
-						.compare-block__prods(data-js="compareSlider")
-							.compare-block__scrollbar(data-js="sliderScrollbar")
-							.swiper-wrapper
-								.swiper-slide.compare-block__prod.compare-prod
-									+btn({
-										name: 'Удалить из сравнения',
-										icon: 'close',
-										cMode: 'noborder',
-										size: 'link'
-									})
-									.compare-prod__photo
-										img(src="img/compare/compare_1.webp" alt="")
-										a(href="javascript:void(0);").compare-prod__favorite.active
-											svg
-												use(xlink:href=`img/sprites/sprite.svg#favorite`)
+				.section-block
+					.compare-block
+						.compare-block__prodwrap
+							.compare-block__prods(data-js="compareSlider")
+								//-.compare-block__scrollbar(data-js="sliderScrollbar")
+								.swiper-wrapper
+									.swiper-slide.compare-block__prod.compare-prod
+										+btn({
+											classes: 'compare-prod__remove',
+											name: 'Удалить из сравнения',
+											icon: 'close_p0',
+											cMode: 'noborder',
+											sMode: 'link'
+										})
+										.compare-prod__photo
+											img(src="img/compare/compare_1.webp" alt="")
+											a(href="javascript:void(0);").compare-prod__favorite.active
+												svg
+													use(xlink:href=`img/sprites/sprite.svg#favorite`)
 
-									.compare-prod__title Lixiang L7 Pro 449 л.с. Hybrid Turbo 4WD
-									+price({
-										classes: 'price--content'
-									})
+										.compare-prod__title Lixiang L7 Pro 449 л.с. <br>Hybrid Turbo 4WD
+										+price({
+											classes: 'price--content compare-prod__price'
+										})
 
-								.swiper-slide.compare-block__prod.compare-prod
-									+btn({
-										name: 'Удалить из сравнения',
-										icon: 'close',
-										cMode: 'noborder',
-										size: 'link'
-									})
-									.compare-prod__photo
-										img(src="img/compare/compare_1.webp" alt="")
-										a(href="javascript:void(0);").compare-prod__favorite
-											svg
-												use(xlink:href=`img/sprites/sprite.svg#favorite`)
+									.swiper-slide.compare-block__prod.compare-prod
+										+btn({
+											classes: 'compare-prod__remove',
+											name: 'Удалить из сравнения',
+											icon: 'close_p0',
+											cMode: 'noborder',
+											sMode: 'link'
+										})
+										.compare-prod__photo
+											img(src="img/compare/compare_1.webp" alt="")
+											a(href="javascript:void(0);").compare-prod__favorite
+												svg
+													use(xlink:href=`img/sprites/sprite.svg#favorite`)
 
-									.compare-prod__title Zeekr 009
-									+price({
-										classes: 'price--content'
-									})
+										.compare-prod__title Zeekr 009
+										+price({
+											classes: 'price--content compare-prod__price'
+										})
 
-								.swiper-slide.compare-block__prod.compare-prod
-									+btn({
-										name: 'Удалить из сравнения',
-										icon: 'close',
-										cMode: 'noborder',
-										size: 'link'
-									})
-									.compare-prod__photo
-										img(src="img/compare/compare_1.webp" alt="")
-										a(href="javascript:void(0);").compare-prod__favorite
-											svg
-												use(xlink:href=`img/sprites/sprite.svg#favorite`)
+									.swiper-slide.compare-block__prod.compare-prod
+										+btn({
+											classes: 'compare-prod__remove',
+											name: 'Удалить из сравнения',
+											icon: 'close_p0',
+											cMode: 'noborder',
+											sMode: 'link'
+										})
+										.compare-prod__photo
+											img(src="img/compare/compare_1.webp" alt="")
+											a(href="javascript:void(0);").compare-prod__favorite
+												svg
+													use(xlink:href=`img/sprites/sprite.svg#favorite`)
 
-									.compare-prod__title Lixiang L7 Pro 449 л.с. Hybrid Turbo 4WD
-									+price({
-										classes: 'price--content'
-									})
+										.compare-prod__title Lixiang L7 Pro 449 л.с. <br>Hybrid Turbo 4WD
+										+price({
+											classes: 'price--content compare-prod__price'
+										})
 
-								.swiper-slide.compare-block__prod.compare-prod
-									+btn({
-										name: 'Удалить из сравнения',
-										icon: 'close',
-										cMode: 'noborder',
-										size: 'link'
-									})
-									.compare-prod__photo
-										img(src="img/compare/compare_1.webp" alt="")
-										a(href="javascript:void(0);").compare-prod__favorite
-											svg
-												use(xlink:href=`img/sprites/sprite.svg#favorite`)
+									.swiper-slide.compare-block__prod.compare-prod
+										+btn({
+											classes: 'compare-prod__remove',
+											name: 'Удалить из сравнения',
+											icon: 'close_p0',
+											cMode: 'noborder',
+											sMode: 'link'
+										})
+										.compare-prod__photo
+											img(src="img/compare/compare_1.webp" alt="")
+											a(href="javascript:void(0);").compare-prod__favorite
+												svg
+													use(xlink:href=`img/sprites/sprite.svg#favorite`)
 
-									.compare-prod__title Zeekr 009
-									+price({
-										classes: 'price--content'
-									})
+										.compare-prod__title Zeekr 009
+										+price({
+											classes: 'price--content compare-prod__price'
+										})
 
-								.swiper-slide.compare-block__prod.compare-prod
-									+btn({
-										name: 'Удалить из сравнения',
-										icon: 'close',
-										cMode: 'noborder',
-										size: 'link'
-									})
-									.compare-prod__photo
-										img(src="img/compare/compare_1.webp" alt="")
-										a(href="javascript:void(0);").compare-prod__favorite
-											svg
-												use(xlink:href=`img/sprites/sprite.svg#favorite`)
+									.swiper-slide.compare-block__prod.compare-prod
+										+btn({
+											class: 'compare-prod__remove',
+											name: 'Удалить из сравнения',
+											icon: 'close_p0',
+											cMode: 'noborder',
+											sMode: 'link'
+										})
+										.compare-prod__photo
+											img(src="img/compare/compare_1.webp" alt="")
+											a(href="javascript:void(0);").compare-prod__favorite
+												svg
+													use(xlink:href=`img/sprites/sprite.svg#favorite`)
 
-									.compare-prod__title Lixiang L7 Pro 449 л.с. Hybrid Turbo 4WD
-									+price({
-										classes: 'price--content'
-									})
+										.compare-prod__title Lixiang L7 Pro 449 л.с. <br>Hybrid Turbo 4WD
+										+price({
+											classes: 'price--content compare-prod__price'
+										})
 
-								.swiper-slide.compare-block__prod.compare-prod
-									+btn({
-										name: 'Удалить из сравнения',
-										icon: 'close',
-										cMode: 'noborder',
-										size: 'link'
-									})
-									.compare-prod__photo
-										img(src="img/compare/compare_1.webp" alt="")
-										a(href="javascript:void(0);").compare-prod__favorite
-											svg
-												use(xlink:href=`img/sprites/sprite.svg#favorite`)
+									.swiper-slide.compare-block__prod.compare-prod
+										+btn({
+											classes: 'compare-prod__remove',
+											name: 'Удалить из сравнения',
+											icon: 'close_p0',
+											cMode: 'noborder',
+											sMode: 'link'
+										})
+										.compare-prod__photo
+											img(src="img/compare/compare_1.webp" alt="")
+											a(href="javascript:void(0);").compare-prod__favorite
+												svg
+													use(xlink:href=`img/sprites/sprite.svg#favorite`)
 
-									.compare-prod__title Zeekr 009
-									+price({
-										classes: 'price--content'
-									})
+										.compare-prod__title Zeekr 009
+										+price({
+											classes: 'price--content compare-prod__price'
+										})
 
-					.compare-block__paramwrap
-						.compare-block__params
-							.compare-block__row
-								.compare-block__cell.compare-block__cell--title Модификация
-								.compare-block__list(data-js="compareSlider")
-									.swiper-wrapper
-										.swiper-slide.compare-block__cell Pro 449 л.с. Hybrid Turbo 4WD
-										.swiper-slide.compare-block__cell Pro 449 л.с. Hybrid Turbo 4WD
-										.swiper-slide.compare-block__cell Pro 449 л.с. Hybrid Turbo 4WD
-										.swiper-slide.compare-block__cell Pro 449 л.с. Hybrid Turbo 4WD
-										.swiper-slide.compare-block__cell Pro 449 л.с. Hybrid Turbo 4WD
-										.swiper-slide.compare-block__cell Pro 449 л.с. Hybrid Turbo 4WD
+						.compare-block__paramwrap
+							.compare-block__params
+								.compare-block__row
+									.compare-block__cell.compare-block__cell--title Модификация
+									.compare-block__list(data-js="compareSlider")
+										.swiper-wrapper
+											.swiper-slide.compare-block__cell Pro 449 л.с. Hybrid Turbo 4WD
+											.swiper-slide.compare-block__cell Pro 449 л.с. Hybrid Turbo 4WD
+											.swiper-slide.compare-block__cell Pro 449 л.с. Hybrid Turbo 4WD
+											.swiper-slide.compare-block__cell Pro 449 л.с. Hybrid Turbo 4WD
+											.swiper-slide.compare-block__cell Pro 449 л.с. Hybrid Turbo 4WD
+											.swiper-slide.compare-block__cell Pro 449 л.с. Hybrid Turbo 4WD
 
-							.compare-block__row
-								.compare-block__cell.compare-block__cell--title Тип двигателя
-								.compare-block__list(data-js="compareSlider")
-									.swiper-wrapper
-										.swiper-slide.compare-block__cell Гибридный
-										.swiper-slide.compare-block__cell Гибридный
-										.swiper-slide.compare-block__cell Гибридный
-										.swiper-slide.compare-block__cell Гибридный
-										.swiper-slide.compare-block__cell Гибридный
-										.swiper-slide.compare-block__cell Гибридный
+								.compare-block__row
+									.compare-block__cell.compare-block__cell--title Тип двигателя
+									.compare-block__list(data-js="compareSlider")
+										.swiper-wrapper
+											.swiper-slide.compare-block__cell Гибридный
+											.swiper-slide.compare-block__cell Гибридный
+											.swiper-slide.compare-block__cell Гибридный
+											.swiper-slide.compare-block__cell Гибридный
+											.swiper-slide.compare-block__cell Гибридный
+											.swiper-slide.compare-block__cell Гибридный
 
-							.compare-block__row
-								.compare-block__cell.compare-block__cell--title Марка топлива
-								.compare-block__list(data-js="compareSlider")
-									.swiper-wrapper
-										.swiper-slide.compare-block__cell АИ - 95
-										.swiper-slide.compare-block__cell АИ - 95
-										.swiper-slide.compare-block__cell АИ - 95
-										.swiper-slide.compare-block__cell АИ - 95
-										.swiper-slide.compare-block__cell АИ - 95
-										.swiper-slide.compare-block__cell АИ - 95
+								.compare-block__row
+									.compare-block__cell.compare-block__cell--title Марка топлива
+									.compare-block__list(data-js="compareSlider")
+										.swiper-wrapper
+											.swiper-slide.compare-block__cell АИ - 95
+											.swiper-slide.compare-block__cell АИ - 95
+											.swiper-slide.compare-block__cell АИ - 95
+											.swiper-slide.compare-block__cell АИ - 95
+											.swiper-slide.compare-block__cell АИ - 95
+											.swiper-slide.compare-block__cell АИ - 95
 
-							.compare-block__row
-								.compare-block__cell.compare-block__cell--title Система питания двигателя
-								.compare-block__list(data-js="compareSlider")
-									.swiper-wrapper
-										.swiper-slide.compare-block__cell С непосредственным впрыском
-										.swiper-slide.compare-block__cell С непосредственным впрыском
-										.swiper-slide.compare-block__cell С непосредственным впрыском
-										.swiper-slide.compare-block__cell С непосредственным впрыском
-										.swiper-slide.compare-block__cell С непосредственным впрыском
-										.swiper-slide.compare-block__cell С непосредственным впрыском
+								.compare-block__row
+									.compare-block__cell.compare-block__cell--title Система питания двигателя
+									.compare-block__list(data-js="compareSlider")
+										.swiper-wrapper
+											.swiper-slide.compare-block__cell С непосредственным впрыском
+											.swiper-slide.compare-block__cell С непосредственным впрыском
+											.swiper-slide.compare-block__cell С непосредственным впрыском
+											.swiper-slide.compare-block__cell С непосредственным впрыском
+											.swiper-slide.compare-block__cell С непосредственным впрыском
+											.swiper-slide.compare-block__cell С непосредственным впрыском
 
-							.compare-block__row
-								.compare-block__cell.compare-block__cell--title Тип наддува
-								.compare-block__list(data-js="compareSlider")
-									.swiper-wrapper
-										.swiper-slide.compare-block__cell Турбонаддув
-										.swiper-slide.compare-block__cell Турбонаддув
-										.swiper-slide.compare-block__cell Турбонаддув
-										.swiper-slide.compare-block__cell Турбонаддув
-										.swiper-slide.compare-block__cell Турбонаддув
-										.swiper-slide.compare-block__cell Турбонаддув
+								.compare-block__row
+									.compare-block__cell.compare-block__cell--title Тип наддува
+									.compare-block__list(data-js="compareSlider")
+										.swiper-wrapper
+											.swiper-slide.compare-block__cell Турбонаддув
+											.swiper-slide.compare-block__cell Турбонаддув
+											.swiper-slide.compare-block__cell Турбонаддув
+											.swiper-slide.compare-block__cell Турбонаддув
+											.swiper-slide.compare-block__cell Турбонаддув
+											.swiper-slide.compare-block__cell Турбонаддув
 
-							.compare-block__row
-								.compare-block__cell.compare-block__cell--title Объём двигателя
-								.compare-block__list(data-js="compareSlider")
-									.swiper-wrapper
-										.swiper-slide.compare-block__cell 1496
-										.swiper-slide.compare-block__cell 1496
-										.swiper-slide.compare-block__cell 1496
-										.swiper-slide.compare-block__cell 1496
-										.swiper-slide.compare-block__cell 1496
-										.swiper-slide.compare-block__cell 1496
+								.compare-block__row
+									.compare-block__cell.compare-block__cell--title Объём двигателя
+									.compare-block__list(data-js="compareSlider")
+										.swiper-wrapper
+											.swiper-slide.compare-block__cell 1496
+											.swiper-slide.compare-block__cell 1496
+											.swiper-slide.compare-block__cell 1496
+											.swiper-slide.compare-block__cell 1496
+											.swiper-slide.compare-block__cell 1496
+											.swiper-slide.compare-block__cell 1496
 
-							.compare-block__row
-								.compare-block__cell.compare-block__cell--title Максимальная мощность электродвигателя
-								.compare-block__list(data-js="compareSlider")
-									.swiper-wrapper
-										.swiper-slide.compare-block__cell 330 кВт
-										.swiper-slide.compare-block__cell 330 кВт
-										.swiper-slide.compare-block__cell 330 кВт
-										.swiper-slide.compare-block__cell 330 кВт
-										.swiper-slide.compare-block__cell 330 кВт
-										.swiper-slide.compare-block__cell 330 кВт
+								.compare-block__row
+									.compare-block__cell.compare-block__cell--title Максимальная мощность электродвигателя
+									.compare-block__list(data-js="compareSlider")
+										.swiper-wrapper
+											.swiper-slide.compare-block__cell 330 кВт
+											.swiper-slide.compare-block__cell 330 кВт
+											.swiper-slide.compare-block__cell 330 кВт
+											.swiper-slide.compare-block__cell 330 кВт
+											.swiper-slide.compare-block__cell 330 кВт
+											.swiper-slide.compare-block__cell 330 кВт
 
-							.compare-block__row
-								.compare-block__cell.compare-block__cell--title Емкость батареи
-								.compare-block__list(data-js="compareSlider")
-									.swiper-wrapper
-										.swiper-slide.compare-block__cell 43 кВт⋅ч
-										.swiper-slide.compare-block__cell 43 кВт⋅ч
-										.swiper-slide.compare-block__cell 43 кВт⋅ч
-										.swiper-slide.compare-block__cell 43 кВт⋅ч
-										.swiper-slide.compare-block__cell 43 кВт⋅ч
-										.swiper-slide.compare-block__cell 43 кВт⋅ч
+								.compare-block__row
+									.compare-block__cell.compare-block__cell--title Емкость батареи
+									.compare-block__list(data-js="compareSlider")
+										.swiper-wrapper
+											.swiper-slide.compare-block__cell 43 кВт⋅ч
+											.swiper-slide.compare-block__cell 43 кВт⋅ч
+											.swiper-slide.compare-block__cell 43 кВт⋅ч
+											.swiper-slide.compare-block__cell 43 кВт⋅ч
+											.swiper-slide.compare-block__cell 43 кВт⋅ч
+											.swiper-slide.compare-block__cell 43 кВт⋅ч

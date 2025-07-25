@@ -6,8 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     //printBtnsInit();
 })
 
-
-
 // Блокировка скролла при открытии модалок
 function lockBody(onlyHeaderPadding = false) {
     let scrollbarWidth = getScrollbarWidth()
@@ -52,52 +50,46 @@ function compareSliderInit() {
         const sliderPrev = compareBlock.querySelector('[data-js="sliderPrev"]')
         const sliderNext = compareBlock.querySelector('[data-js="sliderNext"]')
 
-        sliders.forEach(slider => {
-            const sliderScrollbar = slider.querySelector('[data-js="sliderScrollbar"]')
-
-            if(sliderScrollbar) {
+        sliders.forEach((slider, index) => {
+            if(index == 0) {
                 let sliderEx = new Swiper(slider, {
                     slidesPerView: 'auto',
-                    spaceBetween: 36,
-                    allowTouchMove: false,
+                    spaceBetween: 10,
+                    allowTouchMove: true,
                     navigation: {
                         nextEl: sliderNext,
                         prevEl: sliderPrev,
                     },
-                    scrollbar: {
-                        el: sliderScrollbar,
-                        draggable: false,
-                    },
-                    breackpoints: {
-                        768: {
-                            spaceBetween: 12
-                        },
-                        1421: {
-                            spaceBetween: 36
+                    breakpoints: {
+                        900: {
+                            spaceBetween: 6
                         }
-                    },
- 
+                    }
                 })
             } else {
                 let sliderEx = new Swiper(slider, {
                     slidesPerView: 'auto',
-                    spaceBetween: 36,
-                    allowTouchMove: false,
-                    navigation: {
-                        nextEl: sliderNext,
-                        prevEl: sliderPrev,
-                    },
-                    breackpoints: {
-                        768: {
-                            spaceBetween: 12
-                        },
-                        1421: {
-                            spaceBetween: 36
+                    spaceBetween: 10,
+                    allowTouchMove: true,
+                    breakpoints: {
+                        900: {
+                            spaceBetween: 6
                         }
                     }
                 })
             }
+        })
 
+        sliders.forEach(slider => {
+            let swiperEx = slider.swiper
+
+            swiperEx.on('slideChange', function() {
+                sliders.forEach(sliderInner => {
+                    if(sliderInner.swiper !== this) {
+                        sliderInner.swiper.slideTo(this.activeIndex)
+                    }
+                })
+            })
         })
     })
 } 

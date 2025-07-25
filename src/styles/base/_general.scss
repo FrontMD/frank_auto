@@ -106,7 +106,7 @@ body {
 	-webkit-locale: auto;
 	white-space: normal;
 	background-color: $c-bg-main;
-	font-family: $ff-main;
+	font-family: $ff-inter;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 1.4em;
@@ -168,10 +168,10 @@ html.hystmodal__opened {
 }
 
 .section {
-	padding: 0 27px 40px;
+	padding: 0 27px 50px;
 
 	@include max(laptop) {
-		padding: 0 20px 40px;
+		padding: 0 20px 50px;
 	}
 
 	@include max(mobile) {
@@ -189,6 +189,12 @@ html.hystmodal__opened {
 
 	&__header {
 		margin-bottom: 20px;
+	}
+
+	&__content {
+		@include max(mobile) {
+			padding: 0 10px;
+		}
 	}
 
 	/*&__columns {
@@ -306,6 +312,11 @@ html.hystmodal__opened {
 		color: $c-white;
 	}
 
+	span {
+		color: $c-accent-2;
+		display: block;
+	}
+
 	h1,
 	h2,
 	h3,
@@ -321,10 +332,10 @@ html.hystmodal__opened {
 	}
 
 	&--50 {
-		font-size: 50px;
+		font-size: 74px;
 		line-height: 1em;
 		font-weight: 800;
-		font-family: $ff-second;
+		font-family: $ff-rooftop;
 
 		@include max(laptop) {
 			font-size: 40px;
@@ -340,7 +351,7 @@ html.hystmodal__opened {
 	}
 
 	&--40 {
-		font-family: $ff-second;
+		font-family: $ff-rooftop;
 		font-size: 40px;
 		font-weight: 500;
 		line-height: 1em;
@@ -350,11 +361,7 @@ html.hystmodal__opened {
 		}
 
 		@include max(mobile) {
-			font-size: 24px;
-		}
-
-		@include max(xs) {
-			font-size: 20px;
+			font-size: 26px;
 		}
 
 		@media print {
@@ -363,7 +370,7 @@ html.hystmodal__opened {
 	}
 
 	&--30 {
-		font-family: $ff-main;
+		font-family: $ff-inter;
 		font-size: 30px;
 		font-weight: 700;
 		line-height: 1.2em;
@@ -374,36 +381,36 @@ html.hystmodal__opened {
 		}
 
 		@include max(mobile) {
-			font-size: 20px;
+			font-size: 22px;
 		}
 
 		@include max(xs) {
-			font-size: 18px;
+			font-size: 20px;
 		}
 	}
 
 	&--24 {
-		font-family: $ff-main;
+		font-family: $ff-inter;
 		font-size: 24px;
 		font-weight: 700;
 		line-height: 1.2em;
 		letter-spacing: -0.02em;
 
 		@include max(laptop) {
-			font-size: 20px;
+			font-size: 22px;
 		}
 
 		@include max(mobile) {
-			font-size: 18px;
+			font-size: 20px;
 		}
 
 		@include max(xs) {
-			font-size: 16px;
+			font-size: 18px;
 		}
 	}
 
 	&--18 {
-		font-family: $ff-main;
+		font-family: $ff-inter;
 		font-size: 18px;
 		font-weight: 600;
 		line-height: 1em;

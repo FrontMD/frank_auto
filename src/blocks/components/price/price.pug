@@ -16,7 +16,6 @@ mixin price(props= defaultPriceProps)
         }
 
     .price(class= checkProps.classes)&attributes(attributes)
-        .price__top
-            .price__current!= checkProps.current
-            .price__old!= checkProps.old
+        .price__current!= checkProps.current
+        .price__old!= checkProps.old
         .price__credit!= checkProps.credit

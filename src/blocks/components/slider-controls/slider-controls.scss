@@ -8,29 +8,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 46px;
-    height: 46px;
-    background-color: $c-white;
-    border: 1px solid $c-bg;
-    border-radius: 2px;
-    color: $c-text-dark;
+    width: 59px;
+    height: 59px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(40px);
+    border-radius: 16px;
+    color: $c-accent;
     transition: all $tr-time linear;
     cursor: pointer;
 
     &.swiper-button-disabled {
-        color: $c-bg;
-        border-color: $c-border;
+        opacity: 0.5;
         pointer-events: none;
     }
 
     svg {
-        width: 8.54px;
-        height: 9.61px;
+        width: 20px;
+        height: 20px;
     }
 
     &:hover {
-        border-color: $c-accent-hover;
-        color: $c-accent-hover;
+        background-color: $c-accent-hover;
+        color: $c-white;
     }
 
     &--scroll {
