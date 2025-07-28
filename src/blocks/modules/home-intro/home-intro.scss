@@ -1,1 +1,41 @@
-.home-intro {}
+.home-intro {
+    &__block {
+        padding: 0;
+    }
+
+    &__slide {
+        position: relative;
+    }
+
+    &__bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+
+        img,
+        picture {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__content {
+        position: relative;
+        padding: 35px 40px 80px;
+        min-height: calc(100vh - 198px - 20px);
+    }
+
+    &__title {
+        max-width: 810px;
+    }
+
+    &__pagination.swiper-pagination-bullets {
+        position: absolute;
+        left: 46px;
+        bottom: 46px;
+        z-index: 3;
+    }
+}

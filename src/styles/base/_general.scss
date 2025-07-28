@@ -450,6 +450,42 @@ html.hystmodal__opened {
 
 }
 
+.bullet-progress.swiper-pagination-bullets {
+	.swiper-pagination-bullet {
+		background-color: rgba(255, 255, 255, 0.4);
+		width: 30px;
+		height: 10px;
+		border-radius: 12px;
+		position: relative;
+		overflow: hidden;
+		opacity: 1;
+		transition: width 0.1s linear;
+	}
+
+	.bullet-progress__overlay {
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 0%;
+		background-color: $c-white;
+	}
+
+	.swiper-pagination-bullet-active {
+		width: 354px;
+		background-color: rgba(255, 255, 255, 0.4);
+		opacity: 1;
+	}
+
+	.swiper-pagination-bullet .bullet-progress__overlay {
+		display: none;
+	}
+
+	.swiper-pagination-bullet-active .bullet-progress__overlay {
+		display: block;
+	}
+}
+
 /*.sidebar-layout {
 	display: flex;
 	align-items: flex-start;
