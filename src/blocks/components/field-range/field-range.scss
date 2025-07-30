@@ -1,0 +1,54 @@
+.field-range {
+    position: relative;
+
+    &--margins {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    &__input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+    }
+
+    .noUi-horizontal {
+        height: 1px;
+    }
+
+    .noUi-target {
+        position: absolute;
+        bottom: 0;
+        left: 21px;
+        width: calc(100% - 42px);
+        border: none;
+        background-color: transparent;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .noUi-connect {
+        background-color: $c-accent;
+    }
+
+    .noUi-handle {
+        width: 11px;
+        height: 11px;
+        right: -5.5px;
+        top: -5.5px;
+        border: none;
+        background-color: $c-accent;
+        box-shadow: none;
+        border-radius: 100%;
+        cursor: pointer;
+
+        &:before,
+        &::after {
+            content: none;
+        }
+    }
+}

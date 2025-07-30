@@ -1,0 +1,80 @@
+-
+    const defaultBrandsListProps = {
+        classes: '',
+    }
+
+mixin brands-list(props= defaultBrandsListProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultBrandsListProps.classes,
+        }
+
+    .brands-list(class= checkProps.classes)&attributes(attributes)
+        .brands-list__items
+            a(href="javascript:void(0)").brands-list__item
+                img(src="img/brands/brand_logo_1.png" alt="")
+                span LiXiang (10)
+            a(href="javascript:void(0)").brands-list__item
+                img(src="img/brands/brand_logo_2.png" alt="")
+                span Voyah (5)
+            a(href="javascript:void(0)").brands-list__item
+                img(src="img/brands/brand_logo_3.png" alt="")
+                span AITO (10)
+            a(href="javascript:void(0)").brands-list__item
+                img(src="img/brands/brand_logo_4.png" alt="")
+                span Chery (10)
+            a(href="javascript:void(0)").brands-list__item
+                img(src="img/brands/brand_logo_5.png" alt="")
+                span Zeekr (17)
+            a(href="javascript:void(0)").brands-list__item
+                img(src="img/brands/brand_logo_6.png" alt="")
+                span Audi (16)
+            a(href="javascript:void(0)").brands-list__item
+                img(src="img/brands/brand_logo_7.png" alt="")
+                span Tank (15)
+            a(href="javascript:void(0)").brands-list__item
+                img(src="img/brands/brand_logo_8.png" alt="")
+                span Chevrolet (14)
+            a(href="javascript:void(0)").brands-list__item
+                img(src="img/brands/brand_logo_9.png" alt="")
+                span Rox Motor Tech (13)
+            a(href="javascript:void(0)").brands-list__item
+                img(src="img/brands/brand_logo_10.png" alt="")
+                span Mercedes (12)
+            a(href="javascript:void(0)").brands-list__item
+                img(src="img/brands/brand_logo_11.png" alt="")
+                span Genesis (11)
+            a(href="javascript:void(0)").brands-list__item
+                img(src="img/brands/brand_logo_12.png" alt="")
+                span Citroen (10)
+            a(href="javascript:void(0)").brands-list__item
+                img(src="img/brands/brand_logo_13.png" alt="")
+                span Avatr (9)
+            a(href="javascript:void(0)").brands-list__item
+                img(src="img/brands/brand_logo_14.png" alt="")
+                span Porsche (8)
+            a(href="javascript:void(0)").brands-list__item
+                img(src="img/brands/brand_logo_15.png" alt="")
+                span BMW (7)
+            a(href="javascript:void(0)").brands-list__item
+                img(src="img/brands/brand_logo_16.png" alt="")
+                span Denza (6)
+            a(href="javascript:void(0)").brands-list__item
+                img(src="img/brands/brand_logo_17.png" alt="")
+                span Xiaomi (5)
+            a(href="javascript:void(0)").brands-list__item
+                img(src="img/brands/brand_logo_18.png" alt="")
+                span BYD (4)
+            a(href="javascript:void(0)").brands-list__item
+                img(src="img/brands/brand_logo_19.png" alt="")
+                span Changan (3)
+            a(href="javascript:void(0)").brands-list__item
+                img(src="img/brands/brand_logo_20.png" alt="")
+                span Dodge (2)
+
+        +btn({
+            classes: 'brands-list__link',
+            name: 'Все автомобили',
+            cMode: 'light-accent',
+            sMode: 'full'
+        })

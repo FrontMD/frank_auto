@@ -1,0 +1,14 @@
+.home-selection {
+    &__sidebar {
+        background-color: $c-white;
+        border-radius: $br-section;
+        padding: 24px 30px;
+        display: flex;
+        align-items: stretch;
+    }
+
+    &__tabs {
+        background-color: $c-white;
+        border-radius: $br-section;
+    }
+}

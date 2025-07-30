@@ -187,6 +187,20 @@ html.hystmodal__opened {
 		margin: 0 auto;
 	}
 
+	&__container--sidebar {
+		display: flex;
+		align-items: stretch;
+		gap: 20px;
+	}
+
+	&__body {
+		flex: 0 1 100%;
+	}
+
+	&__sidebar {
+		flex: 0 0 453px;
+	}
+
 	&__header {
 		margin-bottom: 20px;
 	}

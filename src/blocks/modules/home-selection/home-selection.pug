@@ -1,0 +1,70 @@
+-
+    const defaultHomeSelectionProps = {
+        classes: '',
+    }
+
+mixin home-selection(props= defaultHomeSelectionProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultHomeSelectionProps.classes,
+        }
+
+    section.section.home-selection(class= checkProps.classes)&attributes(attributes)
+        .section__container.section__container--sidebar
+            .section__body.home-selection__tabs
+                +tabs-block({
+                    tabs: [
+                        {
+                            name: 'Новые',
+                            icon: ''
+                        },
+                        {
+                            name: 'С пробегом',
+                            icon: ''
+                        },
+                    ],
+                })
+                    .tabs-block__slide.active(data-js="tabsBlockSlide")
+                        +brands-list
+                    .tabs-block__slide(data-js="tabsBlockSlide")
+                        +brands-list
+
+            .section__sidebar.home-selection__sidebar
+                +form-filter({
+                    title: 'Быстрый <br>подбор <br>автомобиля',
+                    btnText: 'Показать 74 авто',
+                })
+                    +field-range({
+                        classes: 'field-range--margins'
+                    })
+
+                    +field({
+                        classes: '',
+                        tag: 'select',
+                        placeholder: 'Бренд',
+                        selectOptions: [
+                            "",
+                            "LiXiang",
+                            "Voyah",
+                            "AITO",
+                            "Chery",
+                            "Zeekr",
+                            "Audi",
+                            "Tank",
+                            "Rox Motor Tech",
+                        ],
+                    })
+                    +field({
+                        classes: '',
+                        tag: 'select',
+                        placeholder: 'Модель',
+                        selectOptions: [
+                            "",
+                            "LiXiang L6",
+                            "LiXiang L7",
+                            "LiXiang L9",
+                            "LiXiang L9",
+                            "LiXiang Mega",
+                            "LiXiang One"
+                        ],
+                    })

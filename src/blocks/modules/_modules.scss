@@ -1,6 +1,12 @@
 @import "header/header";
 @import "footer/footer";
 @import "modals/modals";
-@import "s-breadcrumbs/s-breadcrumbs";
+
+// blocks
 @import "tabs-block/tabs-block";
+@import "brands-list/brands-list";
+
+// sections
+@import "s-breadcrumbs/s-breadcrumbs";
 @import "home-intro/home-intro";
+@import "home-selection/home-selection";

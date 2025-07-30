@@ -4,7 +4,6 @@
         tag: 'input',
         type: 'text',
         textareaRows: '8',
-        title: '',
         placeholder: '',
         inputAttr: {},
         resetBtn: false,
@@ -16,6 +15,10 @@
         ],
     }
 
+    //- resetBtn: false,
+    //- isSearch: false,
+    //- hasPrompt: false,
+
 mixin field(props = defaultFieldProps)
     -
         const checkProps = {
@@ -23,7 +26,6 @@ mixin field(props = defaultFieldProps)
             tag: props.tag ? props.tag : defaultFieldProps.tag,
             type: props.type ? props.type : defaultFieldProps.type,
             textareaRows: props.textareaRows ? props.textareaRows : defaultFieldProps.textareaRows,
-            title: props.title ? props.title : defaultFieldProps.title,
             placeholder: props.placeholder ? props.placeholder : defaultFieldProps.placeholder,
             inputAttr: props.inputAttr ? props.inputAttr : defaultFieldProps.inputAttr,
             resetBtn: props.resetBtn ? props.resetBtn : defaultFieldProps.resetBtn,
@@ -38,9 +40,6 @@ mixin field(props = defaultFieldProps)
                 svg 
                     use(xlink:href=`img/sprites/sprite.svg#search`)
         label
-            - if(checkProps.title)
-                span.field__title
-                    != checkProps.title
             - if(checkProps.tag === 'input')
                 input.field__input(type=checkProps.type placeholder=checkProps.placeholder)&attributes(checkProps.inputAttr)
                 - if(checkProps.type === 'radio')
@@ -49,19 +48,21 @@ mixin field(props = defaultFieldProps)
                     span.fake-checkbox
                 - else
                 span.field__error(data-js='fieldError')
+
             - if(checkProps.tag === 'textarea')
                 textarea.field__textarea(rows=checkProps.textareaRows placeholder=checkProps.placeholder)&attributes(checkProps.inputAttr)
                 span.field__error(data-js='fieldError')
-        - if(checkProps.tag === 'select')
-            select.field__select(placeholder=checkProps.placeholder data-js='formSelect')&attributes(checkProps.inputAttr)
-                - let optionCount = 0
-                - while (optionCount < checkProps.selectOptions.length)
-                    - if(checkProps.selectOptions[optionCount].length > 0)
-                        option(value=checkProps.selectOptions[optionCount])!= checkProps.selectOptions[optionCount]
-                    - else
-                        option!= checkProps.selectOptions[optionCount]
-                    - optionCount++
-            span.field__error(data-js='fieldError')
+
+            - if(checkProps.tag === 'select')
+                select.field__select(placeholder=checkProps.placeholder data-js='formSelect')&attributes(checkProps.inputAttr)
+                    - let optionCount = 0
+                    - while (optionCount < checkProps.selectOptions.length)
+                        - if(checkProps.selectOptions[optionCount].length > 0)
+                            option(value=checkProps.selectOptions[optionCount])!= checkProps.selectOptions[optionCount]
+                        - else
+                            option!= checkProps.selectOptions[optionCount]
+                        - optionCount++
+                span.field__error(data-js='fieldError')
 
         - if(checkProps.resetBtn)
             span.field__reset(data-js='fieldResetBtn')

@@ -51,9 +51,11 @@ function progressBullets(bullets, slider) {
 
             if(slider.autoplay.timeLeft <= 0) {
                 clearInterval(interval)
+                activeBullitOverlay.removeAttribute('style')
             }
 
         }, 10)
+
     })
 }
 

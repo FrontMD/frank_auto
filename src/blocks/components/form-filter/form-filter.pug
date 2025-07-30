@@ -1,0 +1,35 @@
+-
+    const defaultFormFilterProps = {
+        classes: '',
+        title: '',
+        text: '',
+        btnText: '',
+        submitSize: 'full',
+    }
+
+mixin form-filter(props = defaultFormFilterProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultFormFilterProps.classes,
+            title: props.title ? props.title : defaultFormFilterProps.title,
+            text: props.text ? props.text : defaultFormFilterProps.text,
+            btnText: props.btnText ? props.btnText : defaultFormFilterProps.btnText,
+            submitSize: props.submitSize ? props.submitSize : defaultFormFilterProps.submitSize,
+        }
+
+    form.form-filter(action="#" class= checkProps.classes)&attributes(attributes)
+        .form-filter__content
+            - if(checkProps.title.length > 0)
+                .form-filter__title.title.title--40!= checkProps.title 
+            - if(checkProps.text.length > 0)
+                .form-filter__text!= checkProps.text
+            .form-filter__fields
+                block
+            +btn({
+                classes: 'form-filter__submit',
+                type: 'button',
+                buttonType: 'submit',
+                name: checkProps.btnText,
+                cMode: 'accent',
+                sMode: checkProps.submitSize
+            })

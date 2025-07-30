@@ -9,7 +9,7 @@
     line-height: 1em;
     letter-spacing: 0;
     padding: 22.5px 52px;
-    border-radius: 14px;
+    border-radius: $br-btn-input;
     cursor: pointer;
 
     svg,
@@ -32,6 +32,29 @@
         &:hover {
             background-color: $c-accent-hover;
             border-color: $c-accent-hover;
+        }
+    }
+
+    &--light-accent {
+        color: $c-accent;
+        background-color: $c-bg-main;
+        border: 1px solid $c-accent;
+        transition: all $tr-time;
+        border-radius: $br-btn-input;
+
+        svg {
+            color: $c-accent;
+            transition: all $tr-time;
+        }
+
+        &:hover {
+            border-color: $c-accent-hover;
+            color: $c-accent-hover;
+            background-color: $c-bg-main-hover;
+
+            svg {
+                color: $c-accent-hover;
+            }
         }
     }
 
@@ -73,30 +96,6 @@
     &--transparent-red {
         color: $c-accent;
         background-color: transparent;
-        border: 1px solid $c-accent;
-        transition: all $tr-time;
-        border-radius: 4px;
-
-        .btn__note,
-        svg {
-            color: $c-accent;
-            transition: all $tr-time;
-        }
-
-        &:hover {
-            border-color: $c-accent-hover;
-            color: $c-accent-hover;
-
-            .btn__note,
-            svg {
-                color: $c-accent-hover;
-            }
-        }
-    }
-
-    &--light-red {
-        color: $c-accent;
-        background-color: $c-accent-light2;
         border: 1px solid $c-accent;
         transition: all $tr-time;
         border-radius: 4px;
