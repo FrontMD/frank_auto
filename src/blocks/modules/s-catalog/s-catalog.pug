@@ -1,0 +1,25 @@
+-
+    const defaultSCatalogProps = {
+        classes: '',
+    }
+
+mixin s-catalog(props= defaultSCatalogProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSCatalogProps.classes,
+        }
+
+    section.section.s-catalog(class= checkProps.classes)&attributes(attributes)
+        .section__container
+            .section__header
+                .title.title--40 Автомобили в наличии - Предложение дня
+            .s-catalog__list
+                +catalog-card
+            +btn({
+                classes: 's-catalog__all',
+                name: 'Показать еще',
+                cMode: 'light-accent',
+                sMode: 'full'
+            })
+
+

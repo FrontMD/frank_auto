@@ -1,4 +1,6 @@
 .home-selection {
+    overflow: hidden;
+
     &__sidebar {
         background-color: $c-white;
         border-radius: $br-section;

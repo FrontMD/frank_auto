@@ -1,0 +1,16 @@
+-
+    const defaultCatalogCardProps = {
+        classes: ''
+    }
+
+mixin catalog-card(props = defaultCatalogCardProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultCatalogCardProps.classes,
+
+        }
+
+    .catalog-card(class=checkProps.classes)&attributes(attributes)
+
+
+
