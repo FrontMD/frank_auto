@@ -134,7 +134,7 @@
             position: relative;
             width: 13px;
             height: 13px;
-            background-color: $c-accent-light;
+            background-color: $c-accent;
             flex-shrink: 0;
             flex-grow: 0;
             cursor: pointer;
@@ -369,7 +369,7 @@
     }
 
     &__item--total {
-        color: $c-text-dark;
+        color: $c-text;
         font-weight: 600;
     }
 

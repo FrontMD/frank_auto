@@ -7,5 +7,24 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 54px;
+        height: 54px;
+        background-color: $c-white;
+        border-radius: 14px;
+        color: $c-controls-grey;
+        transition: all $tr-time linear;
+
+        &:hover {
+            color: $c-accent-hover;
+        }
+
+        &.active {
+            color: $c-accent;
+        }
+
+        svg {
+            width: 25px;
+            height: 25px;
+        }
     }
 }

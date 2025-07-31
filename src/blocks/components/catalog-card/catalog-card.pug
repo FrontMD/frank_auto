@@ -1,16 +1,125 @@
 -
     const defaultCatalogCardProps = {
-        classes: ''
+        classes: '',
+        img: 'img/catalog/product_1.webp',
+        title: 'Новый LIXIANG L6 MAX',
+        price: {
+            classes: 'catalog-card__price',
+            current: '5 500 000 ₽',
+            old: '6 200 000 ₽',
+            credit: 'от 115 000 ₽/мес <span>в кредит</span>'
+        },
+        chars: [
+            {
+                icon: 'img/catalog/chars/engine.svg',
+                text: '449 л.с.'
+            },
+            {
+                icon: 'img/catalog/chars/fuel.svg',
+                text: '1.5 л/км'
+            },
+            {
+                icon: 'img/catalog/chars/speed.svg',
+                text: '180 км/ч'
+            },
+            {
+                icon: 'img/catalog/chars/timer.svg',
+                text: '5.3 c.'
+            },
+        ],
+        tags: [
+            {
+                icon: 'lightning',
+                text: 'Предложение дня',
+                color: 'accent'
+            },
+            {
+                icon: '',
+                text: 'Выгода до 300 000 ₽',
+                color: 'light-accent'
+            },
+        ],
+        gifts: [
+            'Оборудование <span>в подарок</span>',
+            'КАСКО <span>в подарок</span>',
+            'Комплект резины <span>в подарок</span>',
+        ],
+        controls: {
+            classes: 'catalog-card__controls',
+            compare: true,
+            favorite: false
+        }
     }
 
 mixin catalog-card(props = defaultCatalogCardProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultCatalogCardProps.classes,
-
+            img: props.img ? props.img : defaultCatalogCardProps.img,
+            title: props.title ? props.title : defaultCatalogCardProps.title,
+            price: props.price ? props.price : defaultCatalogCardProps.price,
+            chars: props.chars ? props.chars : defaultCatalogCardProps.chars,
+            tags: props.tags ? props.tags : defaultCatalogCardProps.tags,
+            gifts: props.gifts ? props.gifts : defaultCatalogCardProps.gifts,
+            controls: props.controls ? props.controls : defaultCatalogCardProps.controls,
         }
 
     .catalog-card(class=checkProps.classes)&attributes(attributes)
+        .catalog-card__top
+            .catalog-card__img
+                img(src=checkProps.img alt="")
+            .catalog-card__extras
+                .catalog-card__left
+                    .catalog-card__tags
+                        - let tagsCount = 0
+                        - while(tagsCount < checkProps.tags.length)
+                            - let tag = checkProps.tags[tagsCount]
+                            - let cClass = tag.color.length > 0 ? ` catalog-card__tag--${tag.color}` : ''
+                            .catalog-card__tag(class=cClass)
+                                - if(tag.icon.length > 0)
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#${tag.icon}`)
+                                span!= tag.text
+                            - tagsCount++
 
+                    .catalog-card__gifts
+                        - let giftsCount = 0
+                        - while(giftsCount < checkProps.gifts.length)
+                            - let gift = checkProps.gifts[giftsCount]
+
+                            .catalog-card__gift
+                                img(src='img/catalog/gift.svg' alt="")
+                                .text!= gift
+
+                            - giftsCount++
+
+                +prod-controls(checkProps.controls)
+
+        .catalog-card__info
+            .catalog-card__title.title.title--30!= checkProps.title 
+            +price(checkProps.price)
+            .catalog-card__chars
+                - let charsCount = 0
+                - while(charsCount < checkProps.chars.length)
+                    - let char = checkProps.chars[charsCount]
+                    .catalog-card__char
+                        img(src=char.icon, alt="")
+                        span!= char.text
+
+                    - charsCount++
+        .catalog-card__btns
+            +btn({
+                classes: 'catalog-card__btn',
+                name: 'Забронировать',
+                cMode: 'accent',
+                sMode: 'full'
+            })
+
+            +btn({
+                classes: 'catalog-card__btn',
+                name: 'Подробнее',
+                cMode: 'light-accent',
+                sMode: 'full'
+            })
 
 

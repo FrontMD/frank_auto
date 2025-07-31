@@ -6,6 +6,7 @@
     z-index: 50;
 
     &__section {
+        background-color: $c-bg-main;
         padding-bottom: 0;
         padding-top: 20px;
         transition: all $tr-time linear;
@@ -177,6 +178,8 @@
 
 .site-header {
     &.small &__section {
+        background-color: transparent;
+
         @include min(mobile) {
             padding-top: 4px;
         }

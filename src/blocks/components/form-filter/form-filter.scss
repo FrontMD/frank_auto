@@ -107,64 +107,6 @@
         margin-top: 16px;
     }
 
-    .form-privacy {
-        position: relative;
-        display: flex;
-        align-items: flex-start;
-        gap: 9px;
-        margin-bottom: 20px;
-
-        input {
-            position: absolute;
-            left: 0;
-            top: 0;
-            opacity: 0;
-        }
-
-        &__fake {
-            display: block;
-            position: relative;
-            width: 13px;
-            height: 13px;
-            background-color: $c-accent-light;
-            flex-shrink: 0;
-            flex-grow: 0;
-            cursor: pointer;
-
-            &::after {
-                content: '';
-                position: absolute;
-                width: 70%;
-                height: 70%;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                background-color: $c-white;
-            }
-        }
-
-        input:checked+.form-privacy__fake::after {
-            background-color: $c-accent;
-        }
-
-        &__text {
-            max-width: 350px;
-            font-size: 12px;
-            font-weight: 400;
-            line-height: 1em;
-            color: $c-text;
-
-            a {
-                color: $c-text;
-                transition: color $tr-time;
-            }
-
-            a:hover {
-                color: $c-accent-hover;
-            }
-        }
-    }
-
     &__submit {
         margin-top: auto;
 

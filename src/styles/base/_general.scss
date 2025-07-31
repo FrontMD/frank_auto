@@ -346,7 +346,7 @@ html.hystmodal__opened {
 	}
 
 	&--50 {
-		font-size: 74px;
+		font-size: 50px;
 		line-height: 1em;
 		font-weight: 800;
 		font-family: $ff-rooftop;
@@ -668,7 +668,7 @@ html.hystmodal__opened {
 		}
 
 		svg {
-			color: $c-bg;
+			color: $c-bg-main;
 			width: 20px;
 			height: 16px;
 			margin-bottom: 2px;
@@ -1075,7 +1075,7 @@ html.hystmodal__opened {
 		}
 
 		&::-webkit-scrollbar-track {
-			background-color: $c-bg;
+			background-color: $c-bg-main;
 			border-radius: 2px;
 		}
 
@@ -1162,8 +1162,8 @@ html.hystmodal__opened {
 		gap: 16px;
 		margin-bottom: 16px;
 		padding: 16px 18px;
-		background-color: $c-accent-light2;
-		color: $c-text-dark;
+		background-color: $c-bg-main;
+		color: $c-text;
 		border-radius: 4px;
 
 		@include max(mobile) {
@@ -1173,7 +1173,7 @@ html.hystmodal__opened {
 
 		&__icon {
 			flex: 0 0 auto;
-			color: $c-accent-light;
+			color: $c-bg-main;
 
 			svg {
 				width: 24px;
@@ -1327,7 +1327,7 @@ html.hystmodal__opened {
 
 	&__tag {
 		padding: 2px 6px;
-		background-color: $c-text-dark;
+		background-color: $c-text;
 		color: $c-white;
 		font-size: 12px;
 		border-radius: 2px;
@@ -1428,7 +1428,7 @@ html.hystmodal__opened {
 	}
 
 	&::-webkit-scrollbar-thumb {
-		background-color: $c-bg;
+		background-color: $c-bg-main;
 		border-radius: 2px;
 	}
 
@@ -1594,9 +1594,9 @@ html.hystmodal__opened {
 			width: 46px;
 			height: 46px;
 			background-color: $c-white;
-			border: 1px solid $c-bg;
+			border: 1px solid $c-bg-main;
 			border-radius: 2px;
-			color: $c-text-dark;
+			color: $c-text;
 			transition: all $tr-time linear;
 			cursor: pointer;
 

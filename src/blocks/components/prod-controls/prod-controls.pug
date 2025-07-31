@@ -15,10 +15,10 @@ mixin prod-controls(props= defaultProdControlsProps)
 
     .prod-controls(class= checkProps.classes)&attributes(attributes)
         - if(checkProps.compare === true)
-            .prod-controls__item
+            a(href="javascript:void(0);").prod-controls__item
                 svg
                     use(xlink:href=`img/sprites/sprite.svg#compare`)
         - if(checkProps.favorite === true)
-            .prod-controls__item
+            a(href="javascript:void(0);").prod-controls__item
                 svg
                     use(xlink:href=`img/sprites/sprite.svg#favorite`)
