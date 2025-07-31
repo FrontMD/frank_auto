@@ -168,9 +168,9 @@ html.hystmodal__opened {
 }
 
 .section {
-	padding: 0 27px 50px;
+	padding: 0 30px 50px;
 
-	@include max(laptop) {
+	@include max(large) {
 		padding: 0 20px 50px;
 	}
 
@@ -314,6 +314,23 @@ html.hystmodal__opened {
 
 	&__content {
 		position: relative;
+	}
+}
+
+.section-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 32px;
+	margin-bottom: 72px;
+
+	&__title {
+		flex: 0 1 auto;
+		padding-left: 10px;
+	}
+
+	&__btn {
+		flex: 0 0 auto;
 	}
 }
 

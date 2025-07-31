@@ -58,25 +58,13 @@
         }
     }
 
-    /*&--white {
-        color: $c-accent;
-        background-color: $c-white;
-        transition: all $tr-time linear;
-
-        &:hover {
-            background-color: $c-accent-hover;
-            color: $c-white;
-        }
-    }
-
-    &--transparent-red {
+    &--bordered {
         color: $c-accent;
         background-color: transparent;
         border: 1px solid $c-accent;
         transition: all $tr-time;
-        border-radius: 4px;
+        border-radius: $br-btn-input;
 
-        .btn__note,
         svg {
             color: $c-accent;
             transition: all $tr-time;
@@ -86,27 +74,11 @@
             border-color: $c-accent-hover;
             color: $c-accent-hover;
 
-            .btn__note,
             svg {
                 color: $c-accent-hover;
             }
         }
     }
-
-    &--transparent-grey {
-        color: $c-text-light;
-        background-color: transparent;
-        transition: all $tr-time;
-
-        &:hover {
-            color: $c-white;
-
-            .btn__note,
-            svg {
-                color: $c-white;
-            }
-        }
-    }*/
 
     &--grey {
         color: $c-white;
