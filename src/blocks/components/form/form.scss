@@ -17,6 +17,8 @@
         opacity: 1;
         height: auto;
         visibility: visible;
+        height: 100%;
+        overflow: visible;
     }
 
     &__thanks {
@@ -65,7 +67,7 @@
     &__fields {
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        gap: 16px;
         margin-bottom: 24px;
         width: 100%;
 
@@ -76,11 +78,11 @@
 
     &__flex {
         display: flex;
-        gap: 16px;
+        gap: 12px;
 
         .field {
-            flex: 0 0 calc((100% - 16px) / 2);
-            max-width: calc((100% - 16px) / 2);
+            flex: 0 0 calc((100% - 12px) / 2);
+            max-width: calc((100% - 12px) / 2);
 
             @include max(mobile) {
                 flex-basis: auto;
@@ -122,7 +124,7 @@
         gap: 9px;
         margin-bottom: 20px;
 
-        input {
+        /*input {
             position: absolute;
             left: 0;
             top: 0;
@@ -153,7 +155,7 @@
 
         input:checked+.form-privacy__fake::after {
             background-color: $c-accent;
-        }
+        }*/
 
         &__text {
             max-width: 350px;
@@ -206,7 +208,7 @@
     }
 }
 
-.form {
+/*.form {
     &--modal &__fields {
         gap: 16px;
     }
@@ -251,9 +253,9 @@
         max-width: 300px;
         margin-top: 0;
     }
-}
+}*/
 
-.form-product-card {
+/*.form-product-card {
     display: flex;
     align-items: stretch;
     gap: 24px;
@@ -318,9 +320,9 @@
             gap: 4px;
         }
     }
-}
+}*/
 
-.form-spoiler {
+/*.form-spoiler {
     padding: 15px 0;
     color: $c-text;
     font-size: 16px;
@@ -377,4 +379,4 @@
         display: none;
     }
 
-}
+}*/

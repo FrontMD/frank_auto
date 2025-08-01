@@ -7,7 +7,7 @@ function validation() {
     forms.forEach(form => {
 
         inputMasksInit(form);
-        formSpoilerInit(form);
+        //formSpoilerInit(form);
 
         form.addEventListener('submit', event => {
             event.preventDefault()
@@ -231,7 +231,7 @@ function inputMasksInit(form) {
     }
 }
 
-function formSpoilerInit(form) {
+/*function formSpoilerInit(form) {
     const spoilers = form.querySelectorAll('[data-js="formSpoiler"]')
 
     if(spoilers.length < 1) return
@@ -250,7 +250,7 @@ function formSpoilerInit(form) {
             }
         })
     })
-}
+}*/
 
 function afterFormSubmit(form) {
     let fileFields = form.querySelectorAll('.field-file[data-js="formField"]')

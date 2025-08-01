@@ -1,0 +1,64 @@
+-
+    const defaultStorySliderProps = {
+        classes: '',
+        title: 'Авто истории',
+        btn: false,
+        cards: [
+            {
+                classes: 'swiper-slide',
+                img: 'img/stories/story_1.webp',
+                title: 'Проверяем мощность двух машин на трассе',
+                tags: ['Уличные гонки'],
+            },
+            {
+                classes: 'swiper-slide',
+                img: 'img/stories/story_2.webp',
+                title: 'Обзор ТОП-10 китайцев в 2025',
+                tags: ['Обзор'],
+            },
+            {
+                classes: 'swiper-slide',
+                img: 'img/stories/story_3.webp',
+                title: 'Новые функции у китайского электрокар Zeekr 001',
+                tags: ['Обзор'],
+            },
+            {
+                classes: 'swiper-slide',
+                img: 'img/stories/story_4.webp',
+                title: 'Румтур по новому салону',
+                tags: ['Обзор'],
+            },
+            {
+                classes: 'swiper-slide',
+                img: 'img/stories/story_5.webp',
+                title: 'Проверяем мощность двух машин на трассе',
+                tags: ['Уличные гонки'],
+            },
+
+        ],
+    }
+
+mixin story-slider(props= defaultStorySliderProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultStorySliderProps.classes,
+            title: props.title ? props.title : defaultStorySliderProps.title,
+            btn: props.btn ? props.btn : defaultStorySliderProps.btn,
+            cards: props.cards ? props.cards : defaultStorySliderProps.cards,
+        }
+
+    section.section.story-slider(class= checkProps.classes data-js="storySlider")&attributes(attributes)
+        .section__container
+            .section-block.story-slider__block
+                .section-header
+                    .section-header__title.title.title--40!= checkProps.title
+                    if(checkProps.btn !== false)
+                        +btn(checkProps.btn)
+
+                .section-block__content.story-slider__slider(data-js="storySliderSlider")
+                    .swiper-wrapper
+                        - let cardsCount = 0
+                        -while(cardsCount < checkProps.cards.length)
+                            +story-card(checkProps.cards[cardsCount])
+
+                            - cardsCount++

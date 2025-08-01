@@ -10,4 +10,40 @@ block content
         +home-selection
         +s-catalog
         +home-order
-        +s-services
+        +s-services({
+            btn: {
+                classes: 'section-header__btn',
+                name: 'Смотреть все',
+                cMode: 'bordered',
+                sMode: 'content'
+            }
+        })
+        +home-credit
+        +s-services({
+            title: 'Актуально сейчас',
+            cards: [
+                {
+                    title: 'Гибриды',
+                    text: '',
+                    img: 'img/services/service_4.webp'
+                },
+                {
+                    title: 'Электромобили',
+                    text: '',
+                    img: 'img/services/service_5.webp'
+                },
+                {
+                    title: 'ДВС',
+                    text: '',
+                    img: 'img/services/service_6.webp'
+                }
+            ]
+        })
+        +story-slider({
+            btn: {
+                classes: 'section-header__btn',
+                name: 'Смотреть все',
+                cMode: 'bordered',
+                sMode: 'content'
+            }
+        })

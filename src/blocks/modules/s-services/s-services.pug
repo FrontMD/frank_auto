@@ -1,62 +1,60 @@
 -
     const defaultSServicesProps = {
         classes: '',
+        title: 'Услуги',
+        btn: false,
+        cards: [
+            {
+                title: 'Кредитование',
+                text: '1.9% по льготной ставке',
+                img: 'img/services/service_1.webp'
+            },
+            {
+                title: 'Трейд-Ин',
+                text: '1.9% по льготной ставке',
+                img: 'img/services/service_2.webp'
+            },
+            {
+                title: 'Тест драйв',
+                text: 'Бесплатно',
+                img: 'img/services/service_3.webp'
+            }
+        ],
     }
 
 mixin s-services(props= defaultSServicesProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultSServicesProps.classes,
+            title: props.title ? props.title : defaultSServicesProps.title,
+            btn: props.btn ? props.btn : defaultSServicesProps.btn,
+            cards: props.cards ? props.cards : defaultSServicesProps.cards,
         }
 
     section.section.s-services(class= checkProps.classes)&attributes(attributes)
         .section__container
             .section-block.s-services__block
                 .section-header
-                    .section-header__title.title.title--40 Услуги
-                    +btn({
-                        classes: 'section-header__btn',
-                        name: 'Смотреть все',
-                        cMode: 'bordered',
-                        sMode: 'content'
-                    })
+                    .section-header__title.title.title--40!= checkProps.title
+                    if(checkProps.btn !== false)
+                        +btn(checkProps.btn)
 
                 .section-block__content.s-services__list
-                    .s-services__card
-                        .s-services__info
-                            .s-services__subtitle.title.title--30 Кредитование
-                            .s-services__text 1.9% по льготной ставке
-                            +btn({
-                                classes: 's-services__btn',
-                                name: 'Узнать больше',
-                                cMode: 'light-accent',
-                                sMode: "content"
-                            })
-                        .s-services__img
-                            img(src="img/services/service_1.webp" alt="")
+                    - let cardsCount = 0
+                    -while(cardsCount < checkProps.cards.length)
+                        - let card = checkProps.cards[cardsCount]
+                        .s-services__card
+                            .s-services__info
+                                .s-services__subtitle.title.title--30!= card.title
+                                -if(card.text.length > 0)
+                                    .s-services__text!= card.text
+                                +btn({
+                                    classes: 's-services__btn',
+                                    name: 'Узнать больше',
+                                    cMode: 'light-accent',
+                                    sMode: "full"
+                                })
+                            .s-services__img
+                                img(src=card.img alt="")
 
-                    .s-services__card
-                        .s-services__info
-                            .s-services__subtitle.title.title--30 Трейд-Ин
-                            .s-services__text 1.9% по льготной ставке
-                            +btn({
-                                classes: 's-services__btn',
-                                name: 'Узнать больше',
-                                cMode: 'light-accent',
-                                sMode: "content"
-                            })
-                        .s-services__img
-                            img(src="img/services/service_2.webp" alt="")
-
-                    .s-services__card
-                        .s-services__info
-                            .s-services__subtitle.title.title--30 Тест драйв
-                            .s-services__text Бесплатно
-                            +btn({
-                                classes: 's-services__btn',
-                                name: 'Узнать больше',
-                                cMode: 'light-accent',
-                                sMode: "content"
-                            })
-                        .s-services__img
-                            img(src="img/services/service_3.webp" alt="")
+                        - cardsCount++

@@ -1,0 +1,132 @@
+-
+    const defaultHomeCreditProps = {
+        classes: '',
+    }
+
+mixin home-credit(props= defaultHomeCreditProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultHomeCreditProps.classes,
+        }
+
+    section.section.home-credit(class= checkProps.classes)&attributes(attributes)
+        .section__container.section__container--sidebar
+            .section__body.home-credit__left
+                .home-credit__title.title.title--40 Рассчитайте автокредит и&nbsp;получите выгоду
+                .home-credit__bottom
+                    .home-credit__sticker
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#lightning`)
+                        span ВЫГОДА ДО 300 000 ₽
+                    .home-credit__img
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#lightning`)
+
+
+                        img(src="img/home/home_credit.webp" alt="")
+
+
+            .section__sidebar.home-credit__sidebar
+                +form({
+                    btnText: 'Получить предложение',
+                })
+                    +field({
+                        classes: '',
+                        tag: 'select',
+                        placeholder: 'Адрес салона',
+                        selectOptions: [
+                            "Новорижское ш., 17й км, с3",
+                            "Ярославское ш., д.42",
+                        ],
+                    })
+                    .form__flex
+                        +field({
+                            classes: '',
+                            tag: 'select',
+                            placeholder: 'Марка',
+                            selectOptions: [
+                                "",
+                                "LiXiang",
+                                "Voyah",
+                                "AITO",
+                                "Chery",
+                                "Zeekr",
+                                "Audi",
+                                "Tank",
+                                "Rox Motor Tech",
+                            ],
+                        })
+                        +field({
+                            classes: '',
+                            tag: 'select',
+                            placeholder: 'Модель',
+                            selectOptions: [
+                                "",
+                                "LiXiang L6",
+                                "LiXiang L7",
+                                "LiXiang L9",
+                                "LiXiang L9",
+                                "LiXiang Mega",
+                                "LiXiang One"
+                            ],
+                        })
+
+                    +field({
+                        classes: '',
+                        tag: 'select',
+                        placeholder: 'Комплектация',
+                        selectOptions: [
+                            "",
+                            "Base",
+                            "Comfort",
+                            "Sport",
+                            "Luxe",
+                        ],
+                    })
+
+                    +field({
+                        classes: '',
+                        tag: 'input',
+                        placeholder: 'Первоначальный взнос',
+                        inputAttr: {
+                            'required': '',
+                            "data-type": "number"
+                        },
+                    })
+
+                    +field-range({
+                        title: 'Сумма кредита, руб',
+                        min: '100000',
+                        max: '3000000',
+                        step: '10000'
+                    })
+
+                    +field-range({
+                        title: 'Срок кредита, мес',
+                        unit: ' мес',
+                        min: '6',
+                        max: '72',
+                        step: '1'
+                    })
+
+                    .form__flex
+                        +field({
+                            classes: '',
+                            tag: 'input',
+                            placeholder: 'Ваше имя',
+                            inputAttr: {
+                                'required': '',
+                                'data-type': 'letters'
+                            },
+                        })
+                        +field({
+                            classes: '',
+                            tag: 'input',
+                            type: 'tel',
+                            placeholder: 'Ваш телефон',
+                            inputAttr: {
+                                'required': '',
+                                'data-v-name': 'phone',
+                                'data-type': 'phoneNumber'
+                            },
+                        })

@@ -1,0 +1,37 @@
+-
+    const defaultStoryCardProps = {
+        classes: '',
+        img: '',
+        title: '',
+        tags: [
+            ''
+        ],
+    }
+
+mixin story-card(props = defaultCatalogCardProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultCatalogCardProps.classes,
+            img: props.img ? props.img : defaultCatalogCardProps.img,
+            title: props.title ? props.title : defaultCatalogCardProps.title,
+            tags: props.tags ? props.tags : defaultCatalogCardProps.tags,
+        }
+
+    .story-card(class=checkProps.classes)&attributes(attributes)
+        a(href="javascript:void(0);").story-card__link
+
+        .story-card__bg
+            img(src=checkProps.img alt="")
+
+        .story-card__content
+            .story-card__tags
+                - let count = 0
+                - while(count < checkProps.tags.length)
+                    - let tag = checkProps.tags[count]
+                    .story-card__tag!= tag.text
+
+                    - count++
+            .story-card__title!= checkProps.title
+
+
+

@@ -318,7 +318,7 @@
                         <div class="form-filter__content">
                           <div class="form-filter__title title title--40">Быстрый <br>подбор <br>автомобиля</div>
                           <div class="form-filter__fields">
-                                <div class="field-range field-range--margins" data-js="fieldRange" data-min="100000" data-max="50000000" data-step="100000">
+                                <div class="field-range field-range--margins" data-js="fieldRange" data-type="range" data-unit=" ₽" data-min="100000" data-max="50000000" data-step="100000">
                                   <input class="field-range__input field-range__input--min" type="number" min="100000" max="50000000" data-js="fieldRangeMin">
                                   <input class="field-range__input field-range__input--max" type="number" min="100000" max="50000000" data-js="fieldRangeMax">
                                   <div class="field-range__range" data-js="fieldRangeSlider"></div>
@@ -716,23 +716,225 @@
                     <div class="s-services__card">
                       <div class="s-services__info">
                         <div class="s-services__subtitle title title--30">Кредитование</div>
-                        <div class="s-services__text">1.9% по льготной ставке</div><a class="btn s-services__btn btn--light-accent btn--content" href="javascript:void(0)"><span class="btn__text">Узнать больше</span></a>
+                        <div class="s-services__text">1.9% по льготной ставке</div><a class="btn s-services__btn btn--light-accent btn--full" href="javascript:void(0)"><span class="btn__text">Узнать больше</span></a>
                       </div>
                       <div class="s-services__img"><img src="img/services/service_1.webp" alt=""></div>
                     </div>
                     <div class="s-services__card">
                       <div class="s-services__info">
                         <div class="s-services__subtitle title title--30">Трейд-Ин</div>
-                        <div class="s-services__text">1.9% по льготной ставке</div><a class="btn s-services__btn btn--light-accent btn--content" href="javascript:void(0)"><span class="btn__text">Узнать больше</span></a>
+                        <div class="s-services__text">1.9% по льготной ставке</div><a class="btn s-services__btn btn--light-accent btn--full" href="javascript:void(0)"><span class="btn__text">Узнать больше</span></a>
                       </div>
                       <div class="s-services__img"><img src="img/services/service_2.webp" alt=""></div>
                     </div>
                     <div class="s-services__card">
                       <div class="s-services__info">
                         <div class="s-services__subtitle title title--30">Тест драйв</div>
-                        <div class="s-services__text">Бесплатно</div><a class="btn s-services__btn btn--light-accent btn--content" href="javascript:void(0)"><span class="btn__text">Узнать больше</span></a>
+                        <div class="s-services__text">Бесплатно</div><a class="btn s-services__btn btn--light-accent btn--full" href="javascript:void(0)"><span class="btn__text">Узнать больше</span></a>
                       </div>
                       <div class="s-services__img"><img src="img/services/service_3.webp" alt=""></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section home-credit">
+              <div class="section__container section__container--sidebar">
+                <div class="section__body home-credit__left">
+                  <div class="home-credit__title title title--40">Рассчитайте автокредит и&nbsp;получите выгоду</div>
+                  <div class="home-credit__bottom">
+                    <div class="home-credit__sticker">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#lightning"></use>
+                      </svg><span>ВЫГОДА ДО 300 000 ₽</span>
+                    </div>
+                    <div class="home-credit__img">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#lightning"></use>
+                      </svg><img src="img/home/home_credit.webp" alt="">
+                    </div>
+                  </div>
+                </div>
+                <div class="section__sidebar home-credit__sidebar">
+                      <form class="form" action="#" data-validate novalidate>
+                        <div class="form__content" data-js="form-content">
+                          <div class="form__fields">
+                                <div class="field     " data-js="formField">
+                                  <label>
+                                    <select class="field__select" placeholder="Адрес салона" data-js="formSelect">
+                                      <option value="Новорижское ш., 17й км, с3">Новорижское ш., 17й км, с3</option>
+                                      <option value="Ярославское ш., д.42">Ярославское ш., д.42</option>
+                                    </select><span class="field__error" data-js="fieldError"></span>
+                                  </label>
+                                </div>
+                            <div class="form__flex">
+                                  <div class="field     " data-js="formField">
+                                    <label>
+                                      <select class="field__select" placeholder="Марка" data-js="formSelect">
+                                        <option></option>
+                                        <option value="LiXiang">LiXiang</option>
+                                        <option value="Voyah">Voyah</option>
+                                        <option value="AITO">AITO</option>
+                                        <option value="Chery">Chery</option>
+                                        <option value="Zeekr">Zeekr</option>
+                                        <option value="Audi">Audi</option>
+                                        <option value="Tank">Tank</option>
+                                        <option value="Rox Motor Tech">Rox Motor Tech</option>
+                                      </select><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                  </div>
+                                  <div class="field     " data-js="formField">
+                                    <label>
+                                      <select class="field__select" placeholder="Модель" data-js="formSelect">
+                                        <option></option>
+                                        <option value="LiXiang L6">LiXiang L6</option>
+                                        <option value="LiXiang L7">LiXiang L7</option>
+                                        <option value="LiXiang L9">LiXiang L9</option>
+                                        <option value="LiXiang L9">LiXiang L9</option>
+                                        <option value="LiXiang Mega">LiXiang Mega</option>
+                                        <option value="LiXiang One">LiXiang One</option>
+                                      </select><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                  </div>
+                            </div>
+                                <div class="field     " data-js="formField">
+                                  <label>
+                                    <select class="field__select" placeholder="Комплектация" data-js="formSelect">
+                                      <option></option>
+                                      <option value="Base">Base</option>
+                                      <option value="Comfort">Comfort</option>
+                                      <option value="Sport">Sport</option>
+                                      <option value="Luxe">Luxe</option>
+                                    </select><span class="field__error" data-js="fieldError"></span>
+                                  </label>
+                                </div>
+                                <div class="field     " data-js="formField">
+                                  <label>
+                                    <input class="field__input" type="text" placeholder="Первоначальный взнос" required="" data-type="number"><span class="field__error" data-js="fieldError"></span>
+                                  </label>
+                                </div>
+                                <div class="field-range" data-js="fieldRange" data-type="single" data-unit=" ₽" data-min="100000" data-max="3000000" data-step="10000">
+                                  <input class="field-range__input field-range__input--min" type="number" min="100000" max="3000000" data-js="fieldRangeMin">
+                                  <div class="field-range__title">Сумма кредита, руб</div>
+                                  <div class="field-range__range" data-js="fieldRangeSlider"></div>
+                                </div>
+                                <div class="field-range" data-js="fieldRange" data-type="single" data-unit=" мес" data-min="6" data-max="72" data-step="1">
+                                  <input class="field-range__input field-range__input--min" type="number" min="6" max="72" data-js="fieldRangeMin">
+                                  <div class="field-range__title">Срок кредита, мес</div>
+                                  <div class="field-range__range" data-js="fieldRangeSlider"></div>
+                                </div>
+                            <div class="form__flex">
+                                  <div class="field     " data-js="formField">
+                                    <label>
+                                      <input class="field__input" type="text" placeholder="Ваше имя" required="" data-type="letters"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                  </div>
+                                  <div class="field     " data-js="formField">
+                                    <label>
+                                      <input class="field__input" type="tel" placeholder="Ваш телефон" required="" data-v-name="phone" data-type="phoneNumber"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                  </div>
+                            </div>
+                          </div>
+                              <button class="btn form__submit btn--accent btn--full" type="submit"><span class="btn__text">Получить предложение</span>
+                              </button>
+                          <div class="form__privacy form-privacy" data-js="formField"><span class="form-privacy__text">Нажимая кнопку "Получить предложение" Вы даете согласие на <a href="#" target="_blank">обработку своих персональных данных</a></span><span class="field__error" data-js="fieldError"></span></div>
+                        </div>
+                        <div class="form__thanks" data-js="form-thanks">
+                          <div class="title--32 form__title">Ваш вопрос отправлен.</div>
+                          <div class="form__image-success">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#form_success"></use>
+                            </svg>
+                          </div>
+                          <div class="form__text">С Вами свяжется ответственный сотрудник по&nbsp;указанным контактным данным.</div>
+                        </div>
+                      </form>
+                </div>
+              </div>
+            </section>
+            <section class="section s-services">
+              <div class="section__container">
+                <div class="section-block s-services__block">
+                  <div class="section-header">
+                    <div class="section-header__title title title--40">Актуально сейчас</div>
+                  </div>
+                  <div class="section-block__content s-services__list">
+                    <div class="s-services__card">
+                      <div class="s-services__info">
+                        <div class="s-services__subtitle title title--30">Гибриды</div><a class="btn s-services__btn btn--light-accent btn--full" href="javascript:void(0)"><span class="btn__text">Узнать больше</span></a>
+                      </div>
+                      <div class="s-services__img"><img src="img/services/service_4.webp" alt=""></div>
+                    </div>
+                    <div class="s-services__card">
+                      <div class="s-services__info">
+                        <div class="s-services__subtitle title title--30">Электромобили</div><a class="btn s-services__btn btn--light-accent btn--full" href="javascript:void(0)"><span class="btn__text">Узнать больше</span></a>
+                      </div>
+                      <div class="s-services__img"><img src="img/services/service_5.webp" alt=""></div>
+                    </div>
+                    <div class="s-services__card">
+                      <div class="s-services__info">
+                        <div class="s-services__subtitle title title--30">ДВС</div><a class="btn s-services__btn btn--light-accent btn--full" href="javascript:void(0)"><span class="btn__text">Узнать больше</span></a>
+                      </div>
+                      <div class="s-services__img"><img src="img/services/service_6.webp" alt=""></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section story-slider" data-js="storySlider">
+              <div class="section__container">
+                <div class="section-block story-slider__block">
+                  <div class="section-header">
+                    <div class="section-header__title title title--40">Авто истории</div><a class="btn section-header__btn btn--bordered btn--content" href="javascript:void(0)"><span class="btn__text">Смотреть все</span></a>
+                  </div>
+                  <div class="section-block__content story-slider__slider" data-js="storySliderSlider">
+                    <div class="swiper-wrapper">
+                          <div class="story-card swiper-slide"><a class="story-card__link" href="javascript:void(0);"></a>
+                            <div class="story-card__bg"><img src="img/stories/story_1.webp" alt=""></div>
+                            <div class="story-card__content">
+                              <div class="story-card__tags">
+                                <div class="story-card__tag"></div>
+                              </div>
+                              <div class="story-card__title">Проверяем мощность двух машин на трассе</div>
+                            </div>
+                          </div>
+                          <div class="story-card swiper-slide"><a class="story-card__link" href="javascript:void(0);"></a>
+                            <div class="story-card__bg"><img src="img/stories/story_2.webp" alt=""></div>
+                            <div class="story-card__content">
+                              <div class="story-card__tags">
+                                <div class="story-card__tag"></div>
+                              </div>
+                              <div class="story-card__title">Обзор ТОП-10 китайцев в 2025</div>
+                            </div>
+                          </div>
+                          <div class="story-card swiper-slide"><a class="story-card__link" href="javascript:void(0);"></a>
+                            <div class="story-card__bg"><img src="img/stories/story_3.webp" alt=""></div>
+                            <div class="story-card__content">
+                              <div class="story-card__tags">
+                                <div class="story-card__tag"></div>
+                              </div>
+                              <div class="story-card__title">Новые функции у китайского электрокар Zeekr 001</div>
+                            </div>
+                          </div>
+                          <div class="story-card swiper-slide"><a class="story-card__link" href="javascript:void(0);"></a>
+                            <div class="story-card__bg"><img src="img/stories/story_4.webp" alt=""></div>
+                            <div class="story-card__content">
+                              <div class="story-card__tags">
+                                <div class="story-card__tag"></div>
+                              </div>
+                              <div class="story-card__title">Румтур по новому салону</div>
+                            </div>
+                          </div>
+                          <div class="story-card swiper-slide"><a class="story-card__link" href="javascript:void(0);"></a>
+                            <div class="story-card__bg"><img src="img/stories/story_5.webp" alt=""></div>
+                            <div class="story-card__content">
+                              <div class="story-card__tags">
+                                <div class="story-card__tag"></div>
+                              </div>
+                              <div class="story-card__title">Проверяем мощность двух машин на трассе</div>
+                            </div>
+                          </div>
                     </div>
                   </div>
                 </div>

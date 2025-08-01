@@ -17,6 +17,15 @@
         overflow: hidden;
     }
 
+    &__title {
+        margin-bottom: 5px;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.1875em;
+        letter-spacing: 0;
+        color: $c-text-breadcrumbs;
+    }
+
     .noUi-horizontal {
         height: 10px;
     }
@@ -31,6 +40,11 @@
         background-color: $c-bg-input;
         box-shadow: none;
         border-radius: 12px;
+    }
+
+    &__title+.noUi-target {
+        top: auto;
+        bottom: 50px;
     }
 
     .noUi-connect {
@@ -76,6 +90,9 @@
         font-size: 16px;
         line-height: 1em;
         letter-spacing: 0;
+    }
 
+    &__title+.noUi-target .noUi-tooltip {
+        top: calc(100% + 19px);
     }
 }

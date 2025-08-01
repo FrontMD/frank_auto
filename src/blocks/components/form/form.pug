@@ -6,7 +6,7 @@
         btnText: '',
         submitSize: 'full',
         innerThanks: true,
-        privacyText: 'Согласен на обработку моих персональных данных в соответствии с <a href="#" target="_blank">Политикой в отношении обработки персональных данных</a>',
+        privacyText: 'Нажимая кнопку "Получить предложение" Вы даете согласие на <a href="#" target="_blank">обработку своих персональных данных</a>',
         successTitle: 'Ваш вопрос отправлен.',
         successText: 'С Вами свяжется ответственный сотрудник по&nbsp;указанным контактным данным.',
         successBtn: false
@@ -40,13 +40,10 @@ mixin form(props = defaultFormProps)
                 type: 'button',
                 buttonType: 'submit',
                 name: checkProps.btnText,
-                cMode: 'red',
-                size: checkProps.submitSize
+                cMode: 'accent',
+                sMode: checkProps.submitSize
             })
             .form__privacy.form-privacy(data-js="formField")
-                label
-                    input(type="checkbox" data-v-name='checkbox' required)
-                    span.form-privacy__fake
                 span.form-privacy__text!= checkProps.privacyText
                 span.field__error(data-js='fieldError')
         - if(checkProps.innerThanks === true)

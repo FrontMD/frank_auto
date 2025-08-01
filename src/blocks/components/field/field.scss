@@ -32,16 +32,16 @@
     &__input,
     &__textarea {
         width: 100%;
-        padding: 15px 20px;
+        padding: 22.5px 30px;
         font-family: $ff-inter;
         font-size: 16px;
-        font-weight: 400;
-        line-height: 1.4em;
+        line-height: 1.1875em;
+        font-weight: 600;
         background-color: $c-white;
         outline: none;
         color: $c-text;
-        border: 1px solid $c-border;
-        border-radius: 4px;
+        background-color: $c-bg-input;
+        border-radius: $br-btn-input;
 
         @include max(tablet) {
             padding: 10px 12px;
@@ -213,7 +213,7 @@
 
     &.select2-container--default {
         .select2-selection--single {
-            padding: 22px 20px;
+            padding: 22px 30px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -243,12 +243,16 @@
                 padding: 0;
             }
 
+            .select2-selection__rendered {
+                color: $c-text;
+            }
+
             .select2-selection__arrow {
                 position: relative;
                 flex-shrink: 0;
                 flex-grow: 0;
-                height: 20px;
-                width: 20px;
+                height: 10px;
+                width: 10px;
                 display: block;
 
                 b {
@@ -260,7 +264,7 @@
                     width: 100%;
                     height: 100%;
                     display: block;
-                    background: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 6.5L10 14.5L18 6.5' stroke='%23878E9C' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+                    background: url("data:image/svg+xml,%3Csvg width='10' height='10' viewBox='0 0 10 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.4' clip-path='url(%23clip0_636_25816)'%3E%3Cpath d='M5.20799 7.76458C5.03623 7.76458 4.86449 7.69821 4.73353 7.56573L0.612623 3.39498C0.35048 3.12967 0.35048 2.69951 0.612623 2.43431C0.874661 2.1691 1.2996 2.1691 1.56176 2.43431L5.20799 6.12482L8.85425 2.43444C9.11639 2.16923 9.54129 2.16923 9.8033 2.43444C10.0656 2.69964 10.0656 3.1298 9.8033 3.39511L5.68246 7.56586C5.55144 7.69836 5.3797 7.76458 5.20799 7.76458Z' fill='%230F0908'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_636_25816'%3E%3Crect width='9.58401' height='9.69985' fill='white' transform='translate(0.416016 0.150078)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
                     background-size: 100%;
                     transition: all 0.3s;
                     transform: rotate(0deg);

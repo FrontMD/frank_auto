@@ -18,27 +18,48 @@ function fieldsRangeController() {
             const min = parseInt(rangeField.dataset.min);
             const max = parseInt(rangeField.dataset.max);
             const step = parseInt(rangeField.dataset.step);
-            const inputsList = [
-                rangeField.querySelector('[data-js="fieldRangeMin"]'),
-                rangeField.querySelector('[data-js="fieldRangeMax"]')
+            const unit = rangeField.dataset.unit
+            const isRange = rangeField.dataset.type == 'range' ? true : false
+            
+            let inputsList = [
+                rangeField.querySelector('[data-js="fieldRangeMin"]')
             ]
 
-            let sliderEx = noUiSlider.create(slider, {
-                start: [min, max],
-                format: formater,
-                connect: true,
-                tooltips: { 
-                    to: function(value) { return Math.round(value).toLocaleString() + ' ₽'; },
-                    from: function(value) { return Math.round(value).toLocaleString() + ' ₽'; } 
-                },
-                step: step,
-                range: {
-                    'min': min,
-                    'max': max
-                }
-            });
+            let sliderEx = false
+            
+            if(isRange) {
+                inputsList.push(rangeField.querySelector('[data-js="fieldRangeMax"]'))
 
-            mergeTooltips(slider, 30, ' - ');
+                sliderEx = noUiSlider.create(slider, {
+                    start: [min, max],
+                    format: formater,
+                    connect: true,
+                    tooltips: { 
+                        to: function(value) { return Math.round(value).toLocaleString() + unit; },
+                        from: function(value) { return Math.round(value).toLocaleString() + unit; } 
+                    },
+                    step: step,
+                    range: {
+                        'min': min,
+                        'max': max
+                    }
+                });
+    
+                mergeTooltips(slider, 30, ' - ');
+
+            } else {
+                sliderEx = noUiSlider.create(slider, {
+                    start: min,
+                    format: formater,
+                    connect: 'lower',
+                    tooltips: [{to: function(value) { return Math.round(value).toLocaleString() + unit; }}],
+                    step: step,
+                    range: {
+                        'min': min,
+                        'max': max
+                    }
+                });
+            }
 
             sliderEx.on("update", function (values, handle) {
                 inputsList[handle].value = values[handle]
@@ -102,7 +123,7 @@ function fieldsRangeController() {
                     if (tooltips[0]) {
                         pools[0][0] = 0;
                         poolPositions[0][0] = positions[0];
-                        poolValues[0][0] = values[0].toLocaleString() + ' ₽';
+                        poolValues[0][0] = values[0].toLocaleString() + unit;
                     }
             
                     for (var i = 1; i < positions.length; i++) {
@@ -115,7 +136,7 @@ function fieldsRangeController() {
             
                         if (tooltips[i]) {
                             pools[atPool].push(i);
-                            poolValues[atPool].push(values[i].toLocaleString() + ' ₽');
+                            poolValues[atPool].push(values[i].toLocaleString() + unit);
                             poolPositions[atPool].push(positions[i]);
                         }
                     }
