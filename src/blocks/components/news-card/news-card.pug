@@ -1,0 +1,37 @@
+-
+    const defaultNewsCardProps = {
+        classes: '',
+        img: '',
+        title: '',
+        text: '',
+        tag: '',
+        date: ''
+    }
+
+mixin news-card(props = defaultNewsCardProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultNewsCardProps.classes,
+            img: props.img ? props.img : defaultNewsCardProps.img,
+            title: props.title ? props.title : defaultNewsCardProps.title,
+            text: props.text ? props.text : defaultNewsCardProps.text,
+            tag: props.tag ? props.tag : defaultNewsCardProps.tag,
+            date: props.date ? props.date : defaultNewsCardProps.date,
+        }
+
+    .news-card(class=checkProps.classes)&attributes(attributes)
+        a(href="javascript:void(0);").news-card__link
+        .news-card__img
+            img(src=checkProps.img alt="")
+        .news-card__tags 
+            -if(checkProps.date.length > 0)
+                .news-card__tag!= checkProps.date
+            -if(checkProps.tag.length > 0)
+                .news-card__tag!= checkProps.tag
+        -if(checkProps.title.length > 0)
+            .news-card__title!= checkProps.title
+        -if(checkProps.text.length > 0)
+            .news-card__text!= checkProps.text
+
+
+

@@ -1,0 +1,55 @@
+-
+    const defaultHomeServiceProps = {
+        classes: '',
+        title: 'Сервисное обслуживание',
+        btn: false,
+        cards: [
+            {
+                text: 'Кузовной ремонт',
+                img: 'img/home/home_service_1.webp'
+            },
+            {
+                text: 'УСОВЕРШЕНСТВУЙ СВОЙ ZEEKR',
+                img: 'img/home/home_service_2.webp'
+            },
+            {
+                text: 'Керамическое покрытие',
+                img: 'img/home/home_service_3.webp'
+            },
+            {
+                text: 'Малярные работы',
+                img: 'img/home/home_service_4.webp'
+            },
+            {
+                text: 'Шиномонтаж',
+                img: 'img/home/home_service_5.webp'
+            }
+        ],
+    }
+
+mixin home-service(props= defaultHomeServiceProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultHomeServiceProps.classes,
+            title: props.title ? props.title : defaultHomeServiceProps.title,
+            btn: props.btn ? props.btn : defaultHomeServiceProps.btn,
+            cards: props.cards ? props.cards : defaultHomeServiceProps.cards,
+        }
+
+    section.section.home-service(class= checkProps.classes)&attributes(attributes)
+        .section__container
+            .section-block.home-service__block
+                .section-header
+                    .section-header__title.title.title--40!= checkProps.title
+                    if(checkProps.btn !== false)
+                        +btn(checkProps.btn)
+
+                .section-block__content.home-service__list
+                    - let cardsCount = 0
+                        -while(cardsCount < checkProps.cards.length)
+                            - let card = checkProps.cards[cardsCount]
+                            .home-service__card
+                                .home-service__img
+                                    img(src=card.img, alt="")
+                                .home-service__text!= card.text
+                            - cardsCount++

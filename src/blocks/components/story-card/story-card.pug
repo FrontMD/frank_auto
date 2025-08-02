@@ -28,7 +28,7 @@ mixin story-card(props = defaultCatalogCardProps)
                 - let count = 0
                 - while(count < checkProps.tags.length)
                     - let tag = checkProps.tags[count]
-                    .story-card__tag!= tag.text
+                    .story-card__tag!= tag
 
                     - count++
             .story-card__title!= checkProps.title

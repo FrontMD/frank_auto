@@ -1,0 +1,47 @@
+-
+    const defaultSNewsProps = {
+        classes: '',
+        title: 'Услуги',
+        btn: false,
+        cards: [
+            {
+                title: 'Кредитование',
+                text: '1.9% по льготной ставке',
+                img: 'img/services/service_1.webp'
+            },
+            {
+                title: 'Трейд-Ин',
+                text: '1.9% по льготной ставке',
+                img: 'img/services/service_2.webp'
+            },
+            {
+                title: 'Тест драйв',
+                text: 'Бесплатно',
+                img: 'img/services/service_3.webp'
+            }
+        ],
+    }
+
+mixin s-news(props= defaultSNewsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSNewsProps.classes,
+            title: props.title ? props.title : defaultSNewsProps.title,
+            btn: props.btn ? props.btn : defaultSNewsProps.btn,
+            cards: props.cards ? props.cards : defaultSNewsProps.cards,
+        }
+
+    section.section.s-news(class= checkProps.classes)&attributes(attributes)
+        .section__container
+            .section-block.s-news__block
+                .section-header
+                    .section-header__title.title.title--40!= checkProps.title
+                    if(checkProps.btn !== false)
+                        +btn(checkProps.btn)
+
+                .section-block__content.s-news__list
+                    - let cardsCount = 0
+                        -while(cardsCount < checkProps.cards.length)
+                            +news-card(checkProps.cards[cardsCount])
+
+                            - cardsCount++
