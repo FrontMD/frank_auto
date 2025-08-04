@@ -8,6 +8,10 @@
         @include max(large) {
             grid-template-columns: repeat(3, minmax(0, 1fr));
         }
+
+        @include max(laptop-small) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
     }
 
     &__all {

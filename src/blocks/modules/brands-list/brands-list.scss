@@ -7,6 +7,15 @@
         @include max(full) {
             grid-template-columns: repeat(4, minmax(0, 1fr));
         }
+
+        @include max(laptop-small) {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 5px;
+        }
+
+        @include max(tablet) {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
     }
 
     &__item {

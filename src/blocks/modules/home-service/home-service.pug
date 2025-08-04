@@ -2,7 +2,12 @@
     const defaultHomeServiceProps = {
         classes: '',
         title: 'Сервисное обслуживание',
-        btn: false,
+        btn: {
+            classes: 'section-header__btn',
+            name: 'Смотреть все',
+            cMode: 'bordered',
+            sMode: 'content'
+        },
         cards: [
             {
                 text: 'Кузовной ремонт',
@@ -49,6 +54,7 @@ mixin home-service(props= defaultHomeServiceProps)
                         -while(cardsCount < checkProps.cards.length)
                             - let card = checkProps.cards[cardsCount]
                             .home-service__card
+                                a(href="javascript:void(0);").home-service__link
                                 .home-service__img
                                     img(src=card.img, alt="")
                                 .home-service__text!= card.text

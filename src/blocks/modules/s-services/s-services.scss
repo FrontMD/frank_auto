@@ -13,6 +13,10 @@
         border-radius: 20px;
         overflow: hidden;
         padding: 16px 0 16px 20px;
+
+        @include max(laptop-small) {
+            padding: 16px 0 16px 16px;
+        }
     }
 
     &__info {
@@ -22,6 +26,13 @@
         max-width: 54%;
         flex: 0 0 54%;
         align-self: stretch;
+        position: relative;
+        z-index: 3;
+
+        @include max(laptop-small) {
+            max-width: 60%;
+            flex-basis: 60%;
+        }
     }
 
     &__btn {

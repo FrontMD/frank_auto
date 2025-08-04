@@ -7,6 +7,10 @@
         background-color: $c-white;
         border-radius: $br-section;
         padding: 30px;
+
+        @include max(laptop-small) {
+            padding: 20px;
+        }
     }
 
     &__title {
@@ -84,5 +88,9 @@
         padding: 30px;
         display: flex;
         align-items: stretch;
+
+        @include max(laptop-small) {
+            padding: 20px;
+        }
     }
 }
