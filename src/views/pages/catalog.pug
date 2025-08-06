@@ -19,11 +19,19 @@ block content
             ],
         })
 
+
         section.section
             .section__container
                 .section__header.section__content
                     .title.title--40
                         h1 Каталог
+
+        section.section
+            .section__container
+                .section-block
+                    +brands-list({
+                        classes: 'brands-list--full'
+                    })
 
         +s-catalog({
             title: 'Каталог автомобилей',

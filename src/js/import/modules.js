@@ -4,6 +4,7 @@
 @@include("../../blocks/modules/home-intro/home-intro.js")
 @@include("../../blocks/modules/story-slider/story-slider.js")
 @@include("../../blocks/modules/s-news/s-news.js")
+@@include("../../blocks/modules/brands-list/brands-list.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     // открывает модалки
@@ -23,5 +24,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // слайдер новостей
     sNewsSliders()
+
+    // список брендов
+    brandsList()
 
 })
