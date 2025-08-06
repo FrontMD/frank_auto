@@ -25,6 +25,11 @@
         font-size: 29px;
         line-height: 1em;
         letter-spacing: 0;
+
+        @include max(laptop) {
+            font-size: 19px;
+            margin-top: 10px;
+        }
     }
 
     &__top {
@@ -50,6 +55,12 @@
         padding: 30px;
         background-color: $c-white;
         border-radius: 17px;
+
+        @include max(tablet) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            padding: 16px;
+            gap: 20px 16px;
+        }
     }
 
     &__advantage {
@@ -64,6 +75,7 @@
         svg {
             width: 23px;
             height: 18px;
+            flex-shrink: 0;
         }
     }
 
@@ -86,5 +98,9 @@
     &__btn {
         flex: 0 0 auto;
         max-width: 428px;
+
+        @include max(tablet) {
+            max-width: fit-content;
+        }
     }
 }

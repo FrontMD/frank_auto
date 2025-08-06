@@ -336,6 +336,11 @@ html.hystmodal__opened {
 	gap: 32px;
 	margin-bottom: 72px;
 
+	@include max(tablet) {
+		margin-bottom: 40px;
+		gap: 24px;
+	}
+
 	&__title {
 		flex: 0 1 auto;
 		padding-left: 10px;
@@ -385,7 +390,7 @@ html.hystmodal__opened {
 		}
 
 		@include max(mobile) {
-			font-size: 30px;
+			font-size: 32px;
 		}
 
 		@include max(xs) {
@@ -400,15 +405,26 @@ html.hystmodal__opened {
 		line-height: 1em;
 
 		@include max(laptop) {
-			font-size: 30px;
+			font-size: 32px;
 		}
 
 		@include max(mobile) {
-			font-size: 26px;
+			font-size: 24px;
+		}
+	}
+
+	&--36 {
+		font-family: $ff-rooftop;
+		font-size: 36px;
+		font-weight: 500;
+		line-height: 1em;
+
+		@include max(laptop) {
+			font-size: 28px;
 		}
 
-		@media print {
-			font-size: 38pt;
+		@include max(mobile) {
+			font-size: 22px;
 		}
 	}
 
@@ -424,10 +440,6 @@ html.hystmodal__opened {
 		}
 
 		@include max(mobile) {
-			font-size: 22px;
-		}
-
-		@include max(xs) {
 			font-size: 20px;
 		}
 	}
@@ -440,14 +452,10 @@ html.hystmodal__opened {
 		letter-spacing: -0.02em;
 
 		@include max(laptop) {
-			font-size: 22px;
-		}
-
-		@include max(mobile) {
 			font-size: 20px;
 		}
 
-		@include max(xs) {
+		@include max(mobile) {
 			font-size: 18px;
 		}
 	}

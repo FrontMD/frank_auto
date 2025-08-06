@@ -3,6 +3,7 @@
 @@include("../../blocks/modules/tabs-block/tabs-block.js")
 @@include("../../blocks/modules/home-intro/home-intro.js")
 @@include("../../blocks/modules/story-slider/story-slider.js")
+@@include("../../blocks/modules/s-news/s-news.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     // открывает модалки
@@ -19,5 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // слайдер историй
     storySlidersInit()
+
+    // слайдер новостей
+    sNewsSliders()
 
 })

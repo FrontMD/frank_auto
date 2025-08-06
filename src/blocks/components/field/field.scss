@@ -43,11 +43,6 @@
         background-color: $c-bg-input;
         border-radius: $br-btn-input;
 
-        @include max(tablet) {
-            padding: 10px 12px;
-            font-size: 14px;
-        }
-
         &::placeholder {
             color: $c-text-breadcrumbs;
             opacity: 1;
@@ -89,7 +84,6 @@
             height: 100%;
             color: inherit;
         }
-
 
     }
 

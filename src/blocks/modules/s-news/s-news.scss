@@ -3,5 +3,9 @@
         display: flex;
         align-items: stretch;
         gap: 20px;
+
+        @include max(tablet) {
+            gap: 10px;
+        }
     }
 }

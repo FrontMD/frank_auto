@@ -3,18 +3,22 @@
         classes: '',
         title: 'Услуги',
         btn: false,
+        slides: '3',
         cards: [
             {
+                classes: 'swiper-slide',
                 title: 'Кредитование',
                 text: '1.9% по льготной ставке',
                 img: 'img/services/service_1.webp'
             },
             {
+                classes: 'swiper-slide',
                 title: 'Трейд-Ин',
                 text: '1.9% по льготной ставке',
                 img: 'img/services/service_2.webp'
             },
             {
+                classes: 'swiper-slide',
                 title: 'Тест драйв',
                 text: 'Бесплатно',
                 img: 'img/services/service_3.webp'
@@ -28,20 +32,22 @@ mixin s-news(props= defaultSNewsProps)
             classes: props.classes ? props.classes : defaultSNewsProps.classes,
             title: props.title ? props.title : defaultSNewsProps.title,
             btn: props.btn ? props.btn : defaultSNewsProps.btn,
+            slides: props.slides ? props.slides : defaultSNewsProps.slides,
             cards: props.cards ? props.cards : defaultSNewsProps.cards,
         }
 
-    section.section.s-news(class= checkProps.classes)&attributes(attributes)
+    section.section.s-news(class= checkProps.classes data-js="sNews" data-slides=checkProps.slides)&attributes(attributes)
         .section__container
             .section-block.s-news__block
                 .section-header
-                    .section-header__title.title.title--40!= checkProps.title
+                    .section-header__title.title.title--36!= checkProps.title
                     if(checkProps.btn !== false)
                         +btn(checkProps.btn)
 
-                .section-block__content.s-news__list
-                    - let cardsCount = 0
-                        -while(cardsCount < checkProps.cards.length)
-                            +news-card(checkProps.cards[cardsCount])
+                .section-block__content.s-news__list(data-js="sNewsSlider")
+                    .swiper-wrapper
+                        - let cardsCount = 0
+                            -while(cardsCount < checkProps.cards.length)
+                                +news-card(checkProps.cards[cardsCount])
 
-                            - cardsCount++
+                                - cardsCount++

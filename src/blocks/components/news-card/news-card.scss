@@ -20,6 +20,10 @@
         border-radius: 25px;
         overflow: hidden;
 
+        @include max(tablet) {
+            border-radius: 10px;
+        }
+
         img {
             width: 100%;
             height: 100%;
@@ -32,6 +36,10 @@
         align-items: center;
         justify-content: space-between;
         padding-top: 20px;
+
+        @include max(tablet) {
+            padding-top: 10px;
+        }
     }
 
     &__tag {
@@ -52,6 +60,10 @@
         letter-spacing: 0;
         text-transform: uppercase;
         color: $c-text;
+
+        @include max(tablet) {
+            font-size: 15px;
+        }
     }
 
     &__text {
@@ -60,6 +72,15 @@
         font-size: 16px;
         line-height: 150%;
         letter-spacing: 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @include max(tablet) {
+            font-size: 14px;
+        }
     }
 
 }
@@ -78,6 +99,11 @@
     &--small &__text {
         margin-top: 20px;
         margin-bottom: 20px;
+
+        @include max(tablet) {
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
     }
 
 }

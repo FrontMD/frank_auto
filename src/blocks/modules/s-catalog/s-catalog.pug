@@ -1,18 +1,35 @@
 -
     const defaultSCatalogProps = {
         classes: '',
+        title: 'Автомобили в наличии - Предложение дня',
+        sort: false,
+        pagination: false
     }
 
 mixin s-catalog(props= defaultSCatalogProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultSCatalogProps.classes,
+            title: props.title ? props.title : defaultSCatalogProps.title,
+            sort: props.sort ? props.sort : defaultSCatalogProps.sort,
+            pagination: props.pagination ? props.pagination : defaultSCatalogProps.pagination,
         }
 
     section.section.s-catalog(class= checkProps.classes)&attributes(attributes)
         .section__container
-            .section__header
-                .title.title--40 Автомобили в наличии - Предложение дня
+            .section__header.s-catalog__header
+                .title.title--36!= checkProps.title
+                - if(checkProps.sort !== false)
+                    +field({
+                        classes: '',
+                        tag: 'select',
+                        placeholder: 'Сортировать',
+                        selectOptions: [
+                            "Цена по возрастанию",
+                            "Цена по убыванию",
+                        ],
+                    })
+
             .s-catalog__list
                 +catalog-card
                 +catalog-card({
@@ -65,11 +82,14 @@ mixin s-catalog(props= defaultSCatalogProps)
                         credit: 'от 115 000 ₽/мес <span>в кредит</span>'
                     },
                 })
-            +btn({
-                classes: 's-catalog__all',
-                name: 'Показать еще',
-                cMode: 'light-accent',
-                sMode: 'full'
-            })
+            - if(checkProps.pagination === true)
+                +pagination
+            - else
+                +btn({
+                    classes: 's-catalog__all',
+                    name: 'Показать еще',
+                    cMode: 'light-accent',
+                    sMode: 'full'
+                })
 
 

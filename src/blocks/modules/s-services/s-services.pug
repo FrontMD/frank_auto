@@ -31,30 +31,31 @@ mixin s-services(props= defaultSServicesProps)
             cards: props.cards ? props.cards : defaultSServicesProps.cards,
         }
 
-    section.section.s-services(class= checkProps.classes)&attributes(attributes)
+    section.section.s-services(class= checkProps.classes data-js="sNews")&attributes(attributes)
         .section__container
             .section-block.s-services__block
                 .section-header
-                    .section-header__title.title.title--40!= checkProps.title
+                    .section-header__title.title.title--36!= checkProps.title
                     if(checkProps.btn !== false)
                         +btn(checkProps.btn)
 
-                .section-block__content.s-services__list
-                    - let cardsCount = 0
-                    -while(cardsCount < checkProps.cards.length)
-                        - let card = checkProps.cards[cardsCount]
-                        .s-services__card
-                            .s-services__info
-                                .s-services__subtitle.title.title--30!= card.title
-                                -if(card.text.length > 0)
-                                    .s-services__text!= card.text
-                                +btn({
-                                    classes: 's-services__btn',
-                                    name: 'Узнать больше',
-                                    cMode: 'light-accent',
-                                    sMode: "full"
-                                })
-                            .s-services__img
-                                img(src=card.img alt="")
+                .section-block__content.s-services__list(data-js="sNewsSlider")
+                    .swiper-wrapper
+                        - let cardsCount = 0
+                        -while(cardsCount < checkProps.cards.length)
+                            - let card = checkProps.cards[cardsCount]
+                            .s-services__card.swiper-slide
+                                .s-services__info
+                                    .s-services__subtitle.title.title--30!= card.title
+                                    -if(card.text.length > 0)
+                                        .s-services__text!= card.text
+                                    +btn({
+                                        classes: 's-services__btn',
+                                        name: 'Узнать больше',
+                                        cMode: 'light-accent',
+                                        sMode: "full"
+                                    })
+                                .s-services__img
+                                    img(src=card.img alt="")
 
-                        - cardsCount++
+                            - cardsCount++

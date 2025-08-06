@@ -12,6 +12,10 @@
         @include max(laptop-small) {
             grid-template-columns: repeat(2, minmax(0, 1fr));
         }
+
+        @include max(tablet) {
+            gap: 10px;
+        }
     }
 
     &__all {
