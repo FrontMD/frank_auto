@@ -285,9 +285,9 @@
         </section>
             <section class="section s-catalog">
               <div class="section__container">
-                <div class="section__header s-catalog__header">
+                <div class="section-header section__content s-catalog__header">
                   <div class="title title--36">Каталог автомобилей</div>
-                      <div class="field     " data-js="formField">
+                      <div class="field s-catalog__sort field--white    " data-js="formField">
                         <label>
                           <select class="field__select" placeholder="Сортировать" data-js="formSelect">
                             <option value="Цена по возрастанию">Цена по возрастанию</option>
@@ -608,6 +608,20 @@
                     </div>
               </div>
             </section>
+            <section class="section s-text">
+              <div class="section__container">
+                <div class="section__content">
+                  <div class="s-text__content text-editor">
+                    <h2>Frank Auto — ваш надежный путь<br>к&nbsp;идеальному автомобилю</h2>
+                    <p>Ищете автомобиль, который подойдёт именно вам? В&nbsp;Frank&nbsp;Auto мы&nbsp;не&nbsp;просто продаём машины — мы&nbsp;помогаем подобрать транспорт, который идеально соответствует вашим потребностям, стилю жизни и&nbsp;бюджету. От&nbsp;проверенных городских седанов до мощных внедорожников — у нас вы найдёте всё. Мы тщательно проверяем каждый автомобиль по техническому состоянию и юридической чистоте. Покупая у Frank Auto, вы можете быть уверены: никаких скрытых дефектов, полная история авто и честная цена. А&nbsp;для&nbsp;вашего удобства — онлайн-подбор, консультации и&nbsp;возможность забронировать автомобиль без&nbsp;визита в&nbsp;автосалон.</p>
+                    <h3>Уверенность в каждой покупке</h3>
+                    <p>Frank Auto — это сервис, ориентированный на клиента. Наши специалисты всегда готовы ответить на ваши вопросы, предложить оптимальные варианты и сопровождать вас на всех этапах сделки — от выбора до оформления документов. Мы ценим ваше время и заботимся о вашем комфорте. Сайт Frank Auto разработан так, чтобы сделать поиск и покупку автомобиля максимально простыми. Удобные фильтры, актуальные фотографии, подробные описания и возможность сравнить автомобили — всё, чтобы вы могли принять взвешенное решение, не выходя из дома. А&nbsp;если потребуется помощь — наши консультанты на&nbsp;связи в&nbsp;мессенджерах и&nbsp;по&nbsp;телефону.</p>
+                    <h3>Гарантия качества и послепродажная поддержка</h3>
+                    <p>Frank Auto — это сервис, ориентированный на клиента. Наши специалисты всегда готовы ответить на ваши вопросы, предложить оптимальные варианты и сопровождать вас на всех этапах сделки — от выбора до оформления документов. Мы ценим ваше время и заботимся о вашем комфорте. Сайт Frank Auto разработан так, чтобы сделать поиск и покупку автомобиля максимально простыми. Удобные фильтры, актуальные фотографии, подробные описания и возможность сравнить автомобили — всё, чтобы вы могли принять взвешенное решение, не выходя из дома. А&nbsp;если потребуется помощь — наши консультанты на&nbsp;связи в&nbsp;мессенджерах и&nbsp;по&nbsp;телефону.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
             <section class="section s-services" data-js="sNews">
               <div class="section__container">
                 <div class="section-block s-services__block">
@@ -638,6 +652,47 @@
                         <div class="s-services__img"><img src="img/services/service_3.webp" alt=""></div>
                       </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section quick-app">
+              <div class="section__container">
+                <div class="quick-app__container">
+                  <div class="quick-app__content">
+                    <div class="title title--30">Остались вопросы? </div>
+                        <form class="form" action="#" data-validate novalidate>
+                          <div class="form__content" data-js="form-content">
+                            <div class="form__fields">
+                                  <div class="field     " data-js="formField">
+                                    <label>
+                                      <input class="field__input" type="text" placeholder="" required="" data-type="letters"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                  </div>
+                                  <div class="field     " data-js="formField">
+                                    <label>
+                                      <input class="field__input" type="text" placeholder="" required="" data-v-name="phone" data-type="phoneNumber"><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                  </div>
+                            </div>
+                                <button class="btn form__submit btn--accent btn--content" type="submit"><span class="btn__text">Заказать звонок</span>
+                                </button>
+                            <div class="form__privacy form-privacy" data-js="formField"><span class="form-privacy__text">Нажимая кнопку «Заказать звонок», Вы соглашаетесь с <a href="javascript:void(0);">политикой конфиденциальности</a> и <a href="javascript:void(0);">правилами обработки персональных данных</a></span><span class="field__error" data-js="fieldError"></span></div>
+                          </div>
+                          <div class="form__thanks" data-js="form-thanks">
+                            <div class="title--32 form__title">Ваш вопрос отправлен.</div>
+                            <div class="form__image-success">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#form_success"></use>
+                              </svg>
+                            </div>
+                            <div class="form__text">С Вами свяжется ответственный сотрудник по&nbsp;указанным контактным данным.</div>
+                          </div>
+                        </form>
+                  </div>
+                  <div class="quick-app__media">
+                    <div class="quick-app__img" style="top: -99px;"><img width="388" src="img/catalog/questions_top.webp" alt=""></div>
+                    <div class="quick-app__mask"><img width="388" src="img/catalog/questions.webp" alt=""></div>
                   </div>
                 </div>
               </div>

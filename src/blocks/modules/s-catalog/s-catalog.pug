@@ -17,11 +17,11 @@ mixin s-catalog(props= defaultSCatalogProps)
 
     section.section.s-catalog(class= checkProps.classes)&attributes(attributes)
         .section__container
-            .section__header.s-catalog__header
+            .section-header.section__content.s-catalog__header
                 .title.title--36!= checkProps.title
                 - if(checkProps.sort !== false)
                     +field({
-                        classes: '',
+                        classes: 's-catalog__sort field--white',
                         tag: 'select',
                         placeholder: 'Сортировать',
                         selectOptions: [

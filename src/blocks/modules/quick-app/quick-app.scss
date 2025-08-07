@@ -1,0 +1,48 @@
+.quick-app {
+
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__content {
+        background-color: $c-white;
+        flex: 1 1 auto;
+        margin-right: -384px;
+        padding: 40px 400px 40px 60px;
+    }
+
+    &__media {
+        position: relative;
+        flex: 0 0 auto;
+        height: 326px;
+    }
+
+    &__img {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        img {
+            max-width: none;
+        }
+
+    }
+
+    &__mask {
+        width: 584px;
+        height: 326.5px;
+        mask-clip: border-box;
+        mask-size: 100% 100%;
+        mask-image: url(../img/masks/home_credit_mask.svg);
+        background-color: #4E5A65;
+
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            max-width: none;
+        }
+    }
+}

@@ -39,6 +39,8 @@ block content
             pagination: true
         })
 
+        +s-text
+
         +s-services({
             btn: {
                 classes: 'section-header__btn',
@@ -47,6 +49,27 @@ block content
                 sMode: 'content'
             }
         })
+
+        +quick-app
+            .title.title--30 Остались вопросы? 
+            +form({
+                btnText: 'Заказать звонок',
+                submitSize: 'content',
+                privacyText: 'Нажимая кнопку «Заказать звонок», Вы соглашаетесь с <a href="javascript:void(0);">политикой конфиденциальности</a> и <a href="javascript:void(0);">правилами обработки персональных данных</a>'
+            })
+                +field({
+                    inputAttr: {
+                        'required': '',
+                        'data-type': 'letters'
+                    },
+                })
+                +field({
+                    inputAttr: {
+                        'required': '',
+                        'data-v-name': 'phone',
+                        'data-type': 'phoneNumber'
+                    },
+                })
 
         +s-news({
             title: 'Блог',

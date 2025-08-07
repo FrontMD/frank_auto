@@ -37,7 +37,6 @@
         font-size: 16px;
         line-height: 1.1875em;
         font-weight: 600;
-        background-color: $c-white;
         outline: none;
         color: $c-text;
         background-color: $c-bg-input;
@@ -70,7 +69,7 @@
         display: none;
     }
 
-    &__search,
+    /*&__search,
     &__reset {
         position: absolute;
         top: 50%;
@@ -85,9 +84,9 @@
             color: inherit;
         }
 
-    }
+    }*/
 
-    &__search {
+    /*&__search {
         width: 24px;
         height: 24px;
         left: 12px;
@@ -112,10 +111,10 @@
         top: 100%;
         left: 0;
         z-index: 10;
-    }
+    }*/
 }
 
-.field {
+/*.field {
     &--reset &__input {
         padding-right: 44px;
     }
@@ -130,7 +129,7 @@
     &--search &__input:focus {
         border-color: #4E4E4E;
     }
-}
+}*/
 
 .field {
 
@@ -376,7 +375,16 @@
     }
 }
 
-.field-prompt {
+.field {
+
+    &--white &__input,
+    &--white &__textarea,
+    &--white .select2 {
+        background-color: $c-white;
+    }
+}
+
+/*.field-prompt {
     width: calc(100% + 8px);
     height: auto;
     max-height: 67.75vh;
@@ -490,4 +498,4 @@
         flex: 0 0 auto;
     }
 
-}
+}*/

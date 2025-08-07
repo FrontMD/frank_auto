@@ -880,7 +880,11 @@ html.hystmodal__opened {
 }*/
 
 .text-editor {
-	color: $c-text;
+	color: $c-text-editor;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.6em;
+	letter-spacing: 0;
 
 	*:first-child {
 		margin-top: 0;
@@ -890,58 +894,26 @@ html.hystmodal__opened {
 		margin-bottom: 0;
 	}
 
-	h2 {
-		display: block;
-		font-size: 26px;
-		line-height: 1em;
-		letter-spacing: -0.02em;
-		padding-bottom: 20px;
-		margin-bottom: 24px;
-		margin-top: 32px;
-		border-bottom: 1px solid $c-border;
-
-		@include max(laptop) {
-			font-size: 24px;
-		}
-
-		@include max(mobile) {
-			font-size: 22px;
-			margin-bottom: 16px;
-			margin-top: 24px;
-		}
-
-		@include max(xs) {
-			font-size: 20px;
-		}
-	}
-
+	h2,
 	h3 {
-		display: block;
-		font-size: 20px;
-		line-height: 1.4em;
-		margin-bottom: 16px;
-
-		@include max(mobile) {
-			font-size: 18px;
-		}
-
-		@include max(xs) {
-			font-size: 16px;
-		}
+		font-family: $ff-rooftop;
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 1.3em;
+		letter-spacing: 0;
+		margin-bottom: 0.9em;
 	}
 
 	p,
 	ul,
-	ol {
-		font-size: 16px;
-		margin-bottom: 1.4em;
-
-		@include max(xs) {
-			font-size: 14px;
-		}
+	ol,
+	a,
+	li {
+		font-size: inherit;
+		margin-bottom: 3.125em;
 	}
 
-	ol {
+	/*ol {
 		display: flex;
 		flex-direction: column;
 		gap: 8px;
@@ -993,20 +965,16 @@ html.hystmodal__opened {
 		&:hover {
 			color: $c-accent-hover;
 		}
-	}
+	}*/
 
 	img,
 	video,
 	iframe {
 		max-width: 100%;
-		margin: 32px auto;
-
-		@include max(mobile) {
-			margin: 24px auto;
-		}
+		margin: 1.875em auto;
 	}
 
-	img[align="left"] {
+	/*img[align="left"] {
 		width: 100%;
 		object-fit: contain;
 		object-position: left;
@@ -1312,7 +1280,7 @@ html.hystmodal__opened {
 			overflow: hidden;
 			transition: all $tr-time linear;
 		}
-	}
+	}*/
 
 }
 

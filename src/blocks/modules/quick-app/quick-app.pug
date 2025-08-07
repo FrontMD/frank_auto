@@ -1,0 +1,29 @@
+-
+    const defaultQuickAppProps = {
+        classes: '',
+        imgWidth: '388',
+        topOffset: '-99px',
+        img: 'img/catalog/questions.webp',
+        imgTop: 'img/catalog/questions_top.webp'
+    }
+
+mixin quick-app(props= defaultQuickAppProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultQuickAppProps.classes,
+            imgWidth: props.imgWidth ? props.imgWidth : defaultQuickAppProps.imgWidth,
+            topOffset: props.topOffset ? props.topOffset : defaultQuickAppProps.topOffset,
+            img: props.img ? props.img : defaultQuickAppProps.img,
+            imgTop: props.imgTop ? props.imgTop : defaultQuickAppProps.imgTop,
+        }
+
+    section.section.quick-app(class= checkProps.classes)&attributes(attributes)
+        .section__container
+            .quick-app__container
+                .quick-app__content
+                    block
+                .quick-app__media
+                    .quick-app__img(style=`top: ${checkProps.topOffset};`)
+                        img(width=checkProps.imgWidth src=checkProps.imgTop alt="")
+                    .quick-app__mask
+                        img(width=checkProps.imgWidth src=checkProps.img alt="")

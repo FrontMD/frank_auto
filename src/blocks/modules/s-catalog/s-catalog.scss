@@ -1,4 +1,8 @@
 .s-catalog {
+    &__header {
+        margin-bottom: 0;
+    }
+
     &__list {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -21,5 +25,9 @@
     &__all {
         max-width: 454px;
         margin: 50px auto 0;
+    }
+
+    &__sort {
+        flex: 0 0 320px;
     }
 }

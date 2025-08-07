@@ -169,7 +169,8 @@
             }
 
             a {
-                color: $c-text;
+                color: $c-accent;
+                text-decoration: underline;
                 transition: color $tr-time;
             }
 
