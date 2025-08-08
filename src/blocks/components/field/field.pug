@@ -54,13 +54,13 @@ mixin field(props = defaultFieldProps)
                 span.field__error(data-js='fieldError')
 
             - if(checkProps.tag === 'select')
-                select.field__select(placeholder=checkProps.placeholder data-js='formSelect')&attributes(checkProps.inputAttr)
+                select.field__select(data-placeholder=checkProps.placeholder data-js='formSelect')&attributes(checkProps.inputAttr)
                     - let optionCount = 0
                     - while (optionCount < checkProps.selectOptions.length)
                         - if(checkProps.selectOptions[optionCount].length > 0)
                             option(value=checkProps.selectOptions[optionCount])!= checkProps.selectOptions[optionCount]
                         - else
-                            option!= checkProps.selectOptions[optionCount]
+                            option(label=" ")!= checkProps.selectOptions[optionCount]
                         - optionCount++
                 span.field__error(data-js='fieldError')
 

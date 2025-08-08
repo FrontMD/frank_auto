@@ -26,6 +26,14 @@ block content
                     .title.title--40
                         h1 Каталог
 
+        +s-banner()
+            .catalog-banner
+                .catalog-banner__desc
+                +form({
+                    classes: 'catalog-banner__form'
+                })
+
+
         section.section
             .section__container
                 .section-block
@@ -51,19 +59,22 @@ block content
         })
 
         +quick-app
-            .title.title--30 Остались вопросы? 
+            .title.title--30.quick-app__title Остались вопросы? 
             +form({
+                classes: 'form--horizontal',
                 btnText: 'Заказать звонок',
                 submitSize: 'content',
                 privacyText: 'Нажимая кнопку «Заказать звонок», Вы соглашаетесь с <a href="javascript:void(0);">политикой конфиденциальности</a> и <a href="javascript:void(0);">правилами обработки персональных данных</a>'
             })
                 +field({
+                    placeholder: 'Ваш имя',
                     inputAttr: {
                         'required': '',
                         'data-type': 'letters'
                     },
                 })
                 +field({
+                    placeholder: 'Ваш телефон',
                     inputAttr: {
                         'required': '',
                         'data-v-name': 'phone',

@@ -33,16 +33,19 @@ mixin form(props = defaultFormProps)
                 .form__title.title--32!= checkProps.title 
             - if(checkProps.text.length > 0)
                 .form__text!= checkProps.text
-            .form__fields
-                block
-            +btn({
-                classes: 'form__submit',
-                type: 'button',
-                buttonType: 'submit',
-                name: checkProps.btnText,
-                cMode: 'accent',
-                sMode: checkProps.submitSize
-            })
+
+            .form__horizontal
+                .form__fields
+                    block
+                +btn({
+                    classes: 'form__submit',
+                    type: 'button',
+                    buttonType: 'submit',
+                    name: checkProps.btnText,
+                    cMode: 'accent',
+                    sMode: checkProps.submitSize
+                })
+
             .form__privacy.form-privacy(data-js="formField")
                 span.form-privacy__text!= checkProps.privacyText
                 span.field__error(data-js='fieldError')

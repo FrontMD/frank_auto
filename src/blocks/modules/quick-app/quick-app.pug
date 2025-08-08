@@ -2,7 +2,7 @@
     const defaultQuickAppProps = {
         classes: '',
         imgWidth: '388',
-        topOffset: '-99px',
+        topOffset: '-62px',
         img: 'img/catalog/questions.webp',
         imgTop: 'img/catalog/questions_top.webp'
     }
@@ -20,10 +20,18 @@ mixin quick-app(props= defaultQuickAppProps)
     section.section.quick-app(class= checkProps.classes)&attributes(attributes)
         .section__container
             .quick-app__container
-                .quick-app__content
-                    block
+                .quick-app__block
+                    .quick-app__content
+                        block
                 .quick-app__media
                     .quick-app__img(style=`top: ${checkProps.topOffset};`)
                         img(width=checkProps.imgWidth src=checkProps.imgTop alt="")
                     .quick-app__mask
+                        .quick-app__svg.quick-app__svg--1
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#one`)
+                        .quick-app__svg.quick-app__svg--2
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#lightning`)
+
                         img(width=checkProps.imgWidth src=checkProps.img alt="")

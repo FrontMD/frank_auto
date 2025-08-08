@@ -5,17 +5,57 @@
         align-items: center;
     }
 
-    &__content {
+    &__block {
+        display: flex;
+        align-items: center;
         background-color: $c-white;
         flex: 1 1 auto;
         margin-right: -384px;
         padding: 40px 400px 40px 60px;
+        border-radius: $br-section;
+        min-height: 258px;
+    }
+
+    &__content {
+        //max-width: 740px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        line-height: 1em;
     }
 
     &__media {
         position: relative;
         flex: 0 0 auto;
         height: 326px;
+    }
+
+    &__svg {
+        position: absolute;
+
+    }
+
+    &__svg--1 {
+        left: 77px;
+        bottom: 36px;
+        color: $c-text-breadcrumbs;
+
+        svg {
+            width: 140px;
+            height: 150px;
+        }
+    }
+
+    &__svg--2 {
+        top: 58px;
+        right: 107px;
+        color: $c-accent-2;
+
+        svg {
+            width: 132px;
+            height: 174px;
+        }
     }
 
     &__img {
