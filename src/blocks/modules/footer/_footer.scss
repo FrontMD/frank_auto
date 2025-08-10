@@ -2,7 +2,7 @@
     margin-top: auto;
     color: $c-white;
 
-    &__section {
+    &__section.section {
         padding-bottom: 24px;
 
         @include max(mobile) {

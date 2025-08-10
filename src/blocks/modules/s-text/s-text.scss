@@ -3,6 +3,10 @@
         width: 100%;
         max-width: 91%;
 
+        @include max(laptop-small) {
+            max-width: 100%;
+        }
+
         h2 {
             font-size: 36px;
             line-height: 1em;

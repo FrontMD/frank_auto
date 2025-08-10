@@ -2,5 +2,33 @@
     &__block {
         padding-top: 50px;
         padding-bottom: 50px;
+        background-color: $c-black;
+        padding-left: 22.86%;
+
+        @include max(laptop-small) {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 20%;
+        }
+    }
+
+    &__bg {
+        width: 53%;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to left, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.1) 100%);
+        }
+    }
+}
+
+.s-banner {
+    &--right &__bg {
+        width: 48%;
     }
 }

@@ -62,13 +62,13 @@ function validation() {
                                     error(input, 'Необходимо ввести корректный номер телефона').set()
                                 }
                                 break
-                            case 'file':
+                            /*case 'file':
                                 if (valueField.length > 0) {
                                     error(input).remove()
                                 } else {
                                     error(input, 'Поле обязательно для заполнения').set()
                                 }
-                                break
+                                break*/
                             case 'checkbox':
                                 if (field.checked) {
                                     error(input).remove()
@@ -253,13 +253,57 @@ function inputMasksInit(form) {
 }*/
 
 function afterFormSubmit(form) {
-    let fileFields = form.querySelectorAll('.field-file[data-js="formField"]')
+    // сбрасываем форму
+    formReset(form)
+
+    //порверяем какой тип благодарности в форме и показываем его
+    if(form.querySelector("[data-js='form-thanks']") !== null) {
+        if(form.hasAttribute('data-fixed-height')) {
+            form.style.minHeight = form.offsetHeight + 'px'
+        }
+        form.classList.add("form--sent")
+    } else {
+        thanksMessageShow();
+    }
+}
+
+function formSpoilerController(form) {
+    const spoiler = form.querySelector('[data-js="formSpoilerContent"]')
+    const toggle = form.querySelector('[data-js="formSpoilerToggle"]')
+
+    if(!spoiler || !toggle) {
+        spoiler.style.maxHeight = 'none'
+        return
+    }
+
+    const visibleRows = 2
+    const fieldHeight = spoiler.querySelector('[data-js="formField"]').offsetHeight
+    const gap = parseInt(window.getComputedStyle(spoiler).rowGap)
+    const minHeight = fieldHeight * visibleRows + (visibleRows - 1) * gap
+    const maxHeight = spoiler.scrollHeight
+
+    toggle.addEventListener('click', function(e) {
+        e.preventDefault()
+        e.stopPropagation()
+
+        if(this.classList.contains('expanded')) {
+            this.classList.remove('expanded');
+            spoiler.style.maxHeight = minHeight + 'px'
+        } else {
+            this.classList.add('expanded');
+            spoiler.style.maxHeight = maxHeight + 'px'
+        }
+    })
+}
+
+function formReset(form) {
+    const fileFields = form.querySelectorAll('.field-file[data-js="formField"]')
+    const selectFields = form.querySelectorAll('[data-js="formSelect"]')
+
     form.reset();
     form.classList.remove('form--ready')
 
-    //сбрасываем поле ФАЙЛ
     if(fileFields.length > 0) {
-
         fileFields.forEach(fileField => {
             let placeholderText = fileField.getAttribute('data-placeholder');
             let fileName = fileField.querySelector('[data-js="fileName"]');
@@ -270,13 +314,10 @@ function afterFormSubmit(form) {
         })
     }
 
-    //порверяем какой тип благодарности в форме и показываем его
-    if(form.querySelector("[data-js='form-thanks']") !== null) {
-        if(form.hasAttribute('data-fixed-height')) {
-            form.style.minHeight = form.offsetHeight + 'px'
-        }
-        form.classList.add("form--sent")
-    } else {
-        thanksMessageShow();
+    if(selectFields.length > 0) {
+        selectFields.forEach(selectField => {
+            console.log($(selectField).select2)
+            $(selectField).val("").trigger('change')
+        })
     }
 }

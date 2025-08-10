@@ -1,5 +1,6 @@
 
 @@include("../../blocks/components/form/form.js")
+@@include("../../blocks/components/form-filter/form-filter.js")
 @@include("../../blocks/components/field/field.js")
 @@include("../../blocks/components/field-range/field-range.js")
 //include("../../blocks/components/field-file/field-file.js")
@@ -13,4 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     fieldsRangeController()
     // маски полей и валидация
     validation();
+    // маски полей и спойлер в формах-фильтрах
+    formFilterController();
 })

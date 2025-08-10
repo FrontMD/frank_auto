@@ -126,7 +126,9 @@
     }
 
     &__title {
+        font-family: $ff-inter;
         margin-bottom: 14px;
+        font-weight: 700;
     }
 
     &__price {

@@ -1,0 +1,241 @@
+-
+    const defaultCatalogFilterProps = {
+        classes: '',
+    }
+
+mixin catalog-filter(props= defaultCatalogFilterProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultCatalogFilterProps.classes,
+        }
+
+    section.section.catalog-filter(class= checkProps.classes)&attributes(attributes)
+        .section__container
+            .section-block.catalog-filter__block
+                form.catalog-filter__form.spoiler-form(action="#" data-js="formFilter")
+                    .spoiler-form__fields(data-js="formSpoilerContent")
+                        +field({
+                            classes: '',
+                            tag: 'select',
+                            placeholder: 'Марка',
+                            selectOptions: [
+                                "",
+                                "LiXiang",
+                                "Voyah",
+                                "AITO",
+                                "Chery",
+                                "Zeekr",
+                                "Audi",
+                                "Tank",
+                                "Rox Motor Tech",
+                            ],
+                        })
+                        +field({
+                            classes: 'disabled',
+                            tag: 'select',
+                            placeholder: 'Модель',
+                            selectOptions: [
+                                "",
+                                "LiXiang L6",
+                                "LiXiang L7",
+                                "LiXiang L9",
+                                "LiXiang L9",
+                                "LiXiang Mega",
+                                "LiXiang One"
+                            ],
+
+                        })
+                        +field({
+                            classes: '',
+                            tag: 'input',
+                            placeholder: 'Цена от',
+                            placeholder2: 'до',
+                            inputAttr: {
+                                "data-type": "number"
+                            },
+                            inputAttr2: {
+                                "data-type": "number"
+                            },
+                            isDouble: true,
+
+                        })
+                        +field({
+                            classes: '',
+                            tag: 'select',
+                            placeholder: 'Год от',
+                            placeholder2: 'до',
+                            selectOptions: [
+                                "",
+                                "2020",
+                                "2021",
+                                "2022",
+                                "2023",
+                                "2024",
+                                "2025",
+                            ],
+                            selectOptions2: [
+                                "",
+                                "2021",
+                                "2022",
+                                "2023",
+                                "2024",
+                                "2025",
+                            ],
+                            isDouble: true,
+
+                        })
+                        +field({
+                            classes: '',
+                            tag: 'select',
+                            placeholder: 'Цвет',
+                            selectOptions: [
+                                "",
+                                "Красный",
+                                "Зелёный",
+                                "Синий",
+                                "Белый",
+                                "Чёрный",
+                            ],
+                        })
+                        +field({
+                            classes: '',
+                            tag: 'select',
+                            placeholder: 'Коробка передач',
+                            selectOptions: [
+                                "",
+                                "Механическая",
+                                "Автоматическая",
+                                "Вариатор",
+                                "Роботизированная",
+                            ],
+                        })
+                        +field({
+                            classes: '',
+                            tag: 'select',
+                            placeholder: 'Тип кузова',
+                            selectOptions: [
+                                "",
+                                "Седан",
+                                "Хетчбэк",
+                                "Универсал",
+                                "Кроссовер",
+                                "Минивэн"
+                            ],
+                        })
+                        +field({
+                            classes: '',
+                            tag: 'select',
+                            placeholder: 'Состояние',
+                            selectOptions: [
+                                "",
+                                "Новые",
+                                "С пробегом",
+                            ],
+                        })
+                        +field({
+                            classes: '',
+                            tag: 'select',
+                            placeholder: 'Комплектация',
+                            selectOptions: [
+                                "",
+                                "Base",
+                                "Comfort",
+                                "Sport",
+                                "Luxe",
+                            ],
+                        })
+                        +field({
+                            classes: '',
+                            tag: 'select',
+                            placeholder: 'Страна',
+                            selectOptions: [
+                                "",
+                                "Германия",
+                                "Китай",
+                                "Россия",
+                                "США",
+                                "Франция",
+                                "Южная Корея",
+                                "Япония",
+                            ],
+                        })
+                        +field({
+                            classes: '',
+                            tag: 'select',
+                            placeholder: 'Тип двигателя',
+                            selectOptions: [
+                                "",
+                                "Бензиновый",
+                                "Дизельный",
+                                "Электрический"
+                            ],
+                        })
+                        +field({
+                            classes: '',
+                            tag: 'select',
+                            placeholder: 'Тип привода',
+                            selectOptions: [
+                                "",
+                                "Передний",
+                                "Задний",
+                                "Полный",
+                            ],
+                        })
+                        +field({
+                            classes: '',
+                            tag: 'select',
+                            placeholder: 'Класс',
+                            selectOptions: [
+                                "",
+                                "A",
+                                "B",
+                                "C",
+                                "D",
+                                "E",
+                                "F",
+                                "J",
+                                "M",
+                                "S"
+                            ],
+                        })
+                        +field({
+                            classes: '',
+                            tag: 'select',
+                            placeholder: 'Колличество владельцев',
+                            selectOptions: [
+                                "",
+                                "1",
+                                "2",
+                                "3",
+                                "4+"
+                            ],
+                        })
+
+                    .spoiler-form__btns
+
+                        +btn({
+                            classes: 'spoiler-form__toggle btn--toggle',
+                            type: 'button',
+                            name: '<span class="show">Все параметры</span><span class="hide">Скрыть параметры</span>',
+                            cMode: 'light-accent',
+                            sMode: '238',
+                            icon: 'filter'
+                        })(data-js="formSpoilerToggle")
+
+                        +btn({
+                            classes: '',
+                            type: 'button',
+                            name: 'Сбросить',
+                            cMode: 'light-accent',
+                            sMode: '155',
+                            icon: 'close'
+                        })(data-js="formResetBtn")
+
+                        +btn({
+                            classes: '',
+                            type: 'button',
+                            buttonType: 'submit',
+                            name: 'Показать 73',
+                            cMode: 'accent',
+                            sMode: '155',
+                        })

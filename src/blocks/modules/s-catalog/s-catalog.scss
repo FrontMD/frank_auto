@@ -29,5 +29,9 @@
 
     &__sort {
         flex: 0 0 320px;
+
+        @include max(laptop-small) {
+            flex-basis: 280px;
+        }
     }
 }

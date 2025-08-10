@@ -2,7 +2,7 @@
     const defaultQuickAppProps = {
         classes: '',
         imgWidth: '388',
-        topOffset: '-62px',
+        topOffset: '-19%',
         img: 'img/catalog/questions.webp',
         imgTop: 'img/catalog/questions_top.webp'
     }
@@ -25,7 +25,10 @@ mixin quick-app(props= defaultQuickAppProps)
                         block
                 .quick-app__media
                     .quick-app__img(style=`top: ${checkProps.topOffset};`)
-                        img(width=checkProps.imgWidth src=checkProps.imgTop alt="")
+                        picture
+                            // тут вписываем картинку шириной 70% от исходной
+                            source(width=checkProps.imgWidth*0.7 srcset=checkProps.imgTop media="(max-width: 1420px)")
+                            img(width=checkProps.imgWidth src=checkProps.imgTop alt="")
                     .quick-app__mask
                         .quick-app__svg.quick-app__svg--1
                             svg
@@ -34,4 +37,7 @@ mixin quick-app(props= defaultQuickAppProps)
                             svg
                                 use(xlink:href=`img/sprites/sprite.svg#lightning`)
 
-                        img(width=checkProps.imgWidth src=checkProps.img alt="")
+                        picture
+                            // тут вписываем картинку шириной 70% от исходной
+                            source(width=checkProps.imgWidth*0.7 srcset=checkProps.img media="(max-width: 1420px)")
+                            img(width=checkProps.imgWidth src=checkProps.img alt="")

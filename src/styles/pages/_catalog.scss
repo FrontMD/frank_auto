@@ -1,0 +1,88 @@
+.catalog-banner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+
+    @include max(tablet) {
+        flex-direction: column;
+    }
+
+    &__title {
+        max-width: 770px;
+    }
+
+    &__tags {
+        display: grid;
+        gap: 15px 20px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin-top: 30px;
+    }
+
+    &__tag {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 1.333em;
+        letter-spacing: 0;
+        color: $c-text-light-1;
+    }
+
+    &__icon svg {
+        width: 14px;
+        height: 18px;
+        color: $c-accent-2;
+    }
+
+    &__tags {
+        @include max(tablet) {
+            margin-top: 20px;
+            gap: 15px;
+        }
+    }
+
+    &__form {
+        max-width: 370px;
+
+        @include max(laptop-small) {
+            max-width: 270px;
+        }
+
+        @include max(tablet) {
+            max-width: 100%;
+
+            .form__horizontal {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .form__fields {
+                margin-bottom: 0;
+            }
+
+            .form__submit {
+                margin-top: 0;
+            }
+
+            .form-privacy {
+                margin-bottom: 0;
+            }
+
+            .form-privacy__text {
+                text-align: left;
+            }
+
+        }
+
+        .form-privacy__text {
+            text-align: center;
+            max-width: 100%;
+        }
+    }
+}

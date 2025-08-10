@@ -49,6 +49,11 @@
         }
     }
 
+    &__subtitle {
+        font-family: $ff-inter;
+        font-weight: 700;
+    }
+
     &__btn {
         margin-top: auto;
         max-width: 200px;

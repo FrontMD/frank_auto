@@ -5,7 +5,7 @@
     width: 100%;
     z-index: 50;
 
-    &__section {
+    &__section.section {
         background-color: $c-bg-main;
         padding-bottom: 0;
         padding-top: 20px;
@@ -177,7 +177,7 @@
 }
 
 .site-header {
-    &.small &__section {
+    &.small &__section.section {
         background-color: transparent;
 
         @include min(mobile) {
