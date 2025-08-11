@@ -16,8 +16,8 @@ mixin s-catalog(props= defaultSCatalogProps)
         }
 
     section.section.s-catalog(class= checkProps.classes)&attributes(attributes)
-        .section__container
-            .section-header.section__content.s-catalog__header
+        .section__container.section__content
+            .section-header.s-catalog__header
                 .title.title--36!= checkProps.title
                 - if(checkProps.sort !== false)
                     +field({

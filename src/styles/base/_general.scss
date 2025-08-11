@@ -410,7 +410,7 @@ html.hystmodal__opened {
 		}
 
 		@include max(xs) {
-			font-size: 24px;
+			font-size: 21px;
 		}
 	}
 
@@ -433,7 +433,7 @@ html.hystmodal__opened {
 		font-family: $ff-rooftop;
 		font-size: 36px;
 		font-weight: 500;
-		line-height: 1em;
+		line-height: 1.2em;
 
 		@include max(laptop) {
 			font-size: 28px;
@@ -518,6 +518,11 @@ html.hystmodal__opened {
 }
 
 .bullet-progress.swiper-pagination-bullets {
+	@include max(mobile) {
+		display: flex;
+		justify-content: center;
+	}
+
 	.swiper-pagination-bullet {
 		background-color: rgba(255, 255, 255, 0.4);
 		width: 30px;
@@ -542,6 +547,10 @@ html.hystmodal__opened {
 		width: 354px;
 		background-color: rgba(255, 255, 255, 0.4);
 		opacity: 1;
+
+		@include max(mobile) {
+			width: 110px;
+		}
 	}
 
 	.swiper-pagination-bullet .bullet-progress__overlay {

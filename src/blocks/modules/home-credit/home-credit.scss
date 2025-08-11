@@ -22,6 +22,10 @@
         margin-top: auto;
         padding-top: 80px;
         width: fit-content;
+
+        @include max(tablet) {
+            padding-top: 15px;
+        }
     }
 
     &__img {
@@ -34,6 +38,10 @@
 
         @include max(large) {
             max-width: 838px;
+        }
+
+        @include max(tablet) {
+            display: none;
         }
 
         img {
@@ -79,6 +87,13 @@
         svg {
             width: 18px;
             height: 23px;
+        }
+
+        @include max(tablet) {
+            position: relative;
+            left: 0;
+            transform: none;
+            background-color: $c-accent-2;
         }
     }
 

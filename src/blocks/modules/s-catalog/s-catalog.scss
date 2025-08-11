@@ -1,6 +1,10 @@
 .s-catalog {
     &__header {
         margin-bottom: 0;
+
+        @include max(tablet) {
+            margin-bottom: 0;
+        }
     }
 
     &__list {
@@ -19,12 +23,24 @@
 
         @include max(tablet) {
             gap: 10px;
+            margin-top: 20px;
+        }
+
+        @include max(mobile) {
+            grid-template-columns: minmax(0, 1fr);
+            margin-top: 15px;
         }
     }
 
     &__all {
         max-width: 454px;
         margin: 50px auto 0;
+
+        @include max(mobile) {
+            margin-top: 15px;
+            font-size: 16px;
+            min-height: 64px;
+        }
     }
 
     &__sort {

@@ -107,8 +107,13 @@
         margin-top: 16px;
     }
 
-    &__submit {
+    &__submit.btn {
         margin-top: auto;
+
+        @include max(mobile) {
+            min-height: 64px;
+            font-size: 16px;
+        }
 
         @include max(xs) {
             width: 100%;

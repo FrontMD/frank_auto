@@ -4,6 +4,10 @@
 
     &__header {
         padding: 20px;
+
+        @include max(mobile) {
+            padding: 10px;
+        }
     }
 
     &__tabs {
@@ -77,6 +81,10 @@
 
         @include max(laptop-small) {
             padding: 20px;
+        }
+
+        @include max(mobile) {
+            padding: 10px;
         }
 
         /*@include max(tablet) {

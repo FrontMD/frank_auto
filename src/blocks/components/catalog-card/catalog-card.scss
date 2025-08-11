@@ -36,6 +36,7 @@
         justify-content: space-between;
         align-items: flex-start;
         gap: 10px;
+
     }
 
     &__left {
@@ -43,6 +44,10 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+
+        @include max(tablet-small) {
+            gap: 5px;
+        }
     }
 
     &__tags {
@@ -50,6 +55,10 @@
         align-items: stretch;
         flex-wrap: wrap;
         gap: 10px;
+
+        @include max(tablet-small) {
+            gap: 5px;
+        }
 
     }
 
@@ -67,6 +76,13 @@
         background-color: #FFF9F3;
         border: 1px solid $c-accent;
 
+        @include max(tablet-small) {
+            padding: 8px;
+        }
+
+        @include max(xs) {
+            font-size: 10px;
+        }
 
         svg {
             width: 13px;
@@ -85,6 +101,10 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
+
+        @include max(tablet-small) {
+            gap: 5px;
+        }
     }
 
     &__gift {
@@ -100,6 +120,15 @@
         line-height: 1em;
         letter-spacing: 0;
         color: $c-text;
+
+        @include max(tablet-small) {
+            padding: 7px;
+            font-size: 11px;
+        }
+
+        @include max(xs) {
+            font-size: 10px;
+        }
 
         img {
             width: 24px;

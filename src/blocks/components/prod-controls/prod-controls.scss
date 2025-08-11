@@ -14,6 +14,11 @@
         color: $c-controls-grey;
         transition: all $tr-time linear;
 
+        @include max(mobile) {
+            width: 36px;
+            height: 36px;
+        }
+
         &:hover {
             color: $c-accent-hover;
         }
@@ -25,6 +30,11 @@
         svg {
             width: 25px;
             height: 25px;
+
+            @include max(mobile) {
+                width: 16px;
+                height: 16px;
+            }
         }
     }
 }

@@ -7,6 +7,11 @@
         padding: 24px 30px;
         display: flex;
         align-items: stretch;
+
+        @include max(mobile) {
+            padding: 10px;
+            border-radius: 10px;
+        }
     }
 
     &__tabs {
