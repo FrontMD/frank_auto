@@ -205,8 +205,12 @@
         margin-top: auto;
     }
 
-    &__btn {
+    &__btn.btn {
         flex: 0 1 50%;
 
+        @include max(mobile) {
+            padding: 15.5px 10px;
+            font-size: 12px;
+        }
     }
 }

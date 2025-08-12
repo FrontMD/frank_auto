@@ -3,6 +3,11 @@
         display: flex;
         align-items: stretch;
         gap: 20px;
+
+        @include max(tablet) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
 
     &__card {
@@ -12,6 +17,14 @@
         flex-direction: column;
         align-items: center;
         gap: 10px;
+
+        @include max(tablet) {
+            width: calc((100% - 40px) / 3);
+        }
+
+        @include max(xs) {
+            width: calc((100% - 20px) / 2);
+        }
     }
 
     &__link {
@@ -26,6 +39,11 @@
         width: 120px;
         height: 120px;
         object-fit: contain;
+
+        @include max(xs) {
+            width: 100px;
+            height: 100px;
+        }
     }
 
     &__text {
@@ -37,5 +55,9 @@
         letter-spacing: 0;
         text-align: center;
         color: $c-text;
+
+        @include max(xs) {
+            font-size: 12px;
+        }
     }
 }

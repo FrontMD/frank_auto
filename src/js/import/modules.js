@@ -5,27 +5,17 @@
 @@include("../../blocks/modules/story-slider/story-slider.js")
 @@include("../../blocks/modules/s-news/s-news.js")
 @@include("../../blocks/modules/brands-list/brands-list.js")
+@@include("../../blocks/modules/s-text/s-text.js")
+@@include("../../blocks/modules/catalog-filter/catalog-filter.js")
 
 document.addEventListener('DOMContentLoaded', () => {
-    // открывает модалки
     modalsInit()
-
-    // управляет хедером
     headerController()
-    
-    // первый экран главной
     homeIntro()
-
-    // управляет вкладками
     tabsBlockInit()
-
-    // слайдер историй
     storySlidersInit()
-
-    // слайдер новостей
     sNewsSliders()
-
-    // список брендов
     brandsList()
-
+    catalogFilter()
+    sText()
 })

@@ -9,10 +9,14 @@ mixin catalog-filter(props= defaultCatalogFilterProps)
             classes: props.classes ? props.classes : defaultCatalogFilterProps.classes,
         }
 
-    section.section.catalog-filter(class= checkProps.classes)&attributes(attributes)
+    section.section.catalog-filter(class= checkProps.classes data-js="catalogFilter")&attributes(attributes)
+        .catalog-filter__overlay(data-js="catalogFilterClose")
         .section__container
             .section-block.catalog-filter__block
                 form.catalog-filter__form.spoiler-form(action="#" data-js="formFilter")
+                    .catalog-filter__close(data-js="catalogFilterClose")
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#close`)
                     .spoiler-form__fields(data-js="formSpoilerContent")
                         +field({
                             classes: '',

@@ -274,10 +274,16 @@
             </div>
           </div>
         </section>
-            <section class="section catalog-filter">
+            <section class="section catalog-filter" data-js="catalogFilter">
+              <div class="catalog-filter__overlay" data-js="catalogFilterClose"></div>
               <div class="section__container">
                 <div class="section-block catalog-filter__block">
                   <form class="catalog-filter__form spoiler-form" action="#" data-js="formFilter">
+                    <div class="catalog-filter__close" data-js="catalogFilterClose">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#close"></use>
+                      </svg>
+                    </div>
                     <div class="spoiler-form__fields" data-js="formSpoilerContent">
                           <div class="field    " data-js="formField">
                             <label>
@@ -476,7 +482,7 @@
             <section class="section s-banner">
               <div class="section__container">
                 <div class="section-block s-banner__block">
-                  <div class="section-block__bg s-banner__bg"><img src="img/catalog/catalog_banner.webp" alt=""></div>
+                  <div class="section-block__bg s-banner__bg"><picture><source srcset="img/catalog/catalog_banner_mob.webp" media="(max-width: 767px)"><img src="img/catalog/catalog_banner.webp" alt=""></picture></div>
                   <div class="section-block__content">
                     <div class="catalog-banner">
                       <div class="catalog-banner__desc">
@@ -559,14 +565,21 @@
               <div class="section__container section__content">
                 <div class="section-header s-catalog__header">
                   <div class="title title--36">Каталог автомобилей</div>
-                      <div class="field s-catalog__sort field--white   " data-js="formField">
-                        <label>
-                          <select class="field__select" data-placeholder="Сортировать" data-js="formSelect">
-                            <option value="Цена по возрастанию">Цена по возрастанию</option>
-                            <option value="Цена по убыванию">Цена по убыванию</option>
-                          </select><span class="field__error" data-js="fieldError"></span>
-                        </label>
-                      </div>
+                  <div class="s-catalog__controls">
+                        <div class="field s-catalog__sort field--white   " data-js="formField">
+                          <label>
+                            <select class="field__select" data-placeholder="Сортировать" data-js="formSelect">
+                              <option value="Цена по возрастанию">Цена по возрастанию</option>
+                              <option value="Цена по убыванию">Цена по убыванию</option>
+                            </select><span class="field__error" data-js="fieldError"></span>
+                          </label>
+                        </div>
+                    <button class="s-catalog__filter" type="button" data-js="catalogFilterOpen">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#filter"></use>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
                 <div class="s-catalog__list">
                       <div class="catalog-card">
@@ -880,10 +893,10 @@
                     </div>
               </div>
             </section>
-            <section class="section s-text">
+            <section class="section s-text" data-js="sText">
               <div class="section__container">
                 <div class="section__content">
-                  <div class="s-text__content text-editor">
+                  <div class="s-text__content text-editor" data-js="sTextContent">
                     <h2>Frank Auto — ваш надежный путь<br>к&nbsp;идеальному автомобилю</h2>
                     <p>Ищете автомобиль, который подойдёт именно вам? В&nbsp;Frank&nbsp;Auto мы&nbsp;не&nbsp;просто продаём машины — мы&nbsp;помогаем подобрать транспорт, который идеально соответствует вашим потребностям, стилю жизни и&nbsp;бюджету. От&nbsp;проверенных городских седанов до мощных внедорожников — у нас вы найдёте всё. Мы тщательно проверяем каждый автомобиль по техническому состоянию и юридической чистоте. Покупая у Frank Auto, вы можете быть уверены: никаких скрытых дефектов, полная история авто и честная цена. А&nbsp;для&nbsp;вашего удобства — онлайн-подбор, консультации и&nbsp;возможность забронировать автомобиль без&nbsp;визита в&nbsp;автосалон.</p>
                     <h3>Уверенность в каждой покупке</h3>
@@ -929,7 +942,7 @@
               </div>
             </section>
             <section class="section quick-app">
-              <div class="section__container">
+              <div class="section__container section__content">
                 <div class="quick-app__container">
                   <div class="quick-app__block">
                     <div class="quick-app__content">

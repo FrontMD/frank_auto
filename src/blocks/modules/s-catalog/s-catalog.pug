@@ -3,7 +3,8 @@
         classes: '',
         title: 'Автомобили в наличии - Предложение дня',
         sort: false,
-        pagination: false
+        pagination: false,
+        filter: false
     }
 
 mixin s-catalog(props= defaultSCatalogProps)
@@ -13,22 +14,29 @@ mixin s-catalog(props= defaultSCatalogProps)
             title: props.title ? props.title : defaultSCatalogProps.title,
             sort: props.sort ? props.sort : defaultSCatalogProps.sort,
             pagination: props.pagination ? props.pagination : defaultSCatalogProps.pagination,
+            filter: props.filter ? props.filter : defaultSCatalogProps.filter,
         }
 
     section.section.s-catalog(class= checkProps.classes)&attributes(attributes)
         .section__container.section__content
             .section-header.s-catalog__header
                 .title.title--36!= checkProps.title
-                - if(checkProps.sort !== false)
-                    +field({
-                        classes: 's-catalog__sort field--white',
-                        tag: 'select',
-                        placeholder: 'Сортировать',
-                        selectOptions: [
-                            "Цена по возрастанию",
-                            "Цена по убыванию",
-                        ],
-                    })
+                - if(checkProps.sort !== false || checkProps.filter !== false)
+                    .s-catalog__controls
+                        - if(checkProps.sort !== false)
+                            +field({
+                                classes: 's-catalog__sort field--white',
+                                tag: 'select',
+                                placeholder: 'Сортировать',
+                                selectOptions: [
+                                    "Цена по возрастанию",
+                                    "Цена по убыванию",
+                                ],
+                            })
+                        - if(checkProps.filter !== false)
+                            button.s-catalog__filter(type="button" data-js="catalogFilterOpen")
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#filter`)
 
             .s-catalog__list
                 +catalog-card

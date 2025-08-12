@@ -362,8 +362,13 @@ html.hystmodal__opened {
 		padding-left: 10px;
 	}
 
-	&__btn {
+	&__btn.btn {
 		flex: 0 0 auto;
+
+		@include max(mobile) {
+			padding: 15.5px 10px;
+			font-size: 12px;
+		}
 	}
 }
 
@@ -911,12 +916,17 @@ html.hystmodal__opened {
 	line-height: 1.6em;
 	letter-spacing: 0;
 
+	@include max(mobile) {
+		font-size: 15px;
+		line-height: 1.5em;
+	}
+
 	*:first-child {
-		margin-top: 0;
+		margin-top: 0 !important;
 	}
 
 	*:last-child {
-		margin-bottom: 0;
+		margin-bottom: 0 !important;
 	}
 
 	h2,

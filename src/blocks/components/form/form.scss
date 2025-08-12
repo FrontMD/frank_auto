@@ -76,7 +76,7 @@
         width: 100%;
 
         @include max(mobile) {
-            gap: 16px;
+            gap: 10px;
         }
     }
 
@@ -187,11 +187,6 @@
     &__submit.btn {
         margin-top: auto;
 
-        @include max(mobile) {
-            min-height: 64px;
-            font-size: 16px;
-        }
-
         @include max(xs) {
             width: 100%;
         }
@@ -223,12 +218,20 @@
         @include max(laptop-small) {
             flex-direction: column;
         }
+
+        @include max(mobile) {
+            gap: 10px;
+        }
     }
 
     &--horizontal &__fields {
         flex-direction: row;
         align-items: center;
         margin-bottom: 0;
+
+        @include max(mobile) {
+            flex-direction: column;
+        }
     }
 
     &--horizontal &__submit {
@@ -245,6 +248,10 @@
         flex: 0 0 100%;
         margin-bottom: 0;
         margin-top: 20px;
+
+        @include max(mobile) {
+            margin-top: 10px;
+        }
     }
 
     &--horizontal .form-privacy .form-privacy__text {

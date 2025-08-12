@@ -183,6 +183,10 @@
         @include min(mobile) {
             padding-top: 4px;
         }
+
+        @include max(mobile) {
+            background-color: $c-white;
+        }
     }
 
     &.small &__top {

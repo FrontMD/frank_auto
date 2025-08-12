@@ -15,88 +15,29 @@ block content
         {
           name: 'Каталог',
           link: 'javascript:void(0);'
+        },
+        {
+          name: 'Lixiang',
+          link: 'javascript:void(0);'
         }
       ],
     })
 
-
-    section.section.section--title
-      .section__container
-        .section__header.section__content
-          .title.title--40
-            h1 Каталог
-
-    +catalog-filter
-
-    +s-banner()
-      .catalog-banner
-        .catalog-banner__desc
-          .title.title--30.title--light.catalog-banner__title Отправьте заявку на&nbsp;подбор автомобиля и&nbsp;получите дополнительную скидку!
-          .catalog-banner__tags
-            .catalog-banner__tag
-              .catalog-banner__icon
-                svg
-                  use(xlink:href=`img/sprites/sprite.svg#exc`)
-              .catalog-banner__text Подбор среди новых авто в наличии
-            .catalog-banner__tag
-              .catalog-banner__icon
-                svg
-                  use(xlink:href=`img/sprites/sprite.svg#exc`)
-              .catalog-banner__text Кредит без первоначального взноса 
-            .catalog-banner__tag
-              .catalog-banner__icon
-                svg
-                  use(xlink:href=`img/sprites/sprite.svg#exc`)
-              .catalog-banner__text Гарантия производителя
-            .catalog-banner__tag
-              .catalog-banner__icon
-                svg
-                  use(xlink:href=`img/sprites/sprite.svg#exc`)
-              .catalog-banner__text Программа Trade-In
-
-        +form({
-          classes: 'catalog-banner__form form--light',
-          btnText: 'Помощь в подборе',
-          privacyText: 'Нажимая кнопку «Помощь в подборе», Вы соглашаетесь с <a href="javascript:void(0);">политикой конфиденциальности</a> и <a href="javascript:void(0);">правилами обработки персональных данных</a>'
-        })
-          +field({
-            tag: 'input',
-            type: 'tel',
-            placeholder: 'Ваш телефон',
-            inputAttr: {
-              'required': '',
-              'data-v-name': 'phone',
-              'data-type': 'phoneNumber'
-            },
-          })
-
-
-    section.section
-      .section__container
-        .section-block
-          +brands-list({
-            classes: 'brands-list--full'
-          })
+    +img-intro
 
     +s-catalog({
-      title: 'Каталог автомобилей',
+      title: '<h1>Модельный ряд и цены автомобилей Lixiang</h1>',
       sort: true,
       pagination: true
     })
 
-    +s-text
-
-    +s-services({
-      btn: {
-        classes: 'section-header__btn',
-        name: 'Смотреть все',
-        cMode: 'bordered',
-        sMode: 'content'
-      }
+    +quick-app({
+      imgWidth: '474',
+      topOffset: '-16.5%',
+      img: 'img/catalog/credit.webp',
+      imgTop: 'img/catalog/credit_top.webp'
     })
-
-    +quick-app
-      .title.title--30.quick-app__title Остались вопросы? 
+      .title.title--30.quick-app__title Госпрограмма льготного автокредитования 
       +form({
         classes: 'form--horizontal',
         btnText: 'Заказать звонок',
@@ -118,6 +59,44 @@ block content
             'data-type': 'phoneNumber'
           },
         })
+
+    +s-news({
+      title: 'Участвует в акциях',
+      btn: {
+        classes: 'section-header__btn',
+        name: 'Смотреть все',
+        cMode: 'bordered',
+        sMode: 'content'
+      },
+      cards: [
+        {
+          classes: 'swiper-slide news-card--small',
+          img: 'img/stocks/stocks_1.webp',
+          title: 'АВТОКРЕДИТ С ДОКРИЗИСНОЙ СТАВКОЙ!',
+          text: 'Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!',
+          tag: '',
+          date: '25.10.2025'
+        },
+        {
+          classes: 'swiper-slide news-card--small',
+          img: 'img/stocks/stocks_2.webp',
+          title: 'Собери автомобиль мечты с телеграмм ботом',
+          text: 'Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!',
+          tag: '',
+          date: '25.10.2025'
+        },
+        {
+          classes: 'swiper-slide news-card--small',
+          img: 'img/stocks/stocks_3.webp',
+          title: 'Выгода от FRANK AUTO - выбирайте с умом!',
+          text: 'Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!',
+          tag: '',
+          date: '25.10.2025'
+        }
+      ]
+    })
+
+    +home-service
 
     +s-news({
       title: 'Блог',
@@ -164,38 +143,4 @@ block content
       ]
     })
 
-    +s-news({
-      title: 'Акции',
-      btn: {
-        classes: 'section-header__btn',
-        name: 'Смотреть все',
-        cMode: 'bordered',
-        sMode: 'content'
-      },
-      cards: [
-        {
-          classes: 'swiper-slide news-card--small',
-          img: 'img/stocks/stocks_1.webp',
-          title: 'АВТОКРЕДИТ С ДОКРИЗИСНОЙ СТАВКОЙ!',
-          text: 'Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!',
-          tag: '',
-          date: '25.10.2025'
-        },
-        {
-          classes: 'swiper-slide news-card--small',
-          img: 'img/stocks/stocks_2.webp',
-          title: 'Собери автомобиль мечты с телеграмм ботом',
-          text: 'Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!',
-          tag: '',
-          date: '25.10.2025'
-        },
-        {
-          classes: 'swiper-slide news-card--small',
-          img: 'img/stocks/stocks_3.webp',
-          title: 'Выгода от FRANK AUTO - выбирайте с умом!',
-          text: 'Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!',
-          tag: '',
-          date: '25.10.2025'
-        }
-      ]
-    })
+    +s-text

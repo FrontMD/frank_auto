@@ -11,10 +11,10 @@ mixin s-text(props= defaultSTextProps)
             hasBlock: props.hasBlock ? props.hasBlock : defaultSTextProps.hasBlock,
         }
 
-    section.section.s-text(class= checkProps.classes)&attributes(attributes)
+    section.section.s-text(class= checkProps.classes data-js="sText")&attributes(attributes)
         .section__container
             .section__content
-                .s-text__content.text-editor
+                .s-text__content.text-editor(data-js="sTextContent")
                     - if(checkProps.hasBlock === true)
                         block
                     - else

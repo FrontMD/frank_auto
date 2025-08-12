@@ -270,17 +270,23 @@ function afterFormSubmit(form) {
 function formSpoilerController(form) {
     const spoiler = form.querySelector('[data-js="formSpoilerContent"]')
     const toggle = form.querySelector('[data-js="formSpoilerToggle"]')
+    const ww = window.innerWidth
 
-    if(!spoiler || !toggle) {
+    if(!spoiler || !toggle || ww < 768) {
         spoiler.style.maxHeight = 'none'
         return
     }
 
-    const visibleRows = 2
-    const fieldHeight = spoiler.querySelector('[data-js="formField"]').offsetHeight
+    const visibleFields = 8
+    const oneField = spoiler.querySelector('[data-js="formField"]')
+    const fieldHeight = oneField.offsetHeight
     const gap = parseInt(window.getComputedStyle(spoiler).rowGap)
+    const fieldsInRow = Math.floor(spoiler.offsetWidth / oneField.offsetWidth)
+    const visibleRows = Math.ceil(visibleFields / fieldsInRow)
     const minHeight = fieldHeight * visibleRows + (visibleRows - 1) * gap
     const maxHeight = spoiler.scrollHeight
+
+    spoiler.style.maxHeight = minHeight + 'px'
 
     toggle.addEventListener('click', function(e) {
         e.preventDefault()

@@ -1,6 +1,10 @@
 .home-credit {
     overflow: hidden;
 
+    .section__container--sidebar {
+        gap: 0;
+    }
+
     &__left {
         display: flex;
         flex-direction: column;
@@ -10,6 +14,14 @@
 
         @include max(laptop-small) {
             padding: 20px;
+        }
+
+        @include max(tablet) {
+            border-radius: $br-section $br-section 0 0;
+        }
+
+        @include max(mobile) {
+            padding: 20px 10px 16px;
         }
     }
 
@@ -25,6 +37,10 @@
 
         @include max(tablet) {
             padding-top: 15px;
+        }
+
+        @include max(xs) {
+            width: 100%;
         }
     }
 
@@ -73,6 +89,7 @@
         left: 59%;
         display: flex;
         align-items: center;
+        gap: 7px;
         padding: 16px;
         background-color: $c-accent;
         border-radius: 19px;
@@ -83,6 +100,10 @@
         color: $c-white;
         transform: rotate(-8.62deg);
         transform-origin: left bottom;
+
+        @include max(xs) {
+            justify-content: center;
+        }
 
         svg {
             width: 18px;
@@ -106,6 +127,14 @@
 
         @include max(laptop-small) {
             padding: 20px;
+        }
+
+        @include max(tablet) {
+            border-radius: 0 0 $br-section $br-section;
+        }
+
+        @include max(mobile) {
+            padding: 0 10px 20px;
         }
     }
 }

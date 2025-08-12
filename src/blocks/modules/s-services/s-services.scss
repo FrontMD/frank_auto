@@ -54,7 +54,7 @@
         font-weight: 700;
     }
 
-    &__btn {
+    &__btn.btn {
         margin-top: auto;
         max-width: 200px;
         padding-left: 20px;
@@ -64,6 +64,11 @@
             order: 2;
             margin-top: 10px;
             max-width: none;
+        }
+
+        @include max(mobile) {
+            padding: 15.5px 10px;
+            font-size: 12px;
         }
     }
 

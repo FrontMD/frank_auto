@@ -25,11 +25,19 @@
             background: linear-gradient(107.18deg, #56636E 11.96%, #2E333F 97.96%);
             margin-right: 0;
         }
+
+        @include max(mobile) {
+            padding: 20px 10px;
+        }
     }
 
     .form-privacy .form-privacy__text,
     .form-privacy .form-privacy__text a {
         color: $c-white;
+
+        @include max(mobile) {
+            font-size: 14px;
+        }
     }
 
     &__title {
@@ -38,6 +46,10 @@
 
         @include max(tablet-small) {
             color: $c-white;
+        }
+
+        @include max(mobile) {
+            margin-bottom: 10px;
         }
     }
 
