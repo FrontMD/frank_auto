@@ -1,4 +1,6 @@
 .s-advantages {
+    overflow: hidden;
+
     .swiper-wrapper {
         display: contents;
 
@@ -19,6 +21,10 @@
 
         @include max(tablet) {
             display: block;
+        }
+
+        @include max(tablet) {
+            margin-top: 20px;
         }
     }
 }

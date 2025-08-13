@@ -64,6 +64,11 @@
         margin-bottom: 16px;
         width: 100%;
         flex: 1 1 100%;
+
+        @include max(mobile) {
+            gap: 10px;
+            margin-bottom: 10px;
+        }
     }
 
     &__flex {
@@ -83,6 +88,7 @@
 
         @include max(mobile) {
             flex-direction: column;
+            gap: 10px;
         }
     }
 
@@ -109,6 +115,16 @@
 
     &__submit.btn {
         margin-top: auto;
+
+        @include max(mobile) {
+            padding: 15.5px 10px;
+            min-height: 45px;
+            border-radius: 10px;
+
+            .btn__text {
+                font-size: 12px;
+            }
+        }
 
         @include max(xs) {
             width: 100%;

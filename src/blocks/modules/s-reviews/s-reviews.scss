@@ -25,6 +25,10 @@
         @include max(tablet) {
             flex: 0 0 calc((100% - 10px) / 2);
         }
+
+        @include max(mobile) {
+            flex: 0 0 100%;
+        }
     }
 
     .review-card--mask {
@@ -103,6 +107,11 @@
         @include max(laptop-small) {
             gap: 10px;
         }
+
+        @include max(mobile) {
+            gap: 15px;
+            flex-direction: row-reverse;
+        }
     }
 
     &__percent {
@@ -121,6 +130,14 @@
         letter-spacing: 0%;
         text-transform: uppercase;
         color: $c-black;
+
+        @include max(laptop-small) {
+            font-size: 36px;
+        }
+
+        @include max(mobile) {
+            font-size: 30px;
+        }
     }
 
     &__stars {
@@ -172,6 +189,11 @@
         margin-bottom: 25px;
 
         @include max(laptop-small) {
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+
+        @include max(mobile) {
             padding-bottom: 20px;
             margin-bottom: 20px;
         }
@@ -190,20 +212,19 @@
             width: 80%;
         }
 
+        @include max(tablet) {
+            gap: 0;
+        }
     }
 
     &--mask &__mask {
         display: block;
         position: absolute;
         top: 0;
-        right: 0;
+        right: -1px;
         height: 100%;
         width: 31%;
         color: $c-bg-main;
-
-        @include max(laptop-small) {
-            width: 26px;
-        }
     }
 
     &--mask &__counter {
@@ -212,6 +233,10 @@
         justify-content: flex-end;
 
         @include max(laptop-small) {
+            margin-top: 15px;
+        }
+
+        @include max(mobile) {
             margin-top: 20px;
         }
     }

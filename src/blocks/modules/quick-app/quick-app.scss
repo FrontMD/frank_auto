@@ -27,6 +27,7 @@
 
         @include max(mobile) {
             padding: 20px 10px;
+            border-radius: 10px;
         }
     }
 
@@ -45,10 +46,13 @@
 
         @include max(mobile) {
             margin-bottom: 10px;
+            display: flex;
+            flex-direction: column-reverse;
+            width: 100%;
         }
     }
 
-    &__sticker {
+    &__sticker.title-sticker {
         padding-top: 12px;
         padding-bottom: 12px;
         position: absolute;
@@ -61,6 +65,19 @@
         span {
             color: $c-white;
             line-height: 20px;
+
+            @include max(mobile) {
+                font-size: 30px;
+                line-height: 30px;
+            }
+        }
+
+        @include max(mobile) {
+            position: relative;
+            transform: none;
+            left: 0;
+            text-align: center;
+            margin-bottom: 10px;
         }
     }
 
@@ -70,6 +87,12 @@
         gap: 8px;
         margin-top: 20px;
         margin-bottom: 30px;
+
+        @include max(mobile) {
+            flex-direction: column;
+            margin-bottom: 20px;
+            gap: 13px;
+        }
     }
 
     &__left {
@@ -82,6 +105,11 @@
         letter-spacing: 0;
         background-image: url(../img/catalog-brand/quick_app_shape.svg);
         background-size: 100% 100%;
+
+        @include max(mobile) {
+            padding: 17.5px 17px 6px;
+
+        }
     }
 
     &__subtitle {
@@ -211,6 +239,17 @@
 
         &--dark &__title {
             color: $c-white;
+        }
+    }
+}
+
+.quick-app {
+    @include max(mobile) {
+
+        &--center &__subtitle,
+        &--center &__title,
+        &--center &__text {
+            text-align: center;
         }
     }
 }
