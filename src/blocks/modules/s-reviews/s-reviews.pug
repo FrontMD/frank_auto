@@ -1,0 +1,32 @@
+-
+    const defaultSReviewsProps = {
+        classes: '',
+    }
+
+mixin s-reviews(props= defaultSReviewsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSReviewsProps.classes
+        }
+
+    section.section.s-reviews
+        .section__container
+            .section__content.s-reviews__content
+                .title.title--36.s-reviews__title Преимущества Lixiang
+                .s-reviews__list
+                    .review-card.review-card--mask
+                        .review-card__mask
+                            .review-card__content
+                                .review-card__logo
+                                    img(src="img/catalog-brand/review_1.svg" alt="")
+
+                                .review-card__name
+                                    span Автосалон:
+                                    a(href="javascript:void(0);") Автопремьер
+
+                                .review-card__counter
+                                    .review-card__rating 4.8
+                                    .review-card__right
+                                        .review-card__percent Рекомендуют 96%
+                                        .review-card__stars
+                                            .review-card__track(style="width: 96%;")

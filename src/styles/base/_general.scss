@@ -522,6 +522,29 @@ html.hystmodal__opened {
 
 }
 
+.title-sticker {
+	font-family: $ff-inter;
+	padding: 20px 25px;
+	color: $c-white;
+	background-color: $c-accent;
+	border-radius: 25px;
+	font-weight: 800;
+	font-size: 16px;
+	line-height: 1.2em;
+	letter-spacing: 0;
+
+	span {
+		display: block;
+		padding-top: 6px;
+		font-family: $ff-rooftop;
+		font-weight: 800;
+		font-size: 30px;
+		line-height: 1em;
+		letter-spacing: 0;
+	}
+
+}
+
 .bullet-progress.swiper-pagination-bullets {
 	@include max(mobile) {
 		display: flex;

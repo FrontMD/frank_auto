@@ -2,7 +2,7 @@ extends ../layouts/default
 include ../helpers/mixins
 
 block variables
-	- const title = "Марка-Бренд"
+	- const title = "Модель-Товар"
 
 block content
 	.page-layout(data-js="pageLayout")
@@ -19,56 +19,13 @@ block content
 				{
 					name: 'Lixiang',
 					link: 'javascript:void(0);'
+				},
+				{
+					name: 'Lixiang L7',
+					link: 'javascript:void(0);'
 				}
 			],
 		})
-
-		+cb-intro
-
-		+s-catalog({
-			title: '<h1>Модельный ряд и цены автомобилей Lixiang</h1>',
-			sort: true,
-			pagination: true
-		})
-
-		+quick-app({
-			imgWidth: '474',
-			topOffset: '-16.5%',
-			img: 'img/catalog/credit.webp',
-			imgTop: 'img/catalog/credit_top.webp'
-		})
-			.title.title--30.quick-app__title 
-				| Госпрограмма льготного <br>автокредитования
-				.quick-app__sticker.title-sticker Ставка по кредиту <span>1,9%</span>
-			.quick-app__flex
-				.quick-app__left 10%
-				.quick-app__right
-					.quick-app__subtitle От стоимости автомобиля
-					.quick-app__text Выгода по программе "Семейный автомобиль", "Первый автомобиль", "Автомобиль государственному медицинскому персоналу", "Автомобиль в трейд-ин"
-
-			+form({
-				classes: 'form--horizontal',
-				btnText: 'Заказать звонок',
-				submitSize: 'content',
-				privacyText: 'Нажимая кнопку «Заказать звонок», Вы соглашаетесь с <a href="javascript:void(0);">политикой конфиденциальности</a> и <a href="javascript:void(0);">правилами обработки персональных данных</a>'
-			})
-				+field({
-					placeholder: 'Ваш имя',
-					inputAttr: {
-						'required': '',
-						'data-type': 'letters'
-					},
-				})
-				+field({
-					placeholder: 'Ваш телефон',
-					inputAttr: {
-						'required': '',
-						'data-v-name': 'phone',
-						'data-type': 'phoneNumber'
-					},
-				})
-
-		+s-advantages
 
 		+s-news({
 			title: 'Участвует в акциях',
@@ -106,12 +63,20 @@ block content
 			]
 		})
 
+		+s-catalog({
+			title: 'Похожие предложения',
+		})
+
+		+s-catalog({
+			title: 'Новые Lixiang L7 в наличии',
+			sort: true,
+			pagination: true
+		})
+
 		+home-service
 
-		+s-reviews
-
 		+s-news({
-			title: 'Блог',
+			title: 'Пишем об этом автомобиле здесь',
 			btn: {
 				classes: 'section-header__btn',
 				name: 'Смотреть все',

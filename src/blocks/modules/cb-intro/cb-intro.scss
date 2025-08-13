@@ -1,0 +1,149 @@
+.cb-intro {
+    &__block {
+        padding: 92px 60px 126px;
+    }
+
+    &__bg::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(360deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.7) 100%);
+    }
+
+    &__top {
+        position: relative;
+        max-width: 748px;
+    }
+
+    &__title {
+        line-height: 1.2em;
+    }
+
+    &__sticker {
+        position: absolute;
+        right: -70px;
+        top: -8px;
+        transform: rotate(8.02deg);
+        transform-origin: right bottom;
+    }
+
+    &__subtitle {
+        font-family: $ff-rooftop;
+        font-weight: 500;
+        font-size: 23px;
+        line-height: 1.435em;
+        letter-spacing: 0;
+        color: $c-white;
+        margin-top: 5px;
+        max-width: 600px;
+    }
+
+    &__advantages {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 83px;
+    }
+
+    &__advantage {
+        flex: 0 1 auto;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        background-color: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(30px);
+        padding: 15px 30px 15px 20px;
+        border-radius: $br-section;
+        font-family: $ff-rooftop;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.429em;
+        letter-spacing: 0;
+        color: $c-white;
+
+
+    }
+
+    &__icon {
+        width: 50px;
+        height: 50px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 28px;
+            height: 28px;
+            object-fit: contain;
+        }
+
+        svg {
+            width: 42px;
+            height: 43px;
+        }
+    }
+
+    &__offer {
+        margin-top: -71px;
+        padding: 0 60px 0;
+    }
+}
+
+.cb-offer {
+    position: relative;
+    background-color: $c-white;
+    padding: 30px;
+    border-radius: $br-section;
+    display: flex;
+    align-items: flex-start;
+    gap: 50px;
+
+    &__left {
+        flex: 0 0 236px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+    }
+
+    &__title {
+        font-family: $ff-rooftop;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.15em;
+        letter-spacing: 0;
+        text-align: right;
+        color: $c-text;
+    }
+
+    &__date {
+        padding: 7px 15px;
+        font-weight: 800;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0;
+        color: $c-white;
+        background-color: $c-accent;
+        border-radius: 25px;
+    }
+
+    &__form {
+
+        .form-privacy {
+            margin-top: 10px;
+        }
+
+        .form-privacy__text {
+            font-size: 14px;
+        }
+    }
+}

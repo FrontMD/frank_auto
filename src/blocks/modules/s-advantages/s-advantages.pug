@@ -1,0 +1,69 @@
+-
+    const defaultSAdvantagesProps = {
+        classes: '',
+    }
+
+mixin s-advantages(props= defaultSAdvantagesProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSAdvantagesProps.classes
+        }
+
+    section.section.s-advantages
+        .section__container
+            .section__content.s-advantages__content
+                .title.title--36.s-advantages__title Преимущества Lixiang
+                .s-advantages__list(data-js="sAdvantagesSlider")
+                    .swiper-wrapper
+                        .advantage-card.swiper-slide
+                            .advantage-card__media
+                                .advantage-card__num 01
+                                .advantage-card__img
+                                    img(src="img/catalog-brand/advantage_1.webp" alt="")
+                            .advantage-card__content
+                                .advantage-card__title Красивый и динамичный<br>новый дизайн
+
+                        .advantage-card.swiper-slide
+                            .advantage-card__media
+                                .advantage-card__num 02
+                                .advantage-card__img
+                                    img(src="img/catalog-brand/advantage_2.webp" alt="")
+                            .advantage-card__content
+                                .advantage-card__title Флагманский<br>салон
+                                .advantage-card__text Размер салона выдающийся среди 5-местных внедорожников с длиной кузова 5050 мм и колесной базой 3005 мм.
+
+                        .advantage-card.swiper-slide
+                            .advantage-card__media
+                                .advantage-card__num 03
+                                .advantage-card__img
+                                    img(src="img/catalog-brand/advantage_3.webp" alt="")
+                            .advantage-card__content
+                                .advantage-card__title Современные<br>технологичные решения
+                                .advantage-card__text Электрическая подставка для ног раскладывается автоматически. Спинку второго ряда можно отрегулировать до 40°
+
+                        .advantage-card.swiper-slide
+                            .advantage-card__media
+                                .advantage-card__num 04
+                                .advantage-card__img
+                                    img(src="img/catalog-brand/advantage_4.webp" alt="")
+                            .advantage-card__content
+                                .advantage-card__title Вместительный 5-местный багажник, для всех ваших вещей
+                                .advantage-card__text Багажник имеет глубину 1081 мм и ширину открывания до 1178мм. Плюс 424 складная конструкция сидений, поможет разместить чемоданы для всей семьи.
+
+                        .advantage-card.swiper-slide
+                            .advantage-card__media
+                                .advantage-card__num 05
+                                .advantage-card__img
+                                    img(src="img/catalog-brand/advantage_5.webp" alt="")
+                            .advantage-card__content
+                                .advantage-card__title 7.3.4 Аудиосистема<br>Dolby Atmos
+                                .advantage-card__text Благодаря двум центральным каналам, трем мощным сабвуферам и четырем потолочным динамикам каждое место в автомобиле становится центром звука.
+
+                        .advantage-card.swiper-slide
+                            .advantage-card__media
+                                .advantage-card__num 06
+                                .advantage-card__img
+                                    img(src="img/catalog-brand/advantage_6.webp" alt="")
+                            .advantage-card__content
+                                .advantage-card__title Комбинированный<br>диапазон CLTC 1315 км
+                                .advantage-card__text Мощность до 330 кВт, крутящий момент до 620 Н·м, разгон до 100 км/ч за 5,3 с и превосходная регулировка выходной мощности — мощность даже на плато.

@@ -1,0 +1,75 @@
+.s-advantages {
+    .swiper-wrapper {
+        display: contents;
+    }
+
+    &__list {
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 23px;
+
+        @include max(full) {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+}
+
+.advantage-card {
+    &__media {
+        position: relative;
+    }
+
+    &__num {
+        padding-top: 4px;
+        position: absolute;
+        width: 44%;
+        left: 0;
+        top: 0;
+        text-align: end;
+        font-family: $ff-rooftop;
+        font-weight: 500;
+        font-size: 34px;
+        line-height: 100%;
+        letter-spacing: 0;
+        color: $c-accent-2;
+        z-index: 1;
+    }
+
+    &__img {
+        width: 100%;
+        aspect-ratio: 1 / 0.6674;
+        mask-clip: border-box;
+        mask-size: 100% 100%;
+        mask-image: url(../img/masks/advantage_mask.svg);
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__content {
+        width: 89%;
+    }
+
+    &__title {
+        margin-top: 20px;
+        font-family: $ff-rooftop;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0;
+        color: $c-text;
+    }
+
+    &__text {
+        margin-top: 5px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.57em;
+        letter-spacing: 0;
+        color: $c-text-breadcrumbs;
+    }
+}

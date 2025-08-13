@@ -33,7 +33,6 @@
 
     .form-privacy .form-privacy__text,
     .form-privacy .form-privacy__text a {
-        color: $c-white;
 
         @include max(mobile) {
             font-size: 14px;
@@ -41,8 +40,10 @@
     }
 
     &__title {
+        position: relative;
         margin-bottom: 20px;
-        line-height: 1em;
+        line-height: 1.2em;
+        width: fit-content;
 
         @include max(tablet-small) {
             color: $c-white;
@@ -51,6 +52,58 @@
         @include max(mobile) {
             margin-bottom: 10px;
         }
+    }
+
+    &__sticker {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        position: absolute;
+        left: calc(100% + 20px);
+        top: 0px;
+        transform: rotate(8.02deg);
+        transform-origin: center;
+        white-space: nowrap;
+
+        span {
+            color: $c-white;
+            line-height: 20px;
+        }
+    }
+
+    &__flex {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    &__left {
+        flex: 0 0 auto;
+        padding: 17.5px 7px 6px;
+        font-family: $ff-rooftop;
+        font-weight: 500;
+        font-size: 46px;
+        line-height: 100%;
+        letter-spacing: 0;
+        background-image: url(../img/catalog-brand/quick_app_shape.svg);
+        background-size: 100% 100%;
+    }
+
+    &__subtitle {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.57em;
+        letter-spacing: 0;
+        color: $c-text;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.57em;
+        letter-spacing: 0;
+        color: $c-text-breadcrumbs;
     }
 
     &__media {
