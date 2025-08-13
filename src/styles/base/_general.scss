@@ -533,6 +533,14 @@ html.hystmodal__opened {
 	line-height: 1.2em;
 	letter-spacing: 0;
 
+	@include max(tablet) {
+		border-radius: 10px;
+	}
+
+	@include max(mobile) {
+		background-color: $c-accent-2;
+	}
+
 	span {
 		display: block;
 		padding-top: 6px;
@@ -541,6 +549,10 @@ html.hystmodal__opened {
 		font-size: 30px;
 		line-height: 1em;
 		letter-spacing: 0;
+
+		@include max(tablet) {
+			font-size: 24px;
+		}
 	}
 
 }

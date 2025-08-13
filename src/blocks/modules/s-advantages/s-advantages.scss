@@ -1,6 +1,10 @@
 .s-advantages {
     .swiper-wrapper {
         display: contents;
+
+        @include max(tablet) {
+            display: flex;
+        }
     }
 
     &__list {
@@ -11,6 +15,10 @@
 
         @include max(full) {
             grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        @include max(tablet) {
+            display: block;
         }
     }
 }
@@ -34,6 +42,10 @@
         letter-spacing: 0;
         color: $c-accent-2;
         z-index: 1;
+
+        @include max(tablet) {
+            font-size: 25px;
+        }
     }
 
     &__img {
@@ -52,6 +64,10 @@
 
     &__content {
         width: 89%;
+
+        @include max(tablet) {
+            width: 100%;
+        }
     }
 
     &__title {
@@ -62,6 +78,12 @@
         line-height: 24px;
         letter-spacing: 0;
         color: $c-text;
+
+        @include max(tablet) {
+            margin-top: 10px;
+            font-size: 15px;
+            line-height: 22px;
+        }
     }
 
     &__text {

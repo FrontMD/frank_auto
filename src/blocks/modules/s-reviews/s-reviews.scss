@@ -1,75 +1,218 @@
-.s-advantages {
-    .swiper-wrapper {
-        display: contents;
-    }
+.s-reviews {
 
     &__list {
-        margin-top: 50px;
-        display: grid;
-        grid-template-columns: repeat(6, minmax(0, 1fr));
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
         gap: 23px;
 
-        @include max(full) {
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+        @include max(laptop-small) {
+            gap: 16px;
+        }
+
+        @include max(tablet) {
+            gap: 10px;
+        }
+    }
+
+    .review-card {
+        flex: 0 0 calc((100% - 23px) / 2);
+
+        @include max(laptop-small) {
+            flex: 0 0 calc((100% - 16px) / 2);
+        }
+
+        @include max(tablet) {
+            flex: 0 0 calc((100% - 10px) / 2);
+        }
+    }
+
+    .review-card--mask {
+        flex: 0 0 calc((100% - 46px) / 3);
+
+        @include max(laptop-small) {
+            flex: 0 0 calc((100% - 32px) / 3);
+        }
+
+        @include max(tablet) {
+            flex: 0 0 100%;
         }
     }
 }
 
-.advantage-card {
-    &__media {
-        position: relative;
+.review-card {
+    padding: 40px;
+    background-color: $c-white;
+    border-radius: $br-section;
+
+    @include max(laptop-small) {
+        padding: 20px;
+        border-radius: $br-section-mob;
     }
 
-    &__num {
-        padding-top: 4px;
-        position: absolute;
-        width: 44%;
-        left: 0;
-        top: 0;
-        text-align: end;
-        font-family: $ff-rooftop;
-        font-weight: 500;
-        font-size: 34px;
-        line-height: 100%;
-        letter-spacing: 0;
-        color: $c-accent-2;
-        z-index: 1;
-    }
-
-    &__img {
-        width: 100%;
-        aspect-ratio: 1 / 0.6674;
-        mask-clip: border-box;
-        mask-size: 100% 100%;
-        mask-image: url(../img/masks/advantage_mask.svg);
-
-        img {
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-        }
+    @include max(tablet) {
+        padding: 15px 20px;
     }
 
     &__content {
-        width: 89%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include max(tablet) {
+            flex-direction: column;
+            gap: 15px;
+            align-items: flex-start;
+        }
     }
 
-    &__title {
-        margin-top: 20px;
-        font-family: $ff-rooftop;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 24px;
-        letter-spacing: 0;
-        color: $c-text;
+    &__logo {
+        img {
+            height: 40px;
+        }
     }
 
-    &__text {
-        margin-top: 5px;
+    &__name {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
         font-weight: 400;
-        font-size: 14px;
-        line-height: 1.57em;
+        font-size: 16px;
+        line-height: 100%;
         letter-spacing: 0;
         color: $c-text-breadcrumbs;
+
+        a {
+            text-decoration: underline;
+            color: $c-accent;
+            transition: all $tr-time linear;
+        }
+
+        a:hover {
+            color: $c-accent-hover;
+        }
+    }
+
+    &__counter {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        @include max(laptop-small) {
+            gap: 10px;
+        }
+    }
+
+    &__percent {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.2em;
+        letter-spacing: 0;
+        color: $c-text-breadcrumbs;
+    }
+
+    &__rating {
+        font-family: $ff-rooftop;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+        color: $c-black;
+    }
+
+    &__stars {
+        position: relative;
+        width: 103px;
+        height: 18px;
+        background-color: #C3C7CD;
+        margin-top: 5px;
+        mask-clip: border-box;
+        mask-size: 100% 100%;
+        mask-image: url(../img/masks/rating_mask.svg);
+    }
+
+    &__track {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background-color: #FFCC00;
+    }
+
+    &__mask {
+        display: none;
+    }
+}
+
+.review-card {
+    &--mask {
+        position: relative;
+        border-radius: $br-section 0 0 $br-section;
+        display: flex;
+        align-items: stretch;
+        padding: 30px 40px;
+
+        @include max(laptop-small) {
+            padding: 20px 15px;
+            border-radius: $br-section-mob 0 0 $br-section-mob;
+        }
+
+        @include max(tablet) {
+            padding: 20px;
+        }
+
+    }
+
+    &--mask &__logo {
+        padding-bottom: 25px;
+        border-bottom: 1px solid #E7E8EB;
+        margin-bottom: 25px;
+
+        @include max(laptop-small) {
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        img {
+            height: 30px;
+        }
+    }
+
+    &--mask &__content {
+        width: 73%;
+        flex-direction: column;
+        align-items: stretch;
+
+        @include max(laptop-small) {
+            width: 80%;
+        }
+
+    }
+
+    &--mask &__mask {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 31%;
+        color: $c-bg-main;
+
+        @include max(laptop-small) {
+            width: 26px;
+        }
+    }
+
+    &--mask &__counter {
+        margin-top: 25px;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+
+        @include max(laptop-small) {
+            margin-top: 20px;
+        }
     }
 }

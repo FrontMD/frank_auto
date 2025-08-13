@@ -1,6 +1,18 @@
 .cb-intro {
     &__block {
         padding: 92px 60px 126px;
+
+        @include max(laptop-small) {
+            padding: 60px 20px 94px;
+        }
+
+        @include max(tablet) {
+            padding: 60px 15px 94px;
+        }
+
+        @include max(mobile) {
+            padding: 22px 10px 94px;
+        }
     }
 
     &__bg::after {
@@ -20,6 +32,10 @@
 
     &__title {
         line-height: 1.2em;
+
+        @include max(xs) {
+            line-height: 1.38em;
+        }
     }
 
     &__sticker {
@@ -28,6 +44,18 @@
         top: -8px;
         transform: rotate(8.02deg);
         transform-origin: right bottom;
+
+        @include max(tablet) {
+            right: 0;
+            top: -14px;
+        }
+
+        @include max(mobile) {
+            right: auto;
+            left: 0;
+            top: calc(100% + 5px);
+            transform-origin: left bottom;
+        }
     }
 
     &__subtitle {
@@ -39,13 +67,28 @@
         color: $c-white;
         margin-top: 5px;
         max-width: 600px;
+
+        @include max(mobile) {
+            margin-top: 10px;
+            font-size: 16px;
+            line-height: 1.625em;
+        }
     }
 
     &__advantages {
         display: flex;
-        align-items: center;
+        align-items: stretch;
         gap: 10px;
         margin-top: 83px;
+
+        @include max(tablet) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        @include max(mobile) {
+            margin-top: 238px;
+        }
     }
 
     &__advantage {
@@ -65,7 +108,15 @@
         letter-spacing: 0;
         color: $c-white;
 
+        @include max(laptop-small) {
+            padding: 15px 20px;
+        }
 
+        @include max(mobile) {
+            padding: 5px 15px 5px 10px;
+            border-radius: 10px;
+            gap: 10px;
+        }
     }
 
     &__icon {
@@ -93,8 +144,21 @@
     }
 
     &__offer {
-        margin-top: -71px;
+        margin-top: -70px;
         padding: 0 60px 0;
+
+        @include max(laptop-small) {
+            padding: 0 20px;
+        }
+
+        @include max(tablet) {
+            padding: 0 15px;
+        }
+
+        @include max(mobile) {
+            padding: 0px 10px;
+        }
+
     }
 }
 
@@ -106,6 +170,15 @@
     display: flex;
     align-items: flex-start;
     gap: 50px;
+
+    @include max(tablet) {
+        padding: 20px 15px;
+        gap: 24px;
+    }
+
+    @include max(mobile) {
+        flex-direction: column;
+    }
 
     &__left {
         flex: 0 0 236px;

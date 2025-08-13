@@ -7,6 +7,7 @@
 @@include("../../blocks/modules/brands-list/brands-list.js")
 @@include("../../blocks/modules/s-text/s-text.js")
 @@include("../../blocks/modules/catalog-filter/catalog-filter.js")
+@@include("../../blocks/modules/s-advantages/s-advantages.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     modalsInit()
@@ -18,4 +19,5 @@ document.addEventListener('DOMContentLoaded', () => {
     brandsList()
     catalogFilter()
     sText()
+    sAdvantagesSlider()
 })

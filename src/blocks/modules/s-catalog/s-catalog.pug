@@ -4,7 +4,70 @@
         title: 'Автомобили в наличии - Предложение дня',
         sort: false,
         pagination: false,
-        filter: false
+        filter: false,
+        items: [
+            {
+                img: 'img/catalog/product_1.webp',
+                title: 'Новый LIXIANG L6 MAX',
+                price: {
+                    classes: 'catalog-card__price',
+                    current: '5 500 000 ₽',
+                    old: '6 200 000 ₽',
+                    credit: 'от 115 000 ₽/мес <span>в кредит</span>'
+                },
+            },
+            {
+                img: 'img/catalog/product_2.webp',
+                title: 'LiXiang L7 MAX',
+                price: {
+                    classes: 'catalog-card__price',
+                    current: '5 835 192 ₽',
+                    old: '6 200 000 ₽',
+                    credit: 'от 115 000 ₽/мес <span>в кредит</span>'
+                },
+            },
+            {
+                img: 'img/catalog/product_3.webp',
+                title: 'LIXIANG L7 PRO',
+                price: {
+                    classes: 'catalog-card__price',
+                    current: '5 660 000 ₽',
+                    old: '6 200 000 ₽',
+                    credit: 'от 115 000 ₽/мес <span>в кредит</span>'
+                },
+            },
+            {
+                img: 'img/catalog/product_4.webp',
+                title: 'ZEEKR 001',
+                price: {
+                    classes: 'catalog-card__price',
+                    current: '4 600 000 ₽',
+                    old: '6 200 000 ₽',
+                    credit: 'от 115 000 ₽/мес <span>в кредит</span>'
+                },
+            },
+            {
+                img: 'img/catalog/product_5.webp',
+                title: 'ZEEKR 007',
+                price: {
+                    classes: 'catalog-card__price',
+                    current: '5 500 000 ₽',
+                    old: '6 200 000 ₽',
+                    credit: 'от 115 000 ₽/мес <span>в кредит</span>'
+                },
+            },
+            {
+                img: 'img/catalog/product_6.webp',
+                title: 'Новый Zeekr 001 FR',
+                price: {
+                    classes: 'catalog-card__price',
+                    current: '6 700 000 ₽',
+                    old: '6 900 000 ₽',
+                    credit: 'от 115 000 ₽/мес <span>в кредит</span>'
+                },
+            }
+
+        ]
     }
 
 mixin s-catalog(props= defaultSCatalogProps)
@@ -15,6 +78,7 @@ mixin s-catalog(props= defaultSCatalogProps)
             sort: props.sort ? props.sort : defaultSCatalogProps.sort,
             pagination: props.pagination ? props.pagination : defaultSCatalogProps.pagination,
             filter: props.filter ? props.filter : defaultSCatalogProps.filter,
+            items: props.items ? props.items : defaultSCatalogProps.items,
         }
 
     section.section.s-catalog(class= checkProps.classes)&attributes(attributes)
@@ -39,57 +103,12 @@ mixin s-catalog(props= defaultSCatalogProps)
                                     use(xlink:href=`img/sprites/sprite.svg#filter`)
 
             .s-catalog__list
-                +catalog-card
-                +catalog-card({
-                    img: 'img/catalog/product_2.webp',
-                    title: 'LiXiang L7 MAX',
-                    price: {
-                        classes: 'catalog-card__price',
-                        current: '5 835 192 ₽',
-                        old: '6 200 000 ₽',
-                        credit: 'от 115 000 ₽/мес <span>в кредит</span>'
-                    },
-                })
-                +catalog-card({
-                    img: 'img/catalog/product_3.webp',
-                    title: 'LIXIANG L7 PRO',
-                    price: {
-                        classes: 'catalog-card__price',
-                        current: '5 660 000 ₽',
-                        old: '6 200 000 ₽',
-                        credit: 'от 115 000 ₽/мес <span>в кредит</span>'
-                    },
-                })
-                +catalog-card({
-                    img: 'img/catalog/product_4.webp',
-                    title: 'ZEEKR 001',
-                    price: {
-                        classes: 'catalog-card__price',
-                        current: '4 600 000 ₽',
-                        old: '6 200 000 ₽',
-                        credit: 'от 115 000 ₽/мес <span>в кредит</span>'
-                    },
-                })
-                +catalog-card({
-                    img: 'img/catalog/product_5.webp',
-                    title: 'ZEEKR 007',
-                    price: {
-                        classes: 'catalog-card__price',
-                        current: '5 500 000 ₽',
-                        old: '6 200 000 ₽',
-                        credit: 'от 115 000 ₽/мес <span>в кредит</span>'
-                    },
-                })
-                +catalog-card({
-                    img: 'img/catalog/product_6.webp',
-                    title: 'Новый Zeekr 001 FR',
-                    price: {
-                        classes: 'catalog-card__price',
-                        current: '6 700 000 ₽',
-                        old: '6 900 000 ₽',
-                        credit: 'от 115 000 ₽/мес <span>в кредит</span>'
-                    },
-                })
+                - let counter = 0
+                - while(counter < checkProps.items.length)
+                    +catalog-card(checkProps.items[counter])
+
+                    - counter++
+
             - if(checkProps.pagination === true)
                 +pagination
             - else

@@ -20,9 +20,8 @@
             padding: 20px 290px 20px 20px;
         }
 
-        @include max(tablet-small) {
+        @include max(tablet) {
             padding: 20px;
-            background: linear-gradient(107.18deg, #56636E 11.96%, #2E333F 97.96%);
             margin-right: 0;
         }
 
@@ -33,7 +32,6 @@
 
     .form-privacy .form-privacy__text,
     .form-privacy .form-privacy__text a {
-
         @include max(mobile) {
             font-size: 14px;
         }
@@ -44,10 +42,6 @@
         margin-bottom: 20px;
         line-height: 1.2em;
         width: fit-content;
-
-        @include max(tablet-small) {
-            color: $c-white;
-        }
 
         @include max(mobile) {
             margin-bottom: 10px;
@@ -110,7 +104,7 @@
         position: relative;
         flex: 0 0 auto;
 
-        @include max(tablet-small) {
+        @include max(tablet) {
             display: none;
         }
     }
@@ -192,6 +186,31 @@
             top: 50%;
             transform: translate(-50%, -50%);
             max-width: none;
+        }
+    }
+}
+
+.quick-app {
+    @include max(tablet) {
+        &--dark &__block {
+            background: linear-gradient(107.18deg, #56636E 11.96%, #2E333F 97.96%);
+        }
+
+        &--dark &__subtitle {
+            color: $c-white;
+        }
+
+        &--dark &__text {
+            color: $c-bg-main;
+        }
+
+        &--dark .form-privacy .form-privacy__text,
+        &--dark .form-privacy .form-privacy__text a {
+            color: $c-white;
+        }
+
+        &--dark &__title {
+            color: $c-white;
         }
     }
 }
