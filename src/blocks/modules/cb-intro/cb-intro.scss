@@ -75,6 +75,37 @@
         }
     }
 
+    &__price {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        font-family: $ff-rooftop;
+        letter-spacing: 0;
+        color: $c-text;
+
+        .old {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 100%;
+            text-decoration: line-through;
+        }
+
+        .current {
+            font-weight: 800;
+            font-size: 26px;
+            line-height: 36px;
+        }
+    }
+
+    &__stock {
+        margin-top: 19px;
+        font-family: $ff-rooftop;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 21px;
+        letter-spacing: 0;
+    }
+
     &__advantages {
         display: flex;
         align-items: stretch;
@@ -162,6 +193,68 @@
     }
 }
 
+.cb-intro {
+    &--model &__block {
+        padding: 40px 60px;
+    }
+
+    &--model &__bg {
+        display: none;
+    }
+
+    &--model &__content {
+        display: flex;
+        gap: 50px;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+
+    &--model &__top {
+        position: relative;
+        padding-bottom: 40px;
+        padding-top: 10px;
+        z-index: 2;
+        flex: 0 0 44%;
+    }
+
+    &--model &__title {
+        position: relative;
+        width: fit-content;
+    }
+
+    &--model &__sticker {
+        right: auto;
+        top: auto;
+        bottom: -15px;
+        left: calc(100% + 35px);
+        transform-origin: center;
+
+
+        span {
+            color: $c-white;
+            white-space: nowrap;
+        }
+    }
+
+    &--model &__advantages {
+        margin-top: 19px;
+        padding-bottom: 40px;
+        flex-direction: column;
+
+    }
+
+    &--model &__advantage {
+        background-color: $c-bg-main;
+        color: $c-text;
+
+    }
+
+    &--model &__slider {
+        position: relative;
+        flex: 0 0 52%;
+    }
+}
+
 .cb-offer {
     position: relative;
     background-color: $c-white;
@@ -170,6 +263,11 @@
     display: flex;
     align-items: flex-start;
     gap: 50px;
+    z-index: 5;
+
+    &--bordered {
+        border: 2px solid $c-bg-main;
+    }
 
     @include max(tablet) {
         padding: 20px 15px;
@@ -235,6 +333,67 @@
 
         .form-privacy__text {
             font-size: 14px;
+        }
+    }
+}
+
+.color-slider {
+    overflow: hidden;
+    position: relative;
+
+    &__images {
+        border-radius: $br-section;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .swiper-wrapper {
+        align-items: stretch;
+    }
+
+    &__slide {
+        height: auto;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__tabs {
+        position: absolute;
+        left: 10px;
+        bottom: 46px;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(40px);
+        z-index: 3;
+        max-width: calc(100% - 20px);
+    }
+
+    &__tab {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+
+        svg {
+            width: 20px;
+            height: 20px;
+            opacity: 0;
+            transition: all 0.1s linear;
+        }
+
+        &.swiper-slide-thumb-active svg {
+            opacity: 1;
         }
     }
 }

@@ -1,0 +1,15 @@
+.cm-accordeon {
+    &__list {
+        margin-top: 50px;
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.cm-spoiler {
+    &__header {
+        display: flex;
+    }
+}

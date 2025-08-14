@@ -33,7 +33,7 @@ mixin field(props = defaultFieldProps)
             isDouble: props.isDouble ? props.isDouble : defaultFieldProps.isDouble,
             placeholder2: props.placeholder2 ? props.placeholder2 : defaultFieldProps.placeholder2,
             inputAttr2: props.inputAttr2 ? props.inputAttr2 : defaultFieldProps.inputAttr2,
-            selectOptions2: props.selectOptions2 ? props.selectOptions2 : defaultFieldProps.selectOptions2,
+            selectOptions2: props.selectOptions2 ? props.selectOptions2 : defaultFieldProps.selectOptions2
         }
 
     .field(class= `${checkProps.classes} ${checkProps.isDouble ? "field--double" : ""} ${checkProps.type === 'radio' ? 'field--radio' : ''} ${checkProps.type === 'checkbox' ? 'field--checkbox' : ''}` data-js='formField')&attributes(attributes)

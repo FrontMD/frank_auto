@@ -27,6 +27,14 @@ block content
 			],
 		})
 
+		+cb-intro({
+			isModel: true
+		})
+
+		+s-discount
+
+		+cm-accordeon
+
 		+s-news({
 			title: 'Участвует в акциях',
 			btn: {
@@ -65,6 +73,40 @@ block content
 
 		+s-catalog({
 			title: 'Похожие предложения',
+			isSlider: true,
+			items: [
+			{
+				img: 'img/catalog/product_1.webp',
+				title: 'Новый LIXIANG L6 MAX',
+				price: {
+					classes: 'catalog-card__price',
+					current: '5 500 000 ₽',
+					old: '6 200 000 ₽',
+					credit: 'от 115 000 ₽/мес <span>в кредит</span>'
+				},
+			},
+			{
+				img: 'img/catalog/product_2.webp',
+				title: 'LiXiang L7 MAX',
+				price: {
+					classes: 'catalog-card__price',
+					current: '5 835 192 ₽',
+					old: '6 200 000 ₽',
+					credit: 'от 115 000 ₽/мес <span>в кредит</span>'
+				},
+			},
+			{
+				img: 'img/catalog/product_3.webp',
+				title: 'LIXIANG L7 PRO',
+				price: {
+					classes: 'catalog-card__price',
+					current: '5 660 000 ₽',
+					old: '6 200 000 ₽',
+					credit: 'от 115 000 ₽/мес <span>в кредит</span>'
+				},
+			},
+
+		]
 		})
 
 		+s-catalog({

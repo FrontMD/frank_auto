@@ -5,6 +5,7 @@
         sort: false,
         pagination: false,
         filter: false,
+        isSlider: false,
         items: [
             {
                 img: 'img/catalog/product_1.webp',
@@ -75,48 +76,65 @@ mixin s-catalog(props= defaultSCatalogProps)
         const checkProps = {
             classes: props.classes ? props.classes : defaultSCatalogProps.classes,
             title: props.title ? props.title : defaultSCatalogProps.title,
+            isSlider: props.isSlider ? props.isSlider : defaultSCatalogProps.isSlider,
             sort: props.sort ? props.sort : defaultSCatalogProps.sort,
             pagination: props.pagination ? props.pagination : defaultSCatalogProps.pagination,
             filter: props.filter ? props.filter : defaultSCatalogProps.filter,
             items: props.items ? props.items : defaultSCatalogProps.items,
         }
 
-    section.section.s-catalog(class= checkProps.classes)&attributes(attributes)
-        .section__container.section__content
-            .section-header.s-catalog__header
-                .title.title--36!= checkProps.title
-                - if(checkProps.sort !== false || checkProps.filter !== false)
-                    .s-catalog__controls
-                        - if(checkProps.sort !== false)
-                            +field({
-                                classes: 's-catalog__sort field--white',
-                                tag: 'select',
-                                placeholder: 'Сортировать',
-                                selectOptions: [
-                                    "Цена по возрастанию",
-                                    "Цена по убыванию",
-                                ],
-                            })
-                        - if(checkProps.filter !== false)
-                            button.s-catalog__filter(type="button" data-js="catalogFilterOpen")
-                                svg
-                                    use(xlink:href=`img/sprites/sprite.svg#filter`)
+    -if(checkProps.isSlider !== true)
+        section.section.s-catalog(class= checkProps.classes)&attributes(attributes)
+            .section__container.section__content
+                .section-header.s-catalog__header
+                    .title.title--36!= checkProps.title
+                    - if(checkProps.sort !== false || checkProps.filter !== false)
+                        .s-catalog__controls
+                            - if(checkProps.sort !== false)
+                                +field({
+                                    classes: 's-catalog__sort field--white',
+                                    tag: 'select',
+                                    placeholder: 'Сортировать',
+                                    selectOptions: [
+                                        "Цена по возрастанию",
+                                        "Цена по убыванию",
+                                    ],
+                                })
+                            - if(checkProps.filter !== false)
+                                button.s-catalog__filter(type="button" data-js="catalogFilterOpen")
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#filter`)
 
-            .s-catalog__list
-                - let counter = 0
-                - while(counter < checkProps.items.length)
-                    +catalog-card(checkProps.items[counter])
+                .s-catalog__list
+                    - let counter = 0
+                    - while(counter < checkProps.items.length)
+                        +catalog-card(checkProps.items[counter])
 
-                    - counter++
+                        - counter++
 
-            - if(checkProps.pagination === true)
-                +pagination
-            - else
-                +btn({
-                    classes: 's-catalog__all',
-                    name: 'Показать еще',
-                    cMode: 'light-accent',
-                    sMode: 'full'
-                })
+                - if(checkProps.pagination === true)
+                    +pagination
+                - else
+                    +btn({
+                        classes: 's-catalog__all',
+                        name: 'Показать еще',
+                        cMode: 'light-accent',
+                        sMode: 'full'
+                    })
 
+    - else
+
+        section.section.s-catalog.s-catalog--slider(class= checkProps.classes data-js="sCatalogSlider")&attributes(attributes)
+            .section__container.section__content
+                .section-header.s-catalog__header
+                    .title.title--36!= checkProps.title
+
+                .s-catalog__list(data-js="sCatalogSliderSlider")
+                    .swiper-wrapper
+                        - let counter = 0
+                        - while(counter < checkProps.items.length)
+                            - checkProps.items[counter].classes = 'swiper-slide'
+                            +catalog-card(checkProps.items[counter])
+
+                            - counter++
 

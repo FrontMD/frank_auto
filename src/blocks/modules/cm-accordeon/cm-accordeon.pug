@@ -1,0 +1,113 @@
+-
+    const defaultCmAccordeonProps = {
+        classes: '',
+        title: 'Автомобили Lixiang L7 в наличии',
+        items: [
+            {
+                img: 'img/catalog-model/model_2.webp',
+                color: 'Цвет - черный',
+                isExpanded: true
+            },
+            {
+                img: 'img/catalog-model/model_1.webp',
+                color: 'Цвет - серебро',
+                isExpanded: false
+            },
+            {
+                img: 'img/catalog-model/model_5.webp',
+                color: 'Цвет - белый',
+                isExpanded: false
+            },
+        ]
+    }
+
+mixin cm-accordeon(props= defaultCmAccordeonProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultCmAccordeonProps.classes,
+            title: props.title ? props.title : defaultCmAccordeonProps.title,
+            items: props.items ? props.items : defaultCmAccordeonProps.items,
+        }
+
+    section.section.cm-accordeon(class= checkProps.classes)&attributes(attributes)
+        .section__container.section__content
+            .title.title--36.cm-accordeon__title!= checkProps.title
+
+            .cm-accordeon__list(data-js="cmAccordeon")
+                .cm-spoiler(data-js="cmSpoiler")
+                    .cm-spoiler__header(data-js="cmSpoilerHeader")
+                        .cm-spoiler__mode Pro 449 л.с. Hybrid Turbo 4WD
+                        .cm-spoiler__params
+                            .cm-spoiler__param
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#exc`)
+                                span 1.5л. / 449 л.с.
+                            .cm-spoiler__param
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#exc`)
+                                span AT
+                            .cm-spoiler__param
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#exc`)
+                                span 4WD
+                        .cm-spoiler__price.cm-spoiler__price--header
+                            .old 5 800 000 ₽
+                            .current 5 500 000 ₽
+                    .cm-spoiler__content(data-js="cmSpoilerContent")
+                        .cm-spoiler__top
+                            .cm-spoiler__img
+                            .cm-spoiler__base
+                            .cm-spoiler__gifts
+                            .cm-spoiler__price
+                            .cm-spoiler__btns
+                                +btn({
+                                    name: 'Забронировать',
+                                    cMode: 'accent',
+                                    sMode: 'full'
+                                })
+                                +btn({
+                                    name: 'В Trade-in',
+                                    cMode: 'light-accent',
+                                    sMode: 'full'
+                                })
+                        .cm-spoiler__bottom
+                            .cm-spoiler-list
+                                .cm-spoiler-list__icon
+                                .cm-spoiler-list__text
+                                    .cm-spoiler-list__title Безопасность
+                                    ul.cm-spoiler-list__items
+                                        li ЭРА-ГЛОНАСС
+                                        li Датчик давления в шинах
+                                        li Система помощи при спуске
+                                        li Система удержания в полосе
+                                        li Система стабилизации (ESP)
+                                        li Система контроля слепых зон
+                                        li Подушки безопасности боковые
+
+                            .cm-spoiler-list
+                                .cm-spoiler-list__icon
+                                .cm-spoiler-list__text
+                                    .cm-spoiler-list__title Экстерьер
+                                    ul.cm-spoiler-list__items
+                                        li Диски 20
+                                        li Датчик света
+                                        li Датчик дождя
+                                        li Светодиодные фары
+                                        li Автоматический корректор фар
+                                        li Система адаптивного освещения
+                                        li Электрообогрев боковых зеркал
+                                        li Система управления дальним светом
+
+                            .cm-spoiler-list
+                                .cm-spoiler-list__icon
+                                .cm-spoiler-list__text
+                                    .cm-spoiler-list__title Интерьер
+                                    ul.cm-spoiler-list__items
+                                        li Люк
+                                        li Сиденья с массажем
+                                        li Тонированные стекла
+                                        li Кожа (Материал салона)
+                                        li Подогрев задних сидений
+                                        li Память сиденья водителя
+                                        li Обогрев рулевого колеса
+                                        li Подогрев передних сидений

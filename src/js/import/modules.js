@@ -8,6 +8,9 @@
 @@include("../../blocks/modules/s-text/s-text.js")
 @@include("../../blocks/modules/catalog-filter/catalog-filter.js")
 @@include("../../blocks/modules/s-advantages/s-advantages.js")
+@@include("../../blocks/modules/cb-intro/cb-intro.js")
+@@include("../../blocks/modules/s-catalog/s-catalog.js")
+@@include("../../blocks/modules/cm-accordeon/cm-accordeon.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     modalsInit()
@@ -20,4 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     catalogFilter()
     sText()
     sAdvantagesSlider()
+    colorSliderInit()
+    sCatalogSliderInit()
+    cmSpoilersInit()
 })

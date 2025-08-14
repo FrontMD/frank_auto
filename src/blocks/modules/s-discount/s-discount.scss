@@ -1,0 +1,171 @@
+.s-discount {
+    overflow: hidden;
+
+    &__fields {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 24px;
+    }
+
+    &__bottom {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+        background: linear-gradient(107.18deg, #56636E 11.96%, #2E333F 97.96%);
+        padding: 30px;
+    }
+
+    &__result {
+        color: $c-text-light-1;
+        font-family: $ff-rooftop;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.2em;
+        letter-spacing: 0;
+        text-align: end;
+
+        span {
+            display: block;
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 1.2em;
+            letter-spacing: 0;
+        }
+    }
+
+    &__decor {
+        position: absolute;
+        color: $c-bg-main;
+        height: calc(100% + 2px);
+        top: -1;
+    }
+
+    &__decor--left {
+        left: -110px;
+    }
+
+    &__decor--right {
+        right: -110px;
+    }
+}
+
+.discount-field {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 20px 20px 20px 30px;
+    border-radius: $br-section;
+    height: 100%;
+    transition: all $tr-time linear;
+    overflow: hidden;
+
+    &__decor {
+        position: absolute;
+        bottom: -56px;
+        right: 30px;
+        width: 165px;
+        height: 165px;
+    }
+
+    &__content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 30px;
+        height: 100%;
+    }
+
+    &__top,
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+    }
+
+    &__top {
+        align-items: flex-start;
+    }
+
+    &__bottom {
+        align-items: flex-end;
+    }
+
+    &__title {
+        color: rgba(135, 142, 156, 0.6);
+        font-family: $ff-rooftop;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 100%;
+        letter-spacing: 0;
+        transition: all $tr-time linear;
+    }
+
+    &__text {
+        color: rgba(135, 142, 156, 0.6);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0;
+        transition: all $tr-time linear;
+    }
+
+    &__field {
+        flex: 0 0 auto;
+    }
+
+    &__discount {
+        background-color: rgba(135, 142, 156, 0.4);
+        color: $c-white;
+        font-family: $ff-rooftop;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 1.2em;
+        letter-spacing: 0;
+        flex: 0 1 56%;
+        max-width: fit-content;
+        padding: 10px 20px;
+        border-radius: $br-section;
+        transition: all $tr-time linear;
+    }
+
+    &__link {
+        color: $c-text-breadcrumbs;
+        flex: 0 0 auto;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 100%;
+        letter-spacing: 0;
+        text-decoration: underline;
+        transition: all $tr-time linear;
+
+        &:hover {
+            color: $c-accent-hover;
+            text-decoration: underline;
+        }
+    }
+}
+
+.discount-field {
+    &:has(input[type="checkbox"]:checked) {
+        background-color: $c-white;
+    }
+
+    &:has(input[type="checkbox"]:checked) &__title {
+        color: $c-text;
+    }
+
+    &:has(input[type="checkbox"]:checked) &__text {
+        color: $c-text-breadcrumbs;
+    }
+
+    &:has(input[type="checkbox"]:checked) &__discount {
+        background-color: $c-accent;
+    }
+
+    &:has(input[type="checkbox"]:checked) &__link {
+        color: $c-accent;
+    }
+}

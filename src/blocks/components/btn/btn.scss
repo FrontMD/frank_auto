@@ -166,6 +166,12 @@
         width: fit-content;
     }
 
+    &--narrow {
+        width: fit-content;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
     &--footer {
         width: fit-content;
         padding: 12px 23px;

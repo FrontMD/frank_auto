@@ -1,75 +1,204 @@
 -
     const defaultCBIntroProps = {
         classes: '',
+        isModel: false
     }
 
 mixin cb-intro(props= defaultCBIntroProps)
     -
         const checkProps = {
-            classes: props.classes ? props.classes : defaultCBIntroProps.classes
+            classes: props.classes ? props.classes : defaultCBIntroProps.classes,
+            isModel: props.isModel ? props.isModel : defaultCBIntroProps.isModel,
         }
 
-    section.section.cb-intro
-        .section__container
-            .section-block.cb-intro__block
-                .section-block__bg.cb-intro__bg
-                    img(src="img/catalog/catalog_brand_intro.webp" alt="")
-                .section-block__content.cb-intro__content
-                    .cb-intro__top
-                        .cb-intro__sticker.title-sticker Скидка до <span>350 000 ₽</span>
-                        .cb-intro__title.title.title--50.title--light
-                            | Грандиозная <br>распродажа Lixiang
-                        .cb-intro__subtitle Получите специальную цену + подарок на выбор при покупке автомобиля
-                    .cb-intro__advantages
-                        .cb-intro__advantage
-                            .cb-intro__icon
-                                svg
-                                    use(xlink:href=`img/sprites/sprite.svg#cb_icon_layout`)
-                                img(src="img/catalog-brand/cb_icon_1.svg" alt="")
-                            span Гарантия <br>лучшей цены
-                        .cb-intro__advantage
-                            .cb-intro__icon
-                                svg
-                                    use(xlink:href=`img/sprites/sprite.svg#cb_icon_layout`)
-                                img(src="img/catalog-brand/cb_icon_2.svg" alt="")
-                            span Выгодный <br>кредит
-                        .cb-intro__advantage
-                            .cb-intro__icon
-                                svg
-                                    use(xlink:href=`img/sprites/sprite.svg#cb_icon_layout`)
-                                img(src="img/catalog-brand/cb_icon_3.svg" alt="")
-                            span Зачёт вашего <br>автомобиля в trade-in
-                        .cb-intro__advantage
-                            .cb-intro__icon
-                                svg
-                                    use(xlink:href=`img/sprites/sprite.svg#cb_icon_layout`)
-                                img(src="img/catalog-brand/cb_icon_4.svg" alt="")
-                            span Подарок на выбор <br>при покупке автомобиля
+    -if(checkProps.isModel === false)
+        section.section.cb-intro
+            .section__container
+                .section-block.cb-intro__block
+                    .section-block__bg.cb-intro__bg
+                        picture
+                            source(srcset="img/catalog-brand/catalog_brand_intro_mob.webp" media="(max-width: 767px)")
+                            img(src="img/catalog-brand/catalog_brand_intro.webp" alt="")
+                    .section-block__content.cb-intro__content
+                        .cb-intro__top
+                            .cb-intro__sticker.title-sticker Скидка до <span>350 000 ₽</span>
+                            .cb-intro__title.title.title--50.title--light
+                                | Грандиозная <br>распродажа Lixiang
+                            .cb-intro__subtitle Получите специальную цену + подарок на выбор при покупке автомобиля
+                        .cb-intro__advantages
+                            .cb-intro__advantage
+                                .cb-intro__icon
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#cb_icon_layout`)
+                                    img(src="img/catalog-brand/cb_icon_1.svg" alt="")
+                                span Гарантия <br>лучшей цены
+                            .cb-intro__advantage
+                                .cb-intro__icon
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#cb_icon_layout`)
+                                    img(src="img/catalog-brand/cb_icon_2.svg" alt="")
+                                span Выгодный <br>кредит
+                            .cb-intro__advantage
+                                .cb-intro__icon
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#cb_icon_layout`)
+                                    img(src="img/catalog-brand/cb_icon_3.svg" alt="")
+                                span Зачёт вашего <br>автомобиля в trade-in
+                            .cb-intro__advantage
+                                .cb-intro__icon
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#cb_icon_layout`)
+                                    img(src="img/catalog-brand/cb_icon_4.svg" alt="")
+                                span Подарок на выбор <br>при покупке автомобиля
 
-        .section__container
-            .cb-intro__offer
-                .cb-offer
-                    .cb-offer__left
-                        .cb-offer__title Получите <br>специальную цену
-                        .cb-offer__date Только до 10.10.25
-                    +form({
-                        classes: 'form--horizontal cb-offer__form',
-                        btnText: 'Получить предложение',
-                        submitSize: 'content',
-                        privacyText: 'Нажимая кнопку «Получить предложение», Вы соглашаетесь с <a href="javascript:void(0);">политикой конфиденциальности</a> и <a href="javascript:void(0);">правилами обработки персональных данных</a>'
-                    })
-                        +field({
-                            placeholder: 'Ваш имя',
-                            inputAttr: {
-                                'required': '',
-                                'data-type': 'letters'
-                            },
+            .section__container
+                .cb-intro__offer
+                    .cb-offer
+                        .cb-offer__left
+                            .cb-offer__title Получите <br>специальную цену
+                            .cb-offer__date Только до 10.10.25
+                        +form({
+                            classes: 'form--horizontal cb-offer__form',
+                            btnText: 'Получить предложение',
+                            submitSize: 'content',
+                            privacyText: 'Нажимая кнопку «Получить предложение», Вы соглашаетесь с <a href="javascript:void(0);">политикой конфиденциальности</a> и <a href="javascript:void(0);">правилами обработки персональных данных</a>'
                         })
-                        +field({
-                            placeholder: 'Ваш телефон',
-                            inputAttr: {
-                                'required': '',
-                                'data-v-name': 'phone',
-                                'data-type': 'phoneNumber'
-                            },
+                            +field({
+                                placeholder: 'Ваш имя',
+                                inputAttr: {
+                                    'required': '',
+                                    'data-type': 'letters'
+                                },
+                            })
+                            +field({
+                                placeholder: 'Ваш телефон',
+                                inputAttr: {
+                                    'required': '',
+                                    'data-v-name': 'phone',
+                                    'data-type': 'phoneNumber'
+                                },
+                            })
+
+    - else
+        section.section.cb-intro.cb-intro--model
+            .section__container
+                .section-block.cb-intro__block
+                    .section-block__content.cb-intro__content
+                        .cb-intro__top
+                            .cb-intro__title.title.title--50
+                                .cb-intro__sticker.title-sticker Выгода до <span>200 000 ₽</span>
+                                h1 Lixiang L7
+                            .cb-intro__price
+                                span.old 5 800 000 ₽ 
+                                span.current от 5 500 000 ₽
+                            .cb-intro__stock Автомобилей в наличии - 10 шт
+
+                            .cb-intro__advantages
+                                .cb-intro__advantage
+                                    .cb-intro__icon
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#cb_icon_layout`)
+                                        img(src="img/catalog-brand/cb_icon_1.svg" alt="")
+                                    span Улучшим любое<br>предложение
+                                .cb-intro__advantage
+                                    .cb-intro__icon
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#cb_icon_layout`)
+                                        img(src="img/catalog-brand/cb_icon_2.svg" alt="")
+                                    span Без первончального<br>взноса
+                                .cb-intro__advantage
+                                    .cb-intro__icon
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#cb_icon_layout`)
+                                        img(src="img/catalog-brand/cb_icon_3.svg" alt="")
+                                    span Кредит от 1,9%
+
+                        .cb-intro__slider.color-slider(data-js="colorSlider")
+                            .color-slider__images(data-js="colorSliderImg")
+                                .swiper-wrapper
+                                    .color-slider__slide.swiper-slide
+                                        .color-slider__img
+                                            img(src="img/catalog-model/model_1.webp" alt="")
+                                    .color-slider__slide.swiper-slide
+                                        .color-slider__img
+                                            img(src="img/catalog-model/model_2.webp" alt="")
+                                    .color-slider__slide.swiper-slide
+                                        .color-slider__img
+                                            img(src="img/catalog-model/model_3.webp" alt="")
+                                    .color-slider__slide.swiper-slide
+                                        .color-slider__img
+                                            img(src="img/catalog-model/model_4.webp" alt="")
+                                    .color-slider__slide.swiper-slide
+                                        .color-slider__img
+                                            img(src="img/catalog-model/model_5.webp" alt="")
+                                    .color-slider__slide.swiper-slide
+                                        .color-slider__img
+                                            img(src="img/catalog-model/model_1.webp" alt="")
+                                    .color-slider__slide.swiper-slide
+                                        .color-slider__img
+                                            img(src="img/catalog-model/model_2.webp" alt="")
+                                    .color-slider__slide.swiper-slide
+                                        .color-slider__img
+                                            img(src="img/catalog-model/model_3.webp" alt="")
+                                    .color-slider__slide.swiper-slide
+                                        .color-slider__img
+                                            img(src="img/catalog-model/model_4.webp" alt="")
+
+                            .color-slider__tabs(data-js="colorSliderTabs")
+                                .swiper-wrapper
+                                    .color-slider__tab.swiper-slide(style="background-color: #0481C7; color: white;")
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#check`)
+                                    .color-slider__tab.swiper-slide(style="background-color: #FF0000; color: white;")
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#check`)
+                                    .color-slider__tab.swiper-slide(style="background-color: #E8E8E8; color: black;")
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#check`)
+                                    .color-slider__tab.swiper-slide(style="background-color: #FFFFFF; color: black;")
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#check`)
+                                    .color-slider__tab.swiper-slide(style="background-color: #C4C4C4; color: white;")
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#check`)
+                                    .color-slider__tab.swiper-slide(style="background-color: #6A6A6A; color: white;")
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#check`)
+                                    .color-slider__tab.swiper-slide(style="background-color: #262626; color: white;")
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#check`)
+                                    .color-slider__tab.swiper-slide(style="background-color: #A02323; color: white;")
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#check`)
+                                    .color-slider__tab.swiper-slide(style="background-color: #625A55; color: white;")
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#check`)                                        
+
+
+            .section__container
+                .cb-intro__offer
+                    .cb-offer.cb-offer--bordered
+                        .cb-offer__left
+                            .cb-offer__title Получите <br>специальную цену
+                            .cb-offer__date Только до 10.10.25
+                        +form({
+                            classes: 'form--horizontal cb-offer__form',
+                            btnText: 'Получить предложение',
+                            submitSize: 'content',
+                            privacyText: 'Нажимая кнопку «Получить предложение», Вы соглашаетесь с <a href="javascript:void(0);">политикой конфиденциальности</a> и <a href="javascript:void(0);">правилами обработки персональных данных</a>'
                         })
+                            +field({
+                                placeholder: 'Ваш имя',
+                                inputAttr: {
+                                    'required': '',
+                                    'data-type': 'letters'
+                                },
+                            })
+                            +field({
+                                placeholder: 'Ваш телефон',
+                                inputAttr: {
+                                    'required': '',
+                                    'data-v-name': 'phone',
+                                    'data-type': 'phoneNumber'
+                                },
+                            })
