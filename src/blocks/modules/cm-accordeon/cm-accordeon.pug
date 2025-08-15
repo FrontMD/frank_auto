@@ -6,17 +6,14 @@
             {
                 img: 'img/catalog-model/model_2.webp',
                 color: 'Цвет - черный',
-                isExpanded: true
             },
             {
                 img: 'img/catalog-model/model_1.webp',
                 color: 'Цвет - серебро',
-                isExpanded: false
             },
             {
                 img: 'img/catalog-model/model_5.webp',
                 color: 'Цвет - белый',
-                isExpanded: false
             },
         ]
     }
@@ -34,80 +31,152 @@ mixin cm-accordeon(props= defaultCmAccordeonProps)
             .title.title--36.cm-accordeon__title!= checkProps.title
 
             .cm-accordeon__list(data-js="cmAccordeon")
-                .cm-spoiler(data-js="cmSpoiler")
-                    .cm-spoiler__header(data-js="cmSpoilerHeader")
-                        .cm-spoiler__mode Pro 449 л.с. Hybrid Turbo 4WD
-                        .cm-spoiler__params
-                            .cm-spoiler__param
-                                svg
-                                    use(xlink:href=`img/sprites/sprite.svg#exc`)
-                                span 1.5л. / 449 л.с.
-                            .cm-spoiler__param
-                                svg
-                                    use(xlink:href=`img/sprites/sprite.svg#exc`)
-                                span AT
-                            .cm-spoiler__param
-                                svg
-                                    use(xlink:href=`img/sprites/sprite.svg#exc`)
-                                span 4WD
-                        .cm-spoiler__price.cm-spoiler__price--header
-                            .old 5 800 000 ₽
-                            .current 5 500 000 ₽
-                    .cm-spoiler__content(data-js="cmSpoilerContent")
-                        .cm-spoiler__top
-                            .cm-spoiler__img
-                            .cm-spoiler__base
-                            .cm-spoiler__gifts
-                            .cm-spoiler__price
-                            .cm-spoiler__btns
-                                +btn({
-                                    name: 'Забронировать',
-                                    cMode: 'accent',
-                                    sMode: 'full'
-                                })
-                                +btn({
-                                    name: 'В Trade-in',
-                                    cMode: 'light-accent',
-                                    sMode: 'full'
-                                })
-                        .cm-spoiler__bottom
-                            .cm-spoiler-list
-                                .cm-spoiler-list__icon
-                                .cm-spoiler-list__text
-                                    .cm-spoiler-list__title Безопасность
-                                    ul.cm-spoiler-list__items
-                                        li ЭРА-ГЛОНАСС
-                                        li Датчик давления в шинах
-                                        li Система помощи при спуске
-                                        li Система удержания в полосе
-                                        li Система стабилизации (ESP)
-                                        li Система контроля слепых зон
-                                        li Подушки безопасности боковые
+                -let counter = 0
+                - while(counter < checkProps.items.length)
+                    -let item = checkProps.items[counter]
 
-                            .cm-spoiler-list
-                                .cm-spoiler-list__icon
-                                .cm-spoiler-list__text
-                                    .cm-spoiler-list__title Экстерьер
-                                    ul.cm-spoiler-list__items
-                                        li Диски 20
-                                        li Датчик света
-                                        li Датчик дождя
-                                        li Светодиодные фары
-                                        li Автоматический корректор фар
-                                        li Система адаптивного освещения
-                                        li Электрообогрев боковых зеркал
-                                        li Система управления дальним светом
+                    .cm-spoiler(data-js="cmSpoiler")
+                        .cm-spoiler__header(data-js="cmSpoilerHeader")
+                            .cm-spoiler__mode Pro 449 л.с. Hybrid Turbo 4WD
+                            .cm-spoiler__params
+                                .cm-spoiler__param
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#exc`)
+                                    span 1.5л. / 449 л.с.
+                                .cm-spoiler__param
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#exc`)
+                                    span AT
+                                .cm-spoiler__param
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#exc`)
+                                    span 4WD
+                            .cm-spoiler__price.cm-spoiler__price--header
+                                .old 5 800 000 ₽
+                                .current 5 500 000 ₽
+                            .cm-spoiler__arrow
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_spoiler`)
+                        .cm-spoiler__content(data-js="cmSpoilerContent")
+                            .cm-spoiler__top
+                                .cm-spoiler__base
+                                    .cm-spoiler__img
+                                        .cm-spoiler__sticker Выгода 300 000 ₽
+                                        +prod-controls({
+                                            classes: 'cm-spoiler__controls',
+                                            compare: true
+                                        })
+                                        img(src=item.img alt="")
 
-                            .cm-spoiler-list
-                                .cm-spoiler-list__icon
-                                .cm-spoiler-list__text
-                                    .cm-spoiler-list__title Интерьер
-                                    ul.cm-spoiler-list__items
-                                        li Люк
-                                        li Сиденья с массажем
-                                        li Тонированные стекла
-                                        li Кожа (Материал салона)
-                                        li Подогрев задних сидений
-                                        li Память сиденья водителя
-                                        li Обогрев рулевого колеса
-                                        li Подогрев передних сидений
+                                    .cm-spoiler__desc
+                                        .cm-spoiler__title Lixiang L7 52.3 kWh
+
+                                        .cm-spoiler__chars
+                                            .cm-spoiler__char
+                                                img(src="img/catalog/chars/engine.svg" alt="") 
+                                                span 449 л.с.
+                                            .cm-spoiler__char
+                                                img(src="img/catalog/chars/fuel.svg" alt="") 
+                                                span 1.5 л/км
+                                            .cm-spoiler__char
+                                                img(src="img/catalog/chars/speed.svg" alt="") 
+                                                span 180 км/ч
+                                            .cm-spoiler__char
+                                                img(src="img/catalog/chars/timer.svg" alt="") 
+                                                span 5.3 c.
+
+                                        .cm-spoiler__info
+                                            .cm-spoiler__inf
+                                                svg
+                                                    use(xlink:href=`img/sprites/sprite.svg#pts`)
+                                                span В наличии с ПТС
+                                            .cm-spoiler__inf
+                                                svg
+                                                    use(xlink:href=`img/sprites/sprite.svg#color`)
+                                                span!= item.color
+
+                                        +btn({
+                                            classes: 'cm-spoiler__more btn--toggle',
+                                            name: '<span class="show">Раскрыть описание</span><span class="hide">Скрыть описание</span>',
+                                            icon: 'description',
+                                            cMode: 'bordered',
+                                            sMode: 'narrow',
+                                            type: 'button',
+                                            hasArrow: true
+                                        })(data-js="cmSpoilerMoreBtn")
+
+                                .cm-spoiler__gifts
+                                    .cm-spoiler__gift
+                                        img(src="img/catalog/gift.svg" alt="")
+                                        .text Оборудование <span>в подарок
+                                    .cm-spoiler__gift
+                                        img(src="img/catalog/gift.svg" alt="")
+                                        .text КАСКО <span>в подарок
+                                    .cm-spoiler__gift
+                                        img(src="img/catalog/gift.svg" alt="")
+                                        .text Комплект резины <span>в подарок
+
+                                .cm-spoiler__btns
+                                    .cm-spoiler__row
+                                        .cm-spoiler__price
+                                            .current 5 500 000 ₽
+                                            .discount 300 000 ₽
+                                        +btn({
+                                            name: 'Забронировать',
+                                            cMode: 'accent',
+                                            sMode: '165'
+                                        })
+                                    .cm-spoiler__row
+                                        .cm-spoiler__credit Кредит<br>от 10 000 ₽/мес 
+                                        +btn({
+                                            name: 'В Trade-in',
+                                            cMode: 'light-accent',
+                                            sMode: '165'
+                                        })
+                            .cm-spoiler__bottom(data-js="cmSpoilerDetailed")
+                                .cm-spoiler__detailed
+                                    .cm-spoiler-list.cm-spoiler__list
+                                        .cm-spoiler-list__icon
+                                            img(src="img/catalog-model/car_prop_1.svg" alt="")
+                                        .cm-spoiler-list__text
+                                            .cm-spoiler-list__title Безопасность
+                                            ul.cm-spoiler-list__items
+                                                li ЭРА-ГЛОНАСС
+                                                li Датчик давления в шинах
+                                                li Система помощи при спуске
+                                                li Система удержания в полосе
+                                                li Система стабилизации (ESP)
+                                                li Система контроля слепых зон
+                                                li Подушки безопасности боковые
+
+                                    .cm-spoiler-list.cm-spoiler__list
+                                        .cm-spoiler-list__icon
+                                            img(src="img/catalog-model/car_prop_2.svg" alt="")
+                                        .cm-spoiler-list__text
+                                            .cm-spoiler-list__title Экстерьер
+                                            ul.cm-spoiler-list__items
+                                                li Диски 20
+                                                li Датчик света
+                                                li Датчик дождя
+                                                li Светодиодные фары
+                                                li Автоматический корректор фар
+                                                li Система адаптивного освещения
+                                                li Электрообогрев боковых зеркал
+                                                li Система управления дальним светом
+
+                                    .cm-spoiler-list.cm-spoiler__list
+                                        .cm-spoiler-list__icon
+                                            img(src="img/catalog-model/car_prop_3.svg" alt="")
+                                        .cm-spoiler-list__text
+                                            .cm-spoiler-list__title Интерьер
+                                            ul.cm-spoiler-list__items
+                                                li Люк
+                                                li Сиденья с массажем
+                                                li Тонированные стекла
+                                                li Кожа (Материал салона)
+                                                li Подогрев задних сидений
+                                                li Память сиденья водителя
+                                                li Обогрев рулевого колеса
+                                                li Подогрев передних сидений
+
+                    - counter++

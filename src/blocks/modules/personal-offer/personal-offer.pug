@@ -1,0 +1,47 @@
+-
+    const defaultPersonalOfferProps = {
+        classes: '',
+    }
+
+mixin personal-offer(props= defaultPersonalOfferProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultPersonalOfferProps.classes,
+        }
+
+    section.section.personal-offer(class= checkProps.classes)&attributes(attributes)
+        .section__container.section__content
+            .personal-offer__container
+                .personal-offer__block
+                    .personal-offer__content
+                        .title.title--30.personal-offer__title 
+                            .personal-offer__sticker.title-sticker
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#lightning`)
+                                | Акция<br>до 20.02.2021
+                            | Станьте владельцем<br>Lixiang L7 уже сегодня
+                        .personal-offer__subtitle Ваше персональное предложение
+
+                        +form({
+                            classes: 'form--horizontal',
+                            btnText: 'Заказать звонок',
+                            submitSize: 'content',
+                            privacyText: 'Нажимая кнопку «Заказать звонок», Вы соглашаетесь с <a href="javascript:void(0);">политикой конфиденциальности</a> и <a href="javascript:void(0);">правилами обработки персональных данных</a>'
+                        })
+                            +field({
+                                placeholder: 'Ваш имя',
+                                inputAttr: {
+                                    'required': '',
+                                    'data-type': 'letters'
+                                },
+                            })
+                            +field({
+                                placeholder: 'Ваш телефон',
+                                inputAttr: {
+                                    'required': '',
+                                    'data-v-name': 'phone',
+                                    'data-type': 'phoneNumber'
+                                },
+                            })
+                    .personal-offer__img
+                        img(src='img/catalog-model/model_5.webp' alt="")

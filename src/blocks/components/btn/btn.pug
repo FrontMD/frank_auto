@@ -8,6 +8,7 @@
         link: 'javascript:void(0)',
         buttonType: 'button',
         icon: '', 
+        hasArrow: false
     }
 
 mixin btn(props = defaultBtnProps)
@@ -20,7 +21,8 @@ mixin btn(props = defaultBtnProps)
             type: props.type ? props.type : defaultBtnProps.type,
             link: props.link ? props.link : defaultBtnProps.link,
             buttonType: props.buttonType ? props.buttonType : defaultBtnProps.buttonType,
-            icon: props.icon ? props.icon : defaultBtnProps.icon
+            icon: props.icon ? props.icon : defaultBtnProps.icon,
+            hasArrow: props.hasArrow ? props.hasArrow : defaultBtnProps.hasArrow
         }
 
         let colorClass = ` btn--${checkProps.cMode}`
@@ -33,6 +35,9 @@ mixin btn(props = defaultBtnProps)
                     use(xlink:href=`img/sprites/sprite.svg#${checkProps.icon}`)
             -if(checkProps.sMode !== 'icon')
                 span.btn__text!= checkProps.name
+            -if(checkProps.hasArrow === true)
+                svg.btn__arrow
+                    use(xlink:href=`img/sprites/sprite.svg#burger_chevron`)
     - else if(checkProps.type == 'button')
         button.btn(class=checkProps.classes + colorClass + sizeClass type= checkProps.buttonType)&attributes(attributes)
             -if(checkProps.icon.length > 0)
@@ -40,4 +45,7 @@ mixin btn(props = defaultBtnProps)
                     use(xlink:href=`img/sprites/sprite.svg#${checkProps.icon}`)
             -if(checkProps.sMode !== 'icon')
                 span.btn__text!= checkProps.name
+            -if(checkProps.hasArrow === true)
+                svg.btn__arrow
+                    use(xlink:href=`img/sprites/sprite.svg#burger_chevron`)
 

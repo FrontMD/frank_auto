@@ -1,0 +1,18 @@
+-
+    const defaultPhotoGalleryProps = {
+        classes: '',
+    }
+
+mixin photo-gallery(props= defaultPhotoGalleryProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultPhotoGalleryProps.classes,
+        }
+
+    section.section.photo-gallery(class= checkProps.classes data-js="photoGallery")&attributes(attributes)
+        .section__container.section__content
+            +tabs-block
+
+            .photo-gallery__text.text-editor 
+                p Мощный и просторный кроссовер Lixiang L7 продолжает завоевывать популярность по всему миру. Этот автомобиль считается одним из основных соперников среди европейских и японских моделей в своем классе, превосходя их как по оснащению, так и по стоимости. Теперь Lixiang L7 доступен для покупки в России. Компания Шанхай Моторс предлагает приобрести данный автомобиль по цене, близкой к той, что установлена на китайском рынке. В нашем каталоге вы найдете наиболее выгодные варианты покупки премиальных китайских авто. Не упустите возможность приобрести Li L7 в России напрямую от производителя.
+

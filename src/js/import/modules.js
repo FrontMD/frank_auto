@@ -11,6 +11,7 @@
 @@include("../../blocks/modules/cb-intro/cb-intro.js")
 @@include("../../blocks/modules/s-catalog/s-catalog.js")
 @@include("../../blocks/modules/cm-accordeon/cm-accordeon.js")
+@@include("../../blocks/modules/photo-gallery/photo-gallery.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     modalsInit()
@@ -26,4 +27,5 @@ document.addEventListener('DOMContentLoaded', () => {
     colorSliderInit()
     sCatalogSliderInit()
     cmSpoilersInit()
+    photoGalleryInit()
 })

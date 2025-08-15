@@ -544,67 +544,493 @@
                         <div class="old">5 800 000 ₽</div>
                         <div class="current">5 500 000 ₽</div>
                       </div>
+                      <div class="cm-spoiler__arrow">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#arrow_spoiler"></use>
+                        </svg>
+                      </div>
                     </div>
                     <div class="cm-spoiler__content" data-js="cmSpoilerContent">
                       <div class="cm-spoiler__top">
-                        <div class="cm-spoiler__img"></div>
-                        <div class="cm-spoiler__base"></div>
-                        <div class="cm-spoiler__gifts"></div>
-                        <div class="cm-spoiler__price"></div>
-                        <div class="cm-spoiler__btns"><a class="btn  btn--accent btn--full" href="javascript:void(0)"><span class="btn__text">Забронировать</span></a><a class="btn  btn--light-accent btn--full" href="javascript:void(0)"><span class="btn__text">В Trade-in</span></a>
+                        <div class="cm-spoiler__base">
+                          <div class="cm-spoiler__img">
+                            <div class="cm-spoiler__sticker">Выгода 300 000 ₽</div>
+                                <div class="prod-controls cm-spoiler__controls"><a class="prod-controls__item" href="javascript:void(0);">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#compare"></use>
+                                    </svg></a>
+                                </div><img src="img/catalog-model/model_2.webp" alt="">
+                          </div>
+                          <div class="cm-spoiler__desc">
+                            <div class="cm-spoiler__title">Lixiang L7 52.3 kWh</div>
+                            <div class="cm-spoiler__chars">
+                              <div class="cm-spoiler__char"><img src="img/catalog/chars/engine.svg" alt=""><span>449 л.с.</span></div>
+                              <div class="cm-spoiler__char"><img src="img/catalog/chars/fuel.svg" alt=""><span>1.5 л/км</span></div>
+                              <div class="cm-spoiler__char"><img src="img/catalog/chars/speed.svg" alt=""><span>180 км/ч</span></div>
+                              <div class="cm-spoiler__char"><img src="img/catalog/chars/timer.svg" alt=""><span>5.3 c.</span></div>
+                            </div>
+                            <div class="cm-spoiler__info">
+                              <div class="cm-spoiler__inf">
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#pts"></use>
+                                </svg><span>В наличии с ПТС</span>
+                              </div>
+                              <div class="cm-spoiler__inf">
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#color"></use>
+                                </svg><span>Цвет - черный</span>
+                              </div>
+                            </div>
+                                <button class="btn cm-spoiler__more btn--toggle btn--bordered btn--narrow" type="button" data-js="cmSpoilerMoreBtn">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#description"></use>
+                                  </svg><span class="btn__text"><span class="show">Раскрыть описание</span><span class="hide">Скрыть описание</span></span>
+                                  <svg class="btn__arrow">
+                                    <use xlink:href="img/sprites/sprite.svg#burger_chevron"></use>
+                                  </svg>
+                                </button>
+                          </div>
+                        </div>
+                        <div class="cm-spoiler__gifts">
+                          <div class="cm-spoiler__gift"><img src="img/catalog/gift.svg" alt="">
+                            <div class="text">Оборудование <span>в подарок</div>
+                          </div>
+                          <div class="cm-spoiler__gift"><img src="img/catalog/gift.svg" alt="">
+                            <div class="text">КАСКО <span>в подарок</div>
+                          </div>
+                          <div class="cm-spoiler__gift"><img src="img/catalog/gift.svg" alt="">
+                            <div class="text">Комплект резины <span>в подарок</div>
+                          </div>
+                        </div>
+                        <div class="cm-spoiler__btns">
+                          <div class="cm-spoiler__row">
+                            <div class="cm-spoiler__price">
+                              <div class="current">5 500 000 ₽</div>
+                              <div class="discount">300 000 ₽</div>
+                            </div><a class="btn  btn--accent btn--165" href="javascript:void(0)"><span class="btn__text">Забронировать</span></a>
+                          </div>
+                          <div class="cm-spoiler__row">
+                            <div class="cm-spoiler__credit">Кредит<br>от 10 000 ₽/мес </div><a class="btn  btn--light-accent btn--165" href="javascript:void(0)"><span class="btn__text">В Trade-in</span></a>
+                          </div>
                         </div>
                       </div>
-                      <div class="cm-spoiler__bottom">
-                        <div class="cm-spoiler-list">
-                          <div class="cm-spoiler-list__icon"></div>
-                          <div class="cm-spoiler-list__text">
-                            <div class="cm-spoiler-list__title">Безопасность</div>
-                            <ul class="cm-spoiler-list__items">
-                              <li>ЭРА-ГЛОНАСС</li>
-                              <li>Датчик давления в шинах</li>
-                              <li>Система помощи при спуске</li>
-                              <li>Система удержания в полосе</li>
-                              <li>Система стабилизации (ESP)</li>
-                              <li>Система контроля слепых зон</li>
-                              <li>Подушки безопасности боковые</li>
-                            </ul>
+                      <div class="cm-spoiler__bottom" data-js="cmSpoilerDetailed">
+                        <div class="cm-spoiler__detailed">
+                          <div class="cm-spoiler-list cm-spoiler__list">
+                            <div class="cm-spoiler-list__icon"><img src="img/catalog-model/car_prop_1.svg" alt=""></div>
+                            <div class="cm-spoiler-list__text">
+                              <div class="cm-spoiler-list__title">Безопасность</div>
+                              <ul class="cm-spoiler-list__items">
+                                <li>ЭРА-ГЛОНАСС</li>
+                                <li>Датчик давления в шинах</li>
+                                <li>Система помощи при спуске</li>
+                                <li>Система удержания в полосе</li>
+                                <li>Система стабилизации (ESP)</li>
+                                <li>Система контроля слепых зон</li>
+                                <li>Подушки безопасности боковые</li>
+                              </ul>
+                            </div>
                           </div>
-                        </div>
-                        <div class="cm-spoiler-list">
-                          <div class="cm-spoiler-list__icon"></div>
-                          <div class="cm-spoiler-list__text">
-                            <div class="cm-spoiler-list__title">Экстерьер</div>
-                            <ul class="cm-spoiler-list__items">
-                              <li>Диски 20</li>
-                              <li>Датчик света</li>
-                              <li>Датчик дождя</li>
-                              <li>Светодиодные фары</li>
-                              <li>Автоматический корректор фар</li>
-                              <li>Система адаптивного освещения</li>
-                              <li>Электрообогрев боковых зеркал</li>
-                              <li>Система управления дальним светом</li>
-                            </ul>
+                          <div class="cm-spoiler-list cm-spoiler__list">
+                            <div class="cm-spoiler-list__icon"><img src="img/catalog-model/car_prop_2.svg" alt=""></div>
+                            <div class="cm-spoiler-list__text">
+                              <div class="cm-spoiler-list__title">Экстерьер</div>
+                              <ul class="cm-spoiler-list__items">
+                                <li>Диски 20</li>
+                                <li>Датчик света</li>
+                                <li>Датчик дождя</li>
+                                <li>Светодиодные фары</li>
+                                <li>Автоматический корректор фар</li>
+                                <li>Система адаптивного освещения</li>
+                                <li>Электрообогрев боковых зеркал</li>
+                                <li>Система управления дальним светом</li>
+                              </ul>
+                            </div>
                           </div>
-                        </div>
-                        <div class="cm-spoiler-list">
-                          <div class="cm-spoiler-list__icon"></div>
-                          <div class="cm-spoiler-list__text">
-                            <div class="cm-spoiler-list__title">Интерьер</div>
-                            <ul class="cm-spoiler-list__items">
-                              <li>Люк</li>
-                              <li>Сиденья с массажем</li>
-                              <li>Тонированные стекла</li>
-                              <li>Кожа (Материал салона)</li>
-                              <li>Подогрев задних сидений</li>
-                              <li>Память сиденья водителя</li>
-                              <li>Обогрев рулевого колеса</li>
-                              <li>Подогрев передних сидений</li>
-                            </ul>
+                          <div class="cm-spoiler-list cm-spoiler__list">
+                            <div class="cm-spoiler-list__icon"><img src="img/catalog-model/car_prop_3.svg" alt=""></div>
+                            <div class="cm-spoiler-list__text">
+                              <div class="cm-spoiler-list__title">Интерьер</div>
+                              <ul class="cm-spoiler-list__items">
+                                <li>Люк</li>
+                                <li>Сиденья с массажем</li>
+                                <li>Тонированные стекла</li>
+                                <li>Кожа (Материал салона)</li>
+                                <li>Подогрев задних сидений</li>
+                                <li>Память сиденья водителя</li>
+                                <li>Обогрев рулевого колеса</li>
+                                <li>Подогрев передних сидений</li>
+                              </ul>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <div class="cm-spoiler" data-js="cmSpoiler">
+                    <div class="cm-spoiler__header" data-js="cmSpoilerHeader">
+                      <div class="cm-spoiler__mode">Pro 449 л.с. Hybrid Turbo 4WD</div>
+                      <div class="cm-spoiler__params">
+                        <div class="cm-spoiler__param">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                          </svg><span>1.5л. / 449 л.с.</span>
+                        </div>
+                        <div class="cm-spoiler__param">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                          </svg><span>AT</span>
+                        </div>
+                        <div class="cm-spoiler__param">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                          </svg><span>4WD</span>
+                        </div>
+                      </div>
+                      <div class="cm-spoiler__price cm-spoiler__price--header">
+                        <div class="old">5 800 000 ₽</div>
+                        <div class="current">5 500 000 ₽</div>
+                      </div>
+                      <div class="cm-spoiler__arrow">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#arrow_spoiler"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="cm-spoiler__content" data-js="cmSpoilerContent">
+                      <div class="cm-spoiler__top">
+                        <div class="cm-spoiler__base">
+                          <div class="cm-spoiler__img">
+                            <div class="cm-spoiler__sticker">Выгода 300 000 ₽</div>
+                                <div class="prod-controls cm-spoiler__controls"><a class="prod-controls__item" href="javascript:void(0);">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#compare"></use>
+                                    </svg></a>
+                                </div><img src="img/catalog-model/model_1.webp" alt="">
+                          </div>
+                          <div class="cm-spoiler__desc">
+                            <div class="cm-spoiler__title">Lixiang L7 52.3 kWh</div>
+                            <div class="cm-spoiler__chars">
+                              <div class="cm-spoiler__char"><img src="img/catalog/chars/engine.svg" alt=""><span>449 л.с.</span></div>
+                              <div class="cm-spoiler__char"><img src="img/catalog/chars/fuel.svg" alt=""><span>1.5 л/км</span></div>
+                              <div class="cm-spoiler__char"><img src="img/catalog/chars/speed.svg" alt=""><span>180 км/ч</span></div>
+                              <div class="cm-spoiler__char"><img src="img/catalog/chars/timer.svg" alt=""><span>5.3 c.</span></div>
+                            </div>
+                            <div class="cm-spoiler__info">
+                              <div class="cm-spoiler__inf">
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#pts"></use>
+                                </svg><span>В наличии с ПТС</span>
+                              </div>
+                              <div class="cm-spoiler__inf">
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#color"></use>
+                                </svg><span>Цвет - серебро</span>
+                              </div>
+                            </div>
+                                <button class="btn cm-spoiler__more btn--toggle btn--bordered btn--narrow" type="button" data-js="cmSpoilerMoreBtn">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#description"></use>
+                                  </svg><span class="btn__text"><span class="show">Раскрыть описание</span><span class="hide">Скрыть описание</span></span>
+                                  <svg class="btn__arrow">
+                                    <use xlink:href="img/sprites/sprite.svg#burger_chevron"></use>
+                                  </svg>
+                                </button>
+                          </div>
+                        </div>
+                        <div class="cm-spoiler__gifts">
+                          <div class="cm-spoiler__gift"><img src="img/catalog/gift.svg" alt="">
+                            <div class="text">Оборудование <span>в подарок</div>
+                          </div>
+                          <div class="cm-spoiler__gift"><img src="img/catalog/gift.svg" alt="">
+                            <div class="text">КАСКО <span>в подарок</div>
+                          </div>
+                          <div class="cm-spoiler__gift"><img src="img/catalog/gift.svg" alt="">
+                            <div class="text">Комплект резины <span>в подарок</div>
+                          </div>
+                        </div>
+                        <div class="cm-spoiler__btns">
+                          <div class="cm-spoiler__row">
+                            <div class="cm-spoiler__price">
+                              <div class="current">5 500 000 ₽</div>
+                              <div class="discount">300 000 ₽</div>
+                            </div><a class="btn  btn--accent btn--165" href="javascript:void(0)"><span class="btn__text">Забронировать</span></a>
+                          </div>
+                          <div class="cm-spoiler__row">
+                            <div class="cm-spoiler__credit">Кредит<br>от 10 000 ₽/мес </div><a class="btn  btn--light-accent btn--165" href="javascript:void(0)"><span class="btn__text">В Trade-in</span></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cm-spoiler__bottom" data-js="cmSpoilerDetailed">
+                        <div class="cm-spoiler__detailed">
+                          <div class="cm-spoiler-list cm-spoiler__list">
+                            <div class="cm-spoiler-list__icon"><img src="img/catalog-model/car_prop_1.svg" alt=""></div>
+                            <div class="cm-spoiler-list__text">
+                              <div class="cm-spoiler-list__title">Безопасность</div>
+                              <ul class="cm-spoiler-list__items">
+                                <li>ЭРА-ГЛОНАСС</li>
+                                <li>Датчик давления в шинах</li>
+                                <li>Система помощи при спуске</li>
+                                <li>Система удержания в полосе</li>
+                                <li>Система стабилизации (ESP)</li>
+                                <li>Система контроля слепых зон</li>
+                                <li>Подушки безопасности боковые</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="cm-spoiler-list cm-spoiler__list">
+                            <div class="cm-spoiler-list__icon"><img src="img/catalog-model/car_prop_2.svg" alt=""></div>
+                            <div class="cm-spoiler-list__text">
+                              <div class="cm-spoiler-list__title">Экстерьер</div>
+                              <ul class="cm-spoiler-list__items">
+                                <li>Диски 20</li>
+                                <li>Датчик света</li>
+                                <li>Датчик дождя</li>
+                                <li>Светодиодные фары</li>
+                                <li>Автоматический корректор фар</li>
+                                <li>Система адаптивного освещения</li>
+                                <li>Электрообогрев боковых зеркал</li>
+                                <li>Система управления дальним светом</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="cm-spoiler-list cm-spoiler__list">
+                            <div class="cm-spoiler-list__icon"><img src="img/catalog-model/car_prop_3.svg" alt=""></div>
+                            <div class="cm-spoiler-list__text">
+                              <div class="cm-spoiler-list__title">Интерьер</div>
+                              <ul class="cm-spoiler-list__items">
+                                <li>Люк</li>
+                                <li>Сиденья с массажем</li>
+                                <li>Тонированные стекла</li>
+                                <li>Кожа (Материал салона)</li>
+                                <li>Подогрев задних сидений</li>
+                                <li>Память сиденья водителя</li>
+                                <li>Обогрев рулевого колеса</li>
+                                <li>Подогрев передних сидений</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cm-spoiler" data-js="cmSpoiler">
+                    <div class="cm-spoiler__header" data-js="cmSpoilerHeader">
+                      <div class="cm-spoiler__mode">Pro 449 л.с. Hybrid Turbo 4WD</div>
+                      <div class="cm-spoiler__params">
+                        <div class="cm-spoiler__param">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                          </svg><span>1.5л. / 449 л.с.</span>
+                        </div>
+                        <div class="cm-spoiler__param">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                          </svg><span>AT</span>
+                        </div>
+                        <div class="cm-spoiler__param">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                          </svg><span>4WD</span>
+                        </div>
+                      </div>
+                      <div class="cm-spoiler__price cm-spoiler__price--header">
+                        <div class="old">5 800 000 ₽</div>
+                        <div class="current">5 500 000 ₽</div>
+                      </div>
+                      <div class="cm-spoiler__arrow">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#arrow_spoiler"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="cm-spoiler__content" data-js="cmSpoilerContent">
+                      <div class="cm-spoiler__top">
+                        <div class="cm-spoiler__base">
+                          <div class="cm-spoiler__img">
+                            <div class="cm-spoiler__sticker">Выгода 300 000 ₽</div>
+                                <div class="prod-controls cm-spoiler__controls"><a class="prod-controls__item" href="javascript:void(0);">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#compare"></use>
+                                    </svg></a>
+                                </div><img src="img/catalog-model/model_5.webp" alt="">
+                          </div>
+                          <div class="cm-spoiler__desc">
+                            <div class="cm-spoiler__title">Lixiang L7 52.3 kWh</div>
+                            <div class="cm-spoiler__chars">
+                              <div class="cm-spoiler__char"><img src="img/catalog/chars/engine.svg" alt=""><span>449 л.с.</span></div>
+                              <div class="cm-spoiler__char"><img src="img/catalog/chars/fuel.svg" alt=""><span>1.5 л/км</span></div>
+                              <div class="cm-spoiler__char"><img src="img/catalog/chars/speed.svg" alt=""><span>180 км/ч</span></div>
+                              <div class="cm-spoiler__char"><img src="img/catalog/chars/timer.svg" alt=""><span>5.3 c.</span></div>
+                            </div>
+                            <div class="cm-spoiler__info">
+                              <div class="cm-spoiler__inf">
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#pts"></use>
+                                </svg><span>В наличии с ПТС</span>
+                              </div>
+                              <div class="cm-spoiler__inf">
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#color"></use>
+                                </svg><span>Цвет - белый</span>
+                              </div>
+                            </div>
+                                <button class="btn cm-spoiler__more btn--toggle btn--bordered btn--narrow" type="button" data-js="cmSpoilerMoreBtn">
+                                  <svg>
+                                    <use xlink:href="img/sprites/sprite.svg#description"></use>
+                                  </svg><span class="btn__text"><span class="show">Раскрыть описание</span><span class="hide">Скрыть описание</span></span>
+                                  <svg class="btn__arrow">
+                                    <use xlink:href="img/sprites/sprite.svg#burger_chevron"></use>
+                                  </svg>
+                                </button>
+                          </div>
+                        </div>
+                        <div class="cm-spoiler__gifts">
+                          <div class="cm-spoiler__gift"><img src="img/catalog/gift.svg" alt="">
+                            <div class="text">Оборудование <span>в подарок</div>
+                          </div>
+                          <div class="cm-spoiler__gift"><img src="img/catalog/gift.svg" alt="">
+                            <div class="text">КАСКО <span>в подарок</div>
+                          </div>
+                          <div class="cm-spoiler__gift"><img src="img/catalog/gift.svg" alt="">
+                            <div class="text">Комплект резины <span>в подарок</div>
+                          </div>
+                        </div>
+                        <div class="cm-spoiler__btns">
+                          <div class="cm-spoiler__row">
+                            <div class="cm-spoiler__price">
+                              <div class="current">5 500 000 ₽</div>
+                              <div class="discount">300 000 ₽</div>
+                            </div><a class="btn  btn--accent btn--165" href="javascript:void(0)"><span class="btn__text">Забронировать</span></a>
+                          </div>
+                          <div class="cm-spoiler__row">
+                            <div class="cm-spoiler__credit">Кредит<br>от 10 000 ₽/мес </div><a class="btn  btn--light-accent btn--165" href="javascript:void(0)"><span class="btn__text">В Trade-in</span></a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="cm-spoiler__bottom" data-js="cmSpoilerDetailed">
+                        <div class="cm-spoiler__detailed">
+                          <div class="cm-spoiler-list cm-spoiler__list">
+                            <div class="cm-spoiler-list__icon"><img src="img/catalog-model/car_prop_1.svg" alt=""></div>
+                            <div class="cm-spoiler-list__text">
+                              <div class="cm-spoiler-list__title">Безопасность</div>
+                              <ul class="cm-spoiler-list__items">
+                                <li>ЭРА-ГЛОНАСС</li>
+                                <li>Датчик давления в шинах</li>
+                                <li>Система помощи при спуске</li>
+                                <li>Система удержания в полосе</li>
+                                <li>Система стабилизации (ESP)</li>
+                                <li>Система контроля слепых зон</li>
+                                <li>Подушки безопасности боковые</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="cm-spoiler-list cm-spoiler__list">
+                            <div class="cm-spoiler-list__icon"><img src="img/catalog-model/car_prop_2.svg" alt=""></div>
+                            <div class="cm-spoiler-list__text">
+                              <div class="cm-spoiler-list__title">Экстерьер</div>
+                              <ul class="cm-spoiler-list__items">
+                                <li>Диски 20</li>
+                                <li>Датчик света</li>
+                                <li>Датчик дождя</li>
+                                <li>Светодиодные фары</li>
+                                <li>Автоматический корректор фар</li>
+                                <li>Система адаптивного освещения</li>
+                                <li>Электрообогрев боковых зеркал</li>
+                                <li>Система управления дальним светом</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="cm-spoiler-list cm-spoiler__list">
+                            <div class="cm-spoiler-list__icon"><img src="img/catalog-model/car_prop_3.svg" alt=""></div>
+                            <div class="cm-spoiler-list__text">
+                              <div class="cm-spoiler-list__title">Интерьер</div>
+                              <ul class="cm-spoiler-list__items">
+                                <li>Люк</li>
+                                <li>Сиденья с массажем</li>
+                                <li>Тонированные стекла</li>
+                                <li>Кожа (Материал салона)</li>
+                                <li>Подогрев задних сидений</li>
+                                <li>Память сиденья водителя</li>
+                                <li>Обогрев рулевого колеса</li>
+                                <li>Подогрев передних сидений</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section personal-offer">
+              <div class="section__container section__content">
+                <div class="personal-offer__container">
+                  <div class="personal-offer__block">
+                    <div class="personal-offer__content">
+                      <div class="title title--30 personal-offer__title"> 
+                        <div class="personal-offer__sticker title-sticker">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#lightning"></use>
+                          </svg>Акция<br>до 20.02.2021
+                        </div>Станьте владельцем<br>Lixiang L7 уже сегодня
+                      </div>
+                      <div class="personal-offer__subtitle">Ваше персональное предложение</div>
+                          <form class="form form--horizontal" action="#" data-validate novalidate>
+                            <div class="form__content" data-js="form-content">
+                              <div class="form__horizontal">
+                                <div class="form__fields">
+                                      <div class="field    " data-js="formField">
+                                        <label>
+                                          <input class="field__input" type="text" placeholder="Ваш имя" required="" data-type="letters"><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                      </div>
+                                      <div class="field    " data-js="formField">
+                                        <label>
+                                          <input class="field__input" type="text" placeholder="Ваш телефон" required="" data-v-name="phone" data-type="phoneNumber"><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                      </div>
+                                </div>
+                                    <button class="btn form__submit btn--accent btn--content" type="submit"><span class="btn__text">Заказать звонок</span>
+                                    </button>
+                              </div>
+                              <div class="form__privacy form-privacy" data-js="formField"><span class="form-privacy__text">Нажимая кнопку «Заказать звонок», Вы соглашаетесь с <a href="javascript:void(0);">политикой конфиденциальности</a> и <a href="javascript:void(0);">правилами обработки персональных данных</a></span><span class="field__error" data-js="fieldError"></span></div>
+                            </div>
+                            <div class="form__thanks" data-js="form-thanks">
+                              <div class="title--32 form__title">Ваш вопрос отправлен.</div>
+                              <div class="form__image-success">
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#form_success"></use>
+                                </svg>
+                              </div>
+                              <div class="form__text">С Вами свяжется ответственный сотрудник по&nbsp;указанным контактным данным.</div>
+                            </div>
+                          </form>
+                    </div>
+                    <div class="personal-offer__img"><img src="img/catalog-model/model_5.webp" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section photo-gallery" data-js="photoGallery">
+              <div class="section__container section__content">
+                    <div class="tabs-block" data-js="tabsBlock">
+                      <div class="tabs-block__header">
+                        <div class="tabs-block__tabs scrollbar scrollbar--small" data-js="tabsBlockList">
+                          <div class="tabs-block__list">
+                            <div class="tabs-block__tab active" data-index="0" data-js="tabsBlockTab"><span>Вкладка 1</span>
+                            </div>
+                            <div class="tabs-block__tab" data-index="1" data-js="tabsBlockTab"><span>Вкладка 2</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs-block__slides">
+                      </div>
+                    </div>
+                <div class="photo-gallery__text text-editor"> 
+                  <p>Мощный и просторный кроссовер Lixiang L7 продолжает завоевывать популярность по всему миру. Этот автомобиль считается одним из основных соперников среди европейских и японских моделей в своем классе, превосходя их как по оснащению, так и по стоимости. Теперь Lixiang L7 доступен для покупки в России. Компания Шанхай Моторс предлагает приобрести данный автомобиль по цене, близкой к той, что установлена на китайском рынке. В нашем каталоге вы найдете наиболее выгодные варианты покупки премиальных китайских авто. Не упустите возможность приобрести Li L7 в России напрямую от производителя.</p>
                 </div>
               </div>
             </section>
