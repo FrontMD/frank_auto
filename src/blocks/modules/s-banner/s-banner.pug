@@ -1,23 +1,22 @@
 -
-    const defaultSBannerProps = {
-        classes: '',
-        img: '<picture><source srcset="img/catalog/catalog_banner_mob.webp" media="(max-width: 767px)"><img src="img/catalog/catalog_banner.webp" alt=""></picture>',
-
-        imgPos: 'left'
-    }
+	const defaultSBannerProps = {
+		classes: '',
+		img: '<picture><source srcset="img/catalog/catalog_banner_mob.webp" media="(max-width: 767px)"><img src="img/catalog/catalog_banner.webp" alt=""></picture>',
+		imgPos: 'left'
+	}
 
 mixin s-banner(props= defaultSBannerProps)
-    -
-        const checkProps = {
-            classes: props.classes ? props.classes : defaultSBannerProps.classes,
-            img: props.img ? props.img : defaultSBannerProps.img,
-        }
+	-
+		const checkProps = {
+			classes: props.classes ? props.classes : defaultSBannerProps.classes,
+			img: props.img ? props.img : defaultSBannerProps.img,
+		}
 
-        let imgPosClass = `s-banner--${checkProps.imgPos}`
+		let imgPosClass = `s-banner--${checkProps.imgPos}`
 
-    section.section.s-banner(class= checkProps.classes)&attributes(attributes)
-        .section__container
-            .section-block.s-banner__block
-                .section-block__bg.s-banner__bg!= checkProps.img
-                .section-block__content
-                    block
+	section.section.s-banner(class= checkProps.classes)&attributes(attributes)
+		.section__container
+			.section-block.s-banner__block
+				.section-block__bg.s-banner__bg!= checkProps.img
+				.section-block__content
+					block

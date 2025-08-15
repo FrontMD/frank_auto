@@ -1,0 +1,53 @@
+.cp-tradein {
+    max-width: 750px;
+    margin: 0 auto;
+
+    &__title {
+        position: relative;
+        margin-bottom: 30px;
+        width: fit-content;
+    }
+
+    &__subtitle {
+        margin-top: 10px;
+        font-family: $ff-inter;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0;
+        color: $c-text-light-1
+    }
+
+    &__form {
+        .form__privacy {
+            margin-top: 15px;
+        }
+    }
+
+    &__sticker {
+        padding: 20px 30px;
+        position: absolute;
+        right: auto;
+        left: calc(100% + 35px);
+        top: 0;
+        transform: rotate(8.02deg);
+        transform-origin: right top;
+        white-space: nowrap;
+
+        span {
+            color: $c-white;
+        }
+
+        @include max(tablet) {
+            right: 0;
+            top: -14px;
+        }
+
+        @include max(mobile) {
+            right: auto;
+            left: 0;
+            top: calc(100% + 5px);
+            transform-origin: left bottom;
+        }
+    }
+}

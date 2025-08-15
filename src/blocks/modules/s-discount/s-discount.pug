@@ -7,21 +7,21 @@
                 text: 'Авто в кредит 1,9%',
                 discount: '–40 000 ₽',
                 decor: 'img/catalog/discount_decor_5.svg',
-                isChecked: false
+                isChecked: false,
             },
             {
                 title: 'Госпрограмма',
                 text: '',
-                discount: '10% от цены автомобиля',
+                discount: '10% от цены<br>автомобиля',
                 decor: 'img/catalog/discount_decor_6.svg',
-                isChecked: true
+                isChecked: true,
             },
             {
                 title: 'Выгода за Trade-in',
                 text: 'Авто в кредит 1,9%',
                 discount: '–120 000 ₽',
                 decor: 'img/catalog/discount_decor_3.svg',
-                isChecked: true
+                isChecked: true,
             }
         ],
     }
@@ -58,9 +58,9 @@ mixin s-discount(props= defaultSdiscountProps)
                                                 input.field__input(type="checkbox")
                                             span.fake-checkbox
                                 .discount-field__bottom
-                                    .discount-field__discount
-                                        div!= item.discount
-                                    a(href="javascript:void(0);").discount-field__link Подробнее
+                                    .discount-field__discount!= item.discount
+                                    -if(item.noLink !== true)
+                                        a(href="javascript:void(0);").discount-field__link Подробнее
 
                         - itemsCount++
 
