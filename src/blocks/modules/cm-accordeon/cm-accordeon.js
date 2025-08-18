@@ -9,7 +9,7 @@ function cmSpoilersInit() {
         if(cmSpoilers.length > 0) {
             cmSpoilers.forEach((spoiler, index) => {
                 const header = spoiler.querySelector('[data-js="cmSpoilerHeader"]')
-                const moreBtn = spoiler.querySelector('[data-js="cmSpoilerMoreBtn"]')
+                const moreBtns = spoiler.querySelectorAll('[data-js="cmSpoilerMoreBtn"]')
                 const content = spoiler.querySelector('[data-js="cmSpoilerContent"]')
                 const detailed = spoiler.querySelector('[data-js="cmSpoilerDetailed"]')
 
@@ -25,13 +25,16 @@ function cmSpoilersInit() {
                     }
                 })
 
-                moreBtn.addEventListener('click', function () {
-                    if(this.classList.contains('expanded')) {
-                        close(this, detailed)
-                    } else {
-                        open(this, detailed)
-                    }
+                moreBtns.forEach(moreBtn => {
+                    moreBtn.addEventListener('click', function () {
+                        if(this.classList.contains('expanded')) {
+                            close(this, detailed)
+                        } else {
+                            open(this, detailed)
+                        }
+                    })
                 })
+
             })
         }
     })

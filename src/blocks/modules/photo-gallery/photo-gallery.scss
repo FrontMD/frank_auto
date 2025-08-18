@@ -1,6 +1,10 @@
 .photo-gallery {
     margin-top: 50px;
 
+    @include max(mobile) {
+        margin-top: 0;
+    }
+
     &__block {
         display: flex;
         align-items: stretch;
@@ -9,12 +13,21 @@
         -webkit-user-select: none;
         -ms-user-select: none;
         user-select: none;
+
+        @include max(laptop-small) {
+            gap: 20px;
+        }
     }
 
     &__slider {
         position: relative;
         overflow: hidden;
         flex: 0 0 75.58%;
+
+        @include max(mobile) {
+            flex-basis: 100%;
+            padding-right: 10px;
+        }
 
         .swiper-wrapper {
             align-items: stretch;
@@ -25,6 +38,11 @@
         height: calc(100vh - 250px);
         border-radius: 15px;
         overflow: hidden;
+
+        @include max(laptop-small) {
+            height: auto;
+            aspect-ratio: 1 / 0.6;
+        }
 
         img {
             width: 100%;
@@ -38,6 +56,14 @@
         flex: 1 1 auto;
         overflow: hidden;
         height: calc(100vh - 250px);
+
+        @include max(laptop-small) {
+            height: calc((100vw - 40px) * 0.4536);
+        }
+
+        @include max(mobile) {
+            display: none;
+        }
 
         &:before {
             content: '';
@@ -92,6 +118,10 @@
     }
 
     &__controls {
+        @include max(mobile) {
+            display: none;
+        }
+
         .slider-control {
             position: absolute;
             top: 50%;
@@ -110,5 +140,9 @@
 
     &__text {
         margin-top: 50px;
+
+        @include max(mobile) {
+            margin-top: 10px;
+        }
     }
 }

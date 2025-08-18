@@ -12,7 +12,12 @@ function photoGalleryInit() {
         const thumbsEl = new Swiper(thumbs, {
             slidesPerView: 'auto',
             direction: "vertical",
-            spaceBetween: '24px',
+            spaceBetween: 20,
+            breakpoints: {
+                1280: {
+                    spaceBetween: 24,
+                } 
+            },
             mousewheel: {
                 enabled: true,
             },
@@ -30,15 +35,24 @@ function photoGalleryInit() {
         })
 
         const sliderEl = new Swiper(slider, {
-            slidesPerView: 1,
-            spaceBetween: '24px',
+            slidesPerView: 1.1,
+            spaceBetween: 10,
             thumbs: {
                 swiper: thumbsEl
             },
             navigation: {
-                    nextEl: next,
-                    prevEl: prev,
+                nextEl: next,
+                prevEl: prev,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
                 },
+                1280: {
+                    spaceBetween: 24,
+                } 
+            }
 
         })
 

@@ -101,50 +101,6 @@
     }
 }
 
-/*.tabs-block {
-    &--section {
-        @include max(large) {
-            width: calc(100% + 40px);
-            margin: 0 -20px;
-        }
-
-        @include max(tablet) {
-            width: calc(100% + 40px);
-            margin: 0 -20px;
-        }
-
-        @include max(mobile) {
-            width: calc(100% + 30px);
-            margin: 0 -15px;
-        }
-    }
-
-    &--section &__list {
-        border-top: none;
-        padding-left: 20px;
-        padding-right: 20px;
-
-        @include max(laptop) {
-            padding-left: 0;
-            padding-right: 0;
-        }
-    }
-
-    &--section &__slides {
-        margin-top: 32px;
-        padding: 0 32px;
-
-        @include max(tablet) {
-            margin-top: 24px;
-            padding: 0 20px;
-        }
-
-        @include max(mobile) {
-            padding: 0 15px;
-        }
-    }
-}*/
-
 .tabs-block {
     @include min(xs) {
         &--content {
@@ -155,8 +111,19 @@
 }
 
 .tabs-block {
+    &--gallery {
+        @include max(mobile) {
+            margin-right: -10px;
+            width: calc(100% + 10px);
+        }
+    }
+
     &--gallery &__header {
         padding: 0;
+
+        @include max(mobile) {
+            padding-right: 10px;
+        }
     }
 
     &--gallery &__tabs {
@@ -168,6 +135,10 @@
 
     &--gallery &__list {
         gap: 0;
+
+        @include max(mobile) {
+            gap: 5px;
+        }
     }
 
     &--gallery &__tab {
@@ -179,6 +150,12 @@
         font-family: $ff-rooftop;
         line-height: 11px;
 
+        @include max(mobile) {
+            padding: 20px 15px;
+            background-color: $c-white;
+            border-radius: 10px;
+        }
+
         &::after {
             content: '';
             position: absolute;
@@ -189,6 +166,10 @@
             opacity: 0;
             transition: all $tr-time linear;
             background-color: $c-accent-2;
+
+            @include max(mobile) {
+                display: none;
+            }
         }
 
         svg {
@@ -204,6 +185,11 @@
     &--gallery &__tab.active {
         color: $c-text;
 
+        @include max(mobile) {
+            color: $c-white;
+            background: linear-gradient(107.18deg, #56636E 11.96%, #2E333F 97.96%);
+        }
+
         &::after {
             opacity: 1;
         }
@@ -215,5 +201,10 @@
 
     &--gallery &__slides {
         padding: 30px 0 0;
+
+        @include max(mobile) {
+            border-top: none;
+            padding: 10px 0 0;
+        }
     }
 }

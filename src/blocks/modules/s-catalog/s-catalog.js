@@ -11,12 +11,15 @@ function sCatalogSliderInit() {
             spaceBetween: 10,
             breakpoints: {
                 767: {
-                    slidesPerView: 2
+                    slidesPerView: 2,
+                    spaceBetween: 10,
                 },
                 1024: {
-                    spaceBetween: 20
+                    spaceBetween: 20,
+                    slidesPerView: 2
                 },
                 1279: {
+                    spaceBetween: 20,
                     slidesPerView: 3
                 }
             }

@@ -122,6 +122,7 @@ mixin cm-accordeon(props= defaultCmAccordeonProps)
                                             .current 5 500 000 ₽
                                             .discount 300 000 ₽
                                         +btn({
+                                            classes: 'cm-spoiler__btn',
                                             name: 'Забронировать',
                                             cMode: 'accent',
                                             sMode: '165'
@@ -129,6 +130,7 @@ mixin cm-accordeon(props= defaultCmAccordeonProps)
                                     .cm-spoiler__row
                                         .cm-spoiler__credit Кредит<br>от 10 000 ₽/мес 
                                         +btn({
+                                            classes: 'cm-spoiler__btn',
                                             name: 'В Trade-in',
                                             cMode: 'light-accent',
                                             sMode: '165'
@@ -178,5 +180,15 @@ mixin cm-accordeon(props= defaultCmAccordeonProps)
                                                 li Память сиденья водителя
                                                 li Обогрев рулевого колеса
                                                 li Подогрев передних сидений
+
+                            +btn({
+                                classes: 'cm-spoiler__more cm-spoiler__more--mob btn--toggle',
+                                name: '<span class="show">Раскрыть описание</span><span class="hide">Скрыть описание</span>',
+                                icon: 'description',
+                                cMode: 'bordered',
+                                sMode: 'narrow',
+                                type: 'button',
+                                hasArrow: true
+                            })(data-js="cmSpoilerMoreBtn")
 
                     - counter++

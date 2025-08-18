@@ -1,0 +1,108 @@
+.tech-spec {
+    &__table {
+        display: grid;
+        grid-template-columns: minmax(0, 32%) minmax(0, 14%) minmax(0, 21%) minmax(0, 33%);
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 70px;
+        width: 100%;
+        margin-top: 30px;
+        padding: 40px 30px 30px;
+    }
+
+    &__table &__rows {
+        align-self: center;
+    }
+
+    &__col {
+        flex: 0 1 auto
+    }
+
+    &__size {
+        display: flex;
+        align-items: stretch;
+        gap: 13px;
+    }
+
+    &__icon {
+        width: 100%;
+        height: 28px;
+        background-image: url(../img/catalog-product/cp_size_icon.webp);
+        background-size: 100% 100%;
+    }
+
+    &__width,
+    &__height {
+        display: flex;
+        gap: 10px;
+        font-family: $ff-roboto;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.2em;
+        letter-spacing: 0;
+        text-align: center;
+        color: #262626;
+    }
+
+    &__width {
+        flex-direction: column;
+        flex: 1 1 100%;
+    }
+
+    &__height {
+        flex: 0 0 auto;
+        flex-direction: row;
+        align-items: center;
+        padding-bottom: 68px;
+    }
+
+    &__height &__icon {
+        width: 28px;
+        height: 100%;
+        transform: rotate(-90deg);
+    }
+
+    &__rows {
+        width: 100%;
+        column-width: 580px;
+        column-count: auto;
+        column-gap: 140px;
+
+        @include max(laptop) {
+            column-gap: 60px;
+        }
+    }
+
+    &__row {
+        width: 100%;
+        display: flex;
+        align-items: flex-end;
+        font-family: $ff-roboto;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0;
+    }
+
+    &__row+&__row {
+        margin-top: 20px;
+    }
+
+    &__param {
+        color: #737373;
+        flex: 0 0 auto;
+    }
+
+    &__separator {
+        border-bottom: dashed 1px $c-text-breadcrumbs;
+        flex: 1 1 100%;
+        min-width: 40px;
+    }
+
+    &__value {
+        font-weight: 500;
+        color: $c-text;
+        flex: 0 0 auto;
+        text-align: end;
+    }
+}

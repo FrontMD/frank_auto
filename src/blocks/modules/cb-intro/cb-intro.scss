@@ -94,6 +94,11 @@
             font-weight: 800;
             font-size: 26px;
             line-height: 36px;
+
+            @include max(mobile) {
+                font-size: 24px;
+                line-height: 1em;
+            }
         }
     }
 
@@ -196,6 +201,18 @@
 .cb-intro {
     &--model &__block {
         padding: 40px 60px;
+
+        @include max(laptop-small) {
+            padding: 40px 20px;
+        }
+
+        @include max(tablet) {
+            padding: 20px 20px 90px;
+        }
+
+        @include max(mobile) {
+            padding: 20px 10px 90px;
+        }
     }
 
     &--model &__bg {
@@ -207,6 +224,15 @@
         gap: 50px;
         align-items: stretch;
         justify-content: space-between;
+
+        @include max(laptop-small) {
+            gap: 24px;
+        }
+
+        @include max(tablet) {
+            flex-direction: column;
+            gap: 15px;
+        }
     }
 
     &--model &__top {
@@ -215,11 +241,27 @@
         padding-top: 10px;
         z-index: 2;
         flex: 0 0 44%;
+
+        @include max(laptop-small) {
+            flex-basis: 53%;
+        }
+
+        @include max(tablet) {
+            display: contents;
+        }
     }
 
     &--model &__title {
         position: relative;
         width: fit-content;
+
+        @include max(tablet) {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+        }
     }
 
     &--model &__sticker {
@@ -229,10 +271,30 @@
         left: calc(100% + 35px);
         transform-origin: center;
 
+        @include max(tablet) {
+            position: relative;
+            right: 0;
+            left: 0;
+            top: 0;
+            transform: none;
+            order: 2;
+            padding: 8px 16px;
+        }
+
+        @include max(xs) {
+            width: 100%;
+            text-align: center;
+        }
 
         span {
             color: $c-white;
             white-space: nowrap;
+        }
+    }
+
+    &--model &__stock {
+        @include max(tablet) {
+            margin-top: 0;
         }
     }
 
@@ -241,17 +303,43 @@
         padding-bottom: 40px;
         flex-direction: column;
 
+        @include max(tablet) {
+            order: 2;
+            flex-direction: row;
+            overflow-x: auto;
+            align-items: stretch;
+            margin-top: 0;
+            padding-bottom: 0;
+        }
+
     }
 
     &--model &__advantage {
         background-color: $c-bg-main;
         color: $c-text;
 
+        @include max(tablet) {
+            border-radius: 10px;
+            padding: 10px 15px 10px 10px;
+            width: max-content;
+            white-space: nowrap;
+        }
+
     }
 
     &--model &__slider {
         position: relative;
         flex: 0 0 52%;
+
+        @include max(laptop-small) {
+            flex-basis: 44%;
+            align-self: flex-start;
+        }
+
+        @include max(tablet) {
+            flex-basis: auto;
+            width: 100%;
+        }
     }
 }
 
@@ -353,6 +441,10 @@
 
     &__slide {
         height: auto;
+
+        @include max(mobile) {
+            aspect-ratio: 1 / 0.7486;
+        }
     }
 
     &__img {
@@ -376,6 +468,10 @@
         backdrop-filter: blur(40px);
         z-index: 3;
         max-width: calc(100% - 20px);
+
+        @include max(laptop-small) {
+            bottom: 10px;
+        }
     }
 
     &__tab {

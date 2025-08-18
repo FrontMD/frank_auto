@@ -11,8 +11,10 @@
         min-height: 364px;
 
         @include max(mobile) {
+            flex-direction: column;
             padding: 20px 10px;
             border-radius: 10px;
+            gap: 10px;
         }
     }
 
@@ -26,6 +28,10 @@
     &__content {
         flex: 1 1 auto;
         max-width: 1100px;
+
+        @include max(mobile) {
+            display: contents;
+        }
     }
 
     &__title {
@@ -37,10 +43,12 @@
         width: fit-content;
 
         @include max(mobile) {
-            margin-bottom: 10px;
+            margin-bottom: 0;
             display: flex;
             flex-direction: column-reverse;
             width: 100%;
+            align-items: flex-start;
+            gap: 10px;
         }
     }
 
@@ -66,8 +74,13 @@
             position: relative;
             transform: none;
             left: 0;
-            text-align: center;
-            margin-bottom: 10px;
+            margin-bottom: 0;
+        }
+
+        @include max(xs) {
+            width: 100%;
+            justify-content: center;
+            padding: 10px 15px;
         }
     }
 
@@ -78,6 +91,19 @@
         line-height: 22px;
         letter-spacing: 0;
         color: $c-text;
+
+        @include max(mobile) {
+            order: 2;
+            font-size: 16px;
+            align-self: flex-start;
+            margin-bottom: 5px;
+        }
+    }
+
+    .form {
+        @include max(mobile) {
+            order: 2;
+        }
     }
 
     &__text {
@@ -94,6 +120,14 @@
         border-radius: 15px;
         overflow: hidden;
         max-width: 700px;
+
+        @include max(tablet) {
+            display: none;
+        }
+
+        @include max(mobile) {
+            display: block;
+        }
 
         img {
             width: 100%;
