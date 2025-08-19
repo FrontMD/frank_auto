@@ -10,11 +10,12 @@ mixin s-banner(props= defaultSBannerProps)
 		const checkProps = {
 			classes: props.classes ? props.classes : defaultSBannerProps.classes,
 			img: props.img ? props.img : defaultSBannerProps.img,
+			imgPos: props.imgPos ? props.imgPos : defaultSBannerProps.imgPos,
 		}
 
-		let imgPosClass = `s-banner--${checkProps.imgPos}`
+		let imgPosClass = ` s-banner--${checkProps.imgPos}`
 
-	section.section.s-banner(class= checkProps.classes)&attributes(attributes)
+	section.section.s-banner(class= checkProps.classes + imgPosClass)&attributes(attributes)
 		.section__container
 			.section-block.s-banner__block
 				.section-block__bg.s-banner__bg!= checkProps.img

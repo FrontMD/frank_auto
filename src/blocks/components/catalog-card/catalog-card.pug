@@ -1,7 +1,9 @@
 -
     const defaultCatalogCardProps = {
         classes: '',
-        img: 'img/catalog/product_1.webp',
+        img: [
+            'img/catalog/product_1.webp'
+        ],
         title: 'Новый LIXIANG L6 MAX',
         price: {
             classes: 'catalog-card__price',
@@ -68,8 +70,20 @@ mixin catalog-card(props = defaultCatalogCardProps)
 
     .catalog-card(class=checkProps.classes)&attributes(attributes)
         .catalog-card__top
-            .catalog-card__img
-                img(src=checkProps.img alt="")
+            - if(checkProps.img.length < 2)
+                .catalog-card__img
+                    img(src=checkProps.img[0] alt="")
+            - else
+                .catalog-card__slider(data-js='catalogCardSlider')
+                    .catalog-card__pagination(data-js='catalogCardPagination')
+                    .swiper-wrapper
+                        - let imgCounter = 0
+                        - while(imgCounter < checkProps.img.length)
+                            .catalog-card__img.swiper-slide
+                                img(src=checkProps.img[imgCounter] alt="")
+
+                            - imgCounter++
+
             .catalog-card__extras
                 .catalog-card__left
                     .catalog-card__tags

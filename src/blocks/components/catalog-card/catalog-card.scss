@@ -13,9 +13,37 @@
     &__top {
         position: relative;
         flex: 0 0 auto;
-        padding: 4px 4px 0;
+        padding: 8px 8px 0;
         border-bottom: 1px solid $c-border;
         overflow: hidden;
+    }
+
+    &__slider {
+        position: relative;
+    }
+
+    &__pagination {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        z-index: 5;
+
+        .swiper-pagination-bullet {
+            width: 42px;
+            height: 5px;
+            background-color: $c-white;
+            opacity: 0.3;
+            transition: all $tr-time linear;
+            border-radius: 25px;
+        }
+
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+        }
     }
 
     &__img {
@@ -38,7 +66,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        padding: 8px;
+        padding: 13px;
         width: 100%;
         display: flex;
         justify-content: space-between;
@@ -153,6 +181,7 @@
 
     &__controls {
         flex: 0 0 auto;
+        z-index: 5;
     }
 
     &__info {

@@ -46,5 +46,15 @@
 .s-banner {
     &--right &__bg {
         width: 48%;
+        left: auto;
+        right: 0;
     }
+
+    &--right &__block {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 50px;
+        padding-right: 39%;
+    }
+
 }

@@ -1,0 +1,73 @@
+-
+	const defaultUcOffersProps = {
+		classes: '',
+	}
+
+mixin uc-offers(props= defaultUcOffersProps)
+	-
+		const checkProps = {
+			classes: props.classes ? props.classes : defaultUcOffersProps.classes
+		}
+
+	section.section.uc-offers(class= checkProps.classes)&attributes(attributes)
+		.section__container.section__content
+			.uc-offers__list
+				.uc-offers__card
+					.uc-offers__decor
+						img(src="img/used-car/offers_decor.svg" alt="")
+					.uc-offers__img
+						img(src="img/used-car/offers_1.webp" alt="")
+					.uc-offers__content
+						.uc-offers__icon
+							svg
+								use(xlink:href=`img/sprites/sprite.svg#exc`)
+						.uc-offers__texts
+							.uc-offers__title Рассрочка<br>от ВТБ
+							.uc-offers__text Рассрочка 0%
+							+btn({
+								classes: 'uc-offers__btn',
+								name: 'Рассрочка',
+								cMode: 'light-accent',
+								sMode: 'small',
+								icon: 'lightning',
+							})
+
+				.uc-offers__card
+					.uc-offers__decor
+						img(src="img/used-car/offers_decor.svg" alt="")
+					.uc-offers__img
+						img(src="img/used-car/offers_2.webp" alt="")
+					.uc-offers__content
+						.uc-offers__icon
+							svg
+								use(xlink:href=`img/sprites/sprite.svg#exc`)
+						.uc-offers__texts
+							.uc-offers__title Выгода<br>по Trade-in
+							.uc-offers__text Дополнительная выгода до 200 000 руб 
+							+btn({
+								classes: 'uc-offers__btn',
+								name: 'Trade-in',
+								cMode: 'light-accent',
+								sMode: 'small',
+								icon: 'lightning',
+							})
+
+				.uc-offers__card
+					.uc-offers__decor
+						img(src="img/used-car/offers_decor.svg" alt="")
+					.uc-offers__img
+						img(src="img/used-car/offers_3.webp" alt="")
+					.uc-offers__content
+						.uc-offers__icon
+							svg
+								use(xlink:href=`img/sprites/sprite.svg#exc`)
+						.uc-offers__texts
+							.uc-offers__title Первоначальный<br>взнос 0%
+							.uc-offers__text Кредит 1,9%
+							+btn({
+								classes: 'uc-offers__btn',
+								name: 'Скидка',
+								cMode: 'light-accent',
+								sMode: 'small',
+								icon: 'lightning',
+							})

@@ -167,6 +167,18 @@
         padding-right: 20px;
     }
 
+    &--small {
+        padding: 10px 15px 10px 10px;
+        font-size: 12px;
+        gap: 5px;
+        border-radius: 14px;
+
+        svg {
+            width: 15px;
+            height: 15px;
+        }
+    }
+
     &--footer {
         width: fit-content;
         padding: 12px 23px;
@@ -242,11 +254,6 @@
             min-width: 110px;
             min-height: 55px;
         }
-    }
-
-    &--small {
-        padding: 2px 12px;
-        font-size: 12px;
     }
 
     &--social {

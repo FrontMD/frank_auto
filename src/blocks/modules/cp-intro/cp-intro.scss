@@ -64,8 +64,9 @@
     }
 
     &__thumb {
+        width: 150px;
         opacity: 0.5;
-        transition: all $tr-time linear;
+        transition: opacity $tr-time linear;
         cursor: pointer;
 
         &.swiper-slide-thumb-active {

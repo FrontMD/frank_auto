@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Авто с пробегом детальная</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
+    <link rel="stylesheet" href="styles/main.min.css">
+  </head>
+  <body>
+    <header class="site-header" data-js="siteHeader">
+      <div class="section site-header__section" data-js="siteHeaderSection">
+        <div class="section__container site-header__container">
+          <div class="site-header__top site-header__row" data-js="siteHeaderTop">
+            <div class="section-block site-header__block site-header__left"><a class="site-header__logo" href="javascript:void(0);"><img src="img/logo/logo_header.svg" alt=""><span>Почувствуй новое первым</span></a></div>
+            <div class="section-block site-header__block site-header__schedule">
+              <div class="header-schedule">
+                <div class="header-schedule__icon">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#timer"></use>
+                  </svg>
+                </div>
+                <div class="header-schedule__text">Время работы: <br>c 08:00 до 21:00</div>
+              </div>
+            </div>
+            <div class="section-block site-header__block site-header__phones">
+              <div class="header-phones">
+                <div class="header-phones__item">Новорижское ш., 17й км, с3 <a href="tel:+74991165065">+7 (499) 116-50-65</a></div>
+                <div class="header-phones__item">Ярославское ш., д.42 <a href="tel:+74991165065">+7 (499) 116-50-65</a></div>
+              </div>
+            </div>
+            <div class="section-block site-header__block site-header__soc">
+              <div class="header-soc">
+                <div class="header-soc__title">Наши соц сети:</div>
+                <div class="header-soc__links"><a class="header-soc__link" href="javascript:void(0);">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#youtube"></use>
+                    </svg></a><a class="header-soc__link" href="javascript:void(0);">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#telegram"></use>
+                    </svg></a><a class="header-soc__link" href="javascript:void(0);">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#whatsapp"></use>
+                    </svg></a><a class="header-soc__link" href="javascript:void(0);">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#dzen"></use>
+                    </svg></a></div>
+              </div>
+            </div>
+            <div class="section-block site-header__block site-header__compare"><a class="header-compare" href="javascript:void(0);">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#compare"></use>
+                </svg><span class="header-compare__count">12</span></a></div><a class="btn  btn--accent btn--header" href="javascript:void(0)">
+                  <svg>
+                    <use xlink:href="img/sprites/sprite.svg#handset"></use>
+                  </svg><span class="btn__text">Обратный звонок</span></a>
+          </div>
+          <div class="site-header__bottom site-header__row">
+            <div class="section-block site-header__block site-header__menu">
+              <nav class="header-menu">
+                <div class="header-menu__item">
+                  <div class="header-menu__header"><a class="header-menu__link" href="javascript:void(0);">Автомобили</a>
+                    <div class="header-menu__icon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#arrow_angle_down"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="header-menu__submenu">
+                    <div class="header-menu__subtitle">Автомобили</div>
+                    <div class="header-menu__list"><a class="header-menu__link" href="javascript:void(0);">Пункт 1</a><a class="header-menu__link" href="javascript:void(0);">Пункт 2</a><a class="header-menu__link" href="javascript:void(0);">Пункт 3</a><a class="header-menu__link" href="javascript:void(0);">Пункт 4</a></div>
+                  </div>
+                </div>
+                <div class="header-menu__item">
+                  <div class="header-menu__header"><a class="header-menu__link" href="javascript:void(0);">Услуги</a>
+                    <div class="header-menu__icon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#arrow_angle_down"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="header-menu__submenu">
+                    <div class="header-menu__subtitle">Услуги</div>
+                    <div class="header-menu__list"><a class="header-menu__link" href="javascript:void(0);">Пункт 1</a><a class="header-menu__link" href="javascript:void(0);">Пункт 2</a><a class="header-menu__link" href="javascript:void(0);">Пункт 3</a><a class="header-menu__link" href="javascript:void(0);">Пункт 4</a></div>
+                  </div>
+                </div>
+                <div class="header-menu__item">
+                  <div class="header-menu__header"><a class="header-menu__link" href="javascript:void(0);">Сервис</a></div>
+                </div>
+                <div class="header-menu__item">
+                  <div class="header-menu__header"><a class="header-menu__link" href="javascript:void(0);">Акции</a></div>
+                </div>
+                <div class="header-menu__item">
+                  <div class="header-menu__header"><a class="header-menu__link" href="javascript:void(0);">О компании</a>
+                    <div class="header-menu__icon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#arrow_angle_down"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="header-menu__submenu">
+                    <div class="header-menu__subtitle">О компании</div>
+                    <div class="header-menu__list"><a class="header-menu__link" href="javascript:void(0);">Пункт 1</a><a class="header-menu__link" href="javascript:void(0);">Пункт 2</a><a class="header-menu__link" href="javascript:void(0);">Пункт 3</a><a class="header-menu__link" href="javascript:void(0);">Пункт 4</a></div>
+                  </div>
+                </div>
+                <div class="header-menu__item header-menu__item--desk">
+                  <div class="header-menu__header"><a class="header-menu__link" href="javascript:void(0);">Блог</a></div>
+                </div>
+                <div class="header-menu__item header-menu__item--desk">
+                  <div class="header-menu__header"><a class="header-menu__link" href="javascript:void(0);">Контакты</a></div>
+                </div>
+              </nav>
+              <div class="header-burger" data-js="headerBurger">
+                <div class="header-burger__toggle" data-js="headerBurgerToggle">
+                  <div class="header-burger__open header-burger__icon">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#burger"></use>
+                    </svg>
+                  </div>
+                  <div class="header-burger__close header-burger__icon">
+                    <svg>
+                      <use xlink:href="img/sprites/sprite.svg#close"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="header-burger__content scrollbar scrollbar--small" data-js="headerBurgerContent">
+                  <div class="header-burger__block">
+                    <div class="header-menu header-menu--burger">
+                      <div class="header-menu__item header-menu__item--mob" data-js="headerMenuItem">
+                        <div class="header-menu__header"><a class="header-menu__link" href="javascript:void(0);">Автомобили</a>
+                          <div class="header-menu__icon header-menu__icon--open" data-js="headerMenuItemOpen">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#burger_chevron"></use>
+                            </svg>
+                          </div>
+                          <div class="header-menu__icon header-menu__icon--close" data-js="headerMenuItemClose">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#burger_close"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="header-menu__submenu" data-js="headerMenuItemSubmenu">
+                          <div class="header-menu__list"><a class="header-menu__link" href="javascript:void(0);">Пункт 1</a><a class="header-menu__link" href="javascript:void(0);">Пункт 2</a><a class="header-menu__link" href="javascript:void(0);">Пункт 3</a><a class="header-menu__link" href="javascript:void(0);">Пункт 4</a></div>
+                        </div>
+                      </div>
+                      <div class="header-menu__item header-menu__item--mob" data-js="headerMenuItem">
+                        <div class="header-menu__header"><a class="header-menu__link" href="javascript:void(0);">Услуги</a>
+                          <div class="header-menu__icon header-menu__icon--open" data-js="headerMenuItemOpen">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#burger_chevron"></use>
+                            </svg>
+                          </div>
+                          <div class="header-menu__icon header-menu__icon--close" data-js="headerMenuItemClose">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#burger_close"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="header-menu__submenu" data-js="headerMenuItemSubmenu">
+                          <div class="header-menu__list"><a class="header-menu__link" href="javascript:void(0);">Пункт 1</a><a class="header-menu__link" href="javascript:void(0);">Пункт 2</a><a class="header-menu__link" href="javascript:void(0);">Пункт 3</a><a class="header-menu__link" href="javascript:void(0);">Пункт 4</a></div>
+                        </div>
+                      </div>
+                      <div class="header-menu__item header-menu__item--mob">
+                        <div class="header-menu__header"><a class="header-menu__link" href="javascript:void(0);">Сервис</a></div>
+                      </div>
+                      <div class="header-menu__item header-menu__item--mob">
+                        <div class="header-menu__header"><a class="header-menu__link" href="javascript:void(0);">Акции</a></div>
+                      </div>
+                      <div class="header-menu__item header-menu__item--mob" data-js="headerMenuItem">
+                        <div class="header-menu__header"><a class="header-menu__link" href="javascript:void(0);">О компании</a>
+                          <div class="header-menu__icon header-menu__icon--open" data-js="headerMenuItemOpen">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#burger_chevron"></use>
+                            </svg>
+                          </div>
+                          <div class="header-menu__icon header-menu__icon--close" data-js="headerMenuItemClose">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#burger_close"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="header-menu__submenu" data-js="headerMenuItemSubmenu">
+                          <div class="header-menu__list"><a class="header-menu__link" href="javascript:void(0);">Пункт 1</a><a class="header-menu__link" href="javascript:void(0);">Пункт 2</a><a class="header-menu__link" href="javascript:void(0);">Пункт 3</a><a class="header-menu__link" href="javascript:void(0);">Пункт 4</a></div>
+                        </div>
+                      </div>
+                      <div class="header-menu__item">
+                        <div class="header-menu__header"><a class="header-menu__link" href="javascript:void(0);">Блог</a></div>
+                      </div>
+                      <div class="header-menu__item">
+                        <div class="header-menu__header"><a class="header-menu__link" href="javascript:void(0);">Контакты</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header-burger__block"><a class="header-compare header-compare--burger" href="javascript:void(0);"><span class="header-compare__text">Сравнение товаров</span><span class="header-compare__count">12</span></a></div>
+                  <div class="header-burger__block">
+                    <div class="header-phones">
+                      <div class="header-phones__item">Новорижское ш., 17й км, с3 <a href="tel:+74991165065">+7 (499) 116-50-65</a></div>
+                      <div class="header-phones__item">Ярославское ш., д.42 <a href="tel:+74991165065">+7 (499) 116-50-65</a></div>
+                    </div>
+                  </div>
+                  <div class="header-burger__block header-burger__block--flex">
+                    <div class="header-schedule">
+                      <div class="header-schedule__icon">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#timer"></use>
+                        </svg>
+                      </div>
+                      <div class="header-schedule__text">Время работы: <br>c 08:00 до 21:00</div>
+                    </div>
+                    <div class="header-soc">
+                      <div class="header-soc__title">Наши соц сети:</div>
+                      <div class="header-soc__links"><a class="header-soc__link" href="javascript:void(0);">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#youtube"></use>
+                          </svg></a><a class="header-soc__link" href="javascript:void(0);">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#telegram"></use>
+                          </svg></a><a class="header-soc__link" href="javascript:void(0);">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#whatsapp"></use>
+                          </svg></a><a class="header-soc__link" href="javascript:void(0);">
+                          <svg>
+                            <use xlink:href="img/sprites/sprite.svg#dzen"></use>
+                          </svg></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="site-main">
+      <div class="page-layout" data-js="pageLayout">
+            <section class="section s-breadcrumbs">
+              <div class="section__container">
+                    <div class="breadcrumbs  breadcrumbs--dark">
+                      <ul class="breadcrumbs__list scrollbar scrollbar--small">
+                        <li class="breadcrumbs__item"><a href="javascript:void(0);">Главная</a><span class="breadcrumbs__separator">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#arrow_angle_right"></use>
+                            </svg></span>
+                        </li>
+                        <li class="breadcrumbs__item"><a href="javascript:void(0);">Авто с пробегом</a><span class="breadcrumbs__separator">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#arrow_angle_right"></use>
+                            </svg></span>
+                        </li>
+                        <li class="breadcrumbs__item breadcrumbs__item--current"><span>Аренда Zeekr 009</span>
+                        </li>
+                      </ul>
+                    </div>
+              </div>
+            </section>
+            <section class="section cp-intro cp-intro--used" data-js="cpIntro">
+              <div class="section__container">
+                <div class="section-block cp-intro__block">
+                  <div class="cp-intro__left">
+                    <div class="cp-intro__slider" data-js="cpIntroSlider">
+                          <div class="slider-controls">
+                            <button class="slider-control slider-control--prev" type="button" data-js="sliderPrev">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_slider_left"></use>
+                              </svg>
+                            </button>
+                            <button class="slider-control slider-control--next" type="button" data-js="sliderNext">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_slider_right"></use>
+                              </svg>
+                            </button>
+                          </div>
+                          <div class="prod-controls cp-intro__controls prod-controls--blur"><a class="prod-controls__item" href="javascript:void(0);">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#compare"></use>
+                              </svg></a><a class="prod-controls__item" href="javascript:void(0);">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#favorite"></use>
+                              </svg></a>
+                          </div>
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide cp-intro__slide"><img src="img/catalog-product/cp_intro_1.webp" alt=""></div>
+                        <div class="swiper-slide cp-intro__slide"><img src="img/catalog-product/cp_intro_2.webp" alt=""></div>
+                        <div class="swiper-slide cp-intro__slide"><img src="img/catalog-product/cp_intro_3.webp" alt=""></div>
+                        <div class="swiper-slide cp-intro__slide"><img src="img/catalog-product/cp_intro_4.webp" alt=""></div>
+                        <div class="swiper-slide cp-intro__slide"><img src="img/catalog-product/cp_intro_5.webp" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="cp-intro__thumbs" data-js="cpIntroThumbs">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide cp-intro__thumb"><img src="img/catalog-product/cp_intro_1.webp" alt=""></div>
+                        <div class="swiper-slide cp-intro__thumb"><img src="img/catalog-product/cp_intro_2.webp" alt=""></div>
+                        <div class="swiper-slide cp-intro__thumb"><img src="img/catalog-product/cp_intro_3.webp" alt=""></div>
+                        <div class="swiper-slide cp-intro__thumb"><img src="img/catalog-product/cp_intro_4.webp" alt=""></div>
+                        <div class="swiper-slide cp-intro__thumb"><img src="img/catalog-product/cp_intro_5.webp" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="cp-intro__ac">
+                      <div class="cp-intro__subtitle">Доступные цвета</div>
+                      <div class="cp-intro__colors">
+                        <div class="cp-intro__color"><span style="background-color:#000000;"></span>Черный</div>
+                        <div class="cp-intro__color"><span style="background-color:#ffffff;"></span>Белый</div>
+                        <div class="cp-intro__color"><span style="background-color:#A9A9A9;"></span>Серебро</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cp-intro__right">
+                    <div class="title cp-intro__title">Lixiang L7 Pro 449 л.с. Hybrid Turbo 4WD Белый</div>
+                    <div class="cp-intro__params">   
+                      <div class="tech-spec__rows">
+                        <div class="tech-spec__row">
+                          <div class="tech-spec__param">Год выпуска:</div>
+                          <div class="tech-spec__separator"></div>
+                          <div class="tech-spec__value">2025</div>
+                        </div>
+                        <div class="tech-spec__row">
+                          <div class="tech-spec__param">Кузов:</div>
+                          <div class="tech-spec__separator"></div>
+                          <div class="tech-spec__value">Минивэн</div>
+                        </div>
+                        <div class="tech-spec__row">
+                          <div class="tech-spec__param">Двигатель:</div>
+                          <div class="tech-spec__separator"></div>
+                          <div class="tech-spec__value">1.6 л. / 112 л.с. / Бензин</div>
+                        </div>
+                        <div class="tech-spec__row">
+                          <div class="tech-spec__param">Привод:</div>
+                          <div class="tech-spec__separator"></div>
+                          <div class="tech-spec__value">Автоматический</div>
+                        </div>
+                        <div class="tech-spec__row">
+                          <div class="tech-spec__param">Цвет:</div>
+                          <div class="tech-spec__separator"></div>
+                          <div class="tech-spec__value">Белый</div>
+                        </div>
+                        <div class="tech-spec__row">
+                          <div class="tech-spec__param">Адрес:</div>
+                          <div class="tech-spec__separator"></div>
+                          <div class="tech-spec__value">Новорижское ш., 17й км, с3</div>
+                        </div>
+                      </div><a class="cp-intro__all" href="">Все характеристики</a>
+                    </div>
+                    <div class="cp-intro__chars">
+                      <div class="cp-intro__char"><img src="img/catalog/chars/fuel.svg" alt="">
+                        <div>
+                          <div class="title">Запас хода</div>
+                          <div class="text">240 км.</div>
+                        </div>
+                      </div>
+                      <div class="cp-intro__char"><img src="img/catalog/chars/lightning.svg" alt="">
+                        <div>
+                          <div class="title">Емкость батареи</div>
+                          <div class="text">53 кВт ч.</div>
+                        </div>
+                      </div>
+                      <div class="cp-intro__char"><img src="img/catalog/chars/gear.svg" alt="">
+                        <div>
+                          <div class="title">Мощность</div>
+                          <div class="text">554 л.с.</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cp-intro__flex">
+                      <div class="cp-intro__price">
+                        <div class="old">6 200 000 ₽</div>
+                        <div class="current">5 500 000 ₽</div>
+                      </div>
+                      <div class="cp-intro__btns"><a class="btn  btn--accent btn--full" href="javascript:void(0)"><span class="btn__text">Забронировать онлайн</span></a><a class="btn  btn--light-accent btn--full" href="javascript:void(0)"><span class="btn__text">В кредит от от 370 103&nbsp;₽/мес</span></a>
+                      </div>
+                    </div>
+                    <div class="cp-intro__gifts">
+                      <div class="cp-intro__gift"><img src="img/catalog/gift.svg" alt="">
+                        <div class="text">Зачёт вашего<br>автомобиля в trade-in</div>
+                      </div>
+                      <div class="cp-intro__gift"><img src="img/catalog/gift.svg" alt="">
+                        <div class="text">Улучшим любое<br>предложение</div>
+                      </div>
+                      <div class="cp-intro__gift"><img src="img/catalog/gift.svg" alt="">
+                        <div class="text">Беспроцентная<br>рассрочка 0%</div>
+                      </div>
+                      <div class="cp-intro__gift"><img src="img/catalog/gift.svg" alt="">
+                        <div class="text">Без первончального<br>взноса</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section uc-offers">
+              <div class="section__container section__content">
+                <div class="uc-offers__list">
+                  <div class="uc-offers__card">
+                    <div class="uc-offers__decor"><img src="img/used-car/offers_decor.svg" alt=""></div>
+                    <div class="uc-offers__img"><img src="img/used-car/offers_1.webp" alt=""></div>
+                    <div class="uc-offers__content">
+                      <div class="uc-offers__icon">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                        </svg>
+                      </div>
+                      <div class="uc-offers__texts">
+                        <div class="uc-offers__title">Рассрочка<br>от ВТБ</div>
+                        <div class="uc-offers__text">Рассрочка 0%</div><a class="btn uc-offers__btn btn--light-accent btn--small" href="javascript:void(0)">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#lightning"></use>
+                              </svg><span class="btn__text">Рассрочка</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="uc-offers__card">
+                    <div class="uc-offers__decor"><img src="img/used-car/offers_decor.svg" alt=""></div>
+                    <div class="uc-offers__img"><img src="img/used-car/offers_2.webp" alt=""></div>
+                    <div class="uc-offers__content">
+                      <div class="uc-offers__icon">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                        </svg>
+                      </div>
+                      <div class="uc-offers__texts">
+                        <div class="uc-offers__title">Выгода<br>по Trade-in</div>
+                        <div class="uc-offers__text">Дополнительная выгода до 200 000 руб </div><a class="btn uc-offers__btn btn--light-accent btn--small" href="javascript:void(0)">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#lightning"></use>
+                              </svg><span class="btn__text">Trade-in</span></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="uc-offers__card">
+                    <div class="uc-offers__decor"><img src="img/used-car/offers_decor.svg" alt=""></div>
+                    <div class="uc-offers__img"><img src="img/used-car/offers_3.webp" alt=""></div>
+                    <div class="uc-offers__content">
+                      <div class="uc-offers__icon">
+                        <svg>
+                          <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                        </svg>
+                      </div>
+                      <div class="uc-offers__texts">
+                        <div class="uc-offers__title">Первоначальный<br>взнос 0%</div>
+                        <div class="uc-offers__text">Кредит 1,9%</div><a class="btn uc-offers__btn btn--light-accent btn--small" href="javascript:void(0)">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#lightning"></use>
+                              </svg><span class="btn__text">Скидка</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section s-text" data-js="sText">
+              <div class="section__container">
+                <div class="section__content">
+                  <div class="s-text__content text-editor" data-js="sTextContent">
+                    <h2>Описание Zeekr 009</h2>
+                    <p>Ищете автомобиль, который подойдёт именно вам? В Frank Auto мы не просто продаём машины — мы помогаем подобрать транспорт, который идеально соответствует вашим потребностям, стилю жизни и бюджету. От проверенных городских седанов до мощных внедорожников — у нас вы найдёте всё. Мы тщательно проверяем каждый автомобиль по техническому состоянию и юридической чистоте. Покупая у Frank Auto, вы можете быть уверены: никаких скрытых дефектов, полная история авто и честная цена. А для вашего удобства — онлайн-подбор, консультации и возможность забронировать автомобиль без визита в автосалон.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section s-banner  s-banner--right">
+              <div class="section__container">
+                <div class="section-block s-banner__block">
+                  <div class="section-block__bg s-banner__bg"><picture><source srcset="img/used-car/uc_tradein__mob.webp" media="(max-width: 767px)"><img src="img/used-car/uc_tradein.webp" alt=""></picture></div>
+                  <div class="section-block__content">
+                    <div class="uc-tradein">
+                      <div class="title title--30 title--light uc-tradein__title">Выгодный Trade-in</div>
+                      <div class="uc-tradein__subtitle">Оценим вашу машину за 10 минут</div>
+                          <form class="form uc-tradein__form form--horizontal form--light" action="#" data-validate novalidate>
+                            <div class="form__content" data-js="form-content">
+                              <div class="form__horizontal">
+                                <div class="form__fields">
+                                      <div class="field    " data-js="formField">
+                                        <label>
+                                          <select class="field__select" data-placeholder="Бренд" data-js="formSelect" required="">
+                                            <option label=" "></option>
+                                            <option value="LiXiang">LiXiang</option>
+                                            <option value="Voyah">Voyah</option>
+                                            <option value="AITO">AITO</option>
+                                            <option value="Chery">Chery</option>
+                                            <option value="Zeekr">Zeekr</option>
+                                            <option value="Audi">Audi</option>
+                                            <option value="Tank">Tank</option>
+                                            <option value="Rox Motor Tech">Rox Motor Tech</option>
+                                          </select><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                      </div>
+                                      <div class="field    " data-js="formField">
+                                        <label>
+                                          <select class="field__select" data-placeholder="Модель" data-js="formSelect" required="">
+                                            <option label=" "></option>
+                                            <option value="LiXiang L6">LiXiang L6</option>
+                                            <option value="LiXiang L7">LiXiang L7</option>
+                                            <option value="LiXiang L9">LiXiang L9</option>
+                                            <option value="LiXiang L9">LiXiang L9</option>
+                                            <option value="LiXiang Mega">LiXiang Mega</option>
+                                            <option value="LiXiang One">LiXiang One</option>
+                                          </select><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                      </div>
+                                      <div class="field    " data-js="formField">
+                                        <label>
+                                          <select class="field__select" data-placeholder="Год выпуска" data-js="formSelect" required="">
+                                            <option label=" "></option>
+                                            <option value="2020">2020</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2025">2025</option>
+                                          </select><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                      </div>
+                                      <div class="field    " data-js="formField">
+                                        <label>
+                                          <select class="field__select" data-placeholder="Тип кузова" data-js="formSelect" required="">
+                                            <option label=" "></option>
+                                            <option value="Седан">Седан</option>
+                                            <option value="Хетчбэк">Хетчбэк</option>
+                                            <option value="Универсал">Универсал</option>
+                                            <option value="Кроссовер">Кроссовер</option>
+                                            <option value="Минивэн">Минивэн</option>
+                                          </select><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                      </div>
+                                      <div class="field    " data-js="formField">
+                                        <label>
+                                          <input class="field__input" type="tel" placeholder="Ваш телефон" required="" data-v-name="phone" data-type="phoneNumber"><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                      </div>
+                                </div>
+                                    <button class="btn form__submit btn--accent btn--full" type="submit"><span class="btn__text">Обратный звонок</span>
+                                    </button>
+                              </div>
+                              <div class="form__privacy form-privacy" data-js="formField"><span class="form-privacy__text">Нажимая кнопку «Обратный звонок», Вы соглашаетесь с <a href="javascript:void(0);">политикой конфиденциальности</a> и <a href="javascript:void(0);">правилами обработки персональных данных</a></span><span class="field__error" data-js="fieldError"></span></div>
+                            </div>
+                            <div class="form__thanks" data-js="form-thanks">
+                              <div class="title--32 form__title">Ваш вопрос отправлен.</div>
+                              <div class="form__image-success">
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#form_success"></use>
+                                </svg>
+                              </div>
+                              <div class="form__text">С Вами свяжется ответственный сотрудник по&nbsp;указанным контактным данным.</div>
+                            </div>
+                          </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section s-catalog s-catalog--slider" data-js="sCatalogSlider">
+              <div class="section__container section__content">
+                <div class="section-header s-catalog__header">
+                  <div class="title title--36">Аналоги за те же деньги</div>
+                </div>
+                <div class="s-catalog__list" data-js="sCatalogSliderSlider">
+                  <div class="swiper-wrapper">
+                        <div class="catalog-card swiper-slide">
+                          <div class="catalog-card__top">
+                            <div class="catalog-card__img"><img src="img/catalog/product_1.webp" alt=""></div>
+                            <div class="catalog-card__extras">
+                              <div class="catalog-card__left">
+                                <div class="catalog-card__tags">
+                                  <div class="catalog-card__tag  catalog-card__tag--accent">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#lightning"></use>
+                                    </svg><span>Предложение дня</span>
+                                  </div>
+                                  <div class="catalog-card__tag  catalog-card__tag--light-accent"><span>Выгода до 300 000 ₽</span>
+                                  </div>
+                                </div>
+                                <div class="catalog-card__gifts">
+                                  <div class="catalog-card__gift"><img src="img/catalog/gift.svg" alt="">
+                                    <div class="text">Оборудование <span>в подарок</span></div>
+                                  </div>
+                                  <div class="catalog-card__gift"><img src="img/catalog/gift.svg" alt="">
+                                    <div class="text">КАСКО <span>в подарок</span></div>
+                                  </div>
+                                  <div class="catalog-card__gift"><img src="img/catalog/gift.svg" alt="">
+                                    <div class="text">Комплект резины <span>в подарок</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                                  <div class="prod-controls catalog-card__controls"><a class="prod-controls__item" href="javascript:void(0);">
+                                      <svg>
+                                        <use xlink:href="img/sprites/sprite.svg#compare"></use>
+                                      </svg></a>
+                                  </div>
+                            </div>
+                          </div>
+                          <div class="catalog-card__info">
+                            <div class="catalog-card__title title title--30">Новый LIXIANG L6 MAX</div>
+                                <div class="price catalog-card__price">
+                                  <div class="price__current">5 500 000 ₽</div>
+                                  <div class="price__old">6 200 000 ₽</div>
+                                  <div class="price__credit">от 115 000 ₽/мес <span>в кредит</span></div>
+                                </div>
+                            <div class="catalog-card__chars">
+                              <div class="catalog-card__char"><img src="img/catalog/chars/engine.svg" alt=""><span>449 л.с.</span></div>
+                              <div class="catalog-card__char"><img src="img/catalog/chars/fuel.svg" alt=""><span>1.5 л/км</span></div>
+                              <div class="catalog-card__char"><img src="img/catalog/chars/speed.svg" alt=""><span>180 км/ч</span></div>
+                              <div class="catalog-card__char"><img src="img/catalog/chars/timer.svg" alt=""><span>5.3 c.</span></div>
+                            </div>
+                          </div>
+                          <div class="catalog-card__btns"><a class="btn catalog-card__btn btn--accent btn--full" href="javascript:void(0)"><span class="btn__text">Забронировать</span></a><a class="btn catalog-card__btn btn--light-accent btn--full" href="javascript:void(0)"><span class="btn__text">Подробнее</span></a>
+                          </div>
+                        </div>
+                        <div class="catalog-card swiper-slide">
+                          <div class="catalog-card__top">
+                            <div class="catalog-card__img"><img src="img/catalog/product_2.webp" alt=""></div>
+                            <div class="catalog-card__extras">
+                              <div class="catalog-card__left">
+                                <div class="catalog-card__tags">
+                                  <div class="catalog-card__tag  catalog-card__tag--accent">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#lightning"></use>
+                                    </svg><span>Предложение дня</span>
+                                  </div>
+                                  <div class="catalog-card__tag  catalog-card__tag--light-accent"><span>Выгода до 300 000 ₽</span>
+                                  </div>
+                                </div>
+                                <div class="catalog-card__gifts">
+                                  <div class="catalog-card__gift"><img src="img/catalog/gift.svg" alt="">
+                                    <div class="text">Оборудование <span>в подарок</span></div>
+                                  </div>
+                                  <div class="catalog-card__gift"><img src="img/catalog/gift.svg" alt="">
+                                    <div class="text">КАСКО <span>в подарок</span></div>
+                                  </div>
+                                  <div class="catalog-card__gift"><img src="img/catalog/gift.svg" alt="">
+                                    <div class="text">Комплект резины <span>в подарок</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                                  <div class="prod-controls catalog-card__controls"><a class="prod-controls__item" href="javascript:void(0);">
+                                      <svg>
+                                        <use xlink:href="img/sprites/sprite.svg#compare"></use>
+                                      </svg></a>
+                                  </div>
+                            </div>
+                          </div>
+                          <div class="catalog-card__info">
+                            <div class="catalog-card__title title title--30">LiXiang L7 MAX</div>
+                                <div class="price catalog-card__price">
+                                  <div class="price__current">5 835 192 ₽</div>
+                                  <div class="price__old">6 200 000 ₽</div>
+                                  <div class="price__credit">от 115 000 ₽/мес <span>в кредит</span></div>
+                                </div>
+                            <div class="catalog-card__chars">
+                              <div class="catalog-card__char"><img src="img/catalog/chars/engine.svg" alt=""><span>449 л.с.</span></div>
+                              <div class="catalog-card__char"><img src="img/catalog/chars/fuel.svg" alt=""><span>1.5 л/км</span></div>
+                              <div class="catalog-card__char"><img src="img/catalog/chars/speed.svg" alt=""><span>180 км/ч</span></div>
+                              <div class="catalog-card__char"><img src="img/catalog/chars/timer.svg" alt=""><span>5.3 c.</span></div>
+                            </div>
+                          </div>
+                          <div class="catalog-card__btns"><a class="btn catalog-card__btn btn--accent btn--full" href="javascript:void(0)"><span class="btn__text">Забронировать</span></a><a class="btn catalog-card__btn btn--light-accent btn--full" href="javascript:void(0)"><span class="btn__text">Подробнее</span></a>
+                          </div>
+                        </div>
+                        <div class="catalog-card swiper-slide">
+                          <div class="catalog-card__top">
+                            <div class="catalog-card__img"><img src="img/catalog/product_3.webp" alt=""></div>
+                            <div class="catalog-card__extras">
+                              <div class="catalog-card__left">
+                                <div class="catalog-card__tags">
+                                  <div class="catalog-card__tag  catalog-card__tag--accent">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#lightning"></use>
+                                    </svg><span>Предложение дня</span>
+                                  </div>
+                                  <div class="catalog-card__tag  catalog-card__tag--light-accent"><span>Выгода до 300 000 ₽</span>
+                                  </div>
+                                </div>
+                                <div class="catalog-card__gifts">
+                                  <div class="catalog-card__gift"><img src="img/catalog/gift.svg" alt="">
+                                    <div class="text">Оборудование <span>в подарок</span></div>
+                                  </div>
+                                  <div class="catalog-card__gift"><img src="img/catalog/gift.svg" alt="">
+                                    <div class="text">КАСКО <span>в подарок</span></div>
+                                  </div>
+                                  <div class="catalog-card__gift"><img src="img/catalog/gift.svg" alt="">
+                                    <div class="text">Комплект резины <span>в подарок</span></div>
+                                  </div>
+                                </div>
+                              </div>
+                                  <div class="prod-controls catalog-card__controls"><a class="prod-controls__item" href="javascript:void(0);">
+                                      <svg>
+                                        <use xlink:href="img/sprites/sprite.svg#compare"></use>
+                                      </svg></a>
+                                  </div>
+                            </div>
+                          </div>
+                          <div class="catalog-card__info">
+                            <div class="catalog-card__title title title--30">LIXIANG L7 PRO</div>
+                                <div class="price catalog-card__price">
+                                  <div class="price__current">5 660 000 ₽</div>
+                                  <div class="price__old">6 200 000 ₽</div>
+                                  <div class="price__credit">от 115 000 ₽/мес <span>в кредит</span></div>
+                                </div>
+                            <div class="catalog-card__chars">
+                              <div class="catalog-card__char"><img src="img/catalog/chars/engine.svg" alt=""><span>449 л.с.</span></div>
+                              <div class="catalog-card__char"><img src="img/catalog/chars/fuel.svg" alt=""><span>1.5 л/км</span></div>
+                              <div class="catalog-card__char"><img src="img/catalog/chars/speed.svg" alt=""><span>180 км/ч</span></div>
+                              <div class="catalog-card__char"><img src="img/catalog/chars/timer.svg" alt=""><span>5.3 c.</span></div>
+                            </div>
+                          </div>
+                          <div class="catalog-card__btns"><a class="btn catalog-card__btn btn--accent btn--full" href="javascript:void(0)"><span class="btn__text">Забронировать</span></a><a class="btn catalog-card__btn btn--light-accent btn--full" href="javascript:void(0)"><span class="btn__text">Подробнее</span></a>
+                          </div>
+                        </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="section site-footer__section">
+        <div class="section__container">
+          <div class="site-footer__block">
+            <div class="site-footer__row site-footer__top">
+              <div class="site-footer__logo"><img src="img/logo/logo_footer.svg" alt=""></div>
+              <div class="site-footer__rating"><div style="width:218px;height:82px;overflow:hidden;position:relative;"><iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/49212829293?size=m"></iframe></div></div>
+              <div class="site-footer__nav"><a class="btn  btn--grey btn--footer" href="javascript:void(0)"><span class="btn__text">Каталог</span></a><a class="btn  btn--grey btn--footer" href="javascript:void(0)"><span class="btn__text">С пробегом</span></a><a class="btn  btn--grey btn--footer" href="javascript:void(0)"><span class="btn__text">О компании</span></a><a class="btn  btn--grey btn--footer" href="javascript:void(0)"><span class="btn__text">Акции</span></a><a class="btn  btn--grey btn--footer" href="javascript:void(0)"><span class="btn__text">Сервис</span></a>
+              </div>
+            </div>
+            <div class="site-footer__row site-footer__middle">
+              <div class="site-footer__list site-footer__list--catalog">
+                <div class="site-footer__title">Каталог</div>
+                <div class="site-footer__links"><a class="site-footer__link" href="javascript:void(0);">Kia</a><a class="site-footer__link" href="javascript:void(0);">Hyundai</a><a class="site-footer__link" href="javascript:void(0);">Skoda</a><a class="site-footer__link" href="javascript:void(0);">Volkswagen</a><a class="site-footer__link" href="javascript:void(0);">Toyota</a><a class="site-footer__link" href="javascript:void(0);">Brilliance</a><a class="site-footer__link" href="javascript:void(0);">Changan</a><a class="site-footer__link" href="javascript:void(0);">Chery</a><a class="site-footer__link" href="javascript:void(0);">CheryExeed</a><a class="site-footer__link" href="javascript:void(0);">Chevrolet</a><a class="site-footer__link" href="javascript:void(0);">Citroen</a><a class="site-footer__link" href="javascript:void(0);">Datsun</a><a class="site-footer__link" href="javascript:void(0);">Dongfeng</a><a class="site-footer__link" href="javascript:void(0);">DW Hower</a><a class="site-footer__link" href="javascript:void(0);">FAW</a><a class="site-footer__link" href="javascript:void(0);">Ford</a><a class="site-footer__link" href="javascript:void(0);">Foton</a><a class="site-footer__link" href="javascript:void(0);">GAC</a><a class="site-footer__link" href="javascript:void(0);">Geely</a><a class="site-footer__link" href="javascript:void(0);">Great Wall</a><a class="site-footer__link" href="javascript:void(0);">Haima</a><a class="site-footer__link" href="javascript:void(0);">Haval</a><a class="site-footer__link" href="javascript:void(0);">Honda</a><a class="site-footer__link" href="javascript:void(0);">JAC</a><a class="site-footer__link" href="javascript:void(0);">Lada</a><a class="site-footer__link" href="javascript:void(0);">Lifan</a><a class="site-footer__link" href="javascript:void(0);">Mazda</a><a class="site-footer__link" href="javascript:void(0);">Mitsubishi</a><a class="site-footer__link" href="javascript:void(0);">Nissan</a><a class="site-footer__link" href="javascript:void(0);">Opel</a><a class="site-footer__link" href="javascript:void(0);">Peugeot</a><a class="site-footer__link" href="javascript:void(0);">Ravon</a><a class="site-footer__link" href="javascript:void(0);">Renault</a><a class="site-footer__link" href="javascript:void(0);">SsangYong</a><a class="site-footer__link" href="javascript:void(0);">Suzuki</a><a class="site-footer__link" href="javascript:void(0);">UAZ</a><a class="site-footer__link" href="javascript:void(0);">Zotye</a></div>
+              </div>
+              <div class="site-footer__list">
+                <div class="site-footer__title">Услуги</div>
+                <div class="site-footer__links"><a class="site-footer__link" href="javascript:void(0);">Экспресс-кредит</a><a class="site-footer__link" href="javascript:void(0);">Страхование</a><a class="site-footer__link" href="javascript:void(0);">Продление гарантии</a><a class="site-footer__link" href="javascript:void(0);">Тест-драйв</a><a class="site-footer__link" href="javascript:void(0);">Утилизация</a><a class="site-footer__link" href="javascript:void(0);">Trade-in</a><a class="site-footer__link" href="javascript:void(0);">Доставка из-за рубежа</a></div>
+              </div>
+              <div class="site-footer__list">
+                <div class="site-footer__title">Контакты</div>
+                <div class="site-footer__contacts">
+                  <div class="site-footer__contact footer-contact">
+                    <div class="footer-contact__icon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#handset"></use>
+                      </svg>
+                    </div>
+                    <div class="footer-contact__desc"><a class="footer-contact__title" href="tel:+74994606219">+7 (499) 460-62-19</a>
+                      <div class="footer-contact__text">Россия, Москва, Новорижское ш.,17й км,с3</div>
+                    </div>
+                  </div>
+                  <div class="site-footer__contact footer-contact">
+                    <div class="footer-contact__icon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#handset"></use>
+                      </svg>
+                    </div>
+                    <div class="footer-contact__desc"><a class="footer-contact__title" href="tel:+74991165065">+7 (499) 116-50-65</a>
+                      <div class="footer-contact__text">Россия, Москва, Ярославское ш., д.42</div>
+                    </div>
+                  </div>
+                  <div class="site-footer__contact footer-contact">
+                    <div class="footer-contact__icon">
+                      <svg>
+                        <use xlink:href="img/sprites/sprite.svg#timer"></use>
+                      </svg>
+                    </div>
+                    <div class="footer-contact__desc">
+                      <div class="footer-contact__title">Ежедневно <br>с 08:00 до 21:00</div>
+                    </div>
+                  </div>
+                </div>
+                    <div class="socials site-footer__socials"><a class="socials__item" href="javascript:void(0);">
+                        <svg> 
+                          <use xlink:href="img/sprites/sprite.svg#telegram"></use>
+                        </svg></a><a class="socials__item" href="javascript:void(0);">
+                        <svg> 
+                          <use xlink:href="img/sprites/sprite.svg#vk"></use>
+                        </svg></a></div>
+              </div>
+            </div>
+            <div class="site-footer__row site-footer__bottom">
+              <div class="site-footer__info">
+                <div class="site-footer__copyright">©2025 Автосалон FRANK AUTO</div><a class="site-footer__doc" href="javascript:void(0);">Политика конфиденциальности</a><a class="site-footer__doc" href="javascript:void(0);">Пользовательское соглашение</a>
+                <div class="site-footer__disclaimer">Обращаем Ваше внимание на то, что данный интернет-сайт носит исключительно информационный характер и ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 Гражданского кодекса Российской Федерации.</div>
+              </div><a class="site-footer__developer" href="https://itspace.group/"><span>Разработка сайта</span><img src="img/logo/its_logo.svg" alt="it space group"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <noindex>
+      <div></div>
+    </noindex>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

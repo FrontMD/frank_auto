@@ -3,17 +3,14 @@
 @@include("../../blocks/components/form-filter/form-filter.js")
 @@include("../../blocks/components/field/field.js")
 @@include("../../blocks/components/field-range/field-range.js")
+@@include("../../blocks/components/catalog-card/catalog-card.js")
 //include("../../blocks/components/field-file/field-file.js")
 
 document.addEventListener('DOMContentLoaded', () => {
-    // управляет полями в формах
     fieldsController();
-    // управляет селектами в формах
     selects();
-    // управляет диапазонами в формах
-    fieldsRangeController()
-    // маски полей и валидация
+    fieldsRangeController();
     validation();
-    // маски полей и спойлер в формах-фильтрах
     formFilterController();
+    ccSlidersInit();
 })

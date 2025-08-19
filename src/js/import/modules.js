@@ -15,6 +15,7 @@
 @@include("../../blocks/modules/s-config/s-config.js")
 @@include("../../blocks/modules/cp-intro/cp-intro.js")
 
+
 document.addEventListener('DOMContentLoaded', () => {
     modalsInit()
     headerController()
