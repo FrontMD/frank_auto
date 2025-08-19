@@ -1,0 +1,140 @@
+-
+    const defaultCpIntroProps = {
+        classes: '',
+    }
+
+mixin cp-intro(props= defaultCpIntroProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultCpIntroProps.classes,
+        }
+
+    section.section.cp-intro(class= checkProps.classes data-js="cpIntro")&attributes(attributes)
+        .section__container
+            .section-block.cp-intro__block
+                .cp-intro__left
+                    .cp-intro__slider(data-js="cpIntroSlider")
+                        +slider-controls
+                        +prod-controls({
+                            classes: 'cp-intro__controls prod-controls--blur',
+                            compare: true,
+                            favorite: true,
+                        })
+                        .swiper-wrapper
+                            .swiper-slide.cp-intro__slide
+                                img(src="img/catalog-product/cp_intro_1.webp" alt="")
+                            .swiper-slide.cp-intro__slide
+                                img(src="img/catalog-product/cp_intro_2.webp" alt="")
+                            .swiper-slide.cp-intro__slide
+                                img(src="img/catalog-product/cp_intro_3.webp" alt="")
+                            .swiper-slide.cp-intro__slide
+                                img(src="img/catalog-product/cp_intro_4.webp" alt="")
+                            .swiper-slide.cp-intro__slide
+                                img(src="img/catalog-product/cp_intro_5.webp" alt="")
+
+                    .cp-intro__thumbs(data-js="cpIntroThumbs")
+                        .swiper-wrapper
+                            .swiper-slide.cp-intro__thumb
+                                img(src="img/catalog-product/cp_intro_1.webp" alt="")
+                            .swiper-slide.cp-intro__thumb
+                                img(src="img/catalog-product/cp_intro_2.webp" alt="")
+                            .swiper-slide.cp-intro__thumb
+                                img(src="img/catalog-product/cp_intro_3.webp" alt="")
+                            .swiper-slide.cp-intro__thumb
+                                img(src="img/catalog-product/cp_intro_4.webp" alt="")
+                            .swiper-slide.cp-intro__thumb
+                                img(src="img/catalog-product/cp_intro_5.webp" alt="")
+
+                    .cp-intro__ac
+                        .cp-intro__subtitle Доступные цвета
+                        .cp-intro__colors
+                            .cp-intro__color
+                                span(style="background-color:#000000;")
+                                | Черный
+                            .cp-intro__color
+                                span(style="background-color:#ffffff;")
+                                | Белый
+                            .cp-intro__color
+                                span(style="background-color:#A9A9A9;")
+                                | Серебро
+
+                .cp-intro__right
+                    .title.cp-intro__title Lixiang L7 Pro 449 л.с. Hybrid Turbo 4WD Белый
+                    .cp-intro__params    
+                        .tech-spec__rows
+                            .tech-spec__row
+                                .tech-spec__param Год выпуска:
+                                .tech-spec__separator
+                                .tech-spec__value 2025
+                            .tech-spec__row
+                                .tech-spec__param Кузов:
+                                .tech-spec__separator
+                                .tech-spec__value Минивэн
+                            .tech-spec__row
+                                .tech-spec__param Двигатель:
+                                .tech-spec__separator
+                                .tech-spec__value 1.6 л. / 112 л.с. / Бензин
+                            .tech-spec__row
+                                .tech-spec__param Привод:
+                                .tech-spec__separator
+                                .tech-spec__value Автоматический
+                            .tech-spec__row
+                                .tech-spec__param Цвет:
+                                .tech-spec__separator
+                                .tech-spec__value Белый
+                            .tech-spec__row
+                                .tech-spec__param Адрес:
+                                .tech-spec__separator
+                                .tech-spec__value Новорижское ш., 17й км, с3
+                        a(href="").cp-intro__all Все характеристики
+
+                    .cp-intro__chars
+                        .cp-intro__char
+                            img(src="img/catalog/chars/fuel.svg" alt="")
+                            div
+                                .title Запас хода
+                                .text 240 км.
+
+                        .cp-intro__char
+                            img(src="img/catalog/chars/lightning.svg" alt="")
+                            div
+                                .title Емкость батареи
+                                .text 53 кВт ч.
+
+                        .cp-intro__char
+                            img(src="img/catalog/chars/gear.svg" alt="")
+                            div
+                                .title Мощность
+                                .text 554 л.с.
+
+                    .cp-intro__flex
+                        .cp-intro__price
+                            .old 6 200 000 ₽
+                            .current 5 500 000 ₽
+                        .cp-intro__btns
+                            +btn({
+                                name: 'Забронировать онлайн',
+                                cMode: 'accent',
+                                sMode: 'full'
+                            })
+                            +btn({
+                                name: 'В кредит от от 370 103&nbsp;₽/мес',
+                                cMode: 'light-accent',
+                                sMode: 'full'
+                            })
+
+                    .cp-intro__gifts
+                        .cp-intro__gift
+                            img(src="img/catalog/gift.svg" alt="")
+                            .text Зачёт вашего<br>автомобиля в trade-in
+                        .cp-intro__gift
+                            img(src="img/catalog/gift.svg" alt="")
+                            .text Улучшим любое<br>предложение
+                        .cp-intro__gift
+                            img(src="img/catalog/gift.svg" alt="")
+                            .text Беспроцентная<br>рассрочка 0%
+                        .cp-intro__gift
+                            img(src="img/catalog/gift.svg" alt="")
+                            .text Без первончального<br>взноса
+
+

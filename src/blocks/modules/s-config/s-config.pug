@@ -1,0 +1,115 @@
+-
+    const defaultSConfigProps = {
+        classes: '',
+        title: 'Технические характеристики Lixiang L7 Pro 449 л.с.<br>Hybrid Turbo 4WD',
+        items: [
+            {
+                mode: 'Двигатель'
+            },
+            {
+                mode: 'Трансмиссия'
+            }
+        ]
+    }
+
+mixin s-config(props= defaultSConfigProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSConfigProps.classes,
+        }
+
+    section.section.s-config(class= checkProps.classes data-js="gridSpoiler")&attributes(attributes)
+        .section__container.section__content
+            .section-block.s-config__content
+                .title.title--36.s-config__title Что входит в комплектацию L7 Pro
+                .s-config__blocks(data-js="gridSpoilerContent")
+                    .cm-spoiler-list.s-config__block(data-js="gridSpoilerCell")
+                        .cm-spoiler-list__icon
+                            img(src="img/catalog-model/car_prop_1.svg" alt="")
+                        .cm-spoiler-list__text
+                            .cm-spoiler-list__title Безопасность
+                            ul.cm-spoiler-list__items
+                                li ЭРА-ГЛОНАСС
+                                li Датчик давления в шинах
+                                li Система помощи при спуске
+                                li Система удержания в полосе
+                                li Система стабилизации (ESP)
+                                li Система контроля слепых зон
+                                li Подушки безопасности боковые
+                                li Система управления дальним светом
+
+                    .cm-spoiler-list.s-config__block(data-js="gridSpoilerCell")
+                        .cm-spoiler-list__icon
+                            img(src="img/catalog-model/car_prop_2.svg" alt="")
+                        .cm-spoiler-list__text
+                            .cm-spoiler-list__title Экстерьер
+                            ul.cm-spoiler-list__items
+                                li Диски 20
+                                li Датчик света
+                                li Датчик дождя
+                                li Светодиодные фары
+                                li Автоматический корректор фар
+                                li Система адаптивного освещения
+                                li Электрообогрев боковых зеркал
+                                li Система управления дальним светом
+
+                    .cm-spoiler-list.s-config__block(data-js="gridSpoilerCell")
+                        .cm-spoiler-list__icon
+                            img(src="img/catalog-model/car_prop_3.svg" alt="")
+                        .cm-spoiler-list__text
+                            .cm-spoiler-list__title Интерьер
+                            ul.cm-spoiler-list__items
+                                li Люк
+                                li Сиденья с массажем
+                                li Тонированные стекла
+                                li Кожа (Материал салона)
+                                li Подогрев задних сидений
+                                li Память сиденья водителя
+                                li Обогрев рулевого колеса
+                                li Подогрев передних сидений
+
+                    .cm-spoiler-list.s-config__block(data-js="gridSpoilerCell")
+                        .cm-spoiler-list__icon
+                            img(src="img/catalog-model/car_prop_1.svg" alt="")
+                        .cm-spoiler-list__text
+                            .cm-spoiler-list__title Безопасность
+                            ul.cm-spoiler-list__items
+                                li ЭРА-ГЛОНАСС
+                                li Датчик давления в шинах
+                                li Система помощи при спуске
+                                li Система удержания в полосе
+                                li Система стабилизации (ESP)
+                                li Система контроля слепых зон
+                                li Подушки безопасности боковые
+                                li Система управления дальним светом
+
+                    .cm-spoiler-list.s-config__block(data-js="gridSpoilerCell")
+                        .cm-spoiler-list__icon
+                            img(src="img/catalog-model/car_prop_2.svg" alt="")
+                        .cm-spoiler-list__text
+                            .cm-spoiler-list__title Экстерьер
+                            ul.cm-spoiler-list__items
+                                li Диски 20
+                                li Датчик света
+                                li Датчик дождя
+                                li Светодиодные фары
+                                li Автоматический корректор фар
+                                li Система адаптивного освещения
+                                li Электрообогрев боковых зеркал
+                                li Система управления дальним светом
+
+                    .cm-spoiler-list.s-config__block(data-js="gridSpoilerCell")
+                        .cm-spoiler-list__icon
+                            img(src="img/catalog-model/car_prop_3.svg" alt="")
+                        .cm-spoiler-list__text
+                            .cm-spoiler-list__title Интерьер
+                            ul.cm-spoiler-list__items
+                                li Люк
+                                li Сиденья с массажем
+                                li Тонированные стекла
+                                li Кожа (Материал салона)
+                                li Подогрев задних сидений
+                                li Память сиденья водителя
+                                li Обогрев рулевого колеса
+                                li Подогрев передних сидений
+

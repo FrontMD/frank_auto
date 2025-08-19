@@ -17,5 +17,21 @@
     &__tabs {
         background-color: $c-white;
         border-radius: $br-section;
+
+        @include max(mobile) {
+            border-radius: $br-section-mob;
+        }
+    }
+
+    .form-filter__title {
+        margin-bottom: auto;
+    }
+
+    .form-filter__fields {
+        flex: 0 0 auto;
+    }
+
+    .form-filter__submit.btn {
+        margin-top: 0;
     }
 }

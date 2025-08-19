@@ -74,8 +74,9 @@
     &__flex {
         display: flex;
         gap: 16px;
+        width: 100%;
 
-        .field {
+        >* {
             flex: 0 0 calc((100% - 16px) / 2);
             max-width: calc((100% - 16px) / 2);
 

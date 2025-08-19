@@ -1,12 +1,14 @@
 -
     const defaultHomeSelectionProps = {
         classes: '',
+        usedPage: false
     }
 
 mixin home-selection(props= defaultHomeSelectionProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultHomeSelectionProps.classes,
+            usedPage: props.usedPage ? props.usedPage : defaultHomeSelectionProps.usedPage,
         }
 
     section.section.home-selection(class= checkProps.classes)&attributes(attributes)
@@ -30,43 +32,136 @@ mixin home-selection(props= defaultHomeSelectionProps)
                         +brands-list
 
             .section__sidebar.home-selection__sidebar
-                +form-filter({
-                    title: 'Быстрый <br>подбор <br>автомобиля',
-                    btnText: 'Показать 74 авто',
-                })
-                    +field-range({
-                        classes: 'field-range--margins',
-                        title: 'Стоимость',
-                        isRange: true
+                - if(checkProps.usedPage === false)
+                    +form-filter({
+                        title: 'Быстрый <br>подбор <br>автомобиля',
+                        btnText: 'Показать 74 авто',
                     })
+                        +field-range({
+                            classes: 'field-range--margins',
+                            title: 'Стоимость',
+                            isRange: true
+                        })
 
-                    +field({
-                        classes: '',
-                        tag: 'select',
-                        placeholder: 'Бренд',
-                        selectOptions: [
-                            "",
-                            "LiXiang",
-                            "Voyah",
-                            "AITO",
-                            "Chery",
-                            "Zeekr",
-                            "Audi",
-                            "Tank",
-                            "Rox Motor Tech",
-                        ],
+                        +field({
+                            classes: '',
+                            tag: 'select',
+                            placeholder: 'Бренд',
+                            selectOptions: [
+                                "",
+                                "LiXiang",
+                                "Voyah",
+                                "AITO",
+                                "Chery",
+                                "Zeekr",
+                                "Audi",
+                                "Tank",
+                                "Rox Motor Tech",
+                            ],
+                        })
+                        +field({
+                            classes: '',
+                            tag: 'select',
+                            placeholder: 'Модель',
+                            selectOptions: [
+                                "",
+                                "LiXiang L6",
+                                "LiXiang L7",
+                                "LiXiang L9",
+                                "LiXiang L9",
+                                "LiXiang Mega",
+                                "LiXiang One"
+                            ],
+                        })
+
+                - else
+                    +form-filter({
+                        title: 'Быстрый подбор автомобиля',
+                        btnText: 'Показать 73',
+                        hasResetBtn: true
                     })
-                    +field({
-                        classes: '',
-                        tag: 'select',
-                        placeholder: 'Модель',
-                        selectOptions: [
-                            "",
-                            "LiXiang L6",
-                            "LiXiang L7",
-                            "LiXiang L9",
-                            "LiXiang L9",
-                            "LiXiang Mega",
-                            "LiXiang One"
-                        ],
-                    })
+                        .form-filter__flex
+                            +field({
+                                classes: '',
+                                tag: 'select',
+                                placeholder: 'Модель',
+                                selectOptions: [
+                                    "",
+                                    "LiXiang L6",
+                                    "LiXiang L7",
+                                    "LiXiang L9",
+                                    "LiXiang L9",
+                                    "LiXiang Mega",
+                                    "LiXiang One"
+                                ],
+                            })
+                            +field({
+                                classes: '',
+                                tag: 'select',
+                                placeholder: 'Тип кузова',
+                                selectOptions: [
+                                    "",
+                                    "Седан",
+                                    "Хетчбэк",
+                                    "Универсал",
+                                    "Кроссовер",
+                                    "Минивэн"
+                                ],
+                            })
+
+                        .form-filter__flex
+                            +field({
+                                classes: '',
+                                tag: 'select',
+                                placeholder: 'Год выпуска',
+                                selectOptions: [
+                                    "",
+                                    "2020",
+                                    "2021",
+                                    "2022",
+                                    "2023",
+                                    "2024",
+                                    "2025",
+                                ],
+                            })
+                            +field({
+                                classes: '',
+                                tag: 'select',
+                                placeholder: 'Стоимость',
+                                selectOptions: [
+                                    "",
+                                    "5 000 000 ₽",
+                                    "5 100 000 ₽",
+                                    "5 200 000 ₽",
+                                    "5 300 000 ₽",
+                                    "5 400 000 ₽",
+                                    "5 500 000 ₽",
+                                ],
+                            })
+
+                        .form-filter__flex
+                            +field({
+                                classes: '',
+                                tag: 'select',
+                                placeholder: 'Пробег',
+                                selectOptions: [
+                                    "",
+                                    "20 000 км",
+                                    "30 000 км",
+                                    "40 000 км",
+                                    "50 000 км",
+                                    "60 000 км",
+                                    "70 000 км",
+                                ],
+                            })
+                            +field({
+                                classes: '',
+                                tag: 'select',
+                                placeholder: 'Привод',
+                                selectOptions: [
+                                    "",
+                                    "Передний",
+                                    "Задний",
+                                    "Полный",
+                                ],
+                            })

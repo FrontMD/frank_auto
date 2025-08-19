@@ -27,6 +27,7 @@
                 text: '5.3 c.'
             },
         ],
+        charsTable: [],
         tags: [
             {
                 icon: 'lightning',
@@ -59,6 +60,7 @@ mixin catalog-card(props = defaultCatalogCardProps)
             title: props.title ? props.title : defaultCatalogCardProps.title,
             price: props.price ? props.price : defaultCatalogCardProps.price,
             chars: props.chars ? props.chars : defaultCatalogCardProps.chars,
+            charsTable: props.charsTable ? props.charsTable : defaultCatalogCardProps.charsTable,
             tags: props.tags ? props.tags : defaultCatalogCardProps.tags,
             gifts: props.gifts ? props.gifts : defaultCatalogCardProps.gifts,
             controls: props.controls ? props.controls : defaultCatalogCardProps.controls,
@@ -96,17 +98,30 @@ mixin catalog-card(props = defaultCatalogCardProps)
                 +prod-controls(checkProps.controls)
 
         .catalog-card__info
-            .catalog-card__title.title.title--30!= checkProps.title 
-            +price(checkProps.price)
-            .catalog-card__chars
-                - let charsCount = 0
-                - while(charsCount < checkProps.chars.length)
-                    - let char = checkProps.chars[charsCount]
-                    .catalog-card__char
-                        img(src=char.icon, alt="")
-                        span!= char.text
+            .catalog-card__title.title.title--30!= checkProps.title
+            - if(checkProps.charsTable.length > 0)
+                .catalog-card__table
+                    - let charsTCount = 0
+                    - while(charsTCount < checkProps.charsTable.length)
+                        -let charT = checkProps.charsTable[charsTCount]
 
-                    - charsCount++
+                        .catalog-card__row
+                            .param!= charT.param
+                            .value!= charT.value
+
+                        - charsTCount++
+
+            +price(checkProps.price)
+            - if(checkProps.chars.length > 0)
+                .catalog-card__chars
+                    - let charsCount = 0
+                    - while(charsCount < checkProps.chars.length)
+                        - let char = checkProps.chars[charsCount]
+                        .catalog-card__char
+                            img(src=char.icon, alt="")
+                            span!= char.text
+
+                        - charsCount++
         .catalog-card__btns
             +btn({
                 classes: 'catalog-card__btn',

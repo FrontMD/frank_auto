@@ -1,7 +1,7 @@
 function homeIntro() {
     const homeIntros = document.querySelectorAll('[data-js="homeIntro"]')
 
-    if(!homeIntros.lenght < 1) return
+    if(homeIntros.lenght < 1) return
 
     homeIntros.forEach(homeIntro => {
         const homeIntroSlider = homeIntro.querySelector('[data-js="homeIntroSlider"]')

@@ -272,7 +272,9 @@ function formSpoilerController(form) {
     const toggle = form.querySelector('[data-js="formSpoilerToggle"]')
     const ww = window.innerWidth
 
-    if(!spoiler || !toggle || ww < 768) {
+    if(!spoiler) return
+    
+    if(!toggle || ww < 768) {
         spoiler.style.maxHeight = 'none'
         return
     }

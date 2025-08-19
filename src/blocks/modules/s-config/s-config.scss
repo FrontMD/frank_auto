@@ -1,0 +1,15 @@
+.s-config {
+    &__blocks {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-top: 40px;
+        transition: all $tr-time-long linear;
+        overflow: hidden;
+    }
+
+    &__more {
+        margin: 40px auto 0;
+        max-width: 454px;
+    }
+}

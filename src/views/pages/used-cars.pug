@@ -1,0 +1,324 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Авто с пробегом"
+
+block content
+	.page-layout(data-js="pageLayout")
+		+s-breadcrumbs({
+			items: [
+				{
+					name: 'Главная',
+					link: 'javascript:void(0);'
+				},
+				{
+					name: 'Каталог',
+					link: 'javascript:void(0);'
+				},
+				{
+					name: 'С пробегом',
+					link: 'javascript:void(0);'
+				}
+			],
+		})
+
+		section.section.section--title
+			.section__container
+				.section__header.section__content
+					.title.title--40
+						h1 С пробегом
+
+		+home-selection({
+			usedPage: true
+		})
+
+		+s-catalog({
+			title: 'Каталог автомобилей',
+			sort: true,
+			pagination: true,
+			items: [
+				{
+					img: 'img/catalog-product/cp_intro_1.webp',
+					title: 'Zeekr 009',
+					price: {
+						classes: 'catalog-card__price',
+						current: '5 500 000 ₽',
+						old: '6 200 000 ₽',
+						credit: 'от 115 000 ₽/мес <span>в кредит</span>'
+					},
+					gifts: [],
+					tags: [],
+					chars: [],
+					charsTable: [
+						{
+							param: 'Мощность:',
+							value: '544 л.с.'
+						},
+						{
+							param: 'Объем двигателя:',
+							value: '1.6 л'
+						},
+						{
+							param: 'Привод:',
+							value: 'Полный'
+						},
+						{
+							param: 'Кузов:',
+							value: 'Минивэн'
+						},
+						{
+							param: 'КПП:',
+							value: 'Автомат'
+						},
+						{
+							param: 'Пробег:',
+							value: '123456 км'
+						},
+					]
+				},
+				{
+					img: 'img/catalog-product/cp_intro_1.webp',
+					title: 'Zeekr 009',
+					price: {
+						classes: 'catalog-card__price',
+						current: '5 835 192 ₽',
+						old: '6 200 000 ₽',
+						credit: 'от 115 000 ₽/мес <span>в кредит</span>'
+					},
+					gifts: [],
+					tags: [],
+					chars: [],
+					charsTable: [
+						{
+							param: 'Мощность:',
+							value: '544 л.с.'
+						},
+						{
+							param: 'Объем двигателя:',
+							value: '1.6 л'
+						},
+						{
+							param: 'Привод:',
+							value: 'Полный'
+						},
+						{
+							param: 'Кузов:',
+							value: 'Минивэн'
+						},
+						{
+							param: 'КПП:',
+							value: 'Автомат'
+						},
+						{
+							param: 'Пробег:',
+							value: '123456 км'
+						},
+					]
+				},
+				{
+					img: 'img/catalog-product/cp_intro_1.webp',
+					title: 'Zeekr 009',
+					price: {
+						classes: 'catalog-card__price',
+						current: '5 660 000 ₽',
+						old: '6 200 000 ₽',
+						credit: 'от 115 000 ₽/мес <span>в кредит</span>'
+					},
+					gifts: [],
+					tags: [],
+					chars: [],
+					charsTable: [
+						{
+							param: 'Мощность:',
+							value: '544 л.с.'
+						},
+						{
+							param: 'Объем двигателя:',
+							value: '1.6 л'
+						},
+						{
+							param: 'Привод:',
+							value: 'Полный'
+						},
+						{
+							param: 'Кузов:',
+							value: 'Минивэн'
+						},
+						{
+							param: 'КПП:',
+							value: 'Автомат'
+						},
+						{
+							param: 'Пробег:',
+							value: '123456 км'
+						},
+					]
+				},
+				{
+					img: 'img/catalog-product/cp_intro_1.webp',
+					title: 'ZEEKR 009',
+					price: {
+						classes: 'catalog-card__price',
+						current: '4 600 000 ₽',
+						old: '6 200 000 ₽',
+						credit: 'от 115 000 ₽/мес <span>в кредит</span>'
+					},
+					gifts: [],
+					tags: [],
+					chars: [],
+					charsTable: [
+						{
+							param: 'Мощность:',
+							value: '544 л.с.'
+						},
+						{
+							param: 'Объем двигателя:',
+							value: '1.6 л'
+						},
+						{
+							param: 'Привод:',
+							value: 'Полный'
+						},
+						{
+							param: 'Кузов:',
+							value: 'Минивэн'
+						},
+						{
+							param: 'КПП:',
+							value: 'Автомат'
+						},
+						{
+							param: 'Пробег:',
+							value: '123456 км'
+						},
+					]
+				},
+				{
+					img: 'img/catalog-product/cp_intro_1.webp',
+					title: 'ZEEKR 009',
+					price: {
+						classes: 'catalog-card__price',
+						current: '5 500 000 ₽',
+						old: '6 200 000 ₽',
+						credit: 'от 115 000 ₽/мес <span>в кредит</span>'
+					},
+					gifts: [],
+					tags: [],
+					chars: [],
+					charsTable: [
+						{
+							param: 'Мощность:',
+							value: '544 л.с.'
+						},
+						{
+							param: 'Объем двигателя:',
+							value: '1.6 л'
+						},
+						{
+							param: 'Привод:',
+							value: 'Полный'
+						},
+						{
+							param: 'Кузов:',
+							value: 'Минивэн'
+						},
+						{
+							param: 'КПП:',
+							value: 'Автомат'
+						},
+						{
+							param: 'Пробег:',
+							value: '123456 км'
+						},
+					]
+				},
+				{
+					img: 'img/catalog-product/cp_intro_1.webp',
+					title: 'Zeekr 009',
+					price: {
+						classes: 'catalog-card__price',
+						current: '6 700 000 ₽',
+						old: '6 900 000 ₽',
+						credit: 'от 115 000 ₽/мес <span>в кредит</span>'
+					},
+					gifts: [],
+					tags: [],
+					chars: [],
+					charsTable: [
+						{
+							param: 'Мощность:',
+							value: '544 л.с.'
+						},
+						{
+							param: 'Объем двигателя:',
+							value: '1.6 л'
+						},
+						{
+							param: 'Привод:',
+							value: 'Полный'
+						},
+						{
+							param: 'Кузов:',
+							value: 'Минивэн'
+						},
+						{
+							param: 'КПП:',
+							value: 'Автомат'
+						},
+						{
+							param: 'Пробег:',
+							value: '123456 км'
+						},
+					]
+				},
+
+			]
+		})
+
+		+s-news({
+			title: 'Блог',
+			btn: {
+				classes: 'section-header__btn',
+				name: 'Смотреть все',
+				cMode: 'bordered',
+				sMode: 'content'
+			},
+			slides: '4',
+			cards: [
+				{
+					classes: 'swiper-slide news-card--small',
+					img: 'img/news/news_1.webp',
+					title: 'Чем отличаются LIXIANG L7, L8 и L9. Какую модель выбрать?',
+					text: '',
+					tag: 'Кузовной ремонт',
+					date: ''
+				},
+				{
+					classes: 'swiper-slide news-card--small',
+					img: 'img/news/news_2.webp',
+					title: 'Самые продаваемые бренды электромобилей в мире',
+					text: '',
+					tag: 'ZEEKR',
+					date: ''
+				},
+				{
+					classes: 'swiper-slide news-card--small',
+					img: 'img/news/news_3.webp',
+					title: 'Сообщество EV World Club: площадка для экспертов и истинных ценителей электромобилей',
+					text: '',
+					tag: 'Детейлинг',
+					date: ''
+				},
+				{
+					classes: 'swiper-slide news-card--small',
+					img: 'img/news/news_4.webp',
+					title: 'Топ-7 лучших китайских электромобилей по версии европейских экспертов',
+					text: '',
+					tag: 'Детейлинг',
+					date: ''
+				}
+			]
+		})
+
+		+s-text
