@@ -18,7 +18,7 @@ mixin s-config(props= defaultSConfigProps)
             classes: props.classes ? props.classes : defaultSConfigProps.classes,
         }
 
-    section.section.s-config(class= checkProps.classes data-js="gridSpoiler")&attributes(attributes)
+    section.section.s-config(class= checkProps.classes data-js="gridSpoiler" data-rows="1" data-resp="3-1024")&attributes(attributes)
         .section__container.section__content
             .section-block.s-config__content
                 .title.title--36.s-config__title Что входит в комплектацию L7 Pro

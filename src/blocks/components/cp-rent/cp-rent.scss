@@ -4,6 +4,11 @@
         display: flex;
         align-items: stretch;
         gap: 20px;
+
+        @include max(tablet) {
+            flex-direction: column;
+            gap: 10px;
+        }
     }
 
     &__card {

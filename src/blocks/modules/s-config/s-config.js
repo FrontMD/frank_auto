@@ -2,20 +2,35 @@ function sConfigInit() {
         const gridSpoilers = document.querySelectorAll('[data-js="gridSpoiler"]')
 
         if(gridSpoilers.length < 1) return
-
+        
         const showMoreLayout = `<span class="btn__text show">Показать еще</span><span class="btn__text hide">Свернуть</span>`
-
+        const ww = window.innerWidth
+        
         gridSpoilers.forEach(gridSpoiler => {
             const content = gridSpoiler.querySelector('[data-js="gridSpoilerContent"]')
-            const rows = 1
-            const gridItemHeight = content.querySelector('[data-js="gridSpoilerCell"]').offsetHeight
-            const gap = parseInt(window.getComputedStyle(content).rowGap)
+            let rows = parseInt(gridSpoiler.dataset.rows)
+            const resp = gridSpoiler.dataset.resp
+
+            
+            if(resp) {
+                let respArr = resp.split('-')
+                
+                if(ww < respArr[1]) {
+                    rows = respArr[0]
+                }
+            }
+
+            const cell = content.querySelectorAll('[data-js="gridSpoilerCell"]')[1]
+            const gridItemHeight = cell.offsetHeight
+            const margins = isNaN(parseInt(window.getComputedStyle(cell).marginTop)) ? 0 : parseInt(window.getComputedStyle(cell).marginTop)
+            const rowGap = isNaN(parseInt(window.getComputedStyle(content).rowGap)) ? 0 : parseInt(window.getComputedStyle(content).rowGap)
+            const gap = rowGap + margins
             const minHeight = rows * gridItemHeight + (rows - 1) * gap
             const maxHeight = content.scrollHeight
 
             content.style.maxHeight = minHeight + 'px'
 
-            if(maxHeight > minHeight) {
+            if(maxHeight - ((gridItemHeight + gap) / 2) > minHeight) {
                 const showMore = document.createElement('button')
                 
                 showMore.classList.add('btn', 's-config__more', 'btn--light-accent', 'btn--full', 'btn--toggle')

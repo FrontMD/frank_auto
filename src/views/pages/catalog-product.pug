@@ -2,246 +2,246 @@ extends ../layouts/default
 include ../helpers/mixins
 
 block variables
-	- const title = "Торговое предложение"
+    - const title = "Торговое предложение"
 
 block content
-	.page-layout(data-js="pageLayout")
-		+s-breadcrumbs({
-			items: [
-				{
-					name: 'Главная',
-					link: 'javascript:void(0);'
-				},
-				{
-					name: 'Каталог',
-					link: 'javascript:void(0);'
-				},
-				{
-					name: 'Lixiang',
-					link: 'javascript:void(0);'
-				},
-				{
-					name: 'Lixiang L7 Pro 449 л.с. Hybrid Turbo 4WD Белый',
-					link: 'javascript:void(0);'
-				}
-			],
-		})
+    .page-layout(data-js="pageLayout")
+        +s-breadcrumbs({
+            items: [
+                {
+                    name: 'FrankAuto',
+                    link: 'javascript:void(0);'
+                },
+                {
+                    name: 'Каталог',
+                    link: 'javascript:void(0);'
+                },
+                {
+                    name: 'Lixiang',
+                    link: 'javascript:void(0);'
+                },
+                {
+                    name: 'Lixiang L7 Pro 449 л.с. Hybrid Turbo 4WD Белый',
+                    link: 'javascript:void(0);'
+                }
+            ],
+        })
 
-		+cp-intro
+        +cp-intro
 
-		+s-discount({
-			items: [
-				{
-					title: 'Специальное предложение',
-					text: 'от представительства',
-					discount: '–35% ₽',
-					decor: 'img/catalog/discount_decor_1.svg',
-					isChecked: false,
-					noLink: true
-				},
-				{
-					title: 'Скидка за наличные',
-					text: 'от Frank Auto',
-					discount: '–40 000 ₽',
-					decor: 'img/catalog/discount_decor_2.svg',
-					isChecked: true,
-					noLink: true
-				},
-				{
-					title: 'Выгода за Trade-in',
-					text: 'Авто в кредит 1,9%',
-					discount: '–120 000 ₽',
-					decor: 'img/catalog/discount_decor_3.svg',
-					isChecked: true
-				},
-				{
-					title: 'Выгода за утилизацию',
-					text: 'от Frank Auto',
-					discount: '–120 000 ₽',
-					decor: 'img/catalog/discount_decor_4.svg',
-					isChecked: true
-				},
-				{
-					title: 'Скидка при оформлении',
-					text: 'Автомобиля в кредит 1,9%',
-					discount: '–40 000 ₽',
-					decor: 'img/catalog/discount_decor_5.svg',
-					isChecked: true
-				},
-				{
-					title: 'Госпрограмма',
-					text: '',
-					discount: '10% от цены<br>автомобиля',
-					decor: 'img/catalog/discount_decor_6.svg',
-					isChecked: true
-				},
-			],
-		})
+        +s-discount({
+            items: [
+                {
+                    title: 'Специальное предложение',
+                    text: 'от представительства',
+                    discount: '–35% ₽',
+                    decor: 'img/catalog/discount_decor_1.svg',
+                    isChecked: false,
+                    noLink: true
+                },
+                {
+                    title: 'Скидка за наличные',
+                    text: 'от Frank Auto',
+                    discount: '–40 000 ₽',
+                    decor: 'img/catalog/discount_decor_2.svg',
+                    isChecked: true,
+                    noLink: true
+                },
+                {
+                    title: 'Выгода за Trade-in',
+                    text: 'Авто в кредит 1,9%',
+                    discount: '–120 000 ₽',
+                    decor: 'img/catalog/discount_decor_3.svg',
+                    isChecked: true
+                },
+                {
+                    title: 'Выгода за утилизацию',
+                    text: 'от Frank Auto',
+                    discount: '–120 000 ₽',
+                    decor: 'img/catalog/discount_decor_4.svg',
+                    isChecked: true
+                },
+                {
+                    title: 'Скидка при оформлении',
+                    text: 'Автомобиля в кредит 1,9%',
+                    discount: '–40 000 ₽',
+                    decor: 'img/catalog/discount_decor_5.svg',
+                    isChecked: true
+                },
+                {
+                    title: 'Госпрограмма',
+                    text: '',
+                    discount: '10% от цены<br>автомобиля',
+                    decor: 'img/catalog/discount_decor_6.svg',
+                    isChecked: true
+                },
+            ],
+        })
 
-		+cp-rent
+        +cp-rent
 
-		+s-config
+        +s-config
 
-		+s-banner({
-			img: '<picture><source srcset="img/catalog-product/cp_tradein__mob.webp" media="(max-width: 767px)"><img src="img/catalog-product/cp_tradein.webp" alt=""></picture>'
-		})
-			.cp-tradein
-				.title.title--30.title--light.cp-tradein__title Выгодный Trade-in
-					.cp-tradein__sticker.title-sticker <span>от 1,9%</span> По льготной ставке
-					.cp-tradein__subtitle Обменяйте свой автомобиль на новый <br>с максимальной скидкой
+        +s-banner({
+            img: '<picture><source srcset="img/catalog-product/cp_tradein_mob.webp" media="(max-width: 767px)"><img src="img/catalog-product/cp_tradein.webp" alt=""></picture>'
+        })
+            .cp-tradein
+                .title.title--30.title--light.cp-tradein__title Выгодный Trade-in
+                    .cp-tradein__sticker.title-sticker <span>от 1,9%</span> По льготной ставке
+                    .cp-tradein__subtitle Обменяйте свой автомобиль на новый <br>с максимальной скидкой
 
-				+form({
-					classes: 'cp-tradein__form form--horizontal form--light',
-					btnText: 'Помощь в подборе',
-					privacyText: 'Нажимая кнопку «Помощь в подборе», Вы соглашаетесь с <a href="javascript:void(0);">политикой конфиденциальности</a> и <a href="javascript:void(0);">правилами обработки персональных данных</a>'
-				})
-					+field({
-						tag: 'input',
-						type: 'tel',
-						placeholder: 'Ваш телефон',
-						inputAttr: {
-						'required': '',
-						'data-v-name': 'phone',
-						'data-type': 'phoneNumber'
-						},
-					})
+                +form({
+                    classes: 'cp-tradein__form form--horizontal form--light',
+                    btnText: 'Помощь в подборе',
+                    privacyText: 'Нажимая кнопку «Помощь в подборе», Вы соглашаетесь с <a href="javascript:void(0);">политикой конфиденциальности</a> и <a href="javascript:void(0);">правилами обработки персональных данных</a>'
+                })
+                    +field({
+                        tag: 'input',
+                        type: 'tel',
+                        placeholder: 'Ваш телефон',
+                        inputAttr: {
+                        'required': '',
+                        'data-v-name': 'phone',
+                        'data-type': 'phoneNumber'
+                        },
+                    })
 
-		+tech-spec
+        +tech-spec
 
-		+s-catalog({
-			title: 'Аналоги за те же деньги',
-			isSlider: true,
-			items: [
-			{
-				img: ['img/catalog/product_1.webp'],
-				title: 'Новый LIXIANG L6 MAX',
-				price: {
-					classes: 'catalog-card__price',
-					current: '5 500 000 ₽',
-					old: '6 200 000 ₽',
-					credit: 'от 115 000 ₽/мес <span>в кредит</span>'
-				},
-			},
-			{
-				img: ['img/catalog/product_2.webp'],
-				title: 'LiXiang L7 MAX',
-				price: {
-					classes: 'catalog-card__price',
-					current: '5 835 192 ₽',
-					old: '6 200 000 ₽',
-					credit: 'от 115 000 ₽/мес <span>в кредит</span>'
-				},
-			},
-			{
-				img: ['img/catalog/product_3.webp'],
-				title: 'LIXIANG L7 PRO',
-				price: {
-					classes: 'catalog-card__price',
-					current: '5 660 000 ₽',
-					old: '6 200 000 ₽',
-					credit: 'от 115 000 ₽/мес <span>в кредит</span>'
-				},
-			},
+        +s-catalog({
+            title: 'Аналоги за те же деньги',
+            isSlider: true,
+            items: [
+            {
+                img: ['img/catalog/product_1.webp'],
+                title: 'Новый LIXIANG L6 MAX',
+                price: {
+                    classes: 'catalog-card__price',
+                    current: '5 500 000 ₽',
+                    old: '6 200 000 ₽',
+                    credit: 'от 115 000 ₽/мес <span>в кредит</span>'
+                },
+            },
+            {
+                img: ['img/catalog/product_2.webp'],
+                title: 'LiXiang L7 MAX',
+                price: {
+                    classes: 'catalog-card__price',
+                    current: '5 835 192 ₽',
+                    old: '6 200 000 ₽',
+                    credit: 'от 115 000 ₽/мес <span>в кредит</span>'
+                },
+            },
+            {
+                img: ['img/catalog/product_3.webp'],
+                title: 'LIXIANG L7 PRO',
+                price: {
+                    classes: 'catalog-card__price',
+                    current: '5 660 000 ₽',
+                    old: '6 200 000 ₽',
+                    credit: 'от 115 000 ₽/мес <span>в кредит</span>'
+                },
+            },
 
-		]
-		})
+        ]
+        })
 
-		+quick-app({
-			classes: 'quick-app--center',
-			imgWidth: '360',
-			topOffset: '-17%',
-			img: 'img/catalog-product/cp_credit.webp',
-			imgTop: 'img/catalog-product/cp_credit_top.webp'
-		})
-			.title.title--30.quick-app__title 
-				| Экспресс-заявка на кредит
-				.quick-app__subtitle Узнай предварительное решение банков не выходя из дома!
+        +quick-app({
+            classes: 'quick-app--center',
+            imgWidth: '360',
+            topOffset: '-17%',
+            img: 'img/catalog-product/cp_credit.webp',
+            imgTop: 'img/catalog-product/cp_credit_top.webp'
+        })
+            .title.title--30.quick-app__title 
+                | Экспресс-заявка на кредит
+                .quick-app__subtitle Узнай предварительное решение банков не выходя из дома!
 
-			.quick-app__tags
-				.quick-app__tag
-					svg
-						use(xlink:href=`img/sprites/sprite.svg#exc`)
-					div
-						span.tag-title Кредит от 1.9% 
-						span.tag-text 30 банков-партнеров
+            .quick-app__tags
+                .quick-app__tag
+                    svg
+                        use(xlink:href=`img/sprites/sprite.svg#exc`)
+                    div
+                        span.tag-title Кредит от 1.9% 
+                        span.tag-text 30 банков-партнеров
 
-				.quick-app__tag
-					svg
-						use(xlink:href=`img/sprites/sprite.svg#exc`)
-					div
-						span.tag-title Первый взнос 0%
-						span.tag-text Возможность рассрочки
+                .quick-app__tag
+                    svg
+                        use(xlink:href=`img/sprites/sprite.svg#exc`)
+                    div
+                        span.tag-title Первый взнос 0%
+                        span.tag-text Возможность рассрочки
 
-				.quick-app__tag
-					svg
-						use(xlink:href=`img/sprites/sprite.svg#exc`)
-					div
-						span.tag-title Госспрограммы льготного автокредитования 
-						span.tag-text -10% от стоимости автомобиля
+                .quick-app__tag
+                    svg
+                        use(xlink:href=`img/sprites/sprite.svg#exc`)
+                    div
+                        span.tag-title Госспрограммы льготного автокредитования 
+                        span.tag-text -10% от стоимости автомобиля
 
-				.quick-app__tag
-					svg
-						use(xlink:href=`img/sprites/sprite.svg#exc`)
-					div
-						span.tag-title Trade In как первый взнос
-						span.tag-text + дополнительная скидка
+                .quick-app__tag
+                    svg
+                        use(xlink:href=`img/sprites/sprite.svg#exc`)
+                    div
+                        span.tag-title Trade In как первый взнос
+                        span.tag-text + дополнительная скидка
 
-			+form({
-				classes: 'form--horizontal',
-				btnText: 'Заказать звонок',
-				submitSize: 'content',
-				privacyText: 'Нажимая кнопку «Заказать звонок», Вы соглашаетесь с <a href="javascript:void(0);">политикой конфиденциальности</a> и <a href="javascript:void(0);">правилами обработки персональных данных</a>'
-			})
-				+field({
-					placeholder: 'Ваш имя',
-					inputAttr: {
-						'required': '',
-						'data-type': 'letters'
-					},
-				})
-				+field({
-					placeholder: 'Ваш телефон',
-					inputAttr: {
-						'required': '',
-						'data-v-name': 'phone',
-						'data-type': 'phoneNumber'
-					},
-				})
+            +form({
+                classes: 'form--horizontal',
+                btnText: 'Заказать звонок',
+                submitSize: 'content',
+                privacyText: 'Нажимая кнопку «Заказать звонок», Вы соглашаетесь с <a href="javascript:void(0);">политикой конфиденциальности</a> и <a href="javascript:void(0);">правилами обработки персональных данных</a>'
+            })
+                +field({
+                    placeholder: 'Ваш имя',
+                    inputAttr: {
+                        'required': '',
+                        'data-type': 'letters'
+                    },
+                })
+                +field({
+                    placeholder: 'Ваш телефон',
+                    inputAttr: {
+                        'required': '',
+                        'data-v-name': 'phone',
+                        'data-type': 'phoneNumber'
+                    },
+                })
 
-		+s-news({
-			title: 'Участвует в акциях',
-			btn: {
-				classes: 'section-header__btn',
-				name: 'Смотреть все',
-				cMode: 'bordered',
-				sMode: 'content'
-			},
-			cards: [
-				{
-					classes: 'swiper-slide news-card--small',
-					img: 'img/stocks/stocks_1.webp',
-					title: 'АВТОКРЕДИТ С ДОКРИЗИСНОЙ СТАВКОЙ!',
-					text: 'Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!',
-					tag: '',
-					date: '25.10.2025'
-				},
-				{
-					classes: 'swiper-slide news-card--small',
-					img: 'img/stocks/stocks_2.webp',
-					title: 'Собери автомобиль мечты с телеграмм ботом',
-					text: 'Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!',
-					tag: '',
-					date: '25.10.2025'
-				},
-				{
-					classes: 'swiper-slide news-card--small',
-					img: 'img/stocks/stocks_3.webp',
-					title: 'Выгода от FRANK AUTO - выбирайте с умом!',
-					text: 'Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!',
-					tag: '',
-					date: '25.10.2025'
-				}
-			]
-		})
+        +s-news({
+            title: 'Участвует в акциях',
+            btn: {
+                classes: 'section-header__btn',
+                name: 'Смотреть все',
+                cMode: 'bordered',
+                sMode: 'content'
+            },
+            cards: [
+                {
+                    classes: 'swiper-slide news-card--small',
+                    img: 'img/stocks/stocks_1.webp',
+                    title: 'АВТОКРЕДИТ С ДОКРИЗИСНОЙ СТАВКОЙ!',
+                    text: 'Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!',
+                    tag: '',
+                    date: '25.10.2025'
+                },
+                {
+                    classes: 'swiper-slide news-card--small',
+                    img: 'img/stocks/stocks_2.webp',
+                    title: 'Собери автомобиль мечты с телеграмм ботом',
+                    text: 'Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!',
+                    tag: '',
+                    date: '25.10.2025'
+                },
+                {
+                    classes: 'swiper-slide news-card--small',
+                    img: 'img/stocks/stocks_3.webp',
+                    title: 'Выгода от FRANK AUTO - выбирайте с умом!',
+                    text: 'Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!',
+                    tag: '',
+                    date: '25.10.2025'
+                }
+            ]
+        })
 
-		+home-service
+        +home-service

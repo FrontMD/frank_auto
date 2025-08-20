@@ -1,13 +1,23 @@
 .tech-spec {
     &__table {
         display: flex;
-        //grid-template-columns: minmax(0, 25.6%) minmax(0, 11.87%) minmax(0, 17.39%) minmax(0, 27.39%);
         align-items: flex-end;
         justify-content: space-between;
         gap: 70px;
         width: 100%;
         margin-top: 30px;
         padding: 40px 30px 30px;
+
+        @include max(laptop-small) {
+            gap: 30px;
+            padding: 30px 20px 20px;
+        }
+
+        @include max(tablet) {
+            gap: 20px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
     }
 
     &__table &__rows {
@@ -124,5 +134,19 @@
         color: $c-text;
         flex: 0 0 auto;
         text-align: end;
+    }
+
+    &__grid {
+        margin-top: 30px;
+
+        .tech-spec__rows {
+            height: fit-content;
+        }
+    }
+
+    &__gcont {
+        overflow: hidden;
+        transition: all $tr-time-long linear;
+
     }
 }

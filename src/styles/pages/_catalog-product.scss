@@ -39,8 +39,7 @@
         }
 
         @include max(tablet) {
-            right: 0;
-            top: -14px;
+            top: 5px;
         }
 
         @include max(mobile) {

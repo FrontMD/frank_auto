@@ -1,12 +1,43 @@
 -
     const defaultCpIntroProps = {
         classes: '',
+        usedPage: false,
+        title: 'Lixiang L7 Pro 449 л.с. Hybrid Turbo 4WD Белый',
+        params: [
+            {
+            param: 'Год выпуска:',
+            value: '2025'
+            },
+            {
+            param: 'Кузов:',
+            value: 'Минивэн'
+            },
+            {
+            param: 'Двигатель:',
+            value: '1.6 л. / 112 л.с. / Бензин'
+            },
+            {
+            param: 'Привод:',
+            value: 'Автоматический'
+            },
+            {
+            param: 'Цвет:',
+            value: 'Белый'
+            },
+            {
+            param: 'Адрес:',
+            value: 'Новорижское ш., 17й км, с3'
+            },
+        ]
     }
 
 mixin cp-intro(props= defaultCpIntroProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultCpIntroProps.classes,
+            usedPage: props.usedPage ? props.usedPage : defaultCpIntroProps.usedPage,
+            title: props.title ? props.title : defaultCpIntroProps.title,
+            params: props.params ? props.params : defaultCpIntroProps.params,
         }
 
     section.section.cp-intro(class= checkProps.classes data-js="cpIntro")&attributes(attributes)
@@ -45,48 +76,34 @@ mixin cp-intro(props= defaultCpIntroProps)
                             .swiper-slide.cp-intro__thumb
                                 img(src="img/catalog-product/cp_intro_5.webp" alt="")
 
-                    .cp-intro__ac
-                        .cp-intro__subtitle Доступные цвета
-                        .cp-intro__colors
-                            .cp-intro__color
-                                span(style="background-color:#000000;")
-                                | Черный
-                            .cp-intro__color
-                                span(style="background-color:#ffffff;")
-                                | Белый
-                            .cp-intro__color
-                                span(style="background-color:#A9A9A9;")
-                                | Серебро
+                    - if(checkProps.usedPage !== true)
+                        .cp-intro__ac
+                            .cp-intro__subtitle Доступные цвета
+                            .cp-intro__colors
+                                .cp-intro__color
+                                    span(style="background-color:#000000;")
+                                    | Черный
+                                .cp-intro__color
+                                    span(style="background-color:#ffffff;")
+                                    | Белый
+                                .cp-intro__color
+                                    span(style="background-color:#A9A9A9;")
+                                    | Серебро
 
                 .cp-intro__right
-                    .title.cp-intro__title Lixiang L7 Pro 449 л.с. Hybrid Turbo 4WD Белый
+                    .title.cp-intro__title!= checkProps.title
                     .cp-intro__params    
                         .tech-spec__rows
-                            .tech-spec__row
-                                .tech-spec__param Год выпуска:
-                                .tech-spec__separator
-                                .tech-spec__value 2025
-                            .tech-spec__row
-                                .tech-spec__param Кузов:
-                                .tech-spec__separator
-                                .tech-spec__value Минивэн
-                            .tech-spec__row
-                                .tech-spec__param Двигатель:
-                                .tech-spec__separator
-                                .tech-spec__value 1.6 л. / 112 л.с. / Бензин
-                            .tech-spec__row
-                                .tech-spec__param Привод:
-                                .tech-spec__separator
-                                .tech-spec__value Автоматический
-                            .tech-spec__row
-                                .tech-spec__param Цвет:
-                                .tech-spec__separator
-                                .tech-spec__value Белый
-                            .tech-spec__row
-                                .tech-spec__param Адрес:
-                                .tech-spec__separator
-                                .tech-spec__value Новорижское ш., 17й км, с3
-                        a(href="").cp-intro__all Все характеристики
+                            -let paramsCounter = 0
+                            - while(paramsCounter < checkProps.params.length)
+                                .tech-spec__row
+                                    .tech-spec__param!= checkProps.params[paramsCounter].param
+                                    .tech-spec__separator
+                                    .tech-spec__value!= checkProps.params[paramsCounter].value
+
+                                - paramsCounter++
+
+                        a(href="#techSpec").cp-intro__all.cp-intro__link Все характеристики
 
                     .cp-intro__chars
                         .cp-intro__char
@@ -117,11 +134,17 @@ mixin cp-intro(props= defaultCpIntroProps)
                                 cMode: 'accent',
                                 sMode: 'full'
                             })
-                            +btn({
-                                name: 'В кредит от от 370 103&nbsp;₽/мес',
-                                cMode: 'light-accent',
-                                sMode: 'full'
-                            })
+
+                            - if(checkProps.usedPage === true)
+                                .cp-intro__links
+                                    a(href="javascript:void(0);").cp-intro__link Купить в кредит
+                                    a(href="javascript:void(0);").cp-intro__link Взять в аренду
+                            -else
+                                +btn({
+                                    name: 'В кредит от от 370 103&nbsp;₽/мес',
+                                    cMode: 'light-accent',
+                                    sMode: 'full'
+                                })
 
                     .cp-intro__gifts
                         .cp-intro__gift

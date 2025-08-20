@@ -6,6 +6,10 @@
         margin-top: 40px;
         transition: all $tr-time-long linear;
         overflow: hidden;
+
+        @include max(tablet) {
+            grid-template-columns: minmax(0, 1fr);
+        }
     }
 
     &__more {

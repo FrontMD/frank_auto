@@ -6,8 +6,8 @@
         padding-left: 22.86%;
 
         @include max(laptop-small) {
-            padding-top: 20px;
-            padding-bottom: 20px;
+            padding-top: 30px;
+            padding-bottom: 30px;
             padding-left: 20%;
         }
 
@@ -55,6 +55,12 @@
         padding-bottom: 50px;
         padding-left: 50px;
         padding-right: 39%;
+
+        @include max(laptop-small) {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            padding-left: 30px;
+        }
     }
 
 }
