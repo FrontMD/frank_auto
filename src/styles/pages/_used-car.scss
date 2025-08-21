@@ -1,4 +1,10 @@
 .uc-tradein {
+    @include max(mobile) {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
     &__subtitle {
         color: $c-text-light-1;
         font-weight: 400;
@@ -10,6 +16,10 @@
     }
 
     &__form {
+        @include max(mobile) {
+            margin-top: auto;
+        }
+
         .form__fields {
             display: contents;
         }
@@ -22,6 +32,7 @@
                 flex-direction: row;
                 gap: 15px;
             }
+
         }
 
         .field {
@@ -34,6 +45,11 @@
             @include max(tablet) {
                 flex: 0 0 calc((100% - 15px) / 2);
             }
+
+            @include max(mobile) {
+                flex-basis: 100%;
+            }
+
         }
 
         .field:nth-child(5) {
@@ -51,6 +67,10 @@
 
             @include max(tablet) {
                 flex: 0 0 calc((100% - 15px) / 2);
+            }
+
+            @include max(mobile) {
+                flex-basis: 100%;
             }
         }
     }

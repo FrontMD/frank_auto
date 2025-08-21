@@ -1,0 +1,58 @@
+-
+    const defaultContactsIntroProps = {
+        classes: '',
+    }
+
+mixin contacts-dir(props= defaultContactsIntroProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultContactsIntroProps.classes,
+            title: props.title ? props.title : defaultContactsIntroProps.title,
+            brands: props.brands ? props.brands : defaultContactsIntroProps.brands,
+        }
+
+    section.section.contacts-intro(class= checkProps.classes data-js="contactsIntro")&attributes(attributes)
+        .section__container
+            .section-block.contacts-intro__block
+                .contacts-intro__items
+                    .contacts-intro__item(data-js="contactsIntroItem" data-coords="55.791209,37.363350")
+                        .contacts-intro__icon
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#location`)
+                        .contacts-intro__content
+                            .contacts-intro__title Москва,<br>Новорижское шоссе,<br>17-й&nbsp;км., строение&nbsp;3
+                            a.contacts-intro__phone(href="tel:+74994606219") +7 (499) 460-62-19 
+                            .contacts-intro__text работаем с 10 до 20 без выходных
+                            a.contacts-intro__route(href="https://yandex.ru/maps/?rtext=~55.791209,37.363350" target="_blank") 
+                                span Как проехать
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#route`)
+
+                    .contacts-intro__item(data-js="contactsIntroItem" data-coords="55.864001,37.700879")
+                        .contacts-intro__icon
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#location`)
+                        .contacts-intro__content
+                            .contacts-intro__title Москва,<br>Ярославское шоссе,<br>дом&nbsp;42
+                            a.contacts-intro__phone(href="tel:+74991165065") +7 (499) 116-50-65 
+                            .contacts-intro__text работаем с 10 до 20 без выходных
+                            a.contacts-intro__route(href="https://yandex.ru/maps/?rtext=~55.864001,37.700879" target="_blank") 
+                                span Как проехать
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#route`)
+
+                    .contacts-intro__item(data-js="contactsIntroItem" data-coords="55.708867,37.381853")
+                        .contacts-intro__icon
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#location`)
+                        .contacts-intro__content
+                            .contacts-intro__title Москва,<br>Можайское шоссе,<br>вл.&nbsp;165&nbsp;Б
+                            a.contacts-intro__phone(href="tel:+74994558015") +7 (499) 455-80-15 
+                            .contacts-intro__text работаем с 10 до 20 без выходных
+                            a.contacts-intro__route(href="https://yandex.ru/maps/?rtext=~55.708867,37.381853" target="_blank") 
+                                span Как проехать
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#route`)
+
+                .contacts-intro__map(data-js="contactsIntroMap")
+

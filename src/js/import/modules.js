@@ -15,6 +15,7 @@
 @@include("../../blocks/modules/s-config/s-config.js")
 @@include("../../blocks/modules/cp-intro/cp-intro.js")
 @@include("../../blocks/modules/popular-brands/popular-brands.js")
+@@include("../../blocks/modules/contacts-intro/contacts-intro.js")
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -35,4 +36,5 @@ document.addEventListener('DOMContentLoaded', () => {
     sConfigInit()
     cpIntro()
     popularBrands()
+    contactsMap()
 })
