@@ -173,6 +173,10 @@
         gap: 5px;
         border-radius: 14px;
 
+        @include max(mobile) {
+            border-radius: 10px;
+        }
+
         svg {
             width: 15px;
             height: 15px;

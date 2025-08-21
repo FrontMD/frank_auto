@@ -2,10 +2,23 @@
     max-width: 750px;
     margin: 0 auto;
 
+    @include max(mobile) {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
     &__title {
         position: relative;
         margin-bottom: 30px;
         width: fit-content;
+
+        @include max(mobile) {
+            flex: 1 0 auto;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
     }
 
     &__subtitle {
@@ -21,6 +34,10 @@
     &__form {
         .form__privacy {
             margin-top: 15px;
+        }
+
+        @include max(mobile) {
+            margin-top: auto;
         }
     }
 
@@ -43,10 +60,13 @@
         }
 
         @include max(mobile) {
+            position: relative;
             right: auto;
             left: 0;
-            top: calc(100% + 5px);
-            transform-origin: left bottom;
+            top: 0;
+            transform: none;
+            order: 2;
+            margin-top: auto;
         }
     }
 }

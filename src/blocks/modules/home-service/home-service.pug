@@ -46,7 +46,7 @@ mixin home-service(props= defaultHomeServiceProps)
             .section-block.home-service__block
                 .section-header
                     .section-header__title.title.title--36!= checkProps.title
-                    if(checkProps.btn !== false)
+                    - if(checkProps.btn !== 'none')
                         +btn(checkProps.btn)
 
                 .section-block__content.home-service__list

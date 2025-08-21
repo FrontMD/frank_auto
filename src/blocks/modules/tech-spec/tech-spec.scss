@@ -18,6 +18,11 @@
             padding: 20px;
             flex-wrap: wrap;
         }
+
+        @include max(xs) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
     &__table &__rows {
@@ -34,14 +39,50 @@
 
         &--1 {
             flex-basis: 26.42%;
+
+            @include max(tablet) {
+                flex-basis: 38%;
+            }
+
+            @include max(xs) {
+                flex-basis: auto;
+
+                img {
+                    height: 93px;
+                }
+            }
         }
 
         &--2 {
             flex-basis: 11.87%;
+
+            @include max(tablet) {
+                flex-basis: 17%;
+            }
+
+            @include max(xs) {
+                flex-basis: auto;
+
+                img {
+                    height: 112px;
+                }
+            }
         }
 
         &--3 {
             flex-basis: 11.57%;
+
+            @include max(tablet) {
+                flex-basis: 16.5%;
+            }
+
+            @include max(xs) {
+                flex-basis: auto;
+
+                img {
+                    height: 112px;
+                }
+            }
         }
     }
 
@@ -104,14 +145,32 @@
     }
 
     &__row {
+        position: relative;
         width: 100%;
         display: flex;
         align-items: flex-end;
+        justify-content: space-between;
+        gap: 40px;
         font-family: $ff-roboto;
         font-weight: 400;
         font-size: 16px;
         line-height: 100%;
         letter-spacing: 0;
+
+        @include max(xs) {
+            gap: 20px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 1px;
+            left: 0;
+            width: 100%;
+            border-bottom: dashed 1px $c-text-breadcrumbs;
+            z-index: 1;
+
+        }
     }
 
     &__row+&__row {
@@ -119,21 +178,26 @@
     }
 
     &__param {
+        position: relative;
         color: #737373;
-        flex: 0 0 auto;
-    }
-
-    &__separator {
-        border-bottom: dashed 1px $c-text-breadcrumbs;
-        flex: 1 1 100%;
-        min-width: 40px;
+        flex: 0 1 auto;
+        background-color: $c-white;
+        z-index: 3;
     }
 
     &__value {
+        position: relative;
         font-weight: 500;
         color: $c-text;
-        flex: 0 0 auto;
+        flex: 0 1 auto;
         text-align: end;
+        background-color: $c-white;
+        z-index: 3;
+    }
+
+    &__rows--bg &__param,
+    &__rows--bg &__value {
+        background-color: $c-bg-main;
     }
 
     &__grid {

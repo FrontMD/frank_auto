@@ -21,6 +21,15 @@
         @include max(laptop-small) {
             flex-basis: 55%;
         }
+
+        @include max(tablet) {
+            flex-basis: auto;
+        }
+
+        @include max(mobile) {
+            padding: 10px;
+            border-radius: $br-section-mob;
+        }
     }
 
     &__bg {
@@ -47,6 +56,10 @@
         @include max(laptop-small) {
             min-height: 216px;
         }
+
+        @include max(mobile) {
+            min-height: 170px;
+        }
     }
 
     &__subtitle {
@@ -58,11 +71,20 @@
         line-height: 100%;
         letter-spacing: 0;
         color: $c-text;
+
+        @include max(mobile) {
+            font-size: 18px;
+            margin-top: 10px;
+        }
     }
 
     &__btn {
         max-width: 428px;
         margin-top: auto;
+
+        @include max(mobile) {
+            max-width: 100%;
+        }
     }
 
     &__links {
@@ -103,6 +125,13 @@
             min-height: 100px;
         }
 
+        @include max(mobile) {
+            padding: 10px;
+            border-radius: $br-section-mob;
+            font-size: 14px;
+            min-height: 64px;
+        }
+
         &:hover {
             border-color: $c-accent-hover;
             color: $c-accent-hover;
@@ -112,6 +141,11 @@
             width: 26px;
             height: 26px;
             flex-shrink: 0;
+
+            @include max(mobile) {
+                width: 20px;
+                height: 20px;
+            }
         }
     }
 }

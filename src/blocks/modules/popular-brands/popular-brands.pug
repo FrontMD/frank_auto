@@ -1,0 +1,47 @@
+-
+    const defaultPopularBrandsProps = {
+        classes: '',
+        title: 'Популярные марки',
+        brands: [
+            'img/brands/brand_logo_1.webp',
+            'img/brands/brand_logo_2.webp',
+            'img/brands/brand_logo_3.webp',
+            'img/brands/brand_logo_4.webp',
+            'img/brands/brand_logo_5.webp',
+            'img/brands/brand_logo_6.webp',
+            'img/brands/brand_logo_7.webp',
+            'img/brands/brand_logo_8.webp',
+            'img/brands/brand_logo_9.webp',
+            'img/brands/brand_logo_10.webp',
+            'img/brands/brand_logo_11.webp',
+            'img/brands/brand_logo_12.webp',
+            'img/brands/brand_logo_13.webp',
+            'img/brands/brand_logo_14.webp',
+            'img/brands/brand_logo_15.webp',
+            'img/brands/brand_logo_16.webp',
+            'img/brands/brand_logo_17.webp',
+            'img/brands/brand_logo_18.webp',
+            'img/brands/brand_logo_19.webp',
+            'img/brands/brand_logo_20.webp',
+        ]
+    }
+
+mixin popular-brands(props= defaultPopularBrandsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultPopularBrandsProps.classes,
+            title: props.title ? props.title : defaultPopularBrandsProps.title,
+            brands: props.brands ? props.brands : defaultPopularBrandsProps.brands,
+        }
+
+    section.section.popular-brands(class= checkProps.classes)&attributes(attributes)
+        .section__container.section__content
+            .popular-brands__title.title.title--36!= checkProps.title
+            .popular-brands__slider(data-js="popularBrandsSlider")
+                .swiper-wrapper
+                    - let brandsCount = 0
+                    -while(brandsCount < checkProps.brands.length)
+                        .swiper-slide.popular-brands__slide
+                            img(src=checkProps.brands[brandsCount], alt="")
+
+                        - brandsCount++

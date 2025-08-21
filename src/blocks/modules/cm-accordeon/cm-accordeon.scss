@@ -155,7 +155,6 @@
     &__arrow {
         @include max(mobile) {
             position: relative;
-            top: -10px;
         }
     }
 
@@ -529,6 +528,18 @@
 
     &__list {
         flex: 0 1 33%;
+    }
+
+    .tech-spec__row {
+        @include max(mobile) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 5px;
+
+            &::after {
+                display: none;
+            }
+        }
     }
 
 }

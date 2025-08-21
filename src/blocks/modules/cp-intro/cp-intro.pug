@@ -40,7 +40,9 @@ mixin cp-intro(props= defaultCpIntroProps)
             params: props.params ? props.params : defaultCpIntroProps.params,
         }
 
-    section.section.cp-intro(class= checkProps.classes data-js="cpIntro")&attributes(attributes)
+        const pageClass = checkProps.usedPage === true ? ' cp-intro--used' : ''
+
+    section.section.cp-intro(class= checkProps.classes + pageClass data-js="cpIntro")&attributes(attributes)
         .section__container
             .section-block.cp-intro__block
                 .cp-intro__left
@@ -98,7 +100,6 @@ mixin cp-intro(props= defaultCpIntroProps)
                             - while(paramsCounter < checkProps.params.length)
                                 .tech-spec__row
                                     .tech-spec__param!= checkProps.params[paramsCounter].param
-                                    .tech-spec__separator
                                     .tech-spec__value!= checkProps.params[paramsCounter].value
 
                                 - paramsCounter++
@@ -147,17 +148,28 @@ mixin cp-intro(props= defaultCpIntroProps)
                                 })
 
                     .cp-intro__gifts
-                        .cp-intro__gift
-                            img(src="img/catalog/gift.svg" alt="")
-                            .text Зачёт вашего<br>автомобиля в trade-in
-                        .cp-intro__gift
-                            img(src="img/catalog/gift.svg" alt="")
-                            .text Улучшим любое<br>предложение
-                        .cp-intro__gift
-                            img(src="img/catalog/gift.svg" alt="")
-                            .text Беспроцентная<br>рассрочка 0%
-                        .cp-intro__gift
-                            img(src="img/catalog/gift.svg" alt="")
-                            .text Без первончального<br>взноса
+                        - if(checkProps.usedPage === true)
+                            .cp-intro__gift
+                                img(src="img/catalog/gift.svg" alt="")
+                                .text Зачёт вашего<br>автомобиля в trade-in
+                            .cp-intro__gift
+                                img(src="img/catalog/gift.svg" alt="")
+                                .text Беспроцентная<br>рассрочка 0%
+                            .cp-intro__gift
+                                img(src="img/catalog/gift.svg" alt="")
+                                .text Доп. выгода<br>до 200 000 ₽
+                        - else
+                            .cp-intro__gift
+                                img(src="img/catalog/gift.svg" alt="")
+                                .text Зачёт вашего<br>автомобиля в trade-in
+                            .cp-intro__gift
+                                img(src="img/catalog/gift.svg" alt="")
+                                .text Улучшим любое<br>предложение
+                            .cp-intro__gift
+                                img(src="img/catalog/gift.svg" alt="")
+                                .text Беспроцентная<br>рассрочка 0%
+                            .cp-intro__gift
+                                img(src="img/catalog/gift.svg" alt="")
+                                .text Без первончального<br>взноса
 
 

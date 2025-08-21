@@ -50,6 +50,7 @@ function photoGalleryInit() {
                     spaceBetween: 20,
                 },
                 1280: {
+                    slidesPerView: 1,
                     spaceBetween: 24,
                 } 
             }

@@ -35,10 +35,37 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 15px;
         padding-top: 20px;
 
         @include max(tablet) {
             padding-top: 10px;
+        }
+
+    }
+
+    &__right {
+        margin-left: auto;
+        display: contents;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__brand {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-family: $ff-roboto;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 100%;
+        letter-spacing: 0;
+        color: #262626;
+
+        img {
+            width: 29px;
+            height: 29px;
+            object-fit: contain;
         }
     }
 
@@ -50,6 +77,7 @@
         font-size: 14px;
         line-height: 100%;
         letter-spacing: 0;
+        text-align: center;
     }
 
     &__title {
@@ -105,5 +133,30 @@
             margin-bottom: 0;
         }
     }
+}
 
+.news-card {
+    &--service &__tags {
+        @include max(laptop-small) {
+            display: contents;
+        }
+    }
+
+    &--service &__right {
+        @include max(laptop-small) {
+            display: flex;
+            padding-top: 10px;
+            width: 100%;
+            margin-left: 0;
+            justify-content: space-between;
+        }
+    }
+
+    &--service &__tag--date {
+        @include max(laptop-small) {
+            order: 2;
+            width: fit-content;
+            margin-top: 15px;
+        }
+    }
 }

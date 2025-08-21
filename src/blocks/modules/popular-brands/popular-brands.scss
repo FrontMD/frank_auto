@@ -1,0 +1,39 @@
+.popular-brands {
+
+    &__title {
+        text-align: center;
+    }
+
+    &__slider {
+        overflow: hidden;
+        margin-top: 50px;
+        padding-bottom: 20px;
+
+        @include max(tablet) {
+            margin-top: 40px;
+        }
+
+        .swiper-wrapper {
+            -webkit-transition-timing-function: linear !important;
+            transition-timing-function: linear !important;
+        }
+    }
+
+    &__slide {
+        width: 2.64vw;
+        aspect-ratio: 1 / 1;
+        margin-right: 3.264vw;
+
+        @include max(laptop-small) {
+            width: 38px;
+            margin-right: 25px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center center;
+        }
+    }
+}

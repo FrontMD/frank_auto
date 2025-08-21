@@ -15,7 +15,7 @@ function cpIntro() {
         })
         
         const sliderEx = new Swiper(slider, {
-            slidesPerView: 1,
+            slidesPerView: 1.06,
             spaceBetween: 10,
             loop: true,
             thumbs: {
@@ -25,6 +25,11 @@ function cpIntro() {
                 nextEl: next,
                 prevEl: prev,
             },
+            breakpoints: {
+                768: {
+                    slidesPerView: 1
+                }
+            }
         })
     })
 

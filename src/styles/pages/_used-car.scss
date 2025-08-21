@@ -17,18 +17,41 @@
         .form__horizontal {
             flex-wrap: wrap;
             gap: 15px;
+
+            @include max(laptop-small) {
+                flex-direction: row;
+                gap: 15px;
+            }
         }
 
         .field {
             flex: 0 0 calc((100% - 45px) / 4);
+
+            @include max(laptop-small) {
+                flex: 0 0 calc((100% - 30px) / 3);
+            }
+
+            @include max(tablet) {
+                flex: 0 0 calc((100% - 15px) / 2);
+            }
         }
 
         .field:nth-child(5) {
-            flex-grow: 1;
+            @include min(laptop-small) {
+                flex-grow: 1;
+            }
         }
 
         .btn {
             flex: 0 0 30%;
+
+            @include max(laptop-small) {
+                flex: 0 0 calc((100% - 30px) / 3);
+            }
+
+            @include max(tablet) {
+                flex: 0 0 calc((100% - 15px) / 2);
+            }
         }
     }
 }

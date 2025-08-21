@@ -2,7 +2,9 @@
     overflow: hidden;
 
     .section__container--sidebar {
-        gap: 0;
+        @include max(tablet) {
+            gap: 0;
+        }
     }
 
     &__left {

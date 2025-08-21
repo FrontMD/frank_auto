@@ -1,0 +1,26 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Контакты"
+
+block content
+    .page-layout(data-js="pageLayout")
+        +s-breadcrumbs({
+            items: [
+                {
+                    name: 'FrankAuto',
+                    link: 'javascript:void(0);'
+                },
+                {
+                    name: 'Контакты',
+                    link: 'javascript:void(0);'
+                },
+            ],
+        })
+
+        section.section.section--title
+            .section__container
+                .section__header.section__content
+                    .title.title--40
+                        h1 Контакты

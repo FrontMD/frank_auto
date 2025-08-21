@@ -29,106 +29,81 @@ mixin tech-spec(props= defaultTechSpecProps)
             - if(checkProps.usedPage === true)
                 .tech-spec__grid(data-js="gridSpoiler" data-rows="7")
                     .tech-spec__gcont(data-js="gridSpoilerContent")
-                        .tech-spec__rows
+                        .tech-spec__rows.tech-spec__rows--bg
                             .tech-spec__row(data-js="gridSpoilerCell")
                                 .tech-spec__param Тип двигателя
-                                .tech-spec__separator
                                 .tech-spec__value Гибридный 
                             .tech-spec__row(data-js="gridSpoilerCell")
                                 .tech-spec__param Расположение двигателя
-                                .tech-spec__separator
                                 .tech-spec__value Переднее, поперечное
                             .tech-spec__row(data-js="gridSpoilerCell")
                                 .tech-spec__param Объем двигателя
-                                .tech-spec__separator
                                 .tech-spec__value 1496 см³
                             .tech-spec__row(data-js="gridSpoilerCell")
                                 .tech-spec__param Тип наддува
-                                .tech-spec__separator
                                 .tech-spec__value Турбонаддув
                             .tech-spec__row(data-js="gridSpoilerCell")
                                 .tech-spec__param Максимальная мощность
-                                .tech-spec__separator
                                 .tech-spec__value 449 л.с. (330 кВт) 
                             .tech-spec__row(data-js="gridSpoilerCell")
                                 .tech-spec__param Максимальный крутящий момент
-                                .tech-spec__separator
                                 .tech-spec__value 620 Н⋅м
                             .tech-spec__row(data-js="gridSpoilerCell")
                                 .tech-spec__param Расположение цилиндров
-                                .tech-spec__separator
                                 .tech-spec__value Рядное
                             .tech-spec__row(data-js="gridSpoilerCell")
                                 .tech-spec__param Тип двигателя
-                                .tech-spec__separator
                                 .tech-spec__value Гибридный 
                             .tech-spec__row(data-js="gridSpoilerCell")
                                 .tech-spec__param Расположение двигателя
-                                .tech-spec__separator
                                 .tech-spec__value Переднее, поперечное
                             .tech-spec__row(data-js="gridSpoilerCell")
                                 .tech-spec__param Объем двигателя
-                                .tech-spec__separator
                                 .tech-spec__value 1496 см³
                             .tech-spec__row(data-js="gridSpoilerCell")
                                 .tech-spec__param Тип наддува
-                                .tech-spec__separator
                                 .tech-spec__value Турбонаддув
                             .tech-spec__row(data-js="gridSpoilerCell")
                                 .tech-spec__param Максимальная мощность
-                                .tech-spec__separator
                                 .tech-spec__value 449 л.с. (330 кВт) 
                             .tech-spec__row(data-js="gridSpoilerCell")
                                 .tech-spec__param Максимальный крутящий момент
-                                .tech-spec__separator
                                 .tech-spec__value 620 Н⋅м
                             .tech-spec__row(data-js="gridSpoilerCell")
                                 .tech-spec__param Количество цилиндров
-                                .tech-spec__separator
                                 .tech-spec__value 4
                             .tech-spec__row(data-js="gridSpoilerCell")
                                 .tech-spec__param Число клапанов на цилиндр
-                                .tech-spec__separator
                                 .tech-spec__value 4
                             .tech-spec__row(data-js="gridSpoilerCell")
                                 .tech-spec__param Система питания двигателя
-                                .tech-spec__separator
                                 .tech-spec__value Непосредственный впрыск (прямой) 
                             .tech-spec__row(data-js="gridSpoilerCell")
                                 .tech-spec__param Методика расчета расхода
-                                .tech-spec__separator
                                 .tech-spec__value WLTP 
                             .tech-spec__row(data-js="gridSpoilerCell")
                                 .tech-spec__param Модель двигателя
-                                .tech-spec__separator
                                 .tech-spec__value L2E15M
                             .tech-spec__row(data-js="gridSpoilerCell")
                                 .tech-spec__param ГРМ
-                                .tech-spec__separator
                                 .tech-spec__value DOHC
                             .tech-spec__row(data-js="gridSpoilerCell")
                                 .tech-spec__param Количество цилиндров
-                                .tech-spec__separator
                                 .tech-spec__value 4
                             .tech-spec__row(data-js="gridSpoilerCell")
                                 .tech-spec__param Число клапанов на цилиндр
-                                .tech-spec__separator
                                 .tech-spec__value 4
                             .tech-spec__row(data-js="gridSpoilerCell")
                                 .tech-spec__param Система питания двигателя
-                                .tech-spec__separator
                                 .tech-spec__value Непосредственный впрыск (прямой) 
                             .tech-spec__row(data-js="gridSpoilerCell")
                                 .tech-spec__param Методика расчета расхода
-                                .tech-spec__separator
                                 .tech-spec__value WLTP 
                             .tech-spec__row(data-js="gridSpoilerCell")
                                 .tech-spec__param Модель двигателя
-                                .tech-spec__separator
                                 .tech-spec__value L2E15M
                             .tech-spec__row(data-js="gridSpoilerCell")
                                 .tech-spec__param ГРМ
-                                .tech-spec__separator
                                 .tech-spec__value DOHC
 
             - else
@@ -157,19 +132,15 @@ mixin tech-spec(props= defaultTechSpecProps)
                     .tech-spec__rows
                         .tech-spec__row
                             .tech-spec__param Длина кузова, мм
-                            .tech-spec__separator
                             .tech-spec__value 5050
                         .tech-spec__row    
                             .tech-spec__param Ширина кузова, мм
-                            .tech-spec__separator
                             .tech-spec__value 1995
                         .tech-spec__row    
                             .tech-spec__param Высота кузова, мм
-                            .tech-spec__separator
                             .tech-spec__value 1800
                         .tech-spec__row    
                             .tech-spec__param Колесная база, мм
-                            .tech-spec__separator
                             .tech-spec__value 3005
 
                 .cm-accordeon__list(data-js="cmAccordeon")
@@ -188,57 +159,44 @@ mixin tech-spec(props= defaultTechSpecProps)
                                     .tech-spec__rows
                                         .tech-spec__row
                                             .tech-spec__param Тип двигателя
-                                            .tech-spec__separator
                                             .tech-spec__value Гибридный
                                         .tech-spec__row
                                             .tech-spec__param Расположение двигателя
-                                            .tech-spec__separator
                                             .tech-spec__value Переднее, поперечное
                                         .tech-spec__row
                                             .tech-spec__param Объем двигателя
-                                            .tech-spec__separator
                                             .tech-spec__value 1496 см³
                                         .tech-spec__row
                                             .tech-spec__param Тип наддува
-                                            .tech-spec__separator
                                             .tech-spec__value Турбонаддув
                                         .tech-spec__row
                                             .tech-spec__param Максимальная мощность
-                                            .tech-spec__separator
                                             .tech-spec__value 449 л.с. (330 кВт) 
                                         .tech-spec__row
                                             .tech-spec__param Максимальный крутящий момент
-                                            .tech-spec__separator
                                             .tech-spec__value 620 Н⋅м
                                         .tech-spec__row
                                             .tech-spec__param Расположение цилиндров
-                                            .tech-spec__separator
                                             .tech-spec__value Рядное
 
 
                                         .tech-spec__row
                                             .tech-spec__param Количество цилиндров
-                                            .tech-spec__separator
                                             .tech-spec__value 4
                                         .tech-spec__row
                                             .tech-spec__param Число клапанов на цилиндр
-                                            .tech-spec__separator
                                             .tech-spec__value 4
                                         .tech-spec__row
                                             .tech-spec__param Система питания двигателя
-                                            .tech-spec__separator
                                             .tech-spec__value Непосредственный впрыск (прямой) 
                                         .tech-spec__row
                                             .tech-spec__param Методика расчета расхода
-                                            .tech-spec__separator
                                             .tech-spec__value WLTP 
                                         .tech-spec__row
                                             .tech-spec__param Модель двигателя
-                                            .tech-spec__separator
                                             .tech-spec__value L2E15M
                                         .tech-spec__row
                                             .tech-spec__param ГРМ
-                                            .tech-spec__separator
                                             .tech-spec__value DOHC
 
                         - counter++

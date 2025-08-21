@@ -357,6 +357,10 @@ html.hystmodal__opened {
 		gap: 24px;
 	}
 
+	@include max(mobile) {
+		gap: 12px;
+	}
+
 	&__title {
 		flex: 0 1 auto;
 		padding-left: 10px;

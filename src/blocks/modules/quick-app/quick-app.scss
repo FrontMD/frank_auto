@@ -60,6 +60,12 @@
         letter-spacing: 0;
     }
 
+    &--product &__title &__subtitle {
+        @include max(tablet) {
+            display: none;
+        }
+    }
+
     &__sticker.title-sticker {
         padding-top: 12px;
         padding-bottom: 12px;

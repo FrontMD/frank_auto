@@ -14,6 +14,7 @@
 @@include("../../blocks/modules/photo-gallery/photo-gallery.js")
 @@include("../../blocks/modules/s-config/s-config.js")
 @@include("../../blocks/modules/cp-intro/cp-intro.js")
+@@include("../../blocks/modules/popular-brands/popular-brands.js")
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -33,4 +34,5 @@ document.addEventListener('DOMContentLoaded', () => {
     photoGalleryInit()
     sConfigInit()
     cpIntro()
+    popularBrands()
 })

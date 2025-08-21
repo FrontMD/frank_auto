@@ -8,6 +8,10 @@
             flex-direction: column;
             gap: 0;
         }
+
+        @include max(mobile) {
+            padding-top: 10px;
+        }
     }
 
     &__left {
@@ -42,6 +46,18 @@
         position: relative;
         max-width: 100%;
 
+        @include max(mobile) {
+            max-width: calc(100% + 10px);
+            margin-right: -10px;
+            padding-right: 10px;
+        }
+
+        .slider-controls {
+            @include max(mobile) {
+                display: none;
+            }
+        }
+
         .slider-control {
             position: absolute;
             top: 50%;
@@ -63,6 +79,10 @@
         right: 10px;
         top: 10px;
         z-index: 3;
+
+        @include max(mobile) {
+            display: none;
+        }
     }
 
     &__slide {
@@ -72,6 +92,10 @@
 
         @include max(tablet) {
             aspect-ratio: 1 / 0.65;
+        }
+
+        @include max(mobile) {
+            border-radius: 10px;
         }
 
         img {
@@ -86,6 +110,10 @@
         margin-top: 10px;
         border-radius: 0 0 15px 15px;
         max-width: 100%;
+
+        @include max(mobile) {
+            display: none;
+        }
     }
 
     &__thumb {
@@ -163,6 +191,7 @@
         @include max(tablet) {
             flex: 0 0 auto;
             margin-top: 20px;
+            width: 100%;
         }
     }
 
@@ -172,11 +201,20 @@
         color: $c-text;
         line-height: 120%;
         font-weight: 500;
+
+        @include max(mobile) {
+            font-size: 20px;
+            line-height: 110%;
+        }
     }
 
     &__params {
         margin-top: 20px;
         width: fit-content;
+
+        @include max(mobile) {
+            margin-top: 15px;
+        }
     }
 
     .tech-spec__rows {
@@ -226,6 +264,7 @@
         background-color: $c-bg-main;
         line-height: 120%;
         letter-spacing: 0;
+        min-width: fit-content;
 
         img {
             width: 18px;
@@ -252,24 +291,49 @@
         align-items: center;
         gap: 40px;
         justify-content: space-between;
+
+        @include max(mobile) {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 10px;
+        }
     }
 
     &__price {
         flex: 0 0 auto;
         letter-spacing: -0.02em;
-        line-height: 1;
         font-weight: 700;
         color: $c-text;
+
+        @include max(mobile) {
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: flex-end;
+            gap: 10px;
+        }
 
         .old {
             font-size: 28px;
             text-decoration: line-through;
             opacity: 0.3;
+            line-height: 1;
+
+            @include max(mobile) {
+                font-size: 19px;
+            }
         }
 
         .current {
             margin-top: 5px;
             font-size: 40px;
+            line-height: 1;
+
+            @include max(mobile) {
+                font-size: 25px;
+                margin-top: 0;
+            }
         }
     }
 
@@ -291,6 +355,20 @@
             display: flex;
             gap: 10px;
             overflow: auto;
+            margin-top: 20px;
+            padding-top: 20px;
+        }
+    }
+
+    &--used &__gifts {
+        grid-template-columns: minmax(0, 1fr);
+
+        @include max(laptop) {
+            display: flex;
+            gap: 10px;
+            overflow: auto;
+            margin-top: 20px;
+            padding-top: 20px;
         }
     }
 
@@ -309,8 +387,8 @@
         letter-spacing: 0;
         color: $c-text-editor;
 
-        @include max(xs) {
-            font-size: 10px;
+        @include max(mobile) {
+            border-radius: 10px;
         }
 
         img {
