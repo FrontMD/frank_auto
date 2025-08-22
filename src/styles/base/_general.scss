@@ -984,19 +984,24 @@ html.hystmodal__opened {
 	a,
 	li {
 		font-size: inherit;
-		margin-bottom: 3.125em;
 	}
 
-	/*ol {
+	p,
+	ul,
+	ol {
+		margin-bottom: 1.25em;
+	}
+
+	ol,
+	ul {
 		display: flex;
 		flex-direction: column;
-		gap: 8px;
-		counter-reset: num;
+		gap: 0.9375em;
 		list-style-type: none;
+	}
 
-		@include max(mobile) {
-			gap: 4px;
-		}
+	ol {
+		counter-reset: num;
 	}
 
 	ol li {
@@ -1016,19 +1021,19 @@ html.hystmodal__opened {
 
 	ul li {
 		position: relative;
-		padding-left: 1.5em;
-		line-height: 1.4em;
+		padding-left: 2.5625em;
+		line-height: 1.4375em;
 
 		&:before {
 			content: '';
 			position: absolute;
-			left: 0.5625em;
-			top: 0.65em;
-			width: 0.375em;
-			height: 0.375em;
+			left: 1.25em;
+			top: 0.71875em;
+			width: 0.5em;
+			height: 0.5em;
 			transform: translateY(-50%);
 			border-radius: 100%;
-			background-color: $c-text;
+			background-color: $c-accent-2;
 		}
 	}
 
@@ -1039,7 +1044,7 @@ html.hystmodal__opened {
 		&:hover {
 			color: $c-accent-hover;
 		}
-	}*/
+	}
 
 	img,
 	video,

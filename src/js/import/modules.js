@@ -16,6 +16,8 @@
 @@include("../../blocks/modules/cp-intro/cp-intro.js")
 @@include("../../blocks/modules/popular-brands/popular-brands.js")
 @@include("../../blocks/modules/contacts-intro/contacts-intro.js")
+@@include("../../blocks/modules/mi-slider/mi-slider.js")
+@@include("../../blocks/modules/s-banks/s-banks.js")
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -37,4 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
     cpIntro()
     popularBrands()
     contactsMap()
+    miSliderInit()
+    sBanksSlider()
 })

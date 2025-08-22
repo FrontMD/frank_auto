@@ -1,0 +1,37 @@
+-
+    const defaultsBanksProps = {
+        classes: '',
+        slides: [
+            'img/about/bank_1.webp',
+            'img/about/bank_2.webp',
+            'img/about/bank_3.webp',
+            'img/about/bank_4.webp',
+            'img/about/bank_5.webp',
+            'img/about/bank_6.webp',
+        ]
+    }
+
+mixin s-banks(props= defaultsBanksProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultsBanksProps.classes,
+            slides: props.slides ? props.slides : defaultsBanksProps.slides,
+        }
+
+    section.section.s-banks(class= checkProps.classes data-js="sBanks")&attributes(attributes)
+        .section__container.section__content
+            .section-header.s-banks__header
+                .s-banks__title.title.title--40 Банки-партнеры
+                +slider-controls({
+                    classes: 's-banks__controls'
+                })
+            .s-banks__slider
+                .swiper-wrapper
+                    - let counter = 0
+                    - while(counter < checkProps.slides.length)
+                        .swiper-slide.mi-slider__slide
+                            img(class="lazyload" src="" data-src=checkProps.slides[counter], alt="")
+
+                        -counter++
+
+

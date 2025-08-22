@@ -6,6 +6,10 @@
             'img/about/about_slider_2.webp',
             'img/about/about_slider_3.webp',
             'img/about/about_slider_4.webp',
+            'img/about/about_slider_1.webp',
+            'img/about/about_slider_2.webp',
+            'img/about/about_slider_3.webp',
+            'img/about/about_slider_4.webp',
         ]
     }
 
@@ -17,13 +21,14 @@ mixin mi-slider(props= defaultmiSliderProps)
         }
 
     .mi-slider(class= checkProps.classes data-js="miSlider")&attributes(attributes)
-        +slider-controls
+        +slider-controls({
+            classes: 'mi-slider__controls'
+        })
         .swiper-wrapper
             - let counter = 0
             - while(counter < checkProps.slides.length)
                 .swiper-slide.mi-slider__slide
-                    .mi-slider__mask
-                        img(src=checkProps.slides[counter], alt="")
+                    img(class="lazyload" src="" data-src=checkProps.slides[counter], alt="")
 
                 -counter++
 

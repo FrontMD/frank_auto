@@ -12,12 +12,59 @@ mixin about-intro(props= defaultAboutIntroProps)
     section.section.about-intro(class= checkProps.classes)&attributes(attributes)
         .section__container
             .section-block.about-intro__block
-                .about-intro__content
-                    .about-intro__header.ai-header
-                    .about-intro__text.text-editor
-                    +mi-slider({
-                        classes: 'about-intro__slider'
-                    })
-                    .about-intro__text.text-editor
-                    .ai-map
+                .about-intro__header.ai-header
+                    .ai-header__logo
+                        img(src="img/logo/logo_rotated.webp" alt="")
+                    .ai-header__content
+                        .ai-header__top FRANK AUTO — является частью глобальной группы компаний, работающей на международных автомобильных рынках, с обширной и развитой деловой сетью и большим опытом реализации новых автомобилей по всему миру.
+                        .ai-header__bottom
+                            .ai-header__left Более<br>10 лет
+                            .ai-header__right мы работаем в США, Мексике, Китае, Дубае, Турции, Германии, Эстонии, Сингапуре, а с 2022 года успешно координируем продажи и логистику для наших клиентов в России.
 
+                .about-intro__text.text-editor
+                    p Выбирая автосалон FRANK AUTO Вы получаете:
+                    ul
+                        li самые выгодные цены на автомобили в Москве;
+                        li возможность выбора автомобилей более чем из двухсот моделей различных цветов и комплектаций;
+                        li приобретение автомобилей с пробегом, прошедших предпродажную подготовку и юридическую экспертизу;
+                        li быстрое и качественное оформление документов;
+                        li высокий уровень сервиса и индивидуальный подход;
+                        li выгодное приобретение автомобиля по программам Trade-in и утилизация;
+                        li сотрудничество с самыми крупными банками Москвы, предлагающими наиболее выгодные условия кредитования;
+                        li возможность участия в программах льготного кредитования «Семейный автомобиль», и «Первый автомобиль», а также льготное условия для медицинских работников и тех, кто сдает свой автомобиль по программе Trade-in в счёт оплаты первоначального взноса;
+                        li акции и подарки от автосалона при покупке автомобиля.
+
+                +mi-slider({
+                    classes: 'about-intro__slider'
+                })
+
+                .about-intro__text.text-editor
+                    p Все вопросы о наличии, цветах и комплектациях автомобилей, а также по работе автосалона Вы всегда можете узнать по телефону, указанному на сайте, а также при помощи формы обратной связи.
+                    p Мы ценим каждого клиента и гарантируем высокий уровень сервиса!
+                    p FRANK AUTO  — с нами Вам покорятся все направления!
+
+                .about-intro__map.ai-map
+                    .ai-map__title 3 салона<br>в Москве
+                    .ai-map__tags
+                        .ai-map__tag
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#employees`)
+                            | 1000<br>работников
+                        .ai-map__tag
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#briefcase`)
+                            | 20 лет<br>на рынке
+
+                    .ai-map__map
+                        .ai-map__img
+                            img(src="img/about/about_map.webp" alt="")
+                        .ai-map__marks
+                            .ai-map__mark(style="left: 35.8%; top: 55%;")
+                                img(src="img/logo/logo_location.svg" alt="")
+                                span Москва
+                            .ai-map__mark(style="left: 57%; top: 59.86%;")
+                                img(src="img/logo/logo_location.svg" alt="")
+                                span Вологда
+                            .ai-map__mark(style="left: 42.84%; top: 65.83%;")
+                                img(src="img/logo/logo_location.svg" alt="")
+                                span Астрахань
