@@ -56,6 +56,6 @@ mixin s-services(props= defaultSServicesProps)
                                         sMode: "full"
                                     })
                                 .s-services__img
-                                    img(src=card.img alt="")
+                                    img(class="lazyload" src="" data-src=card.img alt="")
 
                             - cardsCount++

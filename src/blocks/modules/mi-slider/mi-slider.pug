@@ -1,0 +1,30 @@
+-
+    const defaultmiSliderProps = {
+        classes: '',
+        slides: [
+            'img/about/about_slider_1.webp',
+            'img/about/about_slider_2.webp',
+            'img/about/about_slider_3.webp',
+            'img/about/about_slider_4.webp',
+        ]
+    }
+
+mixin mi-slider(props= defaultmiSliderProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultmiSliderProps.classes,
+            slides: props.slides ? props.slides : defaultmiSliderProps.slides,
+        }
+
+    .mi-slider(class= checkProps.classes data-js="miSlider")&attributes(attributes)
+        +slider-controls
+        .swiper-wrapper
+            - let counter = 0
+            - while(counter < checkProps.slides.length)
+                .swiper-slide.mi-slider__slide
+                    .mi-slider__mask
+                        img(src=checkProps.slides[counter], alt="")
+
+                -counter++
+
+

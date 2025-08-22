@@ -1,58 +1,33 @@
 -
-    const defaultContactsIntroProps = {
+    const defaultContactsDirProps = {
         classes: '',
     }
 
-mixin contacts-dir(props= defaultContactsIntroProps)
+mixin contacts-dir(props= defaultContactsDirProps)
     -
         const checkProps = {
-            classes: props.classes ? props.classes : defaultContactsIntroProps.classes,
-            title: props.title ? props.title : defaultContactsIntroProps.title,
-            brands: props.brands ? props.brands : defaultContactsIntroProps.brands,
+            classes: props.classes ? props.classes : defaultContactsDirProps.classes,
         }
 
-    section.section.contacts-intro(class= checkProps.classes data-js="contactsIntro")&attributes(attributes)
-        .section__container
-            .section-block.contacts-intro__block
-                .contacts-intro__items
-                    .contacts-intro__item(data-js="contactsIntroItem" data-coords="55.791209,37.363350")
-                        .contacts-intro__icon
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#location`)
-                        .contacts-intro__content
-                            .contacts-intro__title Москва,<br>Новорижское шоссе,<br>17-й&nbsp;км., строение&nbsp;3
-                            a.contacts-intro__phone(href="tel:+74994606219") +7 (499) 460-62-19 
-                            .contacts-intro__text работаем с 10 до 20 без выходных
-                            a.contacts-intro__route(href="https://yandex.ru/maps/?rtext=~55.791209,37.363350" target="_blank") 
-                                span Как проехать
-                                svg
-                                    use(xlink:href=`img/sprites/sprite.svg#route`)
-
-                    .contacts-intro__item(data-js="contactsIntroItem" data-coords="55.864001,37.700879")
-                        .contacts-intro__icon
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#location`)
-                        .contacts-intro__content
-                            .contacts-intro__title Москва,<br>Ярославское шоссе,<br>дом&nbsp;42
-                            a.contacts-intro__phone(href="tel:+74991165065") +7 (499) 116-50-65 
-                            .contacts-intro__text работаем с 10 до 20 без выходных
-                            a.contacts-intro__route(href="https://yandex.ru/maps/?rtext=~55.864001,37.700879" target="_blank") 
-                                span Как проехать
-                                svg
-                                    use(xlink:href=`img/sprites/sprite.svg#route`)
-
-                    .contacts-intro__item(data-js="contactsIntroItem" data-coords="55.708867,37.381853")
-                        .contacts-intro__icon
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#location`)
-                        .contacts-intro__content
-                            .contacts-intro__title Москва,<br>Можайское шоссе,<br>вл.&nbsp;165&nbsp;Б
-                            a.contacts-intro__phone(href="tel:+74994558015") +7 (499) 455-80-15 
-                            .contacts-intro__text работаем с 10 до 20 без выходных
-                            a.contacts-intro__route(href="https://yandex.ru/maps/?rtext=~55.708867,37.381853" target="_blank") 
-                                span Как проехать
-                                svg
-                                    use(xlink:href=`img/sprites/sprite.svg#route`)
-
-                .contacts-intro__map(data-js="contactsIntroMap")
-
+    section.section.contacts-dir(class= checkProps.classes)&attributes(attributes)
+        .section__container.section__content
+            .contacts-dir__title.title.title--36 Связаться с директором
+            .contacts-dir__content
+                .contacts-dir__info
+                    .contacts-dir__text.contacts-dir__text--top
+                        p Уважаемые клиенты, партнеры, друзья!
+                        p Если у вас возникли какие-либо вопросы о работе компании FRANK AUTO или есть комментарии по качеству нашего обслуживания, вы всегда можете обратиться ко мне напрямую
+                    .contacts-dir__links
+                        a.contacts-dir__phone(href="tel:+79175780316") +7 917 578-03-16
+                        a.contacts-dir__email(href="mailto:i.frank@frankauto.ru") i.frank@frankauto.ru
+                    .contacts-dir__text
+                        p По вопросам рекламы, маркетинга и сотрудничества обращайтесь, пожалуйста, сюда&nbsp;– <a href="mailto:marketing@frankauto.ru">marketing@frankauto.ru</a>
+                        p С Уважением,<br>Ваша Ирина Франк
+                    +btn({
+                        classes: 'contacts-dir__btn',
+                        name: 'Отправить заявку на сотрудничество',
+                        cMode: 'accent',
+                        sMode: 'content'
+                    })
+                .contacts-dir__photo
+                    img(class="lazyload" src="" data-src="img/contacts/director.webp" alt="")

@@ -39,7 +39,7 @@ function contactsMap() {
                         iconLayout: 'default#image',
                         iconImageHref: iconHref,
                         iconImageSize: [60, 68],
-                        iconImageOffset: [-30, -34],
+                        iconImageOffset: [-30, -68],
                     }
                 );
     

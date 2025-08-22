@@ -55,15 +55,24 @@ mixin cp-intro(props= defaultCpIntroProps)
                         })
                         .swiper-wrapper
                             .swiper-slide.cp-intro__slide
-                                img(src="img/catalog-product/cp_intro_1.webp" alt="")
+                                a(href="img/catalog-product/cp_intro_1.webp" data-fancybox="cpIntroSlider" data-thumb="img/catalog-product/cp_intro_1.webp")
+                                    img(src="img/catalog-product/cp_intro_1.webp" alt="")
                             .swiper-slide.cp-intro__slide
-                                img(src="img/catalog-product/cp_intro_2.webp" alt="")
+                                a(href="img/catalog-product/cp_intro_2.webp" data-fancybox="cpIntroSlider" data-thumb="img/catalog-product/cp_intro_2.webp")
+                                    img(loading="lazy" src="img/catalog-product/cp_intro_2.webp" alt="")
+                                    .swiper-lazy-preloader
                             .swiper-slide.cp-intro__slide
-                                img(src="img/catalog-product/cp_intro_3.webp" alt="")
+                                a(href="img/catalog-product/cp_intro_3.webp" data-fancybox="cpIntroSlider" data-thumb="img/catalog-product/cp_intro_3.webp")
+                                    img(loading="lazy" src="img/catalog-product/cp_intro_3.webp" alt="")
+                                    .swiper-lazy-preloader
                             .swiper-slide.cp-intro__slide
-                                img(src="img/catalog-product/cp_intro_4.webp" alt="")
+                                a(href="img/catalog-product/cp_intro_4.webp" data-fancybox="cpIntroSlider" data-thumb="img/catalog-product/cp_intro_4.webp")
+                                    img(loading="lazy" src="img/catalog-product/cp_intro_4.webp" alt="")
+                                    .swiper-lazy-preloader
                             .swiper-slide.cp-intro__slide
-                                img(src="img/catalog-product/cp_intro_5.webp" alt="")
+                                a(href="img/catalog-product/cp_intro_5.webp" data-fancybox="cpIntroSlider" data-thumb="img/catalog-product/cp_intro_5.webp")
+                                    img(loading="lazy" src="img/catalog-product/cp_intro_5.webp" alt="")
+                                    .swiper-lazy-preloader
 
                     .cp-intro__thumbs(data-js="cpIntroThumbs")
                         .swiper-wrapper

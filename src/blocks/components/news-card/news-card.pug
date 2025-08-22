@@ -27,7 +27,7 @@ mixin news-card(props = defaultNewsCardProps)
     .news-card(class=checkProps.classes)&attributes(attributes)
         a(href="javascript:void(0);").news-card__link
         .news-card__img
-            img(src=checkProps.img alt="")
+            img(class="lazyload" src="" data-src=checkProps.img alt="")
         .news-card__tags 
             -if(checkProps.date.length > 0)
                 .news-card__tag.news-card__tag--date!= checkProps.date
@@ -35,7 +35,7 @@ mixin news-card(props = defaultNewsCardProps)
             .news-card__right
                 -if(checkProps.brand.name.length > 0)
                     .news-card__brand
-                        img(src=checkProps.brand.icon, alt="")
+                        img(class="lazyload" src="" data-src=checkProps.brand.icon, alt="")
                         span!= checkProps.brand.name
                 -if(checkProps.tag.length > 0)
                     .news-card__tag!= checkProps.tag

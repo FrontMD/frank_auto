@@ -31,13 +31,17 @@ mixin photo-gallery(props= defaultPhotoGalleryProps)
                                         .swiper-slide.photo-gallery__slide
                                             img(src="img/catalog-model/model_1.webp" alt="")
                                         .swiper-slide.photo-gallery__slide
-                                            img(src="img/catalog-model/model_2.webp" alt="")
+                                            img(loading="lazy" src="img/catalog-model/model_2.webp" alt="")
+                                            .swiper-lazy-preloader
                                         .swiper-slide.photo-gallery__slide
-                                            img(src="img/catalog-model/model_3.webp" alt="")
+                                            img(loading="lazy" src="img/catalog-model/model_3.webp" alt="")
+                                            .swiper-lazy-preloader
                                         .swiper-slide.photo-gallery__slide
-                                            img(src="img/catalog-model/model_4.webp" alt="")
+                                            img(loading="lazy" src="img/catalog-model/model_4.webp" alt="")
+                                            .swiper-lazy-preloader
                                         .swiper-slide.photo-gallery__slide
-                                            img(src="img/catalog-model/model_5.webp" alt="")
+                                            img(loading="lazy" src="img/catalog-model/model_5.webp" alt="")
+                                            .swiper-lazy-preloader
                                     +slider-controls({
                                         classes: 'photo-gallery__controls'
                                     })

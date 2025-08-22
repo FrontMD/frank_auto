@@ -1,12 +1,24 @@
 .contacts-intro {
     &__block {
         padding: 40px 30px 30px;
+
+        @include max(laptop-small) {
+            padding: 30px 20px 20px;
+        }
     }
 
     &__items {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 24px;
+
+        @include max(tablet) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @include max(mobile) {
+            grid-template-columns: minmax(0, 1fr);
+        }
     }
 
     &__item {
@@ -29,6 +41,10 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+
+        @include max(laptop-small) {
+            gap: 10px;
+        }
     }
 
     &__title {
@@ -38,6 +54,10 @@
         line-height: 130%;
         letter-spacing: 0;
         color: $c-text;
+
+        @include max(laptop-small) {
+            font-size: 17px;
+        }
     }
 
     &__phone {
@@ -48,6 +68,10 @@
         letter-spacing: 0;
         color: $c-text-breadcrumbs;
         transition: all $tr-time linear;
+
+        @include max(laptop-small) {
+            font-size: 20px;
+        }
 
         &:hover {
             color: $c-accent-hover;
@@ -92,5 +116,12 @@
         background-color: $c-bg-main;
         border-radius: $br-section;
         margin-top: 50px;
+        overflow: hidden;
+
+        @include max(mobile) {
+            height: 450px;
+            border-radius: $br-section-mob;
+            margin-top: 30px;
+        }
     }
 }

@@ -107,8 +107,8 @@ function fancyboxInit() {
         Carousel: {
             transition: "crossfade",
             Navigation: {
-                prevTpl: `<svg><use xlink:href=${window.distPath}img/sprites/sprite.svg#arrow_classic></use></svg>`,
-                nextTpl: `<svg><use xlink:href=${window.distPath}img/sprites/sprite.svg#arrow_classic></use></svg>`,
+                prevTpl: `<svg><use xlink:href=${window.distPath}img/sprites/sprite.svg#arrow_slider_left></use></svg>`,
+                nextTpl: `<svg><use xlink:href=${window.distPath}img/sprites/sprite.svg#arrow_slider_right></use></svg>`,
               },
               Video: {
                   loop: true
@@ -129,59 +129,6 @@ function fancyboxInit() {
         },
 
         on: {
-            /*"Carousel.change": (fancybox, event) => {
-                let currentSlide = fancybox.getSlide()
-                let prevSlide = event.slides[event.prevPage]
-
-                if(prevSlide.type == 'iframe') {
-                    let player = prevSlide.el.querySelector('iframe')
-                    let playerSrc = player.getAttribute('src')
-
-                    if(playerSrc.includes('rutube')) {
-                        player.contentWindow.postMessage(JSON.stringify({
-                            type: 'player:pause',
-                            data: {}
-                        }), '*');
-                    } else if(playerSrc.includes('vkvideo')) {
-                        let player = VK.VideoPlayer(prevSlide.el.querySelector('iframe'));
-                        player.pause();
-                    }
-                }
-
-                if(currentSlide.type == 'iframe') {
-                    let player = currentSlide.el.querySelector('iframe')
-                    let playerSrc = player.getAttribute('src')
-
-                    if(playerSrc.includes('rutube')) {
-                        if(player.contentDocument!==null) {
-                            player.contentWindow.postMessage(JSON.stringify({
-                                type: 'player:play',
-                                data: {}
-                            }), '*');
-                        }  else {
-                            player.addEventListener("load", function() {
-                                player.contentWindow.postMessage(JSON.stringify({
-                                    type: 'player:play',
-                                    data: {}
-                                }), '*');
-                            })
-                        }
-                    }else if(playerSrc.includes('vkvideo')) {
-                        let player = VK.VideoPlayer(currentSlide.el.querySelector('iframe'));
-                        player.play();
-                    }
-
-              }
-
-              if(currentSlide.type == 'html5video') {
-                    let videoEl = currentSlide.el.querySelector('video')
-
-                    if(videoEl) {
-                        videoEl.setAttribute('loop', '')
-                    }
-                }
-
-            },*/
             "Carousel.ready Carousel.change": (fancybox, event) => {
                 let currentSlide = fancybox.getSlide()
 
@@ -261,18 +208,4 @@ function fancyboxInit() {
     })
 }
 
-function scrollTriggerRefresh(timeout = 0) {
-    if(footerScrollTriggerObj) {
-
-        if(timeout > 0) {
-            setTimeout(() => {
-                footerScrollTriggerObj.refresh()
-            }, timeout)
-
-        } else {
-            footerScrollTriggerObj.refresh()
-        }
-    } else {
-        return
-    }
 }*/

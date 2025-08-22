@@ -21,7 +21,7 @@ mixin story-card(props = defaultCatalogCardProps)
         a(href="javascript:void(0);").story-card__link
 
         .story-card__bg
-            img(src=checkProps.img alt="")
+            img(class="lazyload" src="" data-src=checkProps.img alt="")
 
         .story-card__content
             .story-card__tags

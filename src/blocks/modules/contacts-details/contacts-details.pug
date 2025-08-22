@@ -1,0 +1,49 @@
+-
+    const defaultContactsDetailsProps = {
+        classes: '',
+    }
+
+mixin contacts-details(props= defaultContactsDetailsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultContactsDetailsProps.classes,
+        }
+
+    section.section.contacts-details(class= checkProps.classes)&attributes(attributes)
+        .section__container
+            .section-block.contacts-details__block
+                .contacts-details__col.contacts-details__col--title
+                    .contacts-details__title
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#pts`)
+                        | Реквизиты<br>ООО "ФРАНК АВТО"
+                .contacts-details__col
+                    .contacts-details__item
+                        .contacts-details__param Юр. адрес:
+                        .contacts-details__value 121609, г. Москва, вн.тер.г. Муниципальный Округ Крылатское, ул Осенняя, д. 23, этаж/комната 9/114А, офис 83А
+                    .contacts-details__item    
+                        .contacts-details__param ИНН:
+                        .contacts-details__value 9731095766
+                    .contacts-details__item    
+                        .contacts-details__param огрн:
+                        .contacts-details__value 1227700418472
+                    .contacts-details__item    
+                        .contacts-details__param КПП:
+                        .contacts-details__value 773101001
+                    .contacts-details__item    
+                        .contacts-details__param окпо:
+                        .contacts-details__value 79510906
+
+                .contacts-details__col
+                    .contacts-details__item
+                        .contacts-details__param Расчетный счет:
+                        .contacts-details__value 40702810924250001054
+                    .contacts-details__item    
+                        .contacts-details__param Корр. счет:
+                        .contacts-details__value 30101810145250000411
+                    .contacts-details__item    
+                        .contacts-details__param Наименование банка:
+                        .contacts-details__value Филиал «Центральный» Банка ВТБ (ПАО) в г. Москве
+                    .contacts-details__item    
+                        .contacts-details__param БИК:
+                        .contacts-details__value 044525411

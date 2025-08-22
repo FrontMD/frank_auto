@@ -1611,7 +1611,7 @@ html.hystmodal__opened {
 
 			&__img {
 				border-radius: 2px;
-				object-fit: contain;
+				object-fit: cover;
 			}
 
 		}
@@ -1628,11 +1628,11 @@ html.hystmodal__opened {
 
 	.fancybox__toolbar {
 		.f-button[data-fancybox-close] {
-			border-radius: 2px;
+			border-radius: 16px;
 			margin-top: 40px;
 			margin-right: 40px;
-			width: 46px;
-			height: 46px;
+			width: 56px;
+			height: 56px;
 
 			&:hover {
 				background-color: $c-accent-hover;
@@ -1650,6 +1650,7 @@ html.hystmodal__opened {
 				margin-right: 20px;
 				width: 32px;
 				height: 32px;
+				border-radius: 8px;
 			}
 
 			svg {
@@ -1670,25 +1671,31 @@ html.hystmodal__opened {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			width: 46px;
-			height: 46px;
-			background-color: $c-white;
-			border: 1px solid $c-bg-main;
-			border-radius: 2px;
-			color: $c-text;
+			width: 59px;
+			height: 59px;
+			background-color: rgba(255, 255, 255, 0.7);
+			backdrop-filter: blur(40px);
+			border-radius: 16px;
+			color: $c-accent;
 			transition: all $tr-time linear;
 			cursor: pointer;
 
 			@include max(mobile) {
-				width: 24px;
-				height: 24px;
+				width: 32px;
+				height: 32px;
+				border-radius: 8px;
 			}
 
 			svg {
-				width: 8.54px;
-				height: 9.61px;
+				width: 24px;
+				height: 24px;
 				box-shadow: none;
 				filter: none;
+
+				@include max(mobile) {
+					width: 16px;
+					height: 16px;
+				}
 			}
 
 			&:hover {
@@ -1701,10 +1708,6 @@ html.hystmodal__opened {
 
 		.f-button.is-prev {
 			left: 40px;
-
-			svg {
-				transform: rotate(-180deg);
-			}
 
 			@include max(laptop) {
 				left: 30px;

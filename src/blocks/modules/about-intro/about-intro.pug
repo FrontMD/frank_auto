@@ -1,0 +1,23 @@
+-
+    const defaultAboutIntroProps = {
+        classes: '',
+    }
+
+mixin about-intro(props= defaultAboutIntroProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultAboutIntroProps.classes,
+        }
+
+    section.section.about-intro(class= checkProps.classes)&attributes(attributes)
+        .section__container
+            .section-block.about-intro__block
+                .about-intro__content
+                    .about-intro__header.ai-header
+                    .about-intro__text.text-editor
+                    +mi-slider({
+                        classes: 'about-intro__slider'
+                    })
+                    .about-intro__text.text-editor
+                    .ai-map
+
