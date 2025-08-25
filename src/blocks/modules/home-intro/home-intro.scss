@@ -48,7 +48,11 @@
     &__content {
         position: relative;
         padding: 35px 40px 80px;
-        min-height: calc(100vh - 198px - 20px);
+        min-height: 700px;
+
+        @include max(full) {
+            min-height: calc(100vh - 198px - 20px);
+        }
 
         @include max(tablet) {
             padding: 20px 20px 60px;

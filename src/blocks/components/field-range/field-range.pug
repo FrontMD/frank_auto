@@ -31,3 +31,6 @@ mixin field-range(props = defaultFieldRangeProps)
         - if(checkProps.title.length > 0)
             .field-range__title!= checkProps.title
         .field-range__range(data-js="fieldRangeSlider")
+        .field-range__values
+            .field-range__value(data-js="fieldRangeMinVal")
+            .field-range__value(data-js="fieldRangeMaxVal")

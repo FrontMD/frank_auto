@@ -3,6 +3,7 @@ function fieldsRangeController() {
 
     if(rangeFields.length < 1) return
     
+    const ww = window.innerWidth
     const formater = {
         from: function (formattedValue) {
             return Number(formattedValue);
@@ -25,19 +26,30 @@ function fieldsRangeController() {
                 rangeField.querySelector('[data-js="fieldRangeMin"]')
             ]
 
+            let mobTTooltips = [
+                rangeField.querySelector('[data-js="fieldRangeMinVal"]')
+            ]
+
             let sliderEx = false
+            let tooltips = false
             
             if(isRange) {
+
+                if(ww > 768) {
+                    tooltips = { 
+                        to: function(value) { return Math.round(value).toLocaleString() + unit; },
+                        from: function(value) { return Math.round(value).toLocaleString() + unit; } 
+                    }
+                }
+
                 inputsList.push(rangeField.querySelector('[data-js="fieldRangeMax"]'))
+                mobTTooltips.push(rangeField.querySelector('[data-js="fieldRangeMaxVal"]'))
 
                 sliderEx = noUiSlider.create(slider, {
                     start: [min, max],
                     format: formater,
                     connect: true,
-                    tooltips: { 
-                        to: function(value) { return Math.round(value).toLocaleString() + unit; },
-                        from: function(value) { return Math.round(value).toLocaleString() + unit; } 
-                    },
+                    tooltips: tooltips,
                     step: step,
                     range: {
                         'min': min,
@@ -45,14 +57,20 @@ function fieldsRangeController() {
                     }
                 });
     
-                mergeTooltips(slider, 30, ' - ');
+                if(ww > 768) {
+                    mergeTooltips(slider, 30, ' - ');
+                }
 
             } else {
+                if(ww > 768) {
+                    tooltips = [{to: function(value) { return Math.round(value).toLocaleString() + unit; }}]
+                }
+
                 sliderEx = noUiSlider.create(slider, {
                     start: min,
                     format: formater,
                     connect: 'lower',
-                    tooltips: [{to: function(value) { return Math.round(value).toLocaleString() + unit; }}],
+                    tooltips: tooltips,
                     step: step,
                     range: {
                         'min': min,
@@ -64,6 +82,7 @@ function fieldsRangeController() {
             sliderEx.on("update", function (values, handle) {
                 inputsList[handle].value = values[handle]
                 inputsList[handle].dispatchEvent(new Event('change'));
+                mobTTooltips[handle].innerHTML = Math.round(values[handle]).toLocaleString() + unit
             });
 
             inputsList.forEach((currentInput, index) => {

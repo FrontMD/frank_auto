@@ -5,9 +5,18 @@
     margin-left: auto;
     margin-right: auto;
 
+    @include max(mobile) {
+        width: 100%;
+    }
+
     &--margins {
         margin-top: 50px;
         margin-bottom: 50px;
+
+        @include max(mobile) {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
     }
 
     &__input {
@@ -27,6 +36,35 @@
         line-height: 1.1875em;
         letter-spacing: 0;
         color: $c-text-breadcrumbs;
+
+        @include max(mobile) {
+            margin-bottom: 15px;
+        }
+    }
+
+    &__values {
+        display: none;
+
+        @include max(mobile) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-top: 24px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+    }
+
+    &__value {
+        flex: 0 1 auto;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0;
+        color: $c-text-breadcrumbs;
     }
 
     .noUi-horizontal {
@@ -43,6 +81,11 @@
         background-color: $c-bg-input;
         box-shadow: none;
         border-radius: 12px;
+
+        @include max(mobile) {
+            width: calc(100% - 25px);
+            left: 12.5px;
+        }
     }
 
     &__title+.noUi-target {
@@ -78,6 +121,10 @@
             top: 21px;
             left: 50%;
             transform: translateX(-50%);
+
+            @include max(mobile) {
+                display: none;
+            }
         }
     }
 
@@ -93,9 +140,17 @@
         font-size: 16px;
         line-height: 1em;
         letter-spacing: 0;
+
+        @include max(mobile) {
+            display: none;
+        }
     }
 
     &__title+.noUi-target .noUi-tooltip {
         top: calc(100% + 19px);
+    }
+
+    &__title+.noUi-target+&__values {
+        margin-top: 58px;
     }
 }

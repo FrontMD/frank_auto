@@ -43,8 +43,8 @@
         border-radius: $br-btn-input;
 
         @include max(mobile) {
-            padding: 14px 15px;
-            font-size: 14px;
+            padding: 13px 20px;
+            font-size: 16px;
             border-radius: 10px;
             min-height: 45px;
         }
@@ -63,6 +63,11 @@
 
     &__textarea {
         resize: none;
+    }
+
+    &__select.select2-hidden-accessible {
+        opacity: 0;
+        visibility: hidden;
     }
 
     &__error {
@@ -309,6 +314,10 @@
     border-radius: $br-btn-input;
     background-color: $c-bg-input;
 
+    @include max(mobile) {
+        border-radius: 10px;
+    }
+
     .selection {
         width: 100%;
     }
@@ -399,7 +408,7 @@
 }
 
 .select2-container.select2-container--default.select2-container--open {
-    z-index: 9999;
+    z-index: 40;
 
     .select2-dropdown {
         background-color: #fff;

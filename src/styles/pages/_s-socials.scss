@@ -3,6 +3,11 @@
     margin-left: auto;
     margin-right: 20px;
 
+    @include max(laptop) {
+        max-width: none;
+        margin-right: 0;
+    }
+
     &__items {
         margin-top: 30px;
         display: grid;
