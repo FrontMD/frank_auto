@@ -1,6 +1,57 @@
 .s-banks {
+    overflow: hidden;
+
+    &__header {
+        margin-bottom: 30px;
+
+        @include max(tablet) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__controls {
+        @include max(mobile) {
+            display: none;
+        }
+    }
 
     &__slider {
-        overflow: hidden;
+
+        .swiper-wrapper {
+            align-items: stretch;
+        }
+    }
+
+    &__slide {
+        height: auto;
+        min-height: 97px;
+        width: fit-content;
+        min-width: 332px;
+        padding: 15px;
+        background-color: $c-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: $br-section;
+
+        @include max(laptop-small) {
+            min-width: 194px;
+            min-height: 80px;
+            padding: 5px;
+            border-radius: $br-section-mob;
+        }
+
+        img {
+            max-width: 167px;
+            max-height: 49px;
+            object-fit: contain;
+            object-position: center center;
+
+            @include max(laptop-small) {
+                max-width: 172px;
+                max-height: 40px;
+            }
+        }
+
     }
 }

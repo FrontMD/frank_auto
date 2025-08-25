@@ -1,0 +1,151 @@
+-
+    const defaultNewsListProps = {
+        classes: '',
+        cards: [
+            {
+                title: 'Кузовной ремонт в FRANK AUTO',
+                text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
+                img: 'img/news/news_5.webp',
+                date: '25.10.2025',
+                tag: 'Кузовной ремонт'
+            },
+            {
+                title: 'Кузовной ремонт в FRANK AUTO',
+                text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
+                img: 'img/news/news_6.webp',
+                date: '25.10.2025',
+                tag: 'Кузовной ремонт'
+            },
+            {
+                title: 'Кузовной ремонт в FRANK AUTO',
+                text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
+                img: 'img/news/news_7.webp',
+                date: '25.10.2025',
+                tag: 'Кузовной ремонт'
+            },
+            {
+                title: 'Кузовной ремонт в FRANK AUTO',
+                text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
+                img: 'img/news/news_8.webp',
+                date: '25.10.2025',
+                tag: 'Кузовной ремонт'
+            },
+            {
+                title: 'Кузовной ремонт в FRANK AUTO',
+                text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
+                img: 'img/news/news_9.webp',
+                date: '25.10.2025',
+                tag: 'Кузовной ремонт'
+            },
+            {
+                title: 'Кузовной ремонт в FRANK AUTO',
+                text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
+                img: 'img/news/news_10.webp',
+                date: '25.10.2025',
+                tag: 'Кузовной ремонт'
+            },
+            {
+                title: 'Кузовной ремонт в FRANK AUTO',
+                text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
+                img: 'img/news/news_11.webp',
+                date: '25.10.2025',
+                tag: 'Кузовной ремонт'
+            },
+            {
+                title: 'Кузовной ремонт в FRANK AUTO',
+                text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
+                img: 'img/news/news_12.webp',
+                date: '25.10.2025',
+                tag: 'Кузовной ремонт'
+            },
+            {
+                title: 'Кузовной ремонт в FRANK AUTO',
+                text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
+                img: 'img/news/news_13.webp',
+                date: '25.10.2025',
+                tag: 'Кузовной ремонт'
+            },
+            {
+                title: 'Кузовной ремонт в FRANK AUTO',
+                text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
+                img: 'img/news/news_14.webp',
+                date: '25.10.2025',
+                tag: 'Кузовной ремонт'
+            },
+            {
+                title: 'Кузовной ремонт в FRANK AUTO',
+                text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
+                img: 'img/news/news_1.webp',
+                date: '25.10.2025',
+                tag: 'Кузовной ремонт'
+            },
+            {
+                title: 'Кузовной ремонт в FRANK AUTO',
+                text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
+                img: 'img/news/news_2.webp',
+                date: '25.10.2025',
+                tag: 'Кузовной ремонт'
+            },
+        ],
+    }
+
+mixin news-list(props= defaultNewsListProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultNewsListProps.classes,
+            cards: props.cards ? props.cards : defaultNewsListProps.cards,
+        }
+
+    section.section.news-list(class= checkProps.classes)&attributes(attributes)
+        .section__container.section__content
+            .section-block.news-list__block
+                form.news-list__filter(action="#")
+                    .news-list__tabs
+                        .field.field--tab
+                            label
+                                input.field__input(class="field__input" type="checkbox" name="news-filter" placeholder="")
+                                span.fake-checkbox
+                                    | О компании
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#close`)
+                        .field.field--tab
+                            label
+                                input.field__input(class="field__input" type="checkbox" name="news-filter" placeholder="")
+                                span.fake-checkbox
+                                    | Амбассадоры
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#close`)
+                        .field.field--tab
+                            label
+                                input.field__input(class="field__input" type="checkbox" name="news-filter" placeholder="")
+                                span.fake-checkbox
+                                    | О марках
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#close`)
+                        .field.field--tab
+                            label
+                                input.field__input(class="field__input" type="checkbox" name="news-filter" placeholder="")
+                                span.fake-checkbox
+                                    | Спецпредложения
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#close`)
+
+
+
+                    +field({
+                        classes: 'news-list__sort',
+                        tag: 'select',
+                        placeholder: 'Сортировать',
+                        selectOptions: [
+                            "Цена по возрастанию",
+                            "Цена по убыванию",
+                        ],
+                    })
+
+                .section-block__content.news-list__list
+                    - let cardsCount = 0
+                        -while(cardsCount < checkProps.cards.length)
+                            +news-card(checkProps.cards[cardsCount])
+
+                            - cardsCount++
+            +pagination

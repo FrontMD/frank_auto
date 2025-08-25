@@ -1,0 +1,53 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Блог"
+
+block content
+    .page-layout(data-js="pageLayout")
+        +s-breadcrumbs({
+            items: [
+                {
+                    name: 'FrankAuto',
+                    link: 'javascript:void(0);'
+                },
+                {
+                    name: 'Блог',
+                    link: 'javascript:void(0);'
+                },
+            ],
+        })
+
+        section.section.section--title
+            .section__container
+                .section__header.section__content
+                    .title.title--40
+                        h1 Блог
+
+        +news-list
+        +s-banner({
+            img: '<picture><source srcset="img/news/socials_banner.webp" media="(max-width: 767px)"><img src="img/news/socials_banner.webp" alt=""></picture>'
+        })
+            .s-socials
+                .s-socials__title.title.title--30.title--light Мы в социальных сетях
+                .s-socials__items
+                    a(href="javascript:void(0);").s-socials__item
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#vk_c`)
+                        span Вконтакте
+
+                    a(href="javascript:void(0);").s-socials__item
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#tg_c`)
+                        span Telegram
+
+                    a(href="javascript:void(0);").s-socials__item
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#vk_video_c`)
+                        span ВК-видео
+
+                    a(href="javascript:void(0);").s-socials__item.s-socials__item-bg
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#email_c`)
+                        span Подписаться на рассылку

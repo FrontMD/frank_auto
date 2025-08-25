@@ -18,6 +18,7 @@
 @@include("../../blocks/modules/contacts-intro/contacts-intro.js")
 @@include("../../blocks/modules/mi-slider/mi-slider.js")
 @@include("../../blocks/modules/s-banks/s-banks.js")
+@@include("../../blocks/modules/img-slider/img-slider.js")
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -41,4 +42,5 @@ document.addEventListener('DOMContentLoaded', () => {
     contactsMap()
     miSliderInit()
     sBanksSlider()
+    imgSliderInit()
 })

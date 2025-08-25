@@ -998,6 +998,10 @@ html.hystmodal__opened {
 		flex-direction: column;
 		gap: 0.9375em;
 		list-style-type: none;
+
+		@include max(mobile) {
+			gap: 0.667em;
+		}
 	}
 
 	ol {
@@ -1024,6 +1028,11 @@ html.hystmodal__opened {
 		padding-left: 2.5625em;
 		line-height: 1.4375em;
 
+		@include max(mobile) {
+			padding-left: 2.07em;
+			line-height: 1.5em;
+		}
+
 		&:before {
 			content: '';
 			position: absolute;
@@ -1034,6 +1043,14 @@ html.hystmodal__opened {
 			transform: translateY(-50%);
 			border-radius: 100%;
 			background-color: $c-accent-2;
+
+			@include max(mobile) {
+				left: 0.667em;
+				top: 0.467em;
+				width: 0.533em;
+				height: 0.533em;
+				transform: none;
+			}
 		}
 	}
 

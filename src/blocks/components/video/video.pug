@@ -1,0 +1,39 @@
+-
+    const defaultVideoProps = {
+        classes: '',
+        poster: 'img/about/a_video_poster.webp',
+        video: 'public/video/review.mp4',
+        iframe: false
+    }
+
+mixin video(props = defaultVideoProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultVideoProps.classes,
+            video: props.video ? props.video : defaultVideoProps.video,
+            poster: props.poster ? props.poster : defaultVideoProps.poster,
+            iframe: props.iframe ? props.iframe : defaultVideoProps.iframe
+        }
+
+    .video(class= checkProps.classes)&attributes(attributes)
+        .video__poster
+            img(src=checkProps.poster)
+        - if(checkProps.iframe === true)
+            +btn({
+                classes: 'video__play',
+                sMode:'icon',
+                icon:'play',
+                cMode: 'white',
+                link: checkProps.video
+            })(data-fancybox data-type="iframe" data-thumb=checkProps.poster)
+        - else
+            +btn({
+                classes: 'video__play',
+                sMode:'icon',
+                icon:'play',
+                cMode: 'white',
+                link: checkProps.video
+            })(data-fancybox data-thumb=checkProps.poster)
+
+
+

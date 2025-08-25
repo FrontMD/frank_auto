@@ -1,0 +1,59 @@
+.img-slider {
+    overflow: hidden;
+
+    &__text {
+        max-width: 1044px;
+        margin-top: 10px;
+    }
+
+    &__slider {
+        margin-top: 30px;
+    }
+
+    &__slide {
+        width: max-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__img {
+        height: 385px;
+        border-radius: 20px;
+        overflow: hidden;
+
+        @include max(laptop-small) {
+            height: 270px;
+        }
+
+        @include max(tablet) {
+            height: 200px;
+            border-radius: 10px;
+        }
+
+        img {
+            height: 100%;
+        }
+    }
+
+    &__caption {
+        font-family: $ff-rooftop;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 100%;
+        letter-spacing: 0;
+        text-align: center;
+        width: 100%;
+
+        @include max(laptop-small) {
+            font-size: 15px;
+        }
+
+        @include max(laptop-small) {
+            text-align: start;
+        }
+    }
+
+
+}

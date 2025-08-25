@@ -202,6 +202,64 @@
 }
 
 .field {
+
+    &--tab {
+        width: fit-content;
+    }
+
+    &--tab label {
+        cursor: pointer;
+        position: relative;
+        width: fit-content;
+        cursor: pointer;
+    }
+
+    &--tab input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+
+    &--tab .fake-checkbox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 30px;
+        gap: 10px;
+        background-color: $c-bg-input;
+        transition: all $tr-time linear;
+        border-radius: 16px;
+        border: 1px solid $c-accent;
+        color: $c-accent;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.1875em;
+        letter-spacing: 0;
+        min-height: 64px;
+
+        svg {
+            display: none;
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &--tab input:checked+.fake-checkbox,
+    &--tab label:hover .fake-checkbox {
+        background-color: $c-accent;
+        color: $c-white;
+    }
+
+    &--tab input:checked+.fake-checkbox svg {
+        display: block;
+    }
+}
+
+.field {
     &--double {
         display: flex;
         align-items: stretch;

@@ -9,6 +9,11 @@
         mask-size: 100% 100%;
         mask-image: url(../img/masks/advantage_mask.svg);
 
+        @include max(mobile) {
+            width: 88vw;
+            margin-right: -9.7vw;
+        }
+
         img {
             width: 100%;
             height: 100%;
@@ -30,6 +35,10 @@
 
         .slider-control--next {
             right: -15px;
+        }
+
+        @include max(mobile) {
+            display: none;
         }
     }
 
