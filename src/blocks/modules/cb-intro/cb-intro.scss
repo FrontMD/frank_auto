@@ -441,10 +441,9 @@
 
     &__slide {
         height: auto;
+        aspect-ratio: 1 / 0.5625;
 
-        @include max(mobile) {
-            aspect-ratio: 1 / 0.7486;
-        }
+        @include max(mobile) {}
     }
 
     &__img {

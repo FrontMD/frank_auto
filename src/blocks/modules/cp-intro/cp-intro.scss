@@ -18,16 +18,6 @@
         flex: 0 0 50%;
         width: 50%;
 
-        @include max(large) {
-            flex: 0 0 57.8%;
-            width: 57.8%;
-        }
-
-        @include max(laptop) {
-            flex: 0 0 47%;
-            width: 47%;
-        }
-
         @include max(laptop-small) {
             flex: 0 0 40%;
             width: 40%;
@@ -86,16 +76,18 @@
     }
 
     &__slide {
-        aspect-ratio: 1 / 0.7344;
+        aspect-ratio: 1 / 0.5625;
         border-radius: 15px 15px 0 0;
         overflow: hidden;
 
-        @include max(tablet) {
-            aspect-ratio: 1 / 0.65;
-        }
-
         @include max(mobile) {
             border-radius: 10px;
+        }
+
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
         }
 
         img {
@@ -118,14 +110,10 @@
 
     &__thumb {
         width: 150px;
-        aspect-ratio: 1 / 0.7;
+        aspect-ratio: 1 / 0.5625;
         opacity: 0.5;
         transition: opacity $tr-time linear;
         cursor: pointer;
-
-        @include max(tablet) {
-            aspect-ratio: 1 / 0.65;
-        }
 
         &.swiper-slide-thumb-active {
             opacity: 1;
@@ -219,7 +207,7 @@
 
     .tech-spec__rows {
         column-count: 1;
-        column-width: 330px;
+        column-width: 470px;
     }
 
     &__all {
