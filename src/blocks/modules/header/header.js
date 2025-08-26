@@ -70,4 +70,15 @@ function headerController() {
             })
         }
     }
+
+    // открытие выпадашки с телефонами
+    const phonesDropdown = document.querySelector('[data-js="phonesDropdown"]')
+
+    if(phonesDropdown) {
+        const phonesDropdownToggle = phonesDropdown.querySelector('[data-js="phonesDropdownToggle"]')
+
+        phonesDropdownToggle.addEventListener('click', () => {
+            $(phonesDropdown).toggleClass('active')
+        })
+    }
 }

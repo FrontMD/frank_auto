@@ -12,6 +12,38 @@
         min-height: 448px;
     }
 
+    @include max(mobile) {
+        min-height: 320px;
+    }
+
+    &__play {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+        color: $c-white;
+        opacity: 0.5;
+        padding: 0;
+        transition: all $tr-time linear;
+
+        svg {
+            width: 56px;
+            height: 56px;
+
+            @include max(mobile) {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+
+    &:hover &__play {
+
+        color: $c-accent;
+        opacity: 1;
+    }
+
     &__link {
         position: absolute;
         left: 0;

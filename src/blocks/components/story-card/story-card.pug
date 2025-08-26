@@ -29,8 +29,14 @@ mixin story-card(props = defaultCatalogCardProps)
                 - while(count < checkProps.tags.length)
                     - let tag = checkProps.tags[count]
                     .story-card__tag!= tag
-
                     - count++
+            +btn({
+                classes: 'story-card__play',
+                sMode:'icon',
+                icon:'play',
+                cMode: 'white',
+                link: 'https://vk.com/video_ext.php?oid=-216965779&id=456239269&hd=2&autoplay=1'
+            })(data-fancybox data-type="iframe" data-thumb=checkProps.img)
             .story-card__title!= checkProps.title
 
 

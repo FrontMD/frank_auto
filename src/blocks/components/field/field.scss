@@ -308,7 +308,8 @@
         border-radius: 0 $br-btn-input $br-btn-input 0;
     }
 
-    &--double .select2.select2-container--default .select2-selection--single {
+    &--double .select2.select2-container--default .select2-selection--single,
+    &--double .select2.select2-container--default .select2-selection--multiple {
         padding: 22px 16px 22px 20px;
     }
 
@@ -334,7 +335,12 @@
     }
 
     &.select2-container--default {
-        .select2-selection--single {
+        .select2-search--inline .select2-search__field {
+            margin-top: 0;
+        }
+
+        .select2-selection--single,
+        .select2-selection--multiple {
             padding: 22px 20px;
             display: flex;
             align-items: center;
@@ -372,7 +378,31 @@
             }
 
             .select2-selection__rendered {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
                 color: $c-text;
+            }
+
+            .select2-selection__rendered .select2-selection__choice {
+                margin-top: 0;
+                margin-right: 0;
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+                flex-direction: row-reverse;
+                height: 19px;
+                font-size: 13px;
+                color: $c-accent;
+                border-color: $c-accent;
+
+            }
+
+            .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove {
+                margin-right: 0;
+                margin-left: 5px;
+                font-size: 20px;
+                color: $c-accent;
             }
 
             .select2-selection__arrow {
@@ -403,7 +433,9 @@
         }
 
         &.select2-container--open {
-            .select2-selection--single .select2-selection__arrow {
+
+            .select2-selection--single .select2-selection__arrow,
+            .select2-selection--multiple .select2-selection__arrow {
                 &::before {
                     content: '';
                     transform: rotate(180deg);
@@ -499,7 +531,8 @@
     border-color: $c-border;
     color: $c-white;
 
-    .select2-selection--single {
+    .select2-selection--single,
+    .select2-selection--multiple {
         .select2-selection__rendered {
             color: $c-white;
         }

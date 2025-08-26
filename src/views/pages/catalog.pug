@@ -28,6 +28,13 @@ block content
 
 		+catalog-filter
 
+		section.section
+			.section__container
+				.section-block
+					+brands-list({
+						classes: 'brands-list--full'
+					})
+
 		+s-banner()
 			.catalog-banner
 				.catalog-banner__desc
@@ -68,14 +75,6 @@ block content
 							'data-v-name': 'phone',
 							'data-type': 'phoneNumber'
 						},
-					})
-
-
-		section.section
-			.section__container
-				.section-block
-					+brands-list({
-						classes: 'brands-list--full'
 					})
 
 		+s-catalog({

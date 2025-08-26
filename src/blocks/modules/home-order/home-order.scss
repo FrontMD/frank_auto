@@ -14,7 +14,7 @@
         justify-content: space-between;
 
         @include max(mobile) {
-            min-height: 80vh;
+            min-height: auto;
         }
     }
 
@@ -38,6 +38,10 @@
 
     &__top {
         margin-bottom: 40px;
+
+        @include max(mobile) {
+            margin-bottom: 90px;
+        }
     }
 
     &__bottom {

@@ -12,7 +12,7 @@
         }
 
         @include max(mobile) {
-            min-height: 72vh;
+            //min-height: 72vh;
             display: flex;
             align-items: stretch;
         }
