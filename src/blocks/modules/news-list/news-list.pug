@@ -1,6 +1,7 @@
 -
     const defaultNewsListProps = {
         classes: '',
+        stocksPage: false,
         cards: [
             {
                 title: 'Кузовной ремонт в FRANK AUTO',
@@ -93,6 +94,7 @@ mixin news-list(props= defaultNewsListProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultNewsListProps.classes,
+            stocksPage: props.stocksPage ? props.stocksPage : defaultNewsListProps.stocksPage,
             cards: props.cards ? props.cards : defaultNewsListProps.cards,
         }
 
@@ -100,47 +102,62 @@ mixin news-list(props= defaultNewsListProps)
         .section__container.section__content
             .section-block.news-list__block
                 form.news-list__filter(action="#")
-                    .news-list__tabs
-                        .field.field--tab
-                            label
-                                input.field__input(class="field__input" type="checkbox" name="news-filter" placeholder="")
-                                span.fake-checkbox
-                                    | О компании
-                                    svg
-                                        use(xlink:href=`img/sprites/sprite.svg#close`)
-                        .field.field--tab
-                            label
-                                input.field__input(class="field__input" type="checkbox" name="news-filter" placeholder="")
-                                span.fake-checkbox
-                                    | Амбассадоры
-                                    svg
-                                        use(xlink:href=`img/sprites/sprite.svg#close`)
-                        .field.field--tab
-                            label
-                                input.field__input(class="field__input" type="checkbox" name="news-filter" placeholder="")
-                                span.fake-checkbox
-                                    | О марках
-                                    svg
-                                        use(xlink:href=`img/sprites/sprite.svg#close`)
-                        .field.field--tab
-                            label
-                                input.field__input(class="field__input" type="checkbox" name="news-filter" placeholder="")
-                                span.fake-checkbox
-                                    | Спецпредложения
-                                    svg
-                                        use(xlink:href=`img/sprites/sprite.svg#close`)
+                    - if(checkProps.stocksPage === true)
+                        .news-list__tabs
+                            .field.field--tab
+                                label
+                                    input.field__input(class="field__input" type="checkbox" name="news-filter" placeholder="")
+                                    span.fake-checkbox
+                                        | Акции сервиса
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#close`)
+                            .field.field--tab
+                                label
+                                    input.field__input(class="field__input" type="checkbox" name="news-filter" placeholder="")
+                                    span.fake-checkbox
+                                        | Отдел продаж
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#close`)
+                    -else
+                        .news-list__tabs
+                            .field.field--tab
+                                label
+                                    input.field__input(class="field__input" type="checkbox" name="news-filter" placeholder="")
+                                    span.fake-checkbox
+                                        | О компании
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#close`)
+                            .field.field--tab
+                                label
+                                    input.field__input(class="field__input" type="checkbox" name="news-filter" placeholder="")
+                                    span.fake-checkbox
+                                        | Амбассадоры
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#close`)
+                            .field.field--tab
+                                label
+                                    input.field__input(class="field__input" type="checkbox" name="news-filter" placeholder="")
+                                    span.fake-checkbox
+                                        | О марках
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#close`)
+                            .field.field--tab
+                                label
+                                    input.field__input(class="field__input" type="checkbox" name="news-filter" placeholder="")
+                                    span.fake-checkbox
+                                        | Спецпредложения
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#close`)
 
-
-
-                    +field({
-                        classes: 'news-list__sort',
-                        tag: 'select',
-                        placeholder: 'Сортировать',
-                        selectOptions: [
-                            "Цена по возрастанию",
-                            "Цена по убыванию",
-                        ],
-                    })
+                        +field({
+                            classes: 'news-list__sort',
+                            tag: 'select',
+                            placeholder: 'Сортировать',
+                            selectOptions: [
+                                "Сначала новое",
+                                "Сначала старое",
+                            ],
+                        })
 
                 .section-block__content.news-list__list
                     - let cardsCount = 0

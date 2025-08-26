@@ -1,0 +1,55 @@
+.ns-article {
+    &__block {
+        margin-top: 20px;
+        padding: 30px 16.5vw;
+
+        @include max(laptop) {
+            padding: 30px 8vw;
+        }
+
+        @include max(laptop-small) {
+            padding: 30px 20px;
+        }
+
+        @include max(mobile) {
+            padding: 10px;
+        }
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include max(mobile) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        color: $c-text-breadcrumbs;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0;
+
+        @include max(mobile) {
+            flex-wrap: wrap;
+            gap: 5px 20px;
+        }
+    }
+
+    &__section {
+        margin-left: auto;
+        text-align: end;
+
+        @include max(mobile) {
+            margin-left: 0;
+            text-align: start;
+        }
+    }
+}

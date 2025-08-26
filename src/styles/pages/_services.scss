@@ -1,0 +1,55 @@
+.service-form {
+    @include max(mobile) {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__form {
+        margin-top: 30px;
+
+        @include max(mobile) {
+            margin-top: 150px;
+        }
+
+        .form__fields {
+            display: contents;
+        }
+
+        .form__horizontal {
+            flex-wrap: wrap;
+            gap: 15px;
+
+            @include max(laptop-small) {
+                flex-direction: row;
+                gap: 15px;
+            }
+
+        }
+
+        .field {
+            flex: 0 0 calc((100% - 30px) / 3);
+
+            @include max(tablet) {
+                flex: 0 0 calc((100% - 15px) / 2);
+            }
+
+            @include max(mobile) {
+                flex-basis: 100%;
+            }
+
+        }
+
+        .field:nth-child(7) {
+            flex-grow: 1;
+        }
+
+        .btn {
+            flex: 0 0 24%;
+
+            @include max(tablet) {
+                flex-basis: 100%;
+            }
+        }
+    }
+}

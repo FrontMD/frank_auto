@@ -2,130 +2,130 @@ extends ../layouts/default
 include ../helpers/mixins
 
 block variables
-    - const title = "Главная"
+	- const title = "Главная"
 
 block content
-    .page-layout(data-js="pageLayout")
-        +home-intro
-        +home-selection
-        +s-catalog
-        +home-order
-        +s-services({
-            btn: {
-                classes: 'section-header__btn',
-                name: 'Смотреть все',
-                cMode: 'bordered',
-                sMode: 'content'
-            }
-        })
-        +home-credit
-        +s-services({
-            title: 'Актуально сейчас',
-            cards: [
-                {
-                    title: 'Гибриды',
-                    text: '',
-                    img: 'img/services/service_4.webp'
-                },
-                {
-                    title: 'Электромобили',
-                    text: '',
-                    img: 'img/services/service_5.webp'
-                },
-                {
-                    title: 'ДВС',
-                    text: '',
-                    img: 'img/services/service_6.webp'
-                }
-            ]
-        })
-        +story-slider({
-            btn: {
-                classes: 'section-header__btn',
-                name: 'Смотреть все',
-                cMode: 'bordered',
-                sMode: 'content'
-            }
-        })
-        +s-news({
-            title: 'Акции',
-            btn: {
-                classes: 'section-header__btn',
-                name: 'Смотреть все',
-                cMode: 'bordered',
-                sMode: 'content'
-            },
-            cards: [
-                {
-                    classes: 'swiper-slide news-card--small',
-                    img: 'img/stocks/stocks_1.webp',
-                    title: 'АВТОКРЕДИТ С ДОКРИЗИСНОЙ СТАВКОЙ!',
-                    text: 'Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!',
-                    tag: '',
-                    date: '25.10.2025'
-                },
-                {
-                    classes: 'swiper-slide news-card--small',
-                    img: 'img/stocks/stocks_2.webp',
-                    title: 'Собери автомобиль мечты с телеграмм ботом',
-                    text: 'Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!',
-                    tag: '',
-                    date: '25.10.2025'
-                },
-                {
-                    classes: 'swiper-slide news-card--small',
-                    img: 'img/stocks/stocks_3.webp',
-                    title: 'Выгода от FRANK AUTO - выбирайте с умом!',
-                    text: 'Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!',
-                    tag: '',
-                    date: '25.10.2025'
-                }
-            ]
-        })
+	.page-layout(data-js="pageLayout")
+		+home-intro
+		+home-selection
+		+s-catalog
+		+home-order
+		+s-services({
+			btn: {
+				classes: 'section-header__btn',
+				name: 'Смотреть все',
+				cMode: 'bordered',
+				sMode: 'content'
+			}
+		})
+		+home-credit
+		+s-services({
+			title: 'Актуально сейчас',
+			cards: [
+				{
+					title: 'Гибриды',
+					text: '',
+					img: 'img/services/service_4.webp'
+				},
+				{
+					title: 'Электромобили',
+					text: '',
+					img: 'img/services/service_5.webp'
+				},
+				{
+					title: 'ДВС',
+					text: '',
+					img: 'img/services/service_6.webp'
+				}
+			]
+		})
+		+story-slider({
+			btn: {
+				classes: 'section-header__btn',
+				name: 'Смотреть все',
+				cMode: 'bordered',
+				sMode: 'content'
+			}
+		})
+		+s-news({
+			title: 'Акции',
+			btn: {
+				classes: 'section-header__btn',
+				name: 'Смотреть все',
+				cMode: 'bordered',
+				sMode: 'content'
+			},
+			cards: [
+				{
+					classes: 'swiper-slide news-card--small',
+					img: 'img/stocks/stock_1.webp',
+					title: 'АВТОКРЕДИТ С ДОКРИЗИСНОЙ СТАВКОЙ!',
+					text: 'Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!',
+					tag: '',
+					date: '25.10.2025'
+				},
+				{
+					classes: 'swiper-slide news-card--small',
+					img: 'img/stocks/stock_2.webp',
+					title: 'Собери автомобиль мечты с телеграмм ботом',
+					text: 'Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!',
+					tag: '',
+					date: '25.10.2025'
+				},
+				{
+					classes: 'swiper-slide news-card--small',
+					img: 'img/stocks/stock_3.webp',
+					title: 'Выгода от FRANK AUTO - выбирайте с умом!',
+					text: 'Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!',
+					tag: '',
+					date: '25.10.2025'
+				}
+			]
+		})
 
-        +home-service
+		+home-service
 
-        +s-news({
-            title: 'Блог',
-            btn: {
-                classes: 'section-header__btn',
-                name: 'Смотреть все',
-                cMode: 'bordered',
-                sMode: 'content'
-            },
-            slides: '4',
-            cards: [
-                {
-                    classes: 'swiper-slide news-card--small',
-                    img: 'img/news/news_1.webp',
-                    title: 'Чем отличаются LIXIANG L7, L8 и L9. Какую модель выбрать?',
-                    text: '',
-                    tag: 'Кузовной ремонт',
-                    date: ''
-                },
-                {
-                    classes: 'swiper-slide news-card--small',
-                    img: 'img/news/news_2.webp',
-                    title: 'Самые продаваемые бренды электромобилей в мире',
-                    text: '',
-                    tag: 'ZEEKR',
-                    date: ''
-                },
-                {
-                    classes: 'swiper-slide news-card--small',
-                    img: 'img/news/news_3.webp',
-                    title: 'Сообщество EV World Club: площадка для экспертов и истинных ценителей электромобилей',
-                    text: '',
-                    tag: 'Детейлинг',
-                    date: ''
-                },
-                {
-                    classes: 'swiper-slide news-card--small',
-                    img: 'img/news/news_4.webp',
-                    title: 'Топ-7 лучших китайских электромобилей по версии европейских экспертов',
-                    text: '',
-                    tag: 'Детейлинг',
-                    date: ''
-                }
-            ]
-        })
+		+s-news({
+			title: 'Блог',
+			btn: {
+				classes: 'section-header__btn',
+				name: 'Смотреть все',
+				cMode: 'bordered',
+				sMode: 'content'
+			},
+			slides: '4',
+			cards: [
+				{
+					classes: 'swiper-slide news-card--small',
+					img: 'img/news/news_1.webp',
+					title: 'Чем отличаются LIXIANG L7, L8 и L9. Какую модель выбрать?',
+					text: '',
+					tag: 'Кузовной ремонт',
+					date: ''
+				},
+				{
+					classes: 'swiper-slide news-card--small',
+					img: 'img/news/news_2.webp',
+					title: 'Самые продаваемые бренды электромобилей в мире',
+					text: '',
+					tag: 'ZEEKR',
+					date: ''
+				},
+				{
+					classes: 'swiper-slide news-card--small',
+					img: 'img/news/news_3.webp',
+					title: 'Сообщество EV World Club: площадка для экспертов и истинных ценителей электромобилей',
+					text: '',
+					tag: 'Детейлинг',
+					date: ''
+				},
+				{
+					classes: 'swiper-slide news-card--small',
+					img: 'img/news/news_4.webp',
+					title: 'Топ-7 лучших китайских электромобилей по версии европейских экспертов',
+					text: '',
+					tag: 'Детейлинг',
+					date: ''
+				}
+			]
+		})

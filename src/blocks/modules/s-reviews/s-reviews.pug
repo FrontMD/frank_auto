@@ -1,18 +1,20 @@
 -
     const defaultSReviewsProps = {
         classes: '',
+        title: 'Преимущества Lixiang'
     }
 
 mixin s-reviews(props= defaultSReviewsProps)
     -
         const checkProps = {
-            classes: props.classes ? props.classes : defaultSReviewsProps.classes
+            classes: props.classes ? props.classes : defaultSReviewsProps.classes,
+            title: props.title ? props.title : defaultSReviewsProps.title,
         }
 
     section.section.s-reviews
         .section__container
             .section__content.s-reviews__content
-                .title.title--36.s-reviews__title Преимущества Lixiang
+                .title.title--36.s-reviews__title!= checkProps.title
                 .s-reviews__list
                     .review-card.review-card--mask
                         .review-card__content

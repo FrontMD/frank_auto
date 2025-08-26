@@ -1,24 +1,55 @@
 .news-list {
+
+    &__block {
+        @include max(mobile) {
+            padding: 0;
+            background-color: transparent;
+            overflow: visible;
+        }
+    }
+
     &__filter {
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
         gap: 24px;
         max-width: 100%;
+
+        @include max(mobile) {
+            flex-direction: column;
+            gap: 10px;
+
+            .select2.select2-container--default {
+                background-color: $c-white;
+            }
+        }
     }
 
     &__tabs {
         display: flex;
-        flex-wrap: wrap;
         gap: 10px;
         flex: 1 1 auto;
+        overflow-x: auto;
+        max-width: 100%;
+
+        @include max(mobile) {
+            margin-right: -10px;
+            padding-right: 10px;
+            max-width: calc(100% + 10px);
+
+            .field--tab .fake-checkbox {
+                border: none;
+                background-color: $c-white;
+            }
+        }
+
     }
 
     &__sort {
         width: fit-content;
         flex: 0 0 325px;
 
-        @include max(laptop-small) {
+        @include max(tablet-small) {
             flex-basis: 200px;
 
             .select2.select2-container--default {
@@ -35,6 +66,11 @@
                 padding: 12px 15px;
             }
         }
+
+        @include max(mobile) {
+            flex-basis: auto;
+            min-width: 200px;
+        }
     }
 
     &__list {
@@ -45,6 +81,18 @@
 
         @include max(large) {
             grid-template-columns: repeat(2, minmax(0, auto));
+        }
+
+        @include max(mobile) {
+            margin-top: 20px;
+            gap: 10px;
+            grid-template-columns: minmax(0, auto);
+
+            .news-card {
+                background-color: $c-white;
+                padding: 10px;
+                border-radius: 10px;
+            }
         }
     }
 }

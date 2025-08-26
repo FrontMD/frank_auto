@@ -215,7 +215,7 @@
     &--tab label {
         cursor: pointer;
         position: relative;
-        width: fit-content;
+        width: max-content;
         cursor: pointer;
     }
 
@@ -246,7 +246,7 @@
         letter-spacing: 0;
         min-height: 64px;
 
-        @include max(laptop-small) {
+        @include max(tablet-small) {
             padding: 8px 16px;
             border-radius: 10px;
             font-size: 12px;

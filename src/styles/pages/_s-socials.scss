@@ -8,6 +8,13 @@
         margin-right: 0;
     }
 
+    @include max(mobile) {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
     &__items {
         margin-top: 30px;
         display: grid;
@@ -20,6 +27,7 @@
 
         @include max(tablet) {
             grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
         }
     }
 
@@ -37,6 +45,10 @@
         letter-spacing: 0;
         color: $c-text;
         cursor: pointer;
+
+        @include max(mobile) {
+            border-radius: $br-section-mob;
+        }
 
         &--bg {
             background-color: $c-bg-main;
