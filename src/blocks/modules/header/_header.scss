@@ -441,6 +441,10 @@
         &:hover {
             color: $c-accent-hover;
         }
+
+        @include max(tablet) {
+            font-size: 13px;
+        }
     }
 
     &__list &__link {

@@ -16,8 +16,25 @@
 
     &__sort {
         width: fit-content;
-        min-width: 325px;
-        flex: 0 0 auto;
+        flex: 0 0 325px;
+
+        @include max(laptop-small) {
+            flex-basis: 200px;
+
+            .select2.select2-container--default {
+                border-radius: 10px;
+            }
+
+            .select2.select2-container--default .select2-selection--single .select2-selection__rendered,
+            .select2.select2-container--default .select2-selection--single .select2-selection__placeholder {
+                font-size: 12px;
+            }
+
+            .select2.select2-container--default .select2-selection--single {
+                min-height: 38px;
+                padding: 12px 15px;
+            }
+        }
     }
 
     &__list {
