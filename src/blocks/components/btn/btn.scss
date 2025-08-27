@@ -210,6 +210,10 @@
         width: fit-content;
         padding: 12px 23px;
         text-transform: uppercase;
+
+        @include max(mobile) {
+            font-size: 12px;
+        }
     }
 
     &--header {

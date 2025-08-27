@@ -68,6 +68,11 @@
         svg {
             width: 24px;
             height: 31px;
+
+            @include max(mobile) {
+                width: 16px;
+                height: 21px;
+            }
         }
 
         @include max(mobile) {
@@ -75,6 +80,10 @@
             transform: none;
             left: 0;
             margin-bottom: 0;
+
+            br {
+                display: none;
+            }
         }
 
         @include max(xs) {

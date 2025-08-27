@@ -1,6 +1,7 @@
 -
     const defaultListFormProps = {
         classes: '',
+        personalMarker: '2.',
         form: {
             innerThanks: true,
             privacyText: 'Нажимая кнопку "Получить предложение" Вы даете согласие на <a href="#" target="_blank">обработку своих персональных данных</a>',
@@ -14,6 +15,7 @@ mixin list-form(props= defaultListFormProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultListFormProps.classes,
+            personalMarker: props.personalMarker ? props.personalMarker : defaultListFormProps.personalMarker,
             form: props.form ? props.form : defaultListFormProps.form,
         }
 
@@ -22,20 +24,50 @@ mixin list-form(props= defaultListFormProps)
             .section-block.list-form__block
                 form.form.form--list(action="#" data-validate novalidate)&attributes(attributes)
                     .form__content(data-js='form-content')
-                        .form__fields
-                            block
-                        +btn({
-                            classes: 'form__submit',
-                            type: 'button',
-                            buttonType: 'submit',
-                            name: 'Получить лучшие условия',
-                            cMode: 'accent',
-                            sMode: 'full'
-                        })
+                        block
+                        .form__item
+                            .form__marker!= checkProps.personalMarker
+                            .form__block
+                                .title.title--30 Персональные данные
+                                .form__fields
+                                    +field({
+                                        placeholder: 'Ваш имя',
+                                        inputAttr: {
+                                            'required': '',
+                                            'data-type': 'letters'
+                                        },
+                                    })
+                                    +field({
+                                        classes: '',
+                                        tag: 'select',
+                                        placeholder: 'Выберите подарок',
+                                        selectOptions: [
+                                            "",
+                                            "Оборудование",
+                                            "Каско",
+                                            "Комплект резины"
+                                        ],
+                                    })
+                                    +field({
+                                        placeholder: 'Номер телефона',
+                                        inputAttr: {
+                                            'required': '',
+                                            'data-v-name': 'phone',
+                                            'data-type': 'phoneNumber'
+                                        },
+                                    })
+                                    +btn({
+                                        classes: 'form__submit',
+                                        type: 'button',
+                                        buttonType: 'submit',
+                                        name: 'Получить лучшие условия',
+                                        cMode: 'accent',
+                                        sMode: 'full'
+                                    })
 
-                        .form__privacy.form-privacy(data-js="formField")
-                            span.form-privacy__text!= checkProps.form.privacyText
-                            span.field__error(data-js='fieldError')
+                                .form__privacy.form-privacy(data-js="formField")
+                                    span.form-privacy__text!= checkProps.form.privacyText
+                                    span.field__error(data-js='fieldError')
 
                     - if(checkProps.form.innerThanks === true)
                         .form__thanks(data-js='form-thanks')

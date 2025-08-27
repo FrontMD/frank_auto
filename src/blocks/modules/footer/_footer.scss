@@ -66,7 +66,7 @@
         flex: 0 0 180px;
 
         @include max(mobile) {
-            flex-basis: 150px;
+            flex-basis: 120px;
         }
 
     }
@@ -191,6 +191,7 @@
 
     &__socials {
         margin-top: 38px;
+        justify-content: start;
 
         @include max(tablet) {
             margin-top: 30px;

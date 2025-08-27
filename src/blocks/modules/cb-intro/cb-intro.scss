@@ -59,7 +59,7 @@
             font-size: 14px;
 
             span {
-                font-size: 20px;
+                font-size: 16px;
             }
         }
     }
@@ -96,7 +96,7 @@
             text-decoration: line-through;
 
             @include max(xs) {
-                font-size: 18px;
+                font-size: 16px;
                 line-height: 1em;
             }
         }
@@ -112,7 +112,7 @@
             }
 
             @include max(xs) {
-                font-size: 20px;
+                font-size: 18px;
                 line-height: 1em;
             }
         }
@@ -152,7 +152,7 @@
         }
 
         @include max(mobile) {
-            margin-top: 120px;
+            margin-top: 110px;
         }
     }
 
@@ -328,6 +328,10 @@
             order: 3;
             width: 100%;
             text-align: center;
+        }
+
+        @include max(mobile) {
+            top: 0;
         }
 
         span {

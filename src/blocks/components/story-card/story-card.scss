@@ -13,7 +13,8 @@
     }
 
     @include max(mobile) {
-        min-height: 320px;
+        width: 260px;
+        min-height: 402px;
     }
 
     &__play {
@@ -38,10 +39,13 @@
         }
     }
 
-    &:hover &__play {
 
-        color: $c-accent;
-        opacity: 1;
+    @include min(tablet) {
+        &:hover &__play {
+
+            color: $c-accent;
+            opacity: 1;
+        }
     }
 
     &__link {
