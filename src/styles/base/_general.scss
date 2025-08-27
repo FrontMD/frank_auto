@@ -557,13 +557,14 @@ html.hystmodal__opened {
 
 	ol,
 	ul {
-		display: flex;
-		flex-direction: column;
-		gap: 0.9375em;
 		list-style-type: none;
 
-		@include max(mobile) {
-			gap: 0.667em;
+		li+li {
+			margin-top: 0.9375em;
+
+			@include max(mobile) {
+				margin-top: 0.667em;
+			}
 		}
 	}
 

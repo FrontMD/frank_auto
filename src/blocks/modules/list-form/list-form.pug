@@ -1,0 +1,52 @@
+-
+    const defaultListFormProps = {
+        classes: '',
+        form: {
+            innerThanks: true,
+            privacyText: 'Нажимая кнопку "Получить предложение" Вы даете согласие на <a href="#" target="_blank">обработку своих персональных данных</a>',
+            successTitle: 'Ваш вопрос отправлен.',
+            successText: 'С Вами свяжется ответственный сотрудник по&nbsp;указанным контактным данным.',
+            successBtn: false
+        }
+    }
+
+mixin list-form(props= defaultListFormProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultListFormProps.classes,
+            form: props.form ? props.form : defaultListFormProps.form,
+        }
+
+    section.section.list-form(class= checkProps.classes id="techSpec")&attributes(attributes)
+        .section__container
+            .section-block.list-form__block
+                form.form.form--list(action="#" data-validate novalidate)&attributes(attributes)
+                    .form__content(data-js='form-content')
+                        .form__fields
+                            block
+                        +btn({
+                            classes: 'form__submit',
+                            type: 'button',
+                            buttonType: 'submit',
+                            name: 'Получить лучшие условия',
+                            cMode: 'accent',
+                            sMode: 'full'
+                        })
+
+                        .form__privacy.form-privacy(data-js="formField")
+                            span.form-privacy__text!= checkProps.form.privacyText
+                            span.field__error(data-js='fieldError')
+
+                    - if(checkProps.form.innerThanks === true)
+                        .form__thanks(data-js='form-thanks')
+                            .title--32.form__title!= checkProps.form.successTitle
+                            .form__image-success
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#form_success`)
+                            .form__text!= checkProps.form.successText
+                            - if(checkProps.form.successBtn == true)
+                                +btn({
+                                    classes: 'form__btn',
+                                    name: 'На главную',
+                                    icon: 'arrow_enter'
+                                })

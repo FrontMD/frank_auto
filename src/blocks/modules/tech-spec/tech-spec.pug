@@ -17,9 +17,9 @@ mixin tech-spec(props= defaultTechSpecProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultTechSpecProps.classes,
-            title: props.title ? props.title : defaultCmAccordeonProps.title,
-            items: props.items ? props.items : defaultCmAccordeonProps.items,
-            usedPage: props.usedPage ? props.usedPage : defaultCmAccordeonProps.usedPage,
+            title: props.title ? props.title : defaultTechSpecProps.title,
+            items: props.items ? props.items : defaultTechSpecProps.items,
+            usedPage: props.usedPage ? props.usedPage : defaultTechSpecProps.usedPage,
         }
 
     section.section.tech-spec(class= checkProps.classes id="techSpec")&attributes(attributes)

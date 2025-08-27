@@ -1,0 +1,15 @@
+-
+    const defaultSListProps = {
+        classes: ''
+    }
+
+mixin s-list(props= defaultSListProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSListProps.classes,
+        }
+
+    section.section.s-list(class= checkProps.classes id="techSpec")&attributes(attributes)
+        .section__container
+            .section-block.s-list__block
+                block
