@@ -66,7 +66,7 @@ mixin home-selection(props= defaultHomeSelectionProps)
                                     "Универсал",
                                     "Кроссовер",
                                     "Минивэн"
-                                ],
+                                ]
                             })
 
                         .form-filter__flex
@@ -242,6 +242,9 @@ mixin home-selection(props= defaultHomeSelectionProps)
                                 "Tank",
                                 "Rox Motor Tech",
                             ],
+                            inputAttr: {
+                                multiple: "multiple"
+                                }
                         })
                         +field({
                             classes: '',
@@ -256,4 +259,7 @@ mixin home-selection(props= defaultHomeSelectionProps)
                                 "LiXiang Mega",
                                 "LiXiang One"
                             ],
+                            inputAttr: {
+                                multiple: "multiple"
+                                }
                         })

@@ -1,0 +1,55 @@
+-
+    const defaultImgSliderProps = {
+        classes: '',
+        slides: [
+
+            {
+                img: 'img/about/sert_1.webp',
+                text: 'Официальный поставщик LiXiang'
+            },
+            {
+                img: 'img/about/sert_2.webp',
+                text: 'Официальный поставщик Zeekr'
+            },
+            {
+                img: 'img/about/sert_3.webp',
+                text: 'Официальный поставщик LiXiang'
+            },
+            {
+                img: 'img/about/sert_1.webp',
+                text: 'Официальный поставщик LiXiang'
+            },
+            {
+                img: 'img/about/sert_2.webp',
+                text: 'Официальный поставщик Zeekr'
+            },
+            {
+                img: 'img/about/sert_3.webp',
+                text: 'Официальный поставщик LiXiang'
+            },
+        ]
+    }
+
+mixin img-slider(props= defaultImgSliderProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultImgSliderProps.classes,
+            slides: props.slides ? props.slides : defaultImgSliderProps.slides,
+        }
+
+    section.section.img-slider(class= checkProps.classes data-js="imgSliderBlock")&attributes(attributes)
+        .section__container.section__content
+            .img-slider__title.title.title--40 Официальный дилер
+            .img-slider__text.text-editor Управляющим директором российского подразделения международного холдинга Car Expo Group стала Ирина Франк, после чего новая компания получила название Frank Auto. Ирина - опытный руководитель с более чем 20-летним стажем в автобизнесе.
+            .img-slider__slider(data-js="imgSlider")
+                .swiper-wrapper
+                    - let counter = 0
+                    - while(counter < checkProps.slides.length)
+                        .swiper-slide.img-slider__slide(data-js="imgSliderSlide")
+                            .img-slider__img(data-js="imgSliderImg")
+                                img(src=checkProps.slides[counter].img, alt="")
+                            .img-slider__caption!= checkProps.slides[counter].text
+
+                        -counter++
+
+

@@ -2,9 +2,12 @@ function sAdvantagesSlider() {
     const sAdvantagesSliders = document.querySelectorAll('[data-js="sAdvantagesSlider"]')
     const ww = window.innerWidth
 
+    
+
     if(sAdvantagesSliders.length < 1 || ww > 1023) return
 
     sAdvantagesSliders.forEach(slider => {
+
         let sliderEx = new Swiper(slider, {
             slidesPerView: 1.1,
             spaceBetween: 10,

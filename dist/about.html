@@ -69,10 +69,30 @@
             <div class="section-block site-header__block site-header__compare"><a class="header-compare" href="javascript:void(0);">
                 <svg>
                   <use xlink:href="img/sprites/sprite.svg#compare"></use>
-                </svg><span class="header-compare__count">12</span></a></div><a class="btn  btn--accent btn--header" href="javascript:void(0)">
+                </svg><span class="header-compare__count">12</span></a></div><a class="btn site-header__callback btn--accent btn--header" href="javascript:void(0)">
                   <svg>
                     <use xlink:href="img/sprites/sprite.svg#handset"></use>
                   </svg><span class="btn__text">Обратный звонок</span></a>
+            <div class="header-soc__links header-soc__links--mob"><a class="header-soc__link" href="javascript:void(0);">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#telegram"></use>
+                </svg></a></div>
+            <div class="phones-dropdown" data-js="phonesDropdown">
+              <div class="phones-dropdown__btn" data-js="phonesDropdownToggle">
+                <svg class="show">
+                  <use xlink:href="img/sprites/sprite.svg#handset"></use>
+                </svg>
+                <svg class="hide">
+                  <use xlink:href="img/sprites/sprite.svg#close"></use>
+                </svg>
+              </div>
+              <div class="phones-dropdown__content">
+                <div class="header-phones">
+                  <div class="header-phones__item">Новорижское ш., 17й км, с3 <a href="tel:+74991165065">+7 (499) 116-50-65</a></div>
+                  <div class="header-phones__item">МКАД, 85-й километр, вл3с2 <a href="tel:+74991165065">+7 (499) 116-50-65</a></div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="site-header__bottom site-header__row">
             <div class="section-block site-header__block site-header__menu">
@@ -282,7 +302,7 @@
                   <div class="about-intro__header ai-header">
                     <div class="ai-header__logo"><img src="img/logo/logo_rotated.webp" alt=""></div>
                     <div class="ai-header__content">
-                      <div class="ai-header__top">FRANK AUTO — является частью глобальной группы компаний, работающей на международных автомобильных рынках, с обширной и развитой деловой сетью и большим опытом реализации новых автомобилей по всему миру.</div>
+                      <div class="ai-header__top text-editor">FRANK AUTO — является частью глобальной группы компаний, работающей на международных автомобильных рынках, с обширной и развитой деловой сетью и большим опытом реализации новых автомобилей по всему миру.</div>
                       <div class="ai-header__bottom">
                         <div class="ai-header__left">Более<br>10 лет</div>
                         <div class="ai-header__right">мы работаем в США, Мексике, Китае, Дубае, Турции, Германии, Эстонии, Сингапуре, а с 2022 года успешно координируем продажи и логистику для наших клиентов в России.</div>
@@ -375,14 +395,76 @@
                         </button>
                       </div>
                 </div>
-                <div class="s-banks__slider">
+                <div class="s-banks__slider" data-js="sBanksSlider">
                   <div class="swiper-wrapper">
-                    <div class="swiper-slide mi-slider__slide"><img class="lazyload" src="" data-src="img/about/bank_1.webp" alt=""></div>
-                    <div class="swiper-slide mi-slider__slide"><img class="lazyload" src="" data-src="img/about/bank_2.webp" alt=""></div>
-                    <div class="swiper-slide mi-slider__slide"><img class="lazyload" src="" data-src="img/about/bank_3.webp" alt=""></div>
-                    <div class="swiper-slide mi-slider__slide"><img class="lazyload" src="" data-src="img/about/bank_4.webp" alt=""></div>
-                    <div class="swiper-slide mi-slider__slide"><img class="lazyload" src="" data-src="img/about/bank_5.webp" alt=""></div>
-                    <div class="swiper-slide mi-slider__slide"><img class="lazyload" src="" data-src="img/about/bank_6.webp" alt=""></div>
+                    <div class="swiper-slide s-banks__slide"><img class="lazyload" src="" data-src="img/about/bank_1.webp" alt=""></div>
+                    <div class="swiper-slide s-banks__slide"><img class="lazyload" src="" data-src="img/about/bank_2.webp" alt=""></div>
+                    <div class="swiper-slide s-banks__slide"><img class="lazyload" src="" data-src="img/about/bank_3.webp" alt=""></div>
+                    <div class="swiper-slide s-banks__slide"><img class="lazyload" src="" data-src="img/about/bank_4.webp" alt=""></div>
+                    <div class="swiper-slide s-banks__slide"><img class="lazyload" src="" data-src="img/about/bank_5.webp" alt=""></div>
+                    <div class="swiper-slide s-banks__slide"><img class="lazyload" src="" data-src="img/about/bank_6.webp" alt=""></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section img-slider" data-js="imgSliderBlock">
+              <div class="section__container section__content">
+                <div class="img-slider__title title title--40">Официальный дилер</div>
+                <div class="img-slider__text text-editor">Управляющим директором российского подразделения международного холдинга Car Expo Group стала Ирина Франк, после чего новая компания получила название Frank Auto. Ирина - опытный руководитель с более чем 20-летним стажем в автобизнесе.</div>
+                <div class="img-slider__slider" data-js="imgSlider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide img-slider__slide" data-js="imgSliderSlide">
+                      <div class="img-slider__img" data-js="imgSliderImg"><img src="img/about/sert_1.webp" alt=""></div>
+                      <div class="img-slider__caption">Официальный поставщик LiXiang</div>
+                    </div>
+                    <div class="swiper-slide img-slider__slide" data-js="imgSliderSlide">
+                      <div class="img-slider__img" data-js="imgSliderImg"><img src="img/about/sert_2.webp" alt=""></div>
+                      <div class="img-slider__caption">Официальный поставщик Zeekr</div>
+                    </div>
+                    <div class="swiper-slide img-slider__slide" data-js="imgSliderSlide">
+                      <div class="img-slider__img" data-js="imgSliderImg"><img src="img/about/sert_3.webp" alt=""></div>
+                      <div class="img-slider__caption">Официальный поставщик LiXiang</div>
+                    </div>
+                    <div class="swiper-slide img-slider__slide" data-js="imgSliderSlide">
+                      <div class="img-slider__img" data-js="imgSliderImg"><img src="img/about/sert_1.webp" alt=""></div>
+                      <div class="img-slider__caption">Официальный поставщик LiXiang</div>
+                    </div>
+                    <div class="swiper-slide img-slider__slide" data-js="imgSliderSlide">
+                      <div class="img-slider__img" data-js="imgSliderImg"><img src="img/about/sert_2.webp" alt=""></div>
+                      <div class="img-slider__caption">Официальный поставщик Zeekr</div>
+                    </div>
+                    <div class="swiper-slide img-slider__slide" data-js="imgSliderSlide">
+                      <div class="img-slider__img" data-js="imgSliderImg"><img src="img/about/sert_3.webp" alt=""></div>
+                      <div class="img-slider__caption">Официальный поставщик LiXiang</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section about-dir">
+              <div class="section__container">
+                <div class="section-block about-dir__block">
+                  <div class="about-dir__title title title--36">Управляющий директор Frank Auto</div>
+                  <div class="about-dir__body">
+                    <div class="about-dir__text text-editor">Управляющим директором российского подразделения международного холдинга Car Expo Group стала Ирина Франк, после чего новая компания получила название Frank Auto. Ирина - опытный руководитель с более чем 20-летним стажем в автобизнесе.</div>
+                    <div class="about-dir__flex">
+                      <div class="about-dir__img"><img src="img/about/a_director.webp" alt=""></div>
+                      <div class="about-dir__desc"> 
+                            <div class="quote about-dir__quote">
+                              <div class="quote__text text-editor">Я люблю автобизнес, особенно сегмент B2C, где нужно работать не только с одними дистрибьюторами, но и с клиентами – живыми людьми. Такую возможность я получила на новом месте работы, где я смогу делать клиентов реально счастливыми. В некоторых предыдущих автосалонах задача была полностью выжать покупателя, чтобы принести максимальную прибыль компании.</div>
+                            </div>
+                        <div class="about-dir__text text-editor">
+                          <p>Мы создаем такие условия для наших клиентов, чтобы они почувствовали удовольствие от высококачественных автомобилей – развиваем инновационную систему поиска, анализа и приобретения новейших изобретений ведущих автоконцернов мира, обеспечиваем гарантию и ответственность за каждую модель.</p>
+                          <p>За счет постоянного расширения списка стран, где мы оперируем, улучшения контактов с мировыми производителями и дилерами, создания сети квалифицированного сервиса, мы стремимся к тому, чтобы процесс поиска, приобретения и обслуживания автомобиля был простым и доставлял радость и комфорт на всем протяжении его использования.</p>
+                        </div>
+                      </div>
+                    </div>
+                        <div class="video">
+                          <div class="video__poster"><img src="img/about/a_video_poster.webp"></div><a class="btn video__play btn--white btn--icon" href="https://vk.com/video_ext.php?oid=-216965779&amp;id=456239269&amp;hd=2&amp;autoplay=1" data-fancybox data-type="iframe" data-thumb="img/about/a_video_poster.webp">
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#play"></use>
+                                </svg></a>
+                        </div>
                   </div>
                 </div>
               </div>
@@ -395,7 +477,7 @@
           <div class="site-footer__block">
             <div class="site-footer__row site-footer__top">
               <div class="site-footer__logo"><img src="img/logo/logo_footer.svg" alt=""></div>
-              <div class="site-footer__rating"><div style="width:218px;height:82px;overflow:hidden;position:relative;"><iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/49212829293?size=m"></iframe></div></div>
+              <div class="site-footer__rating"><div style="width:100%;height:100%;overflow:hidden;position:relative;"><iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/49212829293?size=m"></iframe></div></div>
               <div class="site-footer__nav"><a class="btn  btn--grey btn--footer" href="javascript:void(0)"><span class="btn__text">Каталог</span></a><a class="btn  btn--grey btn--footer" href="javascript:void(0)"><span class="btn__text">С пробегом</span></a><a class="btn  btn--grey btn--footer" href="javascript:void(0)"><span class="btn__text">О компании</span></a><a class="btn  btn--grey btn--footer" href="javascript:void(0)"><span class="btn__text">Акции</span></a><a class="btn  btn--grey btn--footer" href="javascript:void(0)"><span class="btn__text">Сервис</span></a>
               </div>
             </div>
@@ -408,7 +490,7 @@
                 <div class="site-footer__title">Услуги</div>
                 <div class="site-footer__links"><a class="site-footer__link" href="javascript:void(0);">Экспресс-кредит</a><a class="site-footer__link" href="javascript:void(0);">Страхование</a><a class="site-footer__link" href="javascript:void(0);">Продление гарантии</a><a class="site-footer__link" href="javascript:void(0);">Тест-драйв</a><a class="site-footer__link" href="javascript:void(0);">Утилизация</a><a class="site-footer__link" href="javascript:void(0);">Trade-in</a><a class="site-footer__link" href="javascript:void(0);">Доставка из-за рубежа</a></div>
               </div>
-              <div class="site-footer__list">
+              <div class="site-footer__list site-footer__list--contacts">
                 <div class="site-footer__title">Контакты</div>
                 <div class="site-footer__contacts">
                   <div class="site-footer__contact footer-contact">

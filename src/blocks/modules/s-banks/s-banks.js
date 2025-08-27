@@ -10,6 +10,7 @@ function sBanksSlider() {
 
         const sliderEx = new Swiper(slider, {
             slidesPerView: 'auto',
+            spaceBetween: 10,
             navigation: {
                 nextEl: next,
                 prevEl: prev,

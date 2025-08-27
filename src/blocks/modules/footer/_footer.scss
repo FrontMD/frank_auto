@@ -60,17 +60,25 @@
             padding-bottom: 25px;
         }
 
-        @include max(xs) {
-            justify-content: center;
-        }
     }
 
     &__logo {
         flex: 0 0 180px;
+
+        @include max(mobile) {
+            flex-basis: 150px;
+        }
+
     }
 
     &__rating {
         flex: 0 0 218px;
+        height: 82px;
+
+        @include max(mobile) {
+            flex-basis: 150px;
+            height: 56.4px;
+        }
     }
 
     &__nav {
@@ -114,6 +122,12 @@
             @include max(tablet) {
                 width: 100%;
                 flex: 0 0 100%;
+            }
+        }
+
+        &--contacts {
+            @include max(mobile) {
+                order: -1;
             }
         }
     }

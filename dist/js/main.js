@@ -952,6 +952,7 @@ function fieldsRangeController() {
 
     if(rangeFields.length < 1) return
     
+    const ww = window.innerWidth
     const formater = {
         from: function (formattedValue) {
             return Number(formattedValue);
@@ -974,19 +975,30 @@ function fieldsRangeController() {
                 rangeField.querySelector('[data-js="fieldRangeMin"]')
             ]
 
+            let mobTTooltips = [
+                rangeField.querySelector('[data-js="fieldRangeMinVal"]')
+            ]
+
             let sliderEx = false
+            let tooltips = false
             
             if(isRange) {
+
+                if(ww > 768) {
+                    tooltips = { 
+                        to: function(value) { return Math.round(value).toLocaleString() + unit; },
+                        from: function(value) { return Math.round(value).toLocaleString() + unit; } 
+                    }
+                }
+
                 inputsList.push(rangeField.querySelector('[data-js="fieldRangeMax"]'))
+                mobTTooltips.push(rangeField.querySelector('[data-js="fieldRangeMaxVal"]'))
 
                 sliderEx = noUiSlider.create(slider, {
                     start: [min, max],
                     format: formater,
                     connect: true,
-                    tooltips: { 
-                        to: function(value) { return Math.round(value).toLocaleString() + unit; },
-                        from: function(value) { return Math.round(value).toLocaleString() + unit; } 
-                    },
+                    tooltips: tooltips,
                     step: step,
                     range: {
                         'min': min,
@@ -994,14 +1006,20 @@ function fieldsRangeController() {
                     }
                 });
     
-                mergeTooltips(slider, 30, ' - ');
+                if(ww > 768) {
+                    mergeTooltips(slider, 30, ' - ');
+                }
 
             } else {
+                if(ww > 768) {
+                    tooltips = [{to: function(value) { return Math.round(value).toLocaleString() + unit; }}]
+                }
+
                 sliderEx = noUiSlider.create(slider, {
                     start: min,
                     format: formater,
                     connect: 'lower',
-                    tooltips: [{to: function(value) { return Math.round(value).toLocaleString() + unit; }}],
+                    tooltips: tooltips,
                     step: step,
                     range: {
                         'min': min,
@@ -1013,6 +1031,7 @@ function fieldsRangeController() {
             sliderEx.on("update", function (values, handle) {
                 inputsList[handle].value = values[handle]
                 inputsList[handle].dispatchEvent(new Event('change'));
+                mobTTooltips[handle].innerHTML = Math.round(values[handle]).toLocaleString() + unit
             });
 
             inputsList.forEach((currentInput, index) => {
@@ -1234,6 +1253,17 @@ function headerController() {
             })
         }
     }
+
+    // открытие выпадашки с телефонами
+    const phonesDropdown = document.querySelector('[data-js="phonesDropdown"]')
+
+    if(phonesDropdown) {
+        const phonesDropdownToggle = phonesDropdown.querySelector('[data-js="phonesDropdownToggle"]')
+
+        phonesDropdownToggle.addEventListener('click', () => {
+            $(phonesDropdown).toggleClass('active')
+        })
+    }
 }
 
 let modals = false
@@ -1370,7 +1400,7 @@ function sNewsSliders() {
         const slidesPerView = sNewsblock.dataset.slides ? parseInt(sNewsblock.dataset.slides) : 3
 
         const sliderEx = new Swiper(slider, {
-            slidesPerView: 1.06,
+            slidesPerView: 1.26,
             spaceBetween: 10,
             breakpoints: {
                 500: {
@@ -1511,9 +1541,12 @@ function sAdvantagesSlider() {
     const sAdvantagesSliders = document.querySelectorAll('[data-js="sAdvantagesSlider"]')
     const ww = window.innerWidth
 
+    
+
     if(sAdvantagesSliders.length < 1 || ww > 1023) return
 
     sAdvantagesSliders.forEach(slider => {
+
         let sliderEx = new Swiper(slider, {
             slidesPerView: 1.1,
             spaceBetween: 10,
@@ -1936,11 +1969,39 @@ function sBanksSlider() {
 
         const sliderEx = new Swiper(slider, {
             slidesPerView: 'auto',
+            spaceBetween: 10,
             navigation: {
                 nextEl: next,
                 prevEl: prev,
             },
         })
+    })
+}
+function imgSliderInit() {
+    const imgSliderBlocks = document.querySelectorAll('[data-js="imgSliderBlock"]')
+
+    if(imgSliderBlocks.length < 0) return
+
+    imgSliderBlocks.forEach(block => {
+        const slider = block.querySelector('[data-js="imgSlider"]')
+        const slides = slider.querySelectorAll('[data-js="imgSliderSlide"]')
+
+        slides.forEach(slide => {
+            const img = slide.querySelector('[data-js="imgSliderImg"]')
+            const imgWidth = img.offsetWidth
+            slide.style.width = imgWidth + 'px'
+        })
+        
+        const sliderEx = new Swiper(slider, {
+            slidesPerView: 'auto',
+            spaceBetween: 10,
+            breakpoints: {
+                1280: {
+                    spaceBetween: 24
+                }
+            }
+        })
+
     })
 }
 
@@ -1966,4 +2027,5 @@ document.addEventListener('DOMContentLoaded', () => {
     contactsMap()
     miSliderInit()
     sBanksSlider()
+    imgSliderInit()
 })

@@ -14,6 +14,7 @@
         width: fit-content;
 
         @include max(mobile) {
+            width: 100%;
             flex: 1 0 auto;
             display: flex;
             flex-direction: column;
@@ -61,12 +62,16 @@
 
         @include max(mobile) {
             position: relative;
+            width: 100%;
+            text-align: center;
             right: auto;
             left: 0;
             top: 0;
             transform: none;
             order: 2;
             margin-top: auto;
+            padding: 8px 16px;
+            margin-top: 50px;
         }
     }
 }

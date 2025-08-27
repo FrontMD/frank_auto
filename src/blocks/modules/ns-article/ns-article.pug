@@ -1,0 +1,46 @@
+-
+    const defaultNSArticleProps = {
+        classes: '',
+        title: '',
+        date: '',
+        section: ''
+    }
+
+mixin ns-article(props= defaultNSArticleProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultNSArticleProps.classes,
+            title: props.title ? props.title : defaultNSArticleProps.title,
+            date: props.date ? props.date : defaultNSArticleProps.date,
+            section: props.section ? props.section : defaultNSArticleProps.section,
+        }
+
+    section.section.ns-article(class= checkProps.classes)&attributes(attributes)
+        .section__container
+            .ns-article__header.section__content
+                -if(checkProps.title.length > 0)
+                    .title.title--40
+                        h1!= checkProps.title
+                .ns-article__info
+                    -if(checkProps.date.length > 0)
+                        .ns-article__date!= checkProps.date
+                    +btn({
+                        name: 'Поделиться',
+                        icon: 'share',
+                        cMode: 'share',
+                        sMode: 'link'
+                    })
+                    -if(checkProps.section.length > 0)
+                        .ns-article__section!= checkProps.section
+            .section-block.ns-article__block
+                .ns-article__content.text-editor
+                    img(src="img/stocks/stock_article.webp" alt="")
+                    p При прохождении ТО в сервис - центрах FRANK AUTO дарим масло в подарок. 
+                    p Действуют во всех сервис - центрах FRANK AUTO 
+                    h2 Что входит в карту VIP сопровождения?
+
+                    ol
+                        li Наличие нескольких ключей поможет избежать ситуации, когда один ключ утерян и доступа к автомобилю нет. Кроме того, наличие нескольких ключей удобно, если автомобилем пользуются несколько человек.
+                        li Привязка ключей осуществляется через диагностический прибор и занимает около 1-1,5 часа. В случае, если у вас есть кабель для соединения автомобиля с компьютером, мы можем выполнить привязку удаленно. Это позволит сэкономить время и избежать посещения сервисного центра, если вы находитесь в другом городе.
+
+                    +video

@@ -8,7 +8,7 @@ function sNewsSliders() {
         const slidesPerView = sNewsblock.dataset.slides ? parseInt(sNewsblock.dataset.slides) : 3
 
         const sliderEx = new Swiper(slider, {
-            slidesPerView: 1.06,
+            slidesPerView: 1.26,
             spaceBetween: 10,
             breakpoints: {
                 500: {

@@ -25,11 +25,11 @@ mixin s-banks(props= defaultsBanksProps)
                 +slider-controls({
                     classes: 's-banks__controls'
                 })
-            .s-banks__slider
+            .s-banks__slider(data-js="sBanksSlider")
                 .swiper-wrapper
                     - let counter = 0
                     - while(counter < checkProps.slides.length)
-                        .swiper-slide.mi-slider__slide
+                        .swiper-slide.s-banks__slide
                             img(class="lazyload" src="" data-src=checkProps.slides[counter], alt="")
 
                         -counter++

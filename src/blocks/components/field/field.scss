@@ -43,8 +43,8 @@
         border-radius: $br-btn-input;
 
         @include max(mobile) {
-            padding: 14px 15px;
-            font-size: 14px;
+            padding: 13px 20px;
+            font-size: 16px;
             border-radius: 10px;
             min-height: 45px;
         }
@@ -63,6 +63,11 @@
 
     &__textarea {
         resize: none;
+    }
+
+    &__select.select2-hidden-accessible {
+        opacity: 0;
+        visibility: hidden;
     }
 
     &__error {
@@ -202,6 +207,71 @@
 }
 
 .field {
+
+    &--tab {
+        width: fit-content;
+    }
+
+    &--tab label {
+        cursor: pointer;
+        position: relative;
+        width: max-content;
+        cursor: pointer;
+    }
+
+    &--tab input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        width: 0;
+        height: 0;
+        visibility: hidden;
+    }
+
+    &--tab .fake-checkbox {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 30px;
+        gap: 10px;
+        background-color: $c-bg-input;
+        transition: all $tr-time linear;
+        border-radius: 16px;
+        border: 1px solid $c-accent;
+        color: $c-accent;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.1875em;
+        letter-spacing: 0;
+        min-height: 64px;
+
+        @include max(tablet-small) {
+            padding: 8px 16px;
+            border-radius: 10px;
+            font-size: 12px;
+            min-height: 38px;
+        }
+
+        svg {
+            display: none;
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &--tab input:checked+.fake-checkbox,
+    &--tab label:hover .fake-checkbox {
+        background-color: $c-accent;
+        color: $c-white;
+    }
+
+    &--tab input:checked+.fake-checkbox svg {
+        display: block;
+    }
+}
+
+.field {
     &--double {
         display: flex;
         align-items: stretch;
@@ -238,7 +308,8 @@
         border-radius: 0 $br-btn-input $br-btn-input 0;
     }
 
-    &--double .select2.select2-container--default .select2-selection--single {
+    &--double .select2.select2-container--default .select2-selection--single,
+    &--double .select2.select2-container--default .select2-selection--multiple {
         padding: 22px 16px 22px 20px;
     }
 
@@ -251,6 +322,10 @@
     border-radius: $br-btn-input;
     background-color: $c-bg-input;
 
+    @include max(mobile) {
+        border-radius: 10px;
+    }
+
     .selection {
         width: 100%;
     }
@@ -260,7 +335,12 @@
     }
 
     &.select2-container--default {
-        .select2-selection--single {
+        .select2-search--inline .select2-search__field {
+            margin-top: 0;
+        }
+
+        .select2-selection--single,
+        .select2-selection--multiple {
             padding: 22px 20px;
             display: flex;
             align-items: center;
@@ -298,7 +378,31 @@
             }
 
             .select2-selection__rendered {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
                 color: $c-text;
+            }
+
+            .select2-selection__rendered .select2-selection__choice {
+                margin-top: 0;
+                margin-right: 0;
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+                flex-direction: row-reverse;
+                height: 19px;
+                font-size: 13px;
+                color: $c-accent;
+                border-color: $c-accent;
+
+            }
+
+            .select2-selection__rendered .select2-selection__choice .select2-selection__choice__remove {
+                margin-right: 0;
+                margin-left: 5px;
+                font-size: 20px;
+                color: $c-accent;
             }
 
             .select2-selection__arrow {
@@ -329,7 +433,9 @@
         }
 
         &.select2-container--open {
-            .select2-selection--single .select2-selection__arrow {
+
+            .select2-selection--single .select2-selection__arrow,
+            .select2-selection--multiple .select2-selection__arrow {
                 &::before {
                     content: '';
                     transform: rotate(180deg);
@@ -341,7 +447,7 @@
 }
 
 .select2-container.select2-container--default.select2-container--open {
-    z-index: 9999;
+    z-index: 40;
 
     .select2-dropdown {
         background-color: #fff;
@@ -425,7 +531,8 @@
     border-color: $c-border;
     color: $c-white;
 
-    .select2-selection--single {
+    .select2-selection--single,
+    .select2-selection--multiple {
         .select2-selection__rendered {
             color: $c-white;
         }

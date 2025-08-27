@@ -250,8 +250,8 @@
         grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: 8px;
 
-        @include max(tablet-small) {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+        @include max(mobile) {
+            gap: 5px;
         }
     }
 
@@ -269,11 +269,20 @@
         letter-spacing: -0.02em;
         color: $c-text;
 
+        @include max(tablet-small) {
+            font-size: 10px;
+        }
+
         img {
             width: 20px;
             height: 20px;
             object-fit: contain;
             object-position: center;
+
+            @include max(tablet-small) {
+                width: 14px;
+                height: 14px;
+            }
         }
     }
 

@@ -38,6 +38,8 @@
 
     &__separator {
         color: $c-text-breadcrumbs;
+        display: flex;
+        align-items: center;
 
         svg {
             width: 10px;

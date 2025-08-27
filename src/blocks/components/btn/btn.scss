@@ -130,6 +130,29 @@
         }
     }
 
+
+    &--share {
+        border: none;
+        transition: color $tr-time linear;
+        color: $c-accent;
+        font-size: 16px;
+
+        svg {
+            color: $c-accent;
+            transition: color $tr-time linear;
+            width: 24px;
+            height: 24px;
+        }
+
+        &:hover {
+            color: $c-accent-hover;
+
+            svg {
+                color: $c-accent-hover;
+            }
+        }
+    }
+
     &--238 {
         width: fit-content;
         min-width: 238px;

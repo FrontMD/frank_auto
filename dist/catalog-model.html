@@ -69,10 +69,30 @@
             <div class="section-block site-header__block site-header__compare"><a class="header-compare" href="javascript:void(0);">
                 <svg>
                   <use xlink:href="img/sprites/sprite.svg#compare"></use>
-                </svg><span class="header-compare__count">12</span></a></div><a class="btn  btn--accent btn--header" href="javascript:void(0)">
+                </svg><span class="header-compare__count">12</span></a></div><a class="btn site-header__callback btn--accent btn--header" href="javascript:void(0)">
                   <svg>
                     <use xlink:href="img/sprites/sprite.svg#handset"></use>
                   </svg><span class="btn__text">Обратный звонок</span></a>
+            <div class="header-soc__links header-soc__links--mob"><a class="header-soc__link" href="javascript:void(0);">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#telegram"></use>
+                </svg></a></div>
+            <div class="phones-dropdown" data-js="phonesDropdown">
+              <div class="phones-dropdown__btn" data-js="phonesDropdownToggle">
+                <svg class="show">
+                  <use xlink:href="img/sprites/sprite.svg#handset"></use>
+                </svg>
+                <svg class="hide">
+                  <use xlink:href="img/sprites/sprite.svg#close"></use>
+                </svg>
+              </div>
+              <div class="phones-dropdown__content">
+                <div class="header-phones">
+                  <div class="header-phones__item">Новорижское ш., 17й км, с3 <a href="tel:+74991165065">+7 (499) 116-50-65</a></div>
+                  <div class="header-phones__item">МКАД, 85-й километр, вл3с2 <a href="tel:+74991165065">+7 (499) 116-50-65</a></div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="site-header__bottom site-header__row">
             <div class="section-block site-header__block site-header__menu">
@@ -1145,7 +1165,7 @@
                   <div class="section-block__content s-news__list" data-js="sNewsSlider">
                     <div class="swiper-wrapper">
                           <div class="news-card swiper-slide news-card--small"><a class="news-card__link" href="javascript:void(0);"></a>
-                            <div class="news-card__img"><img class="lazyload" src="" data-src="img/stocks/stocks_1.webp" alt=""></div>
+                            <div class="news-card__img"><img class="lazyload" src="" data-src="img/stocks/stock_1.webp" alt=""></div>
                             <div class="news-card__tags"> 
                               <div class="news-card__tag news-card__tag--date">25.10.2025</div>
                               <div class="news-card__right">
@@ -1155,7 +1175,7 @@
                             <div class="news-card__text">Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!</div>
                           </div>
                           <div class="news-card swiper-slide news-card--small"><a class="news-card__link" href="javascript:void(0);"></a>
-                            <div class="news-card__img"><img class="lazyload" src="" data-src="img/stocks/stocks_2.webp" alt=""></div>
+                            <div class="news-card__img"><img class="lazyload" src="" data-src="img/stocks/stock_2.webp" alt=""></div>
                             <div class="news-card__tags"> 
                               <div class="news-card__tag news-card__tag--date">25.10.2025</div>
                               <div class="news-card__right">
@@ -1165,7 +1185,7 @@
                             <div class="news-card__text">Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!</div>
                           </div>
                           <div class="news-card swiper-slide news-card--small"><a class="news-card__link" href="javascript:void(0);"></a>
-                            <div class="news-card__img"><img class="lazyload" src="" data-src="img/stocks/stocks_3.webp" alt=""></div>
+                            <div class="news-card__img"><img class="lazyload" src="" data-src="img/stocks/stock_3.webp" alt=""></div>
                             <div class="news-card__tags"> 
                               <div class="news-card__tag news-card__tag--date">25.10.2025</div>
                               <div class="news-card__right">
@@ -1769,7 +1789,7 @@
           <div class="site-footer__block">
             <div class="site-footer__row site-footer__top">
               <div class="site-footer__logo"><img src="img/logo/logo_footer.svg" alt=""></div>
-              <div class="site-footer__rating"><div style="width:218px;height:82px;overflow:hidden;position:relative;"><iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/49212829293?size=m"></iframe></div></div>
+              <div class="site-footer__rating"><div style="width:100%;height:100%;overflow:hidden;position:relative;"><iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/49212829293?size=m"></iframe></div></div>
               <div class="site-footer__nav"><a class="btn  btn--grey btn--footer" href="javascript:void(0)"><span class="btn__text">Каталог</span></a><a class="btn  btn--grey btn--footer" href="javascript:void(0)"><span class="btn__text">С пробегом</span></a><a class="btn  btn--grey btn--footer" href="javascript:void(0)"><span class="btn__text">О компании</span></a><a class="btn  btn--grey btn--footer" href="javascript:void(0)"><span class="btn__text">Акции</span></a><a class="btn  btn--grey btn--footer" href="javascript:void(0)"><span class="btn__text">Сервис</span></a>
               </div>
             </div>
@@ -1782,7 +1802,7 @@
                 <div class="site-footer__title">Услуги</div>
                 <div class="site-footer__links"><a class="site-footer__link" href="javascript:void(0);">Экспресс-кредит</a><a class="site-footer__link" href="javascript:void(0);">Страхование</a><a class="site-footer__link" href="javascript:void(0);">Продление гарантии</a><a class="site-footer__link" href="javascript:void(0);">Тест-драйв</a><a class="site-footer__link" href="javascript:void(0);">Утилизация</a><a class="site-footer__link" href="javascript:void(0);">Trade-in</a><a class="site-footer__link" href="javascript:void(0);">Доставка из-за рубежа</a></div>
               </div>
-              <div class="site-footer__list">
+              <div class="site-footer__list site-footer__list--contacts">
                 <div class="site-footer__title">Контакты</div>
                 <div class="site-footer__contacts">
                   <div class="site-footer__contact footer-contact">

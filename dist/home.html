@@ -69,10 +69,30 @@
             <div class="section-block site-header__block site-header__compare"><a class="header-compare" href="javascript:void(0);">
                 <svg>
                   <use xlink:href="img/sprites/sprite.svg#compare"></use>
-                </svg><span class="header-compare__count">12</span></a></div><a class="btn  btn--accent btn--header" href="javascript:void(0)">
+                </svg><span class="header-compare__count">12</span></a></div><a class="btn site-header__callback btn--accent btn--header" href="javascript:void(0)">
                   <svg>
                     <use xlink:href="img/sprites/sprite.svg#handset"></use>
                   </svg><span class="btn__text">Обратный звонок</span></a>
+            <div class="header-soc__links header-soc__links--mob"><a class="header-soc__link" href="javascript:void(0);">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#telegram"></use>
+                </svg></a></div>
+            <div class="phones-dropdown" data-js="phonesDropdown">
+              <div class="phones-dropdown__btn" data-js="phonesDropdownToggle">
+                <svg class="show">
+                  <use xlink:href="img/sprites/sprite.svg#handset"></use>
+                </svg>
+                <svg class="hide">
+                  <use xlink:href="img/sprites/sprite.svg#close"></use>
+                </svg>
+              </div>
+              <div class="phones-dropdown__content">
+                <div class="header-phones">
+                  <div class="header-phones__item">Новорижское ш., 17й км, с3 <a href="tel:+74991165065">+7 (499) 116-50-65</a></div>
+                  <div class="header-phones__item">МКАД, 85-й километр, вл3с2 <a href="tel:+74991165065">+7 (499) 116-50-65</a></div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="site-header__bottom site-header__row">
             <div class="section-block site-header__block site-header__menu">
@@ -258,13 +278,20 @@
                   <div class="home-intro__slider" data-js="homeIntroSlider">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide home-intro__slide">
-                        <div class="home-intro__bg"><img src="img/home/home_intro_bg_1.webp" alt=""></div>
+                        <div class="home-intro__bg">
+                          <picture>
+                            <source srcset="img/home/home_intro_bg_1_mob.webp" media="(max-width: 767px)"><img src="img/home/home_intro_bg_1.webp" alt="">
+                          </picture>
+                        </div>
                         <div class="home-intro__content">
                           <div class="title title--50 title--light home-intro__title"><span>FRANK AUTO</span> официальный дилер и сервисный центр <span>LIXIANG<span></div>
                         </div>
                       </div>
                       <div class="swiper-slide home-intro__slide">
-                        <div class="home-intro__bg"><img loading="lazy" src="img/home/home_intro_bg_1.webp" alt="">
+                        <div class="home-intro__bg">
+                          <picture>
+                            <source srcset="img/home/home_intro_bg_1_mob.webp" media="(max-width: 767px)"><img loading="lazy" src="img/home/home_intro_bg_1.webp" alt="">
+                          </picture>
                           <div class="swiper-lazy-preloader"></div>
                         </div>
                         <div class="home-intro__content">
@@ -272,7 +299,10 @@
                         </div>
                       </div>
                       <div class="swiper-slide home-intro__slide">
-                        <div class="home-intro__bg"><img loading="lazy" src="img/home/home_intro_bg_1.webp" alt="">
+                        <div class="home-intro__bg">
+                          <picture>
+                            <source srcset="img/home/home_intro_bg_1_mob.webp" media="(max-width: 767px)"><img loading="lazy" src="img/home/home_intro_bg_1.webp" alt="">
+                          </picture>
                           <div class="swiper-lazy-preloader"></div>
                         </div>
                         <div class="home-intro__content">
@@ -280,7 +310,10 @@
                         </div>
                       </div>
                       <div class="swiper-slide home-intro__slide">
-                        <div class="home-intro__bg"><img loading="lazy" src="img/home/home_intro_bg_1.webp" alt="">
+                        <div class="home-intro__bg">
+                          <picture>
+                            <source srcset="img/home/home_intro_bg_1_mob.webp" media="(max-width: 767px)"><img loading="lazy" src="img/home/home_intro_bg_1.webp" alt="">
+                          </picture>
                           <div class="swiper-lazy-preloader"></div>
                         </div>
                         <div class="home-intro__content">
@@ -331,10 +364,14 @@
                                   <input class="field-range__input field-range__input--max" type="number" min="100000" max="50000000" data-js="fieldRangeMax">
                                   <div class="field-range__title">Стоимость</div>
                                   <div class="field-range__range" data-js="fieldRangeSlider"></div>
+                                  <div class="field-range__values">
+                                    <div class="field-range__value" data-js="fieldRangeMinVal"></div>
+                                    <div class="field-range__value" data-js="fieldRangeMaxVal"></div>
+                                  </div>
                                 </div>
                                 <div class="field    " data-js="formField">
                                   <label>
-                                    <select class="field__select" data-placeholder="Бренд" data-js="formSelect">
+                                    <select class="field__select" data-placeholder="Бренд" data-js="formSelect" multiple="multiple">
                                       <option label=" "></option>
                                       <option value="LiXiang">LiXiang</option>
                                       <option value="Voyah">Voyah</option>
@@ -349,7 +386,7 @@
                                 </div>
                                 <div class="field    " data-js="formField">
                                   <label>
-                                    <select class="field__select" data-placeholder="Модель" data-js="formSelect">
+                                    <select class="field__select" data-placeholder="Модель" data-js="formSelect" multiple="multiple">
                                       <option label=" "></option>
                                       <option value="LiXiang L6">LiXiang L6</option>
                                       <option value="LiXiang L7">LiXiang L7</option>
@@ -829,11 +866,19 @@
                                     <input class="field-range__input field-range__input--min" type="number" min="100000" max="3000000" data-js="fieldRangeMin">
                                     <div class="field-range__title">Сумма кредита, руб</div>
                                     <div class="field-range__range" data-js="fieldRangeSlider"></div>
+                                    <div class="field-range__values">
+                                      <div class="field-range__value" data-js="fieldRangeMinVal"></div>
+                                      <div class="field-range__value" data-js="fieldRangeMaxVal"></div>
+                                    </div>
                                   </div>
                                   <div class="field-range" data-js="fieldRange" data-type="single" data-unit=" мес" data-min="6" data-max="72" data-step="1">
                                     <input class="field-range__input field-range__input--min" type="number" min="6" max="72" data-js="fieldRangeMin">
                                     <div class="field-range__title">Срок кредита, мес</div>
                                     <div class="field-range__range" data-js="fieldRangeSlider"></div>
+                                    <div class="field-range__values">
+                                      <div class="field-range__value" data-js="fieldRangeMinVal"></div>
+                                      <div class="field-range__value" data-js="fieldRangeMaxVal"></div>
+                                    </div>
                                   </div>
                               <div class="form__flex">
                                     <div class="field    " data-js="formField">
@@ -910,7 +955,10 @@
                             <div class="story-card__content">
                               <div class="story-card__tags">
                                 <div class="story-card__tag">Уличные гонки</div>
-                              </div>
+                              </div><a class="btn story-card__play btn--white btn--icon" href="https://vk.com/video_ext.php?oid=-216965779&amp;id=456239269&amp;hd=2&amp;autoplay=1" data-fancybox data-type="iframe" data-thumb="img/stories/story_1.webp">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#play"></use>
+                                    </svg></a>
                               <div class="story-card__title">Проверяем мощность двух машин на трассе</div>
                             </div>
                           </div>
@@ -919,7 +967,10 @@
                             <div class="story-card__content">
                               <div class="story-card__tags">
                                 <div class="story-card__tag">Обзор</div>
-                              </div>
+                              </div><a class="btn story-card__play btn--white btn--icon" href="https://vk.com/video_ext.php?oid=-216965779&amp;id=456239269&amp;hd=2&amp;autoplay=1" data-fancybox data-type="iframe" data-thumb="img/stories/story_2.webp">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#play"></use>
+                                    </svg></a>
                               <div class="story-card__title">Обзор ТОП-10 китайцев в 2025</div>
                             </div>
                           </div>
@@ -928,7 +979,10 @@
                             <div class="story-card__content">
                               <div class="story-card__tags">
                                 <div class="story-card__tag">Обзор</div>
-                              </div>
+                              </div><a class="btn story-card__play btn--white btn--icon" href="https://vk.com/video_ext.php?oid=-216965779&amp;id=456239269&amp;hd=2&amp;autoplay=1" data-fancybox data-type="iframe" data-thumb="img/stories/story_3.webp">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#play"></use>
+                                    </svg></a>
                               <div class="story-card__title">Новые функции у китайского электрокар Zeekr 001</div>
                             </div>
                           </div>
@@ -937,7 +991,10 @@
                             <div class="story-card__content">
                               <div class="story-card__tags">
                                 <div class="story-card__tag">Обзор</div>
-                              </div>
+                              </div><a class="btn story-card__play btn--white btn--icon" href="https://vk.com/video_ext.php?oid=-216965779&amp;id=456239269&amp;hd=2&amp;autoplay=1" data-fancybox data-type="iframe" data-thumb="img/stories/story_4.webp">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#play"></use>
+                                    </svg></a>
                               <div class="story-card__title">Румтур по новому салону</div>
                             </div>
                           </div>
@@ -946,7 +1003,10 @@
                             <div class="story-card__content">
                               <div class="story-card__tags">
                                 <div class="story-card__tag">Уличные гонки</div>
-                              </div>
+                              </div><a class="btn story-card__play btn--white btn--icon" href="https://vk.com/video_ext.php?oid=-216965779&amp;id=456239269&amp;hd=2&amp;autoplay=1" data-fancybox data-type="iframe" data-thumb="img/stories/story_5.webp">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#play"></use>
+                                    </svg></a>
                               <div class="story-card__title">Проверяем мощность двух машин на трассе</div>
                             </div>
                           </div>
@@ -955,7 +1015,10 @@
                             <div class="story-card__content">
                               <div class="story-card__tags">
                                 <div class="story-card__tag">Уличные гонки</div>
-                              </div>
+                              </div><a class="btn story-card__play btn--white btn--icon" href="https://vk.com/video_ext.php?oid=-216965779&amp;id=456239269&amp;hd=2&amp;autoplay=1" data-fancybox data-type="iframe" data-thumb="img/stories/story_1.webp">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#play"></use>
+                                    </svg></a>
                               <div class="story-card__title">Проверяем мощность двух машин на трассе</div>
                             </div>
                           </div>
@@ -964,7 +1027,10 @@
                             <div class="story-card__content">
                               <div class="story-card__tags">
                                 <div class="story-card__tag">Обзор</div>
-                              </div>
+                              </div><a class="btn story-card__play btn--white btn--icon" href="https://vk.com/video_ext.php?oid=-216965779&amp;id=456239269&amp;hd=2&amp;autoplay=1" data-fancybox data-type="iframe" data-thumb="img/stories/story_2.webp">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#play"></use>
+                                    </svg></a>
                               <div class="story-card__title">Обзор ТОП-10 китайцев в 2025</div>
                             </div>
                           </div>
@@ -973,7 +1039,10 @@
                             <div class="story-card__content">
                               <div class="story-card__tags">
                                 <div class="story-card__tag">Обзор</div>
-                              </div>
+                              </div><a class="btn story-card__play btn--white btn--icon" href="https://vk.com/video_ext.php?oid=-216965779&amp;id=456239269&amp;hd=2&amp;autoplay=1" data-fancybox data-type="iframe" data-thumb="img/stories/story_3.webp">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#play"></use>
+                                    </svg></a>
                               <div class="story-card__title">Новые функции у китайского электрокар Zeekr 001</div>
                             </div>
                           </div>
@@ -982,7 +1051,10 @@
                             <div class="story-card__content">
                               <div class="story-card__tags">
                                 <div class="story-card__tag">Обзор</div>
-                              </div>
+                              </div><a class="btn story-card__play btn--white btn--icon" href="https://vk.com/video_ext.php?oid=-216965779&amp;id=456239269&amp;hd=2&amp;autoplay=1" data-fancybox data-type="iframe" data-thumb="img/stories/story_4.webp">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#play"></use>
+                                    </svg></a>
                               <div class="story-card__title">Румтур по новому салону</div>
                             </div>
                           </div>
@@ -991,7 +1063,10 @@
                             <div class="story-card__content">
                               <div class="story-card__tags">
                                 <div class="story-card__tag">Уличные гонки</div>
-                              </div>
+                              </div><a class="btn story-card__play btn--white btn--icon" href="https://vk.com/video_ext.php?oid=-216965779&amp;id=456239269&amp;hd=2&amp;autoplay=1" data-fancybox data-type="iframe" data-thumb="img/stories/story_5.webp">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#play"></use>
+                                    </svg></a>
                               <div class="story-card__title">Проверяем мощность двух машин на трассе</div>
                             </div>
                           </div>
@@ -1009,7 +1084,7 @@
                   <div class="section-block__content s-news__list" data-js="sNewsSlider">
                     <div class="swiper-wrapper">
                           <div class="news-card swiper-slide news-card--small"><a class="news-card__link" href="javascript:void(0);"></a>
-                            <div class="news-card__img"><img class="lazyload" src="" data-src="img/stocks/stocks_1.webp" alt=""></div>
+                            <div class="news-card__img"><img class="lazyload" src="" data-src="img/stocks/stock_1.webp" alt=""></div>
                             <div class="news-card__tags"> 
                               <div class="news-card__tag news-card__tag--date">25.10.2025</div>
                               <div class="news-card__right">
@@ -1019,7 +1094,7 @@
                             <div class="news-card__text">Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!</div>
                           </div>
                           <div class="news-card swiper-slide news-card--small"><a class="news-card__link" href="javascript:void(0);"></a>
-                            <div class="news-card__img"><img class="lazyload" src="" data-src="img/stocks/stocks_2.webp" alt=""></div>
+                            <div class="news-card__img"><img class="lazyload" src="" data-src="img/stocks/stock_2.webp" alt=""></div>
                             <div class="news-card__tags"> 
                               <div class="news-card__tag news-card__tag--date">25.10.2025</div>
                               <div class="news-card__right">
@@ -1029,7 +1104,7 @@
                             <div class="news-card__text">Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!</div>
                           </div>
                           <div class="news-card swiper-slide news-card--small"><a class="news-card__link" href="javascript:void(0);"></a>
-                            <div class="news-card__img"><img class="lazyload" src="" data-src="img/stocks/stocks_3.webp" alt=""></div>
+                            <div class="news-card__img"><img class="lazyload" src="" data-src="img/stocks/stock_3.webp" alt=""></div>
                             <div class="news-card__tags"> 
                               <div class="news-card__tag news-card__tag--date">25.10.2025</div>
                               <div class="news-card__right">
@@ -1131,7 +1206,7 @@
           <div class="site-footer__block">
             <div class="site-footer__row site-footer__top">
               <div class="site-footer__logo"><img src="img/logo/logo_footer.svg" alt=""></div>
-              <div class="site-footer__rating"><div style="width:218px;height:82px;overflow:hidden;position:relative;"><iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/49212829293?size=m"></iframe></div></div>
+              <div class="site-footer__rating"><div style="width:100%;height:100%;overflow:hidden;position:relative;"><iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/49212829293?size=m"></iframe></div></div>
               <div class="site-footer__nav"><a class="btn  btn--grey btn--footer" href="javascript:void(0)"><span class="btn__text">Каталог</span></a><a class="btn  btn--grey btn--footer" href="javascript:void(0)"><span class="btn__text">С пробегом</span></a><a class="btn  btn--grey btn--footer" href="javascript:void(0)"><span class="btn__text">О компании</span></a><a class="btn  btn--grey btn--footer" href="javascript:void(0)"><span class="btn__text">Акции</span></a><a class="btn  btn--grey btn--footer" href="javascript:void(0)"><span class="btn__text">Сервис</span></a>
               </div>
             </div>
@@ -1144,7 +1219,7 @@
                 <div class="site-footer__title">Услуги</div>
                 <div class="site-footer__links"><a class="site-footer__link" href="javascript:void(0);">Экспресс-кредит</a><a class="site-footer__link" href="javascript:void(0);">Страхование</a><a class="site-footer__link" href="javascript:void(0);">Продление гарантии</a><a class="site-footer__link" href="javascript:void(0);">Тест-драйв</a><a class="site-footer__link" href="javascript:void(0);">Утилизация</a><a class="site-footer__link" href="javascript:void(0);">Trade-in</a><a class="site-footer__link" href="javascript:void(0);">Доставка из-за рубежа</a></div>
               </div>
-              <div class="site-footer__list">
+              <div class="site-footer__list site-footer__list--contacts">
                 <div class="site-footer__title">Контакты</div>
                 <div class="site-footer__contacts">
                   <div class="site-footer__contact footer-contact">

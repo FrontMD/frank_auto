@@ -39,12 +39,28 @@ header.site-header(data-js="siteHeader")
                             use(xlink:href=`img/sprites/sprite.svg#compare`)
                         span.header-compare__count 12
                 +btn({
+                    classes: 'site-header__callback',
                     name: 'Обратный звонок',
                     cMode: 'accent',
                     sMode: 'header',
                     icon: 'handset',
-
                 })
+
+                .header-soc__links.header-soc__links--mob
+                    a(href="javascript:void(0);").header-soc__link
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#telegram`)
+
+                .phones-dropdown(data-js="phonesDropdown")
+                    .phones-dropdown__btn(data-js="phonesDropdownToggle")
+                        svg.show
+                            use(xlink:href=`img/sprites/sprite.svg#handset`)
+                        svg.hide
+                            use(xlink:href=`img/sprites/sprite.svg#close`)
+                    .phones-dropdown__content
+                        .header-phones
+                            .header-phones__item Новорижское ш., 17й км, с3 <a href="tel:+74991165065">+7 (499) 116-50-65</a>
+                            .header-phones__item МКАД, 85-й километр, вл3с2 <a href="tel:+74991165065">+7 (499) 116-50-65</a>
 
             .site-header__bottom.site-header__row
                 .section-block.site-header__block.site-header__menu

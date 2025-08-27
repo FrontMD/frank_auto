@@ -211,7 +211,7 @@
     &__img {
         position: relative;
         flex: 0 0 40%;
-        aspect-ratio: 1 / 0.748;
+        aspect-ratio: 1 / 0.5625;
 
         @include max(laptop-small) {
             align-self: flex-start;

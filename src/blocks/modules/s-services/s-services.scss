@@ -94,6 +94,11 @@
             width: 100%;
         }
 
+        @include max(mobile) {
+            aspect-ratio: 1 / 0.7388;
+            mask-image: url(../img/masks/s_services_mask_mob.svg);
+        }
+
         &::after {
             content: '';
             position: absolute;

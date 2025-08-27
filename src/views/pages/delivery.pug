@@ -1,0 +1,26 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Доставка автомобиля"
+
+block content
+	.page-layout(data-js="pageLayout")
+		+s-breadcrumbs({
+			items: [
+				{
+					name: 'FrankAuto',
+					link: 'javascript:void(0);'
+				},
+				{
+					name: 'Доставка автомобиля',
+					link: 'javascript:void(0);'
+				}
+			],
+		})
+
+		+img-intro
+
+		+s-reviews({
+			title: 'Нам доверяют'
+		})
