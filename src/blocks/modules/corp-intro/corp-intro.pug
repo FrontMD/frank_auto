@@ -1,0 +1,70 @@
+-
+    const defaultCorpIntroProps = {
+        classes: '',
+    }
+
+mixin corp-intro(props= defaultCorpIntroProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultCorpIntroProps.classes,
+        }
+
+    section.section.corp-intro(class= checkProps.classes)&attributes(attributes)
+        .section__container
+            .corp-header
+                .corp-header__logo
+                    <img src="img/logo/logo_header.svg" alt="">
+                .corp-header__header-text
+                    | <b>Сегодня компания FRANK AUTO</b> — это сеть автоцентров  с&nbsp;отличной территориальной доступностью (на выбор три салона  в&nbsp;Москве FRANK AUTO Ярославский, FRANK AUTO Можайский, FRANK AUTO Новорижский)
+
+    section.corp-intro-block
+        <img src="img/corp/corp-intro.png" alt="">
+        .corp-intro-block__left
+            svg
+                use(xlink:href=`img/sprites/sprite.svg#briefcase`)
+            | Сегодня FRANK AUTO успешно развивает направление корпоративных продаж автомобилей.
+        .corp-intro-block__right
+            <img src="img/logo/logo_header.svg" alt="">
+            hr
+            .corp-intro-block__right-total >200
+            | Премиальных электромобилей, гибридов и автомобилей с ДВС представлено, в их числе и коммерческий транспорт.
+    section.section
+        .section-block.corp-list
+            <div class="quick-app__tags">
+                <div class="quick-app__tag">
+                    <svg>
+                        <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                    </svg>
+                <div><span class="tag-title">Широкий ассортимент </span><span class="tag-text">Широкий выбор автомобилей в наличии и в пути. Также любой автомобиль мира можно заказать с доставкой в любой регион</span></div>
+                </div>
+                <div class="quick-app__tag">
+                <svg>
+                <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                </svg>
+                <div><span class="tag-title">Персональный менеджер</span><span class="tag-text">закрепленный за вашим предприятием</span></div>
+                </div>
+                <div class="quick-app__tag">
+                <svg>
+                <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                </svg>
+                <div><span class="tag-title">Лизинг </span><span class="tag-text">Сотрудничаем с крупными лизинговыми компаниями, предлагая наиболее выгодные условия каждому клиенту</span></div>
+                </div>
+                <div class="quick-app__tag">
+                <svg>
+                <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                </svg>
+                <div><span class="tag-title">Акции и скидки</span><span class="tag-text">Для ключевых или повторных клиентов действует гибкая система скидок и дополнительных выгод</span></div>
+                </div>
+                <div class="quick-app__tag">
+                <svg>
+                <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                </svg>
+                <div><span class="tag-title">Тест-драйв </span><span class="tag-text">Возможность тест-драйва любого автомобиля и/или 3 бесплатных дня проката (при покупке автомобиля у нас)</span></div>
+                </div>
+                <div class="quick-app__tag">
+                <svg>
+                <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                </svg>
+                <div><span class="tag-title">Трейд-ин </span><span class="tag-text">Предоставим возможность сдать свой текущий автомобиль в зачет покупки нового</span></div>
+                </div>
+            </div>

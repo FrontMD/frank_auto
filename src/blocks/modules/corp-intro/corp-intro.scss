@@ -1,0 +1,165 @@
+.section.corp-intro{
+    padding-bottom: 0;
+    @include max(mobile) {
+        padding-left:10px;
+        padding-right: 10px;
+    }
+}
+
+.corp-header{
+    display: flex;
+    gap:40px;
+    &__logo{
+        width: 300px;
+        height: 71px;
+        flex-shrink: 0;
+        img{
+            width: 100%;
+        }
+        @include max(mobile) {
+            margin-bottom: 25px;
+        }
+    }
+    &__header-text{
+        font-size: 25px;
+        line-height: 150%;
+        font-family: $ff-rooftop;
+        b{
+            color: $c-accent;
+        }
+        @include max(mobile) {
+            font-size: 16px;
+        }
+    }
+
+    @include max(mobile) {
+        display: block;
+    }
+}
+
+.corp-intro-block{
+    overflow: hidden;
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    &__left{
+        width: 300px;
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        padding: 30px 30px 40px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        border-radius: 25px;
+        background: rgba(255,255,255,0.7);
+        backdrop-filter: blur(40px);
+        -webkit-box-shadow: 0px 7px 15px 10px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0px 7px 15px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 7px 15px 10px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        line-height: 150%;
+        svg{
+            width: 40px;
+            height: 40px;
+            color: #FC00FF;
+            display: block;
+            margin-bottom: 16px;
+        }
+        @include max(mobile) {
+            top:20px;
+            left:10px;
+        }
+    }
+    &__right{
+        width: 451px;
+        position: absolute;
+        right: 20px;
+        bottom: 30px;
+        padding: 30px 30px 55px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        border-radius: 25px;
+        background: rgba(255,255,255,0.7);
+        backdrop-filter: blur(40px);
+        -webkit-box-shadow: 0px 7px 15px 10px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0px 7px 15px 10px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px 7px 15px 10px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        line-height: 150%;
+        img{
+            width: 170px;
+
+        }
+        hr{
+            height: 1px;
+            background: #D8DAE0;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+            border:0;
+            margin: 27px 0;
+        }
+        &-total{
+            font-size: 60px;
+            line-height: 65px;
+            font-family: $ff-rooftop;
+            font-weight: 700;
+            color: #FC00FF;
+            margin-bottom: 5px;
+        }
+        @include max(mobile) {
+            bottom:30px;
+            right:auto;
+            left:10px;
+            width: 300px;
+        }
+
+    }
+    @include max(mobile) {
+        padding-top: 170px;
+        padding-bottom: 175px;
+
+    }
+    & > img{
+        @include max(mobile) {
+            height: 320px;
+            width: auto;
+            max-width: inherit;
+        }
+    }
+}
+
+.corp-list{
+    padding: 30px;
+    .quick-app__tags{
+        margin-bottom: 0;
+        max-width: inherit;
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: (minmax(0, 1fr))[3];
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 50px 24px;
+        .quick-app__tag{
+            max-width: none;
+            align-items:start;
+            .tag-title{
+                font-family: $ff-rooftop;
+                font-size: 20px;
+                line-height: 130%;
+                margin-bottom: 5px;
+            }
+            .tag-text{
+                line-height: 150%;
+            }
+        }
+        @include max(tablet) {
+            -ms-grid-columns: (minmax(0, 1fr))[2];
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        @include max(mobile) {
+            -ms-grid-columns: (minmax(0, 1fr))[1];
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+    }
+}
