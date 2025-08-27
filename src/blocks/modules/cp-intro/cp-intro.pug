@@ -115,7 +115,7 @@ mixin cp-intro(props= defaultCpIntroProps)
 
                         a(href="#techSpec").cp-intro__all.cp-intro__link Все характеристики
 
-                    .cp-intro__chars
+                    .cp-intro__chars.scrollbar.scrollbar--small
                         .cp-intro__char
                             img(src="img/catalog/chars/fuel.svg" alt="")
                             div
@@ -156,7 +156,7 @@ mixin cp-intro(props= defaultCpIntroProps)
                                     sMode: 'full'
                                 })
 
-                    .cp-intro__gifts
+                    .cp-intro__gifts.scrollbar.scrollbar--small
                         - if(checkProps.usedPage === true)
                             .cp-intro__gift
                                 img(src="img/catalog/gift.svg" alt="")

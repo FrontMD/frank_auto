@@ -25,7 +25,7 @@ mixin cb-intro(props= defaultCBIntroProps)
                             .cb-intro__title.title.title--50.title--light
                                 | Грандиозная <br>распродажа Lixiang
                             .cb-intro__subtitle Получите специальную цену + подарок на выбор при покупке автомобиля
-                        .cb-intro__advantages
+                        .cb-intro__advantages.scrollbar
                             .cb-intro__advantage
                                 .cb-intro__icon
                                     svg
@@ -91,7 +91,7 @@ mixin cb-intro(props= defaultCBIntroProps)
                             .cb-intro__price
                                 span.old 5 800 000 ₽ 
                                 span.current от 5 500 000 ₽
-                            .cb-intro__stock Автомобилей в наличии - 10 шт
+                            a(href="#inStock").cb-intro__stock Автомобилей в наличии - 10 шт
 
                             .cb-intro__advantages
                                 .cb-intro__advantage

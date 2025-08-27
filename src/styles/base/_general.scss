@@ -443,10 +443,6 @@ html.hystmodal__opened {
 		border-radius: 10px;
 	}
 
-	@include max(mobile) {
-		background-color: $c-accent-2;
-	}
-
 	span {
 		display: block;
 		padding-top: 6px;
@@ -1091,22 +1087,28 @@ html.hystmodal__opened {
 }*/
 
 .scrollbar {
+
 	&::-webkit-scrollbar {
+		-webkit-appearance: none;
 		width: 6px;
 		height: 6px;
 	}
 
 	&::-webkit-scrollbar-track {
-		background-color: $c-text-light;
-		border-radius: 2px;
-	}
-
-	&::-webkit-scrollbar-thumb {
 		background-color: $c-bg-main;
 		border-radius: 2px;
 	}
 
+	&::-webkit-scrollbar-thumb {
+		background-color: $c-text-light;
+		border-radius: 2px;
+	}
+
 	&--small {
+		@include max(mobile) {
+			padding-bottom: 4px;
+		}
+
 		&::-webkit-scrollbar {
 			width: 3px;
 			height: 3px;

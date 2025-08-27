@@ -35,6 +35,17 @@ function cmSpoilersInit() {
                     })
                 })
 
+                const cmSpoilerSliders = spoiler.querySelectorAll('[data-js="cmSpoilerSlider"]')
+
+                if(cmSpoilerSliders.length > 0) {
+                    cmSpoilerSliders.forEach(slider => {
+                        const sliderEx = new Swiper(slider, {
+                            slidesPerView: 1,
+                            spaceBetween: 10
+                        })
+                    })
+                }
+
             })
         }
     })

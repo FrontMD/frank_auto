@@ -138,11 +138,20 @@
         }
     }
 
-    &__text {
+    &__bottom {
         margin-top: 50px;
 
         @include max(mobile) {
             margin-top: 10px;
+        }
+    }
+
+    &__text {
+
+        @include max(mobile) {
+            max-height: 115px;
+            overflow: hidden;
+            transition: all $tr-time linear;
         }
     }
 }

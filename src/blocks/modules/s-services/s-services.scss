@@ -97,6 +97,11 @@
         @include max(mobile) {
             aspect-ratio: 1 / 0.7388;
             mask-image: url(../img/masks/s_services_mask_mob.svg);
+            height: 31.68vw;
+        }
+
+        @include max(xs) {
+            height: 50.556vw;
         }
 
         &::after {

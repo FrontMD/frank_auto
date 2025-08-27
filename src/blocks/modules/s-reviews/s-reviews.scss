@@ -5,6 +5,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 23px;
+        overflow: hidden;
 
         @include max(laptop-small) {
             gap: 16px;
@@ -12,6 +13,20 @@
 
         @include max(tablet) {
             gap: 10px;
+        }
+
+        @include max(mobile) {
+            display: block;
+            margin-right: -10px;
+            padding-right: 10px;
+        }
+
+        .swiper-wrapper {
+            display: contents;
+
+            @include max(mobile) {
+                display: flex;
+            }
         }
     }
 
@@ -27,7 +42,7 @@
         }
 
         @include max(mobile) {
-            flex: 0 0 100%;
+            flex: 0 0 auto;
         }
     }
 
@@ -40,6 +55,10 @@
 
         @include max(tablet) {
             flex: 0 0 100%;
+        }
+
+        @include max(mobile) {
+            flex: 0 0 auto;
         }
     }
 }

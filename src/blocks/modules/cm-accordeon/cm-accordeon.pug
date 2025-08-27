@@ -4,15 +4,34 @@
         title: 'Автомобили Lixiang L7 в наличии',
         items: [
             {
-                img: 'img/catalog-model/model_2.webp',
+                img: [
+                    'img/catalog-model/model_2.webp',
+                    'img/catalog-model/model_1.webp',
+                    'img/catalog-model/model_3.webp',
+                    'img/catalog-model/model_4.webp',
+                    'img/catalog-model/model_5.webp',
+                ],
                 color: 'Цвет - черный',
             },
             {
-                img: 'img/catalog-model/model_1.webp',
+                img: [
+                    'img/catalog-model/model_1.webp',
+                    'img/catalog-model/model_2.webp',
+                    'img/catalog-model/model_3.webp',
+                    'img/catalog-model/model_4.webp',
+                    'img/catalog-model/model_5.webp',
+                ],
                 color: 'Цвет - серебро',
             },
             {
-                img: 'img/catalog-model/model_5.webp',
+                img: [
+                    'img/catalog-model/model_5.webp',
+                    'img/catalog-model/model_2.webp',
+                    'img/catalog-model/model_1.webp',
+                    'img/catalog-model/model_3.webp',
+                    'img/catalog-model/model_4.webp',
+
+                ],
                 color: 'Цвет - белый',
             },
         ]
@@ -66,7 +85,14 @@ mixin cm-accordeon(props= defaultCmAccordeonProps)
                                             classes: 'cm-spoiler__controls',
                                             compare: true
                                         })
-                                        img(src=item.img alt="")
+                                        .cm-spoiler__slider(data-js="cmSpoilerSlider")
+                                            .swiper-wrapper
+                                                - let imgCounter = 0
+                                                - while(imgCounter < item.img.length)
+                                                    .swiper-slide
+                                                        img(src=item.img[imgCounter] alt="")
+
+                                                    - imgCounter++
 
                                     .cm-spoiler__desc
                                         .cm-spoiler__title Lixiang L7 52.3 kWh
@@ -105,7 +131,7 @@ mixin cm-accordeon(props= defaultCmAccordeonProps)
                                             hasArrow: true
                                         })(data-js="cmSpoilerMoreBtn")
 
-                                .cm-spoiler__gifts
+                                .cm-spoiler__gifts.scrollbar.scrollbar--small
                                     .cm-spoiler__gift
                                         img(src="img/catalog/gift.svg" alt="")
                                         .text Оборудование <span>в подарок

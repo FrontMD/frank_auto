@@ -103,9 +103,6 @@
         transform: rotate(-8.62deg);
         transform-origin: left bottom;
 
-        @include max(xs) {
-            justify-content: center;
-        }
 
         svg {
             width: 18px;
@@ -116,7 +113,10 @@
             position: relative;
             left: 0;
             transform: none;
-            background-color: $c-accent-2;
+        }
+
+        @include max(xs) {
+            justify-content: center;
         }
     }
 

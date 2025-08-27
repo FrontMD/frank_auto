@@ -38,7 +38,7 @@
         }
     }
 
-    &__sticker {
+    &__sticker.title-sticker {
         position: absolute;
         right: -70px;
         top: -8px;
@@ -55,6 +55,12 @@
             left: 0;
             top: calc(100% + 5px);
             transform-origin: left bottom;
+            padding: 10px 12px;
+            font-size: 14px;
+
+            span {
+                font-size: 20px;
+            }
         }
     }
 
@@ -88,6 +94,11 @@
             font-size: 20px;
             line-height: 100%;
             text-decoration: line-through;
+
+            @include max(xs) {
+                font-size: 18px;
+                line-height: 1em;
+            }
         }
 
         .current {
@@ -97,6 +108,11 @@
 
             @include max(mobile) {
                 font-size: 24px;
+                line-height: 1em;
+            }
+
+            @include max(xs) {
+                font-size: 20px;
                 line-height: 1em;
             }
         }
@@ -109,6 +125,18 @@
         font-size: 15px;
         line-height: 21px;
         letter-spacing: 0;
+        transition: all $tr-time linear;
+
+        @include min(tablet) {
+            &:hover {
+                color: $c-accent;
+            }
+        }
+
+        @include max(tablet) {
+            margin-top: 0;
+            order: 2;
+        }
     }
 
     &__advantages {
@@ -118,11 +146,13 @@
         margin-top: 83px;
 
         @include max(tablet) {
-            flex-wrap: wrap;
+            overflow: auto;
+            margin-right: -10px;
+            padding-right: 10px;
         }
 
         @include max(mobile) {
-            margin-top: 160px;
+            margin-top: 120px;
         }
     }
 
@@ -151,7 +181,7 @@
             padding: 5px 15px 5px 10px;
             border-radius: 10px;
             gap: 10px;
-            flex: 0 0 calc((100% - 10px) / 2);
+            min-width: max-content;
         }
 
         @include max(mobile) {
@@ -231,7 +261,7 @@
         }
 
         @include max(mobile) {
-            padding: 20px 10px 90px;
+            padding: 20px 10px;
         }
     }
 
@@ -276,11 +306,7 @@
         width: fit-content;
 
         @include max(tablet) {
-            display: flex;
-            align-items: flex-start;
-            flex-direction: column;
-            gap: 15px;
-            width: 100%;
+            display: contents;
         }
     }
 
@@ -299,9 +325,7 @@
             transform: none;
             order: 2;
             padding: 8px 16px;
-        }
-
-        @include max(xs) {
+            order: 3;
             width: 100%;
             text-align: center;
         }
@@ -309,12 +333,16 @@
         span {
             color: $c-white;
             white-space: nowrap;
+
+            @include max(tablet) {
+                display: inline-block;
+            }
         }
     }
 
-    &--model &__stock {
+    &--model &__price {
         @include max(tablet) {
-            margin-top: 0;
+            order: 2;
         }
     }
 
@@ -324,7 +352,7 @@
         flex-direction: column;
 
         @include max(tablet) {
-            order: 2;
+            order: 3;
             flex-direction: row;
             overflow-x: auto;
             align-items: stretch;
@@ -359,6 +387,12 @@
         @include max(tablet) {
             flex-basis: auto;
             width: 100%;
+        }
+    }
+
+    &--model &__offer {
+        @include max(mobile) {
+            display: none;
         }
     }
 }

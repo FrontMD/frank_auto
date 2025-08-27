@@ -17,7 +17,7 @@ mixin catalog-filter(props= defaultCatalogFilterProps)
                     .catalog-filter__close(data-js="catalogFilterClose")
                         svg
                             use(xlink:href=`img/sprites/sprite.svg#close`)
-                    .spoiler-form__fields(data-js="formSpoilerContent")
+                    .spoiler-form__fields.scrollbar.scrollbar--small(data-js="formSpoilerContent")
                         +field({
                             classes: '',
                             tag: 'select',

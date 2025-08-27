@@ -202,6 +202,11 @@
         flex: 1 1 auto;
         display: flex;
         gap: 20px;
+        width: 40%;
+
+        @include max(tablet) {
+            width: 100%;
+        }
 
         @include max(mobile) {
             display: contents;
@@ -212,6 +217,7 @@
         position: relative;
         flex: 0 0 40%;
         aspect-ratio: 1 / 0.5625;
+        width: 40%;
 
         @include max(laptop-small) {
             align-self: flex-start;
@@ -231,6 +237,14 @@
                 height: 25px;
             }
         }
+
+
+    }
+
+    &__slider {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
 
         img {
             width: 100%;
@@ -256,9 +270,9 @@
         letter-spacing: 0;
         border-radius: $br-section;
         padding: 3px 10px;
+        z-index: 3;
 
         @include max(mobile) {
-            background-color: $c-accent-2;
             right: 10px;
         }
     }
@@ -267,6 +281,7 @@
         position: absolute;
         left: 10px;
         top: 10px;
+        z-index: 3;
     }
 
     &__desc {
@@ -302,7 +317,7 @@
 
         @include max(mobile) {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-columns: repeat(4, minmax(0, 1fr));
             width: 100%;
             gap: 7px 5px;
             margin-top: 0;
@@ -324,24 +339,37 @@
         letter-spacing: -0.02em;
         color: $c-text;
 
+        @include max(mobile) {
+            font-size: 10px;
+            padding: 7px;
+            min-height: 30px;
+        }
+
         img {
             width: 18px;
             height: 18px;
             object-fit: contain;
             object-position: center;
+
+            @include max(mobile) {
+                width: 14px;
+                height: 14px;
+            }
         }
     }
 
     &__info {
         display: flex;
         flex-direction: column;
-        gap: 5px;
+        gap: 5px 10px;
         margin-top: 20px;
         margin-bottom: 20px;
 
         @include max(mobile) {
-            margin-top: 10px;
+            margin-top: 0;
             margin-bottom: 0;
+            flex-direction: row;
+            flex-wrap: wrap;
         }
     }
 
@@ -410,9 +438,9 @@
 
         @include max(mobile) {
             flex-direction: row;
-            flex-wrap: wrap;
             width: 100%;
             gap: 10px;
+            overflow: auto;
         }
     }
 
@@ -429,6 +457,10 @@
         line-height: 1.23em;
         letter-spacing: 0;
         color: $c-text;
+
+        @include max(mobile) {
+            min-width: max-content;
+        }
 
         img {
             width: 24px;

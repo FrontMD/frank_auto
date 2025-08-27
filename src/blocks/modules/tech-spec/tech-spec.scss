@@ -38,6 +38,10 @@
         flex-shrink: 0;
         flex-grow: 0;
 
+        @include max(mobile) {
+            display: none;
+        }
+
         &--1 {
             flex-basis: 26.42%;
 

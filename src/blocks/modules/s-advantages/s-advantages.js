@@ -9,7 +9,7 @@ function sAdvantagesSlider() {
     sAdvantagesSliders.forEach(slider => {
 
         let sliderEx = new Swiper(slider, {
-            slidesPerView: 1.1,
+            slidesPerView: 1.3,
             spaceBetween: 10,
             breakpoints: {
                 600: {

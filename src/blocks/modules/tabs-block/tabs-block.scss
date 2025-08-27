@@ -12,6 +12,7 @@
 
     &__tabs {
         overflow-x: auto;
+        overflow-y: hidden;
         background-color: $c-bg-main;
         border-radius: 18px;
         padding: 4px;

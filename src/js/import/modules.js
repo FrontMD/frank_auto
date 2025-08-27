@@ -19,6 +19,7 @@
 @@include("../../blocks/modules/mi-slider/mi-slider.js")
 @@include("../../blocks/modules/s-banks/s-banks.js")
 @@include("../../blocks/modules/img-slider/img-slider.js")
+@@include("../../blocks/modules/s-reviews/s-reviews.js")
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -43,4 +44,5 @@ document.addEventListener('DOMContentLoaded', () => {
     miSliderInit()
     sBanksSlider()
     imgSliderInit()
+    sReviewsSlider()
 })

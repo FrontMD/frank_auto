@@ -15,90 +15,91 @@ mixin s-reviews(props= defaultSReviewsProps)
         .section__container
             .section__content.s-reviews__content
                 .title.title--36.s-reviews__title!= checkProps.title
-                .s-reviews__list
-                    .review-card.review-card--mask
-                        .review-card__content
-                            .review-card__header
-                                .review-card__logo
-                                    img(src="img/catalog-brand/r_otzovik.svg" alt="")
-                                .review-card__name
-                                    span Автосалон:
-                                    a(href="javascript:void(0);") Автопремьер
+                .s-reviews__list(data-js="sReviewsSlider")
+                    .swiper-wrapper
+                        .swiper-slide.review-card.review-card--mask
+                            .review-card__content
+                                .review-card__header
+                                    .review-card__logo
+                                        img(src="img/catalog-brand/r_otzovik.svg" alt="")
+                                    .review-card__name
+                                        span Автосалон:
+                                        a(href="javascript:void(0);") Автопремьер
 
-                            .review-card__counter
-                                .review-card__right
-                                    .review-card__percent Рекомендуют 96%
-                                    .review-card__stars
-                                        .review-card__track(style="width: 96%;")
-                                .review-card__rating 4.8
+                                .review-card__counter
+                                    .review-card__right
+                                        .review-card__percent Рекомендуют 96%
+                                        .review-card__stars
+                                            .review-card__track(style="width: 96%;")
+                                    .review-card__rating 4.8
 
-                        svg.review-card__mask
-                            use(xlink:href=`img/sprites/sprite.svg#r_mask`)
+                            svg.review-card__mask
+                                use(xlink:href=`img/sprites/sprite.svg#r_mask`)
 
-                    .review-card.review-card--mask
-                        .review-card__content
-                            .review-card__header
-                                .review-card__logo
-                                    img(src="img/catalog-brand/r_otzovik.svg" alt="")
-                                .review-card__name
-                                    span Автосалон:
-                                    a(href="javascript:void(0);") ДрайвГрад
+                        .swiper-slide.review-card.review-card--mask
+                            .review-card__content
+                                .review-card__header
+                                    .review-card__logo
+                                        img(src="img/catalog-brand/r_otzovik.svg" alt="")
+                                    .review-card__name
+                                        span Автосалон:
+                                        a(href="javascript:void(0);") ДрайвГрад
 
-                            .review-card__counter
-                                .review-card__right
-                                    .review-card__percent Рекомендуют 98%
-                                    .review-card__stars
-                                        .review-card__track(style="width: 98%;")
-                                .review-card__rating 4.9
-                        svg.review-card__mask
-                            use(xlink:href=`img/sprites/sprite.svg#r_mask`)
+                                .review-card__counter
+                                    .review-card__right
+                                        .review-card__percent Рекомендуют 98%
+                                        .review-card__stars
+                                            .review-card__track(style="width: 98%;")
+                                    .review-card__rating 4.9
+                            svg.review-card__mask
+                                use(xlink:href=`img/sprites/sprite.svg#r_mask`)
 
-                    .review-card.review-card--mask
-                        .review-card__content
-                            .review-card__header
-                                .review-card__logo
-                                    img(src="img/catalog-brand/r_otzovik.svg" alt="")
-                                .review-card__name
-                                    span Автосалон:
-                                    a(href="javascript:void(0);") МоторЛайн
+                        .swiper-slide.review-card.review-card--mask
+                            .review-card__content
+                                .review-card__header
+                                    .review-card__logo
+                                        img(src="img/catalog-brand/r_otzovik.svg" alt="")
+                                    .review-card__name
+                                        span Автосалон:
+                                        a(href="javascript:void(0);") МоторЛайн
 
-                            .review-card__counter
-                                .review-card__right
-                                    .review-card__percent Рекомендуют 100%
-                                    .review-card__stars
-                                        .review-card__track(style="width: 100%;")
-                                .review-card__rating 5.0
-                        svg.review-card__mask
-                            use(xlink:href=`img/sprites/sprite.svg#r_mask`)
+                                .review-card__counter
+                                    .review-card__right
+                                        .review-card__percent Рекомендуют 100%
+                                        .review-card__stars
+                                            .review-card__track(style="width: 100%;")
+                                    .review-card__rating 5.0
+                            svg.review-card__mask
+                                use(xlink:href=`img/sprites/sprite.svg#r_mask`)
 
-                    .review-card
-                        .review-card__content
-                            .review-card__header
-                                .review-card__logo
-                                    img(src="img/catalog-brand/r_yandex.svg" alt="")
-                                .review-card__name
-                                    span Автосалон:
-                                    a(href="javascript:void(0);") СитиМоторс
+                        .swiper-slide.review-card
+                            .review-card__content
+                                .review-card__header
+                                    .review-card__logo
+                                        img(src="img/catalog-brand/r_yandex.svg" alt="")
+                                    .review-card__name
+                                        span Автосалон:
+                                        a(href="javascript:void(0);") СитиМоторс
 
-                            .review-card__counter
-                                .review-card__right
-                                    .review-card__percent Рекомендуют 96%
-                                    .review-card__stars
-                                        .review-card__track(style="width: 96%;")
-                                .review-card__rating 4.8
+                                .review-card__counter
+                                    .review-card__right
+                                        .review-card__percent Рекомендуют 96%
+                                        .review-card__stars
+                                            .review-card__track(style="width: 96%;")
+                                    .review-card__rating 4.8
 
-                    .review-card
-                        .review-card__content
-                            .review-card__header
-                                .review-card__logo
-                                    img(src="img/catalog-brand/r_google.svg" alt="")
-                                .review-card__name
-                                    span Автосалон:
-                                    a(href="javascript:void(0);") ЛидерАвто
+                        .swiper-slide.review-card
+                            .review-card__content
+                                .review-card__header
+                                    .review-card__logo
+                                        img(src="img/catalog-brand/r_google.svg" alt="")
+                                    .review-card__name
+                                        span Автосалон:
+                                        a(href="javascript:void(0);") ЛидерАвто
 
-                            .review-card__counter
-                                .review-card__right
-                                    .review-card__percent Рекомендуют 96%
-                                    .review-card__stars
-                                        .review-card__track(style="width: 96%;")                            
-                                .review-card__rating 4.8
+                                .review-card__counter
+                                    .review-card__right
+                                        .review-card__percent Рекомендуют 96%
+                                        .review-card__stars
+                                            .review-card__track(style="width: 96%;")                            
+                                    .review-card__rating 4.8
