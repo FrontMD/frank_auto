@@ -1,0 +1,24 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Корпоративным клиентам"
+
+block content
+    .page-layout(data-js="pageLayout")
+        +s-breadcrumbs({
+            items: [
+                {
+                    name: 'FrankAuto',
+                    link: 'javascript:void(0);'
+                },
+                {
+                    name: 'Корпоративным клиентам',
+                    link: 'javascript:void(0);'
+                },
+            ],
+        })
+
+
+
+        +corp-intro

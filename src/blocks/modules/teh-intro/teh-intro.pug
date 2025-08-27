@@ -1,0 +1,86 @@
+-
+    const defaultTehIntroProps = {
+        classes: '',
+    }
+
+mixin teh-intro(props= defaultTehIntroProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultTehIntroProps.classes,
+        }
+
+    section.section.corp-intro.teh-intro(class= checkProps.classes)&attributes(attributes)
+        .section__container
+            .corp-header
+                .corp-header__logo
+                    <img src="img/logo/logo_header.svg" alt="">
+                .corp-header__header-text
+                    | Специалисты нашего автосервиса имеют огромный опыт в обслуживании автомобилей разных производителей, новых и с пробегом, поэтому в короткие сроки способны обнаружить и исправить любую поломку. Все работы проводятся в соответствии с рекомендациями производителей.
+
+    section.teh-intro-block
+        <img src="img/corp/teh-intro.jpg" alt="">
+
+    section.section
+        .section-block.corp-list
+            <div class="quick-app__tags">
+                <div class="quick-app__tag">
+                    <svg>
+                        <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                    </svg>
+                <div><span class="tag-title">Кузовной ремонт </span><span class="tag-text">Современное оборудование позволяет осуществлять кузовной ремонт любой сложности. Работаем только с качественными материалами от проверенных поставщиков.</span></div>
+                </div>
+                <div class="quick-app__tag">
+                <svg>
+                <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                </svg>
+                <div><span class="tag-title">Слесарный ремонт</span><span class="tag-text">Выполняем как текущий, так и капитальный слесарный ремонт, в том числе обслуживание силовой установки.</span></div>
+                </div>
+                <div class="quick-app__tag">
+                <svg>
+                <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                </svg>
+                <div><span class="tag-title">Шиномонтаж </span><span class="tag-text">Своевременная замена резины необходима для безаварийной езды. Ориентируемся на пробег, состояние резины и время года.</span></div>
+                </div>
+                <div class="quick-app__tag">
+                <svg>
+                <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                </svg>
+                <div><span class="tag-title">Диагностика</span><span class="tag-text">Качественная диагностика позволяет выявить не только имеющиеся проблемы, но и предупредить возможные, поэтому процедура проводится в плановом порядке.</span></div>
+                </div>
+                <div class="quick-app__tag">
+                <svg>
+                <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                </svg>
+                <div><span class="tag-title">Замена масла </span><span class="tag-text">Это необходимая процедура, значительно увеличивающая ресурс двигателя, а также позволяющая минимизировать негативные последствия использования некачественного топлива.</span></div>
+                </div>
+                <div class="quick-app__tag">
+                <svg>
+                <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                </svg>
+                <div><span class="tag-title">Техническое бслуживание </span><span class="tag-text">Это обеспечивают бесперебойную работу основных узлов и агрегатов ТС.</span></div>
+                </div>
+
+                <div class="quick-app__tag">
+                <svg>
+                <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                </svg>
+                <div><span class="tag-title">Сход-развал </span><span class="tag-text">Процедура обеспечивает устойчивость автомобиля на дороге. Проводится планово или в связи с нарушениями управляемости.</span></div>
+                </div>
+
+                <div class="quick-app__tag">
+                <svg>
+                <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                </svg>
+                <div><span class="tag-title">Подбор запчастей </span><span class="tag-text">Надёжность автомобиля напрямую зависит от качества запчастей. Услуга позволяет подобрать качественную деталь, подходящую к конкретному автомобилю.</span></div>
+                </div>
+
+                <div class="quick-app__tag">
+                <svg>
+                <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                </svg>
+                <div><span class="tag-title">Продление страховых полисов </span><span class="tag-text">Мы подберём честную компанию, предлагающую страховку по адекватным ценам. Это позволит избежать попадания в мошеннические схемы.</span></div>
+                </div>
+            </div>
+
+    section.section
+        .teh-text-block.text-editor Специалисты нашего автосервиса имеют огромный опыт в обслуживании автомобилей разных производителей, новых и с пробегом, поэтому в короткие сроки способны обнаружить и исправить любую поломку. Все работы проводятся в соответствии с рекомендациями производителей.
