@@ -1,0 +1,39 @@
+.list-width-icons{
+    display: flex;
+    gap:20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    &-block{
+        text-align: center;
+    }
+    &-img{
+        width: 120px;
+        height: 56px;
+        margin: 0 auto 25px;
+        background: url("../img/ic.svg");
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            max-width: 100%;
+            max-height: 100%;
+        }
+    }
+    &-text{
+        font-family: $ff-rooftop;
+        font-size: 17px;
+        line-height: 130%;
+    }
+}
+
+.teh-list-width-icons{
+    .list-width-icons{
+        &-block {
+            max-width: 250px;
+            width: 100%;
+        }
+        @include min(large) {
+            justify-content: space-between;
+        }
+    }
+}
