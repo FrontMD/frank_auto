@@ -46,6 +46,20 @@
         }
     }
 
+    &__list-title {
+        display: flex;
+        align-items: center;
+        gap: 34px;
+
+        @include max(laptop-small) {
+            gap: 20px;
+        }
+
+        @include max(mobile) {
+            gap: 10px;
+        }
+    }
+
     &__text {
         max-width: 640px;
         color: $c-text;
@@ -101,19 +115,49 @@
     }
 
     &__item {
+        position: relative;
         width: 100%;
         display: flex;
-        align-items: flex-start;
-        gap: 34px;
+        flex-direction: column;
+        gap: 15px;
         padding: 30px;
+
+        @include max(tablet) {
+            padding: 20px;
+        }
+
+        @include max(mobile) {
+            padding: 20px 10px;
+            gap: 20px;
+        }
     }
 
     &__block {
-        flex: 1 1 auto;
+        padding-left: 104px;
+
+        @include max(laptop-small) {
+            padding-left: 80px;
+        }
+
+        @include max(mobile) {
+            padding-left: 0;
+        }
+
+        &--grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 15px;
+
+            @include max(large) {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 0;
+            }
+        }
     }
 
     &__marker {
-        flex: 0 0 auto;
+        flex: 0 0 70px;
+        text-align: center;
         font-family: $ff-rooftop;
         font-weight: 800;
         font-size: 52px;
@@ -121,6 +165,18 @@
         letter-spacing: 0;
         text-transform: uppercase;
         color: $c-accent-2;
+
+        @include max(laptop-small) {
+            font-size: 42px;
+            line-height: 45px;
+            flex-basis: 60px;
+        }
+
+        @include max(mobile) {
+            font-size: 25px;
+            line-height: 100%;
+            flex-basis: auto;
+        }
     }
 
     &__links {
@@ -146,12 +202,15 @@
 
     .form-privacy {
         position: relative;
-        display: flex;
-        align-items: flex-start;
-        gap: 9px;
-        margin-bottom: 20px;
 
-        /*input {
+        &__flex {
+            display: flex;
+            align-items: flex-start;
+            gap: 9px;
+            margin-bottom: 5px;
+        }
+
+        input {
             position: absolute;
             left: 0;
             top: 0;
@@ -159,30 +218,33 @@
         }
 
         &__fake {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             position: relative;
-            width: 13px;
-            height: 13px;
-            background-color: $c-accent;
+            width: 16px;
+            height: 16px;
+            background-color: transparent;
+            border: 2px solid $c-text-breadcrumbs;
+            color: transparent;
             flex-shrink: 0;
             flex-grow: 0;
             cursor: pointer;
+            border-radius: 25%;
+            transition: all $tr-time linear;
 
-            &::after {
-                content: '';
-                position: absolute;
-                width: 70%;
-                height: 70%;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-                background-color: $c-white;
+            svg {
+                width: 14px;
+                height: 14px;
             }
         }
 
-        input:checked+.form-privacy__fake::after {
+        input:checked+.form-privacy__fake {
             background-color: $c-accent;
-        }*/
+            border-color: $c-accent;
+            color: $c-white;
+
+        }
 
         &__text {
             max-width: 350px;
@@ -190,6 +252,7 @@
             font-weight: 400;
             line-height: 1em;
             color: $c-text;
+            margin-top: 1px;
 
             @include max(tablet) {
                 max-width: 100%;
@@ -292,7 +355,6 @@
     &--horizontal .form-privacy .form-privacy__text {
         max-width: 100%;
         font-size: 15px;
-        line-height: 1.5em;
     }
 }
 
@@ -319,7 +381,7 @@
     }
 }
 
-/*.form {
+.form {
     &--modal &__fields {
         gap: 16px;
     }
@@ -364,7 +426,7 @@
         max-width: 300px;
         margin-top: 0;
     }
-}*/
+}
 
 /*.form-product-card {
     display: flex;
@@ -502,7 +564,11 @@
         display: grid;
         gap: 15px;
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        margin-top: 30px;
+        margin-top: 0;
+
+        @include max(mobile) {
+            grid-template-columns: minmax(0, 1fr);
+        }
     }
 }
 
@@ -511,11 +577,25 @@
     align-items: center;
     gap: 15px;
 
+    @include max(tablet-small) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     &__img {
         flex: 0 1 50%;
         aspect-ratio: 1 / 0.5625;
         border-radius: 15px;
         overflow: hidden;
+
+        @include max(tablet-small) {
+            flex-basis: auto;
+            width: 50%;
+        }
+
+        @include max(mobile) {
+            width: 100%;
+        }
 
         img {
             width: 100%;
@@ -529,6 +609,12 @@
         flex-direction: column;
         gap: 25px;
         flex: 0 1 50%;
+
+        @include max(tablet-small) {
+            flex-basis: auto;
+            width: 100%;
+            gap: 16px;
+        }
     }
 
     &__title {
@@ -538,6 +624,16 @@
         line-height: 130%;
         letter-spacing: 0;
         color: $c-text;
+
+        @include max(tablet-small) {
+            br {
+                display: none;
+            }
+        }
+
+        @include max(mobile) {
+            font-size: 18px;
+        }
     }
 
     &__prices {
@@ -557,6 +653,10 @@
         flex-direction: column;
         gap: 3px;
 
+        @include max(mobile) {
+            font-size: 16px;
+        }
+
         span {
             font-weight: 400;
             font-size: 15px;
@@ -572,8 +672,18 @@
         font-size: 16px;
         padding: 15px 23px;
 
+        @include max(xs) {
+            width: 100%;
+            font-size: 14px;
+            padding: 10px 15px;
+        }
+
         span {
             font-size: 20px;
+
+            @include max(xs) {
+                font-size: 16px;
+            }
         }
     }
 }

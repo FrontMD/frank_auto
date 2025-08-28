@@ -133,6 +133,15 @@
             flex-basis: 310px;
             width: 310px;
         }
+
+        @include max(tablet-small) {
+            max-width: calc((100% - 10px) / 2);
+        }
+
+        /*@include max(650px) {
+            flex-basis: 310px;
+            width: 310px;
+        }*/
     }
 
     &__cell {
@@ -191,6 +200,11 @@
         border-radius: 19px;
         overflow: hidden;
         margin-top: 15px;
+
+        @include max(tablet-small) {
+            height: auto;
+            aspect-ratio: 1 / 0.574;
+        }
 
         img {
             width: 100%;

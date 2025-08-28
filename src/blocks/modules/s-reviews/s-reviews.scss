@@ -12,11 +12,12 @@
         }
 
         @include max(tablet) {
-            gap: 10px;
+            display: block;
+            margin-right: -20px;
+            padding-right: 20px;
         }
 
         @include max(mobile) {
-            display: block;
             margin-right: -10px;
             padding-right: 10px;
         }
@@ -24,7 +25,7 @@
         .swiper-wrapper {
             display: contents;
 
-            @include max(mobile) {
+            @include max(tablet) {
                 display: flex;
             }
         }
@@ -38,10 +39,6 @@
         }
 
         @include max(tablet) {
-            flex: 0 0 calc((100% - 10px) / 2);
-        }
-
-        @include max(mobile) {
             flex: 0 0 auto;
         }
     }
@@ -54,10 +51,6 @@
         }
 
         @include max(tablet) {
-            flex: 0 0 100%;
-        }
-
-        @include max(mobile) {
             flex: 0 0 auto;
         }
     }

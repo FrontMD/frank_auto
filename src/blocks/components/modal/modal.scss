@@ -23,7 +23,7 @@
 
 .hystmodal__shadow.hystmodal__shadow--show {
     background-color: $c-text;
-    opacity: 0.3;
+    opacity: 0.6;
 }
 
 .modal {
@@ -42,28 +42,16 @@
         z-index: 20;
         color: $c-text-light;
         transition: color $tr-time;
-        width: 48px;
-        height: 48px;
-        border: 1px solid $c-border;
-        border-radius: 4px;
+        width: 24px;
+        height: 24px;
 
         &:hover {
             color: $c-accent-hover;
         }
 
         svg {
-            width: 24px;
-            height: 24px;
-        }
-
-        @include max(mobile) {
-            width: 32px;
-            height: 32px;
-
-            svg {
-                width: 16px;
-                height: 16px;
-            }
+            width: 16px;
+            height: 16px;
         }
     }
 
@@ -78,8 +66,8 @@
         position: relative;
         background: $c-white;
         width: 100%;
-        max-width: 540px;
-        min-width: 540px;
+        max-width: 410px;
+        min-width: 410px;
         z-index: 9999;
         padding: 20px 16px;
         border-radius: 4px;

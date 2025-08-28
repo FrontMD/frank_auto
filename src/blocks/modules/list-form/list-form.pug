@@ -4,7 +4,7 @@
         personalMarker: '2.',
         form: {
             innerThanks: true,
-            privacyText: 'Нажимая кнопку "Получить предложение" Вы даете согласие на <a href="#" target="_blank">обработку своих персональных данных</a>',
+            privacyText: 'Согласен на обработку моих персональных данных в соответствии с <a href="#" target="_blank">Политикой в отношении обработки персональных данных</a>',
             successTitle: 'Ваш вопрос отправлен.',
             successText: 'С Вами свяжется ответственный сотрудник по&nbsp;указанным контактным данным.',
             successBtn: false
@@ -26,9 +26,10 @@ mixin list-form(props= defaultListFormProps)
                     .form__content(data-js='form-content')
                         block
                         .form__item
-                            .form__marker!= checkProps.personalMarker
+                            .title.title--30.form__list-title
+                                .form__marker!= checkProps.personalMarker
+                                | Персональные данные
                             .form__block
-                                .title.title--30 Персональные данные
                                 .form__fields
                                     +field({
                                         placeholder: 'Ваш имя',
@@ -66,7 +67,13 @@ mixin list-form(props= defaultListFormProps)
                                     })
 
                                 .form__privacy.form-privacy(data-js="formField")
-                                    span.form-privacy__text!= checkProps.form.privacyText
+                                    .form-privacy__flex
+                                        label
+                                            input(type="checkbox" data-v-name='checkbox' required)
+                                            span.form-privacy__fake
+                                                svg
+                                                    use(xlink:href=`img/sprites/sprite.svg#check`)
+                                        span.form-privacy__text!= checkProps.form.privacyText
                                     span.field__error(data-js='fieldError')
 
                     - if(checkProps.form.innerThanks === true)

@@ -56,7 +56,7 @@
         color: $c-accent-2;
 
         @include max(mobile) {
-            font-size: 145px;
+            font-size: 100px;
             margin-bottom: 71px;
         }
     }

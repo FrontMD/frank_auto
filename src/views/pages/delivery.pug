@@ -2,199 +2,200 @@ extends ../layouts/default
 include ../helpers/mixins
 
 block variables
-	- const title = "Доставка автомобиля"
+    - const title = "Доставка автомобиля"
 
 block content
-	.page-layout(data-js="pageLayout")
-		+s-breadcrumbs({
-			items: [
-				{
-					name: 'FrankAuto',
-					link: 'javascript:void(0);'
-				},
-				{
-					name: 'Доставка автомобиля',
-					link: 'javascript:void(0);'
-				}
-			],
-		})
+    .page-layout(data-js="pageLayout")
+        +s-breadcrumbs({
+            items: [
+                {
+                    name: 'FrankAuto',
+                    link: 'javascript:void(0);'
+                },
+                {
+                    name: 'Доставка автомобиля',
+                    link: 'javascript:void(0);'
+                }
+            ],
+        })
 
-		+img-intro
+        +img-intro
 
-		+s-list
-			.s-list__content
-				.s-list__header
-					.s-list__icon
-						img(src="img/s-list-icons/s_list_icon_1.svg" alt="")
-					.title.title--24.s-list__title С&nbsp;нашей помощью Вы&nbsp;сможете получить автомобиль с&nbsp;льготной ставкой утилизационного сбора и&nbsp;сэкономить от&nbsp;660&nbsp;000&nbsp;руб.
-				.s-list__list.text-editor
-					ul
-						li Выкупить автомобиль у китайского поставщика
-						li Получить необходимые документы для постановки на учет в ГИБДД – СБКТС, ЭПТС
-						li Доставить его из другой страны в РФ
-						li Доставить Вам его в любой город РФ
-						li Организовать его таможенное оформление
-						li 10% скидки по Trade-in на покупку нового автомобиля
+        +s-list
+            .s-list__content
+                .s-list__header
+                    .s-list__icon
+                        img(src="img/s-list-icons/s_list_icon_1.svg" alt="")
+                    .title.title--24.s-list__title С&nbsp;нашей помощью Вы&nbsp;сможете получить автомобиль с&nbsp;льготной ставкой утилизационного сбора и&nbsp;сэкономить от&nbsp;660&nbsp;000&nbsp;руб.
+                .s-list__list.text-editor
+                    ul
+                        li Выкупить автомобиль у китайского поставщика
+                        li Получить необходимые документы для постановки на учет в ГИБДД – СБКТС, ЭПТС
+                        li Доставить его из другой страны в РФ
+                        li Доставить Вам его в любой город РФ
+                        li Организовать его таможенное оформление
+                        li 10% скидки по Trade-in на покупку нового автомобиля
 
-		+list-form
-			.form__item
-				.form__marker 1.
-				.form__block
-					.title.title--30 Автомобиль для оформления доставки
-					.form__fields
-						+field({
-							classes: '',
-							tag: 'select',
-							placeholder: 'Марка',
-							selectOptions: [
-								"",
-								"LiXiang",
-								"Voyah",
-								"AITO",
-								"Chery",
-								"Zeekr",
-								"Audi",
-								"Tank",
-								"Rox Motor Tech",
-							],
-							inputAttr: {
-								'required': '',
-							},
-							})
-						+field({
-							tag: 'select',
-							placeholder: 'Модель',
-							selectOptions: [
-								"",
-								"LiXiang L6",
-								"LiXiang L7",
-								"LiXiang L9",
-								"LiXiang L9",
-								"LiXiang Mega",
-								"LiXiang One"
-							],
-							inputAttr: {
-								'required': '',
-							},
+        +list-form
+            .form__item
+                .title.title--30.form__list-title
+                    .form__marker 1.
+                    | Автомобиль для оформления доставки
+                .form__block.form__block--grid
+                    .form__fields
+                        +field({
+                            classes: '',
+                            tag: 'select',
+                            placeholder: 'Марка',
+                            selectOptions: [
+                                "",
+                                "LiXiang",
+                                "Voyah",
+                                "AITO",
+                                "Chery",
+                                "Zeekr",
+                                "Audi",
+                                "Tank",
+                                "Rox Motor Tech",
+                            ],
+                            inputAttr: {
+                                'required': '',
+                            },
+                            })
+                        +field({
+                            tag: 'select',
+                            placeholder: 'Модель',
+                            selectOptions: [
+                                "",
+                                "LiXiang L6",
+                                "LiXiang L7",
+                                "LiXiang L9",
+                                "LiXiang L9",
+                                "LiXiang Mega",
+                                "LiXiang One"
+                            ],
+                            inputAttr: {
+                                'required': '',
+                            },
 
-						})
-						+field({
-							classes: '',
-							tag: 'select',
-							placeholder: 'Год выпуска',
-							selectOptions: [
-								"",
-								"2020",
-								"2021",
-								"2022",
-								"2023",
-								"2024",
-								"2025",
-							],
-							inputAttr: {
-								'required': '',
-							},
-						})
-						+field({
-							classes: '',
-							tag: 'select',
-							placeholder: 'Комплектация',
-							selectOptions: [
-								"",
-								"Base",
-								"Comfort",
-								"Sport",
-								"Luxe",
-							],
-							inputAttr: {
-								'required': '',
-							},
-						})
-						+field({
-							classes: '',
-							tag: 'select',
-							placeholder: 'Тип двигателя',
-							selectOptions: [
-								"",
-								"Бензиновый",
-								"Дизельный",
-								"Электрический"
-							],
-							inputAttr: {
-								'required': '',
-							},
-						})
-						+field({
-							classes: '',
-							tag: 'select',
-							placeholder: 'Объём двигателя',
-							selectOptions: [
-								"",
-								"1.5 л",
-								"1.6 л",
-								"1.8 л",
-								"2.0 л"
-							],
-							inputAttr: {
-								'required': '',
-							},
-						})
+                        })
+                        +field({
+                            classes: '',
+                            tag: 'select',
+                            placeholder: 'Год выпуска',
+                            selectOptions: [
+                                "",
+                                "2020",
+                                "2021",
+                                "2022",
+                                "2023",
+                                "2024",
+                                "2025",
+                            ],
+                            inputAttr: {
+                                'required': '',
+                            },
+                        })
+                        +field({
+                            classes: '',
+                            tag: 'select',
+                            placeholder: 'Комплектация',
+                            selectOptions: [
+                                "",
+                                "Base",
+                                "Comfort",
+                                "Sport",
+                                "Luxe",
+                            ],
+                            inputAttr: {
+                                'required': '',
+                            },
+                        })
+                        +field({
+                            classes: '',
+                            tag: 'select',
+                            placeholder: 'Тип двигателя',
+                            selectOptions: [
+                                "",
+                                "Бензиновый",
+                                "Дизельный",
+                                "Электрический"
+                            ],
+                            inputAttr: {
+                                'required': '',
+                            },
+                        })
+                        +field({
+                            classes: '',
+                            tag: 'select',
+                            placeholder: 'Объём двигателя',
+                            selectOptions: [
+                                "",
+                                "1.5 л",
+                                "1.6 л",
+                                "1.8 л",
+                                "2.0 л"
+                            ],
+                            inputAttr: {
+                                'required': '',
+                            },
+                        })
 
-						+field({
-							classes: '',
-							tag: 'select',
-							placeholder: 'Страна',
-							selectOptions: [
-								"",
-								"Германия",
-								"Китай",
-								"Россия",
-								"США",
-								"Франция",
-								"Южная Корея",
-								"Япония",
-							],
-							inputAttr: {
-								'required': '',
-							},
-						})
-						+field({
-							placeholder: 'Стоимость автомобиля',
-							inputAttr: {
-								'required': '',
-								'data-type': 'numbers'
-							},
-						})
-						+field({
-							placeholder: 'Валюта для выкупа автомобиля',
-							inputAttr: {
-								'required': '',
-							},
-						})
-						+field({
-							placeholder: 'На кого импорт',
-							inputAttr: {
-								'required': '',
-								'data-type': 'letters'
-							},
-						})
+                        +field({
+                            classes: '',
+                            tag: 'select',
+                            placeholder: 'Страна',
+                            selectOptions: [
+                                "",
+                                "Германия",
+                                "Китай",
+                                "Россия",
+                                "США",
+                                "Франция",
+                                "Южная Корея",
+                                "Япония",
+                            ],
+                            inputAttr: {
+                                'required': '',
+                            },
+                        })
+                        +field({
+                            placeholder: 'Стоимость автомобиля',
+                            inputAttr: {
+                                'required': '',
+                                'data-type': 'numbers'
+                            },
+                        })
+                        +field({
+                            placeholder: 'Валюта для выкупа автомобиля',
+                            inputAttr: {
+                                'required': '',
+                            },
+                        })
+                        +field({
+                            placeholder: 'На кого импорт',
+                            inputAttr: {
+                                'required': '',
+                                'data-type': 'letters'
+                            },
+                        })
 
-					.form__auto.form-auto
-						.form-auto__img
-							img(src="img/catalog-model/model_5.webp" alt="")
-						.form-auto__info
-							.form-auto__title.title Lixiang L7 1.4 100 л.с.<br>6MT 2WD (2020)
-							.form-auto__prices
-								.form-auto__price.form-auto__price--base
-									span Базовая цена
-									| 12 500 000 ₽
-								.form-auto__price.form-auto__price--discount
-									span Цена со скидками
-									| 5 500 000 ₽
-							.form-auto__credit.title-sticker
-								| Платеж
-								span 70 000 ₽/мес.
+                    .form__auto.form-auto
+                        .form-auto__img
+                            img(src="img/catalog-model/model_5.webp" alt="")
+                        .form-auto__info
+                            .form-auto__title.title Lixiang L7 1.4 100 л.с.<br>6MT 2WD (2020)
+                            .form-auto__prices
+                                .form-auto__price.form-auto__price--base
+                                    span Базовая цена
+                                    | 12 500 000 ₽
+                                .form-auto__price.form-auto__price--discount
+                                    span Цена со скидками
+                                    | 5 500 000 ₽
+                            .form-auto__credit.title-sticker
+                                | Платеж
+                                span 70 000 ₽/мес.
 
-		+s-reviews({
-			title: 'Нам доверяют'
-		})
+        +s-reviews({
+            title: 'Нам доверяют'
+        })

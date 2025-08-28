@@ -7,60 +7,70 @@
             {
                 classes: 'swiper-slide',
                 img: 'img/stories/story_1.webp',
+                video: 'public/video/example.mp4',
                 title: 'Проверяем мощность двух машин на трассе',
                 tags: ['Уличные гонки'],
             },
             {
                 classes: 'swiper-slide',
                 img: 'img/stories/story_2.webp',
+                video: 'public/video/example_vertical.mp4',
                 title: 'Обзор ТОП-10 китайцев в 2025',
                 tags: ['Обзор'],
             },
             {
                 classes: 'swiper-slide',
                 img: 'img/stories/story_3.webp',
+                video: 'public/video/example.mp4',
                 title: 'Новые функции у китайского электрокар Zeekr 001',
                 tags: ['Обзор'],
             },
             {
                 classes: 'swiper-slide',
                 img: 'img/stories/story_4.webp',
+                video: 'public/video/example_vertical.mp4',
                 title: 'Румтур по новому салону',
                 tags: ['Обзор'],
             },
             {
                 classes: 'swiper-slide',
                 img: 'img/stories/story_5.webp',
+                video: 'public/video/example.mp4',
                 title: 'Проверяем мощность двух машин на трассе',
                 tags: ['Уличные гонки'],
             },
             {
                 classes: 'swiper-slide',
                 img: 'img/stories/story_1.webp',
+                video: 'public/video/example_vertical.mp4',
                 title: 'Проверяем мощность двух машин на трассе',
                 tags: ['Уличные гонки'],
             },
             {
                 classes: 'swiper-slide',
                 img: 'img/stories/story_2.webp',
+                video: 'public/video/example.mp4',
                 title: 'Обзор ТОП-10 китайцев в 2025',
                 tags: ['Обзор'],
             },
             {
                 classes: 'swiper-slide',
                 img: 'img/stories/story_3.webp',
+                video: 'public/video/example_vertical.mp4',
                 title: 'Новые функции у китайского электрокар Zeekr 001',
                 tags: ['Обзор'],
             },
             {
                 classes: 'swiper-slide',
                 img: 'img/stories/story_4.webp',
+                video: 'public/video/example.mp4',
                 title: 'Румтур по новому салону',
                 tags: ['Обзор'],
             },
             {
                 classes: 'swiper-slide',
                 img: 'img/stories/story_5.webp',
+                video: 'public/video/example_vertical.mp4',
                 title: 'Проверяем мощность двух машин на трассе',
                 tags: ['Уличные гонки'],
             },
@@ -83,7 +93,7 @@ mixin story-slider(props= defaultStorySliderProps)
                 .section-header
                     .section-header__title.title.title--36!= checkProps.title
                     if(checkProps.btn !== false)
-                        +btn(checkProps.btn)
+                        +btn(checkProps.btn)(data-fancybox="stories")
 
                 .section-block__content.story-slider__slider(data-js="storySliderSlider")
                     .swiper-wrapper

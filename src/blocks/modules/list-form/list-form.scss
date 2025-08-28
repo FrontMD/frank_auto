@@ -1,5 +1,9 @@
 .list-form {
     &__block {
         padding: 0;
+
+        @include max(mobile) {
+            padding: 0;
+        }
     }
 }

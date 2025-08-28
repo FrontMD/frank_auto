@@ -12,6 +12,18 @@
 
     &__block {
         padding: 70px 60px;
+
+        @include max(laptop-small) {
+            padding: 40px 30px;
+        }
+
+        @include max(tablet) {
+            padding: 20px;
+        }
+
+        @include max(mobile) {
+            padding: 20px 10px 80px;
+        }
     }
 
     &__content {
@@ -21,6 +33,15 @@
         gap: 20px;
         min-height: 430px;
         max-width: 72%;
+
+        @include max(laptop-small) {
+            max-width: 100%;
+        }
+
+        @include max(mobile) {
+            gap: 10px;
+            min-height: auto;
+        }
     }
 
     &__text {
@@ -30,6 +51,15 @@
         line-height: 1.45em;
         letter-spacing: 0;
         color: $c-white;
+
+        @include max(tablet) {
+            font-size: 18px;
+        }
+
+        @include max(mobile) {
+            font-size: 14px;
+            line-height: 1.57em;
+        }
 
         p+p {
             margin-top: 1em;
@@ -41,5 +71,11 @@
         padding: 20px 40px;
         transform: rotate(-15deg);
         transform-origin: left top;
+
+        @include max(mobile) {
+            position: relative;
+            top: -16px;
+            padding: 20px 32px;
+        }
     }
 }

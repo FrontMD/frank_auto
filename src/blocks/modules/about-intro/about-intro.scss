@@ -156,7 +156,7 @@
     }
 
     @include max(mobile) {
-        padding-top: 380px;
+        padding-top: 280px;
         position: relative;
     }
 
@@ -178,6 +178,8 @@
 
         @include max(mobile) {
             color: $c-accent-2;
+            font-size: 28px;
+            line-height: 30px;
         }
     }
 
@@ -211,6 +213,21 @@
             width: 32px;
             height: 32px;
             color: $c-accent-2;
+
+            @include max(mobile) {
+                margin-top: 0;
+                margin-bottom: 5px;
+            }
+        }
+
+        @include max(mobile) {
+            align-items: center;
+            font-size: 18px;
+            gap: 10px;
+
+            br {
+                display: none;
+            }
         }
     }
 
@@ -220,9 +237,13 @@
         bottom: 0;
 
         @include max(mobile) {
-            right: 50%;
+            right: -10px;
             bottom: auto;
-            top: -250px;
+            top: -170px;
+        }
+
+        @include max(xs) {
+            right: 50%;
             transform: translateX(50%);
         }
     }
@@ -239,11 +260,6 @@
         @include max(laptop-small) {
             width: 548px;
             height: 495.68px;
-        }
-
-        @include max(mobile) {
-            width: 796px;
-            height: 720px;
         }
 
         img {

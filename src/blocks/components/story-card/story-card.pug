@@ -2,6 +2,7 @@
     const defaultStoryCardProps = {
         classes: '',
         img: '',
+        video: '',
         title: '',
         tags: [
             ''
@@ -13,12 +14,13 @@ mixin story-card(props = defaultCatalogCardProps)
         const checkProps = {
             classes: props.classes ? props.classes : defaultCatalogCardProps.classes,
             img: props.img ? props.img : defaultCatalogCardProps.img,
+            video: props.video ? props.video : defaultCatalogCardProps.video,
             title: props.title ? props.title : defaultCatalogCardProps.title,
             tags: props.tags ? props.tags : defaultCatalogCardProps.tags,
         }
 
     .story-card(class=checkProps.classes)&attributes(attributes)
-        a(href="javascript:void(0);").story-card__link
+        a(href=checkProps.video data-fancybox='stories' data-thumb=checkProps.img).story-card__link
 
         .story-card__bg
             img(class="lazyload" src="" data-src=checkProps.img alt="")
@@ -30,13 +32,10 @@ mixin story-card(props = defaultCatalogCardProps)
                     - let tag = checkProps.tags[count]
                     .story-card__tag!= tag
                     - count++
-            +btn({
-                classes: 'story-card__play',
-                sMode:'icon',
-                icon:'play',
-                cMode: 'white',
-                link: 'https://vk.com/video_ext.php?oid=-216965779&id=456239269&hd=2&autoplay=1'
-            })(data-fancybox data-type="iframe" data-thumb=checkProps.img)
+            .btn.btn--icon.btn--white.story-card__play
+                svg
+                    use(xlink:href=`img/sprites/sprite.svg#play`)
+
             .story-card__title!= checkProps.title
 
 

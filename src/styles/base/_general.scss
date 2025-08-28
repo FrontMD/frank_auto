@@ -541,6 +541,21 @@ html.hystmodal__opened {
 		}
 	}
 
+	h4 {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 1.3em;
+		letter-spacing: 0;
+		margin-bottom: 0.9em;
+
+		@include max(mobile) {
+			font-size: 18px;
+			line-height: 1.2em;
+			margin-bottom: 1em;
+
+		}
+	}
+
 	p,
 	ul,
 	ol,
@@ -618,7 +633,7 @@ html.hystmodal__opened {
 		}
 	}
 
-	a {
+	a:not(.btn) {
 		color: $c-accent;
 		transition: all $tr-time linear;
 
