@@ -1,3 +1,36 @@
+window.formsProcessors = {}; // Функция из данного объекта будет вызвана в случае успешной валидации формы. Значение атрибута data-formprocessor формы будут служить ключами для функций-обработчиков
+window.formsSending = {}; // Хранилище индикаторов отправки для избежания повторной отправки
+//window.formsProcessors должны добавляться в additional.js
+
+//включать в formsProcessors в случае успешной отправки там, где это требуется
+function defaultAfterSubmit(form, doReset) {
+    if(doReset===true){
+        let fileFields = form.querySelectorAll('.field-file[data-js="formField"]')
+        form.reset();
+
+        //сбрасываем поле ФАЙЛ
+        if(fileFields.length > 0) {
+            fileFields.forEach(fileField => {
+                let placeholderText = fileField.getAttribute('data-placeholder');
+                let fileName = fileField.querySelector('[data-js="fileName"]');
+
+                fileField.classList.remove('field-file--full');
+                fileName.innerHTML = placeholderText;
+            });
+        }
+    }
+
+    //проверяем какой тип благодарности в форме и показываем его
+    if(form.querySelector("[data-js='form-thanks']") !== null) {
+        form.style.minHeight = form.offsetHeight + 'px'
+        form.classList.add("form--sent")
+    } else {
+        thanksMessageShow();
+    }
+
+    toggleLoading(form, false)
+}
+
 function validation() {
 
     const forms = document.querySelectorAll('[data-validate]')
@@ -60,6 +93,24 @@ function validation() {
                                     error(input).remove()
                                 } else {
                                     error(input, 'Необходимо ввести корректный номер телефона').set()
+                                }
+                                break
+                            case 'kpp':
+                                valueField = valueField.replace(/\D/g, "")
+
+                                if (valueField.length === 9) {
+                                    error(input).remove()
+                                } else {
+                                    error(input, 'Необходимо ввести корректный КПП').set()
+                                }
+                                break
+                            case 'inn':
+                                valueField = valueField.replace(/\D/g, "")
+
+                                if (valueField.length === 10 || valueField.length === 12) {
+                                    error(input).remove()
+                                } else {
+                                    error(input, 'Необходимо ввести корректный ИНН').set()
                                 }
                                 break
                             /*case 'file':
@@ -130,8 +181,9 @@ function validation() {
 
                 // тут отправляем данные
                 if (errors === 0) {
-                    form.classList.add('form--ready')
-                    //afterFormSubmit(form)
+                    toggleLoading(form, true)
+                    defaultAfterSubmit(form, true)
+                    //window.ajaxForm(form, form.getAttribute('action'))
                 }
             }
 
@@ -252,18 +304,23 @@ function inputMasksInit(form) {
     })
 }*/
 
-function afterFormSubmit(form) {
-    // сбрасываем форму
-    formReset(form)
+function toggleLoading(form, on) {
+    const formSubmitBtn = form.querySelector(".btn.form__submit")
 
-    //порверяем какой тип благодарности в форме и показываем его
-    if(form.querySelector("[data-js='form-thanks']") !== null) {
-        if(form.hasAttribute('data-fixed-height')) {
-            form.style.minHeight = form.offsetHeight + 'px'
-        }
-        form.classList.add("form--sent")
+    if(on) {
+        const loadingIcon = document.createElement('span')
+        loadingIcon.classList.add('load-icon')
+        loadingIcon.innerHTML = `<svg fill="none" height="24" viewBox="0 0 48 48" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M4 24C4 35.0457 12.9543 44 24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/></svg>`
+
+        formSubmitBtn.appendChild(loadingIcon)
+        formSubmitBtn.classList.add('loading')
     } else {
-        thanksMessageShow();
+        formSubmitBtn.classList.remove('loading')
+        const loadingIcon = formSubmitBtn.querySelector('.load-icon')
+
+        if(loadingIcon) {
+            loadingIcon.remove()
+        }
     }
 }
 

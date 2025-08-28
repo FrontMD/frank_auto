@@ -34,12 +34,12 @@ block content
 		+list-form({
 			personalMarker: '3.'
 		})
-			//-.form__item
+			.form__item
 				.title.title--30.form__list-title
 					.form__marker 1.
-					| Автомобиль для оформления доставки
-				.form__block
-					.form__fields
+					| Ваш будущий автомобиль
+				.form__block.form__block--sgrid
+					.form__fields.form__fields--column
 						+field({
 							classes: '',
 							tag: 'select',
@@ -79,23 +79,6 @@ block content
 						+field({
 							classes: '',
 							tag: 'select',
-							placeholder: 'Год выпуска',
-							selectOptions: [
-								"",
-								"2020",
-								"2021",
-								"2022",
-								"2023",
-								"2024",
-								"2025",
-							],
-							inputAttr: {
-								'required': '',
-							},
-						})
-						+field({
-							classes: '',
-							tag: 'select',
 							placeholder: 'Комплектация',
 							selectOptions: [
 								"",
@@ -106,74 +89,6 @@ block content
 							],
 							inputAttr: {
 								'required': '',
-							},
-						})
-						+field({
-							classes: '',
-							tag: 'select',
-							placeholder: 'Тип двигателя',
-							selectOptions: [
-								"",
-								"Бензиновый",
-								"Дизельный",
-								"Электрический"
-							],
-							inputAttr: {
-								'required': '',
-							},
-						})
-						+field({
-							classes: '',
-							tag: 'select',
-							placeholder: 'Объём двигателя',
-							selectOptions: [
-								"",
-								"1.5 л",
-								"1.6 л",
-								"1.8 л",
-								"2.0 л"
-							],
-							inputAttr: {
-								'required': '',
-							},
-						})
-
-						+field({
-							classes: '',
-							tag: 'select',
-							placeholder: 'Страна',
-							selectOptions: [
-								"",
-								"Германия",
-								"Китай",
-								"Россия",
-								"США",
-								"Франция",
-								"Южная Корея",
-								"Япония",
-							],
-							inputAttr: {
-								'required': '',
-							},
-						})
-						+field({
-							placeholder: 'Стоимость автомобиля',
-							inputAttr: {
-								'required': '',
-								'data-type': 'numbers'
-							},
-						})
-						+field({
-							placeholder: 'Валюта для выкупа автомобиля',
-							inputAttr: {
-								'required': '',
-							},
-						})
-						+field({
-							placeholder: 'На кого импорт',
-							inputAttr: {
-								'required': '',
-								'data-type': 'letters'
 							},
 						})
 
@@ -192,6 +107,12 @@ block content
 							.form-auto__credit.title-sticker
 								| Платеж
 								span 70 000 ₽/мес.
+
+			.form__item
+				.title.title--30.form__list-title
+					.form__marker 2.
+					| Купить в кредит
+				.form__block
 
 		+s-banks
 

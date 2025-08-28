@@ -1,12 +1,14 @@
-.list-width-icons{
+.list-width-icons {
     display: flex;
-    gap:20px;
+    gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
-    &-block{
+
+    &-block {
         text-align: center;
     }
-    &-img{
+
+    &-img {
         width: 120px;
         height: 56px;
         margin: 0 auto 25px;
@@ -14,24 +16,35 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        img{
+
+        img {
             max-width: 100%;
             max-height: 100%;
         }
     }
-    &-text{
+
+    &-text {
         font-family: $ff-rooftop;
         font-size: 17px;
         line-height: 130%;
+
+        @include max(mobile) {
+            font-size: 13px;
+        }
     }
 }
 
-.teh-list-width-icons{
-    .list-width-icons{
+.teh-list-width-icons {
+    .list-width-icons {
         &-block {
             max-width: 250px;
             width: 100%;
+
+            @include max(mobile) {
+                max-width: 160px;
+            }
         }
+
         @include min(large) {
             justify-content: space-between;
         }

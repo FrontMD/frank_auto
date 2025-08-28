@@ -30,7 +30,7 @@ mixin form(props = defaultFormProps)
     form.form(action="#" class= checkProps.classes data-validate novalidate)&attributes(attributes)
         .form__content(data-js='form-content')
             - if(checkProps.title.length > 0)
-                .form__title.title--32!= checkProps.title 
+                .form__title.title.title--24!= checkProps.title 
             - if(checkProps.text.length > 0)
                 .form__text!= checkProps.text
 
@@ -58,14 +58,15 @@ mixin form(props = defaultFormProps)
 
         - if(checkProps.innerThanks === true)
             .form__thanks(data-js='form-thanks')
-                .title--32.form__title!= checkProps.successTitle
+                .title.title--24.form__title!= checkProps.successTitle
                 .form__image-success
                     svg
-                        use(xlink:href=`img/sprites/sprite.svg#form_success`)
+                        use(xlink:href=`img/sprites/sprite.svg#check_circle`)
                 .form__text!= checkProps.successText
                 - if(checkProps.successBtn == true)
                     +btn({
                         classes: 'form__btn',
                         name: 'На главную',
-                        icon: 'arrow_enter'
+                        cMode: 'accent',
+                        sMode: 'full'
                     })

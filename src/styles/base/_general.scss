@@ -1345,12 +1345,14 @@ html.hystmodal__opened {
 	}
 }
 
-/*.air-datepicker {
+.air-datepicker {
 	-moz-user-select: none;
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
 	border: none;
+	padding: 10px;
+	border-radius: 10px;
 }
 
 .air-datepicker {
@@ -1362,18 +1364,18 @@ html.hystmodal__opened {
 	--adp-nav-color-secondary: var(--c-text); // светлый текст
 	--adp-color-other-month: #919191; // цвет текста в другом месяце
 	--adp-color: var(--c-text); // основной текст
-	--adp-day-name-color: #C8C8C8; //цвет текста дней недели
-	--adp-color-current-date: #CA0001; // текущий день
-	--adp-cell-background-color-selected: #CA0001; //фон выбранного дня
-	--adp-background-color-selected-other-month: #CA0001; //фон выбранного дня в другом месяце
-	--adp-cell-background-color-selected-hover: #8E0001; // наведение на выбранный день
-	--adp-background-color-selected-other-month-focused: #8E0001; // наведение на выбранный день в другом месяце
-	--adp-cell-background-color-hover: #DD595A; // наведение на день
+	--adp-day-name-color: #FC00FF; //цвет текста дней недели
+	--adp-color-current-date: #2453E1; // текущий день
+	--adp-cell-background-color-selected: #2453E1; //фон выбранного дня
+	--adp-background-color-selected-other-month: #2453E1; //фон выбранного дня в другом месяце
+	--adp-cell-background-color-selected-hover: #2427e1; // наведение на выбранный день
+	--adp-background-color-selected-other-month-focused: #2427e1; // наведение на выбранный день в другом месяце
+	--adp-cell-background-color-hover: #4571f7; // наведение на день
 	--adp-background-color-hover: #F4F4F4; // наведение на стрелку
 	--adp-cell-background-color-in-range: #FCF2F2; // фон ячейки в периоде
 	--adp-background-color-in-range: #FCF2F2; // фон ячейки в периоде в другом месяце
-	--adp-cell-background-color-in-range-hover: #DD595A; // наведение на ячейки в периоде
-	--adp-background-color-in-range-focused: #DD595A; // наведение на ячейки в периоде в другом месяце
+	--adp-cell-background-color-in-range-hover: #4571f7; // наведение на ячейки в периоде
+	--adp-background-color-in-range-focused: #4571f7; // наведение на ячейки в периоде в другом месяце
 
 	&.-inline- {
 		margin-top: 12px;
@@ -1402,7 +1404,7 @@ html.hystmodal__opened {
 		}
 	}
 
-	.air-datepicker-nav--action {
+	/*.air-datepicker-nav--action {
 		width: 16px;
 		height: 16px;
 
@@ -1411,14 +1413,14 @@ html.hystmodal__opened {
 			height: 16px;
 		}
 
-		&[data-action="prev"] {
+		/*&[data-action="prev"] {
 			transform: rotate(90deg);
 		}
 
 		&[data-action="next"] {
 			transform: rotate(-90deg);
 		}
-	}
+	}*/
 
 	.air-datepicker-nav {
 		align-items: center;
@@ -1426,8 +1428,8 @@ html.hystmodal__opened {
 }
 
 .air-datepicker-global-container {
-	z-index: 99;
-}*/
+	z-index: 80;
+}
 
 /* стили для печати */
 /*@media print {

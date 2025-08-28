@@ -1,4 +1,4 @@
-.city-modal {
+/*.city-modal {
     .modal__content {
         padding: 20px;
     }
@@ -237,30 +237,4 @@
             margin-bottom: 24px;
         }
     }
-}
-
-.form-modal {
-    .modal__inner {
-        margin-top: 0;
-    }
-
-    .modal__close {
-        width: 24px;
-        height: 24px;
-        border: none;
-        right: 24px;
-        top: 24px;
-
-        @include max(xs) {
-            right: 16px;
-            top: 20px;
-        }
-
-        svg {
-            @include max(mobile) {
-                width: 24px;
-                height: 24px;
-            }
-        }
-    }
-}
+}*/

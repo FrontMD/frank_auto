@@ -85,3 +85,22 @@
         }
     }
 }
+
+.s-text {
+    &--narrow &__content {
+        padding: 0 16.5vw;
+        max-width: 100%;
+
+        @include max(laptop) {
+            padding: 0 8vw;
+        }
+
+        @include max(laptop-small) {
+            padding: 0;
+        }
+
+        @include max(mobile) {
+            padding: 0;
+        }
+    }
+}

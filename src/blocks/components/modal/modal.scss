@@ -1,4 +1,6 @@
 .modal.hystmodal {
+    z-index: 70;
+
     .hystmodal__window {
         transition: all 0.3s linear;
         transform: scale(0);
@@ -24,6 +26,7 @@
 .hystmodal__shadow.hystmodal__shadow--show {
     background-color: $c-text;
     opacity: 0.6;
+    z-index: 55;
 }
 
 .modal {
@@ -50,16 +53,9 @@
         }
 
         svg {
-            width: 16px;
-            height: 16px;
+            width: 24px;
+            height: 24px;
         }
-    }
-
-    &__title {
-        letter-spacing: -0.02em;
-        text-align: center;
-        padding: 0 40px;
-        color: $c-text;
     }
 
     &__content {
@@ -68,9 +64,9 @@
         width: 100%;
         max-width: 410px;
         min-width: 410px;
-        z-index: 9999;
+        z-index: 70;
         padding: 20px 16px;
-        border-radius: 4px;
+        border-radius: 16px;
         max-height: 95vh;
         overflow-y: auto;
 
@@ -83,9 +79,4 @@
             height: 100dvh;
         }
     }
-
-    &__inner {
-        margin-top: 24px;
-    }
-
 }

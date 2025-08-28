@@ -521,6 +521,10 @@
     }
 }
 
+.hystmodal__shadow--show+.select2-container.select2-container--default.select2-container--open {
+    z-index: 70;
+}
+
 .select2-container--default .select2-selection--single .select2-selection__rendered {
     color: $c-text;
     transition: color $tr-time linear;
