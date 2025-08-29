@@ -1,0 +1,48 @@
+-
+    const defaultSConditionsProps = {
+        classes: '',
+        img: '<picture><source srcset="img/conditions/conditions_bg_mob.webp" media="(max-width: 767px)"><img src="img/conditions/conditions_bg.webp" alt=""></picture>',
+        title: 'Условия получения кредита',
+        list: [
+            {
+                title: 'Без подтверждения дохода',
+                text: 'Чтобы получить кредит, вам нужны паспорт и водительское удостоверение. Банк не требует подтверждение дохода, информацию о продавце и оформление КАСКО.'
+            },
+            {
+                title: 'Без первоначального взноса',
+                text: 'Кредит выдаётся без первоначального взноса на карту, с которой без процентов можно снять наличные. Банк доставит карту бесплатно.'
+            },
+            {
+                title: 'Без сложностей с регистрацией',
+                text: 'Для регистрации автомобиля после покупки нужны только копии договора купли-продажи и паспорта транспортного средства. Да, это всё.'
+            },
+        ]
+    }
+
+mixin s-conditions(props= defaultSConditionsProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultSConditionsProps.classes,
+            img: props.img ? props.img : defaultSConditionsProps.img,
+            title: props.title ? props.title : defaultSConditionsProps.title,
+            list: props.list ? props.list : defaultSConditionsProps.list,
+        }
+
+    section.section.s-conditions(class= checkProps.classes)&attributes(attributes)
+        .section__container
+            .section-block.section-block--dark.s-conditions__block
+                .section-block__bg!= checkProps.img
+                .section-block__content.s-conditions__content
+                    .s-conditions__title.title.title--light!= checkProps.title
+                    .s-conditions__list
+                        - let counter = 0
+                        - while(counter < checkProps.list.length)
+                            .s-conditions__item
+                                .s-conditions__icon
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#exc`) 
+                                .s-conditions__texts
+                                    .s-conditions__subtitle!=  checkProps.list[counter].title
+                                    .s-conditions__text!=  checkProps.list[counter].text
+
+                            - counter++

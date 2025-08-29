@@ -162,6 +162,22 @@
                 grid-template-columns: minmax(0, 33%) minmax(0, 66%);
             }
         }
+
+        &--header {
+            padding-left: 0;
+
+            .checkboxes-grid {
+                padding-left: 85px;
+            }
+        }
+
+        &--gap70 {
+            gap: 70px;
+        }
+
+        .logo-radios {
+            grid-column: 1 / 3;
+        }
     }
 
     &__marker {
@@ -662,5 +678,36 @@
                 font-size: 16px;
             }
         }
+    }
+
+}
+
+.logo-radios {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &__name {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0;
+        color: $c-text;
+    }
+
+    &__list {
+        display: flex;
+        align-items: stretch;
+        gap: 10px;
+    }
+}
+
+.checkboxes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+
+    @include max(large) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }

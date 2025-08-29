@@ -5,6 +5,8 @@
         type: 'text',
         textareaRows: '8',
         placeholder: '',
+        radioCheckboxImg: '',
+        radioCheckboxText: '',
         inputAttr: {},
         selectOptions: [
             "вариант 1",
@@ -28,6 +30,8 @@ mixin field(props = defaultFieldProps)
             type: props.type ? props.type : defaultFieldProps.type,
             textareaRows: props.textareaRows ? props.textareaRows : defaultFieldProps.textareaRows,
             placeholder: props.placeholder ? props.placeholder : defaultFieldProps.placeholder,
+            radioCheckboxImg: props.radioCheckboxImg ? props.radioCheckboxImg : defaultFieldProps.radioCheckboxImg,
+            radioCheckboxText: props.radioCheckboxText ? props.radioCheckboxText : defaultFieldProps.radioCheckboxText,
             inputAttr: props.inputAttr ? props.inputAttr : defaultFieldProps.inputAttr,
             selectOptions: props.selectOptions ? props.selectOptions : defaultFieldProps.selectOptions,
             isDouble: props.isDouble ? props.isDouble : defaultFieldProps.isDouble,
@@ -36,7 +40,12 @@ mixin field(props = defaultFieldProps)
             selectOptions2: props.selectOptions2 ? props.selectOptions2 : defaultFieldProps.selectOptions2
         }
 
-    .field(class= `${checkProps.classes} ${checkProps.isDouble ? "field--double" : ""} ${checkProps.type === 'radio' ? 'field--radio' : ''} ${checkProps.type === 'checkbox' ? 'field--checkbox' : ''}` data-js='formField')&attributes(attributes)
+
+    .field(class= `${checkProps.classes} 
+    ${checkProps.isDouble ? "field--double" : ""} 
+    ${checkProps.type === 'radio' ? 'field--radio' : ''} 
+    ${checkProps.type === 'checkbox' ? 'field--checkbox' : ''}` 
+    data-js='formField')&attributes(attributes)
         //- if(checkProps.isSearch)
             button.field__search(type='submit')
                 svg 
@@ -45,9 +54,20 @@ mixin field(props = defaultFieldProps)
             - if(checkProps.tag === 'input')
                 input.field__input(type=checkProps.type placeholder=checkProps.placeholder)&attributes(checkProps.inputAttr)
                 - if(checkProps.type === 'radio')
-                    span.fake-radio
+                    - let radioImgClass = checkProps.radioCheckboxImg.length > 0 ? "fake-radio--img" : ''
+                    span.fake-radio(class=radioImgClass)
+                        - if(checkProps.radioCheckboxImg.length > 0)
+                            img(src=checkProps.radioCheckboxImg, alt="")
                 - else if(checkProps.type === 'checkbox')
-                    span.fake-checkbox
+                    - if (checkProps.radioCheckboxText.length > 0)
+                        span.fake-checkbox.fake-checkbox--text
+                            span.fake-checkbox__square
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#check`)
+                            span.fake-checkbox__text!= checkProps.radioCheckboxText
+                    - else
+                        span.fake-checkbox
+
                 - else
                 span.field__error(data-js='fieldError')
 

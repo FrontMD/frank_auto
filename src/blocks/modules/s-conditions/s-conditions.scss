@@ -1,0 +1,61 @@
+.s-conditions {
+    &__block {
+        padding: 50px 60px;
+    }
+
+    &__content {
+        max-width: 58.4%;
+    }
+
+    &__title {
+        font-family: $ff-rooftop;
+        font-weight: 800;
+        font-size: 45px;
+        line-height: 51px;
+        letter-spacing: 0;
+    }
+
+    &__list {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding-right: 18.74%;
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        color: $c-white;
+    }
+
+    &__icon {
+        width: 16px;
+        height: 22px;
+        margin-top: 3px;
+        color: $c-accent-2;
+
+        svg {
+            width: 16px;
+            height: 22px;
+        }
+    }
+
+    &__subtitle {
+        font-family: $ff-rooftop;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 130%;
+        letter-spacing: 0;
+    }
+
+    &__text {
+        margin-top: 10px;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 21px;
+        letter-spacing: 0;
+
+    }
+}
