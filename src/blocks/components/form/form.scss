@@ -161,22 +161,73 @@
             @include max(large) {
                 grid-template-columns: minmax(0, 33%) minmax(0, 66%);
             }
+
+            @include max(laptop-small) {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+
+        &--cgrid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+
+            @include max(mobile) {
+                grid-template-columns: minmax(0, 1fr);
+            }
         }
 
         &--header {
             padding-left: 0;
 
+            @include max(laptop-small) {
+                padding-left: 0;
+            }
+
+            @include max(tablet) {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
             .checkboxes-grid {
                 padding-left: 85px;
+
+                @include max(laptop-small) {
+                    padding-left: 40px;
+                }
+
+                @include max(tablet) {
+                    padding-left: 80px;
+                }
+
+                @include max(mobile) {
+                    padding-left: 0;
+                }
             }
         }
 
         &--gap70 {
             gap: 70px;
+
+            @include max(large) {
+                gap: 70px;
+            }
+
+            @include max(laptop-small) {
+                gap: 32px 16px;
+            }
+
+            @include max(mobile) {
+                gap: 16px;
+            }
         }
 
         .logo-radios {
             grid-column: 1 / 3;
+
+            @include max(mobile) {
+                grid-column: 1 / 2;
+                margin-top: 14px;
+            }
         }
     }
 
@@ -563,6 +614,10 @@
     &--list &__fields--column {
         grid-template-columns: minmax(0, 1fr);
     }
+
+    &--list &__fields--3 {
+        grid-template-columns: minmax(0, 46%) repeat(2, minmax(0, 27%));
+    }
 }
 
 .form-auto {
@@ -687,6 +742,11 @@
     align-items: center;
     gap: 20px;
 
+    @include max(laptop-small) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     &__name {
         font-weight: 500;
         font-size: 16px;
@@ -698,6 +758,7 @@
     &__list {
         display: flex;
         align-items: stretch;
+        flex-wrap: wrap;
         gap: 10px;
     }
 }
@@ -709,5 +770,9 @@
 
     @include max(large) {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    @include max(mobile) {
+        grid-template-columns: minmax(0, 1fr);
     }
 }

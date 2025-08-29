@@ -35,7 +35,7 @@ function fieldsRangeController() {
             
             if(isRange) {
 
-                if(ww > 768) {
+                if(ww > 767) {
                     tooltips = { 
                         to: function(value) { return Math.round(value).toLocaleString() + unit; },
                         from: function(value) { return Math.round(value).toLocaleString() + unit; } 
@@ -57,12 +57,12 @@ function fieldsRangeController() {
                     }
                 });
     
-                if(ww > 768) {
+                if(ww > 767) {
                     mergeTooltips(slider, 30, ' - ');
                 }
 
             } else {
-                if(ww > 768) {
+                if(ww > 767) {
                     tooltips = [{to: function(value) { return Math.round(value).toLocaleString() + unit; }}]
                 }
 

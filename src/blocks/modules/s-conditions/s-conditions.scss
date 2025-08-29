@@ -1,10 +1,55 @@
 .s-conditions {
     &__block {
         padding: 50px 60px;
+
+        @include max(laptop-small) {
+            padding: 20px;
+        }
+
+        @include max(mobile) {
+            padding: 20px 10px;
+
+        }
+    }
+
+    .section-block__bg {
+        &:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(270deg, rgba(0, 0, 0, 0) 21.04%, #000000 68.41%);
+
+            @include max(mobile) {
+                background:
+                    linear-gradient(360deg, rgba(0, 0, 0, 0) 78.51%, #000000 85.73%),
+                    linear-gradient(180deg, rgba(0, 0, 0, 0) 41.29%, #000000 52.62%);
+            }
+        }
+
+        @include max(mobile) {
+            padding-top: 33.3%;
+
+            img {
+                height: auto;
+                aspect-ratio: 1 / 0.9;
+            }
+        }
     }
 
     &__content {
         max-width: 58.4%;
+
+        @include max(laptop-small) {
+            max-width: 80%;
+        }
+
+        @include max(mobile) {
+            max-width: 100%;
+
+        }
     }
 
     &__title {
@@ -13,6 +58,11 @@
         font-size: 45px;
         line-height: 51px;
         letter-spacing: 0;
+
+        @include max(mobile) {
+            font-size: 32px;
+            line-height: 36px;
+        }
     }
 
     &__list {
@@ -21,6 +71,12 @@
         flex-direction: column;
         gap: 30px;
         padding-right: 18.74%;
+
+        @include max(mobile) {
+            padding-right: 0;
+            margin-top: 61%;
+            gap: 20px;
+        }
     }
 
     &__item {
@@ -56,6 +112,10 @@
         font-size: 15px;
         line-height: 21px;
         letter-spacing: 0;
+
+        @include max(mobile) {
+            margin-top: 3px;
+        }
 
     }
 }

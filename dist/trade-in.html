@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Кредитование</title>
+    <title>Trade-in</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -281,7 +281,7 @@
                               <use xlink:href="img/sprites/sprite.svg#arrow_angle_right"></use>
                             </svg></span>
                         </li>
-                        <li class="breadcrumbs__item breadcrumbs__item--current"><span>Кредитование</span>
+                        <li class="breadcrumbs__item breadcrumbs__item--current"><span>Trade-in</span>
                         </li>
                       </ul>
                     </div>
@@ -292,19 +292,45 @@
                 <div class="section-block img-intro__block">
                   <div class="section-block__bg img-intro__bg">
                     <picture>
-                      <source srcset="img/intros/credit_intro_mob.webp" media="(max-width: 767px)"><img src="img/intros/credit_intro.webp" alt="">
+                      <source srcset="img/intros/trade_in_intro_mob.webp" media="(max-width: 767px)"><img src="img/intros/trade_in_intro.webp" alt="">
                     </picture>
                   </div>
                   <div class="section-block__content img-intro__content">
                     <div class="img-intro__title title title--50 title--light">
-                      <h1>Кредитование</h1>
+                      <h1>Госпрограмма Trade-in</h1>
                     </div>
-                    <div class="img-intro__text">Воплотите мечту о новом автомобиле уже сегодня с выгодным предложением. <br>Заполните заявку, чтобы получить уникальное предложение.</div>
+                    <div class="img-intro__text">Обменяйте свой автомобиль на новый с максимальной скидкой</div>
                     <div class="img-intro__sticker title-sticker">По льготной ставке<span>от 1,9%</span></div>
                   </div>
                 </div>
               </div>
             </section>
+        <section class="section">
+          <div class="section__container section__content">
+                <div class="list-width-icons">
+                  <div class="list-width-icons-block">
+                    <div class="list-width-icons-img"><img src="img/corp/common-icon1.svg"></div>
+                    <div class="list-width-icons-text">Выгода<br>до&nbsp;1&nbsp;500&nbsp;000&nbsp;₽</div>
+                  </div>
+                  <div class="list-width-icons-block">
+                    <div class="list-width-icons-img"><img src="img/corp/common-icon2.svg"></div>
+                    <div class="list-width-icons-text">100&nbsp;000&nbsp;₽  за&nbsp;тест&#8209;драйв</div>
+                  </div>
+                  <div class="list-width-icons-block">
+                    <div class="list-width-icons-img"><img src="img/corp/common-icon3.svg"></div>
+                    <div class="list-width-icons-text">17% докризисная ставка</div>
+                  </div>
+                  <div class="list-width-icons-block">
+                    <div class="list-width-icons-img"><img src="img/corp/common-icon4.svg"></div>
+                    <div class="list-width-icons-text">Услуга  удаленной комиссии</div>
+                  </div>
+                  <div class="list-width-icons-block">
+                    <div class="list-width-icons-img"><img src="img/corp/common-icon5.svg"></div>
+                    <div class="list-width-icons-text">2&nbsp;года гарантии  в&nbsp;подарок</div>
+                  </div>
+                </div>
+          </div>
+        </section>
             <section class="section list-form" id="techSpec">
               <div class="section__container">
                 <div class="section-block list-form__block">
@@ -312,10 +338,10 @@
                     <div class="form__content" data-js="form-content">
                       <div class="form__item">
                         <div class="title title--30 form__list-title">
-                          <div class="form__marker">1.</div>Ваш будущий автомобиль
+                          <div class="form__marker">1.</div>Программа Trade-in
                         </div>
-                        <div class="form__block form__block--sgrid">
-                          <div class="form__fields form__fields--column">
+                        <div class="form__block">
+                          <div class="form__fields form__fields--3">
                                 <div class="field  
      
      
@@ -331,6 +357,36 @@
                                       <option value="Audi">Audi</option>
                                       <option value="Tank">Tank</option>
                                       <option value="Rox Motor Tech">Rox Motor Tech</option>
+                                    </select><span class="field__error" data-js="fieldError"></span>
+                                  </label>
+                                </div>
+                                <div class="field  
+     
+     
+    " data-js="formField">
+                                  <label>
+                                    <select class="field__select" data-placeholder="Год выпуска" data-js="formSelect" required="">
+                                      <option label=" "></option>
+                                      <option value="2020">2020</option>
+                                      <option value="2021">2021</option>
+                                      <option value="2022">2022</option>
+                                      <option value="2023">2023</option>
+                                      <option value="2024">2024</option>
+                                      <option value="2025">2025</option>
+                                    </select><span class="field__error" data-js="fieldError"></span>
+                                  </label>
+                                </div>
+                                <div class="field  
+     
+     
+    " data-js="formField">
+                                  <label>
+                                    <select class="field__select" data-placeholder="Трансмиссия" data-js="formSelect" required="">
+                                      <option label=" "></option>
+                                      <option value="Механическая">Механическая</option>
+                                      <option value="Автоматическая">Автоматическая</option>
+                                      <option value="Вариатор">Вариатор</option>
+                                      <option value="Роботизированная">Роботизированная</option>
                                     </select><span class="field__error" data-js="fieldError"></span>
                                   </label>
                                 </div>
@@ -355,135 +411,23 @@
      
     " data-js="formField">
                                   <label>
-                                    <select class="field__select" data-placeholder="Комплектация" data-js="formSelect" required="">
-                                      <option label=" "></option>
-                                      <option value="Base">Base</option>
-                                      <option value="Comfort">Comfort</option>
-                                      <option value="Sport">Sport</option>
-                                      <option value="Luxe">Luxe</option>
-                                    </select><span class="field__error" data-js="fieldError"></span>
-                                  </label>
-                                </div>
-                          </div>
-                          <div class="form__auto form-auto">
-                            <div class="form-auto__img"><img src="img/catalog-model/model_5.webp" alt=""></div>
-                            <div class="form-auto__info">
-                              <div class="form-auto__title title">Lixiang L7 1.4 100 л.с.<br>6MT 2WD (2020)</div>
-                              <div class="form-auto__prices">
-                                <div class="form-auto__price form-auto__price--base"><span>Базовая цена</span>12 500 000 ₽</div>
-                                <div class="form-auto__price form-auto__price--discount"><span>Цена со скидками</span>5 500 000 ₽</div>
-                              </div>
-                              <div class="form-auto__credit title-sticker">Платеж<span>70 000 ₽/мес.</span></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="form__item">
-                        <div class="form__block form__block--cgrid form__block--header">
-                          <div class="title title--30 form__list-title">
-                            <div class="form__marker">2.</div>Купить в кредит
-                          </div>
-                          <div class="checkboxes-grid">
-                                <div class="field  
-     
-     
-    field--checkbox" data-js="formField">
-                                  <label>
-                                    <input class="field__input" type="checkbox" placeholder="" checked=""><span class="fake-checkbox fake-checkbox--text"><span class="fake-checkbox__square">
-                                        <svg>
-                                          <use xlink:href="img/sprites/sprite.svg#check"></use>
-                                        </svg></span><span class="fake-checkbox__text">Скидка 70 000 ₽</span></span><span class="field__error" data-js="fieldError"></span>
+                                    <input class="field__input" type="text" placeholder="Ваша цена, руб" required="" data-type="number"><span class="field__error" data-js="fieldError"></span>
                                   </label>
                                 </div>
                                 <div class="field  
      
      
-    field--checkbox" data-js="formField">
+    " data-js="formField">
                                   <label>
-                                    <input class="field__input" type="checkbox" placeholder="" checked=""><span class="fake-checkbox fake-checkbox--text"><span class="fake-checkbox__square">
-                                        <svg>
-                                          <use xlink:href="img/sprites/sprite.svg#check"></use>
-                                        </svg></span><span class="fake-checkbox__text">Акция “Выгодный кредит” Скидка 30 000 ₽</span></span><span class="field__error" data-js="fieldError"></span>
+                                    <input class="field__input" type="text" placeholder="Пробег, км" required="" data-type="number"><span class="field__error" data-js="fieldError"></span>
                                   </label>
                                 </div>
-                          </div>
-                        </div>
-                        <div class="form__block form__block--cgrid form__block--gap70">
-                              <div class="field-range" data-js="fieldRange" data-type="single" data-unit=" мес" data-min="6" data-max="84" data-step="6">
-                                <input class="field-range__input field-range__input--min" type="number" min="6" max="84" data-js="fieldRangeMin">
-                                <div class="field-range__title">Cрок кредита, месяцев</div>
-                                <div class="field-range__range" data-js="fieldRangeSlider"></div>
-                                <div class="field-range__values">
-                                  <div class="field-range__value" data-js="fieldRangeMinVal"></div>
-                                  <div class="field-range__value" data-js="fieldRangeMaxVal"></div>
-                                </div>
-                              </div>
-                              <div class="field  
-     
-     
-    " data-js="formField">
-                                <label>
-                                  <input class="field__input" type="text" placeholder="Первоначальный взнос" data-type="number" required=""><span class="field__error" data-js="fieldError"></span>
-                                </label>
-                              </div>
-                          <div class="logo-radios">
-                            <div class="logo-radios__name">Выберите банк:</div>
-                            <div class="logo-radios__list">
-                                  <div class="field  
-     
-    field--radio 
-    " data-js="formField">
-                                    <label>
-                                      <input class="field__input" type="radio" placeholder="" name="bank" checked=""><span class="fake-radio fake-radio--img"><img src="img/about/bank_1.webp" alt=""></span><span class="field__error" data-js="fieldError"></span>
-                                    </label>
-                                  </div>
-                                  <div class="field  
-     
-    field--radio 
-    " data-js="formField">
-                                    <label>
-                                      <input class="field__input" type="radio" placeholder="" name="bank"><span class="fake-radio fake-radio--img"><img src="img/about/bank_2.webp" alt=""></span><span class="field__error" data-js="fieldError"></span>
-                                    </label>
-                                  </div>
-                                  <div class="field  
-     
-    field--radio 
-    " data-js="formField">
-                                    <label>
-                                      <input class="field__input" type="radio" placeholder="" name="bank"><span class="fake-radio fake-radio--img"><img src="img/about/bank_3.webp" alt=""></span><span class="field__error" data-js="fieldError"></span>
-                                    </label>
-                                  </div>
-                                  <div class="field  
-     
-    field--radio 
-    " data-js="formField">
-                                    <label>
-                                      <input class="field__input" type="radio" placeholder="" name="bank"><span class="fake-radio fake-radio--img"><img src="img/about/bank_4.webp" alt=""></span><span class="field__error" data-js="fieldError"></span>
-                                    </label>
-                                  </div>
-                                  <div class="field  
-     
-    field--radio 
-    " data-js="formField">
-                                    <label>
-                                      <input class="field__input" type="radio" placeholder="" name="bank"><span class="fake-radio fake-radio--img"><img src="img/about/bank_5.webp" alt=""></span><span class="field__error" data-js="fieldError"></span>
-                                    </label>
-                                  </div>
-                                  <div class="field  
-     
-    field--radio 
-    " data-js="formField">
-                                    <label>
-                                      <input class="field__input" type="radio" placeholder="" name="bank"><span class="fake-radio fake-radio--img"><img src="img/about/bank_6.webp" alt=""></span><span class="field__error" data-js="fieldError"></span>
-                                    </label>
-                                  </div>
-                            </div>
                           </div>
                         </div>
                       </div>
                       <div class="form__item">
                         <div class="title title--30 form__list-title">
-                          <div class="form__marker">3.</div>Персональные данные
+                          <div class="form__marker">2.</div>Персональные данные
                         </div>
                         <div class="form__block">
                           <div class="form__fields">
@@ -551,14 +495,15 @@
                   <div class="swiper-wrapper">
                     <div class="info-list__card swiper-slide">
                       <div class="info-list__content">
-                        <div class="info-list__img"><img src="img/info-list/info_item_1.webp" alt=""></div>
+                        <div class="info-list__img"><img src="img/info-list/info_item_9.webp" alt=""></div>
                         <div class="info-list__icon">
                           <svg>
                             <use xlink:href="img/sprites/sprite.svg#exc"> </use>
                           </svg>
                         </div>
                         <div class="info-list__texts">
-                          <div class="info-list__title">40 кредитных программ на выбор</div>
+                          <div class="info-list__title">Минимальный пакет документов</div>
+                          <div class="info-list__text">два комплекта ключей, ПТС, СТС, и паспорт владельца</div>
                         </div>
                       </div>
                     </div>
@@ -571,85 +516,64 @@
                           </svg>
                         </div>
                         <div class="info-list__texts">
-                          <div class="info-list__title">Срок кредитования до 7 лет</div>
+                          <div class="info-list__title">Доплатить разницу в стоимости</div>
+                          <div class="info-list__text">возможно как наличными, так и оформить выгодный автокредит</div>
                         </div>
                       </div>
                     </div>
                     <div class="info-list__card swiper-slide">
                       <div class="info-list__content">
-                        <div class="info-list__img"><img src="img/info-list/info_item_3.webp" alt=""></div>
+                        <div class="info-list__img"><img src="img/info-list/info_item_10.webp" alt=""></div>
                         <div class="info-list__icon">
                           <svg>
                             <use xlink:href="img/sprites/sprite.svg#exc"> </use>
                           </svg>
                         </div>
                         <div class="info-list__texts">
-                          <div class="info-list__title">Размер кредита до 3 000 000 ₽</div>
+                          <div class="info-list__title">Экономия Вашего времени</div>
+                          <div class="info-list__text">на поиске покупателя и т.д</div>
                         </div>
                       </div>
                     </div>
                     <div class="info-list__card swiper-slide">
                       <div class="info-list__content">
-                        <div class="info-list__img"><img src="img/info-list/info_item_4.webp" alt=""></div>
+                        <div class="info-list__img"><img src="img/info-list/info_item_11.webp" alt=""></div>
                         <div class="info-list__icon">
                           <svg>
                             <use xlink:href="img/sprites/sprite.svg#exc"> </use>
                           </svg>
                         </div>
                         <div class="info-list__texts">
-                          <div class="info-list__title">Досрочное погашение без штрафа</div>
+                          <div class="info-list__title">Вы сразу можете уехать на новом автомобиле</div>
+                          <div class="info-list__text">не дожидаясь продажи старого</div>
                         </div>
                       </div>
                     </div>
                     <div class="info-list__card swiper-slide">
                       <div class="info-list__content">
-                        <div class="info-list__img"><img src="img/info-list/info_item_5.webp" alt=""></div>
+                        <div class="info-list__img"><img src="img/info-list/info_item_12.webp" alt=""></div>
                         <div class="info-list__icon">
                           <svg>
                             <use xlink:href="img/sprites/sprite.svg#exc"> </use>
                           </svg>
                         </div>
                         <div class="info-list__texts">
-                          <div class="info-list__title">Первоначальный взнос от 0%</div>
+                          <div class="info-list__title">Отсутствие</div>
+                          <div class="info-list__text">юридических и финансовых рисков</div>
                         </div>
                       </div>
                     </div>
                     <div class="info-list__card swiper-slide">
                       <div class="info-list__content">
-                        <div class="info-list__img"><img src="img/info-list/info_item_6.webp" alt=""></div>
+                        <div class="info-list__img"><img src="img/info-list/info_item_13.webp" alt=""></div>
                         <div class="info-list__icon">
                           <svg>
                             <use xlink:href="img/sprites/sprite.svg#exc"> </use>
                           </svg>
                         </div>
                         <div class="info-list__texts">
-                          <div class="info-list__title">Ставка по кредиту от 1,9%</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="info-list__card swiper-slide">
-                      <div class="info-list__content">
-                        <div class="info-list__img"><img src="img/info-list/info_item_7.webp" alt=""></div>
-                        <div class="info-list__icon">
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#exc"> </use>
-                          </svg>
-                        </div>
-                        <div class="info-list__texts">
-                          <div class="info-list__title">Процент одобрения кредита 98%</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="info-list__card swiper-slide">
-                      <div class="info-list__content">
-                        <div class="info-list__img"><img src="img/info-list/info_item_8.webp" alt=""></div>
-                        <div class="info-list__icon">
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#exc"> </use>
-                          </svg>
-                        </div>
-                        <div class="info-list__texts">
-                          <div class="info-list__title">Ответ кредитных специалистов в течение 30 минут</div>
+                          <div class="info-list__title">Оценка и диагностика автомобиля</div>
+                          <div class="info-list__text">производится бесплатно</div>
                         </div>
                       </div>
                     </div>
@@ -657,76 +581,40 @@
                 </div>
               </div>
             </section>
-            <section class="section s-conditions">
+            <section class="section s-list" id="techSpec">
               <div class="section__container">
-                <div class="section-block section-block--dark s-conditions__block">
-                  <div class="section-block__bg"><picture><source srcset="img/conditions/conditions_bg_mob.webp" media="(max-width: 767px)"><img src="img/conditions/conditions_bg.webp" alt=""></picture></div>
-                  <div class="section-block__content s-conditions__content">
-                    <div class="s-conditions__title title title--light">Условия получения кредита</div>
-                    <div class="s-conditions__list">
-                      <div class="s-conditions__item">
-                        <div class="s-conditions__icon">
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#exc"> </use>
-                          </svg>
-                        </div>
-                        <div class="s-conditions__texts">
-                          <div class="s-conditions__subtitle">Без подтверждения дохода</div>
-                          <div class="s-conditions__text">Чтобы получить кредит, вам нужны паспорт и водительское удостоверение. Банк не требует подтверждение дохода, информацию о продавце и оформление КАСКО.</div>
-                        </div>
+                <div class="section-block s-list__block">
+                  <div class="s-list__grid">
+                    <div class="s-list__content">
+                      <div class="s-list__header">
+                        <div class="s-list__icon"><img src="img/s-list-icons/s_list_icon_2.svg" alt=""></div>
+                        <div class="title title--24 s-list__title">Условия<br>покупки</div>
                       </div>
-                      <div class="s-conditions__item">
-                        <div class="s-conditions__icon">
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#exc"> </use>
-                          </svg>
-                        </div>
-                        <div class="s-conditions__texts">
-                          <div class="s-conditions__subtitle">Без первоначального взноса</div>
-                          <div class="s-conditions__text">Кредит выдаётся без первоначального взноса на карту, с которой без процентов можно снять наличные. Банк доставит карту бесплатно.</div>
-                        </div>
-                      </div>
-                      <div class="s-conditions__item">
-                        <div class="s-conditions__icon">
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#exc"> </use>
-                          </svg>
-                        </div>
-                        <div class="s-conditions__texts">
-                          <div class="s-conditions__subtitle">Без сложностей с регистрацией</div>
-                          <div class="s-conditions__text">Для регистрации автомобиля после покупки нужны только копии договора купли-продажи и паспорта транспортного средства. Да, это всё.</div>
-                        </div>
+                      <div class="s-list__list text-editor">
+                        <ul>
+                          <li>Взнос 0 ₽</li>
+                          <li>Автокредит для медицинских работников</li>
+                          <li>Срок кредита до 7 лет</li>
+                          <li>Скидка 60 000 на покупку нового автомобиля</li>
+                          <li>Госпрограмма первый автомобиль</li>
+                          <li>10% скидки по Trade-in на покупку нового автомобиля</li>
+                          <li>Семейный автомобиль </li>
+                          <li>Более 30 банков партнеров</li>
+                        </ul>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section class="section s-banks" data-js="sBanks">
-              <div class="section__container section__content">
-                <div class="section-header s-banks__header">
-                  <div class="s-banks__title title title--40">Банки-партнеры</div>
-                      <div class="slider-controls s-banks__controls">
-                        <button class="slider-control slider-control--prev" type="button" data-js="sliderPrev">
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#arrow_slider_left"></use>
-                          </svg>
-                        </button>
-                        <button class="slider-control slider-control--next" type="button" data-js="sliderNext">
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#arrow_slider_right"></use>
-                          </svg>
-                        </button>
+                    <div class="s-list__content">
+                      <div class="s-list__header">
+                        <div class="s-list__icon"><img src="img/s-list-icons/s_list_icon_3.svg" alt=""></div>
+                        <div class="title title--24 s-list__title">Необходимые<br>документы</div>
                       </div>
-                </div>
-                <div class="s-banks__slider" data-js="sBanksSlider">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide s-banks__slide"><img class="lazyload" src="" data-src="img/about/bank_1.webp" alt=""></div>
-                    <div class="swiper-slide s-banks__slide"><img class="lazyload" src="" data-src="img/about/bank_2.webp" alt=""></div>
-                    <div class="swiper-slide s-banks__slide"><img class="lazyload" src="" data-src="img/about/bank_3.webp" alt=""></div>
-                    <div class="swiper-slide s-banks__slide"><img class="lazyload" src="" data-src="img/about/bank_4.webp" alt=""></div>
-                    <div class="swiper-slide s-banks__slide"><img class="lazyload" src="" data-src="img/about/bank_5.webp" alt=""></div>
-                    <div class="swiper-slide s-banks__slide"><img class="lazyload" src="" data-src="img/about/bank_6.webp" alt=""></div>
+                      <div class="s-list__list s-list__list--small text-editor">
+                        <ul>
+                          <li>Паспорт</li>
+                          <li>Водительское удостоверение</li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

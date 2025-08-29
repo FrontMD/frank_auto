@@ -58,15 +58,15 @@ mixin info-list(props= defaultInfoListProps)
 
     section.section.info-list(class= checkProps.classes)&attributes(attributes)
         .section__container.section__content
-            .info-list__slider(data-js="infoListSlider")
+            .info-list__slider(data-js="sAdvantagesSlider")
                 .swiper-wrapper
                     - let cardsCount = 0
                     -while(cardsCount < checkProps.cards.length)
                         - let card = checkProps.cards[cardsCount]
                         .info-list__card.swiper-slide
-                            .info-list__img
-                                img(src=card.img alt="")
                             .info-list__content
+                                .info-list__img
+                                    img(src=card.img alt="")
                                 .info-list__icon
                                     svg
                                         use(xlink:href=`img/sprites/sprite.svg#exc`) 

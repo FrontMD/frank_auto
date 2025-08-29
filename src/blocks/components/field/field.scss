@@ -337,6 +337,11 @@
             border-radius: $br-section;
             padding: 10px 20px;
             min-height: 60px;
+
+            @include max(laptop-small) {
+                min-height: 50px;
+                padding: 8px 20px;
+            }
         }
 
         &--img img {
@@ -344,6 +349,11 @@
             max-width: 150px;
             max-height: 28px;
             object-fit: contain;
+
+            @include max(laptop-small) {
+                max-width: 125px;
+                max-height: 23px;
+            }
         }
 
         &--img::after {

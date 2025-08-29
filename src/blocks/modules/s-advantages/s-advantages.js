@@ -16,7 +16,7 @@ function sAdvantagesSlider() {
                     slidesPerView: 1.5,
                     spaceBetween: 10,
                 },
-                767: {
+                768: {
                     slidesPerView: 2.1,
                     spaceBetween: 20,
                 },

@@ -1,0 +1,203 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Trade-in"
+
+block content
+	.page-layout(data-js="pageLayout")
+		+s-breadcrumbs({
+			items: [
+				{
+					name: 'FrankAuto',
+					link: 'javascript:void(0);'
+				},
+				{
+					name: 'Trade-in',
+					link: 'javascript:void(0);'
+				}
+			],
+		})
+
+		+img-intro({
+			img: 'img/intros/trade_in_intro.webp',
+			imgMob: 'img/intros/trade_in_intro_mob.webp',
+			title: 'Госпрограмма Trade-in',
+			text: 'Обменяйте свой автомобиль на новый с максимальной скидкой',
+			sticker: {
+				inTitle: false,
+				small: 'По льготной ставке',
+				big: 'от 1,9%'
+			}
+		})
+
+		section.section
+			.section__container.section__content
+				+list-width-icons
+
+		+list-form({
+			personalMarker: '2.'
+		})
+			.form__item
+				.title.title--30.form__list-title
+					.form__marker 1.
+					| Программа Trade-in
+				.form__block
+					.form__fields.form__fields--3
+						+field({
+							classes: '',
+							tag: 'select',
+							placeholder: 'Марка',
+							selectOptions: [
+								"",
+								"LiXiang",
+								"Voyah",
+								"AITO",
+								"Chery",
+								"Zeekr",
+								"Audi",
+								"Tank",
+								"Rox Motor Tech",
+							],
+							inputAttr: {
+								'required': '',
+							},
+							})
+						+field({
+							classes: '',
+							tag: 'select',
+							placeholder: 'Год выпуска',
+							selectOptions: [
+								"",
+								"2020",
+								"2021",
+								"2022",
+								"2023",
+								"2024",
+								"2025",
+							],
+							inputAttr: {
+							'required': '',
+							},
+							})
+						+field({
+							classes: '',
+							tag: 'select',
+							placeholder: 'Трансмиссия',
+							selectOptions: [
+								"",
+								"Механическая",
+								"Автоматическая",
+								"Вариатор",
+								"Роботизированная",
+							],
+							inputAttr: {
+								'required': '',
+							},
+						})
+						+field({
+							tag: 'select',
+							placeholder: 'Модель',
+							selectOptions: [
+								"",
+								"LiXiang L6",
+								"LiXiang L7",
+								"LiXiang L9",
+								"LiXiang L9",
+								"LiXiang Mega",
+								"LiXiang One"
+							],
+							inputAttr: {
+								'required': '',
+							},
+
+						})
+						+field({
+							classes: '',
+							tag: 'input',
+							placeholder: 'Ваша цена, руб',
+							inputAttr: {
+								'required': '',
+								"data-type": "number"
+							},
+						})
+						+field({
+							classes: '',
+							tag: 'input',
+							placeholder: 'Пробег, км',
+							inputAttr: {
+								'required': '',
+								"data-type": "number"
+							},
+						})
+
+		+info-list({
+			classes: '',
+			cards: [
+				{
+					title: 'Минимальный пакет документов',
+					text: 'два комплекта ключей, ПТС, СТС, и паспорт владельца',
+					img: 'img/info-list/info_item_9.webp',
+
+				},
+				{
+					title: 'Доплатить разницу в стоимости',
+					text: 'возможно как наличными, так и оформить выгодный автокредит',
+					img: 'img/info-list/info_item_2.webp',
+				},
+				{
+					title: 'Экономия Вашего времени',
+					text: 'на поиске покупателя и т.д',
+					img: 'img/info-list/info_item_10.webp',
+				},
+				{
+					title: 'Вы сразу можете уехать на новом автомобиле',
+					text: 'не дожидаясь продажи старого',
+					img: 'img/info-list/info_item_11.webp',
+
+				},
+				{
+					title: 'Отсутствие',
+					text: 'юридических и финансовых рисков',
+					img: 'img/info-list/info_item_12.webp',
+
+				},
+				{
+					title: 'Оценка и диагностика автомобиля',
+					text: 'производится бесплатно',
+					img: 'img/info-list/info_item_13.webp',
+				},
+			],
+		})
+
+		+s-list
+			.s-list__grid
+				.s-list__content
+					.s-list__header
+						.s-list__icon
+							img(src="img/s-list-icons/s_list_icon_2.svg" alt="")
+						.title.title--24.s-list__title Условия<br>покупки
+					.s-list__list.text-editor
+						ul
+							li Взнос 0 ₽
+							li Автокредит для медицинских работников
+							li Срок кредита до 7 лет
+							li Скидка 60 000 на покупку нового автомобиля
+							li Госпрограмма первый автомобиль
+							li 10% скидки по Trade-in на покупку нового автомобиля
+							li Семейный автомобиль 
+							li Более 30 банков партнеров
+
+				.s-list__content
+					.s-list__header
+						.s-list__icon
+							img(src="img/s-list-icons/s_list_icon_3.svg" alt="")
+						.title.title--24.s-list__title Необходимые<br>документы
+					.s-list__list.s-list__list--small.text-editor
+						ul
+							li Паспорт
+							li Водительское удостоверение
+
+		+s-reviews({
+			title: 'Нам доверяют'
+		})
