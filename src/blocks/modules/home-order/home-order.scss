@@ -7,6 +7,16 @@
         }
     }
 
+    .section-block__bg {
+        @include max(mobile) {
+            background: linear-gradient(107.18deg, #56636E 11.96%, #2E333F 97.96%);
+
+            img {
+                display: none;
+            }
+        }
+    }
+
     &__content {
         min-height: 34.444vw;
         display: flex;
@@ -20,6 +30,10 @@
 
     &__title {
         font-weight: 800;
+
+        @include max(mobile) {
+            color: $c-white;
+        }
     }
 
     &__subtitle {

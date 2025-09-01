@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     $('img.lazyload').lazyload();
+    $('[data-js="customScrollbar"]').each((index, el) => {
+        console.log(el)
+        new SimpleBar(el, { autoHide: false });
+    })
     fancyboxInit();
     compareSliderInit();
     //anchorsInit();

@@ -1131,6 +1131,37 @@ html.hystmodal__opened {
 	}
 }
 
+.custom-scrollbar {
+	.simplebar-wrapper {
+		padding-bottom: 5px;
+	}
+
+	.simplebar-track {
+		background-color: $c-bg-main;
+		opacity: 0.5;
+
+	}
+
+	.simplebar-scrollbar {
+		background-color: $c-text-breadcrumbs;
+	}
+
+	.simplebar-track.simplebar-vertical {
+		width: 3px;
+	}
+
+	.simplebar-track.simplebar-horizontal {
+		height: 3px;
+	}
+
+	.simplebar-content-wrapper::-webkit-scrollbar,
+	.simplebar-hide-scrollbar::-webkit-scrollbar {
+		display: initial;
+		width: initial;
+		height: initial;
+	}
+}
+
 .my-fancybox {
 	.fancybox__viewport {
 		.fancybox__slide {
@@ -1165,7 +1196,7 @@ html.hystmodal__opened {
 
 			@include max(tablet) {
 				max-width: 95vw;
-				max-height: none;
+				max-height: fit-content;
 			}
 
 			@include max(mobile) {

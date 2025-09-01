@@ -1,11 +1,14 @@
 .list-width-icons {
     display: flex;
     gap: 20px;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 
     &-block {
         text-align: center;
+        min-width: 200px;
+        max-width: 250px;
+        width: 100%;
     }
 
     &-img {
@@ -34,7 +37,7 @@
     }
 }
 
-.teh-list-width-icons {
+/*.teh-list-width-icons {
     .list-width-icons {
         &-block {
             max-width: 250px;
@@ -49,4 +52,4 @@
             justify-content: space-between;
         }
     }
-}
+}*/

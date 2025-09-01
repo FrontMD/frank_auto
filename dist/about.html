@@ -31,7 +31,10 @@
       <div class="section site-header__section" data-js="siteHeaderSection">
         <div class="section__container site-header__container">
           <div class="site-header__top site-header__row" data-js="siteHeaderTop">
-            <div class="section-block site-header__block site-header__left"><a class="site-header__logo" href="javascript:void(0);"><img src="img/logo/logo_header.svg" alt=""><span>Почувствуй новое первым</span></a></div>
+            <div class="section-block site-header__block site-header__left"><a class="site-header__logo" href="javascript:void(0);">
+                <picture>
+                  <source media="(max-width: 992px)" srcset="img/logo/logo_header.svg"><img src="img/logo/logo_header.svg" alt="">
+                </picture><span>Почувствуй новое первым</span></a></div>
             <div class="section-block site-header__block site-header__schedule">
               <div class="header-schedule">
                 <div class="header-schedule__icon">
@@ -296,7 +299,7 @@
             </div>
           </div>
         </section>
-            <section class="section about-intro">
+            <section class="section about-intro" data-js="sText">
               <div class="section__container">
                 <div class="section-block about-intro__block">
                   <div class="about-intro__header ai-header">
@@ -309,7 +312,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="about-intro__text text-editor">
+                  <div class="about-intro__text text-editor" data-js="sTextContent">
                     <h4>Выбирая автосалон FRANK AUTO Вы получаете:</h4>
                     <ul>
                       <li>самые выгодные цены на автомобили в Москве;</li>
@@ -450,8 +453,8 @@
                     <div class="about-dir__flex">
                       <div class="about-dir__img"><img src="img/about/a_director.webp" alt=""></div>
                       <div class="about-dir__desc"> 
-                            <div class="quote about-dir__quote">
-                              <div class="quote__text text-editor">Я люблю автобизнес, особенно сегмент B2C, где нужно работать не только с одними дистрибьюторами, но и с клиентами – живыми людьми. Такую возможность я получила на новом месте работы, где я смогу делать клиентов реально счастливыми. В некоторых предыдущих автосалонах задача была полностью выжать покупателя, чтобы принести максимальную прибыль компании.</div>
+                            <div class="quote about-dir__quote" data-js="sText">
+                              <div class="quote__text text-editor" data-js="sTextContent">Я люблю автобизнес, особенно сегмент B2C, где нужно работать не только с одними дистрибьюторами, но и с клиентами – живыми людьми. Такую возможность я получила на новом месте работы, где я смогу делать клиентов реально счастливыми. В некоторых предыдущих автосалонах задача была полностью выжать покупателя, чтобы принести максимальную прибыль компании.</div>
                             </div>
                         <div class="about-dir__text text-editor">
                           <p>Мы создаем такие условия для наших клиентов, чтобы они почувствовали удовольствие от высококачественных автомобилей – развиваем инновационную систему поиска, анализа и приобретения новейших изобретений ведущих автоконцернов мира, обеспечиваем гарантию и ответственность за каждую модель.</p>

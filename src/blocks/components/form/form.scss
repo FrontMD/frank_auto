@@ -701,6 +701,10 @@
         flex-direction: column;
         gap: 3px;
 
+        @include max(tablet-small) {
+            flex-basis: auto;
+        }
+
         @include max(mobile) {
             font-size: 16px;
         }
@@ -728,6 +732,11 @@
 
         span {
             font-size: 20px;
+
+            @include max(tablet-small) {
+                display: inline-block;
+                margin-left: 5px;
+            }
 
             @include max(xs) {
                 font-size: 16px;

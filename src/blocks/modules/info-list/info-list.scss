@@ -20,17 +20,19 @@
         height: 100%;
         display: flex;
         align-items: stretch;
+        justify-content: center;
         gap: 10px;
-        padding-top: 72.5%;
+        //padding-top: 72.5%;
+        //padding-top: 241px;
         overflow: hidden;
 
-        @include max(tablet) {
+        /*@include max(tablet) {
             padding-top: 32vw;
         }
 
         @include max(mobile) {
             padding-top: 46vw;
-        }
+        }*/
     }
 
     &__img {
@@ -44,7 +46,19 @@
         }
     }
 
+    &__inner {
+        display: flex;
+        align-items: flex-end;
+        width: 332px;
+        max-width: 100%;
+
+        @include max(tablet) {
+            width: 100%;
+        }
+    }
+
     &__content {
+        margin-top: 72.5%;
         position: relative;
         display: flex;
         align-items: center;
@@ -78,5 +92,11 @@
         line-height: 100%;
         letter-spacing: 0;
         color: $c-text;
+    }
+}
+
+.info-list {
+    &--3 &__slider {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }

@@ -25,31 +25,32 @@ mixin cb-intro(props= defaultCBIntroProps)
                             .cb-intro__title.title.title--50.title--light
                                 | Грандиозная <br>распродажа Lixiang
                             .cb-intro__subtitle Получите специальную цену + подарок на выбор при покупке автомобиля
-                        .cb-intro__advantages.scrollbar.scrollbar--small
-                            .cb-intro__advantage
-                                .cb-intro__icon
-                                    svg
-                                        use(xlink:href=`img/sprites/sprite.svg#cb_icon_layout`)
-                                    img(src="img/catalog-brand/cb_icon_1.svg" alt="")
-                                span Гарантия <br>лучшей цены
-                            .cb-intro__advantage
-                                .cb-intro__icon
-                                    svg
-                                        use(xlink:href=`img/sprites/sprite.svg#cb_icon_layout`)
-                                    img(src="img/catalog-brand/cb_icon_2.svg" alt="")
-                                span Выгодный <br>кредит
-                            .cb-intro__advantage
-                                .cb-intro__icon
-                                    svg
-                                        use(xlink:href=`img/sprites/sprite.svg#cb_icon_layout`)
-                                    img(src="img/catalog-brand/cb_icon_3.svg" alt="")
-                                span Зачёт вашего <br>автомобиля в trade-in
-                            .cb-intro__advantage
-                                .cb-intro__icon
-                                    svg
-                                        use(xlink:href=`img/sprites/sprite.svg#cb_icon_layout`)
-                                    img(src="img/catalog-brand/cb_icon_4.svg" alt="")
-                                span Подарок на выбор <br>при покупке автомобиля
+                        .custom-scrollbar.cb-intro__scroll(data-js="customScrollbar")
+                            .cb-intro__advantages
+                                .cb-intro__advantage
+                                    .cb-intro__icon
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#cb_icon_layout`)
+                                        img(src="img/catalog-brand/cb_icon_1.svg" alt="")
+                                    span Гарантия <br>лучшей цены
+                                .cb-intro__advantage
+                                    .cb-intro__icon
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#cb_icon_layout`)
+                                        img(src="img/catalog-brand/cb_icon_2.svg" alt="")
+                                    span Выгодный <br>кредит
+                                .cb-intro__advantage
+                                    .cb-intro__icon
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#cb_icon_layout`)
+                                        img(src="img/catalog-brand/cb_icon_3.svg" alt="")
+                                    span Зачёт вашего <br>автомобиля в trade-in
+                                .cb-intro__advantage
+                                    .cb-intro__icon
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#cb_icon_layout`)
+                                        img(src="img/catalog-brand/cb_icon_4.svg" alt="")
+                                    span Подарок на выбор <br>при покупке автомобиля
 
             .section__container
                 .cb-intro__offer

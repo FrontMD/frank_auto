@@ -139,6 +139,12 @@
         }
     }
 
+    &__scroll {
+        @include max(tablet) {
+            overflow: auto;
+        }
+    }
+
     &__advantages {
         display: flex;
         align-items: stretch;
@@ -146,8 +152,6 @@
         margin-top: 83px;
 
         @include max(tablet) {
-            overflow: auto;
-            margin-right: -10px;
             padding-right: 10px;
         }
 

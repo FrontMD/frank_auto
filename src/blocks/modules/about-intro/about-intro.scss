@@ -38,6 +38,12 @@
     &__text {
         position: relative;
         z-index: 3;
+
+        @include max(mobile) {
+            max-height: 40vh;
+            overflow: hidden;
+            transition: all $tr-time-long;
+        }
     }
 }
 

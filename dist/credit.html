@@ -31,7 +31,10 @@
       <div class="section site-header__section" data-js="siteHeaderSection">
         <div class="section__container site-header__container">
           <div class="site-header__top site-header__row" data-js="siteHeaderTop">
-            <div class="section-block site-header__block site-header__left"><a class="site-header__logo" href="javascript:void(0);"><img src="img/logo/logo_header.svg" alt=""><span>Почувствуй новое первым</span></a></div>
+            <div class="section-block site-header__block site-header__left"><a class="site-header__logo" href="javascript:void(0);">
+                <picture>
+                  <source media="(max-width: 992px)" srcset="img/logo/logo_header.svg"><img src="img/logo/logo_header.svg" alt="">
+                </picture><span>Почувствуй новое первым</span></a></div>
             <div class="section-block site-header__block site-header__schedule">
               <div class="header-schedule">
                 <div class="header-schedule__icon">
@@ -550,106 +553,122 @@
                 <div class="info-list__slider" data-js="sAdvantagesSlider">
                   <div class="swiper-wrapper">
                     <div class="info-list__card swiper-slide">
-                      <div class="info-list__content">
-                        <div class="info-list__img"><img src="img/info-list/info_item_1.webp" alt=""></div>
-                        <div class="info-list__icon">
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#exc"> </use>
-                          </svg>
-                        </div>
-                        <div class="info-list__texts">
-                          <div class="info-list__title">40 кредитных программ на выбор</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="info-list__card swiper-slide">
-                      <div class="info-list__content">
-                        <div class="info-list__img"><img src="img/info-list/info_item_2.webp" alt=""></div>
-                        <div class="info-list__icon">
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#exc"> </use>
-                          </svg>
-                        </div>
-                        <div class="info-list__texts">
-                          <div class="info-list__title">Срок кредитования до 7 лет</div>
+                      <div class="info-list__inner">
+                        <div class="info-list__content">
+                          <div class="info-list__img"><img src="img/info-list/info_item_1.webp" alt=""></div>
+                          <div class="info-list__icon">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#exc"> </use>
+                            </svg>
+                          </div>
+                          <div class="info-list__texts">
+                            <div class="info-list__title">40 кредитных программ на выбор</div>
+                          </div>
                         </div>
                       </div>
                     </div>
                     <div class="info-list__card swiper-slide">
-                      <div class="info-list__content">
-                        <div class="info-list__img"><img src="img/info-list/info_item_3.webp" alt=""></div>
-                        <div class="info-list__icon">
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#exc"> </use>
-                          </svg>
-                        </div>
-                        <div class="info-list__texts">
-                          <div class="info-list__title">Размер кредита до 3 000 000 ₽</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="info-list__card swiper-slide">
-                      <div class="info-list__content">
-                        <div class="info-list__img"><img src="img/info-list/info_item_4.webp" alt=""></div>
-                        <div class="info-list__icon">
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#exc"> </use>
-                          </svg>
-                        </div>
-                        <div class="info-list__texts">
-                          <div class="info-list__title">Досрочное погашение без штрафа</div>
+                      <div class="info-list__inner">
+                        <div class="info-list__content">
+                          <div class="info-list__img"><img src="img/info-list/info_item_2.webp" alt=""></div>
+                          <div class="info-list__icon">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#exc"> </use>
+                            </svg>
+                          </div>
+                          <div class="info-list__texts">
+                            <div class="info-list__title">Срок кредитования до 7 лет</div>
+                          </div>
                         </div>
                       </div>
                     </div>
                     <div class="info-list__card swiper-slide">
-                      <div class="info-list__content">
-                        <div class="info-list__img"><img src="img/info-list/info_item_5.webp" alt=""></div>
-                        <div class="info-list__icon">
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#exc"> </use>
-                          </svg>
-                        </div>
-                        <div class="info-list__texts">
-                          <div class="info-list__title">Первоначальный взнос от 0%</div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="info-list__card swiper-slide">
-                      <div class="info-list__content">
-                        <div class="info-list__img"><img src="img/info-list/info_item_6.webp" alt=""></div>
-                        <div class="info-list__icon">
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#exc"> </use>
-                          </svg>
-                        </div>
-                        <div class="info-list__texts">
-                          <div class="info-list__title">Ставка по кредиту от 1,9%</div>
+                      <div class="info-list__inner">
+                        <div class="info-list__content">
+                          <div class="info-list__img"><img src="img/info-list/info_item_3.webp" alt=""></div>
+                          <div class="info-list__icon">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#exc"> </use>
+                            </svg>
+                          </div>
+                          <div class="info-list__texts">
+                            <div class="info-list__title">Размер кредита до 3 000 000 ₽</div>
+                          </div>
                         </div>
                       </div>
                     </div>
                     <div class="info-list__card swiper-slide">
-                      <div class="info-list__content">
-                        <div class="info-list__img"><img src="img/info-list/info_item_7.webp" alt=""></div>
-                        <div class="info-list__icon">
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#exc"> </use>
-                          </svg>
-                        </div>
-                        <div class="info-list__texts">
-                          <div class="info-list__title">Процент одобрения кредита 98%</div>
+                      <div class="info-list__inner">
+                        <div class="info-list__content">
+                          <div class="info-list__img"><img src="img/info-list/info_item_4.webp" alt=""></div>
+                          <div class="info-list__icon">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#exc"> </use>
+                            </svg>
+                          </div>
+                          <div class="info-list__texts">
+                            <div class="info-list__title">Досрочное погашение без штрафа</div>
+                          </div>
                         </div>
                       </div>
                     </div>
                     <div class="info-list__card swiper-slide">
-                      <div class="info-list__content">
-                        <div class="info-list__img"><img src="img/info-list/info_item_8.webp" alt=""></div>
-                        <div class="info-list__icon">
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#exc"> </use>
-                          </svg>
+                      <div class="info-list__inner">
+                        <div class="info-list__content">
+                          <div class="info-list__img"><img src="img/info-list/info_item_5.webp" alt=""></div>
+                          <div class="info-list__icon">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#exc"> </use>
+                            </svg>
+                          </div>
+                          <div class="info-list__texts">
+                            <div class="info-list__title">Первоначальный взнос от 0%</div>
+                          </div>
                         </div>
-                        <div class="info-list__texts">
-                          <div class="info-list__title">Ответ кредитных специалистов в течение 30 минут</div>
+                      </div>
+                    </div>
+                    <div class="info-list__card swiper-slide">
+                      <div class="info-list__inner">
+                        <div class="info-list__content">
+                          <div class="info-list__img"><img src="img/info-list/info_item_6.webp" alt=""></div>
+                          <div class="info-list__icon">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#exc"> </use>
+                            </svg>
+                          </div>
+                          <div class="info-list__texts">
+                            <div class="info-list__title">Ставка по кредиту от 1,9%</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="info-list__card swiper-slide">
+                      <div class="info-list__inner">
+                        <div class="info-list__content">
+                          <div class="info-list__img"><img src="img/info-list/info_item_7.webp" alt=""></div>
+                          <div class="info-list__icon">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#exc"> </use>
+                            </svg>
+                          </div>
+                          <div class="info-list__texts">
+                            <div class="info-list__title">Процент одобрения кредита 98%</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="info-list__card swiper-slide">
+                      <div class="info-list__inner">
+                        <div class="info-list__content">
+                          <div class="info-list__img"><img src="img/info-list/info_item_8.webp" alt=""></div>
+                          <div class="info-list__icon">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#exc"> </use>
+                            </svg>
+                          </div>
+                          <div class="info-list__texts">
+                            <div class="info-list__title">Ответ кредитных специалистов в течение 30 минут</div>
+                          </div>
                         </div>
                       </div>
                     </div>

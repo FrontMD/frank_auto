@@ -181,6 +181,19 @@ function validation() {
 
                 // тут отправляем данные
                 if (errors === 0) {
+                    
+                    var submitFunctionKey = form.getAttribute('data-submit-function');
+                    if (typeof (submitFunctionKey) === 'string' && submitFunctionKey.length > 0) {
+                        try {
+                            window.formsProcessors[submitFunctionKey](form);
+
+                        } catch (e) {
+                            alert('Обработчик формы не обнаружен');
+                        }
+                    } else {
+                        alert('Обработчик формы не указан');
+                    }
+
                     toggleLoading(form, true)
                     defaultAfterSubmit(form, true)
                     //window.ajaxForm(form, form.getAttribute('action'))

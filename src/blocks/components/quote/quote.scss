@@ -48,4 +48,12 @@
         font-style: Italic;
         color: $c-black;
     }
+
+    &__text {
+        @include max(mobile) {
+            max-height: 100px;
+            overflow: hidden;
+            transition: all $tr-time-long linear;
+        }
+    }
 }

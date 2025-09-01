@@ -31,7 +31,10 @@
       <div class="section site-header__section" data-js="siteHeaderSection">
         <div class="section__container site-header__container">
           <div class="site-header__top site-header__row" data-js="siteHeaderTop">
-            <div class="section-block site-header__block site-header__left"><a class="site-header__logo" href="javascript:void(0);"><img src="img/logo/logo_header.svg" alt=""><span>Почувствуй новое первым</span></a></div>
+            <div class="section-block site-header__block site-header__left"><a class="site-header__logo" href="javascript:void(0);">
+                <picture>
+                  <source media="(max-width: 992px)" srcset="img/logo/logo_header.svg"><img src="img/logo/logo_header.svg" alt="">
+                </picture><span>Почувствуй новое первым</span></a></div>
             <div class="section-block site-header__block site-header__schedule">
               <div class="header-schedule">
                 <div class="header-schedule__icon">
@@ -306,34 +309,36 @@
                       <div class="cb-intro__title title title--50 title--light">Грандиозная <br>распродажа Lixiang</div>
                       <div class="cb-intro__subtitle">Получите специальную цену + подарок на выбор при покупке автомобиля</div>
                     </div>
-                    <div class="cb-intro__advantages scrollbar scrollbar--small">
-                      <div class="cb-intro__advantage">
-                        <div class="cb-intro__icon">
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#cb_icon_layout"></use>
-                          </svg><img src="img/catalog-brand/cb_icon_1.svg" alt="">
-                        </div><span>Гарантия <br>лучшей цены</span>
-                      </div>
-                      <div class="cb-intro__advantage">
-                        <div class="cb-intro__icon">
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#cb_icon_layout"></use>
-                          </svg><img src="img/catalog-brand/cb_icon_2.svg" alt="">
-                        </div><span>Выгодный <br>кредит</span>
-                      </div>
-                      <div class="cb-intro__advantage">
-                        <div class="cb-intro__icon">
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#cb_icon_layout"></use>
-                          </svg><img src="img/catalog-brand/cb_icon_3.svg" alt="">
-                        </div><span>Зачёт вашего <br>автомобиля в trade-in</span>
-                      </div>
-                      <div class="cb-intro__advantage">
-                        <div class="cb-intro__icon">
-                          <svg>
-                            <use xlink:href="img/sprites/sprite.svg#cb_icon_layout"></use>
-                          </svg><img src="img/catalog-brand/cb_icon_4.svg" alt="">
-                        </div><span>Подарок на выбор <br>при покупке автомобиля</span>
+                    <div class="custom-scrollbar cb-intro__scroll" data-js="customScrollbar">
+                      <div class="cb-intro__advantages">
+                        <div class="cb-intro__advantage">
+                          <div class="cb-intro__icon">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#cb_icon_layout"></use>
+                            </svg><img src="img/catalog-brand/cb_icon_1.svg" alt="">
+                          </div><span>Гарантия <br>лучшей цены</span>
+                        </div>
+                        <div class="cb-intro__advantage">
+                          <div class="cb-intro__icon">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#cb_icon_layout"></use>
+                            </svg><img src="img/catalog-brand/cb_icon_2.svg" alt="">
+                          </div><span>Выгодный <br>кредит</span>
+                        </div>
+                        <div class="cb-intro__advantage">
+                          <div class="cb-intro__icon">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#cb_icon_layout"></use>
+                            </svg><img src="img/catalog-brand/cb_icon_3.svg" alt="">
+                          </div><span>Зачёт вашего <br>автомобиля в trade-in</span>
+                        </div>
+                        <div class="cb-intro__advantage">
+                          <div class="cb-intro__icon">
+                            <svg>
+                              <use xlink:href="img/sprites/sprite.svg#cb_icon_layout"></use>
+                            </svg><img src="img/catalog-brand/cb_icon_4.svg" alt="">
+                          </div><span>Подарок на выбор <br>при покупке автомобиля</span>
+                        </div>
                       </div>
                     </div>
                   </div>

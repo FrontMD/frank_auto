@@ -9,7 +9,7 @@ mixin about-intro(props= defaultAboutIntroProps)
             classes: props.classes ? props.classes : defaultAboutIntroProps.classes,
         }
 
-    section.section.about-intro(class= checkProps.classes)&attributes(attributes)
+    section.section.about-intro(class= checkProps.classes data-js="sText")&attributes(attributes)
         .section__container
             .section-block.about-intro__block
                 .about-intro__header.ai-header
@@ -21,7 +21,7 @@ mixin about-intro(props= defaultAboutIntroProps)
                             .ai-header__left Более<br>10 лет
                             .ai-header__right мы работаем в США, Мексике, Китае, Дубае, Турции, Германии, Эстонии, Сингапуре, а с 2022 года успешно координируем продажи и логистику для наших клиентов в России.
 
-                .about-intro__text.text-editor
+                .about-intro__text.text-editor(data-js="sTextContent")
                     h4 Выбирая автосалон FRANK AUTO Вы получаете:
                     ul
                         li самые выгодные цены на автомобили в Москве;
