@@ -22,7 +22,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-    <link rel="stylesheet" href="styles/main.min.css">
+    <link rel="stylesheet" href="styles/main.css">
     <!-- лучше добавлять только на те страницы где есть блок с картой-->
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ec8353bc-e4c0-44ee-8f5b-822d005a189e&amp;lang=ru_RU"></script>
   </head>
@@ -278,15 +278,17 @@
             <section class="section s-breadcrumbs">
               <div class="section__container">
                     <div class="breadcrumbs  breadcrumbs--dark">
-                      <ul class="breadcrumbs__list scrollbar scrollbar--small">
-                        <li class="breadcrumbs__item"><a href="javascript:void(0);">FrankAuto</a><span class="breadcrumbs__separator">
-                            <svg>
-                              <use xlink:href="img/sprites/sprite.svg#arrow_angle_right"></use>
-                            </svg></span>
-                        </li>
-                        <li class="breadcrumbs__item breadcrumbs__item--current"><span>Trade-in</span>
-                        </li>
-                      </ul>
+                      <div class="custom-scrollbar breadcrumbs__scroll" data-js="customScrollbar">
+                        <ul class="breadcrumbs__list">
+                          <li class="breadcrumbs__item"><a href="javascript:void(0);">FrankAuto</a><span class="breadcrumbs__separator">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_angle_right"></use>
+                              </svg></span>
+                          </li>
+                          <li class="breadcrumbs__item breadcrumbs__item--current"><span>Trade-in</span>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
               </div>
             </section>
@@ -311,25 +313,35 @@
         <section class="section">
           <div class="section__container section__content">
                 <div class="list-width-icons">
-                  <div class="list-width-icons-block">
-                    <div class="list-width-icons-img"><img src="img/corp/common-icon1.svg"></div>
-                    <div class="list-width-icons-text">Выгода<br>до&nbsp;1&nbsp;500&nbsp;000&nbsp;₽</div>
+                  <div class="list-width-icons__block">
+                    <div class="list-width-icons__img"><img src="img/corp/common-icon6.svg"></div>
+                    <div class="list-width-icons__title">Экономия вашего времени</div>
+                    <div class="list-width-icons__text">на поиски покупателя, договоренностях и т.д.</div>
                   </div>
-                  <div class="list-width-icons-block">
-                    <div class="list-width-icons-img"><img src="img/corp/common-icon2.svg"></div>
-                    <div class="list-width-icons-text">100&nbsp;000&nbsp;₽  за&nbsp;тест&#8209;драйв</div>
+                  <div class="list-width-icons__block">
+                    <div class="list-width-icons__img"><img src="img/corp/common-icon7.svg"></div>
+                    <div class="list-width-icons__title">Минимальный пакет документов</div>
+                    <div class="list-width-icons__text">два комплекта ключей, ПТС, СТС и паспорт владельца</div>
                   </div>
-                  <div class="list-width-icons-block">
-                    <div class="list-width-icons-img"><img src="img/corp/common-icon3.svg"></div>
-                    <div class="list-width-icons-text">17% докризисная ставка</div>
+                  <div class="list-width-icons__block">
+                    <div class="list-width-icons__img"><img src="img/corp/common-icon8.svg"></div>
+                    <div class="list-width-icons__title">Отсутствие рисков</div>
+                    <div class="list-width-icons__text">Юридических и финансовых</div>
                   </div>
-                  <div class="list-width-icons-block">
-                    <div class="list-width-icons-img"><img src="img/corp/common-icon4.svg"></div>
-                    <div class="list-width-icons-text">Услуга  удаленной комиссии</div>
+                  <div class="list-width-icons__block">
+                    <div class="list-width-icons__img"><img src="img/corp/common-icon1.svg"></div>
+                    <div class="list-width-icons__title">Разные способы оплаты</div>
+                    <div class="list-width-icons__text">Доплатить разницу в стоимости можно наличными, или в кредит</div>
                   </div>
-                  <div class="list-width-icons-block">
-                    <div class="list-width-icons-img"><img src="img/corp/common-icon5.svg"></div>
-                    <div class="list-width-icons-text">2&nbsp;года гарантии  в&nbsp;подарок</div>
+                  <div class="list-width-icons__block">
+                    <div class="list-width-icons__img"><img src="img/corp/common-icon3.svg"></div>
+                    <div class="list-width-icons__title">Удобство</div>
+                    <div class="list-width-icons__text">Вы можете уехать на новом авто, не дожидаясь продажи старого</div>
+                  </div>
+                  <div class="list-width-icons__block">
+                    <div class="list-width-icons__img"><img src="img/corp/common-icon2.svg"></div>
+                    <div class="list-width-icons__title">Бесплатные услуги</div>
+                    <div class="list-width-icons__text">Оценка и диагностика автомобиля производится бесплатно</div>
                   </div>
                 </div>
           </div>
@@ -1191,6 +1203,6 @@
             </div>
       </div>
     </noindex>
-    <script src="js/main.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

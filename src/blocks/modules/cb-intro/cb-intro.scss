@@ -354,15 +354,19 @@
         }
     }
 
+    &--model &__scroll {
+        @include max(tablet) {
+            order: 3;
+        }
+    }
+
     &--model &__advantages {
         margin-top: 19px;
         padding-bottom: 40px;
         flex-direction: column;
 
         @include max(tablet) {
-            order: 3;
             flex-direction: row;
-            overflow-x: auto;
             align-items: stretch;
             margin-top: 0;
             padding-bottom: 0;

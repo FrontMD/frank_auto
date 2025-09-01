@@ -25,14 +25,15 @@ mixin breadcrumbs(props = defaultBreadCrumbsProps)
         let colorModeClass = 'breadcrumbs--' + checkProps.cMode
 
     .breadcrumbs(class=checkProps.classes + ' ' + colorModeClass)
-        ul.breadcrumbs__list.scrollbar.scrollbar--small
-            each val, index in checkProps.items
-                li.breadcrumbs__item(class= (index === checkProps.items.length - 1) ? "breadcrumbs__item--current" : "")
-                    if index === checkProps.items.length - 1
-                        span= val.name
-                    else
-                        a(href=`${val.link}`)= val.name
-                        span.breadcrumbs__separator
-                            svg
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_angle_right`)
+        .custom-scrollbar.breadcrumbs__scroll(data-js="customScrollbar")
+            ul.breadcrumbs__list
+                each val, index in checkProps.items
+                    li.breadcrumbs__item(class= (index === checkProps.items.length - 1) ? "breadcrumbs__item--current" : "")
+                        if index === checkProps.items.length - 1
+                            span= val.name
+                        else
+                            a(href=`${val.link}`)= val.name
+                            span.breadcrumbs__separator
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#arrow_angle_right`)
 

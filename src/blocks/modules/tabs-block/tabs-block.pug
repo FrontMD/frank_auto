@@ -22,17 +22,18 @@ mixin tabs-block(props= defaultTabsProps)
 
     .tabs-block(class= checkProps.classes data-js="tabsBlock")&attributes(attributes)
         .tabs-block__header
-            .tabs-block__tabs.scrollbar.scrollbar--small(data-js="tabsBlockList")
-                .tabs-block__list
-                    - let count = 0 
-                    - while (count < checkProps.tabs.length)
-                        .tabs-block__tab(class= count === 0 ? "active" : "" data-index= count data-js="tabsBlockTab")
-                            if(checkProps.tabs[count].icon.length > 0)
-                                svg
-                                    use(xlink:href=`img/sprites/sprite.svg#${checkProps.tabs[count].icon}`)
-                            span!= checkProps.tabs[count].name
+            .custom-scrollbar.tabs-block__scroll(data-js="customScrollbar")
+                .tabs-block__tabs(data-js="tabsBlockList")
+                    .tabs-block__list
+                        - let count = 0 
+                        - while (count < checkProps.tabs.length)
+                            .tabs-block__tab(class= count === 0 ? "active" : "" data-index= count data-js="tabsBlockTab")
+                                if(checkProps.tabs[count].icon.length > 0)
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#${checkProps.tabs[count].icon}`)
+                                span!= checkProps.tabs[count].name
 
-                        - count += 1;
+                            - count += 1;
 
         .tabs-block__slides
             block

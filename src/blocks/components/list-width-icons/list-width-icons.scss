@@ -1,20 +1,28 @@
 .list-width-icons {
     display: flex;
     gap: 20px;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 
-    &-block {
+    @include min(large) {
+        justify-content: space-between;
+    }
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
         text-align: center;
         min-width: 200px;
         max-width: 250px;
-        width: 100%;
+        width: min-content;
     }
 
-    &-img {
+    &__img {
         width: 120px;
         height: 56px;
-        margin: 0 auto 25px;
+        margin: 0 auto 15px;
         background: url("../img/ic.svg");
         display: flex;
         justify-content: center;
@@ -26,30 +34,34 @@
         }
     }
 
-    &-text {
+    &__title {
         font-family: $ff-rooftop;
         font-size: 17px;
         line-height: 130%;
+        min-height: 2.6em;
 
         @include max(mobile) {
             font-size: 13px;
         }
     }
+
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.375em;
+        letter-spacing: 0;
+        text-align: center;
+        color: $c-text-editor;
+    }
+
+
 }
 
-/*.teh-list-width-icons {
+.teh-list-width-icons {
     .list-width-icons {
-        &-block {
-            max-width: 250px;
+        &__block {
             width: 100%;
-
-            @include max(mobile) {
-                max-width: 160px;
-            }
         }
 
-        @include min(large) {
-            justify-content: space-between;
-        }
     }
-}*/
+}

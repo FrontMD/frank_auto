@@ -115,24 +115,25 @@ mixin cp-intro(props= defaultCpIntroProps)
 
                         a(href="#techSpec").cp-intro__all.cp-intro__link Все характеристики
 
-                    .cp-intro__chars.scrollbar.scrollbar--small
-                        .cp-intro__char
-                            img(src="img/catalog/chars/fuel.svg" alt="")
-                            div
-                                .title Запас хода
-                                .text 240 км.
+                    .custom-scrollbar.cp-intro__scroll(data-js="customScrollbar")
+                        .cp-intro__chars
+                            .cp-intro__char
+                                img(src="img/catalog/chars/fuel.svg" alt="")
+                                div
+                                    .title Запас хода
+                                    .text 240 км.
 
-                        .cp-intro__char
-                            img(src="img/catalog/chars/lightning.svg" alt="")
-                            div
-                                .title Емкость батареи
-                                .text 53 кВт ч.
+                            .cp-intro__char
+                                img(src="img/catalog/chars/lightning.svg" alt="")
+                                div
+                                    .title Емкость батареи
+                                    .text 53 кВт ч.
 
-                        .cp-intro__char
-                            img(src="img/catalog/chars/gear.svg" alt="")
-                            div
-                                .title Мощность
-                                .text 554 л.с.
+                            .cp-intro__char
+                                img(src="img/catalog/chars/gear.svg" alt="")
+                                div
+                                    .title Мощность
+                                    .text 554 л.с.
 
                     .cp-intro__flex
                         .cp-intro__price
@@ -156,29 +157,28 @@ mixin cp-intro(props= defaultCpIntroProps)
                                     sMode: 'full'
                                 })
 
-                    .cp-intro__gifts.scrollbar.scrollbar--small
-                        - if(checkProps.usedPage === true)
-                            .cp-intro__gift
-                                img(src="img/catalog/gift.svg" alt="")
-                                .text Зачёт вашего<br>автомобиля в trade-in
-                            .cp-intro__gift
-                                img(src="img/catalog/gift.svg" alt="")
-                                .text Беспроцентная<br>рассрочка 0%
-                            .cp-intro__gift
-                                img(src="img/catalog/gift.svg" alt="")
-                                .text Доп. выгода<br>до 200 000 ₽
-                        - else
-                            .cp-intro__gift
-                                img(src="img/catalog/gift.svg" alt="")
-                                .text Зачёт вашего<br>автомобиля в trade-in
-                            .cp-intro__gift
-                                img(src="img/catalog/gift.svg" alt="")
-                                .text Улучшим любое<br>предложение
-                            .cp-intro__gift
-                                img(src="img/catalog/gift.svg" alt="")
-                                .text Беспроцентная<br>рассрочка 0%
-                            .cp-intro__gift
-                                img(src="img/catalog/gift.svg" alt="")
-                                .text Без первончального<br>взноса
-
-
+                    .custom-scrollbar.cp-intro__gscroll(data-js="customScrollbar")
+                        .cp-intro__gifts
+                            - if(checkProps.usedPage === true)
+                                .cp-intro__gift
+                                    img(src="img/catalog/gift.svg" alt="")
+                                    .text Зачёт вашего<br>автомобиля в trade-in
+                                .cp-intro__gift
+                                    img(src="img/catalog/gift.svg" alt="")
+                                    .text Беспроцентная<br>рассрочка 0%
+                                .cp-intro__gift
+                                    img(src="img/catalog/gift.svg" alt="")
+                                    .text Доп. выгода<br>до 200 000 ₽
+                            - else
+                                .cp-intro__gift
+                                    img(src="img/catalog/gift.svg" alt="")
+                                    .text Зачёт вашего<br>автомобиля в trade-in
+                                .cp-intro__gift
+                                    img(src="img/catalog/gift.svg" alt="")
+                                    .text Улучшим любое<br>предложение
+                                .cp-intro__gift
+                                    img(src="img/catalog/gift.svg" alt="")
+                                    .text Беспроцентная<br>рассрочка 0%
+                                .cp-intro__gift
+                                    img(src="img/catalog/gift.svg" alt="")
+                                    .text Без первончального<br>взноса

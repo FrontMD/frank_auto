@@ -33,7 +33,40 @@ block content
 
 		section.section
 			.section__container.section__content
-				+list-width-icons
+				+list-width-icons({
+					list: [
+						{
+							img: 'img/corp/common-icon6.svg',
+							title: 'Экономия вашего времени',
+							text: 'на поиски покупателя, договоренностях и т.д.'
+						},
+						{
+							img: 'img/corp/common-icon7.svg',
+							title: 'Минимальный пакет документов',
+							text: 'два комплекта ключей, ПТС, СТС и паспорт владельца'
+						},
+						{
+							img: 'img/corp/common-icon8.svg',
+							title: 'Отсутствие рисков',
+							text: 'Юридических и финансовых'
+						},
+						{
+							img: 'img/corp/common-icon1.svg',
+							title: 'Разные способы оплаты',
+							text: 'Доплатить разницу в стоимости можно наличными, или в кредит'
+						},
+						{
+							img: 'img/corp/common-icon3.svg',
+							title: 'Удобство',
+							text: 'Вы можете уехать на новом авто, не дожидаясь продажи старого'
+						},
+						{
+							img: 'img/corp/common-icon2.svg',
+							title: 'Бесплатные услуги',
+							text: 'Оценка и диагностика автомобиля производится бесплатно'
+						}
+					]
+				})
 
 		+list-form({
 			personalMarker: '2.'

@@ -49,7 +49,6 @@ var SimpleBar=function(){"use strict";var e=function(t,i){return e=Object.setPro
 document.addEventListener('DOMContentLoaded', () => {
     $('img.lazyload').lazyload();
     $('[data-js="customScrollbar"]').each((index, el) => {
-        console.log(el)
         new SimpleBar(el, { autoHide: false });
     })
     fancyboxInit();

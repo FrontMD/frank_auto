@@ -25,18 +25,18 @@
         }
     }
 
-    &__tabs {
-        display: flex;
-        gap: 10px;
+    &__scroll {
         flex: 1 1 auto;
         overflow-x: auto;
         max-width: 100%;
+        width: 100%;
+    }
+
+    &__tabs {
+        display: flex;
+        gap: 10px;
 
         @include max(mobile) {
-            margin-right: -10px;
-            padding-right: 10px;
-            max-width: calc(100% + 10px);
-
             .field--tab .fake-checkbox {
                 border: none;
                 background-color: $c-white;

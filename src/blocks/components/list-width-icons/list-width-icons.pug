@@ -1,32 +1,51 @@
 -
     const defaultListWidthIconsProps = {
-        classes: ''
+        classes: '',
+        list: [
+            {
+                img: 'img/corp/common-icon1.svg',
+                title: 'Выгода<br>до&nbsp;1&nbsp;500&nbsp;000&nbsp;₽',
+                text: ''
+            },
+            {
+                img: 'img/corp/common-icon2.svg',
+                title: '100&nbsp;000&nbsp;₽<br>за&nbsp;тест&#8209;драйв',
+                text: ''
+            },
+            {
+                img: 'img/corp/common-icon3.svg',
+                title: '17% докризисная<br>ставка',
+                text: ''
+            },
+            {
+                img: 'img/corp/common-icon4.svg',
+                title: 'Услуга<br>удаленной комиссии',
+                text: ''
+            },
+            {
+                img: 'img/corp/common-icon5.svg',
+                title: '2&nbsp;года гарантии<br>в&nbsp;подарок',
+                text: ''
+            }
+        ]
     }
 
 mixin list-width-icons(props = defaultListWidthIconsProps)
     -
         const checkProps = {
-            classes: props.classes ? props.classes : defaultListWidthIconsProps.classes
+            classes: props.classes ? props.classes : defaultListWidthIconsProps.classes,
+            list: props.list ? props.list : defaultListWidthIconsProps.list
         }
 
     .list-width-icons(class= checkProps.classes)&attributes(attributes)
-        .list-width-icons-block
-            .list-width-icons-img
-                img(src="img/corp/common-icon1.svg")
-            .list-width-icons-text Выгода<br>до&nbsp;1&nbsp;500&nbsp;000&nbsp;₽
-        .list-width-icons-block
-            .list-width-icons-img
-                img(src="img/corp/common-icon2.svg")
-            .list-width-icons-text 100&nbsp;000&nbsp;₽  за&nbsp;тест&#8209;драйв
-        .list-width-icons-block
-            .list-width-icons-img
-                img(src="img/corp/common-icon3.svg")
-            .list-width-icons-text 17% докризисная ставка
-        .list-width-icons-block
-            .list-width-icons-img
-                img(src="img/corp/common-icon4.svg")
-            .list-width-icons-text Услуга  удаленной комиссии
-        .list-width-icons-block
-            .list-width-icons-img
-                img(src="img/corp/common-icon5.svg")
-            .list-width-icons-text 2&nbsp;года гарантии  в&nbsp;подарок
+        - let counter = 0;
+        - while(counter < checkProps.list.length)
+            - let item = checkProps.list[counter]
+            .list-width-icons__block
+                .list-width-icons__img
+                    img(src=item.img)
+                .list-width-icons__title!= item.title
+                - if(item.text.length > 0)
+                    .list-width-icons__text!= item.text
+
+            - counter++

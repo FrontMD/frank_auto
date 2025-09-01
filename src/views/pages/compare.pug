@@ -27,10 +27,11 @@ block content
 
 					.compare__tabs
 						.tabs-block.tabs-block--white
-							.tabs-block__tabs.scrollbar.scrollbar--small
-								.tabs-block__list
-									a(href="javascript:void(0);").tabs-block__tab.active Новые (4)
-									a(href="javascript:void(0);").tabs-block__tab С пробегом (5)
+							.custom-scrollbar.tabs-block__scroll(data-js="customScrollbar")
+								.tabs-block__tabs
+									.tabs-block__list
+										a(href="javascript:void(0);").tabs-block__tab.active Новые (4)
+										a(href="javascript:void(0);").tabs-block__tab С пробегом (5)
 
 					+field({
 						tag: 'input',

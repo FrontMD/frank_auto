@@ -429,8 +429,17 @@
         }
     }
 
-    &__gifts {
+    &__scroll {
         flex: 0 0 auto;
+
+        @include max(mobile) {
+            width: 100%;
+            overflow: auto;
+        }
+    }
+
+    &__gifts {
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -438,14 +447,12 @@
 
         @include max(mobile) {
             flex-direction: row;
-            width: 100%;
             gap: 10px;
-            overflow: auto;
         }
     }
 
     &__gift {
-        width: fit-content;
+        width: max-content;
         display: flex;
         align-items: center;
         gap: 8px;

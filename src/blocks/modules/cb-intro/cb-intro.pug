@@ -92,26 +92,26 @@ mixin cb-intro(props= defaultCBIntroProps)
                                 span.old 5 800 000 ₽ 
                                 span.current от 5 500 000 ₽
                             a(href="#inStock").cb-intro__stock Автомобилей в наличии - 10 шт
-
-                            .cb-intro__advantages
-                                .cb-intro__advantage
-                                    .cb-intro__icon
-                                        svg
-                                            use(xlink:href=`img/sprites/sprite.svg#cb_icon_layout`)
-                                        img(src="img/catalog-brand/cb_icon_1.svg" alt="")
-                                    span Улучшим любое<br>предложение
-                                .cb-intro__advantage
-                                    .cb-intro__icon
-                                        svg
-                                            use(xlink:href=`img/sprites/sprite.svg#cb_icon_layout`)
-                                        img(src="img/catalog-brand/cb_icon_2.svg" alt="")
-                                    span Без первончального<br>взноса
-                                .cb-intro__advantage
-                                    .cb-intro__icon
-                                        svg
-                                            use(xlink:href=`img/sprites/sprite.svg#cb_icon_layout`)
-                                        img(src="img/catalog-brand/cb_icon_3.svg" alt="")
-                                    span Кредит от 1,9%
+                            .custom-scrollbar.cb-intro__scroll(data-js="customScrollbar")
+                                .cb-intro__advantages
+                                    .cb-intro__advantage
+                                        .cb-intro__icon
+                                            svg
+                                                use(xlink:href=`img/sprites/sprite.svg#cb_icon_layout`)
+                                            img(src="img/catalog-brand/cb_icon_1.svg" alt="")
+                                        span Улучшим любое<br>предложение
+                                    .cb-intro__advantage
+                                        .cb-intro__icon
+                                            svg
+                                                use(xlink:href=`img/sprites/sprite.svg#cb_icon_layout`)
+                                            img(src="img/catalog-brand/cb_icon_2.svg" alt="")
+                                        span Без первончального<br>взноса
+                                    .cb-intro__advantage
+                                        .cb-intro__icon
+                                            svg
+                                                use(xlink:href=`img/sprites/sprite.svg#cb_icon_layout`)
+                                            img(src="img/catalog-brand/cb_icon_3.svg" alt="")
+                                        span Кредит от 1,9%
 
                         .cb-intro__slider.color-slider(data-js="colorSlider")
                             .color-slider__images(data-js="colorSliderImg")

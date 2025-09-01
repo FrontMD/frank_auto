@@ -131,16 +131,17 @@ mixin cm-accordeon(props= defaultCmAccordeonProps)
                                             hasArrow: true
                                         })(data-js="cmSpoilerMoreBtn")
 
-                                .cm-spoiler__gifts.scrollbar.scrollbar--small
-                                    .cm-spoiler__gift
-                                        img(src="img/catalog/gift.svg" alt="")
-                                        .text Оборудование <span>в подарок
-                                    .cm-spoiler__gift
-                                        img(src="img/catalog/gift.svg" alt="")
-                                        .text КАСКО <span>в подарок
-                                    .cm-spoiler__gift
-                                        img(src="img/catalog/gift.svg" alt="")
-                                        .text Комплект резины <span>в подарок
+                                .custom-scrollbar.cm-spoiler__scroll(data-js="customScrollbar")
+                                    .cm-spoiler__gifts
+                                        .cm-spoiler__gift
+                                            img(src="img/catalog/gift.svg" alt="")
+                                            .text Оборудование <span>в подарок
+                                        .cm-spoiler__gift
+                                            img(src="img/catalog/gift.svg" alt="")
+                                            .text КАСКО <span>в подарок
+                                        .cm-spoiler__gift
+                                            img(src="img/catalog/gift.svg" alt="")
+                                            .text Комплект резины <span>в подарок
 
                                 .cm-spoiler__btns
                                     .cm-spoiler__row

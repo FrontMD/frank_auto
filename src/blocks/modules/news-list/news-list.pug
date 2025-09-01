@@ -103,51 +103,53 @@ mixin news-list(props= defaultNewsListProps)
             .section-block.news-list__block
                 form.news-list__filter(action="#")
                     - if(checkProps.stocksPage === true)
-                        .news-list__tabs
-                            .field.field--tab
-                                label
-                                    input.field__input(class="field__input" type="checkbox" name="news-filter" placeholder="")
-                                    span.fake-checkbox
-                                        | Акции сервиса
-                                        svg
-                                            use(xlink:href=`img/sprites/sprite.svg#close`)
-                            .field.field--tab
-                                label
-                                    input.field__input(class="field__input" type="checkbox" name="news-filter" placeholder="")
-                                    span.fake-checkbox
-                                        | Отдел продаж
-                                        svg
-                                            use(xlink:href=`img/sprites/sprite.svg#close`)
+                        .custom-scrollbar.news-list__scroll(data-js="customScrollbar")
+                            .news-list__tabs
+                                .field.field--tab
+                                    label
+                                        input.field__input(class="field__input" type="checkbox" name="news-filter" placeholder="")
+                                        span.fake-checkbox
+                                            | Акции сервиса
+                                            svg
+                                                use(xlink:href=`img/sprites/sprite.svg#close`)
+                                .field.field--tab
+                                    label
+                                        input.field__input(class="field__input" type="checkbox" name="news-filter" placeholder="")
+                                        span.fake-checkbox
+                                            | Отдел продаж
+                                            svg
+                                                use(xlink:href=`img/sprites/sprite.svg#close`)
                     -else
-                        .news-list__tabs
-                            .field.field--tab
-                                label
-                                    input.field__input(class="field__input" type="checkbox" name="news-filter" placeholder="")
-                                    span.fake-checkbox
-                                        | О компании
-                                        svg
-                                            use(xlink:href=`img/sprites/sprite.svg#close`)
-                            .field.field--tab
-                                label
-                                    input.field__input(class="field__input" type="checkbox" name="news-filter" placeholder="")
-                                    span.fake-checkbox
-                                        | Амбассадоры
-                                        svg
-                                            use(xlink:href=`img/sprites/sprite.svg#close`)
-                            .field.field--tab
-                                label
-                                    input.field__input(class="field__input" type="checkbox" name="news-filter" placeholder="")
-                                    span.fake-checkbox
-                                        | О марках
-                                        svg
-                                            use(xlink:href=`img/sprites/sprite.svg#close`)
-                            .field.field--tab
-                                label
-                                    input.field__input(class="field__input" type="checkbox" name="news-filter" placeholder="")
-                                    span.fake-checkbox
-                                        | Спецпредложения
-                                        svg
-                                            use(xlink:href=`img/sprites/sprite.svg#close`)
+                        .custom-scrollbar.news-list__scroll(data-js="customScrollbar")
+                            .news-list__tabs
+                                .field.field--tab
+                                    label
+                                        input.field__input(class="field__input" type="checkbox" name="news-filter" placeholder="")
+                                        span.fake-checkbox
+                                            | О компании
+                                            svg
+                                                use(xlink:href=`img/sprites/sprite.svg#close`)
+                                .field.field--tab
+                                    label
+                                        input.field__input(class="field__input" type="checkbox" name="news-filter" placeholder="")
+                                        span.fake-checkbox
+                                            | Амбассадоры
+                                            svg
+                                                use(xlink:href=`img/sprites/sprite.svg#close`)
+                                .field.field--tab
+                                    label
+                                        input.field__input(class="field__input" type="checkbox" name="news-filter" placeholder="")
+                                        span.fake-checkbox
+                                            | О марках
+                                            svg
+                                                use(xlink:href=`img/sprites/sprite.svg#close`)
+                                .field.field--tab
+                                    label
+                                        input.field__input(class="field__input" type="checkbox" name="news-filter" placeholder="")
+                                        span.fake-checkbox
+                                            | Спецпредложения
+                                            svg
+                                                use(xlink:href=`img/sprites/sprite.svg#close`)
 
                         +field({
                             classes: 'news-list__sort',

@@ -22,7 +22,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="1024x1024" href="img/favicons/apple-touch-icon-1024x1024.png">
-    <link rel="stylesheet" href="styles/main.min.css">
+    <link rel="stylesheet" href="styles/main.css">
     <!-- лучше добавлять только на те страницы где есть блок с картой-->
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ec8353bc-e4c0-44ee-8f5b-822d005a189e&amp;lang=ru_RU"></script>
   </head>
@@ -278,15 +278,17 @@
             <section class="section s-breadcrumbs">
               <div class="section__container">
                     <div class="breadcrumbs  breadcrumbs--dark">
-                      <ul class="breadcrumbs__list scrollbar scrollbar--small">
-                        <li class="breadcrumbs__item"><a href="javascript:void(0);">FrankAuto</a><span class="breadcrumbs__separator">
-                            <svg>
-                              <use xlink:href="img/sprites/sprite.svg#arrow_angle_right"></use>
-                            </svg></span>
-                        </li>
-                        <li class="breadcrumbs__item breadcrumbs__item--current"><span>404</span>
-                        </li>
-                      </ul>
+                      <div class="custom-scrollbar breadcrumbs__scroll" data-js="customScrollbar">
+                        <ul class="breadcrumbs__list">
+                          <li class="breadcrumbs__item"><a href="javascript:void(0);">FrankAuto</a><span class="breadcrumbs__separator">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#arrow_angle_right"></use>
+                              </svg></span>
+                          </li>
+                          <li class="breadcrumbs__item breadcrumbs__item--current"><span>404</span>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
               </div>
             </section>
@@ -758,6 +760,6 @@
             </div>
       </div>
     </noindex>
-    <script src="js/main.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
