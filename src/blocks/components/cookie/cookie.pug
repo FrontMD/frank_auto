@@ -1,0 +1,12 @@
+mixin cookie
+    .cookie(data-js='cookie')
+        .cookie__text.text-editor 
+            p Мы используем файлы cookie для&nbsp;улучшения качества обслуживания.
+                <br> Продолжая использовать сайт, вы&nbsp;соглашаетесь на&nbsp;обработку файлов cookie в&nbsp;соответствии с <a href="https://docs.google.com/document/d/1toFw7H32-LUn2NTVpSqL0t0gJB32UV0R/edit">Политикой в отношении обработки персональных данных</a>.
+                <br> Вы&nbsp;можете самостоятельно изменить настройки cookies в&nbsp;любой момент
+        +btn({
+            classes: 'cookie__btn',
+            vMode: 'btn',
+            name: 'Понятно',
+            cMode: '',
+        })(data-js='cookieBtn')

@@ -2,7 +2,7 @@ extends ../layouts/default
 include ../helpers/mixins
 
 block variables
-	- const title = "Авто с пробегом"
+	- const title = "Аренда + бренд"
 
 block content
 	.page-layout(data-js="pageLayout")
@@ -13,28 +13,19 @@ block content
 					link: 'javascript:void(0);'
 				},
 				{
-					name: 'Каталог',
+					name: 'Аренда',
 					link: 'javascript:void(0);'
 				},
 				{
-					name: 'С пробегом',
+					name: 'Аренда LiXiang',
 					link: 'javascript:void(0);'
 				}
 			],
 		})
 
-		section.section.section--title
-			.section__container
-				.section__header.section__content
-					.title.title--40
-						h1 С пробегом
-
-		+home-selection({
-			usedPage: true
-		})
-
 		+s-catalog({
-			title: 'Каталог автомобилей',
+			title: '<h1>Аренда LiXiang</h1>',
+			titleSize: '40',
 			sort: true,
 			pagination: true,
 			items: [
@@ -288,7 +279,7 @@ block content
 						},
 						{
 							param: 'Объем двигателя:',
-							value: '1.6&nbsp;л'
+							value: '1.6 л'
 						},
 						{
 							param: 'Привод:',

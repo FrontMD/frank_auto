@@ -225,37 +225,44 @@ mixin home-selection(props= defaultHomeSelectionProps)
                                 ],
                             })
 
-                - else if(checkProps.servicesPage === true)
+                - else if(checkProps.rentPage === true)
                     +form-filter({
-                        title: 'Быстрый подбор услуг',
+                        title: 'Быстрый подбор автомобиля',
                         btnText: 'Показать 73',
-                        hasResetBtn: true
+                        hasResetBtn: false
                     })
+                        +field-range({
+                            classes: '',
+                            title: 'Стоимость',
+                            isRange: true
+                        })
                         .form-filter__flex
                             +field({
                                 classes: '',
                                 tag: 'select',
-                                placeholder: 'Тип услуги',
+                                placeholder: 'Модель',
                                 selectOptions: [
                                     "",
-                                    "Кузовной ремонт",
-                                    "Диагностика",
-                                    "Керамическое покрытие",
-                                    "Малярные работы",
-                                    "Шиномонтаж",
+                                    "LiXiang L6",
+                                    "LiXiang L7",
+                                    "LiXiang L9",
+                                    "LiXiang L9",
+                                    "LiXiang Mega",
+                                    "LiXiang One"
                                 ],
                             })
                             +field({
                                 classes: '',
                                 tag: 'select',
-                                placeholder: 'Доп. фильтр',
+                                placeholder: 'Год выпуска',
                                 selectOptions: [
                                     "",
-                                    "Пункт 1",
-                                    "Пункт 2",
-                                    "Пункт 3",
-                                    "Пункт 4",
-                                    "Пункт 5"
+                                    "2020",
+                                    "2021",
+                                    "2022",
+                                    "2023",
+                                    "2024",
+                                    "2025",
                                 ],
                             })
 
@@ -263,57 +270,28 @@ mixin home-selection(props= defaultHomeSelectionProps)
                             +field({
                                 classes: '',
                                 tag: 'select',
-                                placeholder: 'Доп. фильтр',
+                                placeholder: 'Тип кузова',
                                 selectOptions: [
                                     "",
-                                    "Пункт 1",
-                                    "Пункт 2",
-                                    "Пункт 3",
-                                    "Пункт 4",
-                                    "Пункт 5"
-                                ],
+                                    "Седан",
+                                    "Хетчбэк",
+                                    "Универсал",
+                                    "Кроссовер",
+                                    "Минивэн"
+                                ]
                             })
                             +field({
-                                classes: '',
-                                tag: 'select',
-                                placeholder: 'Доп. фильтр',
-                                selectOptions: [
-                                    "",
-                                    "Пункт 1",
-                                    "Пункт 2",
-                                    "Пункт 3",
-                                    "Пункт 4",
-                                    "Пункт 5"
-                                ],
-                            })
-
-                        .form-filter__flex
-                            +field({
-                                classes: '',
-                                tag: 'select',
-                                placeholder: 'Доп. фильтр',
-                                selectOptions: [
-                                    "",
-                                    "Пункт 1",
-                                    "Пункт 2",
-                                    "Пункт 3",
-                                    "Пункт 4",
-                                    "Пункт 5"
-                                ],
-                            })
-                            +field({
-                                classes: '',
-                                tag: 'select',
-                                placeholder: 'Доп. фильтр',
-                                selectOptions: [
-                                    "",
-                                    "Пункт 1",
-                                    "Пункт 2",
-                                    "Пункт 3",
-                                    "Пункт 4",
-                                    "Пункт 5"
-                                ],
-                            })
+                            classes: '',
+                            tag: 'select',
+                            placeholder: 'Коробка',
+                            selectOptions: [
+                                "",
+                                "Механическая",
+                                "Автоматическая",
+                                "Вариатор",
+                                "Роботизированная",
+                            ],
+                        })
 
                 - else
                     +form-filter({

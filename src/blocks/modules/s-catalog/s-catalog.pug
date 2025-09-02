@@ -2,6 +2,7 @@
     const defaultSCatalogProps = {
         classes: '',
         title: 'Автомобили в наличии - Предложение дня',
+        titleSize: '36',
         sort: false,
         pagination: false,
         filter: false,
@@ -76,6 +77,7 @@ mixin s-catalog(props= defaultSCatalogProps)
         const checkProps = {
             classes: props.classes ? props.classes : defaultSCatalogProps.classes,
             title: props.title ? props.title : defaultSCatalogProps.title,
+            titleSize: props.titleSize ? props.titleSize : defaultSCatalogProps.titleSize,
             isSlider: props.isSlider ? props.isSlider : defaultSCatalogProps.isSlider,
             sort: props.sort ? props.sort : defaultSCatalogProps.sort,
             pagination: props.pagination ? props.pagination : defaultSCatalogProps.pagination,
@@ -87,7 +89,7 @@ mixin s-catalog(props= defaultSCatalogProps)
         section.section.s-catalog(class= checkProps.classes)&attributes(attributes)
             .section__container.section__content
                 .section-header.s-catalog__header
-                    .title.title--36!= checkProps.title
+                    .title(class=`title--${checkProps.titleSize}`)!= checkProps.title
                     - if(checkProps.sort !== false || checkProps.filter !== false)
                         .s-catalog__controls
                             - if(checkProps.sort !== false)

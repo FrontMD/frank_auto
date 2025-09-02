@@ -311,9 +311,9 @@
                 <div class="section__sidebar home-selection__sidebar">
                       <form class="form-filter" action="#" data-js="formFilter">
                         <div class="form-filter__content">
-                          <div class="form-filter__title title title--36">Быстрый <br>подбор <br>автомобиля</div>
+                          <div class="form-filter__title title title--36">Быстрый подбор автомобиля</div>
                           <div class="form-filter__fields">
-                                <div class="field-range field-range--margins" data-js="fieldRange" data-type="range" data-unit=" ₽" data-min="100000" data-max="50000000" data-step="100000">
+                                <div class="field-range" data-js="fieldRange" data-type="range" data-unit=" ₽" data-min="100000" data-max="50000000" data-step="100000">
                                   <input class="field-range__input field-range__input--min" type="number" min="100000" max="50000000" data-js="fieldRangeMin">
                                   <input class="field-range__input field-range__input--max" type="number" min="100000" max="50000000" data-js="fieldRangeMax">
                                   <div class="field-range__title">Стоимость</div>
@@ -323,42 +323,73 @@
                                     <div class="field-range__value" data-js="fieldRangeMaxVal"></div>
                                   </div>
                                 </div>
-                                <div class="field  
+                            <div class="form-filter__flex">
+                                  <div class="field  
      
      
     " data-js="formField">
-                                  <label>
-                                    <select class="field__select" data-placeholder="Бренд" data-js="formSelect" multiple="multiple">
-                                      <option label=" "></option>
-                                      <option value="LiXiang">LiXiang</option>
-                                      <option value="Voyah">Voyah</option>
-                                      <option value="AITO">AITO</option>
-                                      <option value="Chery">Chery</option>
-                                      <option value="Zeekr">Zeekr</option>
-                                      <option value="Audi">Audi</option>
-                                      <option value="Tank">Tank</option>
-                                      <option value="Rox Motor Tech">Rox Motor Tech</option>
-                                    </select><span class="field__error" data-js="fieldError"></span>
-                                  </label>
-                                </div>
-                                <div class="field  
+                                    <label>
+                                      <select class="field__select" data-placeholder="Модель" data-js="formSelect">
+                                        <option label=" "></option>
+                                        <option value="LiXiang L6">LiXiang L6</option>
+                                        <option value="LiXiang L7">LiXiang L7</option>
+                                        <option value="LiXiang L9">LiXiang L9</option>
+                                        <option value="LiXiang L9">LiXiang L9</option>
+                                        <option value="LiXiang Mega">LiXiang Mega</option>
+                                        <option value="LiXiang One">LiXiang One</option>
+                                      </select><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                  </div>
+                                  <div class="field  
      
      
     " data-js="formField">
-                                  <label>
-                                    <select class="field__select" data-placeholder="Модель" data-js="formSelect" multiple="multiple">
-                                      <option label=" "></option>
-                                      <option value="LiXiang L6">LiXiang L6</option>
-                                      <option value="LiXiang L7">LiXiang L7</option>
-                                      <option value="LiXiang L9">LiXiang L9</option>
-                                      <option value="LiXiang L9">LiXiang L9</option>
-                                      <option value="LiXiang Mega">LiXiang Mega</option>
-                                      <option value="LiXiang One">LiXiang One</option>
-                                    </select><span class="field__error" data-js="fieldError"></span>
-                                  </label>
-                                </div>
+                                    <label>
+                                      <select class="field__select" data-placeholder="Год выпуска" data-js="formSelect">
+                                        <option label=" "></option>
+                                        <option value="2020">2020</option>
+                                        <option value="2021">2021</option>
+                                        <option value="2022">2022</option>
+                                        <option value="2023">2023</option>
+                                        <option value="2024">2024</option>
+                                        <option value="2025">2025</option>
+                                      </select><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                  </div>
+                            </div>
+                            <div class="form-filter__flex">
+                                  <div class="field  
+     
+     
+    " data-js="formField">
+                                    <label>
+                                      <select class="field__select" data-placeholder="Тип кузова" data-js="formSelect">
+                                        <option label=" "></option>
+                                        <option value="Седан">Седан</option>
+                                        <option value="Хетчбэк">Хетчбэк</option>
+                                        <option value="Универсал">Универсал</option>
+                                        <option value="Кроссовер">Кроссовер</option>
+                                        <option value="Минивэн">Минивэн</option>
+                                      </select><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                  </div>
+                                  <div class="field  
+     
+     
+    " data-js="formField">
+                                    <label>
+                                      <select class="field__select" data-placeholder="Коробка" data-js="formSelect">
+                                        <option label=" "></option>
+                                        <option value="Механическая">Механическая</option>
+                                        <option value="Автоматическая">Автоматическая</option>
+                                        <option value="Вариатор">Вариатор</option>
+                                        <option value="Роботизированная">Роботизированная</option>
+                                      </select><span class="field__error" data-js="fieldError"></span>
+                                    </label>
+                                  </div>
+                            </div>
                           </div>
-                              <button class="btn form-filter__submit btn--accent btn--full" type="submit"><span class="btn__text">Показать 74 авто</span>
+                              <button class="btn form-filter__submit btn--accent btn--full" type="submit"><span class="btn__text">Показать 73</span>
                               </button>
                         </div>
                       </form>
@@ -429,7 +460,7 @@
                             </div>
                             <div class="catalog-card__row">
                               <div class="param">Объем двигателя:</div>
-                              <div class="value">1.6 л</div>
+                              <div class="value">1.6&nbsp;л</div>
                             </div>
                             <div class="catalog-card__row">
                               <div class="param">Привод:</div>
@@ -502,7 +533,7 @@
                             </div>
                             <div class="catalog-card__row">
                               <div class="param">Объем двигателя:</div>
-                              <div class="value">1.6 л</div>
+                              <div class="value">1.6&nbsp;л</div>
                             </div>
                             <div class="catalog-card__row">
                               <div class="param">Привод:</div>
@@ -575,7 +606,7 @@
                             </div>
                             <div class="catalog-card__row">
                               <div class="param">Объем двигателя:</div>
-                              <div class="value">1.6 л</div>
+                              <div class="value">1.6&nbsp;л</div>
                             </div>
                             <div class="catalog-card__row">
                               <div class="param">Привод:</div>
@@ -648,7 +679,7 @@
                             </div>
                             <div class="catalog-card__row">
                               <div class="param">Объем двигателя:</div>
-                              <div class="value">1.6 л</div>
+                              <div class="value">1.6&nbsp;л</div>
                             </div>
                             <div class="catalog-card__row">
                               <div class="param">Привод:</div>
@@ -721,7 +752,7 @@
                             </div>
                             <div class="catalog-card__row">
                               <div class="param">Объем двигателя:</div>
-                              <div class="value">1.6 л</div>
+                              <div class="value">1.6&nbsp;л</div>
                             </div>
                             <div class="catalog-card__row">
                               <div class="param">Привод:</div>

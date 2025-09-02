@@ -23,6 +23,12 @@
         }
     }
 
+    &__brands {
+        border-radius: $br-section;
+        background-color: $c-white;
+        padding: 34px 25px;
+    }
+
     .form-filter__title {
         //margin-bottom: auto;
     }
