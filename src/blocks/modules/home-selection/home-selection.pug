@@ -3,6 +3,7 @@
         classes: '',
         usedPage: false,
         servicesPage: false,
+        rentPage: false,
         noTabs: false
     }
 
@@ -12,12 +13,16 @@ mixin home-selection(props= defaultHomeSelectionProps)
             classes: props.classes ? props.classes : defaultHomeSelectionProps.classes,
             usedPage: props.usedPage ? props.usedPage : defaultHomeSelectionProps.usedPage,
             servicesPage: props.servicesPage ? props.servicesPage : defaultHomeSelectionProps.servicesPage,
+            rentPage: props.rentPage ? props.rentPage : defaultHomeSelectionProps.rentPage,
             noTabs: props.noTabs ? props.noTabs : defaultHomeSelectionProps.noTabs,
         }
 
     section.section.home-selection(class= checkProps.classes)&attributes(attributes)
         .section__container.section__container--sidebar
             - if(checkProps.noTabs === true)
+                .section__body.home-selection__brands
+                    +brands-list
+            - else
                 .section__body.home-selection__tabs
                     +tabs-block({
                         tabs: [
@@ -35,9 +40,6 @@ mixin home-selection(props= defaultHomeSelectionProps)
                             +brands-list
                         .tabs-block__slide(data-js="tabsBlockSlide")
                             +brands-list
-            - else
-                .section__body.home-selection__brands
-                    +brands-list
 
 
             .section__sidebar.home-selection__sidebar
@@ -130,6 +132,96 @@ mixin home-selection(props= defaultHomeSelectionProps)
                                     "Передний",
                                     "Задний",
                                     "Полный",
+                                ],
+                            })
+
+                - else if(checkProps.servicesPage === true)
+                    +form-filter({
+                        title: 'Быстрый подбор услуг',
+                        btnText: 'Показать 73',
+                        hasResetBtn: true
+                    })
+                        .form-filter__flex
+                            +field({
+                                classes: '',
+                                tag: 'select',
+                                placeholder: 'Тип услуги',
+                                selectOptions: [
+                                    "",
+                                    "Кузовной ремонт",
+                                    "Диагностика",
+                                    "Керамическое покрытие",
+                                    "Малярные работы",
+                                    "Шиномонтаж",
+                                ],
+                            })
+                            +field({
+                                classes: '',
+                                tag: 'select',
+                                placeholder: 'Доп. фильтр',
+                                selectOptions: [
+                                    "",
+                                    "Пункт 1",
+                                    "Пункт 2",
+                                    "Пункт 3",
+                                    "Пункт 4",
+                                    "Пункт 5"
+                                ],
+                            })
+
+                        .form-filter__flex
+                            +field({
+                                classes: '',
+                                tag: 'select',
+                                placeholder: 'Доп. фильтр',
+                                selectOptions: [
+                                    "",
+                                    "Пункт 1",
+                                    "Пункт 2",
+                                    "Пункт 3",
+                                    "Пункт 4",
+                                    "Пункт 5"
+                                ],
+                            })
+                            +field({
+                                classes: '',
+                                tag: 'select',
+                                placeholder: 'Доп. фильтр',
+                                selectOptions: [
+                                    "",
+                                    "Пункт 1",
+                                    "Пункт 2",
+                                    "Пункт 3",
+                                    "Пункт 4",
+                                    "Пункт 5"
+                                ],
+                            })
+
+                        .form-filter__flex
+                            +field({
+                                classes: '',
+                                tag: 'select',
+                                placeholder: 'Доп. фильтр',
+                                selectOptions: [
+                                    "",
+                                    "Пункт 1",
+                                    "Пункт 2",
+                                    "Пункт 3",
+                                    "Пункт 4",
+                                    "Пункт 5"
+                                ],
+                            })
+                            +field({
+                                classes: '',
+                                tag: 'select',
+                                placeholder: 'Доп. фильтр',
+                                selectOptions: [
+                                    "",
+                                    "Пункт 1",
+                                    "Пункт 2",
+                                    "Пункт 3",
+                                    "Пункт 4",
+                                    "Пункт 5"
                                 ],
                             })
 
