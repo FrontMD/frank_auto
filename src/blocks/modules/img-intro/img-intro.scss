@@ -28,19 +28,39 @@
 
     &__content {
         display: flex;
+        align-items: flex-start;
+    }
+
+    &__left {
+        flex: 0 0 auto;
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 20px;
         min-height: 430px;
         max-width: 72%;
+        margin-right: 11%;
 
         @include max(laptop-small) {
             max-width: 100%;
+            margin-right: 0;
         }
 
         @include max(mobile) {
             gap: 10px;
             min-height: auto;
+        }
+    }
+
+    &__right {
+        @include max(laptop-small) {
+            display: none;
+        }
+    }
+
+    &__title {
+        &--right {
+            text-align: right;
         }
     }
 
@@ -64,10 +84,14 @@
         p+p {
             margin-top: 1em;
         }
+
+        &--right {
+            text-align: right;
+        }
     }
 
     &__sticker {
-        margin-top: 60px;
+        margin-top: 70px;
         padding: 20px 40px;
         transform: rotate(-15deg);
         transform-origin: left top;

@@ -1,0 +1,49 @@
+.s-requirements {
+    &__content {
+        display: flex;
+        align-items: center;
+        gap: 70px;
+
+        @include max(laptop-small) {
+            gap: 50px;
+        }
+
+        @include max(tablet) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 30px;
+        }
+    }
+
+    &__title {
+        text-align: end;
+        flex: 0 0 auto;
+        min-width: 332px;
+
+        @include max(laptop-small) {
+            min-width: 270px;
+        }
+
+        @include max(tablet) {
+            text-align: start;
+            min-width: auto;
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    .list-width-icons {
+        flex: 1 1 auto;
+
+        @include max(tablet) {
+            width: 100%;
+        }
+
+        &__block {
+            width: 100%;
+            max-width: 320px;
+        }
+    }
+}

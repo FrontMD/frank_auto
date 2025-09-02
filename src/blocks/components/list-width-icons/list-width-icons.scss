@@ -1,11 +1,13 @@
 .list-width-icons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    @include min(large) {
+    &__list {
+        display: flex;
+        gap: 20px;
         justify-content: space-between;
+        //flex-wrap: wrap;
+
+        /* @include min(large) {
+            justify-content: space-between;
+        }*/
     }
 
     &__block {
@@ -62,6 +64,5 @@
         &__block {
             width: 100%;
         }
-
     }
 }

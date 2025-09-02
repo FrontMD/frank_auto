@@ -10,7 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
     fieldsController();
     selects();
     fieldsRangeController();
-    validation();
+    //validation();
     formFilterController();
     ccSlidersInit();
 })
+
+window.onload = function() { 
+    validation();
+};

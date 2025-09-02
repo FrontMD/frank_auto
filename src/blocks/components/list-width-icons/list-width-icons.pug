@@ -38,14 +38,16 @@ mixin list-width-icons(props = defaultListWidthIconsProps)
         }
 
     .list-width-icons(class= checkProps.classes)&attributes(attributes)
-        - let counter = 0;
-        - while(counter < checkProps.list.length)
-            - let item = checkProps.list[counter]
-            .list-width-icons__block
-                .list-width-icons__img
-                    img(src=item.img)
-                .list-width-icons__title!= item.title
-                - if(item.text.length > 0)
-                    .list-width-icons__text!= item.text
+        .custom-scrollbar.list-width-icons__scroll(data-js="customScrollbar")
+            .list-width-icons__list
+                - let counter = 0;
+                - while(counter < checkProps.list.length)
+                    - let item = checkProps.list[counter]
+                    .list-width-icons__block
+                        .list-width-icons__img
+                            img(src=item.img)
+                        .list-width-icons__title!= item.title
+                        - if(item.text.length > 0)
+                            .list-width-icons__text!= item.text
 
-            - counter++
+                    - counter++

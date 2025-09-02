@@ -64,16 +64,16 @@ mixin info-list(props= defaultInfoListProps)
                     -while(cardsCount < checkProps.cards.length)
                         - let card = checkProps.cards[cardsCount]
                         .info-list__card.swiper-slide
-                            .info-list__inner
-                                .info-list__content
-                                    .info-list__img
-                                        img(src=card.img alt="")
-                                    .info-list__icon
-                                        svg
-                                            use(xlink:href=`img/sprites/sprite.svg#exc`) 
-                                    .info-list__texts
-                                        .info-list__title!= card.title
-                                        -if(card.text.length > 0)
-                                            .info-list__text!= card.text                         
+                            //-.info-list__inner
+                            .info-list__content
+                                .info-list__img
+                                    img(src=card.img alt="")
+                                .info-list__icon
+                                    svg
+                                        use(xlink:href=`img/sprites/sprite.svg#exc`) 
+                                .info-list__texts
+                                    .info-list__title!= card.title
+                                    -if(card.text.length > 0)
+                                        .info-list__text!= card.text                         
 
                         - cardsCount++

@@ -3,6 +3,10 @@
         display: grid;
         gap: 24px;
         grid-template-columns: minmax(0, 67%) minmax(0, 33%);
+
+        @include max(tablet-small) {
+            grid-template-columns: minmax(0, 1fr);
+        }
     }
 
     &__header {
