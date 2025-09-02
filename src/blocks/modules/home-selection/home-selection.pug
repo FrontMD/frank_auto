@@ -2,7 +2,8 @@
     const defaultHomeSelectionProps = {
         classes: '',
         usedPage: false,
-        servicesPage: false
+        servicesPage: false,
+        noTabs: false
     }
 
 mixin home-selection(props= defaultHomeSelectionProps)
@@ -11,27 +12,33 @@ mixin home-selection(props= defaultHomeSelectionProps)
             classes: props.classes ? props.classes : defaultHomeSelectionProps.classes,
             usedPage: props.usedPage ? props.usedPage : defaultHomeSelectionProps.usedPage,
             servicesPage: props.servicesPage ? props.servicesPage : defaultHomeSelectionProps.servicesPage,
+            noTabs: props.noTabs ? props.noTabs : defaultHomeSelectionProps.noTabs,
         }
 
     section.section.home-selection(class= checkProps.classes)&attributes(attributes)
         .section__container.section__container--sidebar
-            .section__body.home-selection__tabs
-                +tabs-block({
-                    tabs: [
-                        {
-                            name: 'Новые',
-                            icon: ''
-                        },
-                        {
-                            name: 'С пробегом',
-                            icon: ''
-                        },
-                    ],
-                })
-                    .tabs-block__slide.active(data-js="tabsBlockSlide")
-                        +brands-list
-                    .tabs-block__slide(data-js="tabsBlockSlide")
-                        +brands-list
+            - if(checkProps.noTabs === true)
+                .section__body.home-selection__tabs
+                    +tabs-block({
+                        tabs: [
+                            {
+                                name: 'Новые',
+                                icon: ''
+                            },
+                            {
+                                name: 'С пробегом',
+                                icon: ''
+                            },
+                        ],
+                    })
+                        .tabs-block__slide.active(data-js="tabsBlockSlide")
+                            +brands-list
+                        .tabs-block__slide(data-js="tabsBlockSlide")
+                            +brands-list
+            - else
+                .section__body.home-selection__brands
+                    +brands-list
+
 
             .section__sidebar.home-selection__sidebar
                 - if(checkProps.usedPage === true)

@@ -688,6 +688,10 @@
         display: flex;
         align-items: center;
         gap: 15px;
+
+        @include max(mobile) {
+            width: 100%;
+        }
     }
 
     &__price {
@@ -707,6 +711,7 @@
 
         @include max(mobile) {
             font-size: 16px;
+            white-space: nowrap;
         }
 
         span {
