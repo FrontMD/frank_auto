@@ -50,6 +50,11 @@
             gap: 10px;
             min-height: auto;
         }
+
+        &--centered {
+            justify-content: center;
+            max-width: 60%;
+        }
     }
 
     &__right {
@@ -59,6 +64,12 @@
     }
 
     &__title {
+        position: relative;
+
+        @include max(mobile) {
+            display: contents;
+        }
+
         &--right {
             text-align: right;
         }
@@ -100,6 +111,27 @@
             position: relative;
             top: -16px;
             padding: 20px 32px;
+        }
+
+        span {
+            color: $c-white;
+        }
+
+        &--title {
+            width: max-content;
+            position: absolute;
+            left: calc(100% + 47px);
+            top: 0;
+            margin-top: 0;
+            transform-origin: left bottom;
+
+            @include max(mobile) {
+                order: 2;
+                left: 0;
+                top: 0;
+                margin-top: 55px;
+                transform-origin: left top;
+            }
         }
     }
 }

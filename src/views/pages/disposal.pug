@@ -1,0 +1,256 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Утилизация"
+
+block content
+	.page-layout(data-js="pageLayout")
+		+s-breadcrumbs({
+			items: [
+				{
+					name: 'FrankAuto',
+					link: 'javascript:void(0);'
+				},
+				{
+					name: 'Утилизация',
+					link: 'javascript:void(0);'
+				}
+			],
+		})
+
+		+img-intro({
+			img: 'img/intros/disposal_intro.webp',
+			imgMob: 'img/intros/disposal_intro_mob.webp',
+			title: 'Утилизация <br>автомобиля',
+			text: 'Стать участником программы «Утилизации автомобиля» может любой клиент без&nbsp;ограничений по&nbsp;возрасту, основное условие - покупка автомобиля впервые.',
+			sticker: {
+				inTitle: true,
+				small: 'По льготной ставке',
+				big: 'от 1,9%'
+			}
+		})
+
+		+list-form({
+			personalMarker: '3.'
+		})
+			.form__item
+				.title.title--30.form__list-title
+					.form__marker 1.
+					| Ваш будущий автомобиль
+				.form__block.form__block--sgrid
+					.form__fields.form__fields--column
+						+field({
+							classes: '',
+							tag: 'select',
+							placeholder: 'Марка',
+							selectOptions: [
+								"",
+								"LiXiang",
+								"Voyah",
+								"AITO",
+								"Chery",
+								"Zeekr",
+								"Audi",
+								"Tank",
+								"Rox Motor Tech",
+							],
+							inputAttr: {
+								'required': '',
+							},
+							})
+						+field({
+							tag: 'select',
+							placeholder: 'Модель',
+							selectOptions: [
+								"",
+								"LiXiang L6",
+								"LiXiang L7",
+								"LiXiang L9",
+								"LiXiang L9",
+								"LiXiang Mega",
+								"LiXiang One"
+							],
+							inputAttr: {
+								'required': '',
+							},
+
+						})
+						+field({
+							classes: '',
+							tag: 'select',
+							placeholder: 'Комплектация',
+							selectOptions: [
+								"",
+								"Base",
+								"Comfort",
+								"Sport",
+								"Luxe",
+							],
+							inputAttr: {
+								'required': '',
+							},
+						})
+
+					.form__auto.form-auto
+						.form-auto__img
+							img(src="img/catalog-model/model_5.webp" alt="")
+						.form-auto__info
+							.form-auto__title.title Lixiang L7 1.4 100 л.с.<br>6MT 2WD (2020)
+							.form-auto__prices
+								.form-auto__price.form-auto__price--base
+									span Базовая цена
+									| 12&nbsp;500&nbsp;000&nbsp;₽
+								.form-auto__price.form-auto__price--discount
+									span Цена со скидками
+									| 5&nbsp;500&nbsp;000&nbsp;₽
+							.form-auto__credit.title-sticker
+								| Платеж
+								span 70 000 ₽/мес.
+
+			.form__item
+				.form__block.form__block--cgrid.form__block--header
+					.title.title--30.form__list-title
+						.form__marker 2.
+						| Программа Утиль
+						+btn({
+							classes: 'form__list-delete',
+							name: 'Убрать',
+							sMode: 'noborder',
+							cMode: 'link',
+							icon: 'urn'
+						})
+					.checkboxes-flex
+						+field({
+							type: 'checkbox',
+							radioCheckboxText: 'Акция “Trade-in или Утилизация” - скидка 75&nbsp;000&nbsp;₽',
+							inputAttr: {
+								checked: ''
+							}
+						})
+
+				.form__block
+					.form__fields
+						+field({
+							classes: '',
+							tag: 'select',
+							placeholder: 'Марка',
+							selectOptions: [
+								"",
+								"LiXiang",
+								"Voyah",
+								"AITO",
+								"Chery",
+								"Zeekr",
+								"Audi",
+								"Tank",
+								"Rox Motor Tech",
+							],
+							inputAttr: {
+								'required': '',
+							},
+							})
+						.form__flex
+							+field({
+								classes: '',
+								tag: 'select',
+								placeholder: 'Год выпуска',
+								selectOptions: [
+									"",
+									"2020",
+									"2021",
+									"2022",
+									"2023",
+									"2024",
+									"2025",
+								],
+							})
+							+field({
+								classes: '',
+								tag: 'select',
+								placeholder: 'Трансмиссия',
+								selectOptions: [
+									"",
+									"Механическая",
+									"Автоматическая",
+									"Вариатор",
+									"Роботизированная",
+								],
+								inputAttr: {
+									'required': '',
+								},
+							})
+
+						+field({
+							tag: 'select',
+							placeholder: 'Модель',
+							selectOptions: [
+								"",
+								"LiXiang L6",
+								"LiXiang L7",
+								"LiXiang L9",
+								"LiXiang L9",
+								"LiXiang Mega",
+								"LiXiang One"
+							],
+							inputAttr: {
+								'required': '',
+							},
+
+						})
+
+						+field({
+							tag: 'select',
+							placeholder: 'Модель',
+							selectOptions: [
+								"",
+								"LiXiang L6",
+								"LiXiang L7",
+								"LiXiang L9",
+								"LiXiang L9",
+								"LiXiang Mega",
+								"LiXiang One"
+							],
+							inputAttr: {
+								'required': '',
+							},
+
+						})
+
+
+		+info-list
+		+s-list
+			.s-list__grid
+				.s-list__content
+					.s-list__header
+						.s-list__icon
+							img(src="img/s-list-icons/s_list_icon_2.svg" alt="")
+						.title.title--24.s-list__title Условия<br>покупки
+					.s-list__list.text-editor
+						ul
+							li Взнос 0 ₽
+							li Автокредит для медицинских работников
+							li Срок кредита до 7 лет
+							li Скидка 60 000 на покупку нового автомобиля
+							li Госпрограмма первый автомобиль
+							li 10% скидки по Trade-in на покупку нового автомобиля
+							li Семейный автомобиль 
+							li Более 30 банков партнеров
+
+				.s-list__content
+					.s-list__header
+						.s-list__icon
+							img(src="img/s-list-icons/s_list_icon_3.svg" alt="")
+						.title.title--24.s-list__title Необходимые<br>документы
+					.s-list__list.s-list__list--small.text-editor
+						ul
+							li Паспорт
+							li Водительское удостоверение
+		+s-conditions({
+			title: 'Условия участия в&nbsp;программе'
+		})
+		+s-banks
+
+		+s-reviews({
+			title: 'Нам доверяют'
+		})

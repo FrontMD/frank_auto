@@ -58,6 +58,41 @@
         }
     }
 
+    &__list-delete.btn {
+        font-family: $ff-roboto;
+        font-size: 16px;
+        gap: 7px;
+
+        @include max(mobile) {
+            font-size: 14px;
+            gap: 5px;
+        }
+
+        svg,
+        .btn__text {
+            transition: all $tr-time linear;
+            color: #FF5C8D;
+        }
+
+        svg {
+            margin-bottom: 4px;
+
+            @include max(mobile) {
+                width: 16px;
+                height: 16px;
+                margin-top: 3px;
+            }
+        }
+
+        &:hover {
+
+            svg,
+            .btn__text {
+                color: $c-accent;
+            }
+        }
+    }
+
     &__text {
         max-width: 640px;
         color: $c-text;
@@ -190,6 +225,22 @@
 
             .checkboxes-grid {
                 padding-left: 85px;
+
+                @include max(laptop-small) {
+                    padding-left: 40px;
+                }
+
+                @include max(tablet) {
+                    padding-left: 80px;
+                }
+
+                @include max(mobile) {
+                    padding-left: 0;
+                }
+            }
+
+            .checkboxes-flex {
+                padding-left: 52px;
 
                 @include max(laptop-small) {
                     padding-left: 40px;
@@ -606,6 +657,16 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
         margin-top: 0;
 
+        @include max(tablet) {
+            .form__flex {
+                display: contents;
+            }
+
+            .form__flex .field {
+                max-width: 100%;
+            }
+        }
+
         @include max(mobile) {
             grid-template-columns: minmax(0, 1fr);
         }
@@ -788,5 +849,20 @@
 
     @include max(mobile) {
         grid-template-columns: minmax(0, 1fr);
+    }
+
+}
+
+.checkboxes-flex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @include max(tablet) {
+        justify-content: flex-start;
+    }
+
+    .field {
+        flex: 0 1 auto;
     }
 }

@@ -2,239 +2,51 @@ extends ../layouts/default
 include ../helpers/mixins
 
 block variables
-    - const title = "Сервисное обслуживание"
+	- const title = "Услуги"
 
 block content
-    .page-layout(data-js="pageLayout")
-        +s-breadcrumbs({
-            items: [
-                {
-                    name: 'FrankAuto',
-                    link: 'javascript:void(0);'
-                },
-                {
-                    name: 'Сервисное обслуживание',
-                    link: 'javascript:void(0);'
-                },
-            ],
-        })
+	.page-layout(data-js="pageLayout")
+		+s-breadcrumbs({
+			items: [
+				{
+					name: 'FrankAuto',
+					link: 'javascript:void(0);'
+				},
+				{
+					name: 'Услуги',
+					link: 'javascript:void(0);'
+				}
+			],
+		})
 
-        section.section.section--title
-            .section__container
-                .section__header.section__content
-                    .title.title--40
-                        h1 Сервисное обслуживание
+		section.section.section--title
+			.section__container
+				.section__header.section__content
+					.title.title--40
+						h1 Услуги
 
-        +home-selection({
-            servicesPage: true
-        })
+		+s-banner({
+			img: '<picture><source srcset="img/services/kp_services_mob.webp" media="(max-width: 767px)"><img src="img/services/kp_services.webp" alt=""></picture>'
+		})
+			.cp-tradein
+				.title.title--30.title--light.cp-tradein__title Перебьем предложения от конкурентов!
+					.cp-tradein__subtitle Скидки от 10 до 25% на стоимость автомобиля
 
-        +home-service({
-            classes: '',
-            title: 'Популярные услуги',
-            btn: 'none',
-            cards: [
-                {
-                    text: 'Кузовной ремонт',
-                    img: 'img/home/home_service_1.webp'
-                },
-                {
-                    text: 'Диагностика',
-                    img: 'img/home/home_service_2.webp'
-                },
-                {
-                    text: 'Керамическое покрытие',
-                    img: 'img/home/home_service_3.webp'
-                },
-                {
-                    text: 'Малярные работы',
-                    img: 'img/home/home_service_4.webp'
-                },
-                {
-                    text: 'Шиномонтаж',
-                    img: 'img/home/home_service_5.webp'
-                }
-            ],
-        })
+				+form({
+					classes: 'cp-tradein__form form--horizontal form--light',
+					btnText: 'Получить предложение',
+				})
+					+field({
+						tag: 'input',
+						type: 'tel',
+						placeholder: 'Ваш телефон',
+						inputAttr: {
+						'required': '',
+						'data-v-name': 'phone',
+						'data-type': 'phoneNumber'
+						},
+					})
 
-        +popular-brands
-
-        +s-news({
-            title: 'Нужно каждой машине',
-            btn: {
-                classes: 'section-header__btn',
-                name: 'Смотреть все',
-                cMode: 'bordered',
-                sMode: 'content'
-            },
-            slides: '3',
-            cards: [
-                {
-                    classes: 'swiper-slide news-card--service',
-                    img: 'img/services/service_7.webp',
-                    title: 'Кузовной ремонт в FRANK AUTO',
-                    text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
-                    tag: 'Кузовной ремонт',
-                    date: '25.10.2025'
-                },
-                {
-                    classes: 'swiper-slide news-card--service',
-                    img: 'img/services/service_8.webp',
-                    title: 'ДИСТАНЦИОННАЯ ДИАГНОСТИКА',
-                    text: 'Если у вас возникли сложности с доступом к вашему мастер-аккаунту на LiXiang, не переживайте — мы поможем!',
-                    tag: 'Аккаунт авто',
-                    brand: {
-                        name: 'LIXIANG',
-                        icon: 'img/brands/brand_logo_1.png'
-                    },
-                    date: '25.10.2025'
-                },
-                {
-                    classes: 'swiper-slide news-card--service',
-                    img: 'img/services/service_9.webp',
-                    title: 'КЕРАМИЧЕСКОЕ ПОКРЫТИЕ',
-                    text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
-                    tag: 'Сервис',
-                    brand: {
-                        name: 'LIXIANG',
-                        icon: 'img/brands/brand_logo_1.png'
-                    },
-                    date: '25.10.2025'
-                }
-            ]
-        })
-
-        +s-news({
-            title: 'Когда наступит весна',
-            btn: {
-                classes: 'section-header__btn',
-                name: 'Смотреть все',
-                cMode: 'bordered',
-                sMode: 'content'
-            },
-            slides: '3',
-            cards: [
-                {
-                    classes: 'swiper-slide news-card--service',
-                    img: 'img/services/service_7.webp',
-                    title: 'Кузовной ремонт в FRANK AUTO',
-                    text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
-                    tag: 'Кузовной ремонт',
-                    date: '25.10.2025'
-                },
-                {
-                    classes: 'swiper-slide news-card--service',
-                    img: 'img/services/service_10.webp',
-                    title: 'ДИСТАНЦИОННАЯ ДИАГНОСТИКА',
-                    text: 'Если у вас возникли сложности с доступом к вашему мастер-аккаунту на LiXiang, не переживайте — мы поможем!',
-                    tag: 'Аккаунт авто',
-                    brand: {
-                        name: 'LIXIANG',
-                        icon: 'img/brands/brand_logo_1.png'
-                    },
-                    date: '25.10.2025'
-                },
-                {
-                    classes: 'swiper-slide news-card--service',
-                    img: 'img/services/service_11.webp',
-                    title: 'КЕРАМИЧЕСКОЕ ПОКРЫТИЕ',
-                    text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
-                    tag: 'Сервис',
-                    brand: {
-                        name: 'LIXIANG',
-                        icon: 'img/brands/brand_logo_1.png'
-                    },
-                    date: '25.10.2025'
-                }
-            ]
-        })
-
-        +s-news({
-            title: 'Готовимся к зиме',
-            btn: {
-                classes: 'section-header__btn',
-                name: 'Смотреть все',
-                cMode: 'bordered',
-                sMode: 'content'
-            },
-            slides: '3',
-            cards: [
-                {
-                    classes: 'swiper-slide news-card--service',
-                    img: 'img/services/service_7.webp',
-                    title: 'Кузовной ремонт в FRANK AUTO',
-                    text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
-                    tag: 'Кузовной ремонт',
-                    date: '25.10.2025'
-                },
-                {
-                    classes: 'swiper-slide news-card--service',
-                    img: 'img/services/service_10.webp',
-                    title: 'ДИСТАНЦИОННАЯ ДИАГНОСТИКА',
-                    text: 'Если у вас возникли сложности с доступом к вашему мастер-аккаунту на LiXiang, не переживайте — мы поможем!',
-                    tag: 'Аккаунт авто',
-                    brand: {
-                        name: 'LIXIANG',
-                        icon: 'img/brands/brand_logo_1.png'
-                    },
-                    date: '25.10.2025'
-                },
-                {
-                    classes: 'swiper-slide news-card--service',
-                    img: 'img/services/service_11.webp',
-                    title: 'КЕРАМИЧЕСКОЕ ПОКРЫТИЕ',
-                    text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
-                    tag: 'Сервис',
-                    brand: {
-                        name: 'LIXIANG',
-                        icon: 'img/brands/brand_logo_1.png'
-                    },
-                    date: '25.10.2025'
-                }
-            ]
-        })
-
-        +s-news({
-            title: 'Акции',
-            btn: {
-                classes: 'section-header__btn',
-                name: 'Смотреть все',
-                cMode: 'bordered',
-                sMode: 'content'
-            },
-            slides: '3',
-            cards: [
-                {
-                    classes: 'swiper-slide news-card--service',
-                    img: 'img/services/service_7.webp',
-                    title: 'Кузовной ремонт в FRANK AUTO',
-                    text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
-                    tag: 'Кузовной ремонт',
-                    date: '25.10.2025'
-                },
-                {
-                    classes: 'swiper-slide news-card--service',
-                    img: 'img/services/service_10.webp',
-                    title: 'ДИСТАНЦИОННАЯ ДИАГНОСТИКА',
-                    text: 'Если у вас возникли сложности с доступом к вашему мастер-аккаунту на LiXiang, не переживайте — мы поможем!',
-                    tag: 'Аккаунт авто',
-                    brand: {
-                        name: 'LIXIANG',
-                        icon: 'img/brands/brand_logo_1.png'
-                    },
-                    date: '25.10.2025'
-                },
-                {
-                    classes: 'swiper-slide news-card--service',
-                    img: 'img/services/service_11.webp',
-                    title: 'КЕРАМИЧЕСКОЕ ПОКРЫТИЕ',
-                    text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
-                    tag: 'Сервис',
-                    brand: {
-                        name: 'LIXIANG',
-                        icon: 'img/brands/brand_logo_1.png'
-                    },
-                    date: '25.10.2025'
-                }
-            ]
-        })
+		+s-reviews({
+			title: 'Нам доверяют'
+		})

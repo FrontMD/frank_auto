@@ -36,11 +36,11 @@ mixin img-intro(props= defaultImgIntroProps)
                         source(srcset=checkProps.imgMob media="(max-width: 767px)")
                         img(src=checkProps.img alt="")
                 .section-block__content.img-intro__content
-                    .img-intro__left
+                    .img-intro__left(class=checkProps.sticker.inTitle === true ? 'img-intro__left--centered' : '')
                         .img-intro__title.title.title--50.title--light
                             h1!= checkProps.title
                             -if(checkProps.sticker.inTitle === true)
-                                .img-intro__sticker.title-sticker!= checkProps.sticker.small
+                                .img-intro__sticker.img-intro__sticker--title.title-sticker!= checkProps.sticker.small
                                     span!= checkProps.sticker.big
                         .img-intro__text!= checkProps.text
                         -if(checkProps.sticker.inTitle === false)
