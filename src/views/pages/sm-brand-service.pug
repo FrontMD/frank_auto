@@ -1,0 +1,206 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Услуга от бренда"
+
+block content
+    .page-layout(data-js="pageLayout")
+        +s-breadcrumbs({
+            items: [
+                {
+                    name: 'FrankAuto',
+                    link: 'javascript:void(0);'
+                },
+                {
+                    name: 'Сервисное обслуживание',
+                    link: 'javascript:void(0);'
+                },
+                {
+                    name: 'Бренд',
+                    link: 'javascript:void(0);'
+                },
+                {
+                    name: 'Услуга от бренда',
+                    link: 'javascript:void(0);'
+                },
+            ],
+        })
+
+        +ns-article({
+            title: 'Привязка ключей для автомобилей Lotus',
+            date: '25.10.2025',
+            section: 'Спецпредложение',
+            brandService: true
+        })
+
+        +s-catalog({
+            title: 'Обслуживаемые модели',
+            isSlider: true,
+            items: [
+                {
+                    img: ['img/catalog/product_1.webp'],
+                    title: 'Новый LIXIANG L6 MAX',
+                    price: {
+                        classes: 'catalog-card__price',
+                        current: '5 500 000 ₽',
+                        old: '6 200 000 ₽',
+                        credit: 'от 115 000 ₽/мес <span>в кредит</span>'
+                    },
+                },
+                {
+                    img: ['img/catalog/product_2.webp'],
+                    title: 'LiXiang L7 MAX',
+                    price: {
+                        classes: 'catalog-card__price',
+                        current: '5 835 192 ₽',
+                        old: '6 200 000 ₽',
+                        credit: 'от 115 000 ₽/мес <span>в кредит</span>'
+                    },
+                },
+                {
+                    img: ['img/catalog/product_3.webp'],
+                    title: 'LIXIANG L7 PRO',
+                    price: {
+                        classes: 'catalog-card__price',
+                        current: '5 660 000 ₽',
+                        old: '6 200 000 ₽',
+                        credit: 'от 115 000 ₽/мес <span>в кредит</span>'
+                    },
+                },
+
+            ]
+        })
+
+        +s-banner({
+            img: '<picture><source srcset="img/services/service_form_mob.webp" media="(max-width: 767px)"><img src="img/services/service_form.webp" alt=""></picture>',
+            imgPos: 'right'
+        })
+            .service-form
+                .title.title--30.title--light.service-form__title Записаться на сервисное обслуживание
+
+                +form({
+                    classes: 'service-form__form form--horizontal form--light',
+                    btnText: 'Отправить',
+                })
+                    +field({
+                        placeholder: 'Имя',
+                        inputAttr: {
+                            'required': '',
+                            'data-type': 'letters'
+                        },
+                    })
+                    +field({
+                        placeholder: 'Телефон',
+                        inputAttr: {
+                            'required': '',
+                            'data-v-name': 'phone',
+                            'data-type': 'phoneNumber'
+                        },
+                    })
+                    +field({
+                        classes: '',
+                        tag: 'select',
+                        placeholder: 'Выбрать салон',
+                        inputAttr: {
+                        'required': '',
+                        },
+                        selectOptions: [
+                            "",
+                            "Москва, Новорижское шоссе, 17-й км., строение 3",
+                            "Москва, МКАД, 85-й километр, вл3с2",
+                            "Москва, Можайское шоссе, вл. 165 Б",
+                        ],
+                    })
+                    +field({
+                        classes: '',
+                        tag: 'select',
+                        placeholder: 'Марка',
+                        inputAttr: {
+                        'required': '',
+                        },
+                        selectOptions: [
+                            "",
+                            "LiXiang",
+                            "Voyah",
+                            "AITO",
+                            "Chery",
+                            "Zeekr",
+                            "Audi",
+                            "Tank",
+                            "Rox Motor Tech",
+                        ],
+                    })
+                    +field({
+                        classes: '',
+                        tag: 'select',
+                        placeholder: 'Модель',
+                        inputAttr: {
+                        'required': '',
+                        },
+                        selectOptions: [
+                            "",
+                            "LiXiang L6",
+                            "LiXiang L7",
+                            "LiXiang L9",
+                            "LiXiang L9",
+                            "LiXiang Mega",
+                            "LiXiang One"
+                        ],
+                    })
+                    +field({
+                        classes: '',
+                        tag: 'select',
+                        placeholder: 'Год выпуска',
+                        inputAttr: {
+                        'required': '',
+                        },
+                        selectOptions: [
+                            "",
+                            "2020",
+                            "2021",
+                            "2022",
+                            "2023",
+                            "2024",
+                            "2025",
+                        ],
+                    })
+                    +field({
+                        placeholder: 'Описание услуги / проблемы',
+                    })
+
+        +s-news({
+            title: 'Акции от производителя',
+            btn: {
+                classes: 'section-header__btn',
+                name: 'Смотреть все',
+                cMode: 'bordered',
+                sMode: 'content'
+            },
+            cards: [
+                {
+                    classes: 'swiper-slide news-card--small',
+                    img: 'img/stocks/stock_1.webp',
+                    title: 'АВТОКРЕДИТ С ДОКРИЗИСНОЙ СТАВКОЙ!',
+                    text: 'Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!',
+                    tag: '',
+                    date: '25.10.2025'
+                },
+                {
+                    classes: 'swiper-slide news-card--small',
+                    img: 'img/stocks/stock_2.webp',
+                    title: 'Собери автомобиль мечты с телеграмм ботом',
+                    text: 'Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!',
+                    tag: '',
+                    date: '25.10.2025'
+                },
+                {
+                    classes: 'swiper-slide news-card--small',
+                    img: 'img/stocks/stock_3.webp',
+                    title: 'Выгода от FRANK AUTO - выбирайте с умом!',
+                    text: 'Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!',
+                    tag: '',
+                    date: '25.10.2025'
+                }
+            ]
+        })

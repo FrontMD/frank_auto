@@ -1,0 +1,66 @@
+-
+    const defaultServicesIntroProps = {
+        classes: '',
+        cards: [
+            {
+                title: 'Тест драйв',
+                text: 'Бесплатно первые 60 минут',
+                img: 'img/services/service_12.webp'
+            },
+            {
+                title: 'Экспресс-кредит',
+                text: '3,5% по льготной ставке',
+                img: 'img/services/service_13.webp'
+            },
+            {
+                title: 'Гарантия',
+                text: 'Дополнительная услуга',
+                img: 'img/services/service_3.webp'
+            },
+            {
+                title: 'Утилизация старого',
+                text: 'Для тех кто покупает автомобиль впервые',
+                img: 'img/services/service_14.webp'
+            },
+            {
+                title: 'Госпрограмма Trade‑in',
+                text: '1,9% по льготной ставке',
+                img: 'img/services/service_15.webp'
+            },
+            {
+                title: 'Доставка автомобиля',
+                text: 'Доставим, организуем таможенное оформление',
+                img: 'img/services/service_16.webp'
+            },
+        ],
+    }
+
+mixin services-intro(props= defaultServicesIntroProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultServicesIntroProps.classes,
+            cards: props.cards ? props.cards : defaultServicesIntroProps.cards,
+        }
+
+    section.section.services-intro(class= checkProps.classes)&attributes(attributes)
+        .section__container
+            .section-block.services-intro__block
+                .services-intro__list
+                    - let cardsCount = 0
+                    -while(cardsCount < checkProps.cards.length)
+                        - let card = checkProps.cards[cardsCount]
+                        .s-services__card
+                            .s-services__info
+                                .s-services__subtitle.title.title--30!= card.title
+                                -if(card.text.length > 0)
+                                    .s-services__text!= card.text
+                                +btn({
+                                    classes: 's-services__btn',
+                                    name: 'Узнать больше',
+                                    cMode: 'light-accent',
+                                    sMode: "full"
+                                })
+                            .s-services__img
+                                img(class="lazyload" src="" data-src=card.img alt="")
+
+                        - cardsCount++

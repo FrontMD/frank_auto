@@ -75,3 +75,17 @@
         }
     }
 }
+
+.cp-tradein {
+    &--services {
+        @include max(mobile) {
+
+            min-height: 360px;
+
+            .cp-tradein__title {
+                margin-bottom: 50px;
+            }
+
+        }
+    }
+}

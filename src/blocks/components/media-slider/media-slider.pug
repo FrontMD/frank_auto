@@ -1,0 +1,33 @@
+-
+    const defaultMediaSliderProps = {
+        classes: '',
+        title: '',
+        slides: [
+            'img/services/sa_slide_1.webp',
+            'img/services/sa_intro.webp',
+        ]
+    }
+
+mixin media-slider(props= defaultMediaSliderProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultMediaSliderProps.classes,
+            slides: props.slides ? props.slides : defaultMediaSliderProps.slides,
+        }
+
+    .media-slider(class= checkProps.classes data-js="mediaSliderBlock")&attributes(attributes)
+        .media-slider__title.title.title--30 Примеры работ
+        .media-slider__slider(data-js="mediaSlider")
+            +slider-controls({
+                classes: 'media-slider__controls'
+            })
+            .swiper-wrapper
+                - let counter = 0
+                - while(counter < checkProps.slides.length)
+                    .swiper-slide.media-slider__slide
+                        a(href=checkProps.slides[counter] data-fancybox='mediaSliderGroup1' data-thumb=checkProps.slides[counter]).media-slider__img
+                            img(src=checkProps.slides[counter], alt="")
+
+                    -counter++
+
+

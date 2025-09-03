@@ -1,0 +1,49 @@
+-
+    const defaultPriceListProps = {
+        classes: '',
+        list: [
+            {
+                title: 'Восстановление геометрии кузова',
+                sum: 'от 2600 р',
+            },
+            {
+                title: 'Устранение перекоса кузова',
+                sum: 'от 2600 р',
+            },
+            {
+                title: 'Устранение перекоса кузова',
+                sum: 'от 2600 р',
+            },
+            {
+                title: 'Устранение перекоса кузова',
+                sum: 'от 2600 р',
+            },
+        ]
+    }
+
+mixin price-list(props = defaultPriceListProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultPriceListProps.classes,
+            list: props.list ? props.list : defaultPriceListProps.list
+        }
+
+    .price-list(class= checkProps.classes)&attributes(attributes)
+        .price-list__list
+            - let counter = 0;
+            - while(counter < checkProps.list.length)
+                - let item = checkProps.list[counter]
+                .price-list__item
+                    .price-list__title
+                        svg
+                            use(xlink:href=`img/sprites/sprite.svg#arrow_classic`)
+                        != item.title
+                    .price-list__sum!= item.sum
+                    +btn({
+                        name: 'Записаться на ТО',
+                        sMode: 'noborder',
+                        cMode: 'link',
+                        icon: 'handset'
+                    })
+
+                - counter++

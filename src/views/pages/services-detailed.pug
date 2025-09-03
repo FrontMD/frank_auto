@@ -1,0 +1,67 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Универсальная услуга"
+
+block content
+    .page-layout(data-js="pageLayout")
+        +s-breadcrumbs({
+            items: [
+                {
+                    name: 'FrankAuto',
+                    link: 'javascript:void(0);'
+                },
+                {
+                    name: 'Услуги',
+                    link: 'javascript:void(0);'
+                },
+                {
+                    name: 'Универсальная услуга',
+                    link: 'javascript:void(0);'
+                },
+            ],
+        })
+
+        +ns-article({
+            title: 'Кузовной ремонт',
+            date: '25.10.2025',
+            section: 'Спецпредложение',
+            service: true
+        })
+
+        +s-news({
+            title: 'Акции',
+            btn: {
+                classes: 'section-header__btn',
+                name: 'Смотреть все',
+                cMode: 'bordered',
+                sMode: 'content'
+            },
+            cards: [
+                {
+                    classes: 'swiper-slide news-card--small',
+                    img: 'img/stocks/stock_1.webp',
+                    title: 'АВТОКРЕДИТ С ДОКРИЗИСНОЙ СТАВКОЙ!',
+                    text: 'Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!',
+                    tag: '',
+                    date: '25.10.2025'
+                },
+                {
+                    classes: 'swiper-slide news-card--small',
+                    img: 'img/stocks/stock_2.webp',
+                    title: 'Собери автомобиль мечты с телеграмм ботом',
+                    text: 'Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!',
+                    tag: '',
+                    date: '25.10.2025'
+                },
+                {
+                    classes: 'swiper-slide news-card--small',
+                    img: 'img/stocks/stock_3.webp',
+                    title: 'Выгода от FRANK AUTO - выбирайте с умом!',
+                    text: 'Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!',
+                    tag: '',
+                    date: '25.10.2025'
+                }
+            ]
+        })

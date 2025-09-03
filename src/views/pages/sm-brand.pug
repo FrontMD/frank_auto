@@ -1,0 +1,123 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+    - const title = "Сервисное обслуживание. Бренд"
+
+block content
+    .page-layout(data-js="pageLayout")
+        +s-breadcrumbs({
+            items: [
+                {
+                    name: 'FrankAuto',
+                    link: 'javascript:void(0);'
+                },
+                {
+                    name: 'Сервисное обслуживание',
+                    link: 'javascript:void(0);'
+                },
+                {
+                    name: 'Бренд',
+                    link: 'javascript:void(0);'
+                },
+            ],
+        })
+
+        section.section.section--title
+            .section__container
+                .section__header.section__content
+                    .title.title--40
+                        h1 Сервисное обслуживание Lotus
+
+        +news-list({
+            classes: '',
+            smPage: true,
+            cards: [
+                {
+                    title: 'Кузовной ремонт в FRANK AUTO',
+                    text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
+                    img: 'img/news/news_5.webp',
+                    date: '25.10.2025',
+                    tag: 'Кузовной ремонт'
+                },
+                {
+                    title: 'Кузовной ремонт в FRANK AUTO',
+                    text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
+                    img: 'img/news/news_6.webp',
+                    date: '25.10.2025',
+                    tag: 'Кузовной ремонт'
+                },
+                {
+                    title: 'Кузовной ремонт в FRANK AUTO',
+                    text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
+                    img: 'img/news/news_7.webp',
+                    date: '25.10.2025',
+                    tag: 'Кузовной ремонт'
+                },
+                {
+                    title: 'Кузовной ремонт в FRANK AUTO',
+                    text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
+                    img: 'img/news/news_8.webp',
+                    date: '25.10.2025',
+                    tag: 'Кузовной ремонт'
+                },
+                {
+                    title: 'Кузовной ремонт в FRANK AUTO',
+                    text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
+                    img: 'img/news/news_9.webp',
+                    date: '25.10.2025',
+                    tag: 'Кузовной ремонт'
+                },
+                {
+                    title: 'Кузовной ремонт в FRANK AUTO',
+                    text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
+                    img: 'img/news/news_10.webp',
+                    date: '25.10.2025',
+                    tag: 'Кузовной ремонт'
+                }, 
+            ],
+        })
+        +s-news({
+            title: 'Акции от производителя',
+            btn: {
+                classes: 'section-header__btn',
+                name: 'Смотреть все',
+                cMode: 'bordered',
+                sMode: 'content'
+            },
+            slides: '3',
+            cards: [
+                {
+                    classes: 'swiper-slide news-card--service',
+                    img: 'img/services/service_7.webp',
+                    title: 'Кузовной ремонт в FRANK AUTO',
+                    text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
+                    tag: 'Кузовной ремонт',
+                    date: '25.10.2025'
+                },
+                {
+                    classes: 'swiper-slide news-card--service',
+                    img: 'img/services/service_10.webp',
+                    title: 'ДИСТАНЦИОННАЯ ДИАГНОСТИКА',
+                    text: 'Если у вас возникли сложности с доступом к вашему мастер-аккаунту на LiXiang, не переживайте — мы поможем!',
+                    tag: 'Аккаунт авто',
+                    brand: {
+                        name: 'LIXIANG',
+                        icon: 'img/brands/brand_logo_1.png'
+                    },
+                    date: '25.10.2025'
+                },
+                {
+                    classes: 'swiper-slide news-card--service',
+                    img: 'img/services/service_11.webp',
+                    title: 'КЕРАМИЧЕСКОЕ ПОКРЫТИЕ',
+                    text: 'Ремонт любой сложности, устранение любых неисправностей и уникальные в РФ услуги для всех моделей Li Auto',
+                    tag: 'Сервис',
+                    brand: {
+                        name: 'LIXIANG',
+                        icon: 'img/brands/brand_logo_1.png'
+                    },
+                    date: '25.10.2025'
+                }
+            ]
+        })

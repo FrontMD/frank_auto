@@ -1,0 +1,45 @@
+.media-slider {
+    overflow: hidden;
+
+    &__title {}
+
+    &__slider {
+        position: relative;
+        margin-top: 30px;
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__controls {
+        .slider-control {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 3;
+        }
+
+        .slider-control--prev {
+            left: 10px;
+        }
+
+        .slider-control--next {
+            right: 10px;
+        }
+
+        @include max(mobile) {
+            display: none;
+        }
+    }
+
+}

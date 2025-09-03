@@ -5,7 +5,8 @@
 @@include("../../blocks/components/field-range/field-range.js")
 @@include("../../blocks/components/catalog-card/catalog-card.js")
 @@include("../../blocks/components/cookie/cookie.js")
-//include("../../blocks/components/field-file/field-file.js")
+@@include("../../blocks/components/media-slider/media-slider.js")
+@@include("../../blocks/components/spoiler/spoiler.js")
 
 document.addEventListener('DOMContentLoaded', () => {
     cookieInit()
@@ -14,6 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     fieldsRangeController();
     formFilterController();
     ccSlidersInit();
+    mediaSliderInit();
+    spoilers()
 })
 
 window.onload = function() { 

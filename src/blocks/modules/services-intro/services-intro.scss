@@ -1,0 +1,31 @@
+.services-intro {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+
+        @include max(tablet) {
+            gap: 10px;
+        }
+
+        @include max(tablet-small) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @include max(xs) {
+            grid-template-columns: minmax(0, 1fr);
+        }
+    }
+
+    .s-services__subtitle {
+        @include min(tablet) {
+            min-height: 2.4em;
+        }
+    }
+
+    .s-services__img {
+        @include max(xs) {
+            height: 65.556vw;
+        }
+    }
+}

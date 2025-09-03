@@ -2,6 +2,7 @@
     const defaultNewsListProps = {
         classes: '',
         stocksPage: false,
+        smPage: false,
         cards: [
             {
                 title: 'Кузовной ремонт в FRANK AUTO',
@@ -95,6 +96,7 @@ mixin news-list(props= defaultNewsListProps)
         const checkProps = {
             classes: props.classes ? props.classes : defaultNewsListProps.classes,
             stocksPage: props.stocksPage ? props.stocksPage : defaultNewsListProps.stocksPage,
+            smPage: props.smPage ? props.smPage : defaultNewsListProps.smPage,
             cards: props.cards ? props.cards : defaultNewsListProps.cards,
         }
 
@@ -119,6 +121,46 @@ mixin news-list(props= defaultNewsListProps)
                                             | Отдел продаж
                                             svg
                                                 use(xlink:href=`img/sprites/sprite.svg#close`)
+
+                    -else if(checkProps.smPage === true)
+                        .news-list__grid
+                            .news-list__title Быстрый подбор услуг
+                            .form__flex
+                                +field({
+                                    classes: '',
+                                    tag: 'select',
+                                    placeholder: 'Тип услуги',
+                                    selectOptions: [
+                                        "",
+                                        "Кузовной ремонт",
+                                        "Диагностика",
+                                        "Керамическое покрытие",
+                                        "Малярные работы",
+                                        "Шиномонтаж",
+                                    ],
+                                })
+                                +field({
+                                    classes: '',
+                                    tag: 'select',
+                                    placeholder: 'Доп. фильтр',
+                                    selectOptions: [
+                                        "",
+                                        "Пункт 1",
+                                        "Пункт 2",
+                                        "Пункт 3",
+                                        "Пункт 4",
+                                        "Пункт 5"
+                                    ],
+                                })
+                                +btn({
+                                    classes: 'news-list__submit form__submit',
+                                    type: 'button',
+                                    buttonType: 'submit',
+                                    name: 'Показать 73',
+                                    cMode: 'accent',
+                                    sMode: 'content'
+                                })
+
                     -else
                         .custom-scrollbar.news-list__scroll(data-js="customScrollbar")
                             .news-list__tabs
