@@ -1,0 +1,145 @@
+.config {
+
+    &__left {
+        flex: 1 1 auto;
+
+        @include max(tablet) {
+            display: contents;
+        }
+    }
+
+    &__right {
+        flex: 0 0 58%;
+        width: 58%;
+
+        @include max(laptop-small) {
+            flex: 0 0 40%;
+            width: 40%;
+        }
+
+        @include max(tablet) {
+            display: contents;
+            width: 100%;
+            flex-basis: auto;
+        }
+
+    }
+
+    &__result {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 30px;
+
+    }
+
+    &__subtitle {
+        font-family: $c-text;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 120%;
+        letter-spacing: 0;
+        color: $c-text;
+    }
+}
+
+.config-form {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+
+    @include max(tablet) {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    @include max(mobile) {
+        padding-top: 10px;
+    }
+
+    &__field {
+        margin-top: 30px;
+
+        .form__fields {
+            margin-top: 20px;
+        }
+    }
+
+    &__subtitle {
+        font-family: $ff-rooftop;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.3em;
+        letter-spacing: 0;
+        color: $c-text;
+        margin-bottom: 5px;
+    }
+}
+
+.config-table {
+    width: 100%;
+
+    &__row {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 40px;
+        padding: 17px 15px;
+        border-top: 1px solid $c-bg-main;
+    }
+
+    &__row--header,
+    &__row--result {
+        background-color: $c-bg-compare;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    &__row--result {
+        border: 2px solid $c-accent-2;
+    }
+
+    &__row--header,
+    &__row--header+&__row {
+        border: none;
+    }
+
+    &__row--header &__cell,
+    &__row--sub &__cell {
+        font-weight: 300;
+    }
+
+    &__row--result &__cell {
+        font-weight: 500;
+    }
+
+    &__row--sub &__cell--first {
+        padding-left: 20px;
+    }
+
+    &__cell {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex: 0 0 10.54%;
+        font-family: $ff-roboto;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 100%;
+        letter-spacing: 0;
+        color: $c-text;
+        min-width: 100px;
+    }
+
+    &__cell--first {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+
+        svg {
+            width: 10px;
+            height: 15px;
+            color: $c-accent-2;
+        }
+    }
+}

@@ -40,10 +40,11 @@ mixin price-list(props = defaultPriceListProps)
                         != item.title
                     .price-list__sum!= item.sum
                     +btn({
+                        classes: 'price-list__btn',
                         name: 'Записаться на ТО',
                         sMode: 'noborder',
                         cMode: 'link',
-                        icon: 'handset'
-                    })
+                        icon: 'handset_2'
+                    })(data-modal="#maintenanceModal")
 
                 - counter++

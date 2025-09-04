@@ -15,6 +15,13 @@
         font-size: 16px;
         line-height: 160%;
         letter-spacing: 0;
+
+        @include max(mobile) {
+            padding: 10px;
+            flex-direction: column;
+            gap: 5px;
+            align-items: flex-start;
+        }
     }
 
     &__title {
@@ -22,16 +29,43 @@
         align-items: center;
         gap: 15px;
         font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        letter-spacing: 0;
+
+        @include max(mobile) {
+            font-size: 15px;
+        }
+
 
         svg {
             width: 24px;
             height: 24px;
             color: $c-accent-2;
+            flex-shrink: 0;
         }
     }
 
     &__sum {
         font-weight: 600;
         margin-left: auto;
+        flex-shrink: 0;
+
+        @include max(mobile) {
+            margin-left: 39px;
+        }
+    }
+
+    &__btn {
+        flex-shrink: 0;
+        color: $c-accent;
+
+        svg {
+            color: $c-accent;
+        }
+
+        @include max(mobile) {
+            margin-left: 39px;
+        }
     }
 }

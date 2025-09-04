@@ -1,6 +1,5 @@
 function spoilers() {
     const accordions = document.querySelectorAll("[data-js='accordion']");
-	console.log(accordions)
 
 	if(accordions.length < 1) return
 

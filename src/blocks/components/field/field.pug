@@ -6,6 +6,8 @@
         textareaRows: '8',
         placeholder: '',
         radioCheckboxImg: '',
+        radioCheckboxImg2: '',
+        radioCheckboxColor: '',
         radioCheckboxText: '',
         inputAttr: {},
         selectOptions: [
@@ -18,10 +20,6 @@
         inputAttr2: {}
     }
 
-    //- resetBtn: false,
-    //- isSearch: false,
-    //- hasPrompt: false,
-
 mixin field(props = defaultFieldProps)
     -
         const checkProps = {
@@ -31,6 +29,8 @@ mixin field(props = defaultFieldProps)
             textareaRows: props.textareaRows ? props.textareaRows : defaultFieldProps.textareaRows,
             placeholder: props.placeholder ? props.placeholder : defaultFieldProps.placeholder,
             radioCheckboxImg: props.radioCheckboxImg ? props.radioCheckboxImg : defaultFieldProps.radioCheckboxImg,
+            radioCheckboxImg2: props.radioCheckboxImg2 ? props.radioCheckboxImg2 : defaultFieldProps.radioCheckboxImg2,
+            radioCheckboxColor: props.radioCheckboxColor ? props.radioCheckboxColor : defaultFieldProps.radioCheckboxColor,
             radioCheckboxText: props.radioCheckboxText ? props.radioCheckboxText : defaultFieldProps.radioCheckboxText,
             inputAttr: props.inputAttr ? props.inputAttr : defaultFieldProps.inputAttr,
             selectOptions: props.selectOptions ? props.selectOptions : defaultFieldProps.selectOptions,
@@ -46,18 +46,31 @@ mixin field(props = defaultFieldProps)
     ${checkProps.type === 'radio' ? 'field--radio' : ''} 
     ${checkProps.type === 'checkbox' ? 'field--checkbox' : ''}` 
     data-js='formField')&attributes(attributes)
-        //- if(checkProps.isSearch)
-            button.field__search(type='submit')
-                svg 
-                    use(xlink:href=`img/sprites/sprite.svg#search`)
         label
             - if(checkProps.tag === 'input')
                 input.field__input(type=checkProps.type placeholder=checkProps.placeholder)&attributes(checkProps.inputAttr)
                 - if(checkProps.type === 'radio')
-                    - let radioImgClass = checkProps.radioCheckboxImg.length > 0 ? "fake-radio--img" : ''
-                    span.fake-radio(class=radioImgClass)
-                        - if(checkProps.radioCheckboxImg.length > 0)
+                    - let isImg = checkProps.radioCheckboxImg.length > 0 ? true : false
+                    - let isImg2 = checkProps.radioCheckboxImg2.length > 0 ? true : false
+                    - let isColor = checkProps.radioCheckboxColor.length > 0 ? true : false
+
+                    - if(isColor === true)
+                        span.fake-radio.fake-radio--color(style=checkProps.radioCheckboxColor)
+                            svg
+                                use(xlink:href=`img/sprites/sprite.svg#check`)
+                    - else if(isImg === true)
+                        span.fake-radio.fake-radio--img
                             img(src=checkProps.radioCheckboxImg, alt="")
+                            span.fake-radio__check
+                    - else if(isImg2 === true)
+                        span.fake-radio.fake-radio--img2
+                            img(src=checkProps.radioCheckboxImg2, alt="")
+                            span.fake-radio__check
+                                svg
+                                    use(xlink:href=`img/sprites/sprite.svg#check`)
+                    - else
+                        span.fake-radio
+
                 - else if(checkProps.type === 'checkbox')
                     - if (checkProps.radioCheckboxText.length > 0)
                         span.fake-checkbox.fake-checkbox--text
@@ -67,9 +80,10 @@ mixin field(props = defaultFieldProps)
                             span.fake-checkbox__text!= checkProps.radioCheckboxText
                     - else
                         span.fake-checkbox
+                    span.field__error(data-js='fieldError')
 
                 - else
-                span.field__error(data-js='fieldError')
+                    span.field__error(data-js='fieldError')
 
             - if(checkProps.tag === 'textarea')
                 textarea.field__textarea(rows=checkProps.textareaRows placeholder=checkProps.placeholder)&attributes(checkProps.inputAttr)
@@ -102,121 +116,6 @@ mixin field(props = defaultFieldProps)
                                 option(label=" ")!= checkProps.selectOptions2[optionCount]
                             - optionCount++
                     span.field__error(data-js='fieldError')
-
-
-        //- if(checkProps.resetBtn)
-            span.field__reset(data-js='fieldResetBtn')
-                svg 
-                    use(xlink:href=`img/sprites/sprite.svg#close`)
-
-        //- if(checkProps.hasPrompt == true)
-            .field__prompt.field-prompt(data-js='fieldPrompt')
-                .field-prompt__items.scrollbar.scrollbar--small
-                    .field-prompt__item
-                        a.field-prompt__link(href="javascript:void(0)")
-                        .field-prompt__icon
-                            svg 
-                                use(xlink:href=`img/sprites/sprite.svg#search`)
-                        .field-prompt__content
-                            .field-prompt__title Универсальная <span>испыт</span>ательная машина ТРМ-О 0,1 А1 Tochline
-                            .field-prompt__breadcrumbs Каталог / Испытательные машины
-                        .field-prompt__icon
-                            svg 
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
-                    .field-prompt__item
-                        a.field-prompt__link(href="javascript:void(0)")
-                        .field-prompt__icon
-                            svg 
-                                use(xlink:href=`img/sprites/sprite.svg#search`)
-                        .field-prompt__content
-                            .field-prompt__title Универсальная <span>испыт</span>ательная машина ТРМ-О 0,1 А1 Tochline
-                            .field-prompt__breadcrumbs Каталог / Испытательные машины
-                        .field-prompt__icon
-                            svg 
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
-                    .field-prompt__item
-                        a.field-prompt__link(href="javascript:void(0)")
-                        .field-prompt__icon
-                            svg 
-                                use(xlink:href=`img/sprites/sprite.svg#search`)
-                        .field-prompt__content
-                            .field-prompt__title Универсальная <span>испыт</span>ательная машина ТРМ-О 0,1 А1 Tochline
-                            .field-prompt__breadcrumbs Каталог / Испытательные машины
-                        .field-prompt__icon
-                            svg 
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
-                    .field-prompt__item
-                        a.field-prompt__link(href="javascript:void(0)")
-                        .field-prompt__icon
-                            svg 
-                                use(xlink:href=`img/sprites/sprite.svg#search`)
-                        .field-prompt__content
-                            .field-prompt__title Универсальная <span>испыт</span>ательная машина ТРМ-О 0,1 А1 Tochline
-                            .field-prompt__breadcrumbs Каталог / Испытательные машины
-                        .field-prompt__icon
-                            svg 
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
-                    .field-prompt__item
-                        a.field-prompt__link(href="javascript:void(0)")
-                        .field-prompt__icon
-                            svg 
-                                use(xlink:href=`img/sprites/sprite.svg#search`)
-                        .field-prompt__content
-                            .field-prompt__title Универсальная <span>испыт</span>ательная машина ТРМ-О 0,1 А1 Tochline
-                            .field-prompt__breadcrumbs Каталог / Испытательные машины
-                        .field-prompt__icon
-                            svg 
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
-                    .field-prompt__item
-                        a.field-prompt__link(href="javascript:void(0)")
-                        .field-prompt__icon
-                            svg 
-                                use(xlink:href=`img/sprites/sprite.svg#search`)
-                        .field-prompt__content
-                            .field-prompt__title Универсальная <span>испыт</span>ательная машина ТРМ-О 0,1 А1 Tochline
-                            .field-prompt__breadcrumbs Каталог / Испытательные машины
-                        .field-prompt__icon
-                            svg 
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
-                    .field-prompt__item
-                        a.field-prompt__link(href="javascript:void(0)")
-                        .field-prompt__icon
-                            svg 
-                                use(xlink:href=`img/sprites/sprite.svg#search`)
-                        .field-prompt__content
-                            .field-prompt__title Универсальная <span>испыт</span>ательная машина ТРМ-О 0,1 А1 Tochline
-                            .field-prompt__breadcrumbs Новости / Установка новой испытательной машины на производство
-                        .field-prompt__icon
-                            svg 
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
-                    .field-prompt__item
-                        a.field-prompt__link(href="javascript:void(0)")
-                        .field-prompt__icon
-                            svg 
-                                use(xlink:href=`img/sprites/sprite.svg#search`)
-                        .field-prompt__content
-                            .field-prompt__title Универсальная <span>испыт</span>ательная машина ТРМ-О 0,1 А1 Tochline
-                            .field-prompt__breadcrumbs Новости / Установка новой испытательной машины на производство
-                        .field-prompt__icon
-                            svg 
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
-                    .field-prompt__item
-                        a.field-prompt__link(href="javascript:void(0)")
-                        .field-prompt__icon
-                            svg 
-                                use(xlink:href=`img/sprites/sprite.svg#search`)
-                        .field-prompt__content
-                            .field-prompt__title Универсальная <span>испыт</span>ательная машина ТРМ-О 0,1 А1 Tochline
-                            .field-prompt__breadcrumbs Новости / Установка новой испытательной машины на производство
-                        .field-prompt__icon
-                            svg 
-                                use(xlink:href=`img/sprites/sprite.svg#arrow_link`)
-
-                +btn({
-                    classes: 'field-prompt__all',
-                    cMode: 'grey',
-                    name: 'Все результаты <span class="btn__note">(124)</span>',
-                })
 
 
 

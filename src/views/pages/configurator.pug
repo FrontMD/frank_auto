@@ -1,0 +1,22 @@
+extends ../layouts/default
+include ../helpers/mixins
+
+block variables
+	- const title = "Конфигуратор"
+
+block content
+	.page-layout(data-js="pageLayout")
+		+s-breadcrumbs({
+			items: [
+				{
+					name: 'FrankAuto',
+					link: 'javascript:void(0);'
+				},
+				{
+					name: 'Конфигуратор',
+					link: 'javascript:void(0);'
+				},
+			],
+		})
+
+		+configurator

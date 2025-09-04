@@ -1,0 +1,359 @@
+-
+    const defaultConfiguratorProps = {
+        classes: '',
+    }
+
+mixin configurator(props= defaultConfiguratorProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultConfiguratorProps.classes
+        }
+
+    section.section.config(class= checkProps.classes + pageClass data-js="cpIntro")&attributes(attributes)
+        .section__container
+            .section-block
+                form(action="#" data-validate novalidate).config-form
+                    .config__left
+                        .title.title--36
+                            h1 Zeekr 009
+                        .config-form__field
+                            .config-form__subtitle Выбор модели
+                            .form__flex
+                                +field({
+                                    classes: '',
+                                    tag: 'select',
+                                    placeholder: 'Марка',
+                                    selectOptions: [
+                                        "",
+                                        "LiXiang",
+                                        "Voyah",
+                                        "AITO",
+                                        "Chery",
+                                        "Zeekr",
+                                        "Audi",
+                                        "Tank",
+                                        "Rox Motor Tech",
+                                    ],
+                                    inputAttr: {
+                                        'required': '',
+                                    },
+                                })
+                                +field({
+                                    tag: 'select',
+                                    placeholder: 'Модель',
+                                    selectOptions: [
+                                        "",
+                                        "LiXiang L6",
+                                        "LiXiang L7",
+                                        "LiXiang L9",
+                                        "LiXiang L9",
+                                        "LiXiang Mega",
+                                        "LiXiang One"
+                                    ],
+                                    inputAttr: {
+                                        'required': '',
+                                    },
+
+                                })
+
+                        .config-form__field
+                            .config-form__subtitle Комплектация
+                            +field({
+                                classes: '',
+                                tag: 'select',
+                                placeholder: 'Комплектация',
+                                selectOptions: [
+                                    "",
+                                    "Base",
+                                    "Comfort",
+                                    "Sport",
+                                    "Luxe",
+                                ],
+                                inputAttr: {
+                                    'required': '',
+                                },
+                            })
+
+                        .config-form__field
+                            .config-form__subtitle Цвет кузова
+                            .radios-row
+                                .radios-row__items
+                                    +field({
+                                        type: 'radio',
+                                        radioCheckboxColor: 'background-color: #0481C7; color: white; border-color: transparent;',
+                                        inputAttr: {
+                                            name: 'bodyСolor'
+                                        }
+                                    })
+                                    +field({
+                                        type: 'radio',
+                                        radioCheckboxColor: 'background-color: #FF0000; color: white; border-color: transparent;',
+                                        inputAttr: {
+                                            name: 'bodyСolor'
+                                        }
+                                    })
+                                    +field({
+                                        type: 'radio',
+                                        radioCheckboxColor: 'background-color: #E8E8E8; color: black; border-color: transparent;',
+                                        inputAttr: {
+                                            name: 'bodyСolor'
+                                        }
+                                    })
+                                    +field({
+                                        classes: '',
+                                        type: 'radio',
+                                        radioCheckboxColor: 'background-color: #FFFFFF; color: black; border-color: #878E9C;',
+                                        inputAttr: {
+                                            name: 'bodyСolor'
+                                        }
+                                    })
+                                    +field({
+                                        type: 'radio',
+                                        radioCheckboxColor: 'background-color: #C4C4C4; color: black; border-color: transparent;',
+                                        inputAttr: {
+                                            name: 'bodyСolor',
+                                        }
+                                    })
+                                    +field({
+                                        type: 'radio',
+                                        radioCheckboxColor: 'background-color: #6A6A6A; color: white; border-color: transparent;',
+                                        inputAttr: {
+                                            name: 'bodyСolor',
+                                            checked: ''
+                                        }
+                                    })
+                                    +field({
+                                        type: 'radio',
+                                        radioCheckboxColor: 'background-color: #262626; color: white; border-color: transparent;',
+                                        inputAttr: {
+                                            name: 'bodyСolor'
+                                        }
+                                    })
+                                    +field({
+                                        type: 'radio',
+                                        radioCheckboxColor: 'background-color: #A02323; color: white; border-color: transparent;',
+                                        inputAttr: {
+                                            name: 'bodyСolor'
+                                        }
+                                    })
+                                    +field({
+                                        type: 'radio',
+                                        radioCheckboxColor: 'background-color: #625A55; color: white; border-color: transparent;',
+                                        inputAttr: {
+                                            name: 'bodyСolor'
+                                        }
+                                    })
+
+                                .radios-row__changed Night Black (бесплатно)
+
+                        .config-form__field
+                            .config-form__subtitle Цвет салона
+                            .radios-row
+                                .radios-row__items
+                                    +field({
+                                        type: 'radio',
+                                        radioCheckboxColor: 'background-color: #F2EDE2; color: black; border-color: transparent;',
+                                        inputAttr: {
+                                            name: 'interiorColor'
+                                        }
+                                    })
+                                    +field({
+                                        type: 'radio',
+                                        radioCheckboxColor: 'background-color: #D66F48; color: white; border-color: transparent;',
+                                        inputAttr: {
+                                            name: 'interiorColor'
+                                        }
+                                    })
+                                    +field({
+                                        type: 'radio',
+                                        radioCheckboxColor: 'background-color: #6E6867; color: white; border-color: transparent;',
+                                        inputAttr: {
+                                            name: 'interiorColor',
+                                            checked: ''
+                                        }
+                                    })
+
+                                .radios-row__changed Чёрно-коричневый (бесплатно)
+
+                        .config-form__field
+                            .config-form__subtitle Размер дисков
+                            .radios-row
+                                .radios-row__items
+                                    +field({
+                                        type: 'radio',
+                                        radioCheckboxImg2: 'img/config/disk_size_1.webp',
+                                        inputAttr: {
+                                            name: 'diskSize'
+                                        }
+                                    })
+                                    +field({
+                                        type: 'radio',
+                                        radioCheckboxImg2: 'img/config/disk_size_2.webp',
+                                        inputAttr: {
+                                            name: 'diskSize'
+                                        }
+                                    })
+                                    +field({
+                                        type: 'radio',
+                                        radioCheckboxImg2: 'img/config/disk_size_3.webp',
+                                        inputAttr: {
+                                            name: 'diskSize',
+                                            checked: ''
+                                        }
+                                    })
+                                    +field({
+                                        type: 'radio',
+                                        radioCheckboxImg2: 'img/config/disk_size_4.webp',
+                                        inputAttr: {
+                                            name: 'diskSize'
+                                        }
+                                    })
+
+                                .radios-row__changed Цвет: 21" Silver-Grey Wheels LiXiang +10 000 ₽
+
+                        .config-form__field
+                            .config-form__subtitle Дополнительные опции
+                            .form__fields
+                                +field({
+                                    type: 'checkbox',
+                                    radioCheckboxText: 'Стерео от Buremester + 10 000 ₽',
+                                })
+                                +field({
+                                    type: 'checkbox',
+                                    radioCheckboxText: 'Чёрная крыша + 2 000 ₽',
+
+                                })
+                                +field({
+                                    type: 'checkbox',
+                                    radioCheckboxText: 'Пневмоподвеска + 28 000 ₽',
+                                })
+                                +field({
+                                    type: 'checkbox',
+                                    radioCheckboxText: 'Затемнение панорамы + 16 000 ₽',
+                                })
+                                +field({
+                                    type: 'checkbox',
+                                    radioCheckboxText: 'Стерео от Buremester + 10 000 ₽',
+                                })
+                                +field({
+                                    type: 'checkbox',
+                                    radioCheckboxText: 'Чёрная крыша + 2 000 ₽',
+                                })
+                                +field({
+                                    type: 'checkbox',
+                                    radioCheckboxText: 'Пневмоподвеска + 28 000 ₽',
+                                })
+                                +field({
+                                    type: 'checkbox',
+                                    radioCheckboxText: 'Затемнение панорамы + 16 000 ₽',
+                                })
+                                +field({
+                                    type: 'checkbox',
+                                    radioCheckboxText: 'Стерео от Buremester + 10 000 ₽',
+                                })
+                                +field({
+                                    type: 'checkbox',
+                                    radioCheckboxText: 'Пневмоподвеска + 28 000 ₽',
+                                })
+                                +field({
+                                    type: 'checkbox',
+                                    radioCheckboxText: 'Чёрная крыша + 2 000 ₽',
+                                })
+                                +field({
+                                    type: 'checkbox',
+                                    radioCheckboxText: 'Затемнение панорамы + 16 000 ₽',
+                                })
+
+                    .config__right
+                        .cp-intro__slider(data-js="cpIntroSlider")
+                            +slider-controls
+                            .swiper-wrapper
+                                .swiper-slide.cp-intro__slide
+                                    a(href="img/catalog-product/cp_intro_1.webp" data-fancybox="cpIntroSlider" data-thumb="img/catalog-product/cp_intro_1.webp")
+                                        img(src="img/catalog-product/cp_intro_1.webp" alt="")
+                                .swiper-slide.cp-intro__slide
+                                    a(href="img/catalog-product/cp_intro_2.webp" data-fancybox="cpIntroSlider" data-thumb="img/catalog-product/cp_intro_2.webp")
+                                        img(loading="lazy" src="img/catalog-product/cp_intro_2.webp" alt="")
+                                        .swiper-lazy-preloader
+                                .swiper-slide.cp-intro__slide
+                                    a(href="img/catalog-product/cp_intro_3.webp" data-fancybox="cpIntroSlider" data-thumb="img/catalog-product/cp_intro_3.webp")
+                                        img(loading="lazy" src="img/catalog-product/cp_intro_3.webp" alt="")
+                                        .swiper-lazy-preloader
+                                .swiper-slide.cp-intro__slide
+                                    a(href="img/catalog-product/cp_intro_4.webp" data-fancybox="cpIntroSlider" data-thumb="img/catalog-product/cp_intro_4.webp")
+                                        img(loading="lazy" src="img/catalog-product/cp_intro_4.webp" alt="")
+                                        .swiper-lazy-preloader
+                                .swiper-slide.cp-intro__slide
+                                    a(href="img/catalog-product/cp_intro_5.webp" data-fancybox="cpIntroSlider" data-thumb="img/catalog-product/cp_intro_5.webp")
+                                        img(loading="lazy" src="img/catalog-product/cp_intro_5.webp" alt="")
+                                        .swiper-lazy-preloader
+
+                        .cp-intro__thumbs(data-js="cpIntroThumbs")
+                            .swiper-wrapper
+                                .swiper-slide.cp-intro__thumb
+                                    img(src="img/catalog-product/cp_intro_1.webp" alt="")
+                                .swiper-slide.cp-intro__thumb
+                                    img(src="img/catalog-product/cp_intro_2.webp" alt="")
+                                .swiper-slide.cp-intro__thumb
+                                    img(src="img/catalog-product/cp_intro_3.webp" alt="")
+                                .swiper-slide.cp-intro__thumb
+                                    img(src="img/catalog-product/cp_intro_4.webp" alt="")
+                                .swiper-slide.cp-intro__thumb
+                                    img(src="img/catalog-product/cp_intro_5.webp" alt="")
+
+                        .config__result
+                            .config__subtitle Расчет суммы на 23.04.2025
+                            .config__table.config-table
+                                .config-table__row.config-table__row--header
+                                    .config-table__cell RUB
+                                    .config-table__cell USD = 81.46₽
+                                    .config-table__cell CNY = 11.11₽
+                                .config-table__row
+                                    .config-table__cell.config-table__cell--first Инвойс
+                                    .config-table__cell 500 000 ₽
+                                    .config-table__cell 15 000 $
+                                    .config-table__cell 50 000 CNY
+                                .config-table__row.config-table__row--sub
+                                    .config-table__cell.config-table__cell--first Цена автомобиля в Китае с документами
+                                    .config-table__cell 400 000 ₽
+                                    .config-table__cell 15 000 $
+                                    .config-table__cell 50 000 CNY
+                                .config-table__row.config-table__row--sub
+                                    .config-table__cell.config-table__cell--first Доставка до Москвы
+                                    .config-table__cell 100 000 ₽
+                                    .config-table__cell 15 000 $
+                                    .config-table__cell 50 000 CNY
+                                .config-table__row
+                                    .config-table__cell.config-table__cell--first Таможня
+                                    .config-table__cell 70 000 ₽
+                                    .config-table__cell 15 000 $
+                                    .config-table__cell 50 000 CNY
+                                .config-table__row
+                                    .config-table__cell.config-table__cell--first Комиссия Frank Auto
+                                    .config-table__cell 300 000 ₽
+                                    .config-table__cell 15 000 $
+                                    .config-table__cell 50 000 CNY
+                                .config-table__row
+                                    .config-table__cell.config-table__cell--first ЭПТС
+                                    .config-table__cell 50 000 ₽
+                                    .config-table__cell 15 000 $
+                                    .config-table__cell 50 000 CNY
+                                .config-table__row.config-table__row--result
+                                    .config-table__cell.config-table__cell--first 
+                                        svg
+                                            use(xlink:href=`img/sprites/sprite.svg#exc`)
+                                        | Итого
+                                    .config-table__cell 500 000 000 ₽
+                                    .config-table__cell 150 000 $
+                                    .config-table__cell 500 000 CNY
+
+                            +btn({
+                                classes: 'form__submit',
+                                type: 'button',
+                                buttonType: 'submit',
+                                name: 'Оставить заявку',
+                                cMode: 'accent',
+                                sMode: 'full'
+                            })
+
+            .section-block.config__params

@@ -8,7 +8,7 @@
     border-bottom: 1px solid $c-border;
 
     @include max(mobile) {
-        padding: 0 16px;
+        padding: 5px 0;
     }
 
     &__intro {
@@ -20,8 +20,7 @@
         cursor: pointer;
         padding: 15px 0;
 
-        @include max(tablet) {
-            padding: 20px 0 15px;
+        @include max(mobile) {
             gap: 10px;
         }
 
@@ -38,14 +37,20 @@
         line-height: 130%;
         letter-spacing: 0;
 
-        @include max(tablet) {
-            font-size: 20px;
+        @include max(mobile) {
+            font-size: 16px;
         }
 
         svg {
             width: 16px;
             height: 22px;
             color: $c-accent-2;
+
+            @include max(mobile) {
+                width: 12px;
+                height: 16px;
+            }
+
         }
     }
 
@@ -74,6 +79,11 @@
         display: none;
         overflow: hidden;
         padding: 0 54px 15px 0;
+
+        @include max(mobile) {
+            padding: 0 34px 15px 0;
+        }
+
     }
 }
 

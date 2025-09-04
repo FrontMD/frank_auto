@@ -40,7 +40,6 @@ function validation() {
     forms.forEach(form => {
 
         inputMasksInit(form);
-        //formSpoilerInit(form);
 
         form.addEventListener('submit', event => {
             event.preventDefault()
@@ -113,13 +112,6 @@ function validation() {
                                     error(input, 'Необходимо ввести корректный ИНН').set()
                                 }
                                 break
-                            /*case 'file':
-                                if (valueField.length > 0) {
-                                    error(input).remove()
-                                } else {
-                                    error(input, 'Поле обязательно для заполнения').set()
-                                }
-                                break*/
                             case 'checkbox':
                                 if (field.checked) {
                                     error(input).remove()
@@ -182,7 +174,7 @@ function validation() {
                 // тут отправляем данные
                 if (errors === 0) {
                     
-                    var submitFunctionKey = form.getAttribute('data-submit-function');
+                    /*var submitFunctionKey = form.getAttribute('data-submit-function');
                     if (typeof (submitFunctionKey) === 'string' && submitFunctionKey.length > 0) {
                         try {
                             window.formsProcessors[submitFunctionKey](form);
@@ -192,11 +184,10 @@ function validation() {
                         }
                     } else {
                         alert('Обработчик формы не указан');
-                    }
+                    }*/
 
                     toggleLoading(form, true)
                     defaultAfterSubmit(form, true)
-                    //window.ajaxForm(form, form.getAttribute('action'))
                 }
             }
 
@@ -296,27 +287,6 @@ function inputMasksInit(form) {
     }
 }
 
-/*function formSpoilerInit(form) {
-    const spoilers = form.querySelectorAll('[data-js="formSpoiler"]')
-
-    if(spoilers.length < 1) return
-
-    spoilers.forEach(spoiler => {
-        const content = spoiler.querySelector('[data-js="formSpoilerContent"]');
-        const header = spoiler.querySelector('[data-js="formSpoilerHeader"]');
-
-        header.addEventListener('click', function() {
-            if(spoiler.classList.contains('active')) {
-                spoiler.classList.remove('active');
-			    $(content).slideUp(300);
-            } else {
-                spoiler.classList.add('active');
-			    $(content).slideDown(300);
-            }
-        })
-    })
-}*/
-
 function toggleLoading(form, on) {
     const formSubmitBtn = form.querySelector(".btn.form__submit")
 
@@ -398,4 +368,11 @@ function formReset(form) {
             $(selectField).val("").trigger('change')
         })
     }
+}
+
+function thanksMessageShow() {
+    modals.open("#thanksModal")
+    setTimeout(() => {
+        modals.close()
+    }, 5000)
 }
