@@ -138,10 +138,6 @@
             max-width: calc((100% - 10px) / 2);
         }
 
-        /*@include max(650px) {
-            flex-basis: 310px;
-            width: 310px;
-        }*/
     }
 
     &__cell {

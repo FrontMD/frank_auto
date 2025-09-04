@@ -24,26 +24,6 @@
         }
     }
 
-    /*&:after {
-        content: '';
-        position: absolute;
-        right: 27px;
-        bottom: 25px;
-        background-image: url(../img/quotes.svg);
-        background-size: 100%;
-        background-repeat: no-repeat;
-        width: 40px;
-        height: 40px;
-        transform: rotate(180deg);
-
-        @include max(mobile) {
-            right: 15px;
-            bottom: 15px;
-            width: 25px;
-            height: 25px;
-        }
-    }*/
-
     .text-editor {
         font-style: Italic;
         color: $c-black;

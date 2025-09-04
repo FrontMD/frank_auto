@@ -1013,23 +1013,6 @@ html.hystmodal__opened {
 		}
 	}
 
-	/*.air-datepicker-nav--action {
-		width: 16px;
-		height: 16px;
-
-		svg {
-			width: 16px;
-			height: 16px;
-		}
-
-		/*&[data-action="prev"] {
-			transform: rotate(90deg);
-		}
-
-		&[data-action="next"] {
-			transform: rotate(-90deg);
-		}
-	}*/
 
 	.air-datepicker-nav {
 		align-items: center;
@@ -1039,25 +1022,3 @@ html.hystmodal__opened {
 .air-datepicker-global-container {
 	z-index: 80;
 }
-
-/* стили для печати */
-/*@media print {
-
-	.breadcrumbs-section,
-	body>:not(main) {
-		display: none;
-	}
-}
-
-@page {
-	margin: 1cm;
-}*/
-
-/*.fade-in {
-	opacity: 1;
-	transition: all $tr-time linear;
-
-	&--hidden {
-		opacity: 0;
-	}
-}*/

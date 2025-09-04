@@ -1,10 +1,28 @@
 .config {
 
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    &__title {
+        @include max(tablet) {
+            order: -1;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+    }
+
     &__left {
         flex: 1 1 auto;
 
         @include max(tablet) {
             display: contents;
+        }
+
+        .form__fields {
+            margin-bottom: 0;
         }
     }
 
@@ -12,34 +30,44 @@
         flex: 0 0 58%;
         width: 58%;
 
-        @include max(laptop-small) {
-            flex: 0 0 40%;
-            width: 40%;
-        }
-
         @include max(tablet) {
             display: contents;
             width: 100%;
             flex-basis: auto;
+
+            .cp-intro__slider,
+            .cp-intro__thumbs {
+                order: -1;
+            }
+
         }
 
     }
 
     &__result {
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 15px;
         margin-top: 30px;
 
+        @include max(tablet) {
+            margin-top: 40px;
+        }
+
     }
 
     &__subtitle {
-        font-family: $c-text;
+        font-family: $ff-rooftop;
         font-weight: 500;
         font-size: 22px;
         line-height: 120%;
         letter-spacing: 0;
         color: $c-text;
+
+        @include max(mobile) {
+            font-size: 18px;
+        }
     }
 }
 
@@ -50,11 +78,8 @@
 
     @include max(tablet) {
         flex-direction: column;
+        align-items: stretch;
         gap: 0;
-    }
-
-    @include max(mobile) {
-        padding-top: 10px;
     }
 
     &__field {
@@ -62,6 +87,14 @@
 
         .form__fields {
             margin-top: 20px;
+        }
+    }
+
+    &__field--mtop {
+        @include max(tablet) {
+            order: -2;
+            margin-top: 0;
+            margin-bottom: 20px;
         }
     }
 
@@ -86,6 +119,17 @@
         gap: 40px;
         padding: 17px 15px;
         border-top: 1px solid $c-bg-main;
+
+        @include max(laptop-small) {
+            gap: 10px;
+            padding: 15px 10px;
+        }
+
+        @include max(mobile) {
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            padding: 10px 0;
+        }
     }
 
     &__row--header,
@@ -93,6 +137,10 @@
         background-color: $c-bg-compare;
         border-radius: 10px;
         overflow: hidden;
+
+        @include max(mobile) {
+            padding: 10px 5px 10px 10px;
+        }
     }
 
     &__row--result {
@@ -113,8 +161,22 @@
         font-weight: 500;
     }
 
+    &__row--sub {
+        @include max(mobile) {
+            padding-left: 10px;
+        }
+    }
+
     &__row--sub &__cell--first {
         padding-left: 20px;
+
+        @include max(laptop-small) {
+            padding-left: 10px;
+        }
+
+        @include max(mobile) {
+            padding-left: 0;
+        }
     }
 
     &__cell {
@@ -135,6 +197,10 @@
         flex: 1 1 auto;
         display: flex;
         align-items: center;
+
+        @include max(mobile) {
+            flex: 0 0 100%;
+        }
 
         svg {
             width: 10px;
