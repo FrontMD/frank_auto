@@ -1,28 +1,6 @@
 .quote {
     position: relative;
-    padding: 0px 0px 0px 130px;
     background-color: transparent;
-
-    @include max(tablet) {
-        padding: 0px 0px 0px 63px;
-    }
-
-    &:before {
-        content: '';
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        background-image: url(../img/quotes.webp);
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-        width: 100px;
-        height: 58px;
-
-        @include max(tablet) {
-            width: 50px;
-            height: 29px;
-        }
-    }
 
     .text-editor {
         font-style: Italic;
@@ -30,6 +8,62 @@
     }
 
     &__text {
+        position: relative;
+        padding: 0px 130px;
+
+        @include max(tablet) {
+            padding: 0px 63px;
+        }
+
+        @include max(xs) {
+            padding: 0px 30px;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            background-image: url(../img/quotes.webp);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            width: 100px;
+            height: 58px;
+
+            @include max(tablet) {
+                width: 50px;
+                height: 29px;
+            }
+
+            @include max(xs) {
+                width: 25px;
+                height: 15px;
+            }
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: 0px;
+            bottom: 0px;
+            background-image: url(../img/quotes.webp);
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            transform: rotate(180deg);
+            width: 100px;
+            height: 58px;
+
+            @include max(tablet) {
+                width: 50px;
+                height: 29px;
+            }
+
+            @include max(xs) {
+                width: 25px;
+                height: 15px;
+            }
+        }
+
         @include max(mobile) {
             max-height: 100px;
             overflow: hidden;

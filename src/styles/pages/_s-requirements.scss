@@ -41,6 +41,12 @@
             width: 100%;
         }
 
+        &__list {
+            @include min(large) {
+                justify-content: flex-start;
+            }
+        }
+
         &__block {
             width: 100%;
             max-width: 320px;

@@ -3,6 +3,7 @@
         classes: '',
         tag: 'input',
         type: 'text',
+        title: '',
         textareaRows: '8',
         placeholder: '',
         radioCheckboxImg: '',
@@ -26,6 +27,7 @@ mixin field(props = defaultFieldProps)
             classes: props.classes ? props.classes : defaultFieldProps.classes,
             tag: props.tag ? props.tag : defaultFieldProps.tag,
             type: props.type ? props.type : defaultFieldProps.type,
+            title: props.title ? props.title : defaultFieldProps.title,
             textareaRows: props.textareaRows ? props.textareaRows : defaultFieldProps.textareaRows,
             placeholder: props.placeholder ? props.placeholder : defaultFieldProps.placeholder,
             radioCheckboxImg: props.radioCheckboxImg ? props.radioCheckboxImg : defaultFieldProps.radioCheckboxImg,
@@ -79,6 +81,8 @@ mixin field(props = defaultFieldProps)
                                     use(xlink:href=`img/sprites/sprite.svg#check`)
                             span.fake-checkbox__text!= checkProps.radioCheckboxText
                     - else
+                        - if(checkProps.title.length > 0)
+                            span.field__title!= checkProps.title
                         span.fake-checkbox
                     span.field__error(data-js='fieldError')
 

@@ -236,8 +236,11 @@
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 20px 40px;
-        max-width: 800px;
         margin-bottom: 30px;
+
+        @include max(full) {
+            max-width: 800px;
+        }
     }
 
     &__tag {

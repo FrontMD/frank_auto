@@ -623,6 +623,7 @@
         display: flex;
         align-items: center;
         gap: 15px;
+        max-width: 370px;
 
         @include max(mobile) {
             width: 100%;
@@ -759,11 +760,7 @@
 .checkboxes-flex {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-
-    @include max(tablet) {
-        justify-content: flex-start;
-    }
+    justify-content: flex-start;
 
     .field {
         flex: 0 1 auto;

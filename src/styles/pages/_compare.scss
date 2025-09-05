@@ -209,35 +209,6 @@
         }
     }
 
-    &__favorite {
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        width: 34px;
-        height: 34px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 15px;
-        background-color: rgba(255, 255, 255, 0.5);
-        backdrop-filter: blur(40px);
-
-        svg {
-            width: 15px;
-            height: 15px;
-        }
-
-        svg {
-            fill: transparent;
-            color: $c-white;
-        }
-
-        &.active svg {
-            fill: $c-favorite;
-            color: $c-favorite;
-        }
-    }
-
     &__title {
         margin-top: 10px;
         margin-bottom: 15px;

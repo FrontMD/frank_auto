@@ -289,6 +289,10 @@
         gap: 40px;
         justify-content: space-between;
 
+        @include min(large) {
+            justify-content: flex-start;
+        }
+
         @include max(tablet) {
             order: 2;
             width: 100%;
@@ -360,13 +364,16 @@
     }
 
     &__gifts {
-        display: grid;
-        gap: 10px 25px;
-        grid-template-columns: repeat(2, minmax(0, 360px));
+        //display: grid;
+        //grid-template-columns: repeat(2, minmax(0, 360px));
+        //gap: 10px 25px;
+        gap: 10px;
+        display: flex;
+        align-items: stretch;
 
         @include max(tablet) {
-            display: flex;
-            gap: 10px;
+            //display: flex;
+            //gap: 10px;
         }
 
     }
