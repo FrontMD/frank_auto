@@ -32,6 +32,21 @@
             visibility: visible;
         }
 
+        h1 {
+            font-size: 40px;
+            line-height: 1em;
+            margin-bottom: 1em;
+            color: $c-text;
+
+            @include max(laptop) {
+                font-size: 36px;
+            }
+
+            @include max(mobile) {
+                font-size: 28px;
+            }
+        }
+
         h2 {
             font-size: 36px;
             line-height: 1em;
@@ -66,6 +81,57 @@
         ol {
             margin-bottom: 1.875em;
         }
+    }
+
+    &--privacy &__content.text-editor {
+
+        p,
+        ul,
+        ol {
+            margin-bottom: 1em;
+        }
+
+        p+h2,
+        p+h3 {
+            margin-top: 1.3em;
+        }
+
+        ul li:before {
+            content: '-';
+            width: auto;
+            height: auto;
+            background-color: transparent;
+        }
+
+        h2 {
+            font-size: 30px;
+            line-height: 1em;
+            margin-bottom: 0.5em;
+
+            @include max(laptop) {
+                font-size: 24px;
+            }
+
+            @include max(mobile) {
+                font-size: 20px;
+            }
+        }
+
+        h3 {
+            font-size: 24px;
+            line-height: 1em;
+            margin-bottom: 0.417em;
+            color: $c-text;
+
+            @include max(laptop) {
+                font-size: 22px;
+            }
+
+            @include max(mobile) {
+                font-size: 18px;
+            }
+        }
+
     }
 
     &__toggle {
