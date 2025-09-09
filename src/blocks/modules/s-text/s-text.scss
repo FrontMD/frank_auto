@@ -43,7 +43,7 @@
             }
 
             @include max(mobile) {
-                font-size: 28px;
+                font-size: 24px;
             }
         }
 
@@ -85,6 +85,10 @@
 
     &--privacy &__content.text-editor {
 
+        @include max(mobile) {
+            max-height: none;
+        }
+
         p,
         ul,
         ol {
@@ -97,9 +101,12 @@
         }
 
         ul li:before {
-            content: '-';
+            content: "-";
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: auto;
-            height: auto;
+            height: 0.6em;
             background-color: transparent;
         }
 
