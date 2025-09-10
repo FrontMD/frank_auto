@@ -193,6 +193,11 @@
         margin-top: 38px;
         justify-content: start;
 
+        .socials__item svg {
+            width: 20px;
+            height: 20px;
+        }
+
         @include max(tablet) {
             margin-top: 30px;
         }

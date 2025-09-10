@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
     formFilterController();
     ccSlidersInit();
     mediaSliderInit();
-    spoilers()
+    spoilers();
 })
 
-window.onload = function() { 
+window.addEventListener('load', () => {
     validation();
-};
+})
