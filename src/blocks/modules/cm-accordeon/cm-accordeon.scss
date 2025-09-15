@@ -180,6 +180,7 @@
     }
 
     &__top {
+        position: relative;
         display: flex;
         align-items: flex-start;
         padding: 20px 30px;
@@ -196,6 +197,15 @@
             padding: 15px 10px;
             gap: 20px;
         }
+    }
+
+    &__link {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
     }
 
     &__base {
@@ -274,7 +284,7 @@
         letter-spacing: 0;
         border-radius: $br-section;
         padding: 3px 10px;
-        z-index: 3;
+        z-index: 2;
 
         @include max(mobile) {
             right: 10px;
@@ -395,6 +405,8 @@
     }
 
     &__more {
+        position: relative;
+        z-index: 5;
         margin-top: auto;
         gap: 5px;
         border-radius: $br-section;
@@ -509,6 +521,9 @@
     }
 
     &__btn {
+        position: relative;
+        z-index: 5;
+
         @include max(mobile) {
             width: 100%;
         }

@@ -69,7 +69,9 @@ mixin s-discount(props= defaultSdiscountProps)
                     svg.s-discount__decor.s-discount__decor--left
                         use(xlink:href=`img/sprites/sprite.svg#s_discount_decor_l`)
 
+                    .s-discount__result Итоговая цена <span>от 5 500 000 ₽</span>
                     .s-discount__result Ваша скидка <span>до 500 000 ₽</span>
+
                     +btn({
                         classes: 's-discount__btn',
                         name: 'Зафиксировать условия',

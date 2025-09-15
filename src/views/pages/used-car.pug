@@ -78,6 +78,7 @@ block content
 						placeholder: 'Бренд',
 						inputAttr: {
 						'required': '',
+						multiple: "multiple"
 						},
 						selectOptions: [
 							"",
@@ -97,6 +98,7 @@ block content
 						placeholder: 'Модель',
 						inputAttr: {
 						'required': '',
+						multiple: "multiple"
 						},
 						selectOptions: [
 							"",
@@ -157,8 +159,15 @@ block content
 			isSlider: true,
 			items: [
 			{
-				img: ['img/catalog/product_1.webp'],
+				img: [
+					'img/catalog/product_1.webp',
+					'img/catalog/product_2.webp',
+					'img/catalog/product_3.webp',
+					'img/catalog/product_4.webp',
+					'img/catalog/product_5.webp',
+				],
 				title: 'Новый LIXIANG L6 MAX',
+				condition: 'С пробегом',
 				price: {
 					classes: 'catalog-card__price',
 					current: '5 500 000 ₽',
@@ -167,8 +176,15 @@ block content
 				},
 			},
 			{
-				img: ['img/catalog/product_2.webp'],
+				img: [
+					'img/catalog/product_2.webp',
+					'img/catalog/product_1.webp',
+					'img/catalog/product_3.webp',
+					'img/catalog/product_4.webp',
+					'img/catalog/product_5.webp',
+				],
 				title: 'LiXiang L7 MAX',
+				condition: 'С пробегом',
 				price: {
 					classes: 'catalog-card__price',
 					current: '5 835 192 ₽',
@@ -177,8 +193,15 @@ block content
 				},
 			},
 			{
-				img: ['img/catalog/product_3.webp'],
+				img: [
+					'img/catalog/product_3.webp',
+					'img/catalog/product_1.webp',
+					'img/catalog/product_2.webp',
+					'img/catalog/product_4.webp',
+					'img/catalog/product_5.webp',
+				],
 				title: 'LIXIANG L7 PRO',
+				condition: 'С пробегом',
 				price: {
 					classes: 'catalog-card__price',
 					current: '5 660 000 ₽',

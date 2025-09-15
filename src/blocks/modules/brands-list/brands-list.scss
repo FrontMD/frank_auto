@@ -102,7 +102,7 @@
         display: grid;
         gap: 40px 10px;
         grid-template-columns: repeat(6, minmax(0, 1fr));
-        max-height: 365px;
+        max-height: 263px;
 
         @include max(full) {
             grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -111,7 +111,7 @@
         @include max(laptop-small) {
             grid-template-columns: repeat(4, minmax(0, 1fr));
             gap: 10px;
-            max-height: 274px;
+            max-height: 242px;
         }
 
         @include max(tablet) {

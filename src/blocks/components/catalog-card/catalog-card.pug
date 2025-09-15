@@ -2,9 +2,14 @@
     const defaultCatalogCardProps = {
         classes: '',
         img: [
-            'img/catalog/product_1.webp'
+            'img/catalog/product_1.webp',
+            'img/catalog-product/cp_intro_2.webp',
+            'img/catalog-product/cp_intro_3.webp',
+            'img/catalog-product/cp_intro_4.webp',
+            'img/catalog-product/cp_intro_5.webp',
         ],
         title: 'Новый LIXIANG L6 MAX',
+        condition: 'Новые',
         price: {
             classes: 'catalog-card__price',
             current: '5 500 000 ₽',
@@ -60,6 +65,7 @@ mixin catalog-card(props = defaultCatalogCardProps)
             classes: props.classes ? props.classes : defaultCatalogCardProps.classes,
             img: props.img ? props.img : defaultCatalogCardProps.img,
             title: props.title ? props.title : defaultCatalogCardProps.title,
+            condition: props.condition ? props.condition : defaultCatalogCardProps.condition,
             price: props.price ? props.price : defaultCatalogCardProps.price,
             chars: props.chars ? props.chars : defaultCatalogCardProps.chars,
             charsTable: props.charsTable ? props.charsTable : defaultCatalogCardProps.charsTable,
@@ -114,6 +120,7 @@ mixin catalog-card(props = defaultCatalogCardProps)
 
         .catalog-card__info
             .catalog-card__title.title.title--30!= checkProps.title
+                .catalog-card__sticker!= checkProps.condition
             - if(checkProps.charsTable.length > 0)
                 .catalog-card__table
                     - let charsTCount = 0
@@ -127,6 +134,7 @@ mixin catalog-card(props = defaultCatalogCardProps)
                         - charsTCount++
 
             +price(checkProps.price)
+            .catalog-card__instock Моделей в наличии: <span>6</span>
             - if(checkProps.chars.length > 0)
                 .catalog-card__chars
                     - let charsCount = 0

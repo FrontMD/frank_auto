@@ -13,8 +13,8 @@
     }
 
     @include max(mobile) {
-        width: 260px;
-        min-height: 402px;
+        width: 220px;
+        min-height: 340px;
     }
 
     &__play {

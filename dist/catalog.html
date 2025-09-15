@@ -285,7 +285,7 @@
                                 <use xlink:href="img/sprites/sprite.svg#arrow_angle_right"></use>
                               </svg></span>
                           </li>
-                          <li class="breadcrumbs__item breadcrumbs__item--current"><span>Каталог</span>
+                          <li class="breadcrumbs__item breadcrumbs__item--current"><span>Новые автомобили</span>
                           </li>
                         </ul>
                       </div>
@@ -294,10 +294,15 @@
             </section>
         <section class="section section--title">
           <div class="section__container">
-            <div class="section__header section__content">
+            <div class="section__header section__header--flex section__content">
               <div class="title title--40">
-                <h1>Каталог</h1>
+                <h1>Новые автомобили</h1>
               </div>
+              <button class="s-catalog__filter" type="button" data-js="catalogFilterOpen">
+                <svg>
+                  <use xlink:href="img/sprites/sprite.svg#filter"></use>
+                </svg>
+              </button>
             </div>
           </div>
         </section>
@@ -317,7 +322,7 @@
      
     " data-js="formField">
                             <label>
-                              <select class="field__select" data-placeholder="Марка" data-js="formSelect">
+                              <select class="field__select" data-placeholder="Марка" data-js="formSelect" multiple="multiple">
                                 <option label=" "></option>
                                 <option value="LiXiang">LiXiang</option>
                                 <option value="Voyah">Voyah</option>
@@ -335,7 +340,7 @@
      
     " data-js="formField">
                             <label>
-                              <select class="field__select" data-placeholder="Модель" data-js="formSelect">
+                              <select class="field__select" data-placeholder="Модель" data-js="formSelect" multiple="multiple">
                                 <option label=" "></option>
                                 <option value="LiXiang L6">LiXiang L6</option>
                                 <option value="LiXiang L7">LiXiang L7</option>
@@ -557,7 +562,7 @@
             </div>
           </div>
         </section>
-            <section class="section s-banner  s-banner--left">
+            <section class="section s-banner only-desk s-banner--left">
               <div class="section__container">
                 <div class="section-block s-banner__block">
                   <div class="section-block__bg s-banner__bg"><picture><source srcset="img/catalog/catalog_banner_mob.webp" media="(max-width: 767px)"><img src="img/catalog/catalog_banner.webp" alt=""></picture></div>
@@ -645,7 +650,7 @@
             <section class="section s-catalog">
               <div class="section__container section__content">
                 <div class="section-header s-catalog__header">
-                  <div class="title title--36">Каталог автомобилей</div>
+                  <div class="title title--36">Найдено 4004 новых автомобилей в наличии</div>
                   <div class="s-catalog__controls">
                         <div class="field s-catalog__sort field--white 
      
@@ -668,7 +673,26 @@
                 <div class="s-catalog__list">
                       <div class="catalog-card">
                         <div class="catalog-card__top">
-                          <div class="catalog-card__img"><img class="lazyload" src="" data-src="img/catalog/product_1.webp" alt=""></div>
+                          <div class="catalog-card__slider" data-js="catalogCardSlider">
+                            <div class="catalog-card__pagination" data-js="catalogCardPagination"></div>
+                            <div class="swiper-wrapper">
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_1.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_2.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_3.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_4.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_5.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                            </div>
+                          </div>
                           <div class="catalog-card__extras">
                             <div class="catalog-card__left">
                               <div class="catalog-card__tags">
@@ -700,12 +724,14 @@
                           </div>
                         </div>
                         <div class="catalog-card__info">
-                          <div class="catalog-card__title title title--30">Новый LIXIANG L6 MAX</div>
+                          <div class="catalog-card__title title title--30">Новый LIXIANG L6 MAX
+                            <div class="catalog-card__sticker">Новые</div>
+                          </div>
                               <div class="price catalog-card__price">
                                 <div class="price__current">5 500 000 ₽</div>
                                 <div class="price__old">6 200 000 ₽</div>
-                                <div class="price__credit">от 115 000 ₽/мес <span>в кредит</span></div>
                               </div>
+                          <div class="catalog-card__instock">Моделей в наличии: <span>6</span></div>
                           <div class="catalog-card__chars">
                             <div class="catalog-card__char"><img src="img/catalog/chars/engine.svg" alt=""><span>449 л.с.</span></div>
                             <div class="catalog-card__char"><img src="img/catalog/chars/fuel.svg" alt=""><span>1.5 л/км</span></div>
@@ -718,7 +744,26 @@
                       </div>
                       <div class="catalog-card">
                         <div class="catalog-card__top">
-                          <div class="catalog-card__img"><img class="lazyload" src="" data-src="img/catalog/product_2.webp" alt=""></div>
+                          <div class="catalog-card__slider" data-js="catalogCardSlider">
+                            <div class="catalog-card__pagination" data-js="catalogCardPagination"></div>
+                            <div class="swiper-wrapper">
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_2.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_1.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_3.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_4.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_5.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                            </div>
+                          </div>
                           <div class="catalog-card__extras">
                             <div class="catalog-card__left">
                               <div class="catalog-card__tags">
@@ -750,12 +795,14 @@
                           </div>
                         </div>
                         <div class="catalog-card__info">
-                          <div class="catalog-card__title title title--30">LiXiang L7 MAX</div>
+                          <div class="catalog-card__title title title--30">LiXiang L7 MAX
+                            <div class="catalog-card__sticker">Новые</div>
+                          </div>
                               <div class="price catalog-card__price">
                                 <div class="price__current">5 835 192 ₽</div>
                                 <div class="price__old">6 200 000 ₽</div>
-                                <div class="price__credit">от 115 000 ₽/мес <span>в кредит</span></div>
                               </div>
+                          <div class="catalog-card__instock">Моделей в наличии: <span>6</span></div>
                           <div class="catalog-card__chars">
                             <div class="catalog-card__char"><img src="img/catalog/chars/engine.svg" alt=""><span>449 л.с.</span></div>
                             <div class="catalog-card__char"><img src="img/catalog/chars/fuel.svg" alt=""><span>1.5 л/км</span></div>
@@ -768,7 +815,26 @@
                       </div>
                       <div class="catalog-card">
                         <div class="catalog-card__top">
-                          <div class="catalog-card__img"><img class="lazyload" src="" data-src="img/catalog/product_3.webp" alt=""></div>
+                          <div class="catalog-card__slider" data-js="catalogCardSlider">
+                            <div class="catalog-card__pagination" data-js="catalogCardPagination"></div>
+                            <div class="swiper-wrapper">
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_3.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_1.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_2.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_4.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_5.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                            </div>
+                          </div>
                           <div class="catalog-card__extras">
                             <div class="catalog-card__left">
                               <div class="catalog-card__tags">
@@ -800,12 +866,14 @@
                           </div>
                         </div>
                         <div class="catalog-card__info">
-                          <div class="catalog-card__title title title--30">LIXIANG L7 PRO</div>
+                          <div class="catalog-card__title title title--30">LIXIANG L7 PRO
+                            <div class="catalog-card__sticker">Новые</div>
+                          </div>
                               <div class="price catalog-card__price">
                                 <div class="price__current">5 660 000 ₽</div>
                                 <div class="price__old">6 200 000 ₽</div>
-                                <div class="price__credit">от 115 000 ₽/мес <span>в кредит</span></div>
                               </div>
+                          <div class="catalog-card__instock">Моделей в наличии: <span>6</span></div>
                           <div class="catalog-card__chars">
                             <div class="catalog-card__char"><img src="img/catalog/chars/engine.svg" alt=""><span>449 л.с.</span></div>
                             <div class="catalog-card__char"><img src="img/catalog/chars/fuel.svg" alt=""><span>1.5 л/км</span></div>
@@ -818,7 +886,26 @@
                       </div>
                       <div class="catalog-card">
                         <div class="catalog-card__top">
-                          <div class="catalog-card__img"><img class="lazyload" src="" data-src="img/catalog/product_4.webp" alt=""></div>
+                          <div class="catalog-card__slider" data-js="catalogCardSlider">
+                            <div class="catalog-card__pagination" data-js="catalogCardPagination"></div>
+                            <div class="swiper-wrapper">
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_4.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_1.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_2.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_3.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_5.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                            </div>
+                          </div>
                           <div class="catalog-card__extras">
                             <div class="catalog-card__left">
                               <div class="catalog-card__tags">
@@ -850,12 +937,14 @@
                           </div>
                         </div>
                         <div class="catalog-card__info">
-                          <div class="catalog-card__title title title--30">ZEEKR 001</div>
+                          <div class="catalog-card__title title title--30">ZEEKR 001
+                            <div class="catalog-card__sticker">Новые</div>
+                          </div>
                               <div class="price catalog-card__price">
                                 <div class="price__current">4 600 000 ₽</div>
                                 <div class="price__old">6 200 000 ₽</div>
-                                <div class="price__credit">от 115 000 ₽/мес <span>в кредит</span></div>
                               </div>
+                          <div class="catalog-card__instock">Моделей в наличии: <span>6</span></div>
                           <div class="catalog-card__chars">
                             <div class="catalog-card__char"><img src="img/catalog/chars/engine.svg" alt=""><span>449 л.с.</span></div>
                             <div class="catalog-card__char"><img src="img/catalog/chars/fuel.svg" alt=""><span>1.5 л/км</span></div>
@@ -868,7 +957,26 @@
                       </div>
                       <div class="catalog-card">
                         <div class="catalog-card__top">
-                          <div class="catalog-card__img"><img class="lazyload" src="" data-src="img/catalog/product_5.webp" alt=""></div>
+                          <div class="catalog-card__slider" data-js="catalogCardSlider">
+                            <div class="catalog-card__pagination" data-js="catalogCardPagination"></div>
+                            <div class="swiper-wrapper">
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_5.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_1.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_2.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_3.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_4.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                            </div>
+                          </div>
                           <div class="catalog-card__extras">
                             <div class="catalog-card__left">
                               <div class="catalog-card__tags">
@@ -900,12 +1008,14 @@
                           </div>
                         </div>
                         <div class="catalog-card__info">
-                          <div class="catalog-card__title title title--30">ZEEKR 007</div>
+                          <div class="catalog-card__title title title--30">ZEEKR 007
+                            <div class="catalog-card__sticker">Новые</div>
+                          </div>
                               <div class="price catalog-card__price">
                                 <div class="price__current">5 500 000 ₽</div>
                                 <div class="price__old">6 200 000 ₽</div>
-                                <div class="price__credit">от 115 000 ₽/мес <span>в кредит</span></div>
                               </div>
+                          <div class="catalog-card__instock">Моделей в наличии: <span>6</span></div>
                           <div class="catalog-card__chars">
                             <div class="catalog-card__char"><img src="img/catalog/chars/engine.svg" alt=""><span>449 л.с.</span></div>
                             <div class="catalog-card__char"><img src="img/catalog/chars/fuel.svg" alt=""><span>1.5 л/км</span></div>
@@ -918,7 +1028,29 @@
                       </div>
                       <div class="catalog-card">
                         <div class="catalog-card__top">
-                          <div class="catalog-card__img"><img class="lazyload" src="" data-src="img/catalog/product_6.webp" alt=""></div>
+                          <div class="catalog-card__slider" data-js="catalogCardSlider">
+                            <div class="catalog-card__pagination" data-js="catalogCardPagination"></div>
+                            <div class="swiper-wrapper">
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_6.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_1.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_2.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_3.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_4.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                              <div class="catalog-card__img swiper-slide"><img src="img/catalog/product_5.webp" loading="lazy" alt="">
+                                <div class="swiper-lazy-preloader"></div>
+                              </div>
+                            </div>
+                          </div>
                           <div class="catalog-card__extras">
                             <div class="catalog-card__left">
                               <div class="catalog-card__tags">
@@ -950,12 +1082,14 @@
                           </div>
                         </div>
                         <div class="catalog-card__info">
-                          <div class="catalog-card__title title title--30">Новый Zeekr 001 FR</div>
+                          <div class="catalog-card__title title title--30">Новый Zeekr 001 FR
+                            <div class="catalog-card__sticker">Новые</div>
+                          </div>
                               <div class="price catalog-card__price">
                                 <div class="price__current">6 700 000 ₽</div>
                                 <div class="price__old">6 900 000 ₽</div>
-                                <div class="price__credit">от 115 000 ₽/мес <span>в кредит</span></div>
                               </div>
+                          <div class="catalog-card__instock">Моделей в наличии: <span>6</span></div>
                           <div class="catalog-card__chars">
                             <div class="catalog-card__char"><img src="img/catalog/chars/engine.svg" alt=""><span>449 л.с.</span></div>
                             <div class="catalog-card__char"><img src="img/catalog/chars/fuel.svg" alt=""><span>1.5 л/км</span></div>
@@ -975,6 +1109,91 @@
                           <use xlink:href="img/sprites/sprite.svg#arrow_slider_right"></use>
                         </svg></a>
                     </div>
+              </div>
+            </section>
+            <section class="section s-banner only-mob s-banner--left">
+              <div class="section__container">
+                <div class="section-block s-banner__block">
+                  <div class="section-block__bg s-banner__bg"><picture><source srcset="img/catalog/catalog_banner_mob.webp" media="(max-width: 767px)"><img src="img/catalog/catalog_banner.webp" alt=""></picture></div>
+                  <div class="section-block__content">
+                    <div class="catalog-banner">
+                      <div class="catalog-banner__desc">
+                        <div class="title title--30 title--light catalog-banner__title">Отправьте заявку на&nbsp;подбор автомобиля и&nbsp;получите дополнительную скидку!</div>
+                        <div class="catalog-banner__tags">
+                          <div class="catalog-banner__tag">
+                            <div class="catalog-banner__icon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                              </svg>
+                            </div>
+                            <div class="catalog-banner__text">Подбор среди новых авто в наличии</div>
+                          </div>
+                          <div class="catalog-banner__tag">
+                            <div class="catalog-banner__icon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                              </svg>
+                            </div>
+                            <div class="catalog-banner__text">Кредит без первоначального взноса </div>
+                          </div>
+                          <div class="catalog-banner__tag">
+                            <div class="catalog-banner__icon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                              </svg>
+                            </div>
+                            <div class="catalog-banner__text">Гарантия производителя</div>
+                          </div>
+                          <div class="catalog-banner__tag">
+                            <div class="catalog-banner__icon">
+                              <svg>
+                                <use xlink:href="img/sprites/sprite.svg#exc"></use>
+                              </svg>
+                            </div>
+                            <div class="catalog-banner__text">Программа Trade-In</div>
+                          </div>
+                        </div>
+                      </div>
+                          <form class="form catalog-banner__form form--light" action="#" data-validate novalidate>
+                            <div class="form__content" data-js="form-content">
+                              <div class="form__horizontal">
+                                <div class="form__fields">
+                                      <div class="field  
+     
+     
+    " data-js="formField">
+                                        <label>
+                                          <input class="field__input" type="tel" placeholder="Ваш телефон" required="" data-v-name="phone" data-type="phoneNumber"><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                      </div>
+                                </div>
+                                    <button class="btn form__submit btn--accent btn--full" type="submit"><span class="btn__text">Помощь в подборе</span>
+                                    </button>
+                              </div>
+                              <div class="form__privacy form-privacy" data-js="formField">
+                                <div class="form-privacy__flex">
+                                  <label>
+                                    <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake">
+                                      <svg>
+                                        <use xlink:href="img/sprites/sprite.svg#check"></use>
+                                      </svg></span>
+                                  </label><span class="form-privacy__text">Согласен на обработку моих персональных данных в соответствии с <a href="#" target="_blank">Политикой в отношении обработки персональных данных</a></span>
+                                </div><span class="field__error" data-js="fieldError"></span>
+                              </div>
+                            </div>
+                            <div class="form__thanks" data-js="form-thanks">
+                              <div class="title title--24 form__title">Ваш вопрос отправлен.</div>
+                              <div class="form__image-success">
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#check_circle"></use>
+                                </svg>
+                              </div>
+                              <div class="form__text">С Вами свяжется ответственный сотрудник по&nbsp;указанным контактным данным.</div>
+                            </div>
+                          </form>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
             <section class="section s-text" data-js="sText">
@@ -1553,7 +1772,7 @@
      
     " data-js="formField">
                                         <label>
-                                          <select class="field__select" data-placeholder="Марка" data-js="formSelect" required="">
+                                          <select class="field__select" data-placeholder="Марка" data-js="formSelect" required="" multiple="multiple">
                                             <option label=" "></option>
                                             <option value="LiXiang">LiXiang</option>
                                             <option value="Voyah">Voyah</option>
@@ -1571,7 +1790,7 @@
      
     " data-js="formField">
                                         <label>
-                                          <select class="field__select" data-placeholder="Модель" data-js="formSelect" required="">
+                                          <select class="field__select" data-placeholder="Модель" data-js="formSelect" required="" multiple="multiple">
                                             <option label=" "></option>
                                             <option value="LiXiang L6">LiXiang L6</option>
                                             <option value="LiXiang L7">LiXiang L7</option>

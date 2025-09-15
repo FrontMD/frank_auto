@@ -78,6 +78,7 @@ mixin cm-accordeon(props= defaultCmAccordeonProps)
                                     use(xlink:href=`img/sprites/sprite.svg#arrow_spoiler`)
                         .cm-spoiler__content(data-js="cmSpoilerContent")
                             .cm-spoiler__top
+                                a.cm-spoiler__link(href="javascript:void(0);")
                                 .cm-spoiler__base
                                     .cm-spoiler__img
                                         .cm-spoiler__sticker Выгода 300 000 ₽
@@ -155,7 +156,7 @@ mixin cm-accordeon(props= defaultCmAccordeonProps)
                                             sMode: '165'
                                         })
                                     .cm-spoiler__row
-                                        .cm-spoiler__credit Кредит<br>от 10 000 ₽/мес 
+                                        //-.cm-spoiler__credit Кредит<br>от 10 000 ₽/мес 
                                         +btn({
                                             classes: 'cm-spoiler__btn',
                                             name: 'В Trade-in',

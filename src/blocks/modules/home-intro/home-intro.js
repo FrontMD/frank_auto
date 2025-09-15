@@ -10,6 +10,7 @@ function homeIntro() {
         const homeIntroSliderEx = new Swiper(homeIntroSlider, {
             slidesPerView: 1,
             loop: true,
+            speed: 800,
             autoplay: {
                 delay: 3000
             },

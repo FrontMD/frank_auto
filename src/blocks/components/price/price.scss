@@ -20,7 +20,7 @@
         opacity: 0.3;
     }
 
-    &__credit {
+    /*&__credit {
         flex-basis: 100%;
         font-weight: 500;
         font-size: 18px;
@@ -28,7 +28,7 @@
         span {
             opacity: 0.3;
         }
-    }
+    }*/
 }
 
 .price--content {
@@ -51,8 +51,8 @@
         font-size: 16px;
     }
 
-    &--small &__credit {
+    /*&--small &__credit {
         font-weight: 400;
         font-size: 14px;
-    }
+    }*/
 }

@@ -60,9 +60,10 @@
 
     &__bottom {
         display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
         margin-top: auto;
+        gap: 32px;
 
         @include max(laptop-small) {
             gap: 20px;

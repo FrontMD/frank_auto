@@ -87,8 +87,8 @@
         display: none;
         align-items: center;
         justify-content: center;
-        background-color: $c-white;
-        color: $c-text;
+        background-color: $c-accent;
+        color: $c-white;
         border-radius: 20px;
         transition: all $tr-time linear;
 
@@ -97,7 +97,7 @@
         }
 
         &:hover {
-            background-color: $c-accent;
+            background-color: $c-accent-hover;
             color: $c-white;
         }
 

@@ -13,7 +13,7 @@ block content
 					link: 'javascript:void(0);'
 				},
 				{
-					name: 'Каталог',
+					name: 'Новые автомобили',
 					link: 'javascript:void(0);'
 				}
 			],
@@ -22,9 +22,12 @@ block content
 
 		section.section.section--title
 			.section__container
-				.section__header.section__content
+				.section__header.section__header--flex.section__content
 					.title.title--40
-						h1 Каталог
+						h1 Новые автомобили
+					button.s-catalog__filter(type="button" data-js="catalogFilterOpen")
+						svg
+							use(xlink:href=`img/sprites/sprite.svg#filter`)
 
 		+catalog-filter
 
@@ -35,7 +38,9 @@ block content
 						classes: 'brands-list--full'
 					})
 
-		+s-banner()
+		+s-banner({
+			classes: 'only-desk'
+		})
 			.catalog-banner
 				.catalog-banner__desc
 					.title.title--30.title--light.catalog-banner__title Отправьте заявку на&nbsp;подбор автомобиля и&nbsp;получите дополнительную скидку!
@@ -77,11 +82,54 @@ block content
 					})
 
 		+s-catalog({
-			title: 'Каталог автомобилей',
+			title: 'Найдено 4004 новых автомобилей в наличии',
 			sort: true,
 			pagination: true,
 			filter: true
 		})
+
+		+s-banner({
+			classes: 'only-mob'
+		})
+			.catalog-banner
+				.catalog-banner__desc
+					.title.title--30.title--light.catalog-banner__title Отправьте заявку на&nbsp;подбор автомобиля и&nbsp;получите дополнительную скидку!
+					.catalog-banner__tags
+						.catalog-banner__tag
+							.catalog-banner__icon
+								svg
+									use(xlink:href=`img/sprites/sprite.svg#exc`)
+							.catalog-banner__text Подбор среди новых авто в наличии
+						.catalog-banner__tag
+							.catalog-banner__icon
+								svg
+									use(xlink:href=`img/sprites/sprite.svg#exc`)
+							.catalog-banner__text Кредит без первоначального взноса 
+						.catalog-banner__tag
+							.catalog-banner__icon
+								svg
+									use(xlink:href=`img/sprites/sprite.svg#exc`)
+							.catalog-banner__text Гарантия производителя
+						.catalog-banner__tag
+							.catalog-banner__icon
+								svg
+									use(xlink:href=`img/sprites/sprite.svg#exc`)
+							.catalog-banner__text Программа Trade-In
+
+				+form({
+					classes: 'catalog-banner__form form--light',
+					btnText: 'Помощь в подборе',
+				})
+					+field({
+						tag: 'input',
+						type: 'tel',
+						placeholder: 'Ваш телефон',
+						inputAttr: {
+							'required': '',
+							'data-v-name': 'phone',
+							'data-type': 'phoneNumber'
+						},
+					})
 
 		+s-text
 
