@@ -290,7 +290,7 @@
                                 <use xlink:href="img/sprites/sprite.svg#arrow_angle_right"></use>
                               </svg></span>
                           </li>
-                          <li class="breadcrumbs__item breadcrumbs__item--current"><span>Универсальная услуга</span>
+                          <li class="breadcrumbs__item breadcrumbs__item--current"><span>Кузовной ремонт</span>
                           </li>
                         </ul>
                       </div>
@@ -307,12 +307,13 @@
                     <div class="ns-article__date">25.10.2025</div><a class="btn  btn--share btn--link" href="javascript:void(0)">
                           <svg>
                             <use xlink:href="img/sprites/sprite.svg#share"></use>
-                          </svg><span class="btn__text">Поделиться</span></a>
+                          </svg><span class="btn__text">Поделиться</span></a><a class="btn  btn--share btn--link" href="#signUp"><span class="btn__text">Записаться</span></a>
                     <div class="ns-article__section">Спецпредложение</div>
                   </div>
                 </div>
                 <div class="section-block ns-article__block">
-                  <div class="ns-article__content text-editor"><img src="img/services/sa_image_1.webp" alt="">
+                  <div class="ns-article__content text-editor">
+                    <div class="ns-article__cover"><img src="img/services/sa_image_1.webp" alt=""></div>
                     <p>FRANK AUTO — это профессиональный сервисный центр, который специализируется на обслуживании автомобилей LOTUS. Наши специалисты имеют большой опыт работы с этими автомобилями и знают все тонкости процесса привязки ключей. Мы используем только оригинальное оборудование и программное обеспечение, что гарантирует высокое качество работы.</p>
                     <h2>Что входит в карту VIP сопровождения?</h2>
                     <ol>
@@ -705,6 +706,27 @@
                             </div>
                       </div>
                     </div>
+                        <div class="media-slider" data-js="mediaSliderBlock">
+                          <div class="media-slider__title title title--30">Примеры работ</div>
+                          <div class="media-slider__slider" data-js="mediaSlider">
+                                <div class="slider-controls media-slider__controls">
+                                  <button class="slider-control slider-control--prev" type="button" data-js="sliderPrev">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#arrow_slider_left"></use>
+                                    </svg>
+                                  </button>
+                                  <button class="slider-control slider-control--next" type="button" data-js="sliderNext">
+                                    <svg>
+                                      <use xlink:href="img/sprites/sprite.svg#arrow_slider_right"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide media-slider__slide"><a class="media-slider__img" href="img/services/sa_slide_1.webp" data-fancybox="mediaSliderGroup1" data-thumb="img/services/sa_slide_1.webp"><img src="img/services/sa_slide_1.webp" alt=""></a></div>
+                              <div class="swiper-slide media-slider__slide"><a class="media-slider__img" href="img/services/sa_intro.webp" data-fancybox="mediaSliderGroup1" data-thumb="img/services/sa_intro.webp"><img src="img/services/sa_intro.webp" alt=""></a></div>
+                            </div>
+                          </div>
+                        </div>
                   </div>
                 </div>
               </div>
@@ -747,6 +769,134 @@
                             <div class="news-card__title">Выгода от FRANK AUTO - выбирайте с умом!</div>
                             <div class="news-card__text">Специальная кредитная программа на автомобили с докризисной ставкой ВСЕГО 17% ГОДОВЫХ. Это ваш шанс приобрести автомобиль на выгодных условиях и забыть о высоких процентах!</div>
                           </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="section s-banner  s-banner--right" id="signUp">
+              <div class="section__container">
+                <div class="section-block s-banner__block">
+                  <div class="section-block__bg s-banner__bg"><picture><source srcset="img/services/service_form_mob.webp" media="(max-width: 767px)"><img src="img/services/service_form.webp" alt=""></picture></div>
+                  <div class="section-block__content">
+                    <div class="service-form">
+                      <div class="title title--30 title--light service-form__title">Записаться на сервисное обслуживание</div>
+                          <form class="form service-form__form form--horizontal form--light" action="#" data-validate novalidate>
+                            <div class="form__content" data-js="form-content">
+                              <div class="form__horizontal">
+                                <div class="form__fields">
+                                      <div class="field  
+     
+     
+    " data-js="formField">
+                                        <label>
+                                          <input class="field__input" type="text" placeholder="Имя" required="" data-type="letters"><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                      </div>
+                                      <div class="field  
+     
+     
+    " data-js="formField">
+                                        <label>
+                                          <input class="field__input" type="text" placeholder="Телефон" required="" data-v-name="phone" data-type="phoneNumber"><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                      </div>
+                                      <div class="field  
+     
+     
+    " data-js="formField">
+                                        <label>
+                                          <select class="field__select" data-placeholder="Выбрать салон" data-js="formSelect" required="">
+                                            <option label=" "></option>
+                                            <option value="Москва, Новорижское шоссе, 17-й км., строение 3">Москва, Новорижское шоссе, 17-й км., строение 3</option>
+                                            <option value="Москва, МКАД, 85-й километр, вл3с2">Москва, МКАД, 85-й километр, вл3с2</option>
+                                            <option value="Москва, Можайское шоссе, вл. 165 Б">Москва, Можайское шоссе, вл. 165 Б</option>
+                                          </select><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                      </div>
+                                      <div class="field  
+     
+     
+    " data-js="formField">
+                                        <label>
+                                          <select class="field__select" data-placeholder="Марка" data-js="formSelect" required="" multiple="multiple">
+                                            <option label=" "></option>
+                                            <option value="LiXiang">LiXiang</option>
+                                            <option value="Voyah">Voyah</option>
+                                            <option value="AITO">AITO</option>
+                                            <option value="Chery">Chery</option>
+                                            <option value="Zeekr">Zeekr</option>
+                                            <option value="Audi">Audi</option>
+                                            <option value="Tank">Tank</option>
+                                            <option value="Rox Motor Tech">Rox Motor Tech</option>
+                                          </select><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                      </div>
+                                      <div class="field  
+     
+     
+    " data-js="formField">
+                                        <label>
+                                          <select class="field__select" data-placeholder="Модель" data-js="formSelect" required="" multiple="multiple">
+                                            <option label=" "></option>
+                                            <option value="LiXiang L6">LiXiang L6</option>
+                                            <option value="LiXiang L7">LiXiang L7</option>
+                                            <option value="LiXiang L9">LiXiang L9</option>
+                                            <option value="LiXiang L9">LiXiang L9</option>
+                                            <option value="LiXiang Mega">LiXiang Mega</option>
+                                            <option value="LiXiang One">LiXiang One</option>
+                                          </select><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                      </div>
+                                      <div class="field  
+     
+     
+    " data-js="formField">
+                                        <label>
+                                          <select class="field__select" data-placeholder="Год выпуска" data-js="formSelect" required="">
+                                            <option label=" "></option>
+                                            <option value="2020">2020</option>
+                                            <option value="2021">2021</option>
+                                            <option value="2022">2022</option>
+                                            <option value="2023">2023</option>
+                                            <option value="2024">2024</option>
+                                            <option value="2025">2025</option>
+                                          </select><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                      </div>
+                                      <div class="field service-form__long 
+     
+     
+    " data-js="formField">
+                                        <label>
+                                          <input class="field__input" type="text" placeholder="Описание услуги / проблемы"><span class="field__error" data-js="fieldError"></span>
+                                        </label>
+                                      </div>
+                                </div>
+                                    <button class="btn form__submit btn--accent btn--full" type="submit"><span class="btn__text">Отправить</span>
+                                    </button>
+                              </div>
+                              <div class="form__privacy form-privacy" data-js="formField">
+                                <div class="form-privacy__flex">
+                                  <label>
+                                    <input type="checkbox" data-v-name="checkbox" required><span class="form-privacy__fake">
+                                      <svg>
+                                        <use xlink:href="img/sprites/sprite.svg#check"></use>
+                                      </svg></span>
+                                  </label><span class="form-privacy__text">Согласен на обработку моих персональных данных в соответствии с <a href="#" target="_blank">Политикой в отношении обработки персональных данных</a></span>
+                                </div><span class="field__error" data-js="fieldError"></span>
+                              </div>
+                            </div>
+                            <div class="form__thanks" data-js="form-thanks">
+                              <div class="title title--24 form__title">Ваш вопрос отправлен.</div>
+                              <div class="form__image-success">
+                                <svg>
+                                  <use xlink:href="img/sprites/sprite.svg#check_circle"></use>
+                                </svg>
+                              </div>
+                              <div class="form__text">С Вами свяжется ответственный сотрудник по&nbsp;указанным контактным данным.</div>
+                            </div>
+                          </form>
                     </div>
                   </div>
                 </div>

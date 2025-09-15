@@ -40,8 +40,12 @@
 
         }
 
-        .field:nth-child(7) {
+        .service-form__long {
             flex-grow: 1;
+
+            @include max(tablet) {
+                flex-grow: 1;
+            }
         }
 
         .btn {

@@ -52,4 +52,22 @@
             text-align: start;
         }
     }
+
+    &__cover {
+        width: 100%;
+        aspect-ratio: 1 / 0.432;
+        margin: 1.875em auto;
+        border-radius: $br-section;
+        overflow: hidden;
+
+        @include max(mobile) {
+            border-radius: $br-section-mob;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 }

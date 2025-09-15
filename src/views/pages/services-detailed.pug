@@ -17,7 +17,7 @@ block content
                     link: 'javascript:void(0);'
                 },
                 {
-                    name: 'Универсальная услуга',
+                    name: 'Кузовной ремонт',
                     link: 'javascript:void(0);'
                 },
             ],
@@ -65,3 +65,104 @@ block content
                 }
             ]
         })
+
+        +s-banner({
+            img: '<picture><source srcset="img/services/service_form_mob.webp" media="(max-width: 767px)"><img src="img/services/service_form.webp" alt=""></picture>',
+            imgPos: 'right'
+        })(id="signUp")
+            .service-form
+                .title.title--30.title--light.service-form__title Записаться на сервисное обслуживание
+
+                +form({
+                    classes: 'service-form__form form--horizontal form--light',
+                    btnText: 'Отправить',
+                })
+                    +field({
+                        placeholder: 'Имя',
+                        inputAttr: {
+                            'required': '',
+                            'data-type': 'letters'
+                        },
+                    })
+                    +field({
+                        placeholder: 'Телефон',
+                        inputAttr: {
+                            'required': '',
+                            'data-v-name': 'phone',
+                            'data-type': 'phoneNumber'
+                        },
+                    })
+                    +field({
+                        classes: '',
+                        tag: 'select',
+                        placeholder: 'Выбрать салон',
+                        inputAttr: {
+                        'required': '',
+                        },
+                        selectOptions: [
+                            "",
+                            "Москва, Новорижское шоссе, 17-й км., строение 3",
+                            "Москва, МКАД, 85-й километр, вл3с2",
+                            "Москва, Можайское шоссе, вл. 165 Б",
+                        ],
+                    })
+                    +field({
+                        classes: '',
+                        tag: 'select',
+                        placeholder: 'Марка',
+                        inputAttr: {
+                        'required': '',
+                            multiple: "multiple"
+
+                        },
+                        selectOptions: [
+                            "",
+                            "LiXiang",
+                            "Voyah",
+                            "AITO",
+                            "Chery",
+                            "Zeekr",
+                            "Audi",
+                            "Tank",
+                            "Rox Motor Tech",
+                        ],
+                    })
+                    +field({
+                        classes: '',
+                        tag: 'select',
+                        placeholder: 'Модель',
+                        inputAttr: {
+                        'required': '',
+                        multiple: "multiple"
+                        },
+                        selectOptions: [
+                            "",
+                            "LiXiang L6",
+                            "LiXiang L7",
+                            "LiXiang L9",
+                            "LiXiang L9",
+                            "LiXiang Mega",
+                            "LiXiang One"
+                        ],
+                    })
+                    +field({
+                        classes: '',
+                        tag: 'select',
+                        placeholder: 'Год выпуска',
+                        inputAttr: {
+                        'required': '',
+                        },
+                        selectOptions: [
+                            "",
+                            "2020",
+                            "2021",
+                            "2022",
+                            "2023",
+                            "2024",
+                            "2025",
+                        ],
+                    })
+                    +field({
+                        classes: 'service-form__long',
+                        placeholder: 'Описание услуги / проблемы',
+                    })

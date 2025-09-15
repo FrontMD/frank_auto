@@ -34,12 +34,19 @@ mixin ns-article(props= defaultNSArticleProps)
                         cMode: 'share',
                         sMode: 'link'
                     })
+                    +btn({
+                        name: 'Записаться',
+                        link: '#signUp',
+                        cMode: 'share',
+                        sMode: 'link'
+                    })
                     -if(checkProps.section.length > 0)
                         .ns-article__section!= checkProps.section
             .section-block.ns-article__block
                 .ns-article__content.text-editor
                     - if(checkProps.brandService === true)
-                        img(src="img/services/sa_intro.webp" alt="")
+                        .ns-article__cover
+                            img(src="img/services/sa_intro.webp" alt="")
                         p FRANK AUTO — это профессиональный сервисный центр, который специализируется на обслуживании автомобилей LOTUS. Наши специалисты имеют большой опыт работы с этими автомобилями и знают все тонкости процесса привязки ключей. Мы используем только оригинальное оборудование и программное обеспечение, что гарантирует высокое качество работы.
                         h2 Что входит в карту VIP сопровождения?
                         ol
@@ -54,7 +61,8 @@ mixin ns-article(props= defaultNSArticleProps)
                         +media-slider
 
                     - else if(checkProps.service === true)
-                        img(src="img/services/sa_image_1.webp" alt="")
+                        .ns-article__cover
+                            img(src="img/services/sa_image_1.webp" alt="")
                         p FRANK AUTO — это профессиональный сервисный центр, который специализируется на обслуживании автомобилей LOTUS. Наши специалисты имеют большой опыт работы с этими автомобилями и знают все тонкости процесса привязки ключей. Мы используем только оригинальное оборудование и программное обеспечение, что гарантирует высокое качество работы.
                         h2 Что входит в карту VIP сопровождения?
                         ol
@@ -83,8 +91,11 @@ mixin ns-article(props= defaultNSArticleProps)
                                     title: 'Слесарные работы'
                                 })
 
+                        +media-slider
+
                     - else
-                        img(src="img/stocks/stock_article.webp" alt="")
+                        .ns-article__cover
+                            img(src="img/stocks/stock_article.webp" alt="")
                         p При прохождении ТО в сервис - центрах FRANK AUTO дарим масло в подарок. 
                         p Действуют во всех сервис - центрах FRANK AUTO 
                         h2 Что входит в карту VIP сопровождения?

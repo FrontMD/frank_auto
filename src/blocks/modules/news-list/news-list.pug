@@ -122,6 +122,26 @@ mixin news-list(props= defaultNewsListProps)
                                             svg
                                                 use(xlink:href=`img/sprites/sprite.svg#close`)
 
+                        +field({
+                            classes: 'news-list__sort',
+                            tag: 'select',
+                            placeholder: 'Бренд',
+                            selectOptions: [
+                                "",
+                                "LiXiang",
+                                "Voyah",
+                                "AITO",
+                                "Chery",
+                                "Zeekr",
+                                "Audi",
+                                "Tank",
+                                "Rox Motor Tech",
+                            ],
+                            inputAttr: {
+                                multiple: "multiple"
+                            }
+                        })
+
                     -else if(checkProps.smPage === true)
                         .news-list__grid
                             .news-list__title Быстрый подбор услуг

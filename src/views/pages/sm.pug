@@ -26,12 +26,14 @@ block content
                         h1 Сервисное обслуживание
 
         +home-selection({
-            servicesPage: true
+            servicesPage: true,
+            noTabs: true
         })
 
         +home-service({
             classes: '',
-            title: 'Популярные услуги',
+            title: 'Наши услуги',
+            expanded: true,
             btn: 'none',
             cards: [
                 {
@@ -53,11 +55,31 @@ block content
                 {
                     text: 'Шиномонтаж',
                     img: 'img/home/home_service_5.webp'
+                },
+                {
+                    text: 'Кузовной ремонт',
+                    img: 'img/home/home_service_1.webp'
+                },
+                {
+                    text: 'УСОВЕРШЕНСТВУЙ СВОЙ ZEEKR',
+                    img: 'img/home/home_service_2.webp'
+                },
+                {
+                    text: 'Керамическое покрытие',
+                    img: 'img/home/home_service_3.webp'
+                },
+                {
+                    text: 'Малярные работы',
+                    img: 'img/home/home_service_4.webp'
+                },
+                {
+                    text: 'Шиномонтаж',
+                    img: 'img/home/home_service_5.webp'
                 }
             ],
         })
 
-        +popular-brands
+        //-+popular-brands
 
         +s-news({
             title: 'Нужно каждой машине',

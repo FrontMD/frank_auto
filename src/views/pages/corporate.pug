@@ -19,6 +19,42 @@ block content
             ],
         })
 
-
-
         +corp-intro
+
+        +s-banner({
+            img: '<picture><source srcset="img/services/service_form_mob.webp" media="(max-width: 767px)"><img src="img/services/service_form.webp" alt=""></picture>',
+            imgPos: 'right'
+        })(id="signUp")
+            .service-form
+                .title.title--30.title--light.service-form__title Заявка на сотрудничество
+
+                +form({
+                    classes: 'service-form__form form--horizontal form--light',
+                    btnText: 'Отправить',
+                })
+                    +field({
+                        placeholder: 'Имя',
+                        inputAttr: {
+                            'required': '',
+                            'data-type': 'letters'
+                        },
+                    })
+                    +field({
+                        placeholder: 'Компания',
+                        inputAttr: {
+                            'required': ''
+                        },
+                    })
+                    +field({
+                        placeholder: 'Телефон',
+                        inputAttr: {
+                            'required': '',
+                            'data-v-name': 'phone',
+                            'data-type': 'phoneNumber'
+                        },
+                    })
+
+                    +field({
+                        classes: 'service-form__long',
+                        placeholder: 'Комментарий',
+                    })

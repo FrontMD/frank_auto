@@ -20,6 +20,7 @@
 @@include("../../blocks/modules/s-banks/s-banks.js")
 @@include("../../blocks/modules/img-slider/img-slider.js")
 @@include("../../blocks/modules/s-reviews/s-reviews.js")
+@@include("../../blocks/modules/home-service/home-service.js")
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -45,4 +46,5 @@ document.addEventListener('DOMContentLoaded', () => {
     sBanksSlider()
     imgSliderInit()
     sReviewsSlider()
+    homeService()
 })

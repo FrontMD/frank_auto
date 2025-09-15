@@ -93,7 +93,7 @@ block content
         +s-banner({
             img: '<picture><source srcset="img/services/service_form_mob.webp" media="(max-width: 767px)"><img src="img/services/service_form.webp" alt=""></picture>',
             imgPos: 'right'
-        })
+        })(id="signUp")
             .service-form
                 .title.title--30.title--light.service-form__title Записаться на сервисное обслуживание
 
@@ -187,6 +187,7 @@ block content
                         ],
                     })
                     +field({
+                        classes: 'service-form__long',
                         placeholder: 'Описание услуги / проблемы',
                     })
 

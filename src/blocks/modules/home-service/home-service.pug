@@ -2,6 +2,7 @@
     const defaultHomeServiceProps = {
         classes: '',
         title: 'Сервисное обслуживание',
+        expanded: false,
         btn: {
             classes: 'section-header__btn',
             name: 'Смотреть все',
@@ -37,25 +38,46 @@ mixin home-service(props= defaultHomeServiceProps)
         const checkProps = {
             classes: props.classes ? props.classes : defaultHomeServiceProps.classes,
             title: props.title ? props.title : defaultHomeServiceProps.title,
+            expanded: props.expanded ? props.expanded : defaultHomeServiceProps.expanded,
             btn: props.btn ? props.btn : defaultHomeServiceProps.btn,
             cards: props.cards ? props.cards : defaultHomeServiceProps.cards,
         }
 
     section.section.home-service(class= checkProps.classes)&attributes(attributes)
         .section__container
-            .section-block.home-service__block
-                .section-header
-                    .section-header__title.title.title--36!= checkProps.title
-                    - if(checkProps.btn !== 'none')
-                        +btn(checkProps.btn)
+            - if(checkProps.expanded === true)
+                .section-block.home-service__block(data-js="servicesList")
+                    .section-header
+                        .section-header__title.title.title--36!= checkProps.title
+                        - if(checkProps.btn !== 'none')
+                            +btn(checkProps.btn)
 
-                .section-block__content.home-service__list
-                    - let cardsCount = 0
-                        -while(cardsCount < checkProps.cards.length)
-                            - let card = checkProps.cards[cardsCount]
-                            .home-service__card
-                                a(href="javascript:void(0);").home-service__link
-                                .home-service__img
-                                    img(src=card.img, alt="")
-                                .home-service__text!= card.text
-                            - cardsCount++
+                    .section-block__content.home-service__list.home-service__list--grid(data-js="servicesListContent")
+                        - let cardsCount = 0
+                            -while(cardsCount < checkProps.cards.length)
+                                - let card = checkProps.cards[cardsCount]
+                                .home-service__card(data-js="servicesListCard")
+                                    a(href="javascript:void(0);").home-service__link
+                                    .home-service__img
+                                        img(src=card.img, alt="")
+                                    .home-service__text!= card.text
+                                - cardsCount++
+
+            - else
+                .section-block.home-service__block
+                    .section-header
+                        .section-header__title.title.title--36!= checkProps.title
+                        - if(checkProps.btn !== 'none')
+                            +btn(checkProps.btn)
+
+                    .section-block__content.home-service__list
+                        - let cardsCount = 0
+                            -while(cardsCount < checkProps.cards.length)
+                                - let card = checkProps.cards[cardsCount]
+                                .home-service__card
+                                    a(href="javascript:void(0);").home-service__link
+                                    .home-service__img
+                                        img(src=card.img, alt="")
+                                    .home-service__text!= card.text
+                                - cardsCount++
+
