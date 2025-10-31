@@ -35,7 +35,7 @@ mixin img-intro(props= defaultImgIntroProps)
                     picture
                         source(srcset=checkProps.imgMob media="(max-width: 767px)")
                         img(src=checkProps.img alt="")
-                //-.section-block__content.img-intro__content
+                .section-block__content.img-intro__content
                     .img-intro__left(class=checkProps.sticker.inTitle === true ? 'img-intro__left--centered' : '')
                         .img-intro__title.title.title--50.title--light
                             h1!= checkProps.title

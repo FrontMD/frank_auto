@@ -124,6 +124,10 @@
             gap: 15px;
             flex-direction: row-reverse;
         }
+
+        @include max(400) {
+            gap: 8px;
+        }
     }
 
     &__percent {
@@ -132,6 +136,10 @@
         line-height: 1.2em;
         letter-spacing: 0;
         color: $c-text-breadcrumbs;
+
+        @include max(400) {
+            font-size: 12px;
+        }
     }
 
     &__rating {
