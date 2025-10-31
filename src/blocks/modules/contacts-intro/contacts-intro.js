@@ -5,11 +5,13 @@ function contactsMap() {
 
     const mapEl = contactsIntro.querySelector('[data-js="contactsIntroMap"]')
     const pointsList = [... contactsIntro.querySelectorAll('[data-js="contactsIntroItem"]')].map(item => item.dataset.coords)
+    const startCenter = mapEl.dataset.center ? mapEl.dataset.center : '55.883459, 37.444566'
+    const startZoom = mapEl.dataset.zoom ? parseInt(mapEl.dataset.center) : 12
 
     ymaps.ready(async function () {
         // строим карту
-        let center = pointsList[0]
-        let zoom = 17
+        let center = startCenter
+        let zoom = startZoom
     
         mapEx = new ymaps.Map(mapEl, {
             center: center.replace(/\s/g, '').split(","),
@@ -55,6 +57,13 @@ function contactsMap() {
             clusterer.add(myGeoObjects);
     
             mapEx.geoObjects.add(clusterer);
+
+            if (myGeoObjects.length > 0) {
+                mapEx.setBounds(clusterer.getBounds(), {
+                    checkZoomRange: true,
+                    zoomMargin: 50
+                });
+            }
     
         }
     })
