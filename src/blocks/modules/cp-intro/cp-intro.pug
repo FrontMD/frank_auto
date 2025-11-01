@@ -144,7 +144,7 @@ mixin cp-intro(props= defaultCpIntroProps)
                                 name: 'Забронировать онлайн',
                                 cMode: 'accent',
                                 sMode: 'full'
-                            })
+                            })(data-modal="#reserveModal")
 
                             - if(checkProps.usedPage === true)
                                 .cp-intro__links
@@ -155,7 +155,7 @@ mixin cp-intro(props= defaultCpIntroProps)
                                     name: 'В кредит',
                                     cMode: 'light-accent',
                                     sMode: 'full'
-                                })
+                                })(data-modal="#creditModal")
 
                     .custom-scrollbar.cp-intro__gscroll(data-js="customScrollbar")
                         .cp-intro__gifts

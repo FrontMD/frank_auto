@@ -94,6 +94,64 @@ noindex
                     },
                 })
 
+        //- Заявка на кредит
+        +modal({modalId:"creditModal", modalTitle:"", classes:"form-modal"})
+            +form({
+                classes: 'form--modal',
+                title: 'Купить в кредит автомобиль LIXIANG L6 MAX',
+                text: '',
+                btnText: 'Отправить',
+                successTitle: 'Подписка оформлена',
+                successTitle: 'Ваша заявка отправлена',
+                successText: 'Менеджер свяжется с&nbsp;вами в&nbsp;ближайшее время',
+                successBtn: true
+            })
+                +field({
+                    placeholder: 'Имя',
+                    inputAttr: {
+                        'required': '',
+                        'data-type': 'letters'
+                    },
+                })
+                +field({
+                    placeholder: 'Номер телефона',
+                    inputAttr: {
+                        'required': '',
+                        'data-v-name': 'phone',
+                        'data-type': 'phoneNumber'
+                    },
+                })
+                +field({
+                    placeholder: 'Электронная почта',
+                    inputAttr: {
+                        'required': '',
+                        'data-v-name': 'email'
+                    },
+                })
+                +field({
+                    classes: '',
+                    tag: 'select',
+                    placeholder: 'Адрес салона',
+                    inputAttr: {
+                    'required': '',
+                    },
+                    selectOptions: [
+                        "",
+                        "Москва, Новорижское шоссе, 17-й км., строение 3",
+                        "Москва, МКАД, 85-й километр, вл3с2",
+                        "Москва, Можайское шоссе, вл. 165 Б",
+                    ],
+                })
+                +field({
+                    classes: '',
+                    placeholder: 'Дата визита в салон',
+                    inputAttr: {
+                        'required': '',
+                        'data-v-name': 'date',
+                        'data-type': 'date',
+                    },
+                })
+
         //- Получить консультацию
         +modal({modalId:"consultationModal", modalTitle:"", classes:"form-modal"})
             +form({

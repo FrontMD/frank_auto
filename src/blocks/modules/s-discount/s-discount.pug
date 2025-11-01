@@ -36,7 +36,7 @@ mixin s-discount(props= defaultSdiscountProps)
 
     section.section.s-discount
         .section__container.section__content
-            form(action="#").s-discount__form
+            .s-discount__form
                 .s-discount__fields
                     - let itemsCount = 0
                     - while(itemsCount < checkProps.items.length)
@@ -77,7 +77,7 @@ mixin s-discount(props= defaultSdiscountProps)
                         name: 'Зафиксировать условия',
                         sMode: 'narrow',
                         cMode: 'light-accent'
-                    })
+                    })(data-modal="#reserveModal")
 
                     svg.s-discount__decor.s-discount__decor--right
                         use(xlink:href=`img/sprites/sprite.svg#s_discount_decor_r`)
