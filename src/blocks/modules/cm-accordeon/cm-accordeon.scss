@@ -677,5 +677,25 @@
         @include max(mobile) {
             line-height: 30px;
         }
+
+        li {
+            position: relative;
+            padding-left: 45px;
+        }
+
+        li:after {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 0.8em;
+            width: 24px;
+            height: 11px;
+            background-image: url("data:image/svg+xml,%3Csvg width='24' height='11' viewBox='0 0 24 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2266_22840)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M23.7318 0.00890837L12.6492 2.70577C12.6135 2.71453 12.5764 2.71403 12.541 2.70426L2.53383 -0.012378C2.41358 -0.0449336 2.29083 0.0296939 2.26497 0.151402L0.00486775 10.7575C-0.0282694 10.9133 0.113065 11.0503 0.268207 11.0125L11.3511 8.3156C11.3865 8.30708 11.4236 8.30733 11.459 8.31685L21.4714 11.0125C21.5914 11.0448 21.7142 10.9699 21.7401 10.8487L23.9951 0.264094C24.0283 0.108328 23.8869 -0.0286558 23.7318 0.00915879V0.00890837Z' fill='%23FC00FF'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2266_22840'%3E%3Crect width='24' height='11' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+
+            @include max(mobile) {
+                top: 0.63em;
+            }
+        }
     }
 }
