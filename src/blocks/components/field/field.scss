@@ -139,11 +139,11 @@
         }
     }
 
-    &--checkbox input:checked+.fake-checkbox {
+    &--checkbox input:checked~.fake-checkbox {
         background-color: $c-accent;
     }
 
-    &--checkbox input:checked+.fake-checkbox::after {
+    &--checkbox input:checked~.fake-checkbox::after {
         left: 16px;
     }
 
