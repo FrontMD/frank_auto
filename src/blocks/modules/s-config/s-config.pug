@@ -18,98 +18,97 @@ mixin s-config(props= defaultSConfigProps)
             classes: props.classes ? props.classes : defaultSConfigProps.classes,
         }
 
-    section.section.s-config(class= checkProps.classes data-js="gridSpoiler" data-rows="1" data-resp="3-1024")&attributes(attributes)
+    section.section.s-config(class= checkProps.classes data-js="gridSpoiler" data-rows="5" data-resp="3-1024")&attributes(attributes)
         .section__container.section__content
             .section-block.s-config__content
                 .title.title--36.s-config__title Что входит в комплектацию L7 Pro
                 .s-config__blocks(data-js="gridSpoilerContent")
-                    .cm-spoiler-list.s-config__block(data-js="gridSpoilerCell")
+                    .cm-spoiler-list.s-config__block
                         //-.cm-spoiler-list__icon
                             img(src="img/catalog-model/car_prop_1.svg" alt="")
                         .cm-spoiler-list__text
-                            .cm-spoiler-list__title Безопасность
+                            //-.cm-spoiler-list__title Безопасность
                             ul.cm-spoiler-list__items
-                                li ЭРА-ГЛОНАСС
-                                li Датчик давления в шинах
-                                li Система помощи при спуске
-                                li Система удержания в полосе
-                                li Система стабилизации (ESP)
-                                li Система контроля слепых зон
-                                li Подушки безопасности боковые
-                                li Система управления дальним светом
+                                li(data-js="gridSpoilerCell") ЭРА-ГЛОНАСС
+                                li(data-js="gridSpoilerCell") Датчик давления в шинах
+                                li(data-js="gridSpoilerCell") Система помощи при спуске
+                                li(data-js="gridSpoilerCell") Система удержания в полосе
+                                li(data-js="gridSpoilerCell") Система стабилизации (ESP)
+                                li(data-js="gridSpoilerCell") Система контроля слепых зон
+                                li(data-js="gridSpoilerCell") Подушки безопасности боковые
+                                li(data-js="gridSpoilerCell") Система управления дальним светом
 
-                    .cm-spoiler-list.s-config__block(data-js="gridSpoilerCell")
+                    .cm-spoiler-list.s-config__block
                         //-.cm-spoiler-list__icon
                             img(src="img/catalog-model/car_prop_2.svg" alt="")
                         .cm-spoiler-list__text
-                            .cm-spoiler-list__title Экстерьер
+                            //-.cm-spoiler-list__title Экстерьер
                             ul.cm-spoiler-list__items
-                                li Диски 20
-                                li Датчик света
-                                li Датчик дождя
-                                li Светодиодные фары
-                                li Автоматический корректор фар
-                                li Система адаптивного освещения
-                                li Электрообогрев боковых зеркал
-                                li Система управления дальним светом
+                                li(data-js="gridSpoilerCell") Диски 20
+                                li(data-js="gridSpoilerCell") Датчик света
+                                li(data-js="gridSpoilerCell") Датчик дождя
+                                li(data-js="gridSpoilerCell") Светодиодные фары
+                                li(data-js="gridSpoilerCell") Автоматический корректор фар
+                                li(data-js="gridSpoilerCell") Система адаптивного освещения
+                                li(data-js="gridSpoilerCell") Электрообогрев боковых зеркал
+                                li(data-js="gridSpoilerCell") Система управления дальним светом
 
-                    .cm-spoiler-list.s-config__block(data-js="gridSpoilerCell")
+                    .cm-spoiler-list.s-config__block
                         //-.cm-spoiler-list__icon
                             img(src="img/catalog-model/car_prop_3.svg" alt="")
                         .cm-spoiler-list__text
-                            .cm-spoiler-list__title Интерьер
+                            //-.cm-spoiler-list__title Интерьер
                             ul.cm-spoiler-list__items
-                                li Люк
-                                li Сиденья с массажем
-                                li Тонированные стекла
-                                li Кожа (Материал салона)
-                                li Подогрев задних сидений
-                                li Память сиденья водителя
-                                li Обогрев рулевого колеса
-                                li Подогрев передних сидений
+                                li(data-js="gridSpoilerCell") Люк
+                                li(data-js="gridSpoilerCell") Сиденья с массажем
+                                li(data-js="gridSpoilerCell") Тонированные стекла
+                                li(data-js="gridSpoilerCell") Кожа (Материал салона)
+                                li(data-js="gridSpoilerCell") Подогрев задних сидений
+                                li(data-js="gridSpoilerCell") Память сиденья водителя
+                                li(data-js="gridSpoilerCell") Обогрев рулевого колеса
+                                li(data-js="gridSpoilerCell") Подогрев передних сидений
 
-                    .cm-spoiler-list.s-config__block(data-js="gridSpoilerCell")
-                        //-.cm-spoiler-list__icon
-                            img(src="img/catalog-model/car_prop_1.svg" alt="")
-                        .cm-spoiler-list__text
-                            .cm-spoiler-list__title Безопасность
-                            ul.cm-spoiler-list__items
-                                li ЭРА-ГЛОНАСС
-                                li Датчик давления в шинах
-                                li Система помощи при спуске
-                                li Система удержания в полосе
-                                li Система стабилизации (ESP)
-                                li Система контроля слепых зон
-                                li Подушки безопасности боковые
-                                li Система управления дальним светом
+                    //-.cm-spoiler-list.s-config__block(data-js="gridSpoilerCell")
+                    //-.cm-spoiler-list__icon
+                        img(src="img/catalog-model/car_prop_1.svg" alt="")
+                    //-.cm-spoiler-list__text
+                    //-.cm-spoiler-list__title Безопасность
+                    //-ul.cm-spoiler-list__items
+                        li ЭРА-ГЛОНАСС
+                        li Датчик давления в шинах
+                        li Система помощи при спуске
+                        li Система удержания в полосе
+                        li Система стабилизации (ESP)
+                        li Система контроля слепых зон
+                        li Подушки безопасности боковые
+                        li Система управления дальним светом
 
-                    .cm-spoiler-list.s-config__block(data-js="gridSpoilerCell")
-                        //-.cm-spoiler-list__icon
-                            img(src="img/catalog-model/car_prop_2.svg" alt="")
-                        .cm-spoiler-list__text
-                            .cm-spoiler-list__title Экстерьер
-                            ul.cm-spoiler-list__items
-                                li Диски 20
-                                li Датчик света
-                                li Датчик дождя
-                                li Светодиодные фары
-                                li Автоматический корректор фар
-                                li Система адаптивного освещения
-                                li Электрообогрев боковых зеркал
-                                li Система управления дальним светом
+                    //-.cm-spoiler-list.s-config__block(data-js="gridSpoilerCell")
+                    //-.cm-spoiler-list__icon
+                        img(src="img/catalog-model/car_prop_2.svg" alt="")
+                    //-.cm-spoiler-list__text
+                    //-.cm-spoiler-list__title Экстерьер
+                    //-ul.cm-spoiler-list__items
+                        li Диски 20
+                        li Датчик света
+                        li Датчик дождя
+                        li Светодиодные фары
+                        li Автоматический корректор фар
+                        li Система адаптивного освещения
+                        li Электрообогрев боковых зеркал
+                        li Система управления дальним светом
 
-                    .cm-spoiler-list.s-config__block(data-js="gridSpoilerCell")
-                        //-.cm-spoiler-list__icon
-                            img(src="img/catalog-model/car_prop_3.svg" alt="")
-                        .cm-spoiler-list__text
-                            .cm-spoiler-list__title Интерьер
-                            ul.cm-spoiler-list__items
-                                li Люк
-                                li Сиденья с массажем
-                                li Тонированные стекла
-                                li Кожа (Материал салона)
-                                li Подогрев задних сидений
-                                li Память сиденья водителя
-                                li Обогрев рулевого колеса
-                                li Подогрев передних сидений
-
+                    //-.cm-spoiler-list.s-config__block(data-js="gridSpoilerCell")
+                    //-.cm-spoiler-list__icon
+                        img(src="img/catalog-model/car_prop_3.svg" alt="")
+                    //-.cm-spoiler-list__text
+                    //-.cm-spoiler-list__title Интерьер
+                    //-ul.cm-spoiler-list__items
+                        li Люк
+                        li Сиденья с массажем
+                        li Тонированные стекла
+                        li Кожа (Материал салона)
+                        li Подогрев задних сидений
+                        li Память сиденья водителя
+                        li Обогрев рулевого колеса
+                        li Подогрев передних сидений
