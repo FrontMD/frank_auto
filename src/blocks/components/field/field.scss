@@ -648,8 +648,33 @@
                     transform: rotate(0deg);
                 }
             }
+        }
 
+        .select2-selection--multiple {
+            position: relative;
+        }
 
+        .select2-selection--multiple .select2-selection__rendered {
+            overflow-x: auto;
+            overflow-y: hidden;
+            flex-wrap: nowrap;
+            position: absolute;
+            width: calc(100% - 40px);
+
+            &::-webkit-scrollbar {
+                width: 3px;
+                height: 3px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background-color: $c-bg-main;
+                border-radius: 1px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: $c-text-breadcrumbs;
+                border-radius: 1px;
+            }
         }
 
         &.select2-container--open {
