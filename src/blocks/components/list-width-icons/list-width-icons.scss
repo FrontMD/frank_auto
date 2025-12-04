@@ -20,8 +20,7 @@
         width: 120px;
         height: 56px;
         margin: 0 auto 15px;
-        background: url("../img/ic.svg");
-
+        background-image: url("data:image/svg+xml,%3Csvg width='120' height='56' viewBox='0 0 120 56' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M118.659 0.144639L63.2459 13.6289C63.0677 13.6727 62.8819 13.6702 62.7049 13.6214L12.6692 0.0382077C12.0679 -0.12457 11.4541 0.248567 11.3248 0.857106L0.0243387 53.8877C-0.141347 54.6665 0.565327 55.3514 1.34104 55.1624L56.7553 41.6781C56.9323 41.6355 57.1181 41.6368 57.2951 41.6843L107.357 55.1624C107.957 55.3239 108.571 54.9495 108.7 54.3435L119.976 1.42057C120.141 0.641739 119.435 -0.0431814 118.659 0.145892V0.144639Z' fill='white'/%3E%3C/svg%3E%0A");
         display: flex;
         justify-content: center;
         align-items: center;
@@ -81,7 +80,7 @@
     }
 
     &--config &__img {
-        background: url("../img/ic_grey.svg");
+        background-image: url("data:image/svg+xml,%3Csvg width='120' height='57' viewBox='0 0 120 57' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M118.659 0.988023L63.2459 14.4723C63.0677 14.5161 62.8819 14.5136 62.7049 14.4648L12.6692 0.881591C12.0679 0.718813 11.4541 1.09195 11.3248 1.70049L0.0243387 54.7311C-0.141347 55.5099 0.565327 56.1948 1.34104 56.0058L56.7553 42.5215C56.9323 42.4789 57.1181 42.4802 57.2951 42.5277L107.357 56.0058C107.957 56.1673 108.571 55.7929 108.7 55.1869L119.976 2.26395C120.141 1.48512 119.435 0.800202 118.659 0.989275V0.988023Z' fill='%23EDF0F6'/%3E%3C/svg%3E%0A");
     }
 }
 

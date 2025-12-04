@@ -13,6 +13,15 @@
     border-radius: $br-btn-input;
     cursor: pointer;
 
+    &:focus,
+    &:active:focus,
+    &.active:focus,
+    &.focus,
+    &:active.focus,
+    &.active.focus {
+        outline: none !important;
+    }
+
     svg,
     img {
         width: 16px;
@@ -33,6 +42,7 @@
         &:hover {
             background-color: $c-accent-hover;
             border-color: $c-accent-hover;
+            color: $c-white;
         }
     }
 
@@ -267,11 +277,11 @@
 
     &--toggle.expanded {
         .show {
-            display: none;
+            display: none !important;
         }
 
         .hide {
-            display: block;
+            display: block !important;
         }
     }
 }

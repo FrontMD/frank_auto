@@ -122,10 +122,6 @@
         gap: 16px;
         margin-bottom: 16px;
         width: 100%;
-
-        @include max(mobile) {
-            gap: 10px;
-        }
     }
 
     &__flex {
@@ -444,7 +440,7 @@
         }
 
         @include max(mobile) {
-            gap: 10px;
+            gap: 16px;
         }
     }
 
@@ -456,6 +452,7 @@
 
         @include max(mobile) {
             flex-direction: column;
+            gap: 16px;
         }
     }
 
