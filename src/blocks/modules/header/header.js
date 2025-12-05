@@ -5,9 +5,12 @@ function headerController() {
 
     // высота по скроллу
     let lastScroll = window.scrollY ? window.scrollY : 0
+    let top = header.querySelector('[data-js="siteHeaderTop"]')
+
 
     if(lastScroll > 10) {
         header.classList.add('small')
+        top.style.marginTop = '-' + top.offsetHeight + 'px'
     }
 
     window.addEventListener('scroll', function() {
@@ -19,8 +22,10 @@ function headerController() {
     function toggleHeader(lastScroll, currentScroll) {
         if(currentScroll <= lastScroll || currentScroll === 0) {
             header.classList.remove('small')
+            top.style.marginTop = '0'
         } else {
             header.classList.add('small')
+            top.style.marginTop = '-' + top.offsetHeight + 'px'
         }
     }
 
