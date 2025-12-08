@@ -39,11 +39,14 @@ function selects() {
 
 	formSelects.forEach(formSelect => {
 		let placeholder = $(formSelect).attr('data-placeholder')
+		let clear = $(formSelect).attr('data-clear')
+
+		let allowClear = clear === 'true' ? true : false
 
 		if(formSelect.hasAttribute('data-filterable')) {
 			$(formSelect).select2({
 				placeholder: placeholder,
-				allowClear: true,
+				allowClear: allowClear,
 				templateResult: function (data) {
 					if(data.element && $(data.element).hasClass('disabled')) {
 						return null;
@@ -54,7 +57,7 @@ function selects() {
 		} else {
 			$(formSelect).select2({
 				placeholder: placeholder,
-				allowClear: true
+				allowClear: allowClear
 			});
 		}
 	}) 
@@ -68,11 +71,12 @@ function selects() {
 function reloadSelect(formSelect) {
 	if(formSelect) {
 		let placeholder = $(formSelect).attr('data-placeholder')
+		let allowClear = clear === 'true' ? true : false
 		$(formSelect).select2('destroy');
 		if(formSelect.hasAttribute('data-filterable')) {
 			$(formSelect).select2({
 				placeholder: placeholder,
-				allowClear: true,
+				allowClear: allowClear,
 				templateResult: function (data) {
 					if(data.element && $(data.element).hasClass('disabled')) {
 						return null;
@@ -83,7 +87,7 @@ function reloadSelect(formSelect) {
 		} else {
 			$(formSelect).select2({
 				placeholder: placeholder,
-				allowClear: true
+				allowClear: allowClear
 			});
 		}
 	}
