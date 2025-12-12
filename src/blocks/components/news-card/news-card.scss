@@ -160,3 +160,17 @@
         }
     }
 }
+
+.news-card {
+    &--person &__img {
+        aspect-ratio: 1 / 1.19;
+    }
+
+    &--person &__text a {
+        transition: all $tr-time linear;
+
+        &:hover {
+            color: $c-accent;
+        }
+    }
+}

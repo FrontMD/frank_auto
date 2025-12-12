@@ -5,7 +5,7 @@ function sNewsSliders() {
 
     sNewsblocks.forEach(sNewsblock => {
         const slider = sNewsblock.querySelector('[data-js="sNewsSlider"]')
-        const slidesPerView = sNewsblock.dataset.slides ? parseInt(sNewsblock.dataset.slides) : 3
+        const slidesPerView = sNewsblock.dataset.slides ? parseInt(sNewsblock.dataset.slides) : 3.33
 
         const sliderEx = new Swiper(slider, {
             slidesPerView: 1.26,
@@ -15,7 +15,7 @@ function sNewsSliders() {
                     slidesPerView: 2.12,
                 },
                 768: {
-                    slidesPerView: 3,
+                    slidesPerView: 3.2,
                 },
                 1024: {
                     slidesPerView: slidesPerView,

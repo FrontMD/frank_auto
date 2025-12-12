@@ -1,0 +1,59 @@
+-
+    const defaultTeamProps = {
+        classes: '',
+        cards: [
+            {
+                title: 'Ирина Франк',
+                text: '<p>Телефон: <a href="href="tel:+79175780316">+7 917 578-03-16</a></p><p>Электронная почта: <a href="mailto:i.frank@frankauto.ru">i.frank@frankauto.ru</a></p>',
+                img: 'img/contacts/director.webp',
+                isPerson: true
+            },
+            {
+                title: 'Ирина Франк',
+                text: '<p>Телефон: <a href="href="tel:+79175780316">+7 917 578-03-16</a></p><p>Электронная почта: <a href="mailto:i.frank@frankauto.ru">i.frank@frankauto.ru</a></p>',
+                img: 'img/contacts/director.webp',
+                isPerson: true
+            },
+            {
+                title: 'Ирина Франк',
+                text: '<p>Телефон: <a href="href="tel:+79175780316">+7 917 578-03-16</a></p><p>Электронная почта: <a href="mailto:i.frank@frankauto.ru">i.frank@frankauto.ru</a></p>',
+                img: 'img/contacts/director.webp',
+                isPerson: true
+            },
+            {
+                title: 'Ирина Франк',
+                text: '<p>Телефон: <a href="href="tel:+79175780316">+7 917 578-03-16</a></p><p>Электронная почта: <a href="mailto:i.frank@frankauto.ru">i.frank@frankauto.ru</a></p>',
+                img: 'img/contacts/director.webp',
+                isPerson: true
+            },
+            {
+                title: 'Ирина Франк',
+                text: '<p>Телефон: <a href="href="tel:+79175780316">+7 917 578-03-16</a></p><p>Электронная почта: <a href="mailto:i.frank@frankauto.ru">i.frank@frankauto.ru</a></p>',
+                img: 'img/contacts/director.webp',
+                isPerson: true
+            },
+            {
+                title: 'Ирина Франк',
+                text: '<p>Телефон: <a href="href="tel:+79175780316">+7 917 578-03-16</a></p><p>Электронная почта: <a href="mailto:i.frank@frankauto.ru">i.frank@frankauto.ru</a></p>',
+                img: 'img/contacts/director.webp',
+                isPerson: true
+            },
+        ],
+    }
+
+mixin team(props= defaultTeamProps)
+    -
+        const checkProps = {
+            classes: props.classes ? props.classes : defaultTeamProps.classes,
+            cards: props.cards ? props.cards : defaultTeamProps.cards,
+        }
+
+    section.section.team(class= checkProps.classes)&attributes(attributes)
+        .section__container.section__content
+            .section-block.team__block
+                .section-block__content.team__list
+                    - let cardsCount = 0
+                        -while(cardsCount < checkProps.cards.length)
+                            +news-card(checkProps.cards[cardsCount])
+
+                            - cardsCount++

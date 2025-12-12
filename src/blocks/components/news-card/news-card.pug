@@ -9,7 +9,8 @@
             name: '',
             icon: ''
         },
-        date: ''
+        date: '',
+        isPerson: false
     }
 
 mixin news-card(props = defaultNewsCardProps)
@@ -22,23 +23,28 @@ mixin news-card(props = defaultNewsCardProps)
             tag: props.tag ? props.tag : defaultNewsCardProps.tag,
             brand: props.brand ? props.brand : defaultNewsCardProps.brand,
             date: props.date ? props.date : defaultNewsCardProps.date,
+            isPerson: props.isPerson ? props.isPerson : defaultNewsCardProps.isPerson,
         }
 
-    .news-card(class=checkProps.classes)&attributes(attributes)
-        a(href="javascript:void(0);").news-card__link
+        let personClass = checkProps.isPerson === true ? 'news-card--person' : ''
+
+    .news-card(class=checkProps.classes + personClass)&attributes(attributes)
+        - if(checkProps.isPerson !== true)
+            a(href="javascript:void(0);").news-card__link
         .news-card__img
             img(class="lazyload" src="" data-src=checkProps.img alt="")
-        .news-card__tags 
-            -if(checkProps.date.length > 0)
-                .news-card__tag.news-card__tag--date!= checkProps.date
-            -if(checkProps.brand.name.length > 0 || checkProps.tag.length > 0)
-            .news-card__right
-                -if(checkProps.brand.name.length > 0)
-                    .news-card__brand
-                        img(class="lazyload" src="" data-src=checkProps.brand.icon, alt="")
-                        span!= checkProps.brand.name
-                -if(checkProps.tag.length > 0)
-                    .news-card__tag!= checkProps.tag
+        - if(checkProps.isPerson !== true)
+            .news-card__tags 
+                -if(checkProps.date.length > 0)
+                    .news-card__tag.news-card__tag--date!= checkProps.date
+                -if(checkProps.brand.name.length > 0 || checkProps.tag.length > 0)
+                .news-card__right
+                    -if(checkProps.brand.name.length > 0)
+                        .news-card__brand
+                            img(class="lazyload" src="" data-src=checkProps.brand.icon, alt="")
+                            span!= checkProps.brand.name
+                    -if(checkProps.tag.length > 0)
+                        .news-card__tag!= checkProps.tag
         -if(checkProps.title.length > 0)
             .news-card__title!= checkProps.title
         -if(checkProps.text.length > 0)

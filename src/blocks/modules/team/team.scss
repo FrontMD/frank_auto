@@ -1,0 +1,49 @@
+.team {
+
+    &__block {
+        @include max(mobile) {
+            padding: 0;
+            background-color: transparent;
+            overflow: visible;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 50px 20px;
+
+        @include max(full) {
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+        }
+
+        @include max(large) {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+        }
+
+        @include max(laptop) {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        @include max(tablet) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @include max(mobile) {
+            gap: 10px;
+        }
+
+        @include max(xs) {
+            gap: 10px;
+            grid-template-columns: minmax(0, 1fr);
+
+            .news-card {
+                background-color: $c-white;
+                padding: 10px;
+                border-radius: 10px;
+            }
+        }
+
+
+    }
+}

@@ -40,7 +40,6 @@ function selects() {
 	formSelects.forEach(formSelect => {
 		let placeholder = $(formSelect).attr('data-placeholder')
 		let clear = $(formSelect).attr('data-clear')
-
 		let allowClear = clear === 'true' ? true : false
 
 		if(formSelect.hasAttribute('data-filterable')) {
