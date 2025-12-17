@@ -36,12 +36,14 @@ block content
                         li Организовать его таможенное оформление
                         li 10% скидки по Trade-in на покупку нового автомобиля
 
-        +list-form
+        +list-form({
+            personalRight: true
+        })
             .form__item
                 .title.title--30.form__list-title
                     .form__marker 1.
                     | Автомобиль для оформления доставки
-                .form__block.form__block--grid
+                .form__block
                     .form__fields
                         +field({
                             classes: '',
@@ -183,7 +185,7 @@ block content
                             },
                         })
 
-                    .form__auto.form-auto
+                    //-.form__auto.form-auto
                         .form-auto__img
                             img(src="img/catalog-model/model_5.webp" alt="")
                         .form-auto__info

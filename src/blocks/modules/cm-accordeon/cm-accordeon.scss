@@ -331,7 +331,7 @@
 
         @include max(mobile) {
             display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             width: 100%;
             gap: 7px 5px;
             margin-top: 0;

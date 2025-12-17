@@ -56,13 +56,14 @@ block content
 					})
 
 		+list-form({
-			personalMarker: '2.'
+			personalMarker: '2.',
+			personalRight: true
 		})
 			.form__item
 				.title.title--30.form__list-title
 					.form__marker 1.
 					| Автомобиль для тестирования
-				.form__block.form__block--sgrid
+				.form__block
 					.form__fields.form__fields--column
 						+field({
 							classes: '',
@@ -119,7 +120,7 @@ block content
 							},
 						})
 
-					.form__auto.form-auto
+					//-.form__auto.form-auto
 						.form-auto__img
 							img(src="img/catalog-model/model_5.webp" alt="")
 						.form-auto__info

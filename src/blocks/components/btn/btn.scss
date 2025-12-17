@@ -39,7 +39,8 @@
         border-color: $c-accent;
         transition: all $tr-time linear;
 
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: $c-accent-hover;
             border-color: $c-accent-hover;
             color: $c-white;
@@ -58,7 +59,8 @@
             transition: all $tr-time;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
             border-color: $c-accent-hover;
             color: $c-accent-hover;
             background-color: $c-bg-main-hover;
@@ -81,7 +83,8 @@
             transition: all $tr-time;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
             border-color: $c-accent-hover;
             color: $c-accent-hover;
 
@@ -96,7 +99,8 @@
         background-color: $c-grey;
         transition: all $tr-time;
 
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: $c-accent-hover;
             color: $c-white;
         }
@@ -112,7 +116,8 @@
             margin-bottom: 3px;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: $c-accent-hover;
 
             svg {
@@ -154,7 +159,8 @@
             height: 24px;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
             color: $c-accent-hover;
 
             svg {

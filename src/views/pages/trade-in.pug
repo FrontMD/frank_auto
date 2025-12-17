@@ -71,14 +71,15 @@ block content
 				})
 
 		+list-form({
-			personalMarker: '2.'
+			personalMarker: '2.',
+			personalRight: true
 		})
 			.form__item
 				.title.title--30.form__list-title
 					.form__marker 1.
 					| Программа Trade-in
 				.form__block
-					.form__fields.form__fields--3
+					.form__fields
 						+field({
 							classes: '',
 							tag: 'select',

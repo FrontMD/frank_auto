@@ -38,7 +38,7 @@ block content
 				.title.title--30.form__list-title
 					.form__marker 1.
 					| Ваш будущий автомобиль
-				.form__block.form__block--sgrid
+				.form__block
 					.form__fields.form__fields--column
 						+field({
 							classes: '',
@@ -95,7 +95,7 @@ block content
 							},
 						})
 
-					.form__auto.form-auto
+					//-.form__auto.form-auto
 						.form-auto__img
 							img(src="img/catalog-model/model_5.webp" alt="")
 						.form-auto__info
@@ -112,7 +112,7 @@ block content
 								span 70 000 ₽/мес.
 
 			.form__item
-				.form__block.form__block--cgrid.form__block--header
+				.form__block.form__block--header.form__block--column
 					.title.title--30.form__list-title
 						.form__marker 2.
 						| Купить в кредит
@@ -132,7 +132,7 @@ block content
 							}
 						})
 
-				.form__block.form__block--cgrid.form__block--gap70
+				.form__block.form__block--column
 					+field-range({
 						title: 'Cрок кредита, месяцев',
 						unit: ' мес',

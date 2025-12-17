@@ -2,6 +2,7 @@
     const defaultListFormProps = {
         classes: '',
         personalMarker: '2.',
+        personalRight: false,
         form: {
             innerThanks: true,
             privacyText: 'Согласен на обработку моих персональных данных в соответствии с <a href="#" target="_blank">Политикой в отношении обработки персональных данных</a>',
@@ -16,6 +17,7 @@ mixin list-form(props= defaultListFormProps)
         const checkProps = {
             classes: props.classes ? props.classes : defaultListFormProps.classes,
             personalMarker: props.personalMarker ? props.personalMarker : defaultListFormProps.personalMarker,
+            personalRight: props.personalRight ? props.personalRight : defaultListFormProps.personalRight,
             form: props.form ? props.form : defaultListFormProps.form,
         }
 
@@ -25,56 +27,109 @@ mixin list-form(props= defaultListFormProps)
                 form.form.form--list(action="#" data-validate novalidate)&attributes(attributes)
                     .form__content(data-js='form-content')
                         block
-                        .form__item
-                            .title.title--30.form__list-title
-                                .form__marker!= checkProps.personalMarker
-                                | Персональные данные
-                            .form__block
-                                .form__fields
-                                    +field({
-                                        placeholder: 'Ваш имя',
-                                        inputAttr: {
-                                            'required': '',
-                                            'data-type': 'letters'
-                                        },
-                                    })
-                                    +field({
-                                        classes: '',
-                                        tag: 'select',
-                                        placeholder: 'Выберите подарок',
-                                        selectOptions: [
-                                            "",
-                                            "Оборудование",
-                                            "Каско",
-                                            "Комплект резины"
-                                        ],
-                                    })
-                                    +field({
-                                        placeholder: 'Номер телефона',
-                                        inputAttr: {
-                                            'required': '',
-                                            'data-v-name': 'phone',
-                                            'data-type': 'phoneNumber'
-                                        },
-                                    })
-                                    +btn({
-                                        classes: 'form__submit',
-                                        type: 'button',
-                                        buttonType: 'submit',
-                                        name: 'Получить лучшие условия',
-                                        cMode: 'accent',
-                                        sMode: 'full'
-                                    })
+                        - if(checkProps.personalRight !== true)
+                            .form__item.form__item--full
+                                .title.title--30.form__list-title
+                                    .form__marker!= checkProps.personalMarker
+                                    | Персональные данные
+                                .form__block
+                                    .form__fields
+                                        +field({
+                                            placeholder: 'Ваш имя',
+                                            inputAttr: {
+                                                'required': '',
+                                                'data-type': 'letters'
+                                            },
+                                        })
+                                        +field({
+                                            classes: '',
+                                            tag: 'select',
+                                            placeholder: 'Выберите подарок',
+                                            selectOptions: [
+                                                "",
+                                                "Оборудование",
+                                                "Каско",
+                                                "Комплект резины"
+                                            ],
+                                        })
+                                        +field({
+                                            placeholder: 'Номер телефона',
+                                            inputAttr: {
+                                                'required': '',
+                                                'data-v-name': 'phone',
+                                                'data-type': 'phoneNumber'
+                                            },
+                                        })
+                                        +btn({
+                                            classes: 'form__submit',
+                                            type: 'button',
+                                            buttonType: 'submit',
+                                            name: 'Получить лучшие условия',
+                                            cMode: 'accent',
+                                            sMode: 'full'
+                                        })
 
-                                .form__privacy.form-privacy(data-js="formField")
-                                    .form-privacy__flex
-                                        label
-                                            input(type="checkbox" data-v-name='checkbox' required)
-                                            span.form-privacy__fake
-                                                svg
-                                                    use(xlink:href=`img/sprites/sprite.svg#check`)
-                                        span.form-privacy__text!= checkProps.form.privacyText
-                                    span.field__error(data-js='fieldError')
+                                    .form__privacy.form-privacy(data-js="formField")
+                                        .form-privacy__flex
+                                            label
+                                                input(type="checkbox" data-v-name='checkbox' required)
+                                                span.form-privacy__fake
+                                                    svg
+                                                        use(xlink:href=`img/sprites/sprite.svg#check`)
+                                            span.form-privacy__text!= checkProps.form.privacyText
+                                        span.field__error(data-js='fieldError')
+                        - else if(checkProps.personalRight === true)
+                            .form__item
+                                .title.title--30.form__list-title
+                                    .form__marker!= checkProps.personalMarker
+                                    | Персональные данные
+                                .form__block
+                                    .form__fields.form__fields--column
+                                        +field({
+                                            placeholder: 'Ваш имя',
+                                            inputAttr: {
+                                                'required': '',
+                                                'data-type': 'letters'
+                                            },
+                                        })
+                                        +field({
+                                            classes: '',
+                                            tag: 'select',
+                                            placeholder: 'Выберите подарок',
+                                            selectOptions: [
+                                                "",
+                                                "Оборудование",
+                                                "Каско",
+                                                "Комплект резины"
+                                            ],
+                                        })
+                                        +field({
+                                            placeholder: 'Номер телефона',
+                                            inputAttr: {
+                                                'required': '',
+                                                'data-v-name': 'phone',
+                                                'data-type': 'phoneNumber'
+                                            },
+                                        })
+                                        +btn({
+                                            classes: 'form__submit',
+                                            type: 'button',
+                                            buttonType: 'submit',
+                                            name: 'Получить лучшие условия',
+                                            cMode: 'accent',
+                                            sMode: 'full'
+                                        })
+
+                                    .form__privacy.form-privacy(data-js="formField")
+                                        .form-privacy__flex
+                                            label
+                                                input(type="checkbox" data-v-name='checkbox' required)
+                                                span.form-privacy__fake
+                                                    svg
+                                                        use(xlink:href=`img/sprites/sprite.svg#check`)
+                                            span.form-privacy__text!= checkProps.form.privacyText
+                                        span.field__error(data-js='fieldError')
+
 
                     - if(checkProps.form.innerThanks === true)
                         .form__thanks(data-js='form-thanks')

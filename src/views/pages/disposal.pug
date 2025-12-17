@@ -38,7 +38,7 @@ block content
 				.title.title--30.form__list-title
 					.form__marker 1.
 					| Ваш будущий автомобиль
-				.form__block.form__block--sgrid
+				.form__block
 					.form__fields.form__fields--column
 						+field({
 							classes: '',
@@ -95,7 +95,7 @@ block content
 							},
 						})
 
-					.form__auto.form-auto
+					//-.form__auto.form-auto
 						.form-auto__img
 							img(src="img/catalog-model/model_5.webp" alt="")
 						.form-auto__info
@@ -116,13 +116,13 @@ block content
 					.title.title--30.form__list-title
 						.form__marker 2.
 						| Программа Утиль
-						+btn({
+						//-+btn({
 							classes: 'form__list-delete',
 							name: 'Убрать',
 							sMode: 'noborder',
 							cMode: 'link',
 							icon: 'urn'
-						})
+						//-})
 					.checkboxes-flex
 						+field({
 							type: 'checkbox',
@@ -133,7 +133,7 @@ block content
 						})
 
 				.form__block
-					.form__fields
+					.form__fields.form__fields--column
 						+field({
 							classes: '',
 							tag: 'select',
