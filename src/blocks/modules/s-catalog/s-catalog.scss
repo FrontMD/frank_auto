@@ -94,6 +94,13 @@
 
         @include max(mobile) {
             display: flex;
+            gap: 5px;
+            align-items: center;
+            font-size: 14px;
+
+            &:before {
+                content: 'Фильтр';
+            }
         }
 
         &:hover {
