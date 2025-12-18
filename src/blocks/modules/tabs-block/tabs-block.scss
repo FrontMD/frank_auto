@@ -52,6 +52,11 @@
         transition: all $tr-time linear;
         cursor: pointer;
 
+        @include max(mobile) {
+            padding: 12px 20px;
+            font-size: 14px;
+        }
+
         svg {
             width: 10px;
             height: 15px;
@@ -62,6 +67,7 @@
             color: $c-white;
             background-color: $c-bg-dark;
         }
+
     }
 
     &__slides {
