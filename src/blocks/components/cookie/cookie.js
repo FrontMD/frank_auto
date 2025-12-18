@@ -5,15 +5,25 @@ function cookieInit() {
 
     const cookieBtn = cookieMessage.querySelector('[data-js="cookieBtn"]');
     const cookieName = 'cookie_policy'
+    const cookieLifespan = 604800000
 
     let currentCookieValue = document.cookie.match(new RegExp("(?:^|; )" + cookieName.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
 
-    if (!currentCookieValue) {
+    if(currentCookieValue) {
+        const lastAcept = parseInt(currentCookieValue[1])
+        const now = new Date().getTime();
+
+        if(now - lastAcept >= cookieLifespan) {
+            cookieMessage.classList.add('active');
+        } 
+
+    } else {
         cookieMessage.classList.add('active');
     }
 
     cookieBtn.addEventListener('click', function () {
-        document.cookie = `${cookieName}=true`
+        const timestamp = new Date().getTime();
+        document.cookie = `${cookieName}=${timestamp}`
         cookieMessage.classList.remove('active');
     });
 }

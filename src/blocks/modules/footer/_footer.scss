@@ -43,6 +43,7 @@
         @include max(mobile) {
             padding-left: 10px;
             padding-right: 10px;
+            gap: 24px 16px;
         }
     }
 
@@ -66,19 +67,14 @@
         flex: 0 0 180px;
 
         @include max(mobile) {
-            flex-basis: 120px;
+            flex-basis: 115px;
         }
 
     }
 
     &__rating {
-        flex: 0 0 218px;
-        height: 82px;
-
-        @include max(mobile) {
-            flex-basis: 150px;
-            height: 56.4px;
-        }
+        flex: 0 0 202px;
+        height: 98px;
     }
 
     &__nav {
