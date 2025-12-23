@@ -100,21 +100,21 @@
         max-width: 454px;
 
         .show {
-            display: block;
+            display: block !important;
         }
 
         .hide {
-            display: none;
+            display: none !important;
         }
     }
 
     &__link.showed {
         .show {
-            display: none;
+            display: none !important;
         }
 
         .hide {
-            display: block;
+            display: block !important;
         }
     }
 }
