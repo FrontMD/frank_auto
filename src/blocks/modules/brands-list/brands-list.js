@@ -29,6 +29,7 @@ function brandsList() {
         const list = brandsList.querySelector('[data-js="brandsListItems"]')
         const ww = window.innerWidth
         let rows = 5
+        
         if(brandsList.classList.contains('brands-list--full')) {
             if(ww > 767) {
                 rows = 3
@@ -36,6 +37,11 @@ function brandsList() {
                 rows = 4
             }
         }
+
+        if(brandsList.classList.contains('brands-list--catalog')) {
+            rows = 2
+        }
+
         const listItemHeight = list.querySelector('[data-js="brandsListItem"]').offsetHeight
         const gap = parseInt(window.getComputedStyle(list).rowGap)
         const minHeight = rows * listItemHeight + (rows - 1) * gap
