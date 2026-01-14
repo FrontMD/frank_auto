@@ -570,10 +570,6 @@
         transition: all $tr-time linear;
     }
 
-    &__item:hover &__icon svg {
-        transform: rotate(-180deg);
-    }
-
     &__submenu {
         position: absolute;
         left: 0;
@@ -618,6 +614,12 @@
         align-items: flex-start;
         gap: 16px;
         margin-top: 30px;
+    }
+}
+
+.header-menu {
+    &:not(.header-menu--burger) &__item:hover &__icon svg {
+        transform: rotate(-180deg);
     }
 }
 
