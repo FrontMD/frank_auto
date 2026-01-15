@@ -9,7 +9,7 @@ function tabsBlockInit() {
     let filtersList = false
 
     if(homeSelection) {
-        filtersList = homeSelection.querySelectorAll('[data-js="homeSelectionFormSlide"]')
+        filtersList = homeSelection.querySelectorAll('[data-hs-form="homeSelectionFormSlide"]')
     }
 
     tabsList.forEach(tab => {
