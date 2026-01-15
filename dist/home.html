@@ -317,7 +317,7 @@
                 </div>
               </div>
             </section>
-            <section class="section home-selection">
+            <section class="section home-selection" data-js="homeSelection">
               <div class="section__container section__container--sidebar">
                 <div class="section__body home-selection__tabs">
                       <div class="tabs-block" data-js="tabsBlock">
@@ -348,9 +348,62 @@
                       </div>
                 </div>
                 <div class="section__sidebar home-selection__sidebar">
-                      <form class="form-filter" action="#" data-js="formFilter">
+                      <form class="form-filter" action="#" data-js="homeSelectionFormSlide">
                         <div class="form-filter__content">
-                          <div class="form-filter__title title title--36">Быстрый <br>подбор <br>автомобиля</div>
+                          <div class="form-filter__title title title--36">Быстрый <br>подбор <br>автомобиля 1</div>
+                          <div class="form-filter__fields">
+                                <div class="field-range field-range--margins" data-js="fieldRange" data-type="range" data-unit=" ₽" data-min="100000" data-max="50000000" data-step="100000">
+                                  <input class="field-range__input field-range__input--min" type="number" min="100000" max="50000000" data-js="fieldRangeMin">
+                                  <input class="field-range__input field-range__input--max" type="number" min="100000" max="50000000" data-js="fieldRangeMax">
+                                  <div class="field-range__title">Стоимость</div>
+                                  <div class="field-range__range" data-js="fieldRangeSlider"></div>
+                                  <div class="field-range__values">
+                                    <div class="field-range__value" data-js="fieldRangeMinVal"></div>
+                                    <div class="field-range__value" data-js="fieldRangeMaxVal"></div>
+                                  </div>
+                                </div>
+                                <div class="field  
+     
+     
+    " data-js="formField">
+                                  <label>
+                                    <select class="field__select" data-placeholder="Бренд" data-js="formSelect" multiple="multiple">
+                                      <option label=" "></option>
+                                      <option value="LiXiang">LiXiang</option>
+                                      <option value="Voyah">Voyah</option>
+                                      <option value="AITO">AITO</option>
+                                      <option value="Chery">Chery</option>
+                                      <option value="Zeekr">Zeekr</option>
+                                      <option value="Audi">Audi</option>
+                                      <option value="Tank">Tank</option>
+                                      <option value="Rox Motor Tech">Rox Motor Tech</option>
+                                    </select><span class="field__error" data-js="fieldError"></span>
+                                  </label>
+                                </div>
+                                <div class="field  
+     
+     
+    " data-js="formField">
+                                  <label>
+                                    <select class="field__select" data-placeholder="Модель" data-js="formSelect" multiple="multiple">
+                                      <option label=" "></option>
+                                      <option value="LiXiang L6">LiXiang L6</option>
+                                      <option value="LiXiang L7">LiXiang L7</option>
+                                      <option value="LiXiang L9">LiXiang L9</option>
+                                      <option value="LiXiang L9">LiXiang L9</option>
+                                      <option value="LiXiang Mega">LiXiang Mega</option>
+                                      <option value="LiXiang One">LiXiang One</option>
+                                    </select><span class="field__error" data-js="fieldError"></span>
+                                  </label>
+                                </div>
+                          </div>
+                              <button class="btn form-filter__submit btn--accent btn--full" type="submit"><span class="btn__text">Показать 74 авто</span>
+                              </button>
+                        </div>
+                      </form>
+                      <form class="form-filter hs-hidden" action="#" data-js="homeSelectionFormSlide">
+                        <div class="form-filter__content">
+                          <div class="form-filter__title title title--36">Быстрый <br>подбор <br>автомобиля 2</div>
                           <div class="form-filter__fields">
                                 <div class="field-range field-range--margins" data-js="fieldRange" data-type="range" data-unit=" ₽" data-min="100000" data-max="50000000" data-step="100000">
                                   <input class="field-range__input field-range__input--min" type="number" min="100000" max="50000000" data-js="fieldRangeMin">

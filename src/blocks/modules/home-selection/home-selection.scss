@@ -12,6 +12,15 @@
             padding: 10px;
             border-radius: 10px;
         }
+
+        .hs-hidden {
+            visibility: hidden !important;
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
     }
 
     &__tabs {

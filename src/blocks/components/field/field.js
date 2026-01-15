@@ -70,6 +70,7 @@ function selects() {
 function reloadSelect(formSelect) {
 	if(formSelect) {
 		let placeholder = $(formSelect).attr('data-placeholder')
+		let clear = $(formSelect).attr('data-clear')
 		let allowClear = clear === 'true' ? true : false
 		$(formSelect).select2('destroy');
 		if(formSelect.hasAttribute('data-filterable')) {

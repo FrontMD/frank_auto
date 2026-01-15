@@ -17,7 +17,7 @@ mixin home-selection(props= defaultHomeSelectionProps)
             noTabs: props.noTabs ? props.noTabs : defaultHomeSelectionProps.noTabs,
         }
 
-    section.section.home-selection(class= checkProps.classes)&attributes(attributes)
+    section.section.home-selection(class= checkProps.classes data-js="homeSelection")&attributes(attributes)
         .section__container.section__container--sidebar
             - if(checkProps.noTabs === true)
                 .section__body.home-selection__brands
@@ -301,9 +301,58 @@ mixin home-selection(props= defaultHomeSelectionProps)
 
                 - else
                     +form-filter({
-                        title: 'Быстрый <br>подбор <br>автомобиля',
+                        classes: '',
+                        title: 'Быстрый <br>подбор <br>автомобиля 1',
                         btnText: 'Показать 74 авто',
-                    })
+                    })(data-js="homeSelectionFormSlide")
+                        +field-range({
+                            classes: 'field-range--margins',
+                            title: 'Стоимость',
+                            isRange: true
+                        })
+
+                        +field({
+                            classes: '',
+                            tag: 'select',
+                            placeholder: 'Бренд',
+                            selectOptions: [
+                                "",
+                                "LiXiang",
+                                "Voyah",
+                                "AITO",
+                                "Chery",
+                                "Zeekr",
+                                "Audi",
+                                "Tank",
+                                "Rox Motor Tech",
+                            ],
+                            inputAttr: {
+                                multiple: "multiple"
+                            }
+                        })
+                        +field({
+                            classes: '',
+                            tag: 'select',
+                            placeholder: 'Модель',
+                            selectOptions: [
+                                "",
+                                "LiXiang L6",
+                                "LiXiang L7",
+                                "LiXiang L9",
+                                "LiXiang L9",
+                                "LiXiang Mega",
+                                "LiXiang One"
+                            ],
+                            inputAttr: {
+                                multiple: "multiple"
+                                }
+                        })
+
+                    +form-filter({
+                        classes: 'hs-hidden',
+                        title: 'Быстрый <br>подбор <br>автомобиля 2',
+                        btnText: 'Показать 74 авто',
+                    })(data-js="homeSelectionFormSlide")
                         +field-range({
                             classes: 'field-range--margins',
                             title: 'Стоимость',
