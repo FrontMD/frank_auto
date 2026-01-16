@@ -294,8 +294,10 @@
 
     &__chars {
         margin-top: 18px;
-        display: grid;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        /*display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));*/
+        display: flex;
+        justify-content: center;
         gap: 8px;
 
         @include max(mobile) {
@@ -304,6 +306,7 @@
     }
 
     &__char {
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -316,9 +319,12 @@
         line-height: 1.2em;
         letter-spacing: -0.02em;
         color: $c-text;
+        flex: 1 1 auto;
+        padding: 0 20px;
 
         @include max(tablet-small) {
             font-size: 10px;
+            padding: 0 10px;
         }
 
         img {
@@ -331,6 +337,10 @@
                 width: 14px;
                 height: 14px;
             }
+        }
+
+        span {
+            white-space: nowrap;
         }
     }
 
