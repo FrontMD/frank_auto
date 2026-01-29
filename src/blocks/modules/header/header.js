@@ -20,7 +20,8 @@ function headerController() {
     })
 
     function toggleHeader(lastScroll, currentScroll) {
-        if(currentScroll <= lastScroll || currentScroll === 0) {
+        //*if(currentScroll <= lastScroll || currentScroll === 0) {
+        if(currentScroll === 0) {
             header.classList.remove('small')
             top.style.marginTop = '0'
         } else {

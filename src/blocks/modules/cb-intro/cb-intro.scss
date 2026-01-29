@@ -130,10 +130,11 @@
         line-height: 21px;
         letter-spacing: 0;
         transition: all $tr-time linear;
+        color: $c-accent;
 
         @include min(tablet) {
             &:hover {
-                color: $c-accent;
+                color: $c-accent-hover;
             }
         }
 
