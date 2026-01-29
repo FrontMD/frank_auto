@@ -849,6 +849,7 @@
         top: calc(100% + 12px);
         opacity: 1;
         visibility: visible;
+        box-shadow: 0 200px 0px rgba(0, 0, 0, 0.5);
 
         @include max(mobile) {
             top: 56px;
