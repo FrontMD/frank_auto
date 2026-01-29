@@ -641,7 +641,6 @@
     &--burger &__item {
         flex-direction: column;
         align-items: flex-start;
-        padding: 7px 0;
 
         &--mob {
             @include min(tablet-small) {
@@ -666,6 +665,7 @@
         line-height: 100%;
         letter-spacing: 0;
         color: $c-text-breadcrumbs;
+        padding: 7px 0;
     }
 
     &--burger &__icon--open {
