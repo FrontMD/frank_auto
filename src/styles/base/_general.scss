@@ -684,6 +684,40 @@ html {
 		margin-top: 50px;
 	}
 
+	.order-block {
+		display: flex;
+		align-items: center;
+		gap: 64px;
+		margin: 1.875em auto;
+
+		@include max(tablet) {
+			gap: 24px;
+		}
+
+		@include max(mobile) {
+			flex-direction: column-reverse;
+			align-items: flex-start;
+			gap: 16px;
+		}
+
+		&__btn {
+			flex: 0 0 auto;
+
+			@include max(xs) {
+				width: 100%;
+			}
+		}
+
+		&__text {
+			font-weight: 600;
+			font-size: 1.125em;
+
+			@include max(mobile) {
+				font-size: 1em;
+			}
+		}
+	}
+
 }
 
 .scrollbar {

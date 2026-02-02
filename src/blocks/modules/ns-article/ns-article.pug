@@ -47,6 +47,15 @@ mixin ns-article(props= defaultNSArticleProps)
                     - if(checkProps.brandService === true)
                         .ns-article__cover
                             img(src="img/services/sa_intro.webp" alt="")
+                        .order-block
+                            +btn({
+                                classes: 'order-block__btn',
+                                name: 'Оставить заявку',
+                                link: '#signUp',
+                                cMode: 'accent',
+                                sMode: 'content'
+                            })
+                            p.order-block__text Хотите получить консультацию или записаться на сервис? Оставьте заявку! Мы перезвоним.
                         p FRANK AUTO — это профессиональный сервисный центр, который специализируется на обслуживании автомобилей LOTUS. Наши специалисты имеют большой опыт работы с этими автомобилями и знают все тонкости процесса привязки ключей. Мы используем только оригинальное оборудование и программное обеспечение, что гарантирует высокое качество работы.
                         h2 Что входит в карту VIP сопровождения?
                         ol
@@ -63,6 +72,15 @@ mixin ns-article(props= defaultNSArticleProps)
                     - else if(checkProps.service === true)
                         .ns-article__cover
                             img(src="img/services/sa_image_1.webp" alt="")
+                        .order-block
+                            +btn({
+                                classes: 'order-block__btn',
+                                name: 'Оставить заявку',
+                                link: '#signUp',
+                                cMode: 'accent',
+                                sMode: 'content'
+                            })
+                            p.order-block__text Хотите получить консультацию или записаться на сервис? Оставьте заявку! Мы перезвоним.
                         p FRANK AUTO — это профессиональный сервисный центр, который специализируется на обслуживании автомобилей LOTUS. Наши специалисты имеют большой опыт работы с этими автомобилями и знают все тонкости процесса привязки ключей. Мы используем только оригинальное оборудование и программное обеспечение, что гарантирует высокое качество работы.
                         h2 Что входит в карту VIP сопровождения?
                         ol
@@ -96,6 +114,16 @@ mixin ns-article(props= defaultNSArticleProps)
                     - else
                         .ns-article__cover
                             img(src="img/stocks/stock_article.webp" alt="")
+                        .order-block
+                            +btn({
+                                classes: 'order-block__btn',
+                                name: 'Оставить заявку',
+                                link: '#signUp',
+                                cMode: 'accent',
+                                sMode: 'content'
+                            })
+                            p.order-block__text Хотите получить консультацию или записаться на сервис? Оставьте заявку! Мы перезвоним.
+
                         p При прохождении ТО в сервис - центрах FRANK AUTO дарим масло в подарок. 
                         p Действуют во всех сервис - центрах FRANK AUTO 
                         h2 Что входит в карту VIP сопровождения?
