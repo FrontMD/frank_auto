@@ -77,7 +77,7 @@ mixin catalog-card(props = defaultCatalogCardProps)
     .catalog-card(class=checkProps.classes)&attributes(attributes)
         .catalog-card__top
             - if(checkProps.img.length < 2)
-                .catalog-card__img
+                a.catalog-card__img(href="javascript:void(0);")
                     img(class="lazyload" src="" data-src=checkProps.img[0] alt="")
             - else
                 .catalog-card__slider(data-js='catalogCardSlider')
@@ -85,7 +85,7 @@ mixin catalog-card(props = defaultCatalogCardProps)
                     .swiper-wrapper
                         - let imgCounter = 0
                         - while(imgCounter < checkProps.img.length)
-                            .catalog-card__img.swiper-slide
+                            a.catalog-card__img.swiper-slide(href="javascript:void(0);")
                                 img(src=checkProps.img[imgCounter] loading="lazy" alt="")
                                 .swiper-lazy-preloader
 
