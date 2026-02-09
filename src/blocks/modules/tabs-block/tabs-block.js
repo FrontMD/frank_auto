@@ -28,6 +28,7 @@ function tabsBlockInit() {
                 if(index == currentIndex) {
                     slide.classList.add('active')
                     slide.dispatchEvent(new CustomEvent("activatedSlide"))
+                    sText(slide)
                 } else {
                     slide.classList.remove('active')
                 }
