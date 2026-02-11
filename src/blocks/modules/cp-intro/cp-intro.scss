@@ -70,9 +70,9 @@
         top: 10px;
         z-index: 3;
 
-        @include max(mobile) {
+        /*@include max(mobile) {
             display: none;
-        }
+        }*/
     }
 
     &__slide {
