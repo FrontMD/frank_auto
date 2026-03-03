@@ -89,6 +89,20 @@
 
 }
 
+.captcha {
+    width: 100%;
+}
+
+.captcha .field label {
+    flex-direction: row;
+    align-items: center;
+
+    @include max(xs) {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
 
 .field {
 
