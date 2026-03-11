@@ -1,6 +1,7 @@
 -
     const defaultsBanksProps = {
         classes: '',
+        isPartners: false,
         slides: [
             'img/about/bank_1.webp',
             'img/about/bank_2.webp',
@@ -15,13 +16,14 @@ mixin s-banks(props= defaultsBanksProps)
     -
         const checkProps = {
             classes: props.classes ? props.classes : defaultsBanksProps.classes,
+            isPartners: props.isPartners ? props.isPartners : defaultsBanksProps.isPartners,
             slides: props.slides ? props.slides : defaultsBanksProps.slides,
         }
 
     section.section.s-banks(class= checkProps.classes data-js="sBanks")&attributes(attributes)
         .section__container.section__content
             .section-header.s-banks__header
-                .s-banks__title.title.title--40 Банки-партнеры
+                .s-banks__title.title.title--40!= checkProps.isPartners === true ? "Сервисные партнеры" : "Банки-партнеры"
                 +slider-controls({
                     classes: 's-banks__controls'
                 })
@@ -31,6 +33,9 @@ mixin s-banks(props= defaultsBanksProps)
                     - while(counter < checkProps.slides.length)
                         .swiper-slide.s-banks__slide
                             img(class="lazyload" src="" data-src=checkProps.slides[counter], alt="")
+                            - if(checkProps.isPartners === true)
+                                .s-banks__address.text-editor Адрес: г. Воронеж, Московское шоссе, 6/5
+                                a.s-banks__link(href="javascript:void(0);") auto-hmotors.ru
 
                         -counter++
 

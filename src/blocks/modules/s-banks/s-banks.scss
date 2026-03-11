@@ -30,14 +30,16 @@
         padding: 15px;
         background-color: $c-white;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
+        gap: 10px;
         border-radius: $br-section;
 
         @include max(laptop-small) {
             min-width: 194px;
             min-height: 80px;
-            padding: 5px;
+            padding: 10px;
             border-radius: $br-section-mob;
         }
 
@@ -53,5 +55,25 @@
             }
         }
 
+    }
+
+    &__address,
+    &__link {
+        width: 100%;
+        max-width: 300px;
+        align-self: flex-start;
+
+        @include max(laptop-small) {
+            max-width: 220px;
+        }
+    }
+
+    &__link {
+        color: $c-accent;
+        transition: color $tr-time linear;
+
+        &:hover {
+            color: $c-accent-hover;
+        }
     }
 }
