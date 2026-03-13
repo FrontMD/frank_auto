@@ -1,0 +1,25 @@
+.s-banners {
+    &__flex {
+        display: flex;
+        align-items: stretch;
+        gap: 36px;
+
+        @include max(large) {
+            gap: 20px;
+        }
+
+        @include max(tablet) {
+            gap: 10px;
+        }
+
+        @include max(mobile) {
+            padding: 0 10px;
+        }
+    }
+
+    &__block {
+        flex: 0 1 50%;
+        max-width: 50%;
+        aspect-ratio: 1 / 0.648;
+    }
+}

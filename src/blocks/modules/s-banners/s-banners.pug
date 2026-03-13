@@ -1,0 +1,20 @@
+-
+	const defaultSBannersProps = {
+		classes: ''
+	}
+
+mixin s-banners(props= defaultSBannerProps)
+	-
+		const checkProps = {
+			classes: props.classes ? props.classes : defaultSBannerProps.classes,
+		}
+
+	section.section.s-banners(class= checkProps.classes + imgPosClass)&attributes(attributes)
+		.section__container
+			.s-banners__flex
+				.section-block.s-banners__block
+					a(href="javascript:void(0);").section-block__bg.s-banners__bg
+						img(src="img/services/banner_1.jpg" alt="")
+				.section-block.s-banners__block
+					a(href="javascript:void(0);").section-block__bg.s-banners__bg
+						img(src="img/services/banner_2.jpg" alt="")
